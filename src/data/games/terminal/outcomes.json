@@ -1,0 +1,12 @@
+[
+  {
+    "id": "outcome_terminal_001",
+    "concepts": ["Docker build"],
+    "summary": "Learned correct Docker build command"
+  },
+  {
+    "id": "outcome_terminal_002",
+    "concepts": ["kubectl apply"],
+    "summary": "Learned Kubernetes deployment command"
+  }
+]

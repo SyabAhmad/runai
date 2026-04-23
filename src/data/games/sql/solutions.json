@@ -1,0 +1,12 @@
+[
+  {
+    "id": "solution_sql_001",
+    "answer": "SELECT * FROM users ORDER BY age DESC",
+    "explanation": "ORDER BY requires a column before DESC"
+  },
+  {
+    "id": "solution_sql_002",
+    "answer": "SELECT name, COUNT(*) FROM orders GROUP BY name",
+    "explanation": "Aggregation requires GROUP BY"
+  }
+]

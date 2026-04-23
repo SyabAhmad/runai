@@ -1,0 +1,14 @@
+[
+  {
+    "id": "hint_terminal_001",
+    "message": "Docker build needs tag and context"
+  },
+  {
+    "id": "hint_terminal_002",
+    "message": "kubectl apply requires a flag"
+  },
+  {
+    "id": "hint_terminal_003",
+    "message": "Check file flag usage"
+  }
+]
