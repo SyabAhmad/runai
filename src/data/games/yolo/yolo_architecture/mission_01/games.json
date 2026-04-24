@@ -1,0 +1,14 @@
+{
+    "title":  "Data Preprocessing",
+    "initialState":  {
+                         "content":  "def preprocess(data):\n    return data"
+                     },
+    "validation":  {
+                       "type":  "ai_code",
+                       "rules":  [
+                                     "must_include:def"
+                                 ]
+                   },
+    "id":  "mission_01",
+    "type":  "ai_code"
+}

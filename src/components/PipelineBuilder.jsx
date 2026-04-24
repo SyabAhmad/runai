@@ -1,26 +1,22 @@
 import { useState } from 'react';
-import { useGameStore } from '../store/gameStore';
 
 const ALL_STEPS = ['build', 'test', 'deploy', 'lint', 'scan', 'push'];
 
-export default function PipelineBuilder() {
-  const { userInput, setUserInput } = useGameStore();
+export default function PipelineBuilder({ value = '', onChange, mission }) {
   const [draggedItem, setDraggedItem] = useState(null);
   const [dragOverIndex, setDragOverIndex] = useState(null);
 
-  // Parse current pipeline from userInput string
+  // Parse current pipeline from value string
   const getCurrentPipeline = () => {
-    if (!userInput) return [];
+    if (!value) return [];
     try {
-      // Try parsing as array
-      if (userInput.startsWith('[')) {
-        const parsed = JSON.parse(userInput);
+      if (value.startsWith('[')) {
+        const parsed = JSON.parse(value);
         return Array.isArray(parsed) ? parsed : [];
       }
-      // Parse as comma-separated
-      return userInput.split(',').map(s => s.trim()).filter(Boolean);
+      return value.split(',').map(s => s.trim()).filter(Boolean);
     } catch {
-      return userInput.split(' ').filter(Boolean);
+      return value.split(' ').filter(Boolean);
     }
   };
 
@@ -52,20 +48,20 @@ export default function PipelineBuilder() {
     const [movedItem] = newPipeline.splice(draggedItem, 1);
     newPipeline.splice(dropIndex, 0, movedItem);
 
-    setUserInput(JSON.stringify(newPipeline));
+    if (onChange) onChange(JSON.stringify(newPipeline));
     setDraggedItem(null);
   };
 
   const addStep = (step) => {
     if (!pipeline.includes(step)) {
       const newPipeline = [...pipeline, step];
-      setUserInput(JSON.stringify(newPipeline));
+      if (onChange) onChange(JSON.stringify(newPipeline));
     }
   };
 
   const removeStep = (index) => {
     const newPipeline = pipeline.filter((_, i) => i !== index);
-    setUserInput(JSON.stringify(newPipeline));
+    if (onChange) onChange(JSON.stringify(newPipeline));
   };
 
   const moveStep = (index, direction) => {
@@ -74,7 +70,7 @@ export default function PipelineBuilder() {
 
     const newPipeline = [...pipeline];
     [newPipeline[index], newPipeline[newIndex]] = [newPipeline[newIndex], newPipeline[index]];
-    setUserInput(JSON.stringify(newPipeline));
+    if (onChange) onChange(JSON.stringify(newPipeline));
   };
 
   const unusedSteps = ALL_STEPS.filter(step => !pipeline.includes(step));
@@ -84,16 +80,12 @@ export default function PipelineBuilder() {
       {/* Header */}
       <div className="mb-4">
         <h3 className="text-sm font-semibold text-text mb-1">Pipeline Builder</h3>
-        <p className="text-xs text-text-dim">
-          Drag to reorder steps. Build the correct CI/CD sequence.
-        </p>
+        <p className="text-xs text-text-dim">Drag to reorder steps. Build the correct CI/CD sequence.</p>
       </div>
 
       {/* Active pipeline area */}
       <div className="mb-6">
-        <div className="text-xs font-medium text-text-dim mb-2 uppercase tracking-wider">
-          Active Pipeline
-        </div>
+        <div className="text-xs font-medium text-text-dim mb-2 uppercase tracking-wider">Active Pipeline</div>
 
         {pipeline.length === 0 ? (
           <div className="border-2 border-dashed border-border rounded-lg p-6 text-center text-text-dim text-sm">
@@ -109,14 +101,11 @@ export default function PipelineBuilder() {
                 onDragOver={(e) => handleDragOver(e, index)}
                 onDragLeave={handleDragLeave}
                 onDrop={(e) => handleDrop(e, index)}
-                className={`
-                  group flex items-center gap-2 p-3 rounded-lg border cursor-move
-                  transition-all duration-150
-                  ${dragOverIndex === index
+                className={`group flex items-center gap-2 p-3 rounded-lg border cursor-move transition-all duration-150 ${
+                  dragOverIndex === index
                     ? 'border-accent bg-accent/10 scale-[1.02]'
                     : 'border-border bg-surface hover:border-border-muted'
-                  }
-                `}
+                }`}
               >
                 {/* Drag handle */}
                 <div className="cursor-grab active:cursor-grabbing text-text-dim hover:text-text">
@@ -171,26 +160,16 @@ export default function PipelineBuilder() {
       {/* Available steps palette */}
       {unusedSteps.length > 0 && (
         <div className="flex-1">
-          <div className="text-xs font-medium text-text-dim mb-2 uppercase tracking-wider">
-            Available Steps
-          </div>
+          <div className="text-xs font-medium text-text-dim mb-2 uppercase tracking-wider">Available Steps</div>
           <div className="flex flex-wrap gap-2">
             {unusedSteps.map((step) => (
               <div
                 key={step}
                 onClick={() => addStep(step)}
-                className="
-                  cursor-pointer px-3 py-2 rounded-md border border-border
-                  bg-surface hover:bg-surface-hover hover:border-accent
-                  transition-all duration-150 group
-                "
+                className="cursor-pointer px-3 py-2 rounded-md border border-border bg-surface hover:bg-surface-hover hover:border-accent transition-all duration-150 group"
               >
-                <span className="font-mono text-sm text-text group-hover:text-accent">
-                  {step}
-                </span>
-                <span className="ml-1.5 text-accent opacity-0 group-hover:opacity-100 transition-opacity">
-                  +
-                </span>
+                <span className="font-mono text-xs text-text group-hover:text-accent">{step}</span>
+                <span className="ml-1.5 text-accent opacity-0 group-hover:opacity-100 transition-opacity">+</span>
               </div>
             ))}
           </div>
@@ -200,13 +179,11 @@ export default function PipelineBuilder() {
       {/* Pipeline visualization */}
       {pipeline.length > 0 && (
         <div className="mt-4 pt-4 border-t border-border">
-          <div className="text-xs font-medium text-text-dim mb-2 uppercase tracking-wider">
-            Flow Preview
-          </div>
+          <div className="text-xs font-medium text-text-dim mb-2 uppercase tracking-wider">Flow Preview</div>
           <div className="flex items-center gap-2 overflow-x-auto pb-2">
             {pipeline.map((step, index) => (
               <div key={index} className="flex items-center">
-                <div className="flex items-center gap-1 px-2 py-1 bg-secondary border border-border rounded-md">
+                <div className="px-2 py-1 bg-secondary border border-border rounded-md">
                   <span className="font-mono text-xs text-accent">{step}</span>
                 </div>
                 {index < pipeline.length - 1 && (

@@ -1,0 +1,14 @@
+{
+    "title":  "SQL Mission 3",
+    "initialState":  {
+                         "content":  "SELECT * FROM table"
+                     },
+    "validation":  {
+                       "type":  "sql",
+                       "rules":  [
+                                     "must_include:select"
+                                 ]
+                   },
+    "id":  "mission_03",
+    "type":  "sql_debug"
+}

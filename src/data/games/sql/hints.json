@@ -1,6 +1,0 @@
-[
-  { "id": "hint_sql_001", "message": "ORDER BY needs a column" },
-  { "id": "hint_sql_002", "message": "DESC comes after column name" },
-  { "id": "hint_sql_003", "message": "Aggregation requires grouping" },
-  { "id": "hint_sql_004", "message": "GROUP BY missing" }
-]

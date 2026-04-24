@@ -1,7 +1,0 @@
-[
-  {
-    "id": "solution_devops_001",
-    "answer": ["build", "test", "deploy"],
-    "explanation": "CI pipelines must follow correct order"
-  }
-]
