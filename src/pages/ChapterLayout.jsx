@@ -16,8 +16,8 @@ export default function ChapterLayout() {
   Object.keys(missionModules).forEach(path => {
     if (path.includes(`/data/games/${technology}/`)) {
       const parts = path.split('/');
-      const chapter = parts[4]; // ../data/games/[tech]/[chapter]/mission_XX/games.json
-      if (chapter) chapterSet.add(chapter);
+      const chap = parts[4]; // ../data/games/[tech]/[chapter]/mission_XX/games.json
+      if (chap) chapterSet.add(chap);
     }
   });
   const chapters = Array.from(chapterSet);
@@ -30,12 +30,10 @@ export default function ChapterLayout() {
       <div className="flex-1 flex flex-col min-w-0">
         <Header />
         <main className="flex-1 flex overflow-hidden">
-          <div className="flex-1 flex flex-col p-4 overflow-hidden">
+          {/* Main content area - MissionPage handles internal layout */}
+          <div className="flex-1 flex flex-col overflow-hidden">
             <Outlet context={{ technology, chapters }} />
           </div>
-          <aside className="w-80 border-l border-border bg-primary overflow-hidden">
-            {/* TaskPanel can be rendered here by child routes if needed */}
-          </aside>
         </main>
       </div>
     </div>

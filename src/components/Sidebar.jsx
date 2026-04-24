@@ -5,20 +5,73 @@ import { useGameStore } from '../store/gameStore';
 const missionModules = import.meta.glob('../data/games/**/mission_*/games.json', { eager: true });
 
 export default function Sidebar({ technology: propTech }) {
-  const { technology: urlTech } = useParams();
+  const { technology: urlTech, chapter: urlChapter, mission: urlMission } = useParams();
   const tech = propTech || urlTech;
-  const { level, xp } = useGameStore();
+  const chapter = urlChapter;
+  const { level, xp, completedMissions } = useGameStore();
 
   // Get chapters for this technology
   const chapterSet = new Set();
   Object.keys(missionModules).forEach(path => {
     if (path.includes(`/data/games/${tech}/`)) {
       const parts = path.split('/');
-      const chapter = parts[4];
-      if (chapter) chapterSet.add(chapter);
+      const chap = parts[4];
+      if (chap) chapterSet.add(chap);
     }
   });
   const chapters = Array.from(chapterSet);
+
+  // Get missions for the current chapter
+  const getMissions = () => {
+    if (!chapter) return [];
+    const missions = [];
+    Object.entries(missionModules).forEach(([path, module]) => {
+      if (path.includes(`/data/games/${tech}/${chapter}/`)) {
+        const parts = path.split('/');
+        const missionFolder = parts[5];
+        if (missionFolder && missionFolder.startsWith('mission_')) {
+          missions.push({
+            id: missionFolder,
+            ...module.default
+          });
+        }
+      }
+    });
+    return missions.sort((a, b) => {
+      const numA = parseInt(a.id.split('_')[1]);
+      const numB = parseInt(b.id.split('_')[1]);
+      return numA - numB;
+    });
+  };
+
+  const missions = getMissions();
+
+  const formatName = (str) => {
+    if (!str) return '';
+    return str.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+  };
+
+  const renderIcon = (mission, isCompleted, isUnlocked) => {
+    if (isCompleted) {
+      return (
+        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+        </svg>
+      );
+    }
+    if (!isUnlocked) {
+      return (
+        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 15v2m0 0v3m0-3h3m-3 0H9m3 0a9 9 0 10-9-9c1.153 0 2.24.275 3.193.765a6.985 6.985 0 014.197 4.197A9 9 0 0112 21z" />
+        </svg>
+      );
+    }
+    return (
+      <span className="w-4 h-4 flex items-center justify-center text-xs font-medium">
+        {mission.id.split('_').pop()}
+      </span>
+    );
+  };
 
   return (
     <aside className="w-64 h-full flex flex-col bg-primary border-r border-border">
@@ -61,27 +114,57 @@ export default function Sidebar({ technology: propTech }) {
         </div>
       </div>
 
-      {/* Chapters navigation - only chapter names */}
+      {/* Navigation */}
       <nav className="flex-1 overflow-y-auto scrollbar-thin p-2">
-        <div className="mb-2">
-          <div className="px-3 py-2 text-xs font-semibold text-text-dim uppercase tracking-wider">
-            Chapters
-          </div>
-          <div className="space-y-1">
-            {chapters.map(chapter => {
-              const displayChapter = chapter.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-              return (
+        {/* Show CHAPTERS when no chapter selected */}
+        {!chapter && (
+          <div className="mb-2">
+            <div className="px-3 py-2 text-xs font-semibold text-text-dim uppercase tracking-wider">
+              Chapters
+            </div>
+            <div className="space-y-1">
+              {chapters.map(chap => (
                 <Link
-                  key={chapter}
-                  to={`/${tech}/${chapter}`}
+                  key={chap}
+                  to={`/${tech}/${chap}`}
                   className="nav-item"
                 >
-                  <span className="flex-1 text-xs truncate">{displayChapter}</span>
+                  <span className="flex-1 text-xs truncate">{formatName(chap)}</span>
                 </Link>
-              );
-            })}
+              ))}
+            </div>
           </div>
-        </div>
+        )}
+
+        {/* Show MISSIONS when chapter is selected */}
+        {chapter && (
+          <div className="mb-2">
+            <div className="px-3 py-2 text-xs font-semibold text-text-dim uppercase tracking-wider">
+              {formatName(chapter)}
+            </div>
+            <div className="space-y-1">
+              {missions.map(mission => {
+                const isCompleted = (completedMissions[`${tech}/${chapter}`] || []).includes(mission.id);
+                const isActive = urlMission === mission.id;
+                const isUnlocked = useGameStore.getState().isUnlocked(tech, chapter, mission.id);
+
+                return (
+                  <Link
+                    key={mission.id}
+                    to={`/${tech}/${chapter}/${mission.id}`}
+                    className={`nav-item ${isActive ? 'active' : ''} ${isCompleted ? 'completed' : ''} ${!isUnlocked ? 'opacity-50 pointer-events-none' : ''}`}
+                  >
+                    <div className="nav-icon">
+                      {renderIcon(mission, isCompleted, isUnlocked)}
+                    </div>
+                    <span className="flex-1 text-xs truncate">{mission.title || mission.id}</span>
+                    <span className="flex-shrink-0 text-xs text-accent">+{mission.xpReward || 100}</span>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Footer */}

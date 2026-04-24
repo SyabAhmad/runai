@@ -1,0 +1,96 @@
+{
+  "chapters": [
+    {
+      "id": "sql_basics",
+      "title": "SQL Fundamentals",
+      "description": "Master the core SQL queries every developer needs",
+      "icon": "sql",
+      "gameType": "sql_debug",
+      "missions": [
+        {
+          "id": "game_sql_001",
+          "title": "ORDER BY Basics",
+          "description": "Learn to sort query results",
+          "difficulty": "Easy",
+          "xpReward": 100
+        },
+        {
+          "id": "game_sql_002",
+          "title": "Aggregation & GROUP BY",
+          "description": "Group and count records",
+          "difficulty": "Medium",
+          "xpReward": 150
+        }
+      ]
+    },
+    {
+      "id": "terminal_basics",
+      "title": "Command Line Essentials",
+      "description": "Essential commands for development workflows",
+      "icon": "terminal",
+      "gameType": "terminal",
+      "missions": [
+        {
+          "id": "game_terminal_001",
+          "title": "Docker Build",
+          "description": "Build container images correctly",
+          "difficulty": "Easy",
+          "xpReward": 100
+        },
+        {
+          "id": "game_terminal_002",
+          "title": "Kubernetes Deploy",
+          "description": "Deploy to clusters with kubectl",
+          "difficulty": "Medium",
+          "xpReward": 150
+        }
+      ]
+    },
+    {
+      "id": "pipeline_basics",
+      "title": "CI/CD Pipelines",
+      "description": "Build reliable deployment pipelines",
+      "icon": "pipeline",
+      "gameType": "pipeline",
+      "missions": [
+        {
+          "id": "game_devops_001",
+          "title": "Pipeline Order",
+          "description": "Arrange steps in correct sequence",
+          "difficulty": "Easy",
+          "xpReward": 100
+        }
+      ]
+    },
+    {
+      "id": "ai_engineering",
+      "title": "ML Pipeline Engineering",
+      "description": "Design and validate machine learning workflows",
+      "icon": "pipeline",
+      "gameType": "ai_code",
+      "missions": [
+        {
+          "id": "game_ai_001",
+          "title": "Data Preprocessing",
+          "description": "Implement data normalization by subtracting the mean",
+          "difficulty": "Easy",
+          "xpReward": 100
+        },
+        {
+          "id": "game_ai_002",
+          "title": "Train/Test Split",
+          "description": "Partition data for proper model evaluation (80/20)",
+          "difficulty": "Medium",
+          "xpReward": 150
+        },
+        {
+          "id": "game_ai_003",
+          "title": "Pipeline Structure",
+          "description": "Build a correct ML pipeline with ordered steps",
+          "difficulty": "Medium",
+          "xpReward": 150
+        }
+      ]
+    }
+  ]
+}

@@ -5,24 +5,59 @@ export default function Header() {
   const { xp, level } = useGameStore();
   const { technology, chapter, mission } = useParams();
 
-  const getPageTitle = () => {
-    if (mission) return mission.replace(/_/g, ' ');
-    if (chapter) return chapter.replace(/_/g, ' ');
-    if (technology) return technology.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
-    return 'RunAI';
+  const formatName = (str) => {
+    if (!str) return '';
+    return str.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
   };
 
   return (
     <header className="h-12 flex items-center justify-between px-4 border-b border-border bg-primary">
-      <div className="flex items-center gap-3">
+      {/* Left: Breadcrumb Navigation */}
+      <div className="flex items-center gap-2 text-sm">
+        <Link to="/" className="text-text-dim hover:text-text transition-colors">
+          Home
+        </Link>
+
         {technology && (
-          <Link to="/" className="text-text-dim hover:text-text">
-            <span className="text-sm">← Home</span>
-          </Link>
+          <>
+            <span className="text-text-dim">/</span>
+            <Link 
+              to={`/${technology}`} 
+              className="text-text-dim hover:text-text transition-colors"
+            >
+              {formatName(technology)}
+            </Link>
+          </>
         )}
-        <h1 className="text-sm font-semibold text-text">{getPageTitle()}</h1>
+
+        {chapter && (
+          <>
+            <span className="text-text-dim">/</span>
+            <Link 
+              to={`/${technology}/${chapter}`} 
+              className="text-text-dim hover:text-text transition-colors"
+            >
+              {formatName(chapter)}
+            </Link>
+          </>
+        )}
+
+        {mission && (
+          <>
+            <span className="text-text-dim">/</span>
+            <span className="text-text font-semibold">
+              {formatName(mission)}
+            </span>
+          </>
+        )}
+
+        {/* Show page title if no specific level */}
+        {!technology && !chapter && !mission && (
+          <span className="text-text font-semibold">RunAI</span>
+        )}
       </div>
 
+      {/* Right: Stats */}
       <div className="flex items-center gap-3">
         <span className="text-xs text-accent">{xp} XP</span>
         <span className="text-xs bg-accent/20 text-accent px-2 py-1 rounded">Lvl {level}</span>
