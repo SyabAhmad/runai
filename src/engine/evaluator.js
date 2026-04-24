@@ -25,10 +25,10 @@ function normalizeInput(input) {
 }
 
 function evaluateSqlRules(input, rules) {
-  const lowerInput = input.toLowerCase();
+  const lowerInput = normalizeForRuleMatch(input);
   for (const rule of rules) {
     if (rule.startsWith('must_include:')) {
-      const keyword = rule.split(':')[1].toLowerCase();
+      const keyword = normalizeForRuleMatch(rule.slice('must_include:'.length));
       if (!lowerInput.includes(keyword)) {
         return { success: false, message: `Missing required keyword: ${keyword}` };
       }
@@ -38,10 +38,10 @@ function evaluateSqlRules(input, rules) {
 }
 
 function evaluateCommandRules(input, rules) {
-  const lowerInput = input.toLowerCase();
+  const lowerInput = normalizeForRuleMatch(input);
   for (const rule of rules) {
     if (rule.startsWith('must_include:')) {
-      const keyword = rule.split(':')[1].toLowerCase();
+      const keyword = normalizeForRuleMatch(rule.slice('must_include:'.length));
       if (!lowerInput.includes(keyword)) {
         return { success: false, message: `Missing required flag: ${keyword}` };
       }
@@ -56,17 +56,17 @@ function evaluateAiCodeRules(input, rules, tests) {
   }
 
   const executableInput = stripPythonComments(input);
-  const lowerInput = executableInput.toLowerCase();
+  const lowerInput = normalizeForRuleMatch(executableInput);
 
   for (const rule of rules) {
     if (rule.startsWith('must_include:')) {
       const keyword = rule.slice('must_include:'.length).toLowerCase();
-      if (!lowerInput.includes(keyword)) {
+      if (!lowerInput.includes(normalizeForRuleMatch(keyword))) {
         return { success: false, message: `Missing required keyword: ${keyword}` };
       }
     } else if (rule.startsWith('must_not_include:')) {
       const keyword = rule.slice('must_not_include:'.length).toLowerCase();
-      if (lowerInput.includes(keyword)) {
+      if (lowerInput.includes(normalizeForRuleMatch(keyword))) {
         return { success: false, message: `Should not include: ${keyword}` };
       }
     }
@@ -89,6 +89,13 @@ function stripPythonComments(input) {
       return line.replace(/\s+#.*$/, '');
     })
     .join('\n');
+}
+
+function normalizeForRuleMatch(value) {
+  return String(value)
+    .toLowerCase()
+    .replace(/\s+/g, ' ')
+    .trim();
 }
 
 function runAiCodeTests(input, tests = []) {

@@ -30,7 +30,9 @@ export default function PookiePage() {
           </div>
           <div className="rounded-2xl border border-blue-300/20 bg-blue-400/10 p-5">
             <p className="text-xs text-blue-200">Strength 3</p>
-            <p className="mt-2 text-sm font-semibold">Turns effort into results</p>
+            <p className="mt-2 text-sm font-semibold">
+              Turns effort into results
+            </p>
           </div>
         </section>
 
@@ -47,8 +49,14 @@ export default function PookiePage() {
 
         <div className="flex flex-wrap items-center gap-3">
           <Link
-            to="/"
+            to="/pookie/certificate"
             className="rounded-full border border-pink-300/35 bg-pink-400/15 px-4 py-2 text-xs font-semibold text-pink-200 transition hover:bg-pink-400/25"
+          >
+            View Pookie Certificate
+          </Link>
+          <Link
+            to="/"
+            className="rounded-full border border-border px-4 py-2 text-xs font-semibold text-text-muted transition hover:text-text"
           >
             Back Home
           </Link>
