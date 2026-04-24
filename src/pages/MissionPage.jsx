@@ -13,6 +13,8 @@ export default function MissionPage() {
   const [userInput, setUserInput] = useState('');
   const [result, setResult] = useState(null);
   const [hintIndex, setHintIndex] = useState(0);
+  const [reaction, setReaction] = useState(null);
+  const [reactionKey, setReactionKey] = useState(0);
   const chapterKey = `${technology}/${chapter}`;
   const isCompleted = (completedMissions[chapterKey] || []).includes(missionId);
 
@@ -64,6 +66,12 @@ export default function MissionPage() {
     loadData();
   }, [technology, chapter, missionId, isCompleted]);
 
+  useEffect(() => {
+    if (!reaction) return undefined;
+    const timer = setTimeout(() => setReaction(null), 1600);
+    return () => clearTimeout(timer);
+  }, [reaction, reactionKey]);
+
   const handleSubmit = () => {
     if (!mission) return;
     if (isCompleted) return;
@@ -73,8 +81,12 @@ export default function MissionPage() {
       completeMission(technology, chapter, missionId, mission.xpReward || 100);
       localStorage.setItem(solutionStorageKey, userInput);
       setResult({ success: true, message: evaluation.message });
+      setReaction('success');
+      setReactionKey(Date.now());
     } else {
       setResult({ success: false, message: evaluation.message });
+      setReaction('error');
+      setReactionKey(Date.now());
     }
   };
 
@@ -118,7 +130,27 @@ export default function MissionPage() {
   const displayMission = missionId.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
 
   return (
-    <div className="h-full flex flex-col overflow-hidden">
+    <div className="h-full flex flex-col overflow-hidden relative">
+      {reaction === 'success' && (
+        <>
+          <div className="confetti-wrap" aria-hidden>
+            {Array.from({ length: 18 }).map((_, index) => (
+              <span
+                key={`${reactionKey}-confetti-${index}`}
+                className="confetti-piece"
+                style={{
+                  left: `${(index * 5.3) % 95}%`,
+                  animationDelay: `${(index % 6) * 0.05}s`,
+                }}
+              />
+            ))}
+          </div>
+          <div className="result-pop success">🎉 Party Time! Mission Cleared!</div>
+        </>
+      )}
+      {reaction === 'error' && (
+        <div className="result-pop error">😢 Oops... not yet. Try again!</div>
+      )}
       {/* Top bar with mission info */}
       <div className="px-6 py-4 border-b border-border bg-primary">
         <div className="flex items-center justify-between">
