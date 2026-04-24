@@ -1,0 +1,20 @@
+﻿{
+    "title":  "SQL Mission 10: CTE With CASE",
+    "initialState":  {
+                         "content":  "SELECT name, salary\\nFROM employees;"
+                     },
+    "validation":  {
+                       "type":  "sql",
+                       "rules":  [
+                                     "must_include:with ranked as",
+                                     "must_include:select name, department, salary",
+                                     "must_include:case",
+                                     "must_include:when salary \u003e= 90000 then \u0027high\u0027",
+                                     "must_include:when salary \u003e= 60000 then \u0027medium\u0027",
+                                     "must_include:else \u0027low\u0027",
+                                     "must_include:order by salary desc"
+                                 ]
+                   },
+    "id":  "mission_10",
+    "type":  "sql_debug"
+}

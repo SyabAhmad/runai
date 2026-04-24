@@ -1,0 +1,7 @@
+﻿{
+    "mission_06":  [
+                       "Do not call YEAR(order_date) in WHERE.",
+                       "Use range predicates with \u003e= and \u003c.",
+                       "Use start and end boundary dates."
+                   ]
+}

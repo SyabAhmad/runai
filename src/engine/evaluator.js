@@ -4,17 +4,24 @@
 export function evaluateMission(mission, userInput) {
   const { validation } = mission;
   if (!validation) return { success: false, message: 'No validation rules defined' };
+  const content = normalizeInput(userInput);
 
   switch (validation.type) {
     case 'sql':
-      return evaluateSqlRules(userInput, validation.rules);
+      return evaluateSqlRules(content, validation.rules);
     case 'command':
-      return evaluateCommandRules(userInput, validation.rules);
+      return evaluateCommandRules(content, validation.rules);
     case 'ai_code':
-      return evaluateAiCodeRules(userInput, validation.rules, validation.tests);
+      return evaluateAiCodeRules(content, validation.rules, validation.tests);
     default:
       return { success: false, message: `Unknown validation type: ${validation.type}` };
   }
+}
+
+function normalizeInput(input) {
+  if (typeof input === 'string') return input;
+  if (input && typeof input.content === 'string') return input.content;
+  return '';
 }
 
 function evaluateSqlRules(input, rules) {

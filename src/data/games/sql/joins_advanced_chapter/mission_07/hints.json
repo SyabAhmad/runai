@@ -1,0 +1,7 @@
+﻿{
+    "mission_07":  [
+                       "Use two aliases of employees: one for employee and one for manager.",
+                       "Join manager_id to employee_id.",
+                       "Use aliases for readable output names."
+                   ]
+}

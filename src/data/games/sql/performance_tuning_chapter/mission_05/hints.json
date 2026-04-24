@@ -1,0 +1,7 @@
+﻿{
+    "mission_05":  [
+                       "Avoid SELECT * for better performance and clarity.",
+                       "Pick only required columns.",
+                       "Sort by latest order_date first."
+                   ]
+}

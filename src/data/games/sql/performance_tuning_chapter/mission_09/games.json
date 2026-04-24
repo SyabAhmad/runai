@@ -1,0 +1,19 @@
+﻿{
+    "title":  "SQL Mission 9: Pre-Filter Before Aggregation",
+    "initialState":  {
+                         "content":  "SELECT customer_id, SUM(total_amount) AS total_spend\\nFROM orders\\nGROUP BY customer_id;"
+                     },
+    "validation":  {
+                       "type":  "sql",
+                       "rules":  [
+                                     "must_include:with filtered_orders as",
+                                     "must_include:where status = \u0027completed\u0027",
+                                     "must_include:and order_date \u003e= \u00272025-01-01\u0027",
+                                     "must_include:select customer_id, sum(total_amount) as total_spend",
+                                     "must_include:group by customer_id",
+                                     "must_include:order by total_spend desc"
+                                 ]
+                   },
+    "id":  "mission_09",
+    "type":  "sql_debug"
+}

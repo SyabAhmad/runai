@@ -1,0 +1,18 @@
+﻿{
+    "title":  "SQL Mission 7: Range And Set Filters",
+    "initialState":  {
+                         "content":  "SELECT name, salary\\nFROM employees\\nWHERE salary \u003e 0;"
+                     },
+    "validation":  {
+                       "type":  "sql",
+                       "rules":  [
+                                     "must_include:select name, salary",
+                                     "must_include:from employees",
+                                     "must_include:salary between 40000 and 90000",
+                                     "must_include:department in (\u0027sales\u0027,\u0027marketing\u0027)",
+                                     "must_include:order by salary desc"
+                                 ]
+                   },
+    "id":  "mission_07",
+    "type":  "sql_debug"
+}

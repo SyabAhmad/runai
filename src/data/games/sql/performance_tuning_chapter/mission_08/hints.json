@@ -1,0 +1,7 @@
+﻿{
+    "mission_08":  [
+                       "Sort by total_amount descending.",
+                       "Use LIMIT to reduce returned rows.",
+                       "Keep selected columns minimal."
+                   ]
+}

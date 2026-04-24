@@ -1,0 +1,7 @@
+﻿{
+    "mission_10":  [
+                       "Use ROW_NUMBER with PARTITION BY customer_id.",
+                       "Order rows by order_date descending inside the window.",
+                       "Filter ranked rows to rn \u003c= 3."
+                   ]
+}

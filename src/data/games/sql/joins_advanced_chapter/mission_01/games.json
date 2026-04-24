@@ -1,14 +1,18 @@
-{
-    "title":  "Data Preprocessing",
+﻿{
+    "title":  "SQL Mission 1: Customer Orders With INNER JOIN",
     "initialState":  {
-                         "content":  "def preprocess(data):\n    return data"
+                         "content":  "-- Mission Guidelines:\\n-- Tables:\\n--   customers(customer_id, name, region)\\n--   orders(order_id, customer_id, order_date, total_amount)\\n-- Goal:\\n--   Return customer name with order_id for existing orders only\\n-- Requirements:\\n--   Use INNER JOIN with an explicit ON condition\\n--   Sort by order_id ascending\\n\\nSELECT c.name, o.order_id\\nFROM customers c\\nINNER JOIN orders o ON c.customer_id = o.customer_id\\nORDER BY o.order_id;"
                      },
     "validation":  {
-                       "type":  "ai_code",
+                       "type":  "sql",
                        "rules":  [
-                                     "must_include:def"
+                                     "must_include:select c.name, o.order_id",
+                                     "must_include:from customers c",
+                                     "must_include:inner join orders o",
+                                     "must_include:on c.customer_id = o.customer_id",
+                                     "must_include:order by o.order_id"
                                  ]
                    },
     "id":  "mission_01",
-    "type":  "ai_code"
+    "type":  "sql_debug"
 }

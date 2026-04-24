@@ -1,0 +1,3 @@
+﻿{
+    "mission_09":  "SELECT name, salary FROM employees WHERE salary \u003e (SELECT AVG(salary) FROM employees) ORDER BY salary DESC;"
+}

@@ -1,0 +1,18 @@
+﻿{
+    "title":  "SQL Mission 5: Inner Join Orders",
+    "initialState":  {
+                         "content":  "SELECT c.name, o.order_id\\nFROM customers c, orders o;"
+                     },
+    "validation":  {
+                       "type":  "sql",
+                       "rules":  [
+                                     "must_include:from customers c",
+                                     "must_include:inner join orders o",
+                                     "must_include:on c.customer_id = o.customer_id",
+                                     "must_include:select c.name, o.order_id",
+                                     "must_include:order by o.order_id"
+                                 ]
+                   },
+    "id":  "mission_05",
+    "type":  "sql_debug"
+}

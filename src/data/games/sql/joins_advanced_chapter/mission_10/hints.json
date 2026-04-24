@@ -1,0 +1,7 @@
+﻿{
+    "mission_10":  [
+                       "Build a CTE that calculates customer spend by region.",
+                       "Use ROW_NUMBER partitioned by region.",
+                       "Keep only rn = 1."
+                   ]
+}

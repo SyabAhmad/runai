@@ -1,0 +1,17 @@
+﻿{
+    "title":  "SQL Mission 6: Sargable Date Filter",
+    "initialState":  {
+                         "content":  "SELECT order_id\\nFROM orders\\nWHERE YEAR(order_date) = 2025;"
+                     },
+    "validation":  {
+                       "type":  "sql",
+                       "rules":  [
+                                     "must_include:select order_id",
+                                     "must_include:from orders",
+                                     "must_include:where order_date \u003e= \u00272025-01-01\u0027",
+                                     "must_include:and order_date \u003c \u00272026-01-01\u0027"
+                                 ]
+                   },
+    "id":  "mission_06",
+    "type":  "sql_debug"
+}

@@ -1,0 +1,7 @@
+﻿{
+    "mission_06":  [
+                       "Use LIKE with a wildcard for prefix matching.",
+                       "\u0027A%\u0027 means any name starting with A.",
+                       "Add ORDER BY name for stable output."
+                   ]
+}

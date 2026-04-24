@@ -1,0 +1,18 @@
+﻿{
+    "title":  "SQL Mission 10: Rank Latest Orders Per Customer",
+    "initialState":  {
+                         "content":  "SELECT customer_id, order_id, order_date\\nFROM orders;"
+                     },
+    "validation":  {
+                       "type":  "sql",
+                       "rules":  [
+                                     "must_include:with ranked_orders as",
+                                     "must_include:row_number() over (partition by customer_id order by order_date desc) as rn",
+                                     "must_include:select customer_id, order_id, order_date",
+                                     "must_include:where rn \u003c= 3",
+                                     "must_include:order by customer_id, order_date desc"
+                                 ]
+                   },
+    "id":  "mission_10",
+    "type":  "sql_debug"
+}

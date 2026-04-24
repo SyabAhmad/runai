@@ -1,0 +1,7 @@
+﻿{
+    "mission_10":  [
+                       "Start with a CTE named ranked.",
+                       "Use CASE WHEN to assign salary_band.",
+                       "Sort final output by salary descending."
+                   ]
+}

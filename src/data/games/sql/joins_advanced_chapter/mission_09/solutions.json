@@ -1,0 +1,3 @@
+﻿{
+    "mission_09":  "SELECT c.name, COALESCE(o.total_orders, 0) AS total_orders FROM customers c LEFT JOIN (SELECT customer_id, COUNT(*) AS total_orders FROM orders GROUP BY customer_id) o ON c.customer_id = o.customer_id ORDER BY total_orders DESC;"
+}

@@ -1,0 +1,7 @@
+﻿{
+    "mission_09":  [
+                       "Create an aggregated subquery for order counts.",
+                       "LEFT JOIN it with customers.",
+                       "Use COALESCE to replace NULL with 0."
+                   ]
+}

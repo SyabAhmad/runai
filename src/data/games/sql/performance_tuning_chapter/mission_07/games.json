@@ -1,0 +1,16 @@
+﻿{
+    "title":  "SQL Mission 7: EXISTS For Existence Checks",
+    "initialState":  {
+                         "content":  "SELECT c.customer_id, c.name\\nFROM customers c\\nLEFT JOIN orders o ON c.customer_id = o.customer_id\\nWHERE o.order_id IS NOT NULL;"
+                     },
+    "validation":  {
+                       "type":  "sql",
+                       "rules":  [
+                                     "must_include:select c.customer_id, c.name",
+                                     "must_include:from customers c",
+                                     "must_include:where exists (select 1 from orders o where o.customer_id = c.customer_id)"
+                                 ]
+                   },
+    "id":  "mission_07",
+    "type":  "sql_debug"
+}

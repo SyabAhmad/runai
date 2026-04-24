@@ -1,0 +1,3 @@
+﻿{
+    "mission_05":  "SELECT DISTINCT department FROM employees ORDER BY department;"
+}

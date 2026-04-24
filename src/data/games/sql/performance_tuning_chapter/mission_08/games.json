@@ -1,0 +1,17 @@
+﻿{
+    "title":  "SQL Mission 8: Top N With Limit",
+    "initialState":  {
+                         "content":  "SELECT order_id, total_amount\\nFROM orders\\nORDER BY total_amount DESC;"
+                     },
+    "validation":  {
+                       "type":  "sql",
+                       "rules":  [
+                                     "must_include:select order_id, total_amount",
+                                     "must_include:from orders",
+                                     "must_include:order by total_amount desc",
+                                     "must_include:limit 20"
+                                 ]
+                   },
+    "id":  "mission_08",
+    "type":  "sql_debug"
+}

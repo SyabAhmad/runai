@@ -1,0 +1,7 @@
+﻿{
+    "mission_06":  [
+                       "Use LEFT JOIN to keep all customers.",
+                       "Rows with no match have NULL values in orders columns.",
+                       "Filter where order_id IS NULL."
+                   ]
+}

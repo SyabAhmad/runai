@@ -1,0 +1,7 @@
+﻿{
+    "mission_07":  [
+                       "Use EXISTS for existence checks.",
+                       "Correlate subquery using customer_id.",
+                       "Return customer fields from outer query."
+                   ]
+}

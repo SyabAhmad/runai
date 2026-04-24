@@ -1,0 +1,6 @@
+﻿{
+    "mission_05":  [
+                       "Use DISTINCT to remove duplicate departments.",
+                       "Sort the final result with ORDER BY department."
+                   ]
+}

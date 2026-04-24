@@ -1,0 +1,18 @@
+﻿{
+    "title":  "SQL Mission 6: Left Join Missing Orders",
+    "initialState":  {
+                         "content":  "SELECT c.name\\nFROM customers c\\nINNER JOIN orders o ON c.customer_id = o.customer_id;"
+                     },
+    "validation":  {
+                       "type":  "sql",
+                       "rules":  [
+                                     "must_include:from customers c",
+                                     "must_include:left join orders o",
+                                     "must_include:on c.customer_id = o.customer_id",
+                                     "must_include:where o.order_id is null",
+                                     "must_include:select c.name"
+                                 ]
+                   },
+    "id":  "mission_06",
+    "type":  "sql_debug"
+}

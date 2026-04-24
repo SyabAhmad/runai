@@ -1,0 +1,3 @@
+﻿{
+    "mission_06":  "SELECT name FROM employees WHERE name LIKE \u0027A%\u0027 ORDER BY name;"
+}

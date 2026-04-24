@@ -1,0 +1,18 @@
+﻿{
+    "title":  "SQL Mission 8: Grouping With HAVING",
+    "initialState":  {
+                         "content":  "SELECT department, COUNT(*) AS total\\nFROM employees\\nGROUP BY department;"
+                     },
+    "validation":  {
+                       "type":  "sql",
+                       "rules":  [
+                                     "must_include:select department, count(*) as total",
+                                     "must_include:from employees",
+                                     "must_include:group by department",
+                                     "must_include:having count(*) \u003e= 3",
+                                     "must_include:order by total desc"
+                                 ]
+                   },
+    "id":  "mission_08",
+    "type":  "sql_debug"
+}

@@ -1,0 +1,7 @@
+﻿{
+    "mission_09":  [
+                       "Filter early in a CTE.",
+                       "Aggregate only filtered rows.",
+                       "Sort by total_spend descending."
+                   ]
+}

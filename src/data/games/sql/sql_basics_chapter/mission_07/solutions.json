@@ -1,0 +1,3 @@
+﻿{
+    "mission_07":  "SELECT name, salary FROM employees WHERE salary BETWEEN 40000 AND 90000 AND department IN (\u0027Sales\u0027, \u0027Marketing\u0027) ORDER BY salary DESC;"
+}

@@ -1,0 +1,18 @@
+﻿{
+    "title":  "SQL Mission 10: Top Customer Per Region",
+    "initialState":  {
+                         "content":  "SELECT c.region, c.name\\nFROM customers c;"
+                     },
+    "validation":  {
+                       "type":  "sql",
+                       "rules":  [
+                                     "must_include:with spend as",
+                                     "must_include:sum(oi.quantity * p.price) as total_spend",
+                                     "must_include:row_number() over (partition by c.region order by sum(oi.quantity * p.price) desc) as rn",
+                                     "must_include:where rn = 1",
+                                     "must_include:select region, name, total_spend"
+                                 ]
+                   },
+    "id":  "mission_10",
+    "type":  "sql_debug"
+}

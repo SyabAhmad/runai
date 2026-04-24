@@ -1,0 +1,3 @@
+﻿{
+    "mission_06":  "Rewrite date filtering to be index-friendly without wrapping order_date in a function."
+}

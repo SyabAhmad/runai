@@ -16,6 +16,7 @@ export default function MissionPage() {
 
   useEffect(() => {
     const basePath = `/src/data/games/${technology}/${chapter}/${missionId}`;
+    const hintProgressKey = `hintProgress:${technology}/${chapter}/${missionId}`;
     
     const loadData = async () => {
       try {
@@ -35,9 +36,17 @@ export default function MissionPage() {
         try {
           const hintsRes = await fetch(`${basePath}/hints.json`);
           const allHints = await hintsRes.json();
-          setHints(allHints[missionId] || []);
+          const missionHints = allHints[missionId] || [];
+          setHints(missionHints);
+
+          const savedHintIndex = Number(localStorage.getItem(hintProgressKey) || 0);
+          const safeHintIndex = Number.isFinite(savedHintIndex)
+            ? Math.max(0, Math.min(savedHintIndex, missionHints.length))
+            : 0;
+          setHintIndex(safeHintIndex);
         } catch {
           setHints([]);
+          setHintIndex(0);
         }
       } catch (error) {
         console.error('Failed to load mission data:', error);
@@ -63,8 +72,11 @@ export default function MissionPage() {
   };
 
   const revealHint = () => {
+    const hintProgressKey = `hintProgress:${technology}/${chapter}/${missionId}`;
     if (hintIndex < hints.length) {
-      setHintIndex(hintIndex + 1);
+      const nextHintIndex = hintIndex + 1;
+      setHintIndex(nextHintIndex);
+      localStorage.setItem(hintProgressKey, String(nextHintIndex));
     }
   };
 
@@ -130,7 +142,7 @@ export default function MissionPage() {
           <div className="flex-1 overflow-hidden">
             <GameRenderer 
               mission={mission} 
-              data={mission.initialState} 
+              data={{ ...mission.initialState, content: userInput }} 
               onChange={(value) => setUserInput(value)} 
             />
           </div>

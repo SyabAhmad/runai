@@ -1,0 +1,21 @@
+﻿{
+    "title":  "SQL Mission 8: Three Table Revenue",
+    "initialState":  {
+                         "content":  "SELECT o.order_id\\nFROM orders o;"
+                     },
+    "validation":  {
+                       "type":  "sql",
+                       "rules":  [
+                                     "must_include:from orders o",
+                                     "must_include:inner join order_items oi",
+                                     "must_include:on o.order_id = oi.order_id",
+                                     "must_include:inner join products p",
+                                     "must_include:on oi.product_id = p.product_id",
+                                     "must_include:sum(oi.quantity * p.price) as order_total",
+                                     "must_include:group by o.order_id",
+                                     "must_include:order by order_total desc"
+                                 ]
+                   },
+    "id":  "mission_08",
+    "type":  "sql_debug"
+}

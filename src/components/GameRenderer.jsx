@@ -15,7 +15,7 @@ export default function GameRenderer({ mission, data, onChange }) {
       return (
         <div className="panel p-4">
           <CodeEditor
-            initialValue={data?.content || ''}
+            value={data?.content || ''}
             language={mission.type === 'sql_debug' ? 'sql' : 'python'}
             mission={mission}
             onChange={handleChange}
@@ -27,7 +27,7 @@ export default function GameRenderer({ mission, data, onChange }) {
       return (
         <div className="panel p-4">
           <Terminal
-            initialValue={data?.content || ''}
+            value={data?.content || ''}
             mission={mission}
             onChange={handleChange}
           />
@@ -38,7 +38,7 @@ export default function GameRenderer({ mission, data, onChange }) {
       return (
         <div className="panel p-4">
           <PipelineBuilder
-            initialValue={data?.content || ''}
+            value={data?.content || ''}
             mission={mission}
             onChange={handleChange}
           />

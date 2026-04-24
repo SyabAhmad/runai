@@ -1,0 +1,16 @@
+﻿{
+    "title":  "SQL Mission 5: Distinct Departments",
+    "initialState":  {
+                         "content":  "SELECT department\\nFROM employees;"
+                     },
+    "validation":  {
+                       "type":  "sql",
+                       "rules":  [
+                                     "must_include:select distinct department",
+                                     "must_include:from employees",
+                                     "must_include:order by department"
+                                 ]
+                   },
+    "id":  "mission_05",
+    "type":  "sql_debug"
+}

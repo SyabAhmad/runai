@@ -1,0 +1,18 @@
+﻿{
+    "title":  "SQL Mission 7: Self Join Managers",
+    "initialState":  {
+                         "content":  "SELECT e.name, m.name\\nFROM employees e;"
+                     },
+    "validation":  {
+                       "type":  "sql",
+                       "rules":  [
+                                     "must_include:from employees e",
+                                     "must_include:left join employees m",
+                                     "must_include:on e.manager_id = m.employee_id",
+                                     "must_include:select e.name as employee_name, m.name as manager_name",
+                                     "must_include:order by e.name"
+                                 ]
+                   },
+    "id":  "mission_07",
+    "type":  "sql_debug"
+}

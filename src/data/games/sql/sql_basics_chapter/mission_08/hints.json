@@ -1,0 +1,7 @@
+﻿{
+    "mission_08":  [
+                       "Use GROUP BY department.",
+                       "Use HAVING for aggregate filters.",
+                       "Order by the total count descending."
+                   ]
+}

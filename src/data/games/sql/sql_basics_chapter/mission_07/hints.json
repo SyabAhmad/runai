@@ -1,0 +1,7 @@
+﻿{
+    "mission_07":  [
+                       "Use BETWEEN for the salary range.",
+                       "Use IN for multiple department values.",
+                       "Sort by salary descending."
+                   ]
+}

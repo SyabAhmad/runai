@@ -1,0 +1,7 @@
+﻿{
+    "mission_09":  [
+                       "Use a scalar subquery with AVG(salary).",
+                       "Compare salary to the subquery result.",
+                       "Sort by salary descending."
+                   ]
+}

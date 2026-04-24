@@ -1,0 +1,17 @@
+﻿{
+    "title":  "SQL Mission 5: Select Only Needed Columns",
+    "initialState":  {
+                         "content":  "SELECT *\\nFROM orders\\nWHERE status = \u0027completed\u0027;"
+                     },
+    "validation":  {
+                       "type":  "sql",
+                       "rules":  [
+                                     "must_include:select order_id, customer_id, order_date",
+                                     "must_include:from orders",
+                                     "must_include:where status = \u0027completed\u0027",
+                                     "must_include:order by order_date desc"
+                                 ]
+                   },
+    "id":  "mission_05",
+    "type":  "sql_debug"
+}

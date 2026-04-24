@@ -1,0 +1,17 @@
+﻿{
+    "title":  "SQL Mission 6: Pattern Matching",
+    "initialState":  {
+                         "content":  "SELECT name\\nFROM employees\\nWHERE name = \u0027A\u0027;"
+                     },
+    "validation":  {
+                       "type":  "sql",
+                       "rules":  [
+                                     "must_include:select name",
+                                     "must_include:from employees",
+                                     "must_include:where name like \u0027a%\u0027",
+                                     "must_include:order by name"
+                                 ]
+                   },
+    "id":  "mission_06",
+    "type":  "sql_debug"
+}
