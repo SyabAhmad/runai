@@ -1,0 +1,7 @@
+﻿{
+    "mission_07":  [
+                       "Drop target_col from X and keep it in y.",
+                       "Use sklearn.model_selection.train_test_split.",
+                       "Set random_state=42 for deterministic behavior."
+                   ]
+}

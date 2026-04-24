@@ -1,0 +1,44 @@
+﻿{
+    "title":  "Data Preprocessing Mission 7: Train/Test Split",
+    "initialState":  {
+                         "content":  "# TODO: Split features and target into train/test sets\n\ndef split_features_target(df, target_col):\n    # TODO: create X by dropping target_col\n\n    # TODO: create y from target_col\n\n    # TODO: return train_test_split with test_size=0.2 and random_state=42"
+                     },
+    "validation":  {
+                       "rules":  [
+                                     "must_include:def split_features_target",
+                                     "must_include:train_test_split",
+                                     "must_include:test_size=0.2",
+                                     "must_include:random_state=42"
+                                 ],
+                       "tests":  [
+                                     {
+                                         "type":  "must_match",
+                                         "name":  "function signature",
+                                         "pattern":  "def\\s+split_features_target\\s*\\(\\s*df\\s*,\\s*target_col\\s*\\)",
+                                         "message":  "Define split_features_target(df, target_col)."
+                                     },
+                                     {
+                                         "type":  "must_include_all",
+                                         "name":  "x and y prep",
+                                         "values":  [
+                                                        "drop(columns=[target_col])",
+                                                        "y = df[target_col]"
+                                                    ],
+                                         "message":  "Create X from all non-target columns and y from target_col."
+                                     },
+                                     {
+                                         "type":  "must_include_all",
+                                         "name":  "split settings",
+                                         "values":  [
+                                                        "test_size=0.2",
+                                                        "random_state=42"
+                                                    ],
+                                         "message":  "Use test_size=0.2 and random_state=42."
+                                     }
+                                 ],
+                       "type":  "ai_code"
+                   },
+    "id":  "mission_07",
+    "type":  "ai_code",
+    "xpReward":  100
+}

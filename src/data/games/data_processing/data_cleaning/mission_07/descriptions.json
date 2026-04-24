@@ -1,0 +1,3 @@
+﻿{
+    "mission_07":  "Implement split_features_target(df, target_col) that separates X and y and returns train_test_split(X, y, test_size=0.2, random_state=42)."
+}

@@ -1,0 +1,7 @@
+﻿{
+    "mission_10":  [
+                       "Handle missing numeric/categorical values first.",
+                       "Then apply get_dummies with drop_first=True.",
+                       "Split using train_test_split and return all 4 outputs."
+                   ]
+}

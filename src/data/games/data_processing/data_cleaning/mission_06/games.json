@@ -1,0 +1,49 @@
+﻿{
+    "title":  "Data Preprocessing Mission 6: IQR Outlier Capping",
+    "initialState":  {
+                         "content":  "# TODO: Cap outliers using IQR method\n\ndef cap_outliers_iqr(df, col):\n    # TODO: compute q1 and q3\n\n    # TODO: compute iqr, lower, upper bounds\n\n    # TODO: clip values in df[col]\n\n    return df"
+                     },
+    "validation":  {
+                       "rules":  [
+                                     "must_include:def cap_outliers_iqr",
+                                     "must_include:quantile(0.25)",
+                                     "must_include:quantile(0.75)",
+                                     "must_include:clip",
+                                     "must_include:return df"
+                                 ],
+                       "tests":  [
+                                     {
+                                         "type":  "must_match",
+                                         "name":  "function signature",
+                                         "pattern":  "def\\s+cap_outliers_iqr\\s*\\(\\s*df\\s*,\\s*col\\s*\\)",
+                                         "message":  "Define cap_outliers_iqr(df, col)."
+                                     },
+                                     {
+                                         "type":  "must_include_all",
+                                         "name":  "iqr components",
+                                         "values":  [
+                                                        "q1",
+                                                        "q3",
+                                                        "iqr",
+                                                        "lower",
+                                                        "upper"
+                                                    ],
+                                         "message":  "Compute q1, q3, iqr, lower, and upper bounds."
+                                     },
+                                     {
+                                         "type":  "must_include_all",
+                                         "name":  "apply clipping",
+                                         "values":  [
+                                                        "clip",
+                                                        "lower=",
+                                                        "upper="
+                                                    ],
+                                         "message":  "Clip using calculated lower/upper bounds."
+                                     }
+                                 ],
+                       "type":  "ai_code"
+                   },
+    "id":  "mission_06",
+    "type":  "ai_code",
+    "xpReward":  100
+}

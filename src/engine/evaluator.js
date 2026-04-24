@@ -51,19 +51,117 @@ function evaluateCommandRules(input, rules) {
 }
 
 function evaluateAiCodeRules(input, rules, tests) {
-  const lowerInput = input.toLowerCase();
+  if (/\bTODO\b/i.test(input)) {
+    return { success: false, message: 'Resolve all TODO items before submitting.' };
+  }
+
+  const executableInput = stripPythonComments(input);
+  const lowerInput = executableInput.toLowerCase();
+
   for (const rule of rules) {
     if (rule.startsWith('must_include:')) {
-      const keyword = rule.split(':')[1].toLowerCase();
+      const keyword = rule.slice('must_include:'.length).toLowerCase();
       if (!lowerInput.includes(keyword)) {
         return { success: false, message: `Missing required keyword: ${keyword}` };
       }
     } else if (rule.startsWith('must_not_include:')) {
-      const keyword = rule.split(':')[1].toLowerCase();
+      const keyword = rule.slice('must_not_include:'.length).toLowerCase();
       if (lowerInput.includes(keyword)) {
         return { success: false, message: `Should not include: ${keyword}` };
       }
     }
   }
+
+  const testResult = runAiCodeTests(executableInput, tests);
+  if (!testResult.success) return testResult;
+
   return { success: true, message: 'Code is valid!' };
+}
+
+function stripPythonComments(input) {
+  return input
+    .split(/\r?\n/)
+    .map((line) => {
+      const fullLineComment = /^\s*#/.test(line);
+      if (fullLineComment) return '';
+
+      // Remove trailing inline comments while keeping code before '#'.
+      return line.replace(/\s+#.*$/, '');
+    })
+    .join('\n');
+}
+
+function runAiCodeTests(input, tests = []) {
+  if (!Array.isArray(tests) || tests.length === 0) {
+    return { success: true };
+  }
+
+  const nonEmptyLines = input.split(/\r?\n/).filter((line) => line.trim().length > 0).length;
+
+  for (const test of tests) {
+    if (!test || typeof test !== 'object') continue;
+
+    const message = test.message || `Failed test: ${test.name || test.type || 'unnamed'}`;
+
+    switch (test.type) {
+      case 'must_match': {
+        if (typeof test.pattern !== 'string') {
+          return { success: false, message: `Invalid test pattern: ${test.name || 'must_match'}` };
+        }
+        let regex;
+        try {
+          regex = new RegExp(test.pattern, test.flags || 'i');
+        } catch {
+          return { success: false, message: `Invalid regex in test: ${test.name || 'must_match'}` };
+        }
+        if (!regex.test(input)) return { success: false, message };
+        break;
+      }
+
+      case 'must_not_match': {
+        if (typeof test.pattern !== 'string') {
+          return { success: false, message: `Invalid test pattern: ${test.name || 'must_not_match'}` };
+        }
+        let regex;
+        try {
+          regex = new RegExp(test.pattern, test.flags || 'i');
+        } catch {
+          return { success: false, message: `Invalid regex in test: ${test.name || 'must_not_match'}` };
+        }
+        if (regex.test(input)) return { success: false, message };
+        break;
+      }
+
+      case 'must_include_all': {
+        if (!Array.isArray(test.values)) {
+          return { success: false, message: `Invalid values in test: ${test.name || 'must_include_all'}` };
+        }
+        const lowerInput = input.toLowerCase();
+        const allFound = test.values.every((value) => lowerInput.includes(String(value).toLowerCase()));
+        if (!allFound) return { success: false, message };
+        break;
+      }
+
+      case 'must_include_any': {
+        if (!Array.isArray(test.values)) {
+          return { success: false, message: `Invalid values in test: ${test.name || 'must_include_any'}` };
+        }
+        const lowerInput = input.toLowerCase();
+        const oneFound = test.values.some((value) => lowerInput.includes(String(value).toLowerCase()));
+        if (!oneFound) return { success: false, message };
+        break;
+      }
+
+      case 'min_non_empty_lines': {
+        const min = Number(test.value || 0);
+        if (nonEmptyLines < min) return { success: false, message };
+        break;
+      }
+
+      default:
+        break;
+    }
+  }
+
+  return { success: true };
 }

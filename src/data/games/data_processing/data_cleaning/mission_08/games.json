@@ -1,0 +1,45 @@
+﻿{
+    "title":  "Data Preprocessing Mission 8: Build ColumnTransformer",
+    "initialState":  {
+                         "content":  "# TODO: Build a ColumnTransformer preprocessor\n\ndef build_preprocessor(numeric_cols, categorical_cols):\n    # TODO: add StandardScaler for numeric columns\n\n    # TODO: add OneHotEncoder(handle_unknown=\"ignore\") for categorical columns\n\n    # TODO: return ColumnTransformer"
+                     },
+    "validation":  {
+                       "rules":  [
+                                     "must_include:def build_preprocessor",
+                                     "must_include:ColumnTransformer",
+                                     "must_include:StandardScaler",
+                                     "must_include:OneHotEncoder",
+                                     "must_include:handle_unknown=\"ignore\""
+                                 ],
+                       "tests":  [
+                                     {
+                                         "type":  "must_match",
+                                         "name":  "function signature",
+                                         "pattern":  "def\\s+build_preprocessor\\s*\\(\\s*numeric_cols\\s*,\\s*categorical_cols\\s*\\)",
+                                         "message":  "Define build_preprocessor(numeric_cols, categorical_cols)."
+                                     },
+                                     {
+                                         "type":  "must_include_all",
+                                         "name":  "transformer pieces",
+                                         "values":  [
+                                                        "ColumnTransformer",
+                                                        "(\"num\"",
+                                                        "(\"cat\"",
+                                                        "StandardScaler",
+                                                        "OneHotEncoder"
+                                                    ],
+                                         "message":  "Build num and cat transformers inside ColumnTransformer."
+                                     },
+                                     {
+                                         "type":  "must_match",
+                                         "name":  "ignore unknown",
+                                         "pattern":  "handle_unknown\\s*=\\s*[\"\u0027]ignore[\"\u0027]",
+                                         "message":  "Set OneHotEncoder(handle_unknown=\"ignore\")."
+                                     }
+                                 ],
+                       "type":  "ai_code"
+                   },
+    "id":  "mission_08",
+    "type":  "ai_code",
+    "xpReward":  100
+}

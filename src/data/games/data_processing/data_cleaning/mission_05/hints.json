@@ -1,0 +1,7 @@
+﻿{
+    "mission_05":  [
+                       "Use pd.to_datetime with errors=\"coerce\".",
+                       "Use .dt.year and .dt.month for derived features.",
+                       "Return the same DataFrame object after adding columns."
+                   ]
+}

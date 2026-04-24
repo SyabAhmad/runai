@@ -1,14 +1,40 @@
-{
-    "title":  "Model Training",
+﻿{
+    "title":  "Data Preprocessing Mission 3: One-Hot Encode Categoricals",
     "initialState":  {
-                         "content":  "def train_model(X,y):\n    model.fit(X,y)"
+                         "content":  "# TODO: One-hot encode categorical columns\n\ndef encode_categoricals(df):\n    # TODO: detect categorical columns\n\n    # TODO: if no categorical columns, return df\n\n    # TODO: apply pd.get_dummies(..., drop_first=True)\n\n    return df"
                      },
     "validation":  {
-                       "type":  "ai_code",
                        "rules":  [
-                                     "must_include:def"
-                                 ]
+                                     "must_include:def encode_categoricals",
+                                     "must_include:get_dummies",
+                                     "must_include:drop_first=True"
+                                 ],
+                       "tests":  [
+                                     {
+                                         "type":  "must_match",
+                                         "name":  "function signature",
+                                         "pattern":  "def\\s+encode_categoricals\\s*\\(\\s*df\\s*\\)",
+                                         "message":  "Define encode_categoricals(df)."
+                                     },
+                                     {
+                                         "type":  "must_include_all",
+                                         "name":  "encoding config",
+                                         "values":  [
+                                                        "get_dummies",
+                                                        "drop_first=True"
+                                                    ],
+                                         "message":  "Use get_dummies with drop_first=True."
+                                     },
+                                     {
+                                         "type":  "must_match",
+                                         "name":  "returns df-like",
+                                         "pattern":  "return\\s+",
+                                         "message":  "Return the transformed DataFrame."
+                                     }
+                                 ],
+                       "type":  "ai_code"
                    },
     "id":  "mission_03",
-    "type":  "ai_code"
+    "type":  "ai_code",
+    "xpReward":  100
 }

@@ -1,6 +1,7 @@
-{
+﻿{
     "mission_01":  [
-                       "Check the function definition",
-                       "Use return statement"
+                       "Use select_dtypes(include=[\"number\"]) to get numeric columns.",
+                       "Median is robust for numeric missing values.",
+                       "For text columns, use mode()[0] and then fillna."
                    ]
 }

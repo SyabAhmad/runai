@@ -1,0 +1,43 @@
+﻿{
+    "title":  "Data Preprocessing Mission 5: Parse Datetime + Extract Parts",
+    "initialState":  {
+                         "content":  "# TODO: Parse signup_date and extract year/month features\n\ndef extract_datetime_features(df):\n    # TODO: convert signup_date using pd.to_datetime(errors=\"coerce\")\n\n    # TODO: create signup_year\n\n    # TODO: create signup_month\n\n    return df"
+                     },
+    "validation":  {
+                       "rules":  [
+                                     "must_include:def extract_datetime_features",
+                                     "must_include:to_datetime",
+                                     "must_include:.dt.year",
+                                     "must_include:.dt.month",
+                                     "must_include:return df"
+                                 ],
+                       "tests":  [
+                                     {
+                                         "type":  "must_match",
+                                         "name":  "function signature",
+                                         "pattern":  "def\\s+extract_datetime_features\\s*\\(\\s*df\\s*\\)",
+                                         "message":  "Define extract_datetime_features(df)."
+                                     },
+                                     {
+                                         "type":  "must_include_all",
+                                         "name":  "datetime pipeline",
+                                         "values":  [
+                                                        "to_datetime",
+                                                        "signup_year",
+                                                        "signup_month"
+                                                    ],
+                                         "message":  "Convert signup_date and create signup_year/signup_month."
+                                     },
+                                     {
+                                         "type":  "must_match",
+                                         "name":  "coerce invalid dates",
+                                         "pattern":  "errors\\s*=\\s*[\"\u0027]coerce[\"\u0027]",
+                                         "message":  "Use errors=\"coerce\" when parsing datetime."
+                                     }
+                                 ],
+                       "type":  "ai_code"
+                   },
+    "id":  "mission_05",
+    "type":  "ai_code",
+    "xpReward":  100
+}

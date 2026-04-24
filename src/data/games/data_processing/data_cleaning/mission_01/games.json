@@ -1,14 +1,44 @@
-{
-    "title":  "Data Preprocessing",
+﻿{
+    "title":  "Data Preprocessing Mission 1: Handle Missing Values",
     "initialState":  {
-                         "content":  "def preprocess(data):\n    return data"
+                         "content":  "# TODO: Fill missing values in numeric columns with median\n# TODO: Fill missing values in categorical columns with mode\n\ndef clean_missing_values(df):\n    # TODO: identify numeric columns\n    # TODO: identify categorical columns\n\n    # TODO: fill numeric missing values\n\n    # TODO: fill categorical missing values\n\n    return df"
                      },
     "validation":  {
-                       "type":  "ai_code",
                        "rules":  [
-                                     "must_include:def"
-                                 ]
+                                     "must_include:def clean_missing_values",
+                                     "must_include:fillna",
+                                     "must_include:median",
+                                     "must_include:mode",
+                                     "must_include:return df"
+                                 ],
+                       "tests":  [
+                                     {
+                                         "type":  "must_match",
+                                         "name":  "function signature",
+                                         "pattern":  "def\\s+clean_missing_values\\s*\\(\\s*df\\s*\\)",
+                                         "message":  "Define clean_missing_values(df)."
+                                     },
+                                     {
+                                         "type":  "must_include_all",
+                                         "name":  "core operations",
+                                         "values":  [
+                                                        "select_dtypes",
+                                                        "fillna",
+                                                        "median",
+                                                        "mode"
+                                                    ],
+                                         "message":  "Use select_dtypes, fillna, median, and mode."
+                                     },
+                                     {
+                                         "type":  "min_non_empty_lines",
+                                         "name":  "enough logic",
+                                         "value":  8,
+                                         "message":  "Add full logic, not a one-liner placeholder."
+                                     }
+                                 ],
+                       "type":  "ai_code"
                    },
     "id":  "mission_01",
-    "type":  "ai_code"
+    "type":  "ai_code",
+    "xpReward":  100
 }

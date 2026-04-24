@@ -1,0 +1,7 @@
+﻿{
+    "mission_08":  [
+                       "Use ColumnTransformer from sklearn.compose.",
+                       "Use StandardScaler and OneHotEncoder in separate tuples.",
+                       "Return the configured preprocessor object."
+                   ]
+}

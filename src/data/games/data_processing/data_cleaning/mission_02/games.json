@@ -1,14 +1,43 @@
-{
-    "title":  "Train/Test Split",
+﻿{
+    "title":  "Data Preprocessing Mission 2: Remove Duplicates + Normalize Text",
     "initialState":  {
-                         "content":  "def split_data(X,y):\n    return X_train,X_test,y_train,y_test"
+                         "content":  "# TODO: Remove duplicate rows\n# TODO: Normalize text fields (trim + lowercase where needed)\n\ndef dedupe_and_normalize(df):\n    # TODO: drop duplicates\n\n    # TODO: normalize \"name\" column (strip)\n\n    # TODO: normalize \"city\" column (strip + lower)\n\n    return df"
                      },
     "validation":  {
-                       "type":  "ai_code",
                        "rules":  [
-                                     "must_include:def"
-                                 ]
+                                     "must_include:def dedupe_and_normalize",
+                                     "must_include:drop_duplicates",
+                                     "must_include:str.strip",
+                                     "must_include:str.lower",
+                                     "must_include:return df"
+                                 ],
+                       "tests":  [
+                                     {
+                                         "type":  "must_match",
+                                         "name":  "function signature",
+                                         "pattern":  "def\\s+dedupe_and_normalize\\s*\\(\\s*df\\s*\\)",
+                                         "message":  "Define dedupe_and_normalize(df)."
+                                     },
+                                     {
+                                         "type":  "must_include_all",
+                                         "name":  "normalization operations",
+                                         "values":  [
+                                                        "drop_duplicates",
+                                                        "strip",
+                                                        "lower"
+                                                    ],
+                                         "message":  "Use drop_duplicates, strip, and lower."
+                                     },
+                                     {
+                                         "type":  "must_not_match",
+                                         "name":  "do not print",
+                                         "pattern":  "\\bprint\\s*\\(",
+                                         "message":  "Avoid debug print statements in final solution."
+                                     }
+                                 ],
+                       "type":  "ai_code"
                    },
     "id":  "mission_02",
-    "type":  "ai_code"
+    "type":  "ai_code",
+    "xpReward":  100
 }

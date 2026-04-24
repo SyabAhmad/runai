@@ -1,0 +1,3 @@
+﻿{
+    "mission_10":  "Create preprocess_for_modeling(df, target_col) that performs: missing-value handling, one-hot encoding, and train/test split (20%, random_state=42). Return X_train, X_test, y_train, y_test."
+}

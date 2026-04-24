@@ -1,0 +1,7 @@
+﻿{
+    "mission_06":  [
+                       "Use quantile(0.25) and quantile(0.75).",
+                       "Compute lower and upper bounds from IQR.",
+                       "Use clip(lower=..., upper=...)."
+                   ]
+}

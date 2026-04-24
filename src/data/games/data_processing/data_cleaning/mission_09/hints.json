@@ -1,0 +1,7 @@
+﻿{
+    "mission_09":  [
+                       "Use sklearn.pipeline.Pipeline.",
+                       "Include StandardScaler then LogisticRegression(max_iter=1000).",
+                       "Compute scores with cross_val_score(..., cv=5)."
+                   ]
+}

@@ -1,0 +1,3 @@
+﻿{
+    "mission_09":  "Implement evaluate_baseline_model(X, y) using a Pipeline with StandardScaler and LogisticRegression, then return the mean 5-fold cross_val_score."
+}

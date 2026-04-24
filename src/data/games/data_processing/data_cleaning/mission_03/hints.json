@@ -1,6 +1,7 @@
-{
+﻿{
     "mission_03":  [
-                       "Choose a model",
-                       "Fit the model"
+                       "Use select_dtypes to detect object/category columns.",
+                       "pd.get_dummies can encode multiple columns at once.",
+                       "drop_first=True reduces multicollinearity."
                    ]
 }

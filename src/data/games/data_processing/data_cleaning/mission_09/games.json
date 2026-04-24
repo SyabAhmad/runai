@@ -1,0 +1,47 @@
+﻿{
+    "title":  "Data Preprocessing Mission 9: Cross-Validation Baseline",
+    "initialState":  {
+                         "content":  "# TODO: Build and evaluate a baseline model with cross-validation\n\ndef evaluate_baseline_model(X, y):\n    # TODO: create Pipeline with StandardScaler + LogisticRegression(max_iter=1000)\n\n    # TODO: compute cross_val_score with cv=5\n\n    # TODO: return mean score"
+                     },
+    "validation":  {
+                       "rules":  [
+                                     "must_include:def evaluate_baseline_model",
+                                     "must_include:Pipeline",
+                                     "must_include:cross_val_score",
+                                     "must_include:cv=5",
+                                     "must_include:return"
+                                 ],
+                       "tests":  [
+                                     {
+                                         "type":  "must_match",
+                                         "name":  "function signature",
+                                         "pattern":  "def\\s+evaluate_baseline_model\\s*\\(\\s*X\\s*,\\s*y\\s*\\)",
+                                         "message":  "Define evaluate_baseline_model(X, y)."
+                                     },
+                                     {
+                                         "type":  "must_include_all",
+                                         "name":  "model stack",
+                                         "values":  [
+                                                        "Pipeline",
+                                                        "StandardScaler",
+                                                        "LogisticRegression",
+                                                        "cross_val_score"
+                                                    ],
+                                         "message":  "Use Pipeline, StandardScaler, LogisticRegression, and cross_val_score."
+                                     },
+                                     {
+                                         "type":  "must_include_any",
+                                         "name":  "mean score",
+                                         "values":  [
+                                                        "np.mean",
+                                                        "scores.mean()"
+                                                    ],
+                                         "message":  "Return the mean cross-validation score."
+                                     }
+                                 ],
+                       "type":  "ai_code"
+                   },
+    "id":  "mission_09",
+    "type":  "ai_code",
+    "xpReward":  100
+}

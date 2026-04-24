@@ -1,3 +1,3 @@
-{
-    "mission_02":  "def split_data(X,y):\\n    return X_train,X_test,y_train,y_test"
+﻿{
+    "mission_02":  "def dedupe_and_normalize(df):\\n    df = df.drop_duplicates()\\n\\n    if \"name\" in df.columns:\\n        df[\"name\"] = df[\"name\"].astype(str).str.strip()\\n\\n    if \"city\" in df.columns:\\n        df[\"city\"] = df[\"city\"].astype(str).str.strip().str.lower()\\n\\n    return df"
 }

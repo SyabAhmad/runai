@@ -1,0 +1,53 @@
+﻿{
+    "title":  "Data Preprocessing Mission 10: End-to-End Preprocess Function",
+    "initialState":  {
+                         "content":  "# TODO: End-to-end preprocessing for modeling\n\ndef preprocess_for_modeling(df, target_col):\n    # TODO: fill missing values (numeric median, categorical mode)\n\n    # TODO: one-hot encode categorical columns with drop_first=True\n\n    # TODO: split into X and y\n\n    # TODO: split into train/test with test_size=0.2 and random_state=42\n\n    # TODO: return X_train, X_test, y_train, y_test"
+                     },
+    "validation":  {
+                       "rules":  [
+                                     "must_include:def preprocess_for_modeling",
+                                     "must_include:fillna",
+                                     "must_include:get_dummies",
+                                     "must_include:train_test_split",
+                                     "must_include:return X_train, X_test, y_train, y_test"
+                                 ],
+                       "tests":  [
+                                     {
+                                         "type":  "must_match",
+                                         "name":  "function signature",
+                                         "pattern":  "def\\s+preprocess_for_modeling\\s*\\(\\s*df\\s*,\\s*target_col\\s*\\)",
+                                         "message":  "Define preprocess_for_modeling(df, target_col)."
+                                     },
+                                     {
+                                         "type":  "must_include_all",
+                                         "name":  "full pipeline",
+                                         "values":  [
+                                                        "fillna",
+                                                        "get_dummies",
+                                                        "train_test_split",
+                                                        "target_col"
+                                                    ],
+                                         "message":  "Implement missing-value handling, encoding, and splitting."
+                                     },
+                                     {
+                                         "type":  "must_include_all",
+                                         "name":  "deterministic split",
+                                         "values":  [
+                                                        "test_size=0.2",
+                                                        "random_state=42"
+                                                    ],
+                                         "message":  "Use deterministic split settings."
+                                     },
+                                     {
+                                         "type":  "min_non_empty_lines",
+                                         "name":  "sufficient depth",
+                                         "value":  14,
+                                         "message":  "Provide full end-to-end logic, not a stub."
+                                     }
+                                 ],
+                       "type":  "ai_code"
+                   },
+    "id":  "mission_10",
+    "type":  "ai_code",
+    "xpReward":  100
+}

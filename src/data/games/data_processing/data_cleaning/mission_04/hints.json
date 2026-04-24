@@ -1,6 +1,7 @@
-{
+﻿{
     "mission_04":  [
-                       "Use evaluation metrics",
-                       "Calculate accuracy"
+                       "Import StandardScaler from sklearn.preprocessing.",
+                       "Assign scaled values back to df[numeric_cols].",
+                       "Return the DataFrame after scaling."
                    ]
 }

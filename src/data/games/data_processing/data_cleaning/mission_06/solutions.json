@@ -1,0 +1,3 @@
+﻿{
+    "mission_06":  "def cap_outliers_iqr(df, col):\\n    q1 = df[col].quantile(0.25)\\n    q3 = df[col].quantile(0.75)\\n    iqr = q3 - q1\\n    lower = q1 - 1.5 * iqr\\n    upper = q3 + 1.5 * iqr\\n    df[col] = df[col].clip(lower=lower, upper=upper)\\n    return df"
+}

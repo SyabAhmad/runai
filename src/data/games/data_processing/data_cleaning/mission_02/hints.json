@@ -1,6 +1,7 @@
-{
+﻿{
     "mission_02":  [
-                       "Import train_test_split",
-                       "Split the data"
+                       "drop_duplicates() removes repeated records.",
+                       "Use .str.strip() for leading/trailing spaces.",
+                       "Use .str.lower() for case normalization."
                    ]
 }

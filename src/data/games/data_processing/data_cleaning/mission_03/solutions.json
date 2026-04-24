@@ -1,3 +1,3 @@
-{
-    "mission_03":  "def train_model(X,y):\\n    model.fit(X,y)"
+﻿{
+    "mission_03":  "import pandas as pd\\n\\ndef encode_categoricals(df):\\n    cat_cols = df.select_dtypes(include=[\"object\", \"category\"]).columns\\n    if len(cat_cols) == 0:\\n        return df\\n    return pd.get_dummies(df, columns=cat_cols, drop_first=True)"
 }

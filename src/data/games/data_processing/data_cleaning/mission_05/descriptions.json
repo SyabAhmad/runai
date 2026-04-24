@@ -1,0 +1,3 @@
+﻿{
+    "mission_05":  "Build extract_datetime_features(df) that converts signup_date to datetime and creates signup_year and signup_month columns. Return df."
+}
