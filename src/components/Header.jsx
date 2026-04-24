@@ -17,6 +17,11 @@ export default function Header() {
     <header className="h-14 border-b border-border bg-gradient-to-r from-primary via-[#121826] to-primary px-5">
       <div className="flex h-full items-center justify-between">
         <div className="flex items-center gap-2 text-sm">
+          <img
+            src="/mentee-logo.png"
+            alt="MenteE logo"
+            className="h-7 w-7 rounded-md border border-border object-cover"
+          />
           <Link to="/" className="font-medium text-text-dim transition-colors hover:text-text">
             Home
           </Link>

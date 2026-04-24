@@ -28,21 +28,11 @@ export default function HomePage() {
         <main className="relative mx-auto flex min-h-screen w-full max-w-7xl flex-col px-6 py-8">
           <header className="mb-10 flex items-center justify-between rounded-2xl border border-border bg-secondary/55 px-4 py-3 backdrop-blur-sm">
             <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-pink-400/20 text-pink-300">
-                <svg
-                  className="h-5 w-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                  />
-                </svg>
-              </div>
+              <img
+                src="/mentee-logo.png"
+                alt="MenteE logo"
+                className="h-10 w-10 rounded-xl border border-pink-300/30 object-cover"
+              />
               <div>
                 <p className="text-sm font-semibold">Bestie Learning Space</p>
                 <p className="text-xs text-text-dim">Cute mode: ON</p>
@@ -76,6 +66,16 @@ export default function HomePage() {
                   time, one win at a time, one proud smile at a time. Learn,
                   build, repeat.
                 </p>
+                <div className="mt-6 inline-flex items-center gap-3 rounded-2xl border border-pink-300/20 bg-pink-400/10 p-3">
+                  <img
+                    src="/mentee-logo.png"
+                    alt="MenteE logo"
+                    className="h-12 w-12 rounded-lg border border-pink-300/30 object-cover"
+                  />
+                  <p className="text-xs text-pink-100">
+                    Her learning mark by MenteE
+                  </p>
+                </div>
 
                 <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-3">
                   <div className="rounded-2xl border border-pink-300/20 bg-pink-400/10 p-4">
@@ -168,11 +168,18 @@ export default function HomePage() {
 
           <footer className="mt-10 rounded-2xl border border-border bg-secondary/40 px-5 py-4">
             <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-              <p className="text-xs text-text-muted">
-                Crafted with care by{" "}
-                <span className="font-semibold text-pink-300">MenteE</span> for
-                his Bestie.
-              </p>
+              <div className="flex items-center gap-3">
+                <img
+                  src="/mentee-logo.png"
+                  alt="MenteE logo"
+                  className="h-8 w-8 rounded-lg border border-border object-cover"
+                />
+                <p className="text-xs text-text-muted">
+                  Crafted with care by{" "}
+                  <span className="font-semibold text-pink-300">MenteE</span>{" "}
+                  for his Bestie.
+                </p>
+              </div>
               <div className="flex items-center gap-3 text-xs">
                 <Link
                   to="/"

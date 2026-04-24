@@ -4,6 +4,16 @@ import { useGameStore } from '../store/gameStore';
 import GameRenderer from '../components/GameRenderer';
 import { evaluateMission } from '../engine/evaluator';
 
+const missionModules = import.meta.glob('../data/games/**/mission_*/games.json', { eager: true });
+const descriptionModules = import.meta.glob('../data/games/**/mission_*/descriptions.json', { eager: true });
+const hintModules = import.meta.glob('../data/games/**/mission_*/hints.json', { eager: true });
+
+const getJsonModule = (modules, key) => {
+  const mod = modules[key];
+  if (!mod) return null;
+  return mod.default ?? mod;
+};
+
 export default function MissionPage() {
   const { technology, chapter, mission: missionId } = useParams();
   const { completeMission, completedMissions } = useGameStore();
@@ -19,7 +29,10 @@ export default function MissionPage() {
   const isCompleted = (completedMissions[chapterKey] || []).includes(missionId);
 
   useEffect(() => {
-    const basePath = `/src/data/games/${technology}/${chapter}/${missionId}`;
+    const basePath = `../data/games/${technology}/${chapter}/${missionId}`;
+    const gamesPath = `${basePath}/games.json`;
+    const descriptionsPath = `${basePath}/descriptions.json`;
+    const hintsPath = `${basePath}/hints.json`;
     const hintProgressKey = `hintProgress:${technology}/${chapter}/${missionId}`;
     const solutionStorageKey = `missionSolution:${technology}/${chapter}/${missionId}`;
     
@@ -28,23 +41,21 @@ export default function MissionPage() {
       setHintIndex(0);
       setUserInput('');
       try {
-        const gamesRes = await fetch(`${basePath}/games.json`);
-        const gamesData = await gamesRes.json();
+        const gamesData = getJsonModule(missionModules, gamesPath);
+        if (!gamesData) throw new Error(`Missing games.json for ${technology}/${chapter}/${missionId}`);
         setMission(gamesData);
         const savedSolution = localStorage.getItem(solutionStorageKey);
         setUserInput(savedSolution || gamesData.initialState?.content || '');
         
         try {
-          const descRes = await fetch(`${basePath}/descriptions.json`);
-          const descs = await descRes.json();
+          const descs = getJsonModule(descriptionModules, descriptionsPath) || {};
           setDescription(descs[missionId] || 'Complete the mission.');
         } catch {
           setDescription('Complete the mission.');
         }
         
         try {
-          const hintsRes = await fetch(`${basePath}/hints.json`);
-          const allHints = await hintsRes.json();
+          const allHints = getJsonModule(hintModules, hintsPath) || {};
           const missionHints = allHints[missionId] || [];
           setHints(missionHints);
 
