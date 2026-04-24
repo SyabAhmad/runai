@@ -1,0 +1,42 @@
+﻿{
+    "title":  "Feature Engineering Mission 6: Target Leakage Guard",
+    "initialState":  {
+                         "content":  "# TODO: Remove potential leakage columns before modeling\n\ndef remove_leaky_features(df):\n    # TODO: drop target_probability and post_event_score safely\n\n    return df"
+                     },
+    "validation":  {
+                       "rules":  [
+                                     "must_include:def remove_leaky_features",
+                                     "must_include:drop",
+                                     "must_include:target_probability",
+                                     "must_include:post_event_score"
+                                 ],
+                       "tests":  [
+                                     {
+                                         "type":  "must_match",
+                                         "name":  "signature",
+                                         "pattern":  "def\\s+remove_leaky_features\\s*\\(\\s*df\\s*\\)",
+                                         "message":  "Define remove_leaky_features(df)."
+                                     },
+                                     {
+                                         "type":  "must_include_all",
+                                         "name":  "drop leaky columns",
+                                         "values":  [
+                                                        "target_probability",
+                                                        "post_event_score",
+                                                        "drop"
+                                                    ],
+                                         "message":  "Drop both leakage columns."
+                                     },
+                                     {
+                                         "type":  "must_match",
+                                         "name":  "safe drop",
+                                         "pattern":  "errors\\s*=\\s*[\"\u0027]ignore[\"\u0027]",
+                                         "message":  "Use errors=\"ignore\" when dropping optional columns."
+                                     }
+                                 ],
+                       "type":  "ai_code"
+                   },
+    "id":  "mission_06",
+    "type":  "ai_code",
+    "xpReward":  100
+}

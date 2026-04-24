@@ -1,0 +1,3 @@
+﻿{
+    "mission_04":  "Implement add_tenure_days(df) by converting signup_date and last_login to datetime, then creating tenure_days as day difference."
+}

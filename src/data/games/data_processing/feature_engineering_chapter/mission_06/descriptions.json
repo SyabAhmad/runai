@@ -1,0 +1,3 @@
+﻿{
+    "mission_06":  "Implement remove_leaky_features(df) that drops obvious leakage columns: target_probability and post_event_score if present."
+}

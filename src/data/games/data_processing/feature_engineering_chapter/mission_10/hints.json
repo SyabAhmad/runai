@@ -1,0 +1,7 @@
+﻿{
+    "mission_10":  [
+                       "Engineer features first, then encode categoricals.",
+                       "Use pd.get_dummies(..., drop_first=True).",
+                       "Return X and y separately."
+                   ]
+}

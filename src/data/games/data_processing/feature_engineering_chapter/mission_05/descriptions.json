@@ -1,0 +1,3 @@
+﻿{
+    "mission_05":  "Create age_buckets(df) that bins age into categories: young (0-29), adult (30-49), senior (50+), using pd.cut. Store in age_group."
+}

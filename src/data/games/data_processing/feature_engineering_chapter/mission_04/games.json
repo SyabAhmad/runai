@@ -1,0 +1,44 @@
+﻿{
+    "title":  "Feature Engineering Mission 4: Date Difference Feature",
+    "initialState":  {
+                         "content":  "# TODO: Compute tenure in days from two date columns\n\ndef add_tenure_days(df):\n    # TODO: parse signup_date and last_login\n\n    # TODO: compute tenure_days as day difference\n\n    return df"
+                     },
+    "validation":  {
+                       "rules":  [
+                                     "must_include:def add_tenure_days",
+                                     "must_include:to_datetime",
+                                     "must_include:.dt.days",
+                                     "must_include:tenure_days"
+                                 ],
+                       "tests":  [
+                                     {
+                                         "type":  "must_match",
+                                         "name":  "signature",
+                                         "pattern":  "def\\s+add_tenure_days\\s*\\(\\s*df\\s*\\)",
+                                         "message":  "Define add_tenure_days(df)."
+                                     },
+                                     {
+                                         "type":  "must_include_all",
+                                         "name":  "datetime diff",
+                                         "values":  [
+                                                        "to_datetime",
+                                                        "last_login",
+                                                        "signup_date",
+                                                        ".dt.days",
+                                                        "tenure_days"
+                                                    ],
+                                         "message":  "Parse both dates and compute tenure_days."
+                                     },
+                                     {
+                                         "type":  "must_match",
+                                         "name":  "coerce parsing",
+                                         "pattern":  "errors\\s*=\\s*[\"\u0027]coerce[\"\u0027]",
+                                         "message":  "Use errors=\"coerce\" for robust parsing."
+                                     }
+                                 ],
+                       "type":  "ai_code"
+                   },
+    "id":  "mission_04",
+    "type":  "ai_code",
+    "xpReward":  100
+}

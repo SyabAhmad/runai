@@ -1,0 +1,44 @@
+﻿{
+    "title":  "Feature Engineering Mission 8: Polynomial Features",
+    "initialState":  {
+                         "content":  "# TODO: Create degree-2 polynomial features\n\ndef build_poly_features(X):\n    # TODO: initialize PolynomialFeatures with include_bias=False\n\n    # TODO: return transformed X"
+                     },
+    "validation":  {
+                       "rules":  [
+                                     "must_include:def build_poly_features",
+                                     "must_include:PolynomialFeatures",
+                                     "must_include:degree=2",
+                                     "must_include:include_bias=False",
+                                     "must_include:fit_transform"
+                                 ],
+                       "tests":  [
+                                     {
+                                         "type":  "must_match",
+                                         "name":  "signature",
+                                         "pattern":  "def\\s+build_poly_features\\s*\\(\\s*X\\s*\\)",
+                                         "message":  "Define build_poly_features(X)."
+                                     },
+                                     {
+                                         "type":  "must_include_all",
+                                         "name":  "poly config",
+                                         "values":  [
+                                                        "PolynomialFeatures",
+                                                        "degree=2",
+                                                        "include_bias=False",
+                                                        "fit_transform"
+                                                    ],
+                                         "message":  "Use PolynomialFeatures with required config and fit_transform."
+                                     },
+                                     {
+                                         "type":  "min_non_empty_lines",
+                                         "name":  "minimum logic",
+                                         "value":  3,
+                                         "message":  "Add complete feature generation logic."
+                                     }
+                                 ],
+                       "type":  "ai_code"
+                   },
+    "id":  "mission_08",
+    "type":  "ai_code",
+    "xpReward":  100
+}

@@ -1,0 +1,3 @@
+﻿{
+    "mission_02":  "import numpy as np\\n\\ndef log_transform_income(df):\\n    df[\"log_income\"] = np.log1p(df[\"income\"])\\n    return df"
+}

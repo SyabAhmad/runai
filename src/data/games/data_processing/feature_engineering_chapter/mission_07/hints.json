@@ -1,0 +1,7 @@
+﻿{
+    "mission_07":  [
+                       "Iterate over df.columns.",
+                       "Use startswith(\"feat_\").",
+                       "Filter out feat_target_leak explicitly."
+                   ]
+}

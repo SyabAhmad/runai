@@ -1,0 +1,7 @@
+﻿{
+    "mission_01":  [
+                       "Use np.where or replace(0, np.nan) before division.",
+                       "Create both requested columns.",
+                       "Return the transformed DataFrame."
+                   ]
+}

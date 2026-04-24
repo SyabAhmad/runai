@@ -1,0 +1,7 @@
+﻿{
+    "mission_06":  [
+                       "Build a list of columns to drop if they exist.",
+                       "Use errors=\"ignore\" in drop for safety.",
+                       "Return cleaned df."
+                   ]
+}

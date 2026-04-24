@@ -1,0 +1,41 @@
+﻿{
+    "title":  "Feature Engineering Mission 7: Build Feature List by Prefix",
+    "initialState":  {
+                         "content":  "# TODO: Select model features by naming convention\n\ndef select_model_features(df):\n    # TODO: return columns starting with feat_ except feat_target_leak"
+                     },
+    "validation":  {
+                       "rules":  [
+                                     "must_include:def select_model_features",
+                                     "must_include:startswith(\"feat_\")",
+                                     "must_include:feat_target_leak",
+                                     "must_include:return"
+                                 ],
+                       "tests":  [
+                                     {
+                                         "type":  "must_match",
+                                         "name":  "signature",
+                                         "pattern":  "def\\s+select_model_features\\s*\\(\\s*df\\s*\\)",
+                                         "message":  "Define select_model_features(df)."
+                                     },
+                                     {
+                                         "type":  "must_include_all",
+                                         "name":  "selection logic",
+                                         "values":  [
+                                                        "startswith(\"feat_\")",
+                                                        "feat_target_leak"
+                                                    ],
+                                         "message":  "Filter by feat_ prefix and exclude feat_target_leak."
+                                     },
+                                     {
+                                         "type":  "must_not_match",
+                                         "name":  "no placeholder",
+                                         "pattern":  "return\\s*\\[\\s*\\]",
+                                         "message":  "Do not return an empty placeholder list."
+                                     }
+                                 ],
+                       "type":  "ai_code"
+                   },
+    "id":  "mission_07",
+    "type":  "ai_code",
+    "xpReward":  100
+}

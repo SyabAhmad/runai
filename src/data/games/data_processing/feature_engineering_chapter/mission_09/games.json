@@ -1,0 +1,47 @@
+﻿{
+    "title":  "Feature Engineering Mission 9: Reusable Preprocessing Pipeline",
+    "initialState":  {
+                         "content":  "# TODO: Build reusable preprocessing pipeline for numeric features\n\ndef make_preprocessing_pipeline():\n    # TODO: create Pipeline with imputer and scaler\n\n    # TODO: return the pipeline"
+                     },
+    "validation":  {
+                       "rules":  [
+                                     "must_include:def make_preprocessing_pipeline",
+                                     "must_include:Pipeline",
+                                     "must_include:SimpleImputer",
+                                     "must_include:strategy=\"median\"",
+                                     "must_include:StandardScaler"
+                                 ],
+                       "tests":  [
+                                     {
+                                         "type":  "must_match",
+                                         "name":  "signature",
+                                         "pattern":  "def\\s+make_preprocessing_pipeline\\s*\\(\\s*\\)",
+                                         "message":  "Define make_preprocessing_pipeline()."
+                                     },
+                                     {
+                                         "type":  "must_include_all",
+                                         "name":  "pipeline steps",
+                                         "values":  [
+                                                        "Pipeline",
+                                                        "SimpleImputer",
+                                                        "strategy=\"median\"",
+                                                        "StandardScaler"
+                                                    ],
+                                         "message":  "Include imputer and scaler in Pipeline."
+                                     },
+                                     {
+                                         "type":  "must_include_all",
+                                         "name":  "step names",
+                                         "values":  [
+                                                        "(\"imputer\"",
+                                                        "(\"scaler\""
+                                                    ],
+                                         "message":  "Name pipeline steps imputer and scaler."
+                                     }
+                                 ],
+                       "type":  "ai_code"
+                   },
+    "id":  "mission_09",
+    "type":  "ai_code",
+    "xpReward":  100
+}

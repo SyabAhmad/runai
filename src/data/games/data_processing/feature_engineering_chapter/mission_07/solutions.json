@@ -1,0 +1,3 @@
+﻿{
+    "mission_07":  "def select_model_features(df):\\n    return [\\n        col\\n        for col in df.columns\\n        if col.startswith(\"feat_\") and col != \"feat_target_leak\"\\n    ]"
+}

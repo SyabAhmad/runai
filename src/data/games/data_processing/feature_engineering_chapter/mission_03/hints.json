@@ -1,0 +1,7 @@
+﻿{
+    "mission_03":  [
+                       "value_counts(normalize=True) gives relative frequencies.",
+                       "map frequencies back to city column.",
+                       "Store result in city_freq."
+                   ]
+}

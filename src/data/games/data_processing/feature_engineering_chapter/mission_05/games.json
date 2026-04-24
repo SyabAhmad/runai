@@ -1,0 +1,46 @@
+﻿{
+    "title":  "Feature Engineering Mission 5: Binning Continuous Variable",
+    "initialState":  {
+                         "content":  "# TODO: Bin age into categorical age groups\n\ndef age_buckets(df):\n    # TODO: use pd.cut to create age_group\n\n    return df"
+                     },
+    "validation":  {
+                       "rules":  [
+                                     "must_include:def age_buckets",
+                                     "must_include:pd.cut",
+                                     "must_include:age_group",
+                                     "must_include:return df"
+                                 ],
+                       "tests":  [
+                                     {
+                                         "type":  "must_match",
+                                         "name":  "signature",
+                                         "pattern":  "def\\s+age_buckets\\s*\\(\\s*df\\s*\\)",
+                                         "message":  "Define age_buckets(df)."
+                                     },
+                                     {
+                                         "type":  "must_include_all",
+                                         "name":  "cut pieces",
+                                         "values":  [
+                                                        "pd.cut",
+                                                        "bins",
+                                                        "labels",
+                                                        "age_group"
+                                                    ],
+                                         "message":  "Use pd.cut with bins, labels, and age_group."
+                                     },
+                                     {
+                                         "type":  "must_include_any",
+                                         "name":  "range handling",
+                                         "values":  [
+                                                        "right=False",
+                                                        "include_lowest=True"
+                                                    ],
+                                         "message":  "Set explicit boundary handling in pd.cut."
+                                     }
+                                 ],
+                       "type":  "ai_code"
+                   },
+    "id":  "mission_05",
+    "type":  "ai_code",
+    "xpReward":  100
+}

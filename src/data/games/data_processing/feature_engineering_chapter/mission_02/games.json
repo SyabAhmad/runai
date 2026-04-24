@@ -1,0 +1,41 @@
+﻿{
+    "title":  "Feature Engineering Mission 2: Log Transform Skewed Feature",
+    "initialState":  {
+                         "content":  "# TODO: Apply log transform to skewed income feature\n\ndef log_transform_income(df):\n    # TODO: create log_income using np.log1p\n\n    return df"
+                     },
+    "validation":  {
+                       "rules":  [
+                                     "must_include:def log_transform_income",
+                                     "must_include:log1p",
+                                     "must_include:log_income",
+                                     "must_include:return df"
+                                 ],
+                       "tests":  [
+                                     {
+                                         "type":  "must_match",
+                                         "name":  "signature",
+                                         "pattern":  "def\\s+log_transform_income\\s*\\(\\s*df\\s*\\)",
+                                         "message":  "Define log_transform_income(df)."
+                                     },
+                                     {
+                                         "type":  "must_include_all",
+                                         "name":  "log transform",
+                                         "values":  [
+                                                        "np.log1p",
+                                                        "log_income"
+                                                    ],
+                                         "message":  "Use np.log1p and create log_income."
+                                     },
+                                     {
+                                         "type":  "must_not_match",
+                                         "name":  "avoid plain log",
+                                         "pattern":  "np\\.log\\s*\\(",
+                                         "message":  "Use np.log1p instead of np.log for this mission."
+                                     }
+                                 ],
+                       "type":  "ai_code"
+                   },
+    "id":  "mission_02",
+    "type":  "ai_code",
+    "xpReward":  100
+}

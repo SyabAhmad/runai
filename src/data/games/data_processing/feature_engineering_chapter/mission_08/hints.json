@@ -1,0 +1,7 @@
+﻿{
+    "mission_08":  [
+                       "Import PolynomialFeatures from sklearn.preprocessing.",
+                       "Set degree=2 and include_bias=False.",
+                       "Use fit_transform(X)."
+                   ]
+}

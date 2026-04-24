@@ -1,0 +1,42 @@
+﻿{
+    "title":  "Feature Engineering Mission 3: Frequency Encoding",
+    "initialState":  {
+                         "content":  "# TODO: Frequency-encode city values\n\ndef frequency_encode_city(df):\n    # TODO: compute normalized frequency map for city\n\n    # TODO: map frequencies into city_freq\n\n    return df"
+                     },
+    "validation":  {
+                       "rules":  [
+                                     "must_include:def frequency_encode_city",
+                                     "must_include:value_counts(normalize=True)",
+                                     "must_include:map",
+                                     "must_include:city_freq"
+                                 ],
+                       "tests":  [
+                                     {
+                                         "type":  "must_match",
+                                         "name":  "signature",
+                                         "pattern":  "def\\s+frequency_encode_city\\s*\\(\\s*df\\s*\\)",
+                                         "message":  "Define frequency_encode_city(df)."
+                                     },
+                                     {
+                                         "type":  "must_include_all",
+                                         "name":  "frequency steps",
+                                         "values":  [
+                                                        "value_counts(normalize=True)",
+                                                        "map(",
+                                                        "city_freq"
+                                                    ],
+                                         "message":  "Use normalized counts and map into city_freq."
+                                     },
+                                     {
+                                         "type":  "min_non_empty_lines",
+                                         "name":  "minimum logic",
+                                         "value":  4,
+                                         "message":  "Add complete encoding logic."
+                                     }
+                                 ],
+                       "type":  "ai_code"
+                   },
+    "id":  "mission_03",
+    "type":  "ai_code",
+    "xpReward":  100
+}

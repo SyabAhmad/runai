@@ -1,0 +1,45 @@
+﻿{
+    "title":  "Feature Engineering Mission 1: Basic Interaction Features",
+    "initialState":  {
+                         "content":  "# TODO: Add interaction features from existing numeric columns\n\ndef add_interaction_features(df):\n    # TODO: create total_spend_per_visit safely\n\n    # TODO: create spend_times_items\n\n    return df"
+                     },
+    "validation":  {
+                       "rules":  [
+                                     "must_include:def add_interaction_features",
+                                     "must_include:total_spend_per_visit",
+                                     "must_include:spend_times_items",
+                                     "must_include:return df"
+                                 ],
+                       "tests":  [
+                                     {
+                                         "type":  "must_match",
+                                         "name":  "signature",
+                                         "pattern":  "def\\s+add_interaction_features\\s*\\(\\s*df\\s*\\)",
+                                         "message":  "Define add_interaction_features(df)."
+                                     },
+                                     {
+                                         "type":  "must_include_all",
+                                         "name":  "feature names",
+                                         "values":  [
+                                                        "total_spend_per_visit",
+                                                        "spend_times_items"
+                                                    ],
+                                         "message":  "Create both required feature columns."
+                                     },
+                                     {
+                                         "type":  "must_include_any",
+                                         "name":  "safe division",
+                                         "values":  [
+                                                        "replace(0",
+                                                        "np.where",
+                                                        "fillna"
+                                                    ],
+                                         "message":  "Handle division by zero safely."
+                                     }
+                                 ],
+                       "type":  "ai_code"
+                   },
+    "id":  "mission_01",
+    "type":  "ai_code",
+    "xpReward":  100
+}

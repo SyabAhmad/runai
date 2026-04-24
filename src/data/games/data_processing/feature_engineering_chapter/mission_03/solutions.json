@@ -1,0 +1,3 @@
+﻿{
+    "mission_03":  "def frequency_encode_city(df):\\n    freq_map = df[\"city\"].value_counts(normalize=True)\\n    df[\"city_freq\"] = df[\"city\"].map(freq_map)\\n    return df"
+}

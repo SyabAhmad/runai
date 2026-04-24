@@ -1,0 +1,3 @@
+﻿{
+    "mission_02":  "Implement log_transform_income(df) that creates log_income using np.log1p on income. Keep original income column and return df."
+}

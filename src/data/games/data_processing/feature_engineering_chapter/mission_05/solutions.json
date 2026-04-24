@@ -1,0 +1,3 @@
+﻿{
+    "mission_05":  "import pandas as pd\\n\\ndef age_buckets(df):\\n    bins = [0, 30, 50, float(\"inf\")]\\n    labels = [\"young\", \"adult\", \"senior\"]\\n    df[\"age_group\"] = pd.cut(df[\"age\"], bins=bins, labels=labels, right=False)\\n    return df"
+}

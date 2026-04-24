@@ -1,0 +1,3 @@
+﻿{
+    "mission_07":  "Write select_model_features(df) that returns a list of columns starting with feat_ but excluding feat_target_leak."
+}

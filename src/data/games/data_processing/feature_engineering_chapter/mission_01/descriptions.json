@@ -1,0 +1,3 @@
+﻿{
+    "mission_01":  "Create add_interaction_features(df) to add total_spend_per_visit = total_spend / visits and spend_times_items = total_spend * items_count. Handle division-by-zero safely."
+}

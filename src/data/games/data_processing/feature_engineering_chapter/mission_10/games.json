@@ -1,0 +1,54 @@
+﻿{
+    "title":  "Feature Engineering Mission 10: End-to-End Feature Builder",
+    "initialState":  {
+                         "content":  "# TODO: Build end-to-end model matrix from raw tabular data\n\ndef build_model_matrix(df, target_col):\n    # TODO: create at least one interaction feature\n\n    # TODO: create one transformed feature (e.g., log)\n\n    # TODO: one-hot encode categorical columns with drop_first=True\n\n    # TODO: split into X and y and return both"
+                     },
+    "validation":  {
+                       "rules":  [
+                                     "must_include:def build_model_matrix",
+                                     "must_include:get_dummies",
+                                     "must_include:drop_first=True",
+                                     "must_include:target_col",
+                                     "must_include:return X, y"
+                                 ],
+                       "tests":  [
+                                     {
+                                         "type":  "must_match",
+                                         "name":  "signature",
+                                         "pattern":  "def\\s+build_model_matrix\\s*\\(\\s*df\\s*,\\s*target_col\\s*\\)",
+                                         "message":  "Define build_model_matrix(df, target_col)."
+                                     },
+                                     {
+                                         "type":  "must_include_all",
+                                         "name":  "encoding and split",
+                                         "values":  [
+                                                        "get_dummies",
+                                                        "drop_first=True",
+                                                        "drop(columns=[target_col])",
+                                                        "y = df[target_col]"
+                                                    ],
+                                         "message":  "Encode categoricals and split into X/y correctly."
+                                     },
+                                     {
+                                         "type":  "must_include_any",
+                                         "name":  "feature engineering",
+                                         "values":  [
+                                                        "log1p",
+                                                        "spend_per_visit",
+                                                        "interaction"
+                                                    ],
+                                         "message":  "Include at least one engineered feature step."
+                                     },
+                                     {
+                                         "type":  "min_non_empty_lines",
+                                         "name":  "sufficient depth",
+                                         "value":  10,
+                                         "message":  "Add full end-to-end logic."
+                                     }
+                                 ],
+                       "type":  "ai_code"
+                   },
+    "id":  "mission_10",
+    "type":  "ai_code",
+    "xpReward":  100
+}
