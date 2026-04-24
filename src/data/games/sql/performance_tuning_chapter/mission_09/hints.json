@@ -1,7 +1,7 @@
 ﻿{
     "mission_09":  [
-                       "Filter early in a CTE.",
-                       "Aggregate only filtered rows.",
-                       "Sort by total_spend descending."
+                       "Use conditional SUM for each metric.",
+                       "Keep all metrics in one SELECT.",
+                       "Filter date range once in WHERE."
                    ]
 }

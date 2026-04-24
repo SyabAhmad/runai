@@ -1,7 +1,7 @@
 ﻿{
     "mission_01":  [
-                       "Alias customers as c and orders as o for readability.",
-                       "Join on c.customer_id = o.customer_id.",
-                       "Use ORDER BY o.order_id at the end."
+                       "Alias customers as c and orders as o.",
+                       "Join on customer_id.",
+                       "Sort by o.order_id."
                    ]
 }

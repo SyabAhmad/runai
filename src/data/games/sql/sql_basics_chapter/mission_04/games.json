@@ -1,12 +1,16 @@
-{
-    "title":  "SQL Mission 4",
+﻿{
+    "title":  "SQL Mission 4: Multi-Condition Employee Filter",
     "initialState":  {
-                         "content":  "SELECT * FROM table"
+                         "content":  "-- Mission 4 Guidelines\n-- Return: name, salary\n-- Department in Sales/Marketing\n-- Salary between 40000 and 90000\n-- Sort by salary descending\n\nSELECT\n  -- TODO\nFROM employees\nWHERE\n  -- TODO\nORDER BY\n  -- TODO\n;"
                      },
     "validation":  {
                        "type":  "sql",
                        "rules":  [
-                                     "must_include:select"
+                                     "must_include:select name, salary",
+                                     "must_include:from employees",
+                                     "must_include:salary between 40000 and 90000",
+                                     "must_include:department in (\u0027sales\u0027, \u0027marketing\u0027)",
+                                     "must_include:order by salary desc"
                                  ]
                    },
     "id":  "mission_04",

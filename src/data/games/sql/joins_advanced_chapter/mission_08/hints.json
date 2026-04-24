@@ -1,7 +1,7 @@
 ﻿{
     "mission_08":  [
-                       "Join orders to order_items first.",
-                       "Then join order_items to products.",
-                       "Aggregate with SUM(quantity * price)."
+                       "Partition by customer_id in ROW_NUMBER.",
+                       "Order descending by order_date inside window.",
+                       "Filter rn = 1 in outer query."
                    ]
 }

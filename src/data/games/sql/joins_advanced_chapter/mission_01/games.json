@@ -1,7 +1,7 @@
 ﻿{
-    "title":  "SQL Mission 1: Customer Orders With INNER JOIN",
+    "title":  "SQL Mission 1: Customer Orders (INNER JOIN)",
     "initialState":  {
-                         "content":  "-- Mission Guidelines:\\n-- Tables:\\n--   customers(customer_id, name, region)\\n--   orders(order_id, customer_id, order_date, total_amount)\\n-- Goal:\\n--   Return customer name with order_id for existing orders only\\n-- Requirements:\\n--   Use INNER JOIN with an explicit ON condition\\n--   Sort by order_id ascending\\n\\nSELECT c.name, o.order_id\\nFROM customers c\\nINNER JOIN orders o ON c.customer_id = o.customer_id\\nORDER BY o.order_id;"
+                         "content":  "-- Mission 1 Guidelines\n-- Tables:\n--   customers(customer_id, name, region)\n--   orders(order_id, customer_id, order_date, total_amount)\n-- Return: c.name, o.order_id\n-- Use INNER JOIN and explicit ON condition\n\nSELECT\n  -- TODO\nFROM customers c\nINNER JOIN orders o\n  ON -- TODO\nORDER BY\n  -- TODO\n;"
                      },
     "validation":  {
                        "type":  "sql",

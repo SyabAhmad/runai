@@ -1,3 +1,3 @@
 ﻿{
-    "mission_06":  "Nice. You used LEFT JOIN + IS NULL to detect missing related rows."
+    "mission_06":  "Great. You combined subquery aggregation and join completeness correctly."
 }

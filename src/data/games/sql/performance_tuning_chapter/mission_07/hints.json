@@ -1,7 +1,7 @@
 ﻿{
     "mission_07":  [
-                       "Use EXISTS for existence checks.",
-                       "Correlate subquery using customer_id.",
-                       "Return customer fields from outer query."
+                       "Aggregate orders by customer_id in subquery.",
+                       "Use HAVING COUNT(*) \u003e 5.",
+                       "Join subquery alias back to customers."
                    ]
 }

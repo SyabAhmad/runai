@@ -1,14 +1,17 @@
-{
-    "title":  "Train/Test Split",
+﻿{
+    "title":  "SQL Mission 2: Customers Without Orders",
     "initialState":  {
-                         "content":  "def split_data(X,y):\n    return X_train,X_test,y_train,y_test"
+                         "content":  "-- Mission 2 Guidelines\n-- Keep all customers, attach orders if they exist\n-- Keep only rows where order is missing\n\nSELECT\n  -- TODO\nFROM customers c\nLEFT JOIN orders o\n  ON -- TODO\nWHERE\n  -- TODO\nORDER BY c.name;"
                      },
     "validation":  {
-                       "type":  "ai_code",
+                       "type":  "sql",
                        "rules":  [
-                                     "must_include:def"
+                                     "must_include:left join orders o",
+                                     "must_include:on c.customer_id = o.customer_id",
+                                     "must_include:where o.order_id is null",
+                                     "must_include:select c.name"
                                  ]
                    },
     "id":  "mission_02",
-    "type":  "ai_code"
+    "type":  "sql_debug"
 }

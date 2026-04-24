@@ -1,14 +1,13 @@
 ﻿{
-    "title":  "SQL Mission 1: Filter Top Sales Employees",
+    "title":  "SQL Mission 1: Sales Salary Filter",
     "initialState":  {
-                         "content":  "-- Mission 1: Sales Salary Filter\n-- Table: employees(id, name, department, salary)\n-- Goal: Return employee names from Sales where salary \u003e 50000\n-- Sort: Highest salary first\n-- Write your query below:\n\nSELECT name\nFROM employees\nWHERE department = \u0027Sales\u0027\n  AND salary \u003e 50000\nORDER BY salary DESC;"
+                         "content":  "-- Mission 1 Guidelines\n-- Table: employees(id, name, department, salary)\n-- Return: employee names only\n-- Conditions: Sales department + salary \u003e 50000\n-- Sort: salary descending\n\nSELECT\n  -- TODO: column(s)\nFROM employees\nWHERE\n  -- TODO: conditions\nORDER BY\n  -- TODO: sort\n;"
                      },
     "validation":  {
                        "type":  "sql",
                        "rules":  [
                                      "must_include:select name",
                                      "must_include:from employees",
-                                     "must_include:where",
                                      "must_include:department = \u0027sales\u0027",
                                      "must_include:salary \u003e 50000",
                                      "must_include:order by salary desc"

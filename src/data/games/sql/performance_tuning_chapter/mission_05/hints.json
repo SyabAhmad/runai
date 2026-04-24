@@ -1,7 +1,7 @@
 ﻿{
     "mission_05":  [
-                       "Avoid SELECT * for better performance and clarity.",
-                       "Pick only required columns.",
-                       "Sort by latest order_date first."
+                       "Filter in CTE before SUM/GROUP BY.",
+                       "Use only needed columns in CTE.",
+                       "Alias SUM(total_amount) as total_spend."
                    ]
 }

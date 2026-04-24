@@ -1,3 +1,3 @@
 ﻿{
-    "mission_01":  "Welcome to SQL performance tuning. Your first task is a foundational optimization: avoid SELECT * when only a few columns are needed. Build a query for completed orders that returns order_id, customer_id, and order_date only, then sort by the latest order_date first. This reduces transferred data and improves readability for downstream reports."
+    "mission_01":  "Optimize a reporting query by selecting only required columns. Return order_id, customer_id, and order_date for completed orders, newest first."
 }

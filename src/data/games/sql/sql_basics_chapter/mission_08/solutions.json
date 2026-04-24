@@ -1,3 +1,3 @@
 ﻿{
-    "mission_08":  "SELECT department, COUNT(*) AS total FROM employees GROUP BY department HAVING COUNT(*) \u003e= 3 ORDER BY total DESC;"
+    "mission_08":  "WITH dept_payroll AS (SELECT department, SUM(salary) AS total_payroll FROM employees GROUP BY department) SELECT department, total_payroll FROM dept_payroll WHERE total_payroll \u003e 300000 ORDER BY total_payroll DESC;"
 }

@@ -1,3 +1,3 @@
 ﻿{
-    "mission_10":  "WITH ranked AS (SELECT name, department, salary, CASE WHEN salary \u003e= 90000 THEN \u0027High\u0027 WHEN salary \u003e= 60000 THEN \u0027Medium\u0027 ELSE \u0027Low\u0027 END AS salary_band FROM employees) SELECT name, department, salary, salary_band FROM ranked ORDER BY salary DESC;"
+    "mission_10":  "WITH base AS (SELECT department, name, salary, SUM(salary) OVER (PARTITION BY department) AS dept_total FROM employees) SELECT department, name, salary, dept_total, ROUND((salary * 100.0) / dept_total, 2) AS pct_contribution FROM base ORDER BY department, salary DESC;"
 }

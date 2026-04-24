@@ -1,12 +1,15 @@
-{
-    "title":  "SQL Mission 3",
+﻿{
+    "title":  "SQL Mission 3: Name Prefix Search",
     "initialState":  {
-                         "content":  "SELECT * FROM table"
+                         "content":  "-- Mission 3 Guidelines\n-- Filter names that start with A\n-- Use pattern matching\n-- Keep output sorted\n\nSELECT\n  -- TODO\nFROM employees\nWHERE\n  -- TODO\nORDER BY\n  -- TODO\n;"
                      },
     "validation":  {
                        "type":  "sql",
                        "rules":  [
-                                     "must_include:select"
+                                     "must_include:select name",
+                                     "must_include:from employees",
+                                     "must_include:where name like \u0027a%\u0027",
+                                     "must_include:order by name"
                                  ]
                    },
     "id":  "mission_03",

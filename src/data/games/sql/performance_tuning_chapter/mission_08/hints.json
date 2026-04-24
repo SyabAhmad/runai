@@ -1,7 +1,7 @@
 ﻿{
     "mission_08":  [
-                       "Sort by total_amount descending.",
-                       "Use LIMIT to reduce returned rows.",
-                       "Keep selected columns minimal."
+                       "Use two-part keyset condition for stable paging.",
+                       "Second condition handles same-date tie by order_id.",
+                       "Keep sort order matching predicate."
                    ]
 }

@@ -1,14 +1,16 @@
-{
-    "title":  "Model Training",
+﻿{
+    "title":  "SQL Mission 3: EXISTS Instead Of Join For Presence",
     "initialState":  {
-                         "content":  "def train_model(X,y):\n    model.fit(X,y)"
+                         "content":  "-- Mission 3 Guidelines\n-- Return: c.customer_id, c.name\n-- Use EXISTS with correlated subquery\n\nSELECT\n  c.customer_id,\n  c.name\nFROM customers c\nWHERE EXISTS (\n  -- TODO correlated subquery\n)\nORDER BY c.customer_id;"
                      },
     "validation":  {
-                       "type":  "ai_code",
+                       "type":  "sql",
                        "rules":  [
-                                     "must_include:def"
+                                     "must_include:where exists (select 1 from orders o where o.customer_id = c.customer_id)",
+                                     "must_include:select c.customer_id, c.name",
+                                     "must_include:from customers c"
                                  ]
                    },
     "id":  "mission_03",
-    "type":  "ai_code"
+    "type":  "sql_debug"
 }

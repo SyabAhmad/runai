@@ -1,3 +1,3 @@
 ﻿{
-    "mission_09":  "Find employees whose salary is above the company average salary."
+    "mission_09":  "Return the top 3 highest-paid employees in each department using a window function. Include department, name, salary, and rank."
 }

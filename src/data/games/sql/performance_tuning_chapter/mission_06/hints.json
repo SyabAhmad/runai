@@ -1,7 +1,7 @@
 ﻿{
     "mission_06":  [
-                       "Do not call YEAR(order_date) in WHERE.",
-                       "Use range predicates with \u003e= and \u003c.",
-                       "Use start and end boundary dates."
+                       "Use ROW_NUMBER partitioned by customer_id.",
+                       "Sort inside window by newest date first.",
+                       "Filter in outer query with rn \u003c= 3."
                    ]
 }

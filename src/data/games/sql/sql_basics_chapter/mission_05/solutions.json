@@ -1,3 +1,3 @@
 ﻿{
-    "mission_05":  "SELECT DISTINCT department FROM employees ORDER BY department;"
+    "mission_05":  "SELECT department, COUNT(*) AS total FROM employees GROUP BY department HAVING COUNT(*) \u003e= 3 ORDER BY total DESC;"
 }

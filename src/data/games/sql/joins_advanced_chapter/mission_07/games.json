@@ -1,16 +1,14 @@
 ﻿{
-    "title":  "SQL Mission 7: Self Join Managers",
+    "title":  "SQL Mission 7: Product Sales By Category",
     "initialState":  {
-                         "content":  "SELECT e.name, m.name\\nFROM employees e;"
+                         "content":  "-- Mission 7 Guidelines\n-- categories(category_id, category_name)\n-- products(product_id, category_id)\n-- order_items(order_id, product_id, quantity)\n\nSELECT\n  -- TODO\nFROM categories c\nINNER JOIN products p ON -- TODO\nINNER JOIN order_items oi ON -- TODO\nGROUP BY\n  -- TODO\nORDER BY total_qty DESC;"
                      },
     "validation":  {
                        "type":  "sql",
                        "rules":  [
-                                     "must_include:from employees e",
-                                     "must_include:left join employees m",
-                                     "must_include:on e.manager_id = m.employee_id",
-                                     "must_include:select e.name as employee_name, m.name as manager_name",
-                                     "must_include:order by e.name"
+                                     "must_include:sum(oi.quantity) as total_qty",
+                                     "must_include:group by c.category_name",
+                                     "must_include:select c.category_name, sum(oi.quantity) as total_qty"
                                  ]
                    },
     "id":  "mission_07",

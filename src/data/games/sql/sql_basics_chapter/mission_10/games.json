@@ -1,18 +1,14 @@
 ﻿{
-    "title":  "SQL Mission 10: CTE With CASE",
+    "title":  "SQL Mission 10: Department Salary Contribution",
     "initialState":  {
-                         "content":  "SELECT name, salary\\nFROM employees;"
+                         "content":  "-- Mission 10 Guidelines\n-- Use window SUM(salary) partitioned by department as dept_total\n-- Compute pct_contribution = salary * 100.0 / dept_total\n-- Round to 2 decimals\n\nWITH base AS (\n  SELECT\n    department,\n    name,\n    salary,\n    -- TODO dept_total window sum\n  FROM employees\n)\nSELECT\n  department,\n  name,\n  salary,\n  dept_total,\n  -- TODO percentage expression as pct_contribution\nFROM base\nORDER BY department, salary DESC;"
                      },
     "validation":  {
                        "type":  "sql",
                        "rules":  [
-                                     "must_include:with ranked as",
-                                     "must_include:select name, department, salary",
-                                     "must_include:case",
-                                     "must_include:when salary \u003e= 90000 then \u0027high\u0027",
-                                     "must_include:when salary \u003e= 60000 then \u0027medium\u0027",
-                                     "must_include:else \u0027low\u0027",
-                                     "must_include:order by salary desc"
+                                     "must_include:sum(salary) over (partition by department) as dept_total",
+                                     "must_include:round((salary * 100.0) / dept_total, 2) as pct_contribution",
+                                     "must_include:order by department, salary desc"
                                  ]
                    },
     "id":  "mission_10",

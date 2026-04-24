@@ -1,7 +1,7 @@
 ﻿{
     "mission_07":  [
-                       "Use BETWEEN for the salary range.",
-                       "Use IN for multiple department values.",
-                       "Sort by salary descending."
+                       "CASE runs top-to-bottom, so keep High before Medium.",
+                       "Use ELSE for remaining salaries.",
+                       "Alias the expression as salary_band."
                    ]
 }

@@ -1,7 +1,7 @@
 ﻿{
     "mission_01":  [
-                       "Start by explicitly listing required columns in SELECT.",
-                       "Filter rows with WHERE status = \u0027completed\u0027.",
-                       "Sort by order_date DESC so latest orders appear first."
+                       "List columns explicitly in SELECT.",
+                       "Use WHERE status = \u0027completed\u0027.",
+                       "Sort with ORDER BY order_date DESC."
                    ]
 }

@@ -1,15 +1,15 @@
 ﻿{
-    "title":  "SQL Mission 6: Pattern Matching",
+    "title":  "SQL Mission 6: Above-Average Salaries",
     "initialState":  {
-                         "content":  "SELECT name\\nFROM employees\\nWHERE name = \u0027A\u0027;"
+                         "content":  "-- Mission 6 Guidelines\n-- Compare each salary to overall average salary\n-- Use a subquery in WHERE\n\nSELECT\n  -- TODO\nFROM employees\nWHERE\n  -- TODO\nORDER BY\n  -- TODO\n;"
                      },
     "validation":  {
                        "type":  "sql",
                        "rules":  [
-                                     "must_include:select name",
+                                     "must_include:select name, salary",
                                      "must_include:from employees",
-                                     "must_include:where name like \u0027a%\u0027",
-                                     "must_include:order by name"
+                                     "must_include:where salary \u003e (select avg(salary) from employees)",
+                                     "must_include:order by salary desc"
                                  ]
                    },
     "id":  "mission_06",

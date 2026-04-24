@@ -1,12 +1,14 @@
-{
-    "title":  "SQL Mission 2",
+﻿{
+    "title":  "SQL Mission 2: Department Directory",
     "initialState":  {
-                         "content":  "SELECT * FROM table"
+                         "content":  "-- Mission 2 Guidelines\n-- Return one row per department\n-- Remove duplicates\n-- Sort A -\u003e Z\n\nSELECT\n  -- TODO\nFROM employees\nORDER BY\n  -- TODO\n;"
                      },
     "validation":  {
                        "type":  "sql",
                        "rules":  [
-                                     "must_include:select"
+                                     "must_include:select distinct department",
+                                     "must_include:from employees",
+                                     "must_include:order by department"
                                  ]
                    },
     "id":  "mission_02",

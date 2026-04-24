@@ -1,6 +1,7 @@
 ﻿{
     "mission_05":  [
-                       "Use DISTINCT to remove duplicate departments.",
-                       "Sort the final result with ORDER BY department."
+                       "Use COUNT(*) with GROUP BY department.",
+                       "HAVING filters aggregated groups.",
+                       "Alias the count to total."
                    ]
 }

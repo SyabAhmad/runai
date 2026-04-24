@@ -1,17 +1,14 @@
 ﻿{
-    "title":  "SQL Mission 9: Pre-Filter Before Aggregation",
+    "title":  "SQL Mission 9: Conditional Aggregation In One Pass",
     "initialState":  {
-                         "content":  "SELECT customer_id, SUM(total_amount) AS total_spend\\nFROM orders\\nGROUP BY customer_id;"
+                         "content":  "-- Mission 9 Guidelines\n-- Single grouped output for 2025\n-- Use SUM(CASE WHEN ...) for status-specific counts\n\nSELECT\n  COUNT(*) AS total_orders,\n  -- TODO completed count\n  -- TODO cancelled count\nFROM orders\nWHERE\n  -- TODO date range 2025\n;"
                      },
     "validation":  {
                        "type":  "sql",
                        "rules":  [
-                                     "must_include:with filtered_orders as",
-                                     "must_include:where status = \u0027completed\u0027",
-                                     "must_include:and order_date \u003e= \u00272025-01-01\u0027",
-                                     "must_include:select customer_id, sum(total_amount) as total_spend",
-                                     "must_include:group by customer_id",
-                                     "must_include:order by total_spend desc"
+                                     "must_include:sum(case when status = \u0027completed\u0027 then 1 else 0 end) as completed_orders",
+                                     "must_include:sum(case when status = \u0027cancelled\u0027 then 1 else 0 end) as cancelled_orders",
+                                     "must_include:where order_date \u003e= \u00272025-01-01\u0027 and order_date \u003c \u00272026-01-01\u0027"
                                  ]
                    },
     "id":  "mission_09",

@@ -1,3 +1,3 @@
 ﻿{
-    "mission_09":  "SELECT name, salary FROM employees WHERE salary \u003e (SELECT AVG(salary) FROM employees) ORDER BY salary DESC;"
+    "mission_09":  "WITH ranked AS (SELECT department, name, salary, ROW_NUMBER() OVER (PARTITION BY department ORDER BY salary DESC) AS rn FROM employees) SELECT department, name, salary, rn FROM ranked WHERE rn \u003c= 3 ORDER BY department, salary DESC;"
 }

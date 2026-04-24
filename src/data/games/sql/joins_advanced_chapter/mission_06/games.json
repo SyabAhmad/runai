@@ -1,16 +1,14 @@
 ﻿{
-    "title":  "SQL Mission 6: Left Join Missing Orders",
+    "title":  "SQL Mission 6: Customer Order Counts",
     "initialState":  {
-                         "content":  "SELECT c.name\\nFROM customers c\\nINNER JOIN orders o ON c.customer_id = o.customer_id;"
+                         "content":  "-- Mission 6 Guidelines\n-- Build order counts per customer\n-- Join counts back to customers\n-- Replace NULL with 0\n\nSELECT\n  -- TODO\nFROM customers c\nLEFT JOIN (\n  -- TODO aggregated subquery\n) o\n  ON -- TODO\nORDER BY total_orders DESC, c.name;"
                      },
     "validation":  {
                        "type":  "sql",
                        "rules":  [
-                                     "must_include:from customers c",
-                                     "must_include:left join orders o",
+                                     "must_include:left join (select customer_id, count(*) as total_orders from orders group by customer_id) o",
                                      "must_include:on c.customer_id = o.customer_id",
-                                     "must_include:where o.order_id is null",
-                                     "must_include:select c.name"
+                                     "must_include:coalesce(o.total_orders, 0) as total_orders"
                                  ]
                    },
     "id":  "mission_06",

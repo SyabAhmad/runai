@@ -1,19 +1,14 @@
 ﻿{
-    "title":  "SQL Mission 8: Three Table Revenue",
+    "title":  "SQL Mission 8: Latest Order Per Customer",
     "initialState":  {
-                         "content":  "SELECT o.order_id\\nFROM orders o;"
+                         "content":  "-- Mission 8 Guidelines\n-- Join customers and orders\n-- Rank orders by order_date desc per customer\n-- Keep rank = 1\n\nWITH ranked AS (\n  SELECT\n    c.customer_id,\n    c.name,\n    o.order_id,\n    o.order_date,\n    -- TODO row_number\n  FROM customers c\n  INNER JOIN orders o ON c.customer_id = o.customer_id\n)\nSELECT\n  -- TODO\nFROM ranked\nWHERE\n  -- TODO\nORDER BY name;"
                      },
     "validation":  {
                        "type":  "sql",
                        "rules":  [
-                                     "must_include:from orders o",
-                                     "must_include:inner join order_items oi",
-                                     "must_include:on o.order_id = oi.order_id",
-                                     "must_include:inner join products p",
-                                     "must_include:on oi.product_id = p.product_id",
-                                     "must_include:sum(oi.quantity * p.price) as order_total",
-                                     "must_include:group by o.order_id",
-                                     "must_include:order by order_total desc"
+                                     "must_include:row_number() over (partition by c.customer_id order by o.order_date desc) as rn",
+                                     "must_include:where rn = 1",
+                                     "must_include:select customer_id, name, order_id, order_date"
                                  ]
                    },
     "id":  "mission_08",

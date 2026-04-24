@@ -1,7 +1,7 @@
 ﻿{
     "mission_10":  [
-                       "Start with a CTE named ranked.",
-                       "Use CASE WHEN to assign salary_band.",
-                       "Sort final output by salary descending."
+                       "Compute dept_total once in CTE.",
+                       "Use floating-point math with 100.0.",
+                       "ROUND to 2 decimals for display."
                    ]
 }

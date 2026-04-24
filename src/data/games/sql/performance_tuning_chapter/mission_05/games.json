@@ -1,15 +1,16 @@
 ﻿{
-    "title":  "SQL Mission 5: Select Only Needed Columns",
+    "title":  "SQL Mission 5: Filter Early In CTE",
     "initialState":  {
-                         "content":  "SELECT *\\nFROM orders\\nWHERE status = \u0027completed\u0027;"
+                         "content":  "-- Mission 5 Guidelines\n-- CTE should filter rows first\n-- Then aggregate in outer query\n\nWITH filtered_orders AS (\n  SELECT\n    customer_id,\n    total_amount\n  FROM orders\n  WHERE\n    -- TODO status/date filters\n)\nSELECT\n  customer_id,\n  -- TODO aggregate\nFROM filtered_orders\nGROUP BY customer_id\nORDER BY total_spend DESC;"
                      },
     "validation":  {
                        "type":  "sql",
                        "rules":  [
-                                     "must_include:select order_id, customer_id, order_date",
-                                     "must_include:from orders",
+                                     "must_include:with filtered_orders as",
                                      "must_include:where status = \u0027completed\u0027",
-                                     "must_include:order by order_date desc"
+                                     "must_include:and order_date \u003e= \u00272025-01-01\u0027",
+                                     "must_include:sum(total_amount) as total_spend",
+                                     "must_include:group by customer_id"
                                  ]
                    },
     "id":  "mission_05",

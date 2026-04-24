@@ -1,16 +1,14 @@
 ﻿{
-    "title":  "SQL Mission 10: Top Customer Per Region",
+    "title":  "SQL Mission 10: Region-Level Customer Contribution",
     "initialState":  {
-                         "content":  "SELECT c.region, c.name\\nFROM customers c;"
+                         "content":  "-- Mission 10 Guidelines\n-- Step 1: compute customer spend by region\n-- Step 2: compute region_total using window SUM over region\n-- Step 3: percentage = total_spend * 100.0 / region_total\n\nWITH customer_spend AS (\n  SELECT\n    c.region,\n    c.name,\n    SUM(oi.quantity * p.price) AS total_spend\n  FROM customers c\n  INNER JOIN orders o ON c.customer_id = o.customer_id\n  INNER JOIN order_items oi ON o.order_id = oi.order_id\n  INNER JOIN products p ON oi.product_id = p.product_id\n  GROUP BY c.region, c.name\n),\nranked AS (\n  SELECT\n    region,\n    name,\n    total_spend,\n    -- TODO region total window\n  FROM customer_spend\n)\nSELECT\n  region,\n  name,\n  total_spend,\n  -- TODO contribution percent\nFROM ranked\nORDER BY region, total_spend DESC;"
                      },
     "validation":  {
                        "type":  "sql",
                        "rules":  [
-                                     "must_include:with spend as",
-                                     "must_include:sum(oi.quantity * p.price) as total_spend",
-                                     "must_include:row_number() over (partition by c.region order by sum(oi.quantity * p.price) desc) as rn",
-                                     "must_include:where rn = 1",
-                                     "must_include:select region, name, total_spend"
+                                     "must_include:sum(total_spend) over (partition by region) as region_total",
+                                     "must_include:round((total_spend * 100.0) / region_total, 2) as pct_contribution",
+                                     "must_include:order by region, total_spend desc"
                                  ]
                    },
     "id":  "mission_10",

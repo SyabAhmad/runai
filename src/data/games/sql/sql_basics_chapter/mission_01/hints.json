@@ -1,7 +1,7 @@
 ﻿{
     "mission_01":  [
-                       "Use SELECT name FROM employees as your base.",
-                       "Add WHERE department = \u0027Sales\u0027 AND salary \u003e 50000.",
-                       "Finish with ORDER BY salary DESC to rank highest first."
+                       "Start by selecting only the name column.",
+                       "Add both filters in WHERE using AND.",
+                       "Use ORDER BY salary DESC for ranking."
                    ]
 }

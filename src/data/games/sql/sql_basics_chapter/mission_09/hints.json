@@ -1,7 +1,7 @@
 ﻿{
     "mission_09":  [
-                       "Use a scalar subquery with AVG(salary).",
-                       "Compare salary to the subquery result.",
-                       "Sort by salary descending."
+                       "Partition by department to reset rank per group.",
+                       "Use salary DESC in window order.",
+                       "Filter to rn \u003c= 3 outside the CTE."
                    ]
 }

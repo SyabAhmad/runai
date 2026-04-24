@@ -1,7 +1,7 @@
 ﻿{
     "mission_05":  [
-                       "Use INNER JOIN instead of comma joins.",
-                       "Match customer keys in ON clause.",
-                       "Sort by order id."
+                       "Multiply quantity by product price.",
+                       "Aggregate at order level only.",
+                       "Sort by computed total descending."
                    ]
 }

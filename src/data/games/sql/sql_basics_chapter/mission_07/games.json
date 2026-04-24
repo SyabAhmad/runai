@@ -1,16 +1,16 @@
 ﻿{
-    "title":  "SQL Mission 7: Range And Set Filters",
+    "title":  "SQL Mission 7: Salary Bands With CASE",
     "initialState":  {
-                         "content":  "SELECT name, salary\\nFROM employees\\nWHERE salary \u003e 0;"
+                         "content":  "-- Mission 7 Guidelines\n-- Add computed column salary_band using CASE\n-- Bands:\n--   High: salary \u003e= 90000\n--   Medium: salary \u003e= 60000\n--   Low: otherwise\n\nSELECT\n  name,\n  department,\n  salary,\n  CASE\n    -- TODO\n  END AS salary_band\nFROM employees\nORDER BY salary DESC;"
                      },
     "validation":  {
                        "type":  "sql",
                        "rules":  [
-                                     "must_include:select name, salary",
-                                     "must_include:from employees",
-                                     "must_include:salary between 40000 and 90000",
-                                     "must_include:department in (\u0027sales\u0027,\u0027marketing\u0027)",
-                                     "must_include:order by salary desc"
+                                     "must_include:case",
+                                     "must_include:when salary \u003e= 90000 then \u0027high\u0027",
+                                     "must_include:when salary \u003e= 60000 then \u0027medium\u0027",
+                                     "must_include:else \u0027low\u0027",
+                                     "must_include:as salary_band"
                                  ]
                    },
     "id":  "mission_07",

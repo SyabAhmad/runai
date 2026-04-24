@@ -1,16 +1,15 @@
 ﻿{
-    "title":  "SQL Mission 10: Rank Latest Orders Per Customer",
+    "title":  "SQL Mission 10: Efficient Revenue Leaderboard",
     "initialState":  {
-                         "content":  "SELECT customer_id, order_id, order_date\\nFROM orders;"
+                         "content":  "-- Mission 10 Guidelines\n-- Step 1: aggregate revenue per customer for completed 2025 orders\n-- Step 2: add rank and dense_rank over revenue desc\n-- Return top 10 customers\n\nWITH revenue AS (\n  SELECT\n    customer_id,\n    SUM(total_amount) AS revenue\n  FROM orders\n  WHERE\n    -- TODO filters\n  GROUP BY customer_id\n),\nleaderboard AS (\n  SELECT\n    customer_id,\n    revenue,\n    -- TODO rank()\n    -- TODO dense_rank()\n  FROM revenue\n)\nSELECT\n  customer_id,\n  revenue,\n  rnk,\n  drnk\nFROM leaderboard\nORDER BY revenue DESC\nLIMIT 10;"
                      },
     "validation":  {
                        "type":  "sql",
                        "rules":  [
-                                     "must_include:with ranked_orders as",
-                                     "must_include:row_number() over (partition by customer_id order by order_date desc) as rn",
-                                     "must_include:select customer_id, order_id, order_date",
-                                     "must_include:where rn \u003c= 3",
-                                     "must_include:order by customer_id, order_date desc"
+                                     "must_include:where status = \u0027completed\u0027 and order_date \u003e= \u00272025-01-01\u0027 and order_date \u003c \u00272026-01-01\u0027",
+                                     "must_include:rank() over (order by revenue desc) as rnk",
+                                     "must_include:dense_rank() over (order by revenue desc) as drnk",
+                                     "must_include:limit 10"
                                  ]
                    },
     "id":  "mission_10",

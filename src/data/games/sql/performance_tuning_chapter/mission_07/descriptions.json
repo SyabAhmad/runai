@@ -1,3 +1,3 @@
 ﻿{
-    "mission_07":  "Return customers who placed at least one order using EXISTS."
+    "mission_07":  "Identify customers with more than 5 orders using a grouped subquery join for clarity and performance."
 }

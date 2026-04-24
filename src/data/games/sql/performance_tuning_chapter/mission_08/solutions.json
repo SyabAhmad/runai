@@ -1,3 +1,3 @@
 ﻿{
-    "mission_08":  "SELECT order_id, total_amount FROM orders ORDER BY total_amount DESC LIMIT 20;"
+    "mission_08":  "SELECT order_id, order_date, total_amount FROM orders WHERE (order_date \u003c \u00272025-10-01\u0027 OR (order_date = \u00272025-10-01\u0027 AND order_id \u003c 4500)) ORDER BY order_date DESC, order_id DESC LIMIT 20;"
 }

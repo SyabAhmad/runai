@@ -1,15 +1,14 @@
 ﻿{
-    "title":  "SQL Mission 6: Sargable Date Filter",
+    "title":  "SQL Mission 6: Latest 3 Orders Per Customer",
     "initialState":  {
-                         "content":  "SELECT order_id\\nFROM orders\\nWHERE YEAR(order_date) = 2025;"
+                         "content":  "-- Mission 6 Guidelines\n-- Rank rows per customer by order_date desc\n-- Keep ranks \u003c= 3\n\nWITH ranked_orders AS (\n  SELECT\n    customer_id,\n    order_id,\n    order_date,\n    -- TODO row_number\n  FROM orders\n)\nSELECT\n  customer_id,\n  order_id,\n  order_date\nFROM ranked_orders\nWHERE\n  -- TODO\nORDER BY customer_id, order_date DESC;"
                      },
     "validation":  {
                        "type":  "sql",
                        "rules":  [
-                                     "must_include:select order_id",
-                                     "must_include:from orders",
-                                     "must_include:where order_date \u003e= \u00272025-01-01\u0027",
-                                     "must_include:and order_date \u003c \u00272026-01-01\u0027"
+                                     "must_include:row_number() over (partition by customer_id order by order_date desc) as rn",
+                                     "must_include:where rn \u003c= 3",
+                                     "must_include:order by customer_id, order_date desc"
                                  ]
                    },
     "id":  "mission_06",

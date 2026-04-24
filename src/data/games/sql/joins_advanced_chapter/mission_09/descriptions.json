@@ -1,3 +1,3 @@
 ﻿{
-    "mission_09":  "Show each customer with total order count, including customers with zero orders."
+    "mission_09":  "Find the highest-spending customer in each region using joins, aggregation, and window ranking."
 }

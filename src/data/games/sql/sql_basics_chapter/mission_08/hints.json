@@ -1,7 +1,7 @@
 ﻿{
     "mission_08":  [
-                       "Use GROUP BY department.",
-                       "Use HAVING for aggregate filters.",
-                       "Order by the total count descending."
+                       "CTE should aggregate from employees.",
+                       "Use SUM(salary) and GROUP BY department.",
+                       "Filter in outer query by total_payroll."
                    ]
 }

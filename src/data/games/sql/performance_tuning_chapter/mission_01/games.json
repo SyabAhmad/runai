@@ -1,7 +1,7 @@
 ﻿{
-    "title":  "SQL Mission 1: Fetch Only Required Columns",
+    "title":  "SQL Mission 1: Avoid SELECT *",
     "initialState":  {
-                         "content":  "-- Mission Guidelines:\\n-- Table: orders(order_id, customer_id, order_date, status, total_amount, notes)\\n-- Task: Optimize a reporting query by avoiding SELECT *\\n-- Return only: order_id, customer_id, order_date\\n-- Filter: status = \u0027completed\u0027\\n-- Sort newest first by order_date\\n\\nSELECT order_id, customer_id, order_date\\nFROM orders\\nWHERE status = \u0027completed\u0027\\nORDER BY order_date DESC;"
+                         "content":  "-- Mission 1 Guidelines\n-- Table: orders(order_id, customer_id, order_date, status, total_amount, notes)\n-- Return only required columns (no SELECT *)\n-- Filter completed orders\n-- Sort newest first\n\nSELECT\n  -- TODO explicit columns\nFROM orders\nWHERE\n  -- TODO\nORDER BY\n  -- TODO\n;"
                      },
     "validation":  {
                        "type":  "sql",

@@ -1,14 +1,18 @@
-{
-    "title":  "Model Evaluation",
+﻿{
+    "title":  "SQL Mission 4: Orders And Payments Coverage",
     "initialState":  {
-                         "content":  "def evaluate_model(y_true,y_pred):\n    return accuracy_score(y_true,y_pred)"
+                         "content":  "-- Mission 4 Guidelines\n-- Tables: orders(order_id, customer_id), payments(payment_id, order_id, paid_at)\n-- Keep every order even if payment does not exist\n\nSELECT\n  -- TODO\nFROM orders o\nLEFT JOIN payments p\n  ON -- TODO\nORDER BY o.order_id;"
                      },
     "validation":  {
-                       "type":  "ai_code",
+                       "type":  "sql",
                        "rules":  [
-                                     "must_include:def"
+                                     "must_include:select o.order_id, p.payment_id",
+                                     "must_include:from orders o",
+                                     "must_include:left join payments p",
+                                     "must_include:on o.order_id = p.order_id",
+                                     "must_include:order by o.order_id"
                                  ]
                    },
     "id":  "mission_04",
-    "type":  "ai_code"
+    "type":  "sql_debug"
 }

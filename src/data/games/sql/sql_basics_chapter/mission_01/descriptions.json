@@ -1,3 +1,3 @@
 ﻿{
-    "mission_01":  "You are helping an HR analyst prepare a list of high-performing Sales employees for a compensation review. Write a clean SQL query that returns employee names from the Sales department with salary greater than 50000, then order the result so the highest salary appears first. Keep the output focused and readable by selecting only the needed column."
+    "mission_01":  "You are helping HR shortlist high-performing Sales employees for a compensation review. Write a query that returns only employee names from the Sales department where salary is strictly above 50000. Order results so the highest salary appears first. Keep the output focused by selecting only what is needed."
 }

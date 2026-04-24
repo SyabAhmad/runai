@@ -1,3 +1,3 @@
 ﻿{
-    "mission_01":  "In this mission, you will write your first join query in the advanced joins track. Combine customers and orders so each returned row shows which customer placed which order. Use a proper INNER JOIN (not implicit comma join syntax) and connect the tables through customer_id. Return only customer name and order_id, then sort by order_id so results are deterministic and easy to verify."
+    "mission_01":  "Build a reliable order listing by joining customers and orders. Return customer name with order_id for matched records only, sorted by order_id."
 }

@@ -1,16 +1,16 @@
 ﻿{
-    "title":  "SQL Mission 8: Grouping With HAVING",
+    "title":  "SQL Mission 8: CTE For Department Payroll",
     "initialState":  {
-                         "content":  "SELECT department, COUNT(*) AS total\\nFROM employees\\nGROUP BY department;"
+                         "content":  "-- Mission 8 Guidelines\n-- Build CTE: dept_payroll(department, total_payroll)\n-- Aggregate salaries per department\n-- Filter totals \u003e 300000 in final query\n\nWITH dept_payroll AS (\n  -- TODO\n)\nSELECT\n  -- TODO\nFROM dept_payroll\nWHERE\n  -- TODO\nORDER BY\n  -- TODO\n;"
                      },
     "validation":  {
                        "type":  "sql",
                        "rules":  [
-                                     "must_include:select department, count(*) as total",
-                                     "must_include:from employees",
+                                     "must_include:with dept_payroll as",
+                                     "must_include:sum(salary) as total_payroll",
                                      "must_include:group by department",
-                                     "must_include:having count(*) \u003e= 3",
-                                     "must_include:order by total desc"
+                                     "must_include:where total_payroll \u003e 300000",
+                                     "must_include:order by total_payroll desc"
                                  ]
                    },
     "id":  "mission_08",

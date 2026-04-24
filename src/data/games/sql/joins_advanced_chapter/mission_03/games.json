@@ -1,14 +1,17 @@
-{
-    "title":  "Model Training",
+﻿{
+    "title":  "SQL Mission 3: Employee-Manager Map (Self Join)",
     "initialState":  {
-                         "content":  "def train_model(X,y):\n    model.fit(X,y)"
+                         "content":  "-- Mission 3 Guidelines\n-- Table: employees(employee_id, name, manager_id, department)\n-- Self join employees e -\u003e manager m\n-- e.manager_id matches m.employee_id\n\nSELECT\n  -- TODO aliases\nFROM employees e\nLEFT JOIN employees m\n  ON -- TODO\nORDER BY e.name;"
                      },
     "validation":  {
-                       "type":  "ai_code",
+                       "type":  "sql",
                        "rules":  [
-                                     "must_include:def"
+                                     "must_include:select e.name as employee_name, m.name as manager_name",
+                                     "must_include:from employees e",
+                                     "must_include:left join employees m",
+                                     "must_include:on e.manager_id = m.employee_id"
                                  ]
                    },
     "id":  "mission_03",
-    "type":  "ai_code"
+    "type":  "sql_debug"
 }
