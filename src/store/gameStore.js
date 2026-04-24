@@ -31,13 +31,20 @@ export const useGameStore = create(
 
       completeMission: (tech, chapter, missionId, xpReward = 100) => {
         const key = `${tech}/${chapter}`;
-        set((state) => ({
-          completedMissions: {
-            ...state.completedMissions,
-            [key]: [...(state.completedMissions[key] || []), missionId]
-          },
-          xp: state.xp + xpReward
-        }));
+        set((state) => {
+          const completed = state.completedMissions[key] || [];
+          if (completed.includes(missionId)) {
+            return state;
+          }
+
+          return {
+            completedMissions: {
+              ...state.completedMissions,
+              [key]: [...completed, missionId]
+            },
+            xp: state.xp + xpReward
+          };
+        });
       }
     }),
     {

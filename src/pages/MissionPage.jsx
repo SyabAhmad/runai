@@ -6,24 +6,31 @@ import { evaluateMission } from '../engine/evaluator';
 
 export default function MissionPage() {
   const { technology, chapter, mission: missionId } = useParams();
-  const { completeMission } = useGameStore();
+  const { completeMission, completedMissions } = useGameStore();
   const [mission, setMission] = useState(null);
   const [description, setDescription] = useState('');
   const [hints, setHints] = useState([]);
   const [userInput, setUserInput] = useState('');
   const [result, setResult] = useState(null);
   const [hintIndex, setHintIndex] = useState(0);
+  const chapterKey = `${technology}/${chapter}`;
+  const isCompleted = (completedMissions[chapterKey] || []).includes(missionId);
 
   useEffect(() => {
     const basePath = `/src/data/games/${technology}/${chapter}/${missionId}`;
     const hintProgressKey = `hintProgress:${technology}/${chapter}/${missionId}`;
+    const solutionStorageKey = `missionSolution:${technology}/${chapter}/${missionId}`;
     
     const loadData = async () => {
+      setResult(isCompleted ? { success: true, message: 'Mission already completed.' } : null);
+      setHintIndex(0);
+      setUserInput('');
       try {
         const gamesRes = await fetch(`${basePath}/games.json`);
         const gamesData = await gamesRes.json();
         setMission(gamesData);
-        setUserInput(gamesData.initialState?.content || '');
+        const savedSolution = localStorage.getItem(solutionStorageKey);
+        setUserInput(savedSolution || gamesData.initialState?.content || '');
         
         try {
           const descRes = await fetch(`${basePath}/descriptions.json`);
@@ -55,16 +62,16 @@ export default function MissionPage() {
     };
 
     loadData();
-    setResult(null);
-    setHintIndex(0);
-    setUserInput('');
-  }, [technology, chapter, missionId]);
+  }, [technology, chapter, missionId, isCompleted]);
 
   const handleSubmit = () => {
     if (!mission) return;
+    if (isCompleted) return;
+    const solutionStorageKey = `missionSolution:${technology}/${chapter}/${missionId}`;
     const evaluation = evaluateMission(mission, { content: userInput });
     if (evaluation.success) {
       completeMission(technology, chapter, missionId, mission.xpReward || 100);
+      localStorage.setItem(solutionStorageKey, userInput);
       setResult({ success: true, message: evaluation.message });
     } else {
       setResult({ success: false, message: evaluation.message });
@@ -90,7 +97,6 @@ export default function MissionPage() {
   );
 
   if (!isUnlocked) {
-    const displayChapter = chapter.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
     return (
       <div className="h-full flex flex-col items-center justify-center text-text-muted p-6">
         <svg className="w-16 h-16 mb-4 text-text-dim" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -125,11 +131,11 @@ export default function MissionPage() {
               +{mission.xpReward || 100} XP
             </span>
             <span className={`text-xs px-3 py-1 rounded-full ${
-              result?.success ? 'bg-success/20 text-success' : 
+              (result?.success || isCompleted) ? 'bg-success/20 text-success' : 
               result?.success === false ? 'bg-error/20 text-error' : 
               'bg-secondary text-text-dim'
             }`}>
-              {result?.success ? 'Completed' : result?.success === false ? 'Incorrect' : 'In Progress'}
+              {(result?.success || isCompleted) ? 'Completed' : result?.success === false ? 'Incorrect' : 'In Progress'}
             </span>
           </div>
         </div>
@@ -167,7 +173,7 @@ export default function MissionPage() {
               <button
                 onClick={handleSubmit}
                 className="btn btn-primary"
-                disabled={result?.success}
+                disabled={result?.success || isCompleted}
               >
                 Submit Solution
               </button>
@@ -226,7 +232,7 @@ export default function MissionPage() {
               <div className="flex justify-between text-xs">
                 <span className="text-text-dim">Status</span>
                 <span className={result?.success ? 'text-success' : 'text-text-dim'}>
-                  {result?.success ? 'Completed' : 'Pending'}
+                  {(result?.success || isCompleted) ? 'Completed' : 'Pending'}
                 </span>
               </div>
             </div>
