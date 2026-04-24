@@ -1,417 +1,202 @@
 import { Link } from "react-router-dom";
 
-// Match: games/[tech]/[chapter]/mission_XX/games.json
 const missionModules = import.meta.glob(
   "../data/games/**/mission_*/games.json",
   { eager: true },
 );
 
+const formatName = (value) =>
+  value.replace(/_/g, " ").replace(/\b\w/g, (char) => char.toUpperCase());
+
 export default function HomePage() {
   const techSet = new Set();
   Object.keys(missionModules).forEach((path) => {
     const parts = path.split("/");
-    // ../data/games/[tech]/...
     const tech = parts[3];
     if (tech) techSet.add(tech);
   });
-  const technologies = Array.from(techSet);
-
-  const renderIcon = (tech) => {
-    const icons = {
-      sql: "M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4",
-      terminal:
-        "M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z",
-      pipeline:
-        "M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z",
-      ai_engineering:
-        "M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z",
-    };
-    const d = icons[tech] || icons.pipeline;
-    return (
-      <svg
-        className="w-6 h-6 text-accent"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d={d}
-        />
-      </svg>
-    );
-  };
+  const technologies = Array.from(techSet).sort((a, b) => a.localeCompare(b));
 
   return (
-    <div className="min-h-screen flex flex-col bg-primary">
-      {/* Header */}
-      <header className="py-6 px-6">
-        <div className="container mx-auto flex justify-between items-center">
-          <div className="flex items-center space-x-2">
-            <div className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-accent">
-              <svg
-                className="w-6 h-6 text-white"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M13 10V3L4 14h7v7l9-11h-7z"
-                />
-              </svg>
-            </div>
-            <span className="text-xl font-bold text-text">RunAI Learn</span>
-          </div>
-          <nav>
-            <ul className="flex space-x-6">
-              <li>
-                <Link
-                  to="/"
-                  className="text-text hover:text-accent transition-colors"
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/profile"
-                  className="text-text hover:text-accent transition-colors"
-                >
-                  Profile
-                </Link>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+    <div className="min-h-screen bg-primary text-text">
+      <div className="relative overflow-hidden">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_15%_15%,rgba(244,114,182,0.2),transparent_32%),radial-gradient(circle_at_85%_18%,rgba(59,130,246,0.2),transparent_34%),radial-gradient(circle_at_50%_85%,rgba(16,185,129,0.16),transparent_36%)]" />
+        <div className="pointer-events-none absolute -left-10 top-24 h-28 w-28 rounded-full border border-pink-300/20 bg-pink-400/10" />
+        <div className="pointer-events-none absolute right-10 top-36 h-20 w-20 rounded-full border border-blue-300/20 bg-blue-400/10" />
+        <div className="pointer-events-none absolute bottom-28 left-1/3 h-16 w-16 rounded-full border border-emerald-300/20 bg-emerald-400/10" />
 
-      {/* Hero Section */}
-      <section className="py-16 md:py-24">
-        <div className="container mx-auto px-6">
-          <div className="text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-accent mb-8">
-              <svg
-                className="w-8 h-8 text-white"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M13 10V3L4 14h7v7l9-11h-7z"
-                />
-              </svg>
+        <main className="relative mx-auto flex min-h-screen w-full max-w-7xl flex-col px-6 py-8">
+          <header className="mb-10 flex items-center justify-between rounded-2xl border border-border bg-secondary/55 px-4 py-3 backdrop-blur-sm">
+            <div className="flex items-center gap-3">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-pink-400/20 text-pink-300">
+                <svg
+                  className="h-5 w-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <p className="text-sm font-semibold">Bestie Learning Space</p>
+                <p className="text-xs text-text-dim">Cute mode: ON</p>
+              </div>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-text mb-6 leading-tight">
-              Master Real Engineering Skills
-            </h1>
-            <p className="text-lg md:text-xl text-text-muted leading-relaxed mb-10">
-              Interactive learning platform for SQL, DevOps, AI, and more. Level
-              up your technical skills with hands-on missions.
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link
-                to="#technologies"
-                className="px-8 py-3 bg-accent text-white rounded-lg font-medium hover:bg-opacity-90 transition-all shadow-lg whitespace-nowrap"
-              >
-                Explore Technologies
-              </Link>
+
+            <div className="flex items-center gap-2">
               <Link
                 to="/profile"
-                className="px-8 py-3 bg-transparent text-accent border border-accent rounded-lg font-medium hover:bg-accent hover:bg-opacity-10 transition-all whitespace-nowrap"
+                className="rounded-full border border-accent/35 bg-accent/15 px-4 py-2 text-xs font-semibold text-accent transition hover:bg-accent/25"
               >
-                View Profile
+                My Progress
               </Link>
             </div>
-          </div>
-        </div>
-      </section>
+          </header>
 
-      {/* Technologies Section */}
-      <section id="technologies" className="py-16 bg-secondary/30">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-14">
-            <h2 className="text-3xl md:text-4xl font-bold text-text mb-4">
-              Learn In-Demand Skills
-            </h2>
-            <p className="text-text-muted">
-              Choose from various technology tracks designed to enhance your
-              engineering expertise through interactive challenges.
-            </p>
-          </div>
+          <section className="grid flex-1 grid-cols-1 gap-6 lg:grid-cols-12">
+            <div className="lg:col-span-8">
+              <div className="h-full rounded-3xl border border-border bg-gradient-to-br from-[#1f2037] via-[#232740] to-[#17263c] p-8 shadow-lg">
+                <p className="text-xs uppercase tracking-[0.2em] text-pink-300/80">
+                  A Sweet Dedication
+                </p>
+                <h1 className="mt-4 text-4xl font-extrabold leading-tight md:text-5xl">
+                  Made by <span className="text-pink-300">MenteE</span> for his
+                  Bestie
+                  <br />
+                  to learn quickly and touch the sky.
+                </h1>
+                <p className="mt-6 text-sm">
+                  This whole page is for her growth journey. One mission at a
+                  time, one win at a time, one proud smile at a time. Learn,
+                  build, repeat.
+                </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {technologies.map((tech) => {
-              const display = tech
-                .replace(/_/g, " ")
-                .replace(/\b\w/g, (l) => l.toUpperCase());
-              return (
+                <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-3">
+                  <div className="rounded-2xl border border-pink-300/20 bg-pink-400/10 p-4">
+                    <p className="text-xs text-pink-200">Step 1</p>
+                    <p className="mt-1 text-sm font-semibold">Learn Fast</p>
+                  </div>
+                  <div className="rounded-2xl border border-blue-300/20 bg-blue-400/10 p-4">
+                    <p className="text-xs text-blue-200">Step 2</p>
+                    <p className="mt-1 text-sm font-semibold">Practice Daily</p>
+                  </div>
+                  <div className="rounded-2xl border border-emerald-300/20 bg-emerald-400/10 p-4">
+                    <p className="text-xs text-emerald-200">Step 3</p>
+                    <p className="mt-1 text-sm font-semibold">Touch The Sky</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="lg:col-span-4">
+              <div className="h-full rounded-3xl border border-border bg-secondary/75 p-6">
+                <p className="text-xs uppercase tracking-[0.2em] text-text-dim">
+                  Cheer Notes
+                </p>
+                <div className="mt-4 space-y-3">
+                  <div className="rounded-xl border border-border bg-primary/50 p-4 text-sm text-text-muted">
+                    You are capable of hard things.
+                  </div>
+                  <div className="rounded-xl border border-border bg-primary/50 p-4 text-sm text-text-muted">
+                    Tiny progress is still progress.
+                  </div>
+                  <div className="rounded-xl border border-border bg-primary/50 p-4 text-sm text-text-muted">
+                    Keep showing up. You are doing great.
+                  </div>
+                  <div className="rounded-xl border border-pink-300/30 bg-pink-400/10 p-4 text-sm font-medium text-pink-200">
+                    Special mission: make her proud of herself.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section className="mt-10">
+            <div className="mb-4 flex items-center justify-between">
+              <h2 className="text-sm font-semibold uppercase tracking-wider text-text-dim">
+                Pick A Cute Track
+              </h2>
+              <span className="rounded-full border border-border px-3 py-1 text-xs text-text-muted">
+                {technologies.length} tracks ready
+              </span>
+            </div>
+
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+              {technologies.map((tech, idx) => (
                 <Link
                   key={tech}
                   to={`/${tech}`}
-                  className="panel block p-5 hover:border-accent/50 transition-all group"
+                  className={`group rounded-2xl border p-4 transition hover:-translate-y-0.5 ${
+                    idx % 3 === 0
+                      ? "border-pink-300/25 bg-pink-400/10 hover:border-pink-300/45"
+                      : idx % 3 === 1
+                        ? "border-blue-300/25 bg-blue-400/10 hover:border-blue-300/45"
+                        : "border-emerald-300/25 bg-emerald-400/10 hover:border-emerald-300/45"
+                  }`}
                 >
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-lg bg-primary flex items-center justify-center group-hover:bg-secondary transition-colors">
-                      {renderIcon(tech)}
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-text group-hover:text-accent transition-colors">
-                        {display}
-                      </h3>
-                      <p className="text-sm text-text-muted mt-1">
-                        Start learning with interactive missions
-                      </p>
-                    </div>
-                    <div className="ml-auto text-accent opacity-0 group-hover:opacity-100 transition-opacity">
-                      <svg
-                        className="w-5 h-5"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M9 5l7 7-7 7"
-                        />
-                      </svg>
-                    </div>
+                  <div className="flex items-center justify-between">
+                    <p className="text-base font-semibold text-text group-hover:text-white">
+                      {formatName(tech)}
+                    </p>
+                    <svg
+                      className="h-4 w-4 text-text-dim transition group-hover:text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
                   </div>
+                  <p className="mt-2 text-xs text-text-muted">
+                    Open this track and continue her journey.
+                  </p>
                 </Link>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+              ))}
+            </div>
+          </section>
 
-      {/* Features Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-14">
-            <h2 className="text-3xl md:text-4xl font-bold text-text mb-4">
-              Why Learn With Us?
-            </h2>
-            <p className="text-text-muted">
-              Our platform offers unique learning opportunities that combine
-              theory with practical application.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-accent/10 mb-6">
-                <svg
-                  className="w-6 h-6 text-accent"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+          <footer className="mt-10 rounded-2xl border border-border bg-secondary/40 px-5 py-4">
+            <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+              <p className="text-xs text-text-muted">
+                Crafted with care by{" "}
+                <span className="font-semibold text-pink-300">MenteE</span> for
+                his Bestie.
+              </p>
+              <div className="flex items-center gap-3 text-xs">
+                <Link
+                  to="/"
+                  className="text-text-dim transition hover:text-text"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-text mb-3">
-                Hands-On Learning
-              </h3>
-              <p className="text-text-muted">
-                Practice directly in simulated environments that mirror
-                real-world development scenarios.
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-accent/10 mb-6">
-                <svg
-                  className="w-6 h-6 text-accent"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+                  Home
+                </Link>
+                <Link
+                  to="/profile"
+                  className="text-text-dim transition hover:text-text"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M13 10V3L4 14h7v7l9-11h-7z"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-text mb-3">
-                Progressive Difficulty
-              </h3>
-              <p className="text-text-muted">
-                Start with fundamentals and gradually advance to complex topics
-                with structured missions.
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-accent/10 mb-6">
-                <svg
-                  className="w-6 h-6 text-accent"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+                  Profile
+                </Link>
+                <Link
+                  to="/sql"
+                  className="text-text-dim transition hover:text-text"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-                  />
-                </svg>
+                  SQL
+                </Link>
               </div>
-              <h3 className="text-xl font-semibold text-text mb-3">
-                Real-Time Feedback
-              </h3>
-              <p className="text-text-muted">
-                Get instant validation and feedback as you complete missions to
-                accelerate your learning.
-              </p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="mt-auto pt-16 pb-8 px-6 bg-secondary/30 border-t border-border">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="md:col-span-1">
-              <div className="flex items-center space-x-2 mb-4">
-                <div className="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-accent">
-                  <svg
-                    className="w-5 h-5 text-white"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M13 10V3L4 14h7v7l9-11h-7z"
-                    />
-                  </svg>
-                </div>
-                <span className="text-lg font-bold text-text">RunAI Learn</span>
-              </div>
-              <p className="text-text-muted text-sm">
-                Interactive learning platform for mastering engineering skills
-                through hands-on practice.
-              </p>
-            </div>
-
-            <div>
-              <h4 className="text-text font-semibold mb-4">Navigation</h4>
-              <ul className="space-y-2">
-                <li>
-                  <Link
-                    to="/"
-                    className="text-text-muted hover:text-accent text-sm transition-colors"
-                  >
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/profile"
-                    className="text-text-muted hover:text-accent text-sm transition-colors"
-                  >
-                    Profile
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="#technologies"
-                    className="text-text-muted hover:text-accent text-sm transition-colors"
-                  >
-                    Technologies
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="text-text font-semibold mb-4">Resources</h4>
-              <ul className="space-y-2">
-                <li>
-                  <a
-                    href="#"
-                    className="text-text-muted hover:text-accent text-sm transition-colors"
-                  >
-                    Documentation
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-text-muted hover:text-accent text-sm transition-colors"
-                  >
-                    Tutorials
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-text-muted hover:text-accent text-sm transition-colors"
-                  >
-                    Blog
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="text-text font-semibold mb-4">Legal</h4>
-              <ul className="space-y-2">
-                <li>
-                  <a
-                    href="#"
-                    className="text-text-muted hover:text-accent text-sm transition-colors"
-                  >
-                    Privacy Policy
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-text-muted hover:text-accent text-sm transition-colors"
-                  >
-                    Terms of Service
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-text-muted hover:text-accent text-sm transition-colors"
-                  >
-                    Cookie Policy
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="border-t border-border mt-12 pt-8 text-center text-text-muted text-sm">
-            <p>
-              © {new Date().getFullYear()} RunAI Learn. All rights reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
+          </footer>
+        </main>
+      </div>
     </div>
   );
 }
