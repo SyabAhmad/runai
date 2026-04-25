@@ -1,0 +1,11 @@
+{
+  "mission_04": [
+    "Call model.train() at the start of the epoch.",
+    "Loop through dataloader to get inputs and labels.",
+    "Call optimizer.zero_grad() before each forward pass.",
+    "Get predictions: outputs = model(inputs).",
+    "Compute loss = criterion(outputs, labels).",
+    "Call loss.backward() for backpropagation.",
+    "Call optimizer.step() to update weights."
+  ]
+}

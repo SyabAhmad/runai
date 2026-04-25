@@ -1,0 +1,3 @@
+{
+  "mission_06": "Convolutional layers are the backbone of computer vision. A Conv2d extracts spatial features, BatchNorm stabilizes training by normalizing activations, and ReLU introduces non-linearity. Stack them in an nn.Sequential block — the standard building unit of modern CNNs like ResNet and VGG."
+}

@@ -1,0 +1,3 @@
+{
+  "mission_09": "## What You Will Learn\n\n**GPUs** can accelerate training by 10-100x compared to CPUs. Writing device-agnostic code ensures your model runs on GPU when available and falls back to CPU when not.\n\n### Key Concepts\n- **torch.cuda.is_available()**: Checks if a CUDA-capable GPU is present.\n- **torch.device()**: Creates a device object ('cuda' or 'cpu'). Pass this device to tensors and models.\n- **model.to(device)**: Moves all model parameters to the specified device.\n- **Device Agnostic Code**: Writing code that works on both CPU and GPU without modification.\n\n### Why This Matters\nTraining a ResNet-50 on CPU could take weeks. On GPU, it takes hours. Always write device-agnostic code for portability."
+}

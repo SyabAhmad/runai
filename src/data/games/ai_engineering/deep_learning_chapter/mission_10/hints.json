@@ -1,0 +1,10 @@
+{
+  "mission_10": [
+    "In save_checkpoint, create a dict with model.state_dict() and optimizer.state_dict().",
+    "Use torch.save(checkpoint, filepath) to persist.",
+    "In load_checkpoint, use torch.load(filepath) to restore.",
+    "Restore model with model.load_state_dict(checkpoint['model_state']).",
+    "Restore optimizer with optimizer.load_state_dict(checkpoint['optimizer_state']).",
+    "Return checkpoint['epoch'] to know where training resumed."
+  ]
+}

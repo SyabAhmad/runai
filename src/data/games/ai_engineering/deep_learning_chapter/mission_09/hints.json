@@ -1,0 +1,8 @@
+{
+  "mission_09": [
+    "Check GPU with torch.cuda.is_available().",
+    "Create device = torch.device('cuda' if available else 'cpu').",
+    "Move model with model = model.to(device).",
+    "Return device and model as a tuple."
+  ]
+}

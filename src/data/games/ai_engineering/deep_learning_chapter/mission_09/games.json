@@ -1,0 +1,40 @@
+{
+  "title": "Move Model to GPU",
+  "initialState": {
+    "content": "import torch\n\ndef setup_device_and_model(model):\n    \"\"\"\n    Check if CUDA is available.\n    If yes, move model to GPU and return (device, model).\n    If no, return CPU device and model unchanged.\n    \"\"\"\n    # TODO: Check cuda availability and move model to appropriate device\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": ["must_include:cuda", "must_include:device", "must_include:to"],
+    "tests": [
+      {
+        "type": "must_match",
+        "pattern": "torch\\.cuda\\.is_available\\s*\\(",
+        "message": "Use torch.cuda.is_available() to check for GPU."
+      },
+      {
+        "type": "must_match",
+        "pattern": "torch\\.device\\s*\\(",
+        "message": "Create a torch.device object."
+      },
+      {
+        "type": "must_match",
+        "pattern": "['\"]cuda['\"]",
+        "message": "Specify 'cuda' as the device when GPU is available."
+      },
+      {
+        "type": "must_match",
+        "pattern": "model\\.to\\s*\\(",
+        "message": "Move the model to the device with model.to(device)."
+      },
+      {
+        "type": "must_match",
+        "pattern": "\\breturn\\b",
+        "message": "Return both the device and the model."
+      }
+    ]
+  },
+  "id": "mission_09",
+  "type": "ai_code",
+  "xpReward": 150
+}

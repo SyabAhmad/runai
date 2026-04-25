@@ -1,0 +1,3 @@
+{
+  "mission_10": "Training deep models can take days. Checkpoints let you resume training after crashes, save the best model during training, and deploy trained models to production. A proper checkpoint saves not just model weights but also optimizer state and epoch number — everything needed to resume exactly where you left off."
+}

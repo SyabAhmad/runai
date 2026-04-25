@@ -1,0 +1,3 @@
+{
+  "mission_01": "Tensors are the fundamental data structure in PyTorch. Unlike numpy arrays, tensors can run on GPUs and support automatic differentiation. Learn to create a PyTorch tensor from raw data with the correct data type, which is essential for numerical stability in deep learning."
+}

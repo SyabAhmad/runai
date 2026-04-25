@@ -1,0 +1,3 @@
+{
+  "mission_04": "The training loop is the heart of deep learning. Every epoch follows the same 5-step ritual: set train mode, zero old gradients, forward pass to get predictions, compute loss and backpropagate, then update weights. Master this pattern — it is identical across 99% of PyTorch projects."
+}

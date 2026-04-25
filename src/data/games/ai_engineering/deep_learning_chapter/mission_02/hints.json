@@ -1,0 +1,10 @@
+{
+  "mission_02": [
+    "Inherit from nn.Module: class NeuralNetwork(nn.Module).",
+    "Call super().__init__() in the constructor.",
+    "Define self.fc1 = nn.Linear(input_size, 64) in __init__.",
+    "Define self.fc2 = nn.Linear(64, num_classes) as the output layer.",
+    "Define self.relu = nn.ReLU() for the activation.",
+    "In forward(), pass x through fc1, then relu, then fc2."
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "title": "Save and Load PyTorch Checkpoint",
+  "initialState": {
+    "content": "import torch\n\ndef save_checkpoint(model, optimizer, epoch, filepath):\n    \"\"\"\n    Save model weights, optimizer state, and current epoch\n    as a PyTorch checkpoint dictionary.\n    Use torch.save() with keys: 'model_state', 'optimizer_state', 'epoch'.\n    \"\"\"\n    # TODO: Create checkpoint dict and save with torch.save\n    pass\n\ndef load_checkpoint(filepath, model, optimizer):\n    \"\"\"\n    Load checkpoint from filepath and restore model and optimizer states.\n    Return the epoch number from the checkpoint.\n    \"\"\"\n    # TODO: Load checkpoint and restore states\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:torch.save",
+      "must_include:torch.load",
+      "must_include:state_dict",
+      "must_include:load_state_dict"
+    ],
+    "tests": [
+      {
+        "type": "must_match",
+        "pattern": "torch\\.save\\s*\\(",
+        "message": "Use torch.save() to persist the checkpoint."
+      },
+      {
+        "type": "must_match",
+        "pattern": "torch\\.load\\s*\\(",
+        "message": "Use torch.load() to restore the checkpoint."
+      },
+      {
+        "type": "must_match",
+        "pattern": "model_state",
+        "message": "Include 'model_state' key in the checkpoint dictionary."
+      },
+      {
+        "type": "must_match",
+        "pattern": "optimizer_state",
+        "message": "Include 'optimizer_state' key in the checkpoint dictionary."
+      },
+      {
+        "type": "must_match",
+        "pattern": "model\\.load_state_dict\\s*\\(",
+        "message": "Restore model weights with model.load_state_dict()."
+      },
+      {
+        "type": "must_match",
+        "pattern": "optimizer\\.load_state_dict\\s*\\(",
+        "message": "Restore optimizer state with optimizer.load_state_dict()."
+      },
+      {
+        "type": "must_match",
+        "pattern": "\\breturn\\b",
+        "message": "Return the epoch number from the checkpoint."
+      }
+    ]
+  },
+  "id": "mission_10",
+  "type": "ai_code",
+  "xpReward": 250
+}

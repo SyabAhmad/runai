@@ -1,0 +1,9 @@
+{
+  "mission_07": [
+    "Use nn.Linear(input_size, hidden_size) for the first layer.",
+    "Add nn.ReLU() after the first Linear.",
+    "Insert nn.Dropout(dropout_rate) before the final layer.",
+    "Use nn.Linear(hidden_size, num_classes) as the output layer.",
+    "Wrap all layers in nn.Sequential() and return it."
+  ]
+}

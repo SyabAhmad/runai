@@ -1,0 +1,49 @@
+{
+  "title": "Evaluation Loop with No Grad",
+  "initialState": {
+    "content": "import torch\n\ndef evaluate_model(model, dataloader, criterion, device):\n    \"\"\"\n    Evaluate model on validation/test data.\n    Set model to eval mode, disable gradient computation,\n    compute total loss and accuracy.\n    Return average loss and accuracy as a tuple.\n    \"\"\"\n    # TODO: Implement evaluation loop with torch.no_grad()\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:eval",
+      "must_include:no_grad",
+      "must_include:accuracy"
+    ],
+    "tests": [
+      {
+        "type": "must_match",
+        "pattern": "model\\.eval\\s*\\(",
+        "message": "Call model.eval() to disable dropout and use running stats for batch norm."
+      },
+      {
+        "type": "must_match",
+        "pattern": "torch\\.no_grad\\s*\\(",
+        "message": "Use torch.no_grad() context manager to disable gradient tracking during evaluation."
+      },
+      {
+        "type": "must_match",
+        "pattern": "torch\\.max\\s*\\(",
+        "message": "Use torch.max() to get predicted class labels from logits."
+      },
+      {
+        "type": "must_match",
+        "pattern": "\\(predicted\\s*==\\s*labels\\)",
+        "message": "Compare predictions with labels to compute correct predictions."
+      },
+      {
+        "type": "must_match",
+        "pattern": "\\.sum\\s*\\(",
+        "message": "Sum the correct predictions to get total accuracy count."
+      },
+      {
+        "type": "must_match",
+        "pattern": "\\breturn\\b",
+        "message": "Return both average loss and accuracy as a tuple."
+      }
+    ]
+  },
+  "id": "mission_05",
+  "type": "ai_code",
+  "xpReward": 200
+}

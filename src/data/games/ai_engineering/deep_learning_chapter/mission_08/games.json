@@ -1,0 +1,40 @@
+{
+  "title": "Learning Rate Scheduler",
+  "initialState": {
+    "content": "import torch.optim as optim\nfrom torch.optim.lr_scheduler import StepLR\n\ndef create_scheduler(optimizer, step_size=7, gamma=0.1):\n    \"\"\"\n    Create a StepLR learning rate scheduler.\n    Decay LR by gamma every step_size epochs.\n    Return the scheduler object.\n    \"\"\"\n    # TODO: Instantiate StepLR with optimizer, step_size, and gamma\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": ["must_include:StepLR", "must_include:scheduler"],
+    "tests": [
+      {
+        "type": "must_match",
+        "pattern": "StepLR\\s*\\(",
+        "message": "Instantiate StepLR() with the required parameters."
+      },
+      {
+        "type": "must_match",
+        "pattern": "optimizer",
+        "message": "Pass the optimizer to the scheduler."
+      },
+      {
+        "type": "must_match",
+        "pattern": "step_size",
+        "message": "Pass step_size parameter to StepLR."
+      },
+      {
+        "type": "must_match",
+        "pattern": "gamma",
+        "message": "Pass gamma parameter to StepLR for decay factor."
+      },
+      {
+        "type": "must_match",
+        "pattern": "\\breturn\\b",
+        "message": "Return the scheduler object."
+      }
+    ]
+  },
+  "id": "mission_08",
+  "type": "ai_code",
+  "xpReward": 200
+}

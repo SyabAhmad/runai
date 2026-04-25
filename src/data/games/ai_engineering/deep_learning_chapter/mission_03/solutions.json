@@ -1,0 +1,3 @@
+{
+  "mission_03": "import torch\nimport torch.nn as nn\nimport torch.optim as optim\n\ndef setup_training(model, learning_rate=0.001):\n    criterion = nn.CrossEntropyLoss()\n    optimizer = optim.Adam(model.parameters(), lr=learning_rate)\n    return criterion, optimizer"
+}

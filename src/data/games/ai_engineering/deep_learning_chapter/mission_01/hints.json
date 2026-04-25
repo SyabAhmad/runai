@@ -1,0 +1,8 @@
+{
+  "mission_01": [
+    "Import torch at the top of your file.",
+    "Use torch.tensor(data) to convert the input to a tensor.",
+    "Pass dtype=torch.float32 to ensure 32-bit floating point precision.",
+    "Return the created tensor."
+  ]
+}

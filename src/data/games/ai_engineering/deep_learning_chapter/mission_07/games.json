@@ -1,0 +1,40 @@
+{
+  "title": "Dropout for Regularization",
+  "initialState": {
+    "content": "import torch.nn as nn\n\ndef build_classifier(input_size, hidden_size, num_classes, dropout_rate=0.5):\n    \"\"\"\n    Build a classifier with:\n    - Linear(input_size, hidden_size)\n    - ReLU\n    - Dropout(dropout_rate)\n    - Linear(hidden_size, num_classes)\n    Return as nn.Sequential.\n    \"\"\"\n    # TODO: Stack layers with Dropout in nn.Sequential\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:Linear",
+      "must_include:ReLU",
+      "must_include:Dropout",
+      "must_include:Sequential"
+    ],
+    "tests": [
+      {
+        "type": "must_match",
+        "pattern": "nn\\.Dropout\\s*\\(",
+        "message": "Use nn.Dropout() to add regularization."
+      },
+      {
+        "type": "must_match",
+        "pattern": "dropout_rate",
+        "message": "Use the dropout_rate parameter when creating the Dropout layer."
+      },
+      {
+        "type": "must_match",
+        "pattern": "nn\\.Sequential\\s*\\(",
+        "message": "Wrap the layers in nn.Sequential()."
+      },
+      {
+        "type": "must_match",
+        "pattern": "nn\\.Linear\\s*\\(",
+        "message": "Use nn.Linear() for fully connected layers."
+      }
+    ]
+  },
+  "id": "mission_07",
+  "type": "ai_code",
+  "xpReward": 200
+}

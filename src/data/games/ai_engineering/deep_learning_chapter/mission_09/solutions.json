@@ -1,0 +1,3 @@
+{
+  "mission_09": "import torch\n\ndef setup_device_and_model(model):\n    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\n    model = model.to(device)\n    return device, model"
+}

@@ -1,0 +1,54 @@
+{
+  "title": "Define a Neural Network",
+  "initialState": {
+    "content": "import torch\nimport torch.nn as nn\n\nclass NeuralNetwork(nn.Module):\n    \"\"\"\n    Define a 2-layer neural network:\n    - Layer 1: Linear(input_size, 64) + ReLU\n    - Layer 2: Linear(64, num_classes)\n    Implement __init__ and forward methods.\n    \"\"\"\n    # TODO: Define layers in __init__ and implement forward pass\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:nn.Module",
+      "must_include:Linear",
+      "must_include:ReLU"
+    ],
+    "tests": [
+      {
+        "type": "must_match",
+        "pattern": "def\\s+__init__\\s*\\(self",
+        "message": "Define __init__(self, input_size, num_classes) to initialize layers."
+      },
+      {
+        "type": "must_match",
+        "pattern": "def\\s+forward\\s*\\(self",
+        "message": "Implement the forward(self, x) method."
+      },
+      {
+        "type": "must_match",
+        "pattern": "nn\\.Linear\\s*\\(",
+        "message": "Use nn.Linear() for fully connected layers."
+      },
+      {
+        "type": "must_match",
+        "pattern": "nn\\.ReLU\\s*\\(",
+        "message": "Use nn.ReLU() as the activation function."
+      },
+      {
+        "type": "must_match",
+        "pattern": "self\\.fc1",
+        "message": "Define self.fc1 as the first linear layer."
+      },
+      {
+        "type": "must_match",
+        "pattern": "self\\.fc2",
+        "message": "Define self.fc2 as the output linear layer."
+      },
+      {
+        "type": "must_match",
+        "pattern": "self\\.relu",
+        "message": "Define self.relu as the ReLU activation."
+      }
+    ]
+  },
+  "id": "mission_02",
+  "type": "ai_code",
+  "xpReward": 150
+}

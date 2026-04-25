@@ -1,0 +1,3 @@
+{
+  "mission_03": "Training a neural network requires two things: a loss function to measure error and an optimizer to update weights. CrossEntropyLoss is the standard for multi-class classification, and Adam is the most widely used optimizer due to its adaptive learning rates. Learn to wire these together with your model."
+}

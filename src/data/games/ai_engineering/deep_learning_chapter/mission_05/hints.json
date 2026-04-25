@@ -1,0 +1,10 @@
+{
+  "mission_05": [
+    "Call model.eval() before the loop.",
+    "Wrap evaluation logic in with torch.no_grad():.",
+    "Use torch.max(outputs.data, 1) to get predicted classes.",
+    "Compare predictions and labels: (predicted == labels).sum().item().",
+    "Compute accuracy: 100 * correct / total.",
+    "Return average loss and accuracy."
+  ]
+}

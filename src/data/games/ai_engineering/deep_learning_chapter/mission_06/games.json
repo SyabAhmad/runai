@@ -1,0 +1,50 @@
+{
+  "title": "Convolutional Neural Network Layer",
+  "initialState": {
+    "content": "import torch.nn as nn\n\ndef create_conv_block(in_channels, out_channels):\n    \"\"\"\n    Create a CNN block with:\n    - Conv2d(in_channels, out_channels, kernel_size=3, padding=1)\n    - BatchNorm2d(out_channels)\n    - ReLU activation\n    Return as an nn.Sequential.\n    \"\"\"\n    # TODO: Stack Conv2d, BatchNorm2d, and ReLU in nn.Sequential\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:Conv2d",
+      "must_include:BatchNorm2d",
+      "must_include:ReLU",
+      "must_include:Sequential"
+    ],
+    "tests": [
+      {
+        "type": "must_match",
+        "pattern": "nn\\.Conv2d\\s*\\(",
+        "message": "Use nn.Conv2d() for the convolutional layer."
+      },
+      {
+        "type": "must_match",
+        "pattern": "kernel_size\\s*=\\s*3",
+        "message": "Set kernel_size=3 for the convolution."
+      },
+      {
+        "type": "must_match",
+        "pattern": "padding\\s*=\\s*1",
+        "message": "Set padding=1 to preserve spatial dimensions."
+      },
+      {
+        "type": "must_match",
+        "pattern": "nn\\.BatchNorm2d\\s*\\(",
+        "message": "Use nn.BatchNorm2d() for batch normalization."
+      },
+      {
+        "type": "must_match",
+        "pattern": "nn\\.ReLU\\s*\\(",
+        "message": "Use nn.ReLU() as the activation function."
+      },
+      {
+        "type": "must_match",
+        "pattern": "nn\\.Sequential\\s*\\(",
+        "message": "Wrap the layers in nn.Sequential()."
+      }
+    ]
+  },
+  "id": "mission_06",
+  "type": "ai_code",
+  "xpReward": 200
+}

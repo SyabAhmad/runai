@@ -1,0 +1,9 @@
+{
+  "mission_08": [
+    "Import StepLR from torch.optim.lr_scheduler.",
+    "Create scheduler = StepLR(optimizer, step_size=step_size, gamma=gamma).",
+    "step_size controls how often LR decays.",
+    "gamma controls the decay factor (multiply LR by gamma).",
+    "Return the scheduler object."
+  ]
+}

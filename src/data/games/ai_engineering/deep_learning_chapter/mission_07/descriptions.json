@@ -1,0 +1,3 @@
+{
+  "mission_07": "Dropout randomly zeroes out neurons during training, preventing overfitting by forcing the network to learn redundant representations. It is one of the simplest and most effective regularization techniques in deep learning. Build a classifier that uses Dropout between the hidden layer and the output."
+}

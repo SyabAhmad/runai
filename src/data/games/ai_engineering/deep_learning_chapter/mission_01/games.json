@@ -1,0 +1,30 @@
+{
+  "title": "Create a PyTorch Tensor",
+  "initialState": {
+    "content": "import torch\n\ndef create_tensor(data):\n    \"\"\"\n    Convert a Python list or numpy array into a PyTorch tensor.\n    The tensor should have dtype=torch.float32.\n    Return the tensor.\n    \"\"\"\n    # TODO: Convert data to torch.tensor with float32 dtype\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": ["must_include:torch", "must_include:tensor"],
+    "tests": [
+      {
+        "type": "must_match",
+        "pattern": "\\breturn\\b",
+        "message": "Your function must return the created tensor."
+      },
+      {
+        "type": "must_match",
+        "pattern": "torch\\.tensor\\s*\\(",
+        "message": "Use torch.tensor() to create the tensor."
+      },
+      {
+        "type": "must_match",
+        "pattern": "dtype\\s*=\\s*torch\\.float32",
+        "message": "Set dtype=torch.float32 for the tensor."
+      }
+    ]
+  },
+  "id": "mission_01",
+  "type": "ai_code",
+  "xpReward": 100
+}

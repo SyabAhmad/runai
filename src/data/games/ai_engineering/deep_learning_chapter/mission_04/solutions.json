@@ -1,0 +1,3 @@
+{
+  "mission_04": "def train_epoch(model, dataloader, criterion, optimizer, device):\n    model.train()\n    total_loss = 0\n    for inputs, labels in dataloader:\n        inputs, labels = inputs.to(device), labels.to(device)\n        optimizer.zero_grad()\n        outputs = model(inputs)\n        loss = criterion(outputs, labels)\n        loss.backward()\n        optimizer.step()\n        total_loss += loss.item()\n    return total_loss / len(dataloader)"
+}

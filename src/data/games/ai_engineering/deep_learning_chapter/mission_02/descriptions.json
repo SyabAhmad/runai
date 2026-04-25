@@ -1,0 +1,3 @@
+{
+  "mission_02": "In PyTorch, every neural network is defined as a class inheriting from nn.Module. This is the standard pattern used across all deep learning projects. You will define a simple 2-layer network with ReLU activation, implementing both the constructor (__init__) and the forward pass. This mission teaches the core architecture pattern of PyTorch."
+}

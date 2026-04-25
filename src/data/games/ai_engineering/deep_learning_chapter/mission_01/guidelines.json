@@ -1,0 +1,3 @@
+{
+  "mission_01": "## What You Will Learn\n\n**Tensors** are the fundamental data structure in PyTorch. Think of them as numpy arrays on steroids — they can run on GPUs and support automatic differentiation (autograd).\n\n### Key Concepts\n- **torch.tensor()**: Converts Python lists or numpy arrays into PyTorch tensors.\n- **dtype=torch.float32**: Sets the data type to 32-bit floating point, which is the standard for deep learning because it balances precision and memory usage.\n- **GPU Support**: Unlike numpy, PyTorch tensors can be moved to GPU with `.to('cuda')` for massive speedups.\n\n### Why This Matters\nEvery neural network input, weight, and output is a tensor. Understanding tensor creation is the first step toward building any PyTorch model."
+}

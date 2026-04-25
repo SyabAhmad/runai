@@ -1,0 +1,3 @@
+{
+  "mission_09": "GPUs can accelerate training by 10-100x compared to CPUs. The standard pattern is to check cuda availability, create a device, and move both model and data to it. This mission teaches the device-agnostic pattern used in all production PyTorch code."
+}

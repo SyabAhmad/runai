@@ -1,0 +1,3 @@
+{
+  "mission_07": "import torch.nn as nn\n\ndef build_classifier(input_size, hidden_size, num_classes, dropout_rate=0.5):\n    return nn.Sequential(\n        nn.Linear(input_size, hidden_size),\n        nn.ReLU(),\n        nn.Dropout(dropout_rate),\n        nn.Linear(hidden_size, num_classes)\n    )"
+}

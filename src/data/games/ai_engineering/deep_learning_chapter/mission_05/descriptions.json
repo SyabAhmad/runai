@@ -1,0 +1,3 @@
+{
+  "mission_05": "Evaluation is faster and more memory-efficient without gradients. Use model.eval() and torch.no_grad() to disable dropout, batch norm updates, and gradient tracking. Then compute predictions, compare with labels, and return average loss plus accuracy percentage."
+}

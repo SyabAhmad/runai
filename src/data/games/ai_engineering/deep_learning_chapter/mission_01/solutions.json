@@ -1,0 +1,3 @@
+{
+  "mission_01": "import torch\n\ndef create_tensor(data):\n    return torch.tensor(data, dtype=torch.float32)"
+}

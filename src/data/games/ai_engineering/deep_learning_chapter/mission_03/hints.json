@@ -1,0 +1,8 @@
+{
+  "mission_03": [
+    "Create criterion = nn.CrossEntropyLoss().",
+    "Create optimizer = optim.Adam(model.parameters(), lr=learning_rate).",
+    "Return both as a tuple: return criterion, optimizer.",
+    "The model.parameters() call tells the optimizer which weights to update."
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "mission_06": [
+    "Use nn.Conv2d(in_channels, out_channels, kernel_size=3, padding=1).",
+    "Follow with nn.BatchNorm2d(out_channels).",
+    "Add nn.ReLU() as the activation.",
+    "Wrap all three in nn.Sequential(...).",
+    "Return the Sequential block."
+  ]
+}

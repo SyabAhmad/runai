@@ -1,0 +1,50 @@
+{
+  "title": "Training Loop",
+  "initialState": {
+    "content": "def train_epoch(model, dataloader, criterion, optimizer, device):\n    \"\"\"\n    Run one epoch of training.\n    Set model to train mode, iterate batches, zero gradients,\n    forward pass, compute loss, backward pass, update weights.\n    Return the average loss for the epoch.\n    \"\"\"\n    # TODO: Implement the full training loop\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:train",
+      "must_include:zero_grad",
+      "must_include:backward",
+      "must_include:step"
+    ],
+    "tests": [
+      {
+        "type": "must_match",
+        "pattern": "model\\.train\\s*\\(",
+        "message": "Call model.train() to set training mode (enables dropout, batch norm updates)."
+      },
+      {
+        "type": "must_match",
+        "pattern": "optimizer\\.zero_grad\\s*\\(",
+        "message": "Call optimizer.zero_grad() to clear gradients from the previous step."
+      },
+      {
+        "type": "must_match",
+        "pattern": "outputs\\s*=\\s*model\\s*\\(",
+        "message": "Pass inputs through the model to get predictions."
+      },
+      {
+        "type": "must_match",
+        "pattern": "criterion\\s*\\(",
+        "message": "Compute loss using the criterion (loss function)."
+      },
+      {
+        "type": "must_match",
+        "pattern": "loss\\.backward\\s*\\(",
+        "message": "Call loss.backward() to compute gradients via backpropagation."
+      },
+      {
+        "type": "must_match",
+        "pattern": "optimizer\\.step\\s*\\(",
+        "message": "Call optimizer.step() to update model weights."
+      }
+    ]
+  },
+  "id": "mission_04",
+  "type": "ai_code",
+  "xpReward": 200
+}

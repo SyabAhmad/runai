@@ -1,0 +1,44 @@
+{
+  "title": "Set Up Loss and Optimizer",
+  "initialState": {
+    "content": "import torch\nimport torch.nn as nn\nimport torch.optim as optim\n\ndef setup_training(model, learning_rate=0.001):\n    \"\"\"\n    Set up CrossEntropyLoss and Adam optimizer for training.\n    Return a tuple: (criterion, optimizer).\n    \"\"\"\n    # TODO: Create CrossEntropyLoss and Adam optimizer\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:CrossEntropyLoss",
+      "must_include:Adam",
+      "must_include:optim"
+    ],
+    "tests": [
+      {
+        "type": "must_match",
+        "pattern": "\\breturn\\b",
+        "message": "Return both criterion and optimizer as a tuple."
+      },
+      {
+        "type": "must_match",
+        "pattern": "nn\\.CrossEntropyLoss\\s*\\(",
+        "message": "Use nn.CrossEntropyLoss() as the loss function."
+      },
+      {
+        "type": "must_match",
+        "pattern": "optim\\.Adam\\s*\\(",
+        "message": "Use optim.Adam() as the optimizer."
+      },
+      {
+        "type": "must_match",
+        "pattern": "model\\.parameters\\s*\\(",
+        "message": "Pass model.parameters() to the optimizer."
+      },
+      {
+        "type": "must_match",
+        "pattern": "lr\\s*=\\s*learning_rate",
+        "message": "Pass lr=learning_rate to the Adam optimizer."
+      }
+    ]
+  },
+  "id": "mission_03",
+  "type": "ai_code",
+  "xpReward": 150
+}
