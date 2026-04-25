@@ -1,3 +1,4 @@
-﻿{
-    "mission_07":  "Classify salaries into bands for dashboard display. Return name, department, salary, and salary_band where High \u003e= 90000, Medium \u003e= 60000, otherwise Low."
+
+{
+    "mission_07":  "Classify salaries into bands for dashboard display. Return name, department, salary, and salary_band where High >= 90000, Medium >= 60000, otherwise Low."
 }

@@ -1,3 +1,3 @@
-﻿{
+{
     "mission_04":  "Audit payment coverage by listing all orders with payment status. Return order_id and payment_id (if present), including unpaid orders."
 }

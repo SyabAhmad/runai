@@ -1,18 +1,18 @@
-﻿{
-    "title":  "SQL Mission 5: Department Headcount",
-    "initialState":  {
-                         "content":  "-- Mission 5 Guidelines\n-- Group by department\n-- Count employees per department\n-- Keep groups with count \u003e= 3\n-- Sort by count descending\n\nSELECT\n  -- TODO\nFROM employees\nGROUP BY\n  -- TODO\nHAVING\n  -- TODO\nORDER BY\n  -- TODO\n;"
-                     },
-    "validation":  {
-                       "type":  "sql",
-                       "rules":  [
-                                     "must_include:select department, count(*) as total",
-                                     "must_include:from employees",
-                                     "must_include:group by department",
-                                     "must_include:having count(*) \u003e= 3",
-                                     "must_include:order by total desc"
-                                 ]
-                   },
-    "id":  "mission_05",
-    "type":  "sql_debug"
+{
+  "title": "SQL Mission 5: Department Headcount",
+  "initialState": {
+    "content": "-- Mission 5 Guidelines\n-- Group by department\n-- Count employees per department\n-- Keep groups with count \u003e= 3\n-- Sort by count descending\n\nSELECT\n  -- TODO\nFROM employees\nGROUP BY\n  -- TODO\nHAVING\n  -- TODO\nORDER BY\n  -- TODO\n;"
+  },
+  "validation": {
+    "type": "sql",
+    "rules": [
+      "must_include:select department, count(*) as total",
+      "must_include:from employees",
+      "must_include:group by department",
+      "must_include:having count(*) \u003e= 3",
+      "must_include:order by total desc"
+    ]
+  },
+  "id": "mission_05",
+  "type": "sql_debug"
 }

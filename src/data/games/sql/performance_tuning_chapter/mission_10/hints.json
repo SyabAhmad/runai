@@ -1,4 +1,5 @@
-﻿{
+
+{
     "mission_10":  [
                        "Aggregate first, rank second.",
                        "Use both RANK and DENSE_RANK window functions.",

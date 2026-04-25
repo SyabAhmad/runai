@@ -1,4 +1,4 @@
-﻿{
+{
     "title":  "SQL Mission 8: Pagination With Keyset Filter",
     "initialState":  {
                          "content":  "-- Mission 8 Guidelines\n-- Inputs:\n--   cursor_date = \u00272025-10-01\u0027\n--   cursor_order_id = 4500\n-- Return next 20 older rows\n-- Sort by order_date DESC, order_id DESC\n\nSELECT\n  order_id,\n  order_date,\n  total_amount\nFROM orders\nWHERE\n  -- TODO keyset condition\nORDER BY order_date DESC, order_id DESC\nLIMIT 20;"

@@ -1,3 +1,4 @@
-﻿{
+
+{
     "mission_08":  "Use a CTE to compute total payroll per department, then return departments where payroll is above 300000, sorted highest first."
 }

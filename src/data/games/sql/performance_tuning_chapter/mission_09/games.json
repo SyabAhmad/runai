@@ -1,4 +1,4 @@
-﻿{
+{
     "title":  "SQL Mission 9: Conditional Aggregation In One Pass",
     "initialState":  {
                          "content":  "-- Mission 9 Guidelines\n-- Single grouped output for 2025\n-- Use SUM(CASE WHEN ...) for status-specific counts\n\nSELECT\n  COUNT(*) AS total_orders,\n  -- TODO completed count\n  -- TODO cancelled count\nFROM orders\nWHERE\n  -- TODO date range 2025\n;"

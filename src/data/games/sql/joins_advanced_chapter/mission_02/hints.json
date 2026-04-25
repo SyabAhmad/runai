@@ -1,4 +1,5 @@
-﻿{
+
+{
     "mission_02":  [
                        "Use LEFT JOIN, not INNER JOIN.",
                        "Missing matches appear as NULL on order columns.",

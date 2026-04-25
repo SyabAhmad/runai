@@ -1,4 +1,5 @@
-﻿{
+
+{
     "mission_08":  [
                        "CTE should aggregate from employees.",
                        "Use SUM(salary) and GROUP BY department.",

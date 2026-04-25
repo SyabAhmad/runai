@@ -1,4 +1,4 @@
-﻿{
+{
     "mission_06":  [
                        "Use ROW_NUMBER partitioned by customer_id.",
                        "Sort inside window by newest date first.",

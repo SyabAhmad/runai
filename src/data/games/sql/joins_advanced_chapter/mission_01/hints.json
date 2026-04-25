@@ -1,4 +1,5 @@
-﻿{
+
+{
     "mission_01":  [
                        "Alias customers as c and orders as o.",
                        "Join on customer_id.",

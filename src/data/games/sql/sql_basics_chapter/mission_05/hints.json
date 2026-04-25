@@ -1,4 +1,5 @@
-﻿{
+
+{
     "mission_05":  [
                        "Use COUNT(*) with GROUP BY department.",
                        "HAVING filters aggregated groups.",

@@ -1,7 +1,7 @@
-﻿{
-    "mission_04":  [
-                       "Sort before limiting for correct top-N.",
-                       "Keep selected columns minimal.",
-                       "Use LIMIT 20."
-                   ]
+{
+  "mission_04": [
+    "Sort before limiting for correct top-N.",
+    "Keep selected columns minimal.",
+    "Use LIMIT 20."
+  ]
 }

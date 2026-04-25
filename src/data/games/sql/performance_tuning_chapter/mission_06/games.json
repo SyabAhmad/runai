@@ -1,4 +1,4 @@
-﻿{
+{
     "title":  "SQL Mission 6: Latest 3 Orders Per Customer",
     "initialState":  {
                          "content":  "-- Mission 6 Guidelines\n-- Rank rows per customer by order_date desc\n-- Keep ranks \u003c= 3\n\nWITH ranked_orders AS (\n  SELECT\n    customer_id,\n    order_id,\n    order_date,\n    -- TODO row_number\n  FROM orders\n)\nSELECT\n  customer_id,\n  order_id,\n  order_date\nFROM ranked_orders\nWHERE\n  -- TODO\nORDER BY customer_id, order_date DESC;"

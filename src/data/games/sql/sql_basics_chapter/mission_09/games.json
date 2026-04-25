@@ -1,16 +1,16 @@
-﻿{
-    "title":  "SQL Mission 9: Top 3 Salaries Per Department",
-    "initialState":  {
-                         "content":  "-- Mission 9 Guidelines\n-- Use ROW_NUMBER partitioned by department\n-- Rank by salary descending inside each department\n-- Keep only top 3 ranks\n\nWITH ranked AS (\n  SELECT\n    department,\n    name,\n    salary,\n    -- TODO ranking expression\n  FROM employees\n)\nSELECT\n  -- TODO\nFROM ranked\nWHERE\n  -- TODO\nORDER BY department, salary DESC;"
-                     },
-    "validation":  {
-                       "type":  "sql",
-                       "rules":  [
-                                     "must_include:row_number() over (partition by department order by salary desc) as rn",
-                                     "must_include:where rn \u003c= 3",
-                                     "must_include:select department, name, salary, rn"
-                                 ]
-                   },
-    "id":  "mission_09",
-    "type":  "sql_debug"
+{
+  "title": "SQL Mission 9: Top 3 Salaries Per Department",
+  "initialState": {
+    "content": "-- Mission 9 Guidelines\n-- Use ROW_NUMBER partitioned by department\n-- Rank by salary descending inside each department\n-- Keep only top 3 ranks\n\nWITH ranked AS (\n  SELECT\n    department,\n    name,\n    salary,\n    -- TODO ranking expression\n  FROM employees\n)\nSELECT\n  -- TODO\nFROM ranked\nWHERE\n  -- TODO\nORDER BY department, salary DESC;"
+  },
+  "validation": {
+    "type": "sql",
+    "rules": [
+      "must_include:row_number() over (partition by department order by salary desc) as rn",
+      "must_include:where rn \u003c= 3",
+      "must_include:select department, name, salary, rn"
+    ]
+  },
+  "id": "mission_09",
+  "type": "sql_debug"
 }

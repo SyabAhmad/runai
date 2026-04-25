@@ -1,4 +1,4 @@
-﻿{
+{
     "title":  "SQL Mission 3: Employee-Manager Map (Self Join)",
     "initialState":  {
                          "content":  "-- Mission 3 Guidelines\n-- Table: employees(employee_id, name, manager_id, department)\n-- Self join employees e -\u003e manager m\n-- e.manager_id matches m.employee_id\n\nSELECT\n  -- TODO aliases\nFROM employees e\nLEFT JOIN employees m\n  ON -- TODO\nORDER BY e.name;"

@@ -1,0 +1,4 @@
+
+{
+  "mission_03": "## What You Will Learn\n\nThis mission introduces the self join, where a table is joined to itself using different aliases. You will map each employee to their manager by matching the manager_id in one alias to the employee_id in another alias.\n\n### Key Concepts\n- **Self join**: Joining a table to itself to model hierarchical or recursive relationships.\n- **Aliases (e and m)**: Distinguish the two logical copies of the same table.\n- **LEFT JOIN self join**: Ensures top-level employees with no manager still appear.\n- **Hierarchical data**: Employee-manager, category-subcategory, and bill-of-materials all use this pattern.\n\n### Why This Matters\nSelf joins are essential for organizational charts, threaded comment systems, nested product categories, and any dataset that stores parent-child relationships within a single table."
+}

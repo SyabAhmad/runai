@@ -1,7 +1,7 @@
-﻿{
-    "mission_03":  [
-                       "EXISTS checks presence, not aggregation.",
-                       "Correlate order row to current customer row.",
-                       "Use SELECT 1 in subquery."
-                   ]
+{
+  "mission_03": [
+    "EXISTS checks presence, not aggregation.",
+    "Correlate order row to current customer row.",
+    "Use SELECT 1 in subquery."
+  ]
 }

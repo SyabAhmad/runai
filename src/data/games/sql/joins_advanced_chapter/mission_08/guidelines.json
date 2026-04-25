@@ -1,0 +1,4 @@
+
+{
+  "mission_08": "## What You Will Learn\n\nThis mission introduces Common Table Expressions (CTEs) and window functions together. You will join customers to orders, assign a row_number ranked by order_date per customer, then filter for rank 1 to extract only the latest order per customer.\n\n### Key Concepts\n- **CTE (WITH clause)**: Breaks complex logic into named, reusable steps for readability.\n- **ROW_NUMBER()**: Assigns a unique sequential rank within each partition.\n- **PARTITION BY**: Resets the ranking for every distinct customer_id.\n- **ORDER BY inside OVER**: Defines the ranking order (descending date = newest first).\n\n### Why This Matters\nFetching the latest record per group is one of the most frequent analytical tasksâ€”used in last-login tracking, most-recent purchase analysis, and current-status snapshots."
+}

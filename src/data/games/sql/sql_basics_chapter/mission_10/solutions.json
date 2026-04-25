@@ -1,3 +1,3 @@
-﻿{
-    "mission_10":  "WITH base AS (SELECT department, name, salary, SUM(salary) OVER (PARTITION BY department) AS dept_total FROM employees) SELECT department, name, salary, dept_total, ROUND((salary * 100.0) / dept_total, 2) AS pct_contribution FROM base ORDER BY department, salary DESC;"
+{
+  "mission_10": "WITH base AS (SELECT department, name, salary, SUM(salary) OVER (PARTITION BY department) AS dept_total FROM employees) SELECT department, name, salary, dept_total, ROUND((salary * 100.0) / dept_total, 2) AS pct_contribution FROM base ORDER BY department, salary DESC;"
 }

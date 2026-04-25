@@ -1,4 +1,5 @@
-﻿{
+
+{
     "mission_10":  [
                        "Use two CTEs: one for customer spend, one for region total.",
                        "Window SUM over region for denominator.",

@@ -1,4 +1,4 @@
-﻿{
+{
     "title":  "SQL Mission 1: Customer Orders (INNER JOIN)",
     "initialState":  {
                          "content":  "-- Mission 1 Guidelines\n-- Tables:\n--   customers(customer_id, name, region)\n--   orders(order_id, customer_id, order_date, total_amount)\n-- Return: c.name, o.order_id\n-- Use INNER JOIN and explicit ON condition\n\nSELECT\n  -- TODO\nFROM customers c\nINNER JOIN orders o\n  ON -- TODO\nORDER BY\n  -- TODO\n;"

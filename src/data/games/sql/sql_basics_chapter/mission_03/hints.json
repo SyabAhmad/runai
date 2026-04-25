@@ -1,4 +1,5 @@
-﻿{
+
+{
     "mission_03":  [
                        "LIKE is the operator for pattern matching.",
                        "A% means values that begin with A.",

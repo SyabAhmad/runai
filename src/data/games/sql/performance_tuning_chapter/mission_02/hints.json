@@ -1,7 +1,7 @@
-﻿{
-    "mission_02":  [
-                       "Use \u003e= start of year and \u003c start of next year.",
-                       "Do not use YEAR(order_date).",
-                       "Keep it as a simple range predicate."
-                   ]
+{
+  "mission_02": [
+    "Use \u003e= start of year and \u003c start of next year.",
+    "Do not use YEAR(order_date).",
+    "Keep it as a simple range predicate."
+  ]
 }

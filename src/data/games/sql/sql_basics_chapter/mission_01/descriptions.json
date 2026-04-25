@@ -1,3 +1,4 @@
-﻿{
+
+{
     "mission_01":  "You are helping HR shortlist high-performing Sales employees for a compensation review. Write a query that returns only employee names from the Sales department where salary is strictly above 50000. Order results so the highest salary appears first. Keep the output focused by selecting only what is needed."
 }

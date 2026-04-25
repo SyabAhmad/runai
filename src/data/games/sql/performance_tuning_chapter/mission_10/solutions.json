@@ -1,3 +1,5 @@
-﻿{
+
+{
     "mission_10":  "WITH revenue AS (SELECT customer_id, SUM(total_amount) AS revenue FROM orders WHERE status = \u0027completed\u0027 AND order_date \u003e= \u00272025-01-01\u0027 AND order_date \u003c \u00272026-01-01\u0027 GROUP BY customer_id), leaderboard AS (SELECT customer_id, revenue, RANK() OVER (ORDER BY revenue DESC) AS rnk, DENSE_RANK() OVER (ORDER BY revenue DESC) AS drnk FROM revenue) SELECT customer_id, revenue, rnk, drnk FROM leaderboard ORDER BY revenue DESC LIMIT 10;"
 }
+

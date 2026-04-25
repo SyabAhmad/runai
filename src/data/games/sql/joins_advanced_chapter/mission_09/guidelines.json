@@ -1,0 +1,4 @@
+
+{
+  "mission_09": "## What You Will Learn\n\nThis mission extends CTEs and window functions to solve a top-N-per-group problem across four joined tables. You will compute total spend per customer, rank customers by spend within each region, and return only the top customer from every region.\n\n### Key Concepts\n- **4-table join chain**: customers -> orders -> order_items -> products for a complete spend calculation.\n- **Ranking within partition**: ROW_NUMBER() with PARTITION BY region isolates competition within each region.\n- **Top-N filtering**: Filtering on rn = 1 after ranking guarantees exactly one winner per group.\n- **Aggregation before ranking**: GROUP BY inside the CTE produces the scalar spend metric used for ranking.\n\n### Why This Matters\nTop-N-per-group queries drive sales leaderboards, regional performance reviews, and incentive programs where only the highest performer in each territory needs recognition."
+}

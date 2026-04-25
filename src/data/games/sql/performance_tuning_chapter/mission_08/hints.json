@@ -1,4 +1,4 @@
-﻿{
+{
     "mission_08":  [
                        "Use two-part keyset condition for stable paging.",
                        "Second condition handles same-date tie by order_id.",

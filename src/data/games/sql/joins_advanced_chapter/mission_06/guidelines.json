@@ -1,0 +1,4 @@
+
+{
+  "mission_06": "## What You Will Learn\n\nThis mission combines a LEFT JOIN with an inline aggregated subquery. You will count orders per customer in a derived table, join those counts back to customers, and use COALESCE to replace missing counts with zero for customers who have not ordered.\n\n### Key Concepts\n- **Derived table / subquery**: An inline SELECT in the FROM clause acts like a temporary table.\n- **Aggregation in subquery**: Computing counts before the join keeps the main query clean and efficient.\n- **COALESCE**: Replaces NULL with a default value so reports show 0 instead of blank cells.\n- **LEFT JOIN + subquery**: Preserves all customers even when the aggregated subquery returns no rows for them.\n\n### Why This Matters\nPre-aggregating with subqueries is a standard pattern for summary reports, leaderboards, and KPI dashboards where every entity must be listed even if its metric is zero."
+}

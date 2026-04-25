@@ -1,4 +1,4 @@
-﻿{
+{
     "title":  "SQL Mission 8: Latest Order Per Customer",
     "initialState":  {
                          "content":  "-- Mission 8 Guidelines\n-- Join customers and orders\n-- Rank orders by order_date desc per customer\n-- Keep rank = 1\n\nWITH ranked AS (\n  SELECT\n    c.customer_id,\n    c.name,\n    o.order_id,\n    o.order_date,\n    -- TODO row_number\n  FROM customers c\n  INNER JOIN orders o ON c.customer_id = o.customer_id\n)\nSELECT\n  -- TODO\nFROM ranked\nWHERE\n  -- TODO\nORDER BY name;"

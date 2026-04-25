@@ -1,4 +1,5 @@
-﻿{
+
+{
     "mission_01":  [
                        "Start by selecting only the name column.",
                        "Add both filters in WHERE using AND.",

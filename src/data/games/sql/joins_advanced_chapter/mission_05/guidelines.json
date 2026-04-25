@@ -1,0 +1,4 @@
+
+{
+  "mission_05": "## What You Will Learn\n\nThis mission teaches multi-table INNER JOINs across three related tables and introduces aggregation within joined data. You will link orders to order_items and products, then compute total revenue per order using SUM and multiplication.\n\n### Key Concepts\n- **3-table join**: Chaining joins walks a relational path from parent to child to lookup table.\n- **Aggregation (SUM)**: Combines multiple line items into a single order total.\n- **Arithmetic in aggregation**: SUM(quantity * price) calculates extended revenue inline.\n- **GROUP BY**: Required whenever aggregate functions are used alongside non-aggregated columns.\n\n### Why This Matters\nMulti-table joins with aggregation underpin every sales dashboard, profit report, and inventory valuation query in e-commerce and ERP systems."
+}

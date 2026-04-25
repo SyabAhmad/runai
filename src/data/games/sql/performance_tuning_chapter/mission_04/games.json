@@ -1,16 +1,16 @@
-﻿{
-    "title":  "SQL Mission 4: Top-N Results Only",
-    "initialState":  {
-                         "content":  "-- Mission 4 Guidelines\n-- Return: order_id, total_amount\n-- Sort by total_amount descending\n-- Limit result to 20 rows\n\nSELECT\n  -- TODO\nFROM orders\nORDER BY\n  -- TODO\nLIMIT\n  -- TODO\n;"
-                     },
-    "validation":  {
-                       "type":  "sql",
-                       "rules":  [
-                                     "must_include:select order_id, total_amount",
-                                     "must_include:order by total_amount desc",
-                                     "must_include:limit 20"
-                                 ]
-                   },
-    "id":  "mission_04",
-    "type":  "sql_debug"
+{
+  "title": "SQL Mission 4: Top-N Results Only",
+  "initialState": {
+    "content": "-- Mission 4 Guidelines\n-- Return: order_id, total_amount\n-- Sort by total_amount descending\n-- Limit result to 20 rows\n\nSELECT\n  -- TODO\nFROM orders\nORDER BY\n  -- TODO\nLIMIT\n  -- TODO\n;"
+  },
+  "validation": {
+    "type": "sql",
+    "rules": [
+      "must_include:select order_id, total_amount",
+      "must_include:order by total_amount desc",
+      "must_include:limit 20"
+    ]
+  },
+  "id": "mission_04",
+  "type": "sql_debug"
 }

@@ -1,3 +1,3 @@
-﻿{
-    "mission_02":  "SELECT DISTINCT department FROM employees ORDER BY department;"
+{
+  "mission_02": "SELECT DISTINCT department FROM employees ORDER BY department;"
 }

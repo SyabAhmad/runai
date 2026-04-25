@@ -1,0 +1,4 @@
+
+{
+  "mission_10": "## What You Will Learn\n\nThis mission teaches window aggregate functions inside CTEs to compute share-of-total percentages. You will calculate each customer spend, compare it to their region total using SUM() OVER, and derive a precise percentage contribution.\n\n### Key Concepts\n- **Window aggregate (SUM OVER)**: Computes a group total without collapsing rows, preserving detail.\n- **PARTITION BY region**: Calculates a separate regional total for every region in the same query.\n- **Percentage formula**: (individual / group_total) * 100 converts absolute spend into relative share.\n- **ROUND**: Formats the percentage to a fixed number of decimal places for clean reporting.\n\n### Why This Matters\nShare-of-total and contribution analysis are staples of portfolio management, sales territory planning, and Pareto analysis, helping decision-makers identify which customers truly drive regional revenue."
+}

@@ -1,3 +1,4 @@
-﻿{
+
+{
     "mission_04":  "For a monthly report, list employees in Sales or Marketing whose salary is between 40000 and 90000, highest salary first. Return name and salary only."
 }

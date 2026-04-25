@@ -1,16 +1,16 @@
-﻿{
-    "title":  "SQL Mission 2: Sargable Date Range",
-    "initialState":  {
-                         "content":  "-- Mission 2 Guidelines\n-- Avoid wrapping indexed column in function\n-- Use range boundaries for year 2025\n\nSELECT\n  order_id\nFROM orders\nWHERE\n  -- TODO start boundary\n  AND -- TODO end boundary\n;"
-                     },
-    "validation":  {
-                       "type":  "sql",
-                       "rules":  [
-                                     "must_include:where order_date \u003e= \u00272025-01-01\u0027",
-                                     "must_include:and order_date \u003c \u00272026-01-01\u0027",
-                                     "must_include:select order_id"
-                                 ]
-                   },
-    "id":  "mission_02",
-    "type":  "sql_debug"
+{
+  "title": "SQL Mission 2: Sargable Date Range",
+  "initialState": {
+    "content": "-- Mission 2 Guidelines\n-- Avoid wrapping indexed column in function\n-- Use range boundaries for year 2025\n\nSELECT\n  order_id\nFROM orders\nWHERE\n  -- TODO start boundary\n  AND -- TODO end boundary\n;"
+  },
+  "validation": {
+    "type": "sql",
+    "rules": [
+      "must_include:where order_date \u003e= \u00272025-01-01\u0027",
+      "must_include:and order_date \u003c \u00272026-01-01\u0027",
+      "must_include:select order_id"
+    ]
+  },
+  "id": "mission_02",
+  "type": "sql_debug"
 }

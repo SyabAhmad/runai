@@ -1,0 +1,4 @@
+
+{
+  "mission_07": "## What You Will Learn\n\nThis mission demonstrates a three-table INNER JOIN chain combined with GROUP BY aggregation across categories. You will join categories to products and then to order_items to calculate total quantity sold per product category, producing a top-level sales summary.\n\n### Key Concepts\n- **Join chain (c -> p -> oi)**: Traversing a normalized schema from dimension to fact table.\n- **Dimensional aggregation**: Rolling up detailed transactions into category-level totals.\n- **GROUP BY dimension**: Collapses rows so each category appears once with its aggregated metric.\n- **ORDER BY aggregate DESC**: Ranks results by the computed metric for instant prioritization.\n\n### Why This Matters\nCategory-level rollups are foundational for merchandising, inventory planning, and executive dashboards that need high-level business metrics rather than raw transaction rows."
+}

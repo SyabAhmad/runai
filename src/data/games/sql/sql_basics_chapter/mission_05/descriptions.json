@@ -1,3 +1,4 @@
-﻿{
+
+{
     "mission_05":  "Build a staffing summary by department. Count employees per department and show only departments with at least 3 employees. Sort by highest headcount first."
 }

@@ -1,4 +1,5 @@
-﻿{
+
+{
     "mission_09":  [
                        "Use conditional SUM for each metric.",
                        "Keep all metrics in one SELECT.",

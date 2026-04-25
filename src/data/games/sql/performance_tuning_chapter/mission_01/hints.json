@@ -1,7 +1,7 @@
-﻿{
-    "mission_01":  [
-                       "List columns explicitly in SELECT.",
-                       "Use WHERE status = \u0027completed\u0027.",
-                       "Sort with ORDER BY order_date DESC."
-                   ]
+{
+  "mission_01": [
+    "List columns explicitly in SELECT.",
+    "Use WHERE status = \u0027completed\u0027.",
+    "Sort with ORDER BY order_date DESC."
+  ]
 }

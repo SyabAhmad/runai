@@ -1,0 +1,4 @@
+
+{
+  "mission_04": "## What You Will Learn\n\nThis mission reinforces LEFT JOIN for coverage analysis. You will keep every order in the result set and attach payment information when it exists, revealing which orders are paid and which are still outstanding.\n\n### Key Concepts\n- **LEFT JOIN coverage**: Guarantees the full set of left-table rows regardless of right-table matches.\n- **NULL indicators**: Missing payment data surfaces as NULL, making gaps instantly visible.\n- **Join selectivity**: Choosing which table is left vs right controls what is preserved.\n- **Data completeness checks**: LEFT JOIN is the standard tool for verifying referential integrity.\n\n### Why This Matters\nFinance and operations teams rely on coverage joins daily to reconcile orders against shipments, invoices against payments, and tickets against resolutions."
+}

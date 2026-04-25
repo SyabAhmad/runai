@@ -1,4 +1,5 @@
-﻿{
+
+{
     "mission_03":  [
                        "Use two aliases of the same table.",
                        "LEFT JOIN keeps top-level managers with NULL manager_name.",

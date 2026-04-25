@@ -1,4 +1,4 @@
-﻿{
+{
     "title":  "SQL Mission 4: Orders And Payments Coverage",
     "initialState":  {
                          "content":  "-- Mission 4 Guidelines\n-- Tables: orders(order_id, customer_id), payments(payment_id, order_id, paid_at)\n-- Keep every order even if payment does not exist\n\nSELECT\n  -- TODO\nFROM orders o\nLEFT JOIN payments p\n  ON -- TODO\nORDER BY o.order_id;"

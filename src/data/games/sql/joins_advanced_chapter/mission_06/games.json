@@ -1,4 +1,4 @@
-﻿{
+{
     "title":  "SQL Mission 6: Customer Order Counts",
     "initialState":  {
                          "content":  "-- Mission 6 Guidelines\n-- Build order counts per customer\n-- Join counts back to customers\n-- Replace NULL with 0\n\nSELECT\n  -- TODO\nFROM customers c\nLEFT JOIN (\n  -- TODO aggregated subquery\n) o\n  ON -- TODO\nORDER BY total_orders DESC, c.name;"

@@ -1,4 +1,4 @@
-﻿{
+{
     "title":  "SQL Mission 4: Multi-Condition Employee Filter",
     "initialState":  {
                          "content":  "-- Mission 4 Guidelines\n-- Return: name, salary\n-- Department in Sales/Marketing\n-- Salary between 40000 and 90000\n-- Sort by salary descending\n\nSELECT\n  -- TODO\nFROM employees\nWHERE\n  -- TODO\nORDER BY\n  -- TODO\n;"

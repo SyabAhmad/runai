@@ -1,3 +1,3 @@
-﻿{
-    "mission_04":  "For a dashboard widget, return only the top 20 highest-value orders to reduce rendering cost and data transfer."
+{
+  "mission_04": "For a dashboard widget, return only the top 20 highest-value orders to reduce rendering cost and data transfer."
 }

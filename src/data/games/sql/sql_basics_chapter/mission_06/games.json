@@ -1,4 +1,4 @@
-﻿{
+{
     "title":  "SQL Mission 6: Above-Average Salaries",
     "initialState":  {
                          "content":  "-- Mission 6 Guidelines\n-- Compare each salary to overall average salary\n-- Use a subquery in WHERE\n\nSELECT\n  -- TODO\nFROM employees\nWHERE\n  -- TODO\nORDER BY\n  -- TODO\n;"

@@ -1,4 +1,4 @@
-﻿{
+{
     "mission_05":  [
                        "Filter in CTE before SUM/GROUP BY.",
                        "Use only needed columns in CTE.",

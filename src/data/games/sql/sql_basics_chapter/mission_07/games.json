@@ -1,18 +1,18 @@
-﻿{
-    "title":  "SQL Mission 7: Salary Bands With CASE",
-    "initialState":  {
-                         "content":  "-- Mission 7 Guidelines\n-- Add computed column salary_band using CASE\n-- Bands:\n--   High: salary \u003e= 90000\n--   Medium: salary \u003e= 60000\n--   Low: otherwise\n\nSELECT\n  name,\n  department,\n  salary,\n  CASE\n    -- TODO\n  END AS salary_band\nFROM employees\nORDER BY salary DESC;"
-                     },
-    "validation":  {
-                       "type":  "sql",
-                       "rules":  [
-                                     "must_include:case",
-                                     "must_include:when salary \u003e= 90000 then \u0027high\u0027",
-                                     "must_include:when salary \u003e= 60000 then \u0027medium\u0027",
-                                     "must_include:else \u0027low\u0027",
-                                     "must_include:as salary_band"
-                                 ]
-                   },
-    "id":  "mission_07",
-    "type":  "sql_debug"
+{
+  "title": "SQL Mission 7: Salary Bands With CASE",
+  "initialState": {
+    "content": "-- Mission 7 Guidelines\n-- Add computed column salary_band using CASE\n-- Bands:\n--   High: salary \u003e= 90000\n--   Medium: salary \u003e= 60000\n--   Low: otherwise\n\nSELECT\n  name,\n  department,\n  salary,\n  CASE\n    -- TODO\n  END AS salary_band\nFROM employees\nORDER BY salary DESC;"
+  },
+  "validation": {
+    "type": "sql",
+    "rules": [
+      "must_include:case",
+      "must_include:when salary \u003e= 90000 then \u0027high\u0027",
+      "must_include:when salary \u003e= 60000 then \u0027medium\u0027",
+      "must_include:else \u0027low\u0027",
+      "must_include:as salary_band"
+    ]
+  },
+  "id": "mission_07",
+  "type": "sql_debug"
 }

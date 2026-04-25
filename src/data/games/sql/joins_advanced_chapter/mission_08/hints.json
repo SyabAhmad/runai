@@ -1,4 +1,5 @@
-﻿{
+
+{
     "mission_08":  [
                        "Partition by customer_id in ROW_NUMBER.",
                        "Order descending by order_date inside window.",

@@ -1,16 +1,16 @@
-﻿{
-    "title":  "SQL Mission 7: Replace IN Subquery With JOINed Aggregate",
-    "initialState":  {
-                         "content":  "-- Mission 7 Guidelines\n-- Build aggregated order counts per customer\n-- Keep total_orders \u003e 5\n-- Join back to customers\n\nSELECT\n  c.customer_id,\n  c.name,\n  oc.total_orders\nFROM customers c\nINNER JOIN (\n  -- TODO grouped subquery\n) oc\n  ON c.customer_id = oc.customer_id\nORDER BY oc.total_orders DESC;"
-                     },
-    "validation":  {
-                       "type":  "sql",
-                       "rules":  [
-                                     "must_include:inner join (select customer_id, count(*) as total_orders from orders group by customer_id having count(*) \u003e 5) oc",
-                                     "must_include:on c.customer_id = oc.customer_id",
-                                     "must_include:select c.customer_id, c.name, oc.total_orders"
-                                 ]
-                   },
-    "id":  "mission_07",
-    "type":  "sql_debug"
+{
+  "title": "SQL Mission 7: Replace IN Subquery With JOINed Aggregate",
+  "initialState": {
+    "content": "-- Mission 7 Guidelines\n-- Build aggregated order counts per customer\n-- Keep total_orders \u003e 5\n-- Join back to customers\n\nSELECT\n  c.customer_id,\n  c.name,\n  oc.total_orders\nFROM customers c\nINNER JOIN (\n  -- TODO grouped subquery\n) oc\n  ON c.customer_id = oc.customer_id\nORDER BY oc.total_orders DESC;"
+  },
+  "validation": {
+    "type": "sql",
+    "rules": [
+      "must_include:inner join (select customer_id, count(*) as total_orders from orders group by customer_id having count(*) \u003e 5) oc",
+      "must_include:on c.customer_id = oc.customer_id",
+      "must_include:select c.customer_id, c.name, oc.total_orders"
+    ]
+  },
+  "id": "mission_07",
+  "type": "sql_debug"
 }

@@ -1,0 +1,1 @@
+const fs = require('fs'); const path = require('path'); const base = 'src/data/games/sql/performance_tuning_chapter'; const g01 = { mission_01: 'test' }; fs.writeFileSync(path.join(base,'mission_01','guidelines.json'), JSON.stringify(g01,null,2));  

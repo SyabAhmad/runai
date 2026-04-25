@@ -1,4 +1,4 @@
-﻿{
+{
     "title":  "SQL Mission 5: Filter Early In CTE",
     "initialState":  {
                          "content":  "-- Mission 5 Guidelines\n-- CTE should filter rows first\n-- Then aggregate in outer query\n\nWITH filtered_orders AS (\n  SELECT\n    customer_id,\n    total_amount\n  FROM orders\n  WHERE\n    -- TODO status/date filters\n)\nSELECT\n  customer_id,\n  -- TODO aggregate\nFROM filtered_orders\nGROUP BY customer_id\nORDER BY total_spend DESC;"

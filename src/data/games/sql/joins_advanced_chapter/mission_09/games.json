@@ -1,16 +1,16 @@
-﻿{
-    "title":  "SQL Mission 9: Top Customer Per Region",
-    "initialState":  {
-                         "content":  "-- Mission 9 Guidelines\n-- Build spend per customer and region\n-- Rank spend descending within each region\n-- Return only top ranked row per region\n\nWITH spend AS (\n  SELECT\n    c.region,\n    c.name,\n    SUM(oi.quantity * p.price) AS total_spend,\n    -- TODO ranking\n  FROM customers c\n  INNER JOIN orders o ON c.customer_id = o.customer_id\n  INNER JOIN order_items oi ON o.order_id = oi.order_id\n  INNER JOIN products p ON oi.product_id = p.product_id\n  GROUP BY c.region, c.name\n)\nSELECT\n  region,\n  name,\n  total_spend\nFROM spend\nWHERE\n  -- TODO\nORDER BY region;"
-                     },
-    "validation":  {
-                       "type":  "sql",
-                       "rules":  [
-                                     "must_include:row_number() over (partition by c.region order by sum(oi.quantity * p.price) desc) as rn",
-                                     "must_include:where rn = 1",
-                                     "must_include:sum(oi.quantity * p.price) as total_spend"
-                                 ]
-                   },
-    "id":  "mission_09",
-    "type":  "sql_debug"
+{
+  "title": "SQL Mission 9: Top Customer Per Region",
+  "initialState": {
+    "content": "-- Mission 9 Guidelines\n-- Build spend per customer and region\n-- Rank spend descending within each region\n-- Return only top ranked row per region\n\nWITH spend AS (\n  SELECT\n    c.region,\n    c.name,\n    SUM(oi.quantity * p.price) AS total_spend,\n    -- TODO ranking\n  FROM customers c\n  INNER JOIN orders o ON c.customer_id = o.customer_id\n  INNER JOIN order_items oi ON o.order_id = oi.order_id\n  INNER JOIN products p ON oi.product_id = p.product_id\n  GROUP BY c.region, c.name\n)\nSELECT\n  region,\n  name,\n  total_spend\nFROM spend\nWHERE\n  -- TODO\nORDER BY region;"
+  },
+  "validation": {
+    "type": "sql",
+    "rules": [
+      "must_include:row_number() over (partition by c.region order by sum(oi.quantity * p.price) desc) as rn",
+      "must_include:where rn = 1",
+      "must_include:sum(oi.quantity * p.price) as total_spend"
+    ]
+  },
+  "id": "mission_09",
+  "type": "sql_debug"
 }

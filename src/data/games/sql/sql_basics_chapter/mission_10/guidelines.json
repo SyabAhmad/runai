@@ -1,0 +1,3 @@
+{
+  "mission_10": "## What You Will Learn\\n\\nIn this mission, you will learn how to use window aggregates to compute each employee's salary contribution percentage within their department. You will practice using SUM() OVER (PARTITION BY department) to calculate department totals and then compute the percentage contribution.\\n\\n### Key Concepts\\n- Core concepts and syntax for this mission\\n- Practical implementation patterns\\n- Common pitfalls and best practices\\n\\n### Why This Matters\\nThese SQL skills are essential for professional database development, analytics engineering, and building robust data-driven applications."
+}

@@ -1,4 +1,5 @@
-﻿{
+
+{
     "mission_07":  [
                        "Join through products to connect categories and order_items.",
                        "Aggregate quantity at category level.",

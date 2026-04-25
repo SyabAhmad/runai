@@ -1,3 +1,3 @@
-﻿{
+{
     "mission_06":  "Use a window function to fetch only the latest 3 orders for each customer instead of scanning all history in the UI."
 }

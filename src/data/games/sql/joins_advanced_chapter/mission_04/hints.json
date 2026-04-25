@@ -1,4 +1,5 @@
-﻿{
+
+{
     "mission_04":  [
                        "Orders are the driving table.",
                        "Use LEFT JOIN to retain unpaid orders.",

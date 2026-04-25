@@ -1,3 +1,4 @@
-﻿{
+
+{
     "mission_09":  "Return the top 3 highest-paid employees in each department using a window function. Include department, name, salary, and rank."
 }

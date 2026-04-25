@@ -1,4 +1,5 @@
-﻿{
+
+{
     "mission_02":  [
                        "Use DISTINCT to remove repeated values.",
                        "Department is the only required column.",

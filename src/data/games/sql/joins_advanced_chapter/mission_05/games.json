@@ -1,4 +1,4 @@
-﻿{
+{
     "title":  "SQL Mission 5: Order Revenue (3-Table Join)",
     "initialState":  {
                          "content":  "-- Mission 5 Guidelines\n-- Joins:\n--   orders o -\u003e order_items oi on order_id\n--   order_items oi -\u003e products p on product_id\n-- Total formula: SUM(oi.quantity * p.price)\n\nSELECT\n  -- TODO\nFROM orders o\nINNER JOIN order_items oi ON -- TODO\nINNER JOIN products p ON -- TODO\nGROUP BY\n  -- TODO\nORDER BY\n  -- TODO\n;"

@@ -1,4 +1,4 @@
-﻿{
+{
     "title":  "SQL Mission 10: Region-Level Customer Contribution",
     "initialState":  {
                          "content":  "-- Mission 10 Guidelines\n-- Step 1: compute customer spend by region\n-- Step 2: compute region_total using window SUM over region\n-- Step 3: percentage = total_spend * 100.0 / region_total\n\nWITH customer_spend AS (\n  SELECT\n    c.region,\n    c.name,\n    SUM(oi.quantity * p.price) AS total_spend\n  FROM customers c\n  INNER JOIN orders o ON c.customer_id = o.customer_id\n  INNER JOIN order_items oi ON o.order_id = oi.order_id\n  INNER JOIN products p ON oi.product_id = p.product_id\n  GROUP BY c.region, c.name\n),\nranked AS (\n  SELECT\n    region,\n    name,\n    total_spend,\n    -- TODO region total window\n  FROM customer_spend\n)\nSELECT\n  region,\n  name,\n  total_spend,\n  -- TODO contribution percent\nFROM ranked\nORDER BY region, total_spend DESC;"

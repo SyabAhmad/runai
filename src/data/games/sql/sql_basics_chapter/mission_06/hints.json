@@ -1,4 +1,5 @@
-﻿{
+
+{
     "mission_06":  [
                        "AVG(salary) should come from a subquery.",
                        "Compare each row salary against that value.",

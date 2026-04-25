@@ -1,0 +1,3 @@
+{
+  "mission_06": "## What You Will Learn\n\nIn this mission, you will master Subqueries and nested queries including correlated subqueries, IN/EXISTS operators, and subqueries in SELECT/FROM clauses.\n\n### Key Concepts\n- Core concepts and syntax for this mission\n- Practical implementation patterns\n- Common pitfalls and best practices\n\n### Why This Matters\nThese SQL skills are essential for professional database development, analytics engineering, and building robust data-driven applications."
+}

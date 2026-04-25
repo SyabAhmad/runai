@@ -1,3 +1,3 @@
-﻿{
-    "mission_07":  "SELECT c.customer_id, c.name, oc.total_orders FROM customers c INNER JOIN (SELECT customer_id, COUNT(*) AS total_orders FROM orders GROUP BY customer_id HAVING COUNT(*) \u003e 5) oc ON c.customer_id = oc.customer_id ORDER BY oc.total_orders DESC;"
+{
+  "mission_07": "SELECT c.customer_id, c.name, oc.total_orders FROM customers c INNER JOIN (SELECT customer_id, COUNT(*) AS total_orders FROM orders GROUP BY customer_id HAVING COUNT(*) \u003e 5) oc ON c.customer_id = oc.customer_id ORDER BY oc.total_orders DESC;"
 }

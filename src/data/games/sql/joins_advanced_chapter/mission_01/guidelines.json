@@ -1,0 +1,4 @@
+
+{
+    "mission_01":  "## What You Will Learn\\n\\nThis mission introduces the fundamental INNER JOIN, teaching you how to combine rows from two tables based on a matching condition. You will write a join between a customers table and an orders table using an explicit ON clause, then return only the rows where the relationship exists in both tables.\\n\\n### Key Concepts\\n- **INNER JOIN**: Returns only rows where the join condition matches in both tables.\\n- **ON clause**: Explicitly defines the matching columns between tables.\\n- **Table aliases**: Short names (e.g., c, o) make queries readable and concise.\\n- **ORDER BY**: Sorts the final result set for consistent presentation.\\n\\n### Why This Matters\\nINNER JOIN is the most common join type in real-world reporting; it powers every order-to-customer lookup, invoice-to-payment match, and user-to-session query."
+}

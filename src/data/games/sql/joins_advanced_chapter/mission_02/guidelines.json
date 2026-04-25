@@ -1,0 +1,4 @@
+
+{
+  "mission_02": "## What You Will Learn\n\nThis mission teaches the LEFT JOIN anti-pattern: keeping all rows from the left table while filtering for rows that have no match on the right. You will return customers who have never placed an order by detecting NULL values in the joined table columns.\n\n### Key Concepts\n- **LEFT JOIN**: Preserves every row from the left table and attaches matching right-table rows.\n- **IS NULL filter**: Detects unmatched rows by checking if a non-nullable right column is NULL.\n- **Anti-join pattern**: A powerful technique for finding gaps, orphans, and missing records.\n- **WHERE vs ON**: Filtering in WHERE (after join) removes left-table rows; filtering in ON does not.\n\n### Why This Matters\nFinding records without related data is critical for audits, onboarding flows, and churn analysisâ€”such as identifying customers who signed up but never purchased."
+}

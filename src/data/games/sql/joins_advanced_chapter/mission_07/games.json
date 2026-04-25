@@ -1,4 +1,4 @@
-﻿{
+{
     "title":  "SQL Mission 7: Product Sales By Category",
     "initialState":  {
                          "content":  "-- Mission 7 Guidelines\n-- categories(category_id, category_name)\n-- products(product_id, category_id)\n-- order_items(order_id, product_id, quantity)\n\nSELECT\n  -- TODO\nFROM categories c\nINNER JOIN products p ON -- TODO\nINNER JOIN order_items oi ON -- TODO\nGROUP BY\n  -- TODO\nORDER BY total_qty DESC;"

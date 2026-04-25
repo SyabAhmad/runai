@@ -1,4 +1,4 @@
-﻿{
+{
     "title":  "SQL Mission 2: Customers Without Orders",
     "initialState":  {
                          "content":  "-- Mission 2 Guidelines\n-- Keep all customers, attach orders if they exist\n-- Keep only rows where order is missing\n\nSELECT\n  -- TODO\nFROM customers c\nLEFT JOIN orders o\n  ON -- TODO\nWHERE\n  -- TODO\nORDER BY c.name;"

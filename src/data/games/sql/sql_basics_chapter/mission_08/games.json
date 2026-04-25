@@ -1,4 +1,4 @@
-﻿{
+{
     "title":  "SQL Mission 8: CTE For Department Payroll",
     "initialState":  {
                          "content":  "-- Mission 8 Guidelines\n-- Build CTE: dept_payroll(department, total_payroll)\n-- Aggregate salaries per department\n-- Filter totals \u003e 300000 in final query\n\nWITH dept_payroll AS (\n  -- TODO\n)\nSELECT\n  -- TODO\nFROM dept_payroll\nWHERE\n  -- TODO\nORDER BY\n  -- TODO\n;"

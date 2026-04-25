@@ -1,4 +1,5 @@
-﻿{
+
+{
     "mission_06":  [
                        "Aggregate orders in a subquery first.",
                        "LEFT JOIN to keep customers with no activity.",

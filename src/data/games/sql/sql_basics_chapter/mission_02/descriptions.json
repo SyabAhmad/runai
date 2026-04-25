@@ -1,3 +1,4 @@
-﻿{
+
+{
     "mission_02":  "Create a clean department directory for onboarding docs. Return unique department names from employees and sort them alphabetically. Duplicates should not appear in the final result."
 }

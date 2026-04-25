@@ -1,4 +1,4 @@
-﻿{
+{
     "title":  "SQL Mission 10: Efficient Revenue Leaderboard",
     "initialState":  {
                          "content":  "-- Mission 10 Guidelines\n-- Step 1: aggregate revenue per customer for completed 2025 orders\n-- Step 2: add rank and dense_rank over revenue desc\n-- Return top 10 customers\n\nWITH revenue AS (\n  SELECT\n    customer_id,\n    SUM(total_amount) AS revenue\n  FROM orders\n  WHERE\n    -- TODO filters\n  GROUP BY customer_id\n),\nleaderboard AS (\n  SELECT\n    customer_id,\n    revenue,\n    -- TODO rank()\n    -- TODO dense_rank()\n  FROM revenue\n)\nSELECT\n  customer_id,\n  revenue,\n  rnk,\n  drnk\nFROM leaderboard\nORDER BY revenue DESC\nLIMIT 10;"
