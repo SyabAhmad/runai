@@ -1,0 +1,44 @@
+{
+  "title": "Build an ML Pipeline",
+  "initialState": {
+    "content": "from sklearn.pipeline import Pipeline\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.linear_model import LogisticRegression\n\ndef build_pipeline():\n    \"\"\"\n    Create a sklearn Pipeline with two steps:\n    1. 'scaler': StandardScaler\n    2. 'classifier': LogisticRegression(max_iter=1000)\n    Return the pipeline object.\n    \"\"\"\n    # TODO: Define steps and create Pipeline\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:Pipeline",
+      "must_include:StandardScaler",
+      "must_include:LogisticRegression"
+    ],
+    "tests": [
+      {
+        "type": "must_match",
+        "pattern": "\\breturn\\b",
+        "message": "Your function must return the Pipeline object."
+      },
+      {
+        "type": "must_match",
+        "pattern": "steps\\s*=",
+        "message": "Define a 'steps' list containing the pipeline steps."
+      },
+      {
+        "type": "must_match",
+        "pattern": "['\"]scaler['\"]\\s*,\\s*StandardScaler\\s*\\(",
+        "message": "Include a step named 'scaler' with StandardScaler()."
+      },
+      {
+        "type": "must_match",
+        "pattern": "['\"]classifier['\"]\\s*,\\s*LogisticRegression\\s*\\(",
+        "message": "Include a step named 'classifier' with LogisticRegression()."
+      },
+      {
+        "type": "must_match",
+        "pattern": "Pipeline\\s*\\(\\s*steps",
+        "message": "Create the Pipeline by passing the steps list: Pipeline(steps)."
+      }
+    ]
+  },
+  "id": "mission_08",
+  "type": "ai_code",
+  "xpReward": 200
+}

@@ -1,0 +1,3 @@
+{
+  "mission_10": "In production ML, you train once and serve predictions many times. Learn to persist models to disk using joblib (the standard for sklearn models). Save the model to a file path, then load it back and return the loaded model object. This is the bridge between training and deployment."
+}

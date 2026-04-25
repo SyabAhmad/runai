@@ -3,69 +3,82 @@
  */
 export function evaluateMission(mission, userInput) {
   const { validation } = mission;
-  if (!validation) return { success: false, message: 'No validation rules defined' };
+  if (!validation)
+    return { success: false, message: "No validation rules defined" };
   const content = normalizeInput(userInput);
 
   switch (validation.type) {
-    case 'sql':
+    case "sql":
       return evaluateSqlRules(content, validation.rules);
-    case 'command':
+    case "command":
       return evaluateCommandRules(content, validation.rules);
-    case 'ai_code':
+    case "ai_code":
       return evaluateAiCodeRules(content, validation.rules, validation.tests);
     default:
-      return { success: false, message: `Unknown validation type: ${validation.type}` };
+      return {
+        success: false,
+        message: `Unknown validation type: ${validation.type}`,
+      };
   }
 }
 
 function normalizeInput(input) {
-  if (typeof input === 'string') return input;
-  if (input && typeof input.content === 'string') return input.content;
-  return '';
+  if (typeof input === "string") return input;
+  if (input && typeof input.content === "string") return input.content;
+  return "";
 }
 
 function evaluateSqlRules(input, rules) {
   const lowerInput = normalizeForRuleMatch(input);
   for (const rule of rules) {
-    if (rule.startsWith('must_include:')) {
-      const keyword = normalizeForRuleMatch(rule.slice('must_include:'.length));
+    if (rule.startsWith("must_include:")) {
+      const keyword = normalizeForRuleMatch(rule.slice("must_include:".length));
       if (!lowerInput.includes(keyword)) {
-        return { success: false, message: `Missing required keyword: ${keyword}` };
+        return {
+          success: false,
+          message: `Missing required keyword: ${keyword}`,
+        };
       }
     }
   }
-  return { success: true, message: 'SQL query is valid!' };
+  return { success: true, message: "SQL query is valid!" };
 }
 
 function evaluateCommandRules(input, rules) {
   const lowerInput = normalizeForRuleMatch(input);
   for (const rule of rules) {
-    if (rule.startsWith('must_include:')) {
-      const keyword = normalizeForRuleMatch(rule.slice('must_include:'.length));
+    if (rule.startsWith("must_include:")) {
+      const keyword = normalizeForRuleMatch(rule.slice("must_include:".length));
       if (!lowerInput.includes(keyword)) {
         return { success: false, message: `Missing required flag: ${keyword}` };
       }
     }
   }
-  return { success: true, message: 'Command is valid!' };
+  return { success: true, message: "Command is valid!" };
 }
 
 function evaluateAiCodeRules(input, rules, tests) {
   if (/\bTODO\b/i.test(input)) {
-    return { success: false, message: 'Resolve all TODO items before submitting.' };
+    return {
+      success: false,
+      message: "Resolve all TODO items before submitting.",
+    };
   }
 
   const executableInput = stripPythonComments(input);
   const lowerInput = normalizeForRuleMatch(executableInput);
 
   for (const rule of rules) {
-    if (rule.startsWith('must_include:')) {
-      const keyword = rule.slice('must_include:'.length).toLowerCase();
+    if (rule.startsWith("must_include:")) {
+      const keyword = rule.slice("must_include:".length).toLowerCase();
       if (!lowerInput.includes(normalizeForRuleMatch(keyword))) {
-        return { success: false, message: `Missing required keyword: ${keyword}` };
+        return {
+          success: false,
+          message: `Missing required keyword: ${keyword}`,
+        };
       }
-    } else if (rule.startsWith('must_not_include:')) {
-      const keyword = rule.slice('must_not_include:'.length).toLowerCase();
+    } else if (rule.startsWith("must_not_include:")) {
+      const keyword = rule.slice("must_not_include:".length).toLowerCase();
       if (lowerInput.includes(normalizeForRuleMatch(keyword))) {
         return { success: false, message: `Should not include: ${keyword}` };
       }
@@ -75,27 +88,31 @@ function evaluateAiCodeRules(input, rules, tests) {
   const testResult = runAiCodeTests(executableInput, tests);
   if (!testResult.success) return testResult;
 
-  return { success: true, message: 'Code is valid!' };
+  return { success: true, message: "Code is valid!" };
 }
 
 function stripPythonComments(input) {
-  return input
+  let cleaned = input
     .split(/\r?\n/)
     .map((line) => {
       const fullLineComment = /^\s*#/.test(line);
-      if (fullLineComment) return '';
+      if (fullLineComment) return "";
 
       // Remove trailing inline comments while keeping code before '#'.
-      return line.replace(/\s+#.*$/, '');
+      return line.replace(/\s+#.*$/, "");
     })
-    .join('\n');
+    .join("\n");
+
+  // Strip triple-quoted strings (docstrings and multiline strings)
+  // Matches """...""" or '''...''' including across multiple lines
+  cleaned = cleaned.replace(/"""[\s\S]*?"""/g, "");
+  cleaned = cleaned.replace(/'''[\s\S]*?'''/g, "");
+
+  return cleaned;
 }
 
 function normalizeForRuleMatch(value) {
-  return String(value)
-    .toLowerCase()
-    .replace(/\s+/g, ' ')
-    .trim();
+  return String(value).toLowerCase().replace(/\s+/g, " ").trim();
 }
 
 function runAiCodeTests(input, tests = []) {
@@ -103,63 +120,88 @@ function runAiCodeTests(input, tests = []) {
     return { success: true };
   }
 
-  const nonEmptyLines = input.split(/\r?\n/).filter((line) => line.trim().length > 0).length;
+  const nonEmptyLines = input
+    .split(/\r?\n/)
+    .filter((line) => line.trim().length > 0).length;
 
   for (const test of tests) {
-    if (!test || typeof test !== 'object') continue;
+    if (!test || typeof test !== "object") continue;
 
-    const message = test.message || `Failed test: ${test.name || test.type || 'unnamed'}`;
+    const message =
+      test.message || `Failed test: ${test.name || test.type || "unnamed"}`;
 
     switch (test.type) {
-      case 'must_match': {
-        if (typeof test.pattern !== 'string') {
-          return { success: false, message: `Invalid test pattern: ${test.name || 'must_match'}` };
+      case "must_match": {
+        if (typeof test.pattern !== "string") {
+          return {
+            success: false,
+            message: `Invalid test pattern: ${test.name || "must_match"}`,
+          };
         }
         let regex;
         try {
-          regex = new RegExp(test.pattern, test.flags || 'i');
+          regex = new RegExp(test.pattern, test.flags || "i");
         } catch {
-          return { success: false, message: `Invalid regex in test: ${test.name || 'must_match'}` };
+          return {
+            success: false,
+            message: `Invalid regex in test: ${test.name || "must_match"}`,
+          };
         }
         if (!regex.test(input)) return { success: false, message };
         break;
       }
 
-      case 'must_not_match': {
-        if (typeof test.pattern !== 'string') {
-          return { success: false, message: `Invalid test pattern: ${test.name || 'must_not_match'}` };
+      case "must_not_match": {
+        if (typeof test.pattern !== "string") {
+          return {
+            success: false,
+            message: `Invalid test pattern: ${test.name || "must_not_match"}`,
+          };
         }
         let regex;
         try {
-          regex = new RegExp(test.pattern, test.flags || 'i');
+          regex = new RegExp(test.pattern, test.flags || "i");
         } catch {
-          return { success: false, message: `Invalid regex in test: ${test.name || 'must_not_match'}` };
+          return {
+            success: false,
+            message: `Invalid regex in test: ${test.name || "must_not_match"}`,
+          };
         }
         if (regex.test(input)) return { success: false, message };
         break;
       }
 
-      case 'must_include_all': {
+      case "must_include_all": {
         if (!Array.isArray(test.values)) {
-          return { success: false, message: `Invalid values in test: ${test.name || 'must_include_all'}` };
+          return {
+            success: false,
+            message: `Invalid values in test: ${test.name || "must_include_all"}`,
+          };
         }
         const lowerInput = input.toLowerCase();
-        const allFound = test.values.every((value) => lowerInput.includes(String(value).toLowerCase()));
+        const allFound = test.values.every((value) =>
+          lowerInput.includes(String(value).toLowerCase()),
+        );
         if (!allFound) return { success: false, message };
         break;
       }
 
-      case 'must_include_any': {
+      case "must_include_any": {
         if (!Array.isArray(test.values)) {
-          return { success: false, message: `Invalid values in test: ${test.name || 'must_include_any'}` };
+          return {
+            success: false,
+            message: `Invalid values in test: ${test.name || "must_include_any"}`,
+          };
         }
         const lowerInput = input.toLowerCase();
-        const oneFound = test.values.some((value) => lowerInput.includes(String(value).toLowerCase()));
+        const oneFound = test.values.some((value) =>
+          lowerInput.includes(String(value).toLowerCase()),
+        );
         if (!oneFound) return { success: false, message };
         break;
       }
 
-      case 'min_non_empty_lines': {
+      case "min_non_empty_lines": {
         const min = Number(test.value || 0);
         if (nonEmptyLines < min) return { success: false, message };
         break;

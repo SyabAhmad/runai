@@ -1,6 +1,8 @@
 {
-    "mission_04":  [
-                       "Use evaluation metrics",
-                       "Calculate accuracy"
-                   ]
+  "mission_04": [
+    "Import accuracy_score, precision_score, recall_score, and f1_score.",
+    "Call each function with y_true and y_pred.",
+    "Use average='binary' for precision, recall, and f1_score.",
+    "Return a dictionary with keys: 'accuracy', 'precision', 'recall', 'f1'."
+  ]
 }

@@ -1,14 +1,39 @@
 {
-    "title":  "Model Training",
-    "initialState":  {
-                         "content":  "def train_model(X,y):\n    model.fit(X,y)"
-                     },
-    "validation":  {
-                       "type":  "ai_code",
-                       "rules":  [
-                                     "must_include:def"
-                                 ]
-                   },
-    "id":  "mission_03",
-    "type":  "ai_code"
+  "title": "Train a Logistic Regression Model",
+  "initialState": {
+    "content": "from sklearn.linear_model import LogisticRegression\n\ndef train_model(X_train, y_train):\n    \"\"\"\n    Train a LogisticRegression classifier on the training data.\n    Use max_iter=1000 to ensure convergence.\n    Set random_state=42 for reproducibility.\n    Return the trained model.\n    \"\"\"\n    # TODO: Initialize, fit, and return the model\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:LogisticRegression",
+      "must_include:fit",
+      "must_include:max_iter"
+    ],
+    "tests": [
+      {
+        "type": "must_match",
+        "pattern": "\\breturn\\b",
+        "message": "Your function must return the trained model. Use a return statement."
+      },
+      {
+        "type": "must_match",
+        "pattern": "LogisticRegression\\s*\\(",
+        "message": "You must instantiate LogisticRegression()."
+      },
+      {
+        "type": "must_match",
+        "pattern": "max_iter\\s*=\\s*1000",
+        "message": "Set max_iter=1000 to ensure convergence."
+      },
+      {
+        "type": "must_match",
+        "pattern": "\\.fit\\s*\\(",
+        "message": "You must call .fit() on the model with training data."
+      }
+    ]
+  },
+  "id": "mission_03",
+  "type": "ai_code",
+  "xpReward": 100
 }

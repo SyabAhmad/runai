@@ -1,3 +1,3 @@
 {
-    "mission_04":  "Model Evaluation"
+  "mission_04": "Accuracy alone can be misleading, especially with imbalanced classes. A complete evaluation requires precision (how many predicted positives are correct), recall (how many actual positives did we catch), and F1 (the harmonic mean of both). Compute all four metrics and return them in a dictionary. This gives a holistic view of your model's strengths and weaknesses."
 }

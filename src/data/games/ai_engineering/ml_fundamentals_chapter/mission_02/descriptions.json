@@ -1,3 +1,3 @@
 {
-    "mission_02":  "Train/Test Split"
+  "mission_02": "Before training any model, you must split your data properly. A random split can create imbalanced class distributions by chance, especially with small datasets. Use sklearn's train_test_split with stratification to ensure both train and test sets have the same class proportions as the original data. Always set random_state for reproducible results."
 }

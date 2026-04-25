@@ -1,6 +1,8 @@
 {
-    "mission_01":  [
-                       "Check the function definition",
-                       "Use return statement"
-                   ]
+  "mission_01": [
+    "Use df.dropna(subset=['price']) to remove rows with missing target values.",
+    "Use df.fillna() with df.mean(numeric_only=True) to fill numeric NaNs.",
+    "Only fill after dropping, so means are calculated from rows with valid targets.",
+    "Return the cleaned DataFrame."
+  ]
 }

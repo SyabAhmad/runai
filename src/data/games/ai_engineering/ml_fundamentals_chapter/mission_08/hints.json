@@ -1,0 +1,9 @@
+{
+  "mission_08": [
+    "Define a list of tuples called 'steps'.",
+    "Each tuple should be ('name', Transformer/Estimator).",
+    "Use ('scaler', StandardScaler()) as the first step.",
+    "Use ('classifier', LogisticRegression(max_iter=1000)) as the second step.",
+    "Pass steps to Pipeline(steps) and return it."
+  ]
+}

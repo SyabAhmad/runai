@@ -1,3 +1,3 @@
 {
-    "mission_01":  "def preprocess(data):\\n    return data"
+  "mission_01": "import pandas as pd\nimport numpy as np\n\ndef clean_missing_values(df):\n    df_clean = df.dropna(subset=['price'])\n    df_clean = df_clean.fillna(df_clean.mean(numeric_only=True))\n    return df_clean"
 }

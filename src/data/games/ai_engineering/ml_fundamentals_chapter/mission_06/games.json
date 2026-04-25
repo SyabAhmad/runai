@@ -1,0 +1,55 @@
+{
+  "title": "K-Fold Cross-Validation",
+  "initialState": {
+    "content": "from sklearn.model_selection import KFold\nfrom sklearn.metrics import accuracy_score\nimport numpy as np\n\ndef cross_val_score(model, X, y, k=5):\n    \"\"\"\n    Perform k-fold cross-validation.\n    Return the average accuracy across all folds.\n    \"\"\"\n    # TODO: Implement KFold cross-validation\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:KFold",
+      "must_include:split",
+      "must_include:fit",
+      "must_include:predict"
+    ],
+    "tests": [
+      {
+        "type": "must_match",
+        "pattern": "\\breturn\\b",
+        "message": "Your function must return the mean accuracy. Use a return statement."
+      },
+      {
+        "type": "must_match",
+        "pattern": "KFold\\s*\\(",
+        "message": "You must instantiate KFold()."
+      },
+      {
+        "type": "must_match",
+        "pattern": "n_splits\\s*=\\s*k",
+        "message": "Set n_splits=k when creating the KFold object."
+      },
+      {
+        "type": "must_match",
+        "pattern": "kf\\.split\\s*\\(",
+        "message": "Use kf.split(X) to generate train/validation indices."
+      },
+      {
+        "type": "must_match",
+        "pattern": "model\\.fit\\s*\\(",
+        "message": "Train the model on each fold with model.fit()."
+      },
+      {
+        "type": "must_match",
+        "pattern": "model\\.predict\\s*\\(",
+        "message": "Get predictions on the validation set with model.predict()."
+      },
+      {
+        "type": "must_match",
+        "pattern": "np\\.mean\\s*\\(",
+        "message": "Return the mean of all fold scores using np.mean()."
+      }
+    ]
+  },
+  "id": "mission_06",
+  "type": "ai_code",
+  "xpReward": 150
+}

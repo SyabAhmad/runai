@@ -1,0 +1,56 @@
+{
+  "title": "Confusion Matrix Analysis",
+  "initialState": {
+    "content": "from sklearn.metrics import confusion_matrix\n\ndef analyze_classification(y_true, y_pred):\n    \"\"\"\n    Compute confusion matrix and extract: TN, FP, FN, TP.\n    Return a dictionary with keys: 'TN', 'FP', 'FN', 'TP'.\n    \"\"\"\n    # TODO: Compute confusion matrix and return metrics\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:confusion_matrix",
+      "must_include:TN",
+      "must_include:FP",
+      "must_include:FN",
+      "must_include:TP"
+    ],
+    "tests": [
+      {
+        "type": "must_match",
+        "pattern": "\\breturn\\b",
+        "message": "Your function must return the metrics dictionary."
+      },
+      {
+        "type": "must_match",
+        "pattern": "confusion_matrix\\s*\\(",
+        "message": "You must call confusion_matrix(y_true, y_pred)."
+      },
+      {
+        "type": "must_match",
+        "pattern": "\\.ravel\\s*\\(",
+        "message": "Use .ravel() to flatten the confusion matrix into TN, FP, FN, TP."
+      },
+      {
+        "type": "must_match",
+        "pattern": "['\"]TN['\"]",
+        "message": "Include 'TN' key in your returned dictionary."
+      },
+      {
+        "type": "must_match",
+        "pattern": "['\"]FP['\"]",
+        "message": "Include 'FP' key in your returned dictionary."
+      },
+      {
+        "type": "must_match",
+        "pattern": "['\"]FN['\"]",
+        "message": "Include 'FN' key in your returned dictionary."
+      },
+      {
+        "type": "must_match",
+        "pattern": "['\"]TP['\"]",
+        "message": "Include 'TP' key in your returned dictionary."
+      }
+    ]
+  },
+  "id": "mission_09",
+  "type": "ai_code",
+  "xpReward": 200
+}

@@ -1,0 +1,3 @@
+{
+  "mission_09": "from sklearn.metrics import confusion_matrix\n\ndef analyze_classification(y_true, y_pred):\n    tn, fp, fn, tp = confusion_matrix(y_true, y_pred).ravel()\n    return {'TN': tn, 'FP': fp, 'FN': fn, 'TP': tp}"
+}

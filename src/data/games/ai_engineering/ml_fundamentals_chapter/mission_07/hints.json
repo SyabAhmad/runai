@@ -1,0 +1,9 @@
+{
+  "mission_07": [
+    "Create a dictionary param_grid with keys 'max_depth' and 'n_estimators'.",
+    "Initialize RandomForestClassifier.",
+    "Pass the model and param_grid to GridSearchCV.",
+    "Call .fit() on GridSearchCV with training data.",
+    "Return grid.best_params_ to get the optimal hyperparameters."
+  ]
+}

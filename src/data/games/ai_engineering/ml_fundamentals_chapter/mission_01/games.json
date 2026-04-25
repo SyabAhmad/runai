@@ -1,14 +1,44 @@
 {
-    "title":  "Data Preprocessing",
-    "initialState":  {
-                         "content":  "def preprocess(data):\n    return data"
-                     },
-    "validation":  {
-                       "type":  "ai_code",
-                       "rules":  [
-                                     "must_include:def"
-                                 ]
-                   },
-    "id":  "mission_01",
-    "type":  "ai_code"
+  "title": "Handle Missing Values",
+  "initialState": {
+    "content": "import pandas as pd\nimport numpy as np\n\ndef clean_missing_values(df):\n    \"\"\"\n    Given a pandas DataFrame with missing values, return a cleaned DataFrame.\n    Strategy: Drop rows where the target column 'price' is missing.\n    Fill remaining numeric NaNs with the column mean.\n    Return the cleaned DataFrame.\n    \"\"\"\n    # TODO: Drop rows where 'price' is NaN, then fill other NaNs with mean\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:dropna",
+      "must_include:fillna",
+      "must_include:mean"
+    ],
+    "tests": [
+      {
+        "type": "must_match",
+        "pattern": "\\breturn\\b",
+        "message": "Your function must return the cleaned DataFrame. Use a return statement."
+      },
+      {
+        "type": "must_match",
+        "pattern": "dropna\\s*\\(",
+        "message": "You must call the dropna() method."
+      },
+      {
+        "type": "must_match",
+        "pattern": "fillna\\s*\\(",
+        "message": "You must call the fillna() method."
+      },
+      {
+        "type": "must_match",
+        "pattern": "\\.mean\\s*\\(",
+        "message": "You must call .mean() to calculate column means."
+      },
+      {
+        "type": "must_not_match",
+        "pattern": "numeric_onl[^y]",
+        "message": "Check your spelling: use numeric_only (with a 'y')."
+      }
+    ]
+  },
+  "id": "mission_01",
+  "type": "ai_code",
+  "xpReward": 100
 }

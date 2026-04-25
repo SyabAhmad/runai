@@ -1,0 +1,8 @@
+{
+  "mission_10": [
+    "Use joblib.dump(model, filepath) to save the model.",
+    "Use joblib.load(filepath) to load it back.",
+    "Return the loaded model object.",
+    "joblib is preferred over pickle for sklearn models."
+  ]
+}

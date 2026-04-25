@@ -1,0 +1,39 @@
+{
+  "title": "Feature Scaling with StandardScaler",
+  "initialState": {
+    "content": "from sklearn.preprocessing import StandardScaler\nimport numpy as np\n\ndef scale_features(X_train, X_test):\n    \"\"\"\n    Scale features using StandardScaler.\n    Fit on training data, transform both train and test.\n    Return scaled X_train and X_test as numpy arrays.\n    \"\"\"\n    # TODO: Create scaler, fit on X_train, transform both\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:StandardScaler",
+      "must_include:fit",
+      "must_include:transform"
+    ],
+    "tests": [
+      {
+        "type": "must_match",
+        "pattern": "\\breturn\\b",
+        "message": "Your function must return the scaled arrays. Use a return statement."
+      },
+      {
+        "type": "must_match",
+        "pattern": "StandardScaler\\s*\\(",
+        "message": "You must instantiate StandardScaler()."
+      },
+      {
+        "type": "must_match",
+        "pattern": "fit_transform\\s*\\(",
+        "message": "Use fit_transform() on X_train to fit and transform training data."
+      },
+      {
+        "type": "must_match",
+        "pattern": "\\.transform\\s*\\(",
+        "message": "Use .transform() (not fit_transform) on X_test to avoid data leakage."
+      }
+    ]
+  },
+  "id": "mission_05",
+  "type": "ai_code",
+  "xpReward": 150
+}

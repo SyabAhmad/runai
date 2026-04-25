@@ -1,0 +1,3 @@
+{
+  "mission_07": "from sklearn.model_selection import GridSearchCV\nfrom sklearn.ensemble import RandomForestClassifier\n\ndef tune_hyperparameters(X_train, y_train):\n    param_grid = {\n        'max_depth': [3, 5, 10],\n        'n_estimators': [50, 100]\n    }\n    rf = RandomForestClassifier(random_state=42)\n    grid = GridSearchCV(rf, param_grid, cv=3)\n    grid.fit(X_train, y_train)\n    return grid.best_params_"
+}

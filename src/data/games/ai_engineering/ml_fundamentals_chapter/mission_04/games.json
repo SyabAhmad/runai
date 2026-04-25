@@ -1,14 +1,50 @@
 {
-    "title":  "Model Evaluation",
-    "initialState":  {
-                         "content":  "def evaluate_model(y_true,y_pred):\n    return accuracy_score(y_true,y_pred)"
-                     },
-    "validation":  {
-                       "type":  "ai_code",
-                       "rules":  [
-                                     "must_include:def"
-                                 ]
-                   },
-    "id":  "mission_04",
-    "type":  "ai_code"
+  "title": "Evaluate Model Performance",
+  "initialState": {
+    "content": "from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score\n\ndef evaluate_model(y_true, y_pred):\n    \"\"\"\n    Compute classification metrics: accuracy, precision, recall, and F1.\n    Use average='binary' for precision, recall, and F1.\n    Return a dictionary with keys: 'accuracy', 'precision', 'recall', 'f1'.\n    \"\"\"\n    # TODO: Calculate all four metrics and return as a dict\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:accuracy_score",
+      "must_include:precision_score",
+      "must_include:recall_score",
+      "must_include:f1_score"
+    ],
+    "tests": [
+      {
+        "type": "must_match",
+        "pattern": "\\breturn\\b",
+        "message": "Your function must return the metrics dictionary. Use a return statement."
+      },
+      {
+        "type": "must_match",
+        "pattern": "accuracy_score\\s*\\(",
+        "message": "You must call accuracy_score()."
+      },
+      {
+        "type": "must_match",
+        "pattern": "precision_score\\s*\\(",
+        "message": "You must call precision_score()."
+      },
+      {
+        "type": "must_match",
+        "pattern": "recall_score\\s*\\(",
+        "message": "You must call recall_score()."
+      },
+      {
+        "type": "must_match",
+        "pattern": "f1_score\\s*\\(",
+        "message": "You must call f1_score()."
+      },
+      {
+        "type": "must_match",
+        "pattern": "average\\s*=\\s*['\"]binary['\"]",
+        "message": "Use average='binary' for precision, recall, and F1 scores."
+      }
+    ]
+  },
+  "id": "mission_04",
+  "type": "ai_code",
+  "xpReward": 100
 }

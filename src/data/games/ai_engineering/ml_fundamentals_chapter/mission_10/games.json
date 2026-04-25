@@ -1,0 +1,35 @@
+{
+  "title": "Save and Load Trained Models",
+  "initialState": {
+    "content": "import joblib\n\ndef save_and_load_model(model, filepath='model.pkl'):\n    \"\"\"\n    Save a trained model to disk using joblib, then load it back.\n    Return the loaded model.\n    \"\"\"\n    # TODO: Save model with joblib.dump, then load with joblib.load\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": ["must_include:joblib", "must_include:dump", "must_include:load"],
+    "tests": [
+      {
+        "type": "must_match",
+        "pattern": "\\breturn\\b",
+        "message": "Your function must return the loaded model."
+      },
+      {
+        "type": "must_match",
+        "pattern": "joblib\\.dump\\s*\\(",
+        "message": "Use joblib.dump() to save the model to disk."
+      },
+      {
+        "type": "must_match",
+        "pattern": "joblib\\.load\\s*\\(",
+        "message": "Use joblib.load() to load the model back from disk."
+      },
+      {
+        "type": "must_match",
+        "pattern": "filepath",
+        "message": "Use the filepath parameter when saving and loading."
+      }
+    ]
+  },
+  "id": "mission_10",
+  "type": "ai_code",
+  "xpReward": 200
+}

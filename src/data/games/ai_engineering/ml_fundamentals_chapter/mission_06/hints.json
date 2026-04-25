@@ -1,0 +1,9 @@
+{
+  "mission_06": [
+    "Initialize KFold with n_splits=k.",
+    "Iterate over kf.split(X) to get train and validation indices.",
+    "Use indices to slice X and y into train/val sets.",
+    "Train model on each fold and collect accuracy scores.",
+    "Return the mean of all collected scores."
+  ]
+}

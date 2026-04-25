@@ -1,6 +1,8 @@
 {
-    "mission_03":  [
-                       "Choose a model",
-                       "Fit the model"
-                   ]
+  "mission_03": [
+    "Import LogisticRegression from sklearn.linear_model.",
+    "Set max_iter=1000 to avoid convergence warnings.",
+    "Call .fit(X_train, y_train) to train the model.",
+    "Return the fitted model object."
+  ]
 }

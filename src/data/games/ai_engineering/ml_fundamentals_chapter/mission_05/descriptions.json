@@ -1,0 +1,3 @@
+{
+  "mission_05": "Feature scaling is critical for algorithms sensitive to magnitudes (SVM, KNN, Neural Networks). Your task is to implement a StandardScaler pipeline: fit the scaler exclusively on training data to avoid data leakage, then transform both training and test sets. Return the scaled arrays in the correct order."
+}

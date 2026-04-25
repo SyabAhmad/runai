@@ -1,0 +1,55 @@
+{
+  "title": "Grid Search Hyperparameter Tuning",
+  "initialState": {
+    "content": "from sklearn.model_selection import GridSearchCV\nfrom sklearn.ensemble import RandomForestClassifier\n\ndef tune_hyperparameters(X_train, y_train):\n    \"\"\"\n    Use GridSearchCV to find best hyperparameters for RandomForest.\n    Search max_depth: [3, 5, 10] and n_estimators: [50, 100].\n    Return the best_params_ dictionary.\n    \"\"\"\n    # TODO: Define param_grid and run GridSearchCV\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:GridSearchCV",
+      "must_include:param_grid",
+      "must_include:RandomForestClassifier",
+      "must_include:best_params_"
+    ],
+    "tests": [
+      {
+        "type": "must_match",
+        "pattern": "\\breturn\\b",
+        "message": "Your function must return the best_params_ dictionary."
+      },
+      {
+        "type": "must_match",
+        "pattern": "param_grid\\s*=",
+        "message": "Define a param_grid dictionary with the hyperparameters to search."
+      },
+      {
+        "type": "must_match",
+        "pattern": "max_depth\\s*:",
+        "message": "Include 'max_depth' in your param_grid."
+      },
+      {
+        "type": "must_match",
+        "pattern": "n_estimators\\s*:",
+        "message": "Include 'n_estimators' in your param_grid."
+      },
+      {
+        "type": "must_match",
+        "pattern": "GridSearchCV\\s*\\(",
+        "message": "Instantiate GridSearchCV with the model and param_grid."
+      },
+      {
+        "type": "must_match",
+        "pattern": "grid\\.fit\\s*\\(",
+        "message": "Call .fit() on the GridSearchCV object with training data."
+      },
+      {
+        "type": "must_match",
+        "pattern": "best_params_",
+        "message": "Return grid.best_params_ to get the optimal hyperparameters."
+      }
+    ]
+  },
+  "id": "mission_07",
+  "type": "ai_code",
+  "xpReward": 200
+}

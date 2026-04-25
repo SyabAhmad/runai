@@ -1,0 +1,8 @@
+{
+  "mission_05": [
+    "Create a StandardScaler instance first.",
+    "Use .fit_transform() on X_train to fit AND transform training data.",
+    "Use .transform() (not fit_transform) on X_test to avoid data leakage.",
+    "Return both scaled arrays: X_train_scaled, X_test_scaled."
+  ]
+}

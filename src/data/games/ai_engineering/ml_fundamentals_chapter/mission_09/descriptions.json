@@ -1,0 +1,3 @@
+{
+  "mission_09": "Understanding confusion matrices is essential for evaluating classifiers. Given true labels and predictions, compute the confusion matrix and extract True Negatives (TN), False Positives (FP), False Negatives (FN), and True Positives (TP). Return them in a dictionary with those exact keys."
+}

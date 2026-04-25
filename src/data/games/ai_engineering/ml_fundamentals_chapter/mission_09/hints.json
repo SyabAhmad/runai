@@ -1,0 +1,8 @@
+{
+  "mission_09": [
+    "Call confusion_matrix(y_true, y_pred) to get the matrix.",
+    "For binary classification, the matrix is 2x2.",
+    "Use .ravel() to flatten the matrix into TN, FP, FN, TP in that order.",
+    "Return a dict with keys 'TN', 'FP', 'FN', 'TP'."
+  ]
+}

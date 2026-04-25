@@ -1,0 +1,3 @@
+{
+  "mission_08": "Pipelines prevent data leakage and make your code reproducible. Build a sklearn Pipeline that chains StandardScaler (for feature scaling) followed by LogisticRegression (for classification). This ensures scaling parameters are learned only from training data during cross-validation."
+}
