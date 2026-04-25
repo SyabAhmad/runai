@@ -132,6 +132,22 @@ export default function MissionPage() {
     return () => clearTimeout(timer);
   }, [reaction, reactionKey]);
 
+  // Disable copy, cut, and right-click globally on mission pages
+  useEffect(() => {
+    const preventCopy = (e) => {
+      e.preventDefault();
+      return false;
+    };
+    document.addEventListener("copy", preventCopy);
+    document.addEventListener("cut", preventCopy);
+    document.addEventListener("contextmenu", preventCopy);
+    return () => {
+      document.removeEventListener("copy", preventCopy);
+      document.removeEventListener("cut", preventCopy);
+      document.removeEventListener("contextmenu", preventCopy);
+    };
+  }, []);
+
   const handleSubmit = () => {
     if (!mission) return;
     if (isCompleted) return;
@@ -390,9 +406,21 @@ export default function MissionPage() {
               {!showAnswer ? (
                 <button
                   onClick={handleShowAnswer}
-                  className="w-full btn btn-sm border border-border-muted text-text-dim hover:text-text hover:bg-surface-hover"
+                  disabled={hintIndex < hints.length}
+                  title={
+                    hintIndex < hints.length
+                      ? "Reveal all hints first to unlock the answer"
+                      : "Show the solution"
+                  }
+                  className={`w-full btn btn-sm border ${
+                    hintIndex < hints.length
+                      ? "border-border-muted text-text-dim opacity-50 cursor-not-allowed"
+                      : "border-border-muted text-text-dim hover:text-text hover:bg-surface-hover"
+                  }`}
                 >
-                  👁 Show Answer (one time only)
+                  {hintIndex < hints.length
+                    ? `🔒 Reveal all hints first (${hintIndex}/${hints.length})`
+                    : "👁 Show Answer (one time only)"}
                 </button>
               ) : (
                 <div>
