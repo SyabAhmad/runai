@@ -24,3 +24,6 @@ dist-ssr
 *.sw?
 
 extra
+
+.blackbox
+SKILL.md

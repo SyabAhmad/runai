@@ -1,0 +1,14 @@
+{
+  "title": "Image Loading",
+  "initialState": {
+    "content": "def image_segmentation_task_1():\n    # TODO: Load and display images with OpenCV\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_01",
+  "type": "ai_code"
+}

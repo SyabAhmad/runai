@@ -1,0 +1,14 @@
+{
+  "title": "Environment Variables",
+  "initialState": {
+    "content": "# Environment Variables\n# TODO: Set and export environment variables\n"
+  },
+  "validation": {
+    "type": "terminal",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_05",
+  "type": "terminal"
+}

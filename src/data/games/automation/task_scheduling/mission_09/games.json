@@ -1,0 +1,14 @@
+{
+  "title": "Error Handling",
+  "initialState": {
+    "content": "# Error Handling\n# TODO: Add error handling to scripts\n"
+  },
+  "validation": {
+    "type": "terminal",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_09",
+  "type": "terminal"
+}

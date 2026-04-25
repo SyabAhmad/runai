@@ -1,0 +1,14 @@
+{
+  "title": "Parallel Jobs",
+  "initialState": {
+    "content": "# Parallel Jobs\n# TODO: Run jobs in parallel for speed\nstages:\n  - build\n  - test\n  - deploy"
+  },
+  "validation": {
+    "type": "pipeline",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_08",
+  "type": "pipeline"
+}

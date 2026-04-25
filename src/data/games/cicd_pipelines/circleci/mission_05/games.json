@@ -1,0 +1,14 @@
+{
+  "title": "Deployment Stage",
+  "initialState": {
+    "content": "# Deployment Stage\n# TODO: Configure deployment to staging\nstages:\n  - build\n  - test\n  - deploy"
+  },
+  "validation": {
+    "type": "pipeline",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_05",
+  "type": "pipeline"
+}

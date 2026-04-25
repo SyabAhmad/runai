@@ -1,0 +1,14 @@
+{
+  "title": "Image Blending",
+  "initialState": {
+    "content": "def deep_learning_vision_task_9():\n    # TODO: Blend two images together\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_09",
+  "type": "ai_code"
+}

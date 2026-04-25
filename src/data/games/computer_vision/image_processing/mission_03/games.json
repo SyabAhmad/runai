@@ -1,14 +1,14 @@
 {
-    "title":  "Model Training",
-    "initialState":  {
-                         "content":  "def train_model(X,y):\n    model.fit(X,y)"
-                     },
-    "validation":  {
-                       "type":  "ai_code",
-                       "rules":  [
-                                     "must_include:def"
-                                 ]
-                   },
-    "id":  "mission_03",
-    "type":  "ai_code"
+  "title": "Image Resizing",
+  "initialState": {
+    "content": "def image_processing_task_3():\n    # TODO: Resize images to specific dimensions\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_03",
+  "type": "ai_code"
 }

@@ -1,0 +1,14 @@
+{
+  "title": "Image Resizing",
+  "initialState": {
+    "content": "def deep_learning_vision_task_3():\n    # TODO: Resize images to specific dimensions\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_03",
+  "type": "ai_code"
+}

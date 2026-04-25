@@ -1,0 +1,14 @@
+{
+  "title": "IAM Policies",
+  "initialState": {
+    "content": "# IAM Policies\n# TODO: Configure identity and access\n"
+  },
+  "validation": {
+    "type": "terminal",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_05",
+  "type": "terminal"
+}

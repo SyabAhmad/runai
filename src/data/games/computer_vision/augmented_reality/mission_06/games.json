@@ -1,0 +1,14 @@
+{
+  "title": "Contour Detection",
+  "initialState": {
+    "content": "def augmented_reality_task_6():\n    # TODO: Find contours in binary images\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_06",
+  "type": "ai_code"
+}

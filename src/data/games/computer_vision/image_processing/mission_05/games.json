@@ -1,0 +1,14 @@
+{
+  "title": "Thresholding",
+  "initialState": {
+    "content": "def image_processing_task_5():\n    # TODO: Apply binary thresholding\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_05",
+  "type": "ai_code"
+}

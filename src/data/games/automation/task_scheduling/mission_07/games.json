@@ -1,0 +1,14 @@
+{
+  "title": "Conditional Logic",
+  "initialState": {
+    "content": "# Conditional Logic\n# TODO: Implement if-else conditions\n"
+  },
+  "validation": {
+    "type": "terminal",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_07",
+  "type": "terminal"
+}

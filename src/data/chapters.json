@@ -91,6 +91,38 @@
           "xpReward": 150
         }
       ]
+    },
+    {
+      "id": "automation",
+      "title": "Automation & Scripting",
+      "description": "Automate workflows with shell scripting and task scheduling",
+      "icon": "terminal",
+      "gameType": "terminal",
+      "missions": []
+    },
+    {
+      "id": "cicd_pipelines",
+      "title": "CI/CD Pipelines",
+      "description": "Build, test, and deploy with continuous integration and delivery",
+      "icon": "pipeline",
+      "gameType": "pipeline",
+      "missions": []
+    },
+    {
+      "id": "cloud",
+      "title": "Cloud Computing",
+      "description": "Deploy and manage scalable applications on cloud platforms",
+      "icon": "terminal",
+      "gameType": "terminal",
+      "missions": []
+    },
+    {
+      "id": "computer_vision",
+      "title": "Computer Vision",
+      "description": "Build AI systems that interpret and understand visual data",
+      "icon": "pipeline",
+      "gameType": "ai_code",
+      "missions": []
     }
   ]
 }

@@ -1,0 +1,14 @@
+{
+  "title": "Monitoring Setup",
+  "initialState": {
+    "content": "# Monitoring Setup\n# TODO: Configure cloud monitoring\n"
+  },
+  "validation": {
+    "type": "terminal",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_10",
+  "type": "terminal"
+}

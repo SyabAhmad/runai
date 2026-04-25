@@ -1,0 +1,14 @@
+{
+  "title": "Color Conversion",
+  "initialState": {
+    "content": "def facial_recognition_task_2():\n    # TODO: Convert between color spaces\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_02",
+  "type": "ai_code"
+}

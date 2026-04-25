@@ -1,0 +1,14 @@
+{
+  "title": "Auto Scaling",
+  "initialState": {
+    "content": "# Auto Scaling\n# TODO: Configure automatic scaling\n"
+  },
+  "validation": {
+    "type": "terminal",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_07",
+  "type": "terminal"
+}

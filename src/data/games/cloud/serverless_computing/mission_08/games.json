@@ -1,0 +1,14 @@
+{
+  "title": "Database Setup",
+  "initialState": {
+    "content": "# Database Setup\n# TODO: Provision managed databases\n"
+  },
+  "validation": {
+    "type": "terminal",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_08",
+  "type": "terminal"
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Cloud Functions",
+  "initialState": {
+    "content": "# Cloud Functions\n# TODO: Deploy serverless functions\n"
+  },
+  "validation": {
+    "type": "terminal",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_09",
+  "type": "terminal"
+}

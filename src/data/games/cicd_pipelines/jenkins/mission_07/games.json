@@ -1,0 +1,14 @@
+{
+  "title": "Branch Strategies",
+  "initialState": {
+    "content": "# Branch Strategies\n# TODO: Implement branch-based workflows\nstages:\n  - build\n  - test\n  - deploy"
+  },
+  "validation": {
+    "type": "pipeline",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_07",
+  "type": "pipeline"
+}

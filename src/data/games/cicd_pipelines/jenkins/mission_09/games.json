@@ -1,0 +1,14 @@
+{
+  "title": "Rollback Procedures",
+  "initialState": {
+    "content": "# Rollback Procedures\n# TODO: Implement rollback on failure\nstages:\n  - build\n  - test\n  - deploy"
+  },
+  "validation": {
+    "type": "pipeline",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_09",
+  "type": "pipeline"
+}

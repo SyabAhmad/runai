@@ -1,0 +1,14 @@
+{
+  "title": "Pipeline Caching",
+  "initialState": {
+    "content": "# Pipeline Caching\n# TODO: Cache dependencies for faster builds\nstages:\n  - build\n  - test\n  - deploy"
+  },
+  "validation": {
+    "type": "pipeline",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_10",
+  "type": "pipeline"
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Image Resizing",
+  "initialState": {
+    "content": "def facial_recognition_task_3():\n    # TODO: Resize images to specific dimensions\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_03",
+  "type": "ai_code"
+}

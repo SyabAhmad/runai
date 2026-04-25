@@ -1,0 +1,14 @@
+{
+  "title": "Script Debugging",
+  "initialState": {
+    "content": "# Script Debugging\n# TODO: Debug bash scripts with set flags\n"
+  },
+  "validation": {
+    "type": "terminal",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_10",
+  "type": "terminal"
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Loops and Iteration",
+  "initialState": {
+    "content": "# Loops and Iteration\n# TODO: Use for and while loops in scripts\n"
+  },
+  "validation": {
+    "type": "terminal",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_06",
+  "type": "terminal"
+}

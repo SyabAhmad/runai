@@ -1,0 +1,14 @@
+{
+  "title": "Load Balancers",
+  "initialState": {
+    "content": "# Load Balancers\n# TODO: Set up load distribution\n"
+  },
+  "validation": {
+    "type": "terminal",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_06",
+  "type": "terminal"
+}

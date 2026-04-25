@@ -1,0 +1,14 @@
+{
+  "title": "Thresholding",
+  "initialState": {
+    "content": "def deep_learning_vision_task_5():\n    # TODO: Apply binary thresholding\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_05",
+  "type": "ai_code"
+}

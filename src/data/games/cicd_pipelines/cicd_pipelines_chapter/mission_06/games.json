@@ -1,0 +1,14 @@
+{
+  "title": "Environment Variables",
+  "initialState": {
+    "content": "# Environment Variables\n# TODO: Manage secrets and env vars\nstages:\n  - build\n  - test\n  - deploy"
+  },
+  "validation": {
+    "type": "pipeline",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_06",
+  "type": "pipeline"
+}

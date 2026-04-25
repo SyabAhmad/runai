@@ -1,0 +1,14 @@
+{
+  "title": "Feature Detection",
+  "initialState": {
+    "content": "def facial_recognition_task_8():\n    # TODO: Detect keypoints with SIFT/ORB\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_08",
+  "type": "ai_code"
+}

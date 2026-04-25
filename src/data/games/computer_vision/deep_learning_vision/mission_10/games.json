@@ -1,0 +1,14 @@
+{
+  "title": "Video Capture",
+  "initialState": {
+    "content": "def deep_learning_vision_task_10():\n    # TODO: Capture video from webcam\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_10",
+  "type": "ai_code"
+}

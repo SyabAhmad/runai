@@ -1,0 +1,14 @@
+{
+  "title": "Gaussian Blur",
+  "initialState": {
+    "content": "def augmented_reality_task_4():\n    # TODO: Apply Gaussian blur to reduce noise\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_04",
+  "type": "ai_code"
+}

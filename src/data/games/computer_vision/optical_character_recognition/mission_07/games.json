@@ -1,0 +1,14 @@
+{
+  "title": "Histogram Equalization",
+  "initialState": {
+    "content": "def optical_character_recognition_task_7():\n    # TODO: Improve image contrast\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_07",
+  "type": "ai_code"
+}

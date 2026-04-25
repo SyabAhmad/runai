@@ -1,0 +1,3 @@
+{
+  "cicd_pipelines_chapter": "## What You Will Learn\\n\\nIn this chapter, you will master the fundamentals of CI/CD pipelines, including continuous integration, continuous delivery, and deployment automation. You will learn how to build, test, and deploy code reliably and efficiently.\\n\\n### Key Concepts\\n- Core concepts and syntax for this chapter\\n- Practical implementation patterns\\n- Common pitfalls and best practices\\n\\n### Why This Matters\\nCI/CD skills are essential for delivering software quickly, safely, and at scale in modern DevOps practices."
+}

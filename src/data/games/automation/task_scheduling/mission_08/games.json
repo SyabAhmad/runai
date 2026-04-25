@@ -1,0 +1,14 @@
+{
+  "title": "Functions in Bash",
+  "initialState": {
+    "content": "# Functions in Bash\n# TODO: Create reusable bash functions\n"
+  },
+  "validation": {
+    "type": "terminal",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_08",
+  "type": "terminal"
+}
