@@ -1,0 +1,16 @@
+{
+  "title": "Context Injection",
+  "initialState": {
+    "content": "def evaluate(y_true, y_pred):\n    # TODO: Calculate metric for Context Injection\n    return 0.0"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def",
+      "must_include:return"
+    ]
+  },
+  "id": "mission_06",
+  "type": "ai_code",
+  "xpReward": 110
+}

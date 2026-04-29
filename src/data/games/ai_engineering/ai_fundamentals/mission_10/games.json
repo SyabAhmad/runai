@@ -1,0 +1,16 @@
+{
+  "title": "Overfitting & Underfitting",
+  "initialState": {
+    "content": "def preprocess(data):\n    # TODO: Preprocess data for Overfitting & Underfitting\n    return data"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def",
+      "must_include:return"
+    ]
+  },
+  "id": "mission_10",
+  "type": "ai_code",
+  "xpReward": 150
+}

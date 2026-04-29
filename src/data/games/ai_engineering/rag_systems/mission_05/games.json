@@ -1,0 +1,16 @@
+{
+  "title": "Retrieval Setup",
+  "initialState": {
+    "content": "from sklearn import preprocessing\n\ndef normalize(X):\n    # TODO: Normalize data for Retrieval Setup\n    return X"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def",
+      "must_include:return"
+    ]
+  },
+  "id": "mission_05",
+  "type": "ai_code",
+  "xpReward": 100
+}

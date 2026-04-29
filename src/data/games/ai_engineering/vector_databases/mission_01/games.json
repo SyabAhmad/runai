@@ -1,0 +1,16 @@
+{
+  "title": "Vector Indexing",
+  "initialState": {
+    "content": "def solve(data):\n    # TODO: Implement solution for Vector Indexing\n    return result"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def",
+      "must_include:return"
+    ]
+  },
+  "id": "mission_01",
+  "type": "ai_code",
+  "xpReward": 60
+}

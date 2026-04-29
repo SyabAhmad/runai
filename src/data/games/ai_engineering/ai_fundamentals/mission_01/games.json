@@ -1,0 +1,16 @@
+{
+  "title": "AI vs ML vs DL",
+  "initialState": {
+    "content": "def solve(data):\n    # TODO: Implement solution for AI vs ML vs DL\n    return result"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def",
+      "must_include:return"
+    ]
+  },
+  "id": "mission_01",
+  "type": "ai_code",
+  "xpReward": 60
+}
