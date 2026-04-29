@@ -1,14 +1,16 @@
 {
-    "title":  "Model Training",
-    "initialState":  {
-                         "content":  "def train_model(X,y):\n    model.fit(X,y)"
-                     },
-    "validation":  {
-                       "type":  "ai_code",
-                       "rules":  [
-                                     "must_include:def"
-                                 ]
-                   },
-    "id":  "mission_03",
-    "type":  "ai_code"
+  "title": "Decision Tree",
+  "initialState": {
+    "content": "import numpy as np\n\ndef compute(data):\n    # TODO: Compute decision tree\n    return np.array([])"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def",
+      "must_include:return"
+    ]
+  },
+  "id": "mission_03",
+  "type": "ai_code",
+  "xpReward": 80
 }

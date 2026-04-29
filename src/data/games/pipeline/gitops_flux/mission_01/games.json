@@ -1,0 +1,15 @@
+{
+  "title": "Install Flux",
+  "initialState": {
+    "content": "steps:\n  - name: Install Flux\n    # TODO: Add pipeline step"
+  },
+  "validation": {
+    "type": "pipeline",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_01",
+  "type": "pipeline",
+  "xpReward": 60
+}

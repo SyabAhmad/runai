@@ -1,14 +1,15 @@
 {
-    "title":  "Train/Test Split",
-    "initialState":  {
-                         "content":  "def split_data(X,y):\n    return X_train,X_test,y_train,y_test"
-                     },
-    "validation":  {
-                       "type":  "ai_code",
-                       "rules":  [
-                                     "must_include:def"
-                                 ]
-                   },
-    "id":  "mission_02",
-    "type":  "ai_code"
+  "title": "Change Directory",
+  "initialState": {
+    "content": "# Change Directory\n# TODO: Use appropriate flags and options\n"
+  },
+  "validation": {
+    "type": "terminal",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_02",
+  "type": "terminal",
+  "xpReward": 70
 }

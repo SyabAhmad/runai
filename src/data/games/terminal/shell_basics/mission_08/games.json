@@ -1,0 +1,15 @@
+{
+  "title": "Mv Move",
+  "initialState": {
+    "content": "# Mv Move\n# TODO: Manage resources\n"
+  },
+  "validation": {
+    "type": "terminal",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_08",
+  "type": "terminal",
+  "xpReward": 130
+}

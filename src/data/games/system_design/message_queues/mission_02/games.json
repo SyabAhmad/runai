@@ -1,0 +1,15 @@
+{
+  "title": "Pub/Sub Model",
+  "initialState": {
+    "content": "jobs:\n  pub/sub_model:\n    # TODO: Define job configuration"
+  },
+  "validation": {
+    "type": "pipeline",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_02",
+  "type": "pipeline",
+  "xpReward": 70
+}

@@ -1,0 +1,16 @@
+{
+  "title": "Stream Ingestion",
+  "initialState": {
+    "content": "def solve(data):\n    # TODO: Implement solution for Stream Ingestion\n    return result"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def",
+      "must_include:return"
+    ]
+  },
+  "id": "mission_01",
+  "type": "ai_code",
+  "xpReward": 60
+}

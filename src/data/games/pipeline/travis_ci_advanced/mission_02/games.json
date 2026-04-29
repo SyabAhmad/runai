@@ -1,0 +1,15 @@
+{
+  "title": "Build Matrix",
+  "initialState": {
+    "content": "jobs:\n  build_matrix:\n    # TODO: Define job configuration"
+  },
+  "validation": {
+    "type": "pipeline",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_02",
+  "type": "pipeline",
+  "xpReward": 70
+}

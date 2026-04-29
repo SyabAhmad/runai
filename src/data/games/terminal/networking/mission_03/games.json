@@ -1,14 +1,15 @@
 {
-    "title":  "Model Training",
-    "initialState":  {
-                         "content":  "def train_model(X,y):\n    model.fit(X,y)"
-                     },
-    "validation":  {
-                       "type":  "ai_code",
-                       "rules":  [
-                                     "must_include:def"
-                                 ]
-                   },
-    "id":  "mission_03",
-    "type":  "ai_code"
+  "title": "Netstat",
+  "initialState": {
+    "content": "# Netstat\n# TODO: Pipe commands together\n"
+  },
+  "validation": {
+    "type": "terminal",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_03",
+  "type": "terminal",
+  "xpReward": 80
 }

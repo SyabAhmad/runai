@@ -1,0 +1,15 @@
+{
+  "title": "Cache Aside",
+  "initialState": {
+    "content": "steps:\n  - name: Cache Aside\n    # TODO: Add pipeline step"
+  },
+  "validation": {
+    "type": "pipeline",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_01",
+  "type": "pipeline",
+  "xpReward": 60
+}

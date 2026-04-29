@@ -1,30 +1,23 @@
-# Add New Chapters TODO
+# Add 10 Chapters to Remaining Technology Games
 
-## Task
+## Progress Tracker
 
-Add chapter entries to `src/data/chapters.json` for:
+- [x] Understand project structure and game data format
+- [x] Get user confirmation on plan
+- [ ] Create generation script for game content
+- [ ] Run generation script for all technologies
+- [ ] Update `src/data/chapters.json` with new metadata
+- [ ] Verify all files created correctly
 
-- Automation
-- CI/CD Pipelines
-- Cloud
-- Computer Vision
+## Technologies to Expand
 
-## Steps
-
-- [x] Understand existing SQL chapter structure
-- [x] Read current chapters.json
-- [x] Append four new chapter entries with empty missions arrays
-- [x] Create actual filesystem folder structures under each `*_chapter/` directory
-- [x] Generate mission subfolders (mission_01 through mission_04) with required JSON files
-- [x] Verify all four chapters have proper structure
-
-## Completed
-
-All four chapter folders now have proper mission structures:
-
-- `src/data/games/automation/automation_chapter/mission_01-04/`
-- `src/data/games/cicd_pipelines/cicd_pipelines_chapter/mission_01-04/`
-- `src/data/games/cloud/cloud_chapter/mission_01-04/`
-- `src/data/games/computer_vision/computer_vision_chapter/mission_01-04/`
-
-Each mission contains: games.json, descriptions.json, hints.json, outcomes.json, solutions.json
+| Technology       | Current                     | Target                        | New Chapters                  |
+| ---------------- | --------------------------- | ----------------------------- | ----------------------------- |
+| data_engineering | 1 chapter, 4 missions       | 10 chapters, 10 missions each | +9 chapters, +6 existing      |
+| docker           | 1 chapter, 4 missions       | 10 chapters, 10 missions each | +9 chapters, +6 existing      |
+| linux            | 1 chapter, 4 missions       | 10 chapters, 10 missions each | +9 chapters, +6 existing      |
+| machine_learning | 1 chapter, 4 missions       | 10 chapters, 10 missions each | +9 chapters, +6 existing      |
+| pipeline         | 3 chapters, 4 missions each | 10 chapters, 10 missions each | +7 chapters, +6 each existing |
+| system_design    | 1 chapter, 4 missions       | 10 chapters, 10 missions each | +9 chapters, +6 existing      |
+| terminal         | 3 chapters, 4 missions each | 10 chapters, 10 missions each | +7 chapters, +6 each existing |
+| yolo             | 1 chapter, 4 missions       | 10 chapters, 10 missions each | +9 chapters, +6 existing      |

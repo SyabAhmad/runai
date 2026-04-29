@@ -1,0 +1,15 @@
+{
+  "title": "DF Disk",
+  "initialState": {
+    "content": "# DF Disk\n# TODO: Use appropriate flags and options\n"
+  },
+  "validation": {
+    "type": "terminal",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_02",
+  "type": "terminal",
+  "xpReward": 70
+}

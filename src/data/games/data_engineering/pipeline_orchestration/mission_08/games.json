@@ -1,0 +1,16 @@
+{
+  "title": "Data Lineage",
+  "initialState": {
+    "content": "def predict(model, X_test):\n    # TODO: Make predictions for Data Lineage\n    return []"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def",
+      "must_include:return"
+    ]
+  },
+  "id": "mission_08",
+  "type": "ai_code",
+  "xpReward": 130
+}

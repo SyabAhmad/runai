@@ -1,0 +1,15 @@
+{
+  "title": "Canary Analysis",
+  "initialState": {
+    "content": "test:\n  # TODO: Add test configuration"
+  },
+  "validation": {
+    "type": "pipeline",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_06",
+  "type": "pipeline",
+  "xpReward": 110
+}

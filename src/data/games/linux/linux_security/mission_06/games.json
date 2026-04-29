@@ -1,0 +1,15 @@
+{
+  "title": "Chroot Jail",
+  "initialState": {
+    "content": "# Chroot Jail\n# TODO: Automate with scripting\n"
+  },
+  "validation": {
+    "type": "terminal",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_06",
+  "type": "terminal",
+  "xpReward": 110
+}

@@ -1,0 +1,15 @@
+{
+  "title": "Kustomization",
+  "initialState": {
+    "content": "pipeline:\n  stages:\n    - kustomization\n    # TODO: Configure stage"
+  },
+  "validation": {
+    "type": "pipeline",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_03",
+  "type": "pipeline",
+  "xpReward": 80
+}

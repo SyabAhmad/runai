@@ -1,0 +1,15 @@
+{
+  "title": "Fail2ban Setup",
+  "initialState": {
+    "content": "# Fail2ban Setup\n# TODO: Pipe commands together\n"
+  },
+  "validation": {
+    "type": "terminal",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_03",
+  "type": "terminal",
+  "xpReward": 80
+}

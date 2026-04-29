@@ -1,0 +1,15 @@
+{
+  "title": "Round Robin LB",
+  "initialState": {
+    "content": "steps:\n  - name: Round Robin LB\n    # TODO: Add pipeline step"
+  },
+  "validation": {
+    "type": "pipeline",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_01",
+  "type": "pipeline",
+  "xpReward": 60
+}

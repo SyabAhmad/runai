@@ -1,0 +1,15 @@
+{
+  "title": "Service Discovery",
+  "initialState": {
+    "content": "pipeline:\n  stages:\n    - service_discovery\n    # TODO: Configure stage"
+  },
+  "validation": {
+    "type": "pipeline",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_03",
+  "type": "pipeline",
+  "xpReward": 80
+}

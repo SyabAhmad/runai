@@ -1,0 +1,15 @@
+{
+  "title": "Non-root User",
+  "initialState": {
+    "content": "# Non-root User\n# TODO: Execute the correct command\n"
+  },
+  "validation": {
+    "type": "terminal",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_01",
+  "type": "terminal",
+  "xpReward": 60
+}

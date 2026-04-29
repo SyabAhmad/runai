@@ -1,0 +1,15 @@
+{
+  "title": "Catalog Tasks",
+  "initialState": {
+    "content": "scale:\n  # TODO: Add scaling configuration"
+  },
+  "validation": {
+    "type": "pipeline",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_10",
+  "type": "pipeline",
+  "xpReward": 150
+}

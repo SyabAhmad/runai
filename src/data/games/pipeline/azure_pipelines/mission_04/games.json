@@ -1,0 +1,15 @@
+{
+  "title": "Variable Groups",
+  "initialState": {
+    "content": "deploy:\n  # TODO: Add deployment configuration for Variable Groups"
+  },
+  "validation": {
+    "type": "pipeline",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_04",
+  "type": "pipeline",
+  "xpReward": 90
+}

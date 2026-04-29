@@ -1,0 +1,15 @@
+{
+  "title": "Journalctl",
+  "initialState": {
+    "content": "# Journalctl\n# TODO: Secure the environment\n"
+  },
+  "validation": {
+    "type": "terminal",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_09",
+  "type": "terminal",
+  "xpReward": 140
+}

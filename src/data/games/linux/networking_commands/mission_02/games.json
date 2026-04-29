@@ -1,0 +1,15 @@
+{
+  "title": "Netstat Ports",
+  "initialState": {
+    "content": "# Netstat Ports\n# TODO: Use appropriate flags and options\n"
+  },
+  "validation": {
+    "type": "terminal",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_02",
+  "type": "terminal",
+  "xpReward": 70
+}

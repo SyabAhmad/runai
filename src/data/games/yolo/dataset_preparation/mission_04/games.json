@@ -1,0 +1,16 @@
+{
+  "title": "Image Resizing",
+  "initialState": {
+    "content": "def transform(df):\n    # TODO: Transform dataframe for Image Resizing\n    return df"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def",
+      "must_include:return"
+    ]
+  },
+  "id": "mission_04",
+  "type": "ai_code",
+  "xpReward": 90
+}

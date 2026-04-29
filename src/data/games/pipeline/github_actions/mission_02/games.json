@@ -1,14 +1,15 @@
 {
-    "title":  "Train/Test Split",
-    "initialState":  {
-                         "content":  "def split_data(X,y):\n    return X_train,X_test,y_train,y_test"
-                     },
-    "validation":  {
-                       "type":  "ai_code",
-                       "rules":  [
-                                     "must_include:def"
-                                 ]
-                   },
-    "id":  "mission_02",
-    "type":  "ai_code"
+  "title": "Setup Node",
+  "initialState": {
+    "content": "jobs:\n  setup_node:\n    # TODO: Define job configuration"
+  },
+  "validation": {
+    "type": "pipeline",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_02",
+  "type": "pipeline",
+  "xpReward": 70
 }

@@ -1,14 +1,15 @@
 {
-    "title":  "Model Training",
-    "initialState":  {
-                         "content":  "def train_model(X,y):\n    model.fit(X,y)"
-                     },
-    "validation":  {
-                       "type":  "ai_code",
-                       "rules":  [
-                                     "must_include:def"
-                                 ]
-                   },
-    "id":  "mission_03",
-    "type":  "ai_code"
+  "title": "Load Balancer",
+  "initialState": {
+    "content": "pipeline:\n  stages:\n    - load_balancer\n    # TODO: Configure stage"
+  },
+  "validation": {
+    "type": "pipeline",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_03",
+  "type": "pipeline",
+  "xpReward": 80
 }

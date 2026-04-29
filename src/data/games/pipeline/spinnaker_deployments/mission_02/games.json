@@ -1,0 +1,15 @@
+{
+  "title": "Pipeline Create",
+  "initialState": {
+    "content": "jobs:\n  pipeline_create:\n    # TODO: Define job configuration"
+  },
+  "validation": {
+    "type": "pipeline",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_02",
+  "type": "pipeline",
+  "xpReward": 70
+}

@@ -1,0 +1,15 @@
+{
+  "title": "Tmpfs Mount",
+  "initialState": {
+    "content": "# Tmpfs Mount\n# TODO: Optimize performance\n"
+  },
+  "validation": {
+    "type": "terminal",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_10",
+  "type": "terminal",
+  "xpReward": 150
+}

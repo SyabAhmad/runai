@@ -1,0 +1,16 @@
+{
+  "title": "Class Addition",
+  "initialState": {
+    "content": "def process(input_data):\n    \"\"\"\n    Class Addition: Process the input data correctly.\n    \"\"\"\n    # TODO: Add your implementation\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def",
+      "must_include:return"
+    ]
+  },
+  "id": "mission_02",
+  "type": "ai_code",
+  "xpReward": 70
+}

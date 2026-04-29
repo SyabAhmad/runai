@@ -1,0 +1,15 @@
+{
+  "title": "Pipeline Expressions",
+  "initialState": {
+    "content": "config:\n  # TODO: Add system configuration"
+  },
+  "validation": {
+    "type": "pipeline",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_09",
+  "type": "pipeline",
+  "xpReward": 140
+}

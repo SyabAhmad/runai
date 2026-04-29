@@ -1,0 +1,16 @@
+{
+  "title": "CatBoost Model",
+  "initialState": {
+    "content": "def predict(model, X_test):\n    # TODO: Make predictions for CatBoost Model\n    return []"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def",
+      "must_include:return"
+    ]
+  },
+  "id": "mission_08",
+  "type": "ai_code",
+  "xpReward": 130
+}

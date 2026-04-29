@@ -1,0 +1,15 @@
+{
+  "title": "Write Behind",
+  "initialState": {
+    "content": "deploy:\n  # TODO: Add deployment configuration for Write Behind"
+  },
+  "validation": {
+    "type": "pipeline",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_04",
+  "type": "pipeline",
+  "xpReward": 90
+}

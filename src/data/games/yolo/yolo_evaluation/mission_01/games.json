@@ -1,0 +1,16 @@
+{
+  "title": "mAP50 Calculation",
+  "initialState": {
+    "content": "def solve(data):\n    # TODO: Implement solution for mAP50 Calculation\n    return result"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def",
+      "must_include:return"
+    ]
+  },
+  "id": "mission_01",
+  "type": "ai_code",
+  "xpReward": 60
+}

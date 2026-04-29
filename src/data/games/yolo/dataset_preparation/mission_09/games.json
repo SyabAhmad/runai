@@ -1,0 +1,16 @@
+{
+  "title": "Dataset Splitting",
+  "initialState": {
+    "content": "def train(X, y, epochs=10):\n    # TODO: Training loop for Dataset Splitting\n    return model"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def",
+      "must_include:return"
+    ]
+  },
+  "id": "mission_09",
+  "type": "ai_code",
+  "xpReward": 140
+}

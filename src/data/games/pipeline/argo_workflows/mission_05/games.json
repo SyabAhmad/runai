@@ -1,0 +1,15 @@
+{
+  "title": "Loops Argo",
+  "initialState": {
+    "content": "build:\n  # TODO: Add build configuration"
+  },
+  "validation": {
+    "type": "pipeline",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_05",
+  "type": "pipeline",
+  "xpReward": 100
+}

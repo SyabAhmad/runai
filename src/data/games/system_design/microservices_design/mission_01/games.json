@@ -1,0 +1,15 @@
+{
+  "title": "Service Boundary",
+  "initialState": {
+    "content": "steps:\n  - name: Service Boundary\n    # TODO: Add pipeline step"
+  },
+  "validation": {
+    "type": "pipeline",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_01",
+  "type": "pipeline",
+  "xpReward": 60
+}

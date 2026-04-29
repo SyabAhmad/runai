@@ -1,0 +1,16 @@
+{
+  "title": "Nested CV",
+  "initialState": {
+    "content": "def predict(model, X_test):\n    # TODO: Make predictions for Nested CV\n    return []"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def",
+      "must_include:return"
+    ]
+  },
+  "id": "mission_08",
+  "type": "ai_code",
+  "xpReward": 130
+}

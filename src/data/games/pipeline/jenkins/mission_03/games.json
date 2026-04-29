@@ -1,14 +1,15 @@
 {
-    "title":  "Model Training",
-    "initialState":  {
-                         "content":  "def train_model(X,y):\n    model.fit(X,y)"
-                     },
-    "validation":  {
-                       "type":  "ai_code",
-                       "rules":  [
-                                     "must_include:def"
-                                 ]
-                   },
-    "id":  "mission_03",
-    "type":  "ai_code"
+  "title": "Declarative Pipe",
+  "initialState": {
+    "content": "pipeline:\n  stages:\n    - declarative_pipe\n    # TODO: Configure stage"
+  },
+  "validation": {
+    "type": "pipeline",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_03",
+  "type": "pipeline",
+  "xpReward": 80
 }

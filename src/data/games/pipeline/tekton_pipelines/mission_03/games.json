@@ -1,0 +1,15 @@
+{
+  "title": "Pipeline",
+  "initialState": {
+    "content": "pipeline:\n  stages:\n    - pipeline\n    # TODO: Configure stage"
+  },
+  "validation": {
+    "type": "pipeline",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_03",
+  "type": "pipeline",
+  "xpReward": 80
+}

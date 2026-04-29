@@ -1,0 +1,15 @@
+{
+  "title": "Directory Size",
+  "initialState": {
+    "content": "# Directory Size\n# TODO: Filter and process output\n"
+  },
+  "validation": {
+    "type": "terminal",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_04",
+  "type": "terminal",
+  "xpReward": 90
+}

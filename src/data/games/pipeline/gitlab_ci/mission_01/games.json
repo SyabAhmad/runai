@@ -1,14 +1,15 @@
 {
-    "title":  "Data Preprocessing",
-    "initialState":  {
-                         "content":  "def preprocess(data):\n    return data"
-                     },
-    "validation":  {
-                       "type":  "ai_code",
-                       "rules":  [
-                                     "must_include:def"
-                                 ]
-                   },
-    "id":  "mission_01",
-    "type":  "ai_code"
+  "title": "Define Stages",
+  "initialState": {
+    "content": "steps:\n  - name: Define Stages\n    # TODO: Add pipeline step"
+  },
+  "validation": {
+    "type": "pipeline",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_01",
+  "type": "pipeline",
+  "xpReward": 60
 }

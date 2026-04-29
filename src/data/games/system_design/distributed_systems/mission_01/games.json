@@ -1,0 +1,15 @@
+{
+  "title": "Consensus Protocol",
+  "initialState": {
+    "content": "steps:\n  - name: Consensus Protocol\n    # TODO: Add pipeline step"
+  },
+  "validation": {
+    "type": "pipeline",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_01",
+  "type": "pipeline",
+  "xpReward": 60
+}

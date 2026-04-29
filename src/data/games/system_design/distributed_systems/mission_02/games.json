@@ -1,0 +1,15 @@
+{
+  "title": "Leader Election",
+  "initialState": {
+    "content": "jobs:\n  leader_election:\n    # TODO: Define job configuration"
+  },
+  "validation": {
+    "type": "pipeline",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_02",
+  "type": "pipeline",
+  "xpReward": 70
+}

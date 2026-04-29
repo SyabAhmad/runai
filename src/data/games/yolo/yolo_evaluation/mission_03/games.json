@@ -1,0 +1,16 @@
+{
+  "title": "Per-class AP",
+  "initialState": {
+    "content": "import numpy as np\n\ndef compute(data):\n    # TODO: Compute per-class ap\n    return np.array([])"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def",
+      "must_include:return"
+    ]
+  },
+  "id": "mission_03",
+  "type": "ai_code",
+  "xpReward": 80
+}

@@ -1,0 +1,15 @@
+{
+  "title": "Timeout Config",
+  "initialState": {
+    "content": "jobs:\n  timeout_config:\n    # TODO: Define job configuration"
+  },
+  "validation": {
+    "type": "pipeline",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_02",
+  "type": "pipeline",
+  "xpReward": 70
+}

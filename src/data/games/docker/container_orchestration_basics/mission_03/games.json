@@ -1,0 +1,15 @@
+{
+  "title": "Scale Service",
+  "initialState": {
+    "content": "# Scale Service\n# TODO: Pipe commands together\n"
+  },
+  "validation": {
+    "type": "terminal",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_03",
+  "type": "terminal",
+  "xpReward": 80
+}

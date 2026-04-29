@@ -1,0 +1,15 @@
+{
+  "title": "Dpkg List",
+  "initialState": {
+    "content": "# Dpkg List\n# TODO: Configure system settings\n"
+  },
+  "validation": {
+    "type": "terminal",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_05",
+  "type": "terminal",
+  "xpReward": 100
+}

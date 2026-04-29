@@ -1,0 +1,16 @@
+{
+  "title": "Aggregate Data",
+  "initialState": {
+    "content": "def build_model():\n    # TODO: Build model for Aggregate Data\n    return None"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def",
+      "must_include:return"
+    ]
+  },
+  "id": "mission_07",
+  "type": "ai_code",
+  "xpReward": 120
+}

@@ -1,0 +1,16 @@
+{
+  "title": "Kafka Consumer Setup",
+  "initialState": {
+    "content": "def build_model():\n    # TODO: Build model for Kafka Consumer Setup\n    return None"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def",
+      "must_include:return"
+    ]
+  },
+  "id": "mission_07",
+  "type": "ai_code",
+  "xpReward": 120
+}

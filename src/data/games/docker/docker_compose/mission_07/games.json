@@ -1,0 +1,15 @@
+{
+  "title": "Multi-service",
+  "initialState": {
+    "content": "# Multi-service\n# TODO: Debug and troubleshoot\n"
+  },
+  "validation": {
+    "type": "terminal",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_07",
+  "type": "terminal",
+  "xpReward": 120
+}

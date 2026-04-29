@@ -1,0 +1,15 @@
+{
+  "title": "Volume in Compose",
+  "initialState": {
+    "content": "# Volume in Compose\n# TODO: Configure system settings\n"
+  },
+  "validation": {
+    "type": "terminal",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_05",
+  "type": "terminal",
+  "xpReward": 100
+}

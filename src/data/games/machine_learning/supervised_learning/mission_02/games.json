@@ -1,14 +1,16 @@
 {
-    "title":  "Train/Test Split",
-    "initialState":  {
-                         "content":  "def split_data(X,y):\n    return X_train,X_test,y_train,y_test"
-                     },
-    "validation":  {
-                       "type":  "ai_code",
-                       "rules":  [
-                                     "must_include:def"
-                                 ]
-                   },
-    "id":  "mission_02",
-    "type":  "ai_code"
+  "title": "Logistic Regression",
+  "initialState": {
+    "content": "def process(input_data):\n    \"\"\"\n    Logistic Regression: Process the input data correctly.\n    \"\"\"\n    # TODO: Add your implementation\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def",
+      "must_include:return"
+    ]
+  },
+  "id": "mission_02",
+  "type": "ai_code",
+  "xpReward": 70
 }

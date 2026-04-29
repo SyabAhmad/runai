@@ -1,0 +1,15 @@
+{
+  "title": "IP Based",
+  "initialState": {
+    "content": "monitor:\n  # TODO: Add monitoring configuration"
+  },
+  "validation": {
+    "type": "pipeline",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_08",
+  "type": "pipeline",
+  "xpReward": 130
+}

@@ -1,0 +1,15 @@
+{
+  "title": "GitRepo Source",
+  "initialState": {
+    "content": "jobs:\n  gitrepo_source:\n    # TODO: Define job configuration"
+  },
+  "validation": {
+    "type": "pipeline",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_02",
+  "type": "pipeline",
+  "xpReward": 70
+}

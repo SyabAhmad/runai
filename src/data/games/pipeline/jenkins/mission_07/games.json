@@ -1,0 +1,15 @@
+{
+  "title": "Credentials",
+  "initialState": {
+    "content": "release:\n  # TODO: Add release configuration"
+  },
+  "validation": {
+    "type": "pipeline",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_07",
+  "type": "pipeline",
+  "xpReward": 120
+}

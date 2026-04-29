@@ -1,14 +1,15 @@
 {
-    "title":  "Data Preprocessing",
-    "initialState":  {
-                         "content":  "def preprocess(data):\n    return data"
-                     },
-    "validation":  {
-                       "type":  "ai_code",
-                       "rules":  [
-                                     "must_include:def"
-                                 ]
-                   },
-    "id":  "mission_01",
-    "type":  "ai_code"
+  "title": "List Directory",
+  "initialState": {
+    "content": "# List Directory\n# TODO: Execute the correct command\n"
+  },
+  "validation": {
+    "type": "terminal",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_01",
+  "type": "terminal",
+  "xpReward": 60
 }

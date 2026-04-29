@@ -1,0 +1,15 @@
+{
+  "title": "View File",
+  "initialState": {
+    "content": "# View File\n# TODO: Manage resources\n"
+  },
+  "validation": {
+    "type": "terminal",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_08",
+  "type": "terminal",
+  "xpReward": 130
+}

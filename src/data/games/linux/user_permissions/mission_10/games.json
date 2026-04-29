@@ -1,0 +1,15 @@
+{
+  "title": "Sticky Bit",
+  "initialState": {
+    "content": "# Sticky Bit\n# TODO: Optimize performance\n"
+  },
+  "validation": {
+    "type": "terminal",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_10",
+  "type": "terminal",
+  "xpReward": 150
+}

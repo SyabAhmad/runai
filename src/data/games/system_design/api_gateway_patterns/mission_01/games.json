@@ -1,0 +1,15 @@
+{
+  "title": "Rate Limiting",
+  "initialState": {
+    "content": "steps:\n  - name: Rate Limiting\n    # TODO: Add pipeline step"
+  },
+  "validation": {
+    "type": "pipeline",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_01",
+  "type": "pipeline",
+  "xpReward": 60
+}

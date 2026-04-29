@@ -1,0 +1,15 @@
+{
+  "title": "API Gateway",
+  "initialState": {
+    "content": "jobs:\n  api_gateway:\n    # TODO: Define job configuration"
+  },
+  "validation": {
+    "type": "pipeline",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_02",
+  "type": "pipeline",
+  "xpReward": 70
+}

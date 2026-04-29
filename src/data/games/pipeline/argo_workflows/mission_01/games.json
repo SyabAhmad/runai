@@ -1,0 +1,15 @@
+{
+  "title": "Hello Workflow",
+  "initialState": {
+    "content": "steps:\n  - name: Hello Workflow\n    # TODO: Add pipeline step"
+  },
+  "validation": {
+    "type": "pipeline",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_01",
+  "type": "pipeline",
+  "xpReward": 60
+}

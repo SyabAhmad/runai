@@ -1,0 +1,15 @@
+{
+  "title": "File Compression",
+  "initialState": {
+    "content": "# File Compression\n# TODO: Configure system settings\n"
+  },
+  "validation": {
+    "type": "terminal",
+    "rules": [
+      "must_include:TODO"
+    ]
+  },
+  "id": "mission_05",
+  "type": "terminal",
+  "xpReward": 100
+}

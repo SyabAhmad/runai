@@ -1,0 +1,16 @@
+{
+  "title": "Alert Thresholds",
+  "initialState": {
+    "content": "import numpy as np\n\ndef compute(data):\n    # TODO: Compute alert thresholds\n    return np.array([])"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def",
+      "must_include:return"
+    ]
+  },
+  "id": "mission_03",
+  "type": "ai_code",
+  "xpReward": 80
+}
