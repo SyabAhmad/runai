@@ -1,0 +1,7 @@
+{
+  "mission_05": [
+    "Checkpoints save model weights and optimizer state",
+    "Regular saving prevents loss of training progress",
+    "Model versioning helps track improvements"
+  ]
+}

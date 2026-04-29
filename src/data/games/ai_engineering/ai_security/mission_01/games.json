@@ -1,7 +1,7 @@
 {
-  "title": "Prompt Injection",
+  "title": "ai security Mission 1",
   "initialState": {
-    "content": "def solve(data):\n    # TODO: Implement solution for Prompt Injection\n    return result"
+    "content": "def solve_mission_1():\n    # TODO: Implement solution for ai_security mission 1\n    return \"Mission 1 completed\"\\n    # TODO: Complete the implementation"
   },
   "validation": {
     "type": "ai_code",

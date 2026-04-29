@@ -1,0 +1,3 @@
+{
+  "mission_03": "def create_chain_of_thought_prompt(problem, steps=None):\n    \"\"\"\n    Create a chain-of-thought prompting template\n    \"\"\"\n    if steps is None:\n        steps = [\"Analyze the problem\", \"Break it into components\", \"Solve step by step\", \"Verify the solution\"]\n\n    prompt = f\"\"\"Solve this problem using step-by-step reasoning:\n\nProblem: {problem}\n\nLet's think step by step:\n1. {steps[0]}\n2. {steps[1]}\n3. {steps[2]}\n4. {steps[3]}\n\nFinal answer:\"\"\"\n\n    return prompt\n\n# Example usage\nproblem = \"If a train travels 120 km in 2 hours, what is its average speed?\"\nprompt = create_chain_of_thought_prompt(problem)\nprint(prompt)"
+}

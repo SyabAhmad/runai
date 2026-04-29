@@ -1,0 +1,7 @@
+{
+  "mission_08": [
+    "Top-p sampling selects from highest probability tokens",
+    "Dynamically adjusts vocabulary based on cumulative probability",
+    "Balances diversity and coherence better than temperature"
+  ]
+}

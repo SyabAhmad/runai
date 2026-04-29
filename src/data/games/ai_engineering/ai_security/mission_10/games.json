@@ -1,7 +1,7 @@
 {
-  "title": "Compliance Check",
+  "title": "ai security Mission 10",
   "initialState": {
-    "content": "def preprocess(data):\n    # TODO: Preprocess data for Compliance Check\n    return data"
+    "content": "def solve_mission_10():\n    # TODO: Implement solution for ai_security mission 10\n    return \"Mission 10 completed\"\\n    # TODO: Complete the implementation"
   },
   "validation": {
     "type": "ai_code",

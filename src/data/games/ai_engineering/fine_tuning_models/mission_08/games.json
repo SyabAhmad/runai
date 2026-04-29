@@ -1,7 +1,7 @@
 {
-  "title": "Checkpoint Saving",
+  "title": "fine tuning models Mission 8",
   "initialState": {
-    "content": "def predict(model, X_test):\n    # TODO: Make predictions for Checkpoint Saving\n    return []"
+    "content": "def solve_mission_8():\n    # TODO: Implement solution for fine_tuning_models mission 8\n    return \"Mission 8 completed\"\\n    # TODO: Complete the implementation"
   },
   "validation": {
     "type": "ai_code",

@@ -1,7 +1,7 @@
 {
   "title": "Gradient Descent",
   "initialState": {
-    "content": "def predict(model, X_test):\n    # TODO: Make predictions for Gradient Descent\n    return []"
+    "content": "import numpy as np\n\ndef gradient_descent(X, y, learning_rate=0.01, epochs=1000, tolerance=1e-6):\n    \"\"\"\n    Batch gradient descent implementation\n    \"\"\"\n    m, n = X.shape\n    theta = np.zeros(n)\n    prev_cost = float('inf')\n\n    for epoch in range(epochs):\n        # Compute predictions\n        y_pred = np.dot(X, theta)\n\n        # Compute cost (MSE)\n        cost = np.mean((y_pred - y) ** 2)\n\n        # Check for convergence\n        if abs(prev_cost - cost) < tolerance:\n            break\n\n        # Compute gradients\n        gradients = (2/m) * np.dot(X.T, (y_pred - y))\n\n        # Update parameters\n        theta -= learning_rate * gradients\n        prev_cost = cost\n\n    return theta\\n    # TODO: Complete the implementation"
   },
   "validation": {
     "type": "ai_code",

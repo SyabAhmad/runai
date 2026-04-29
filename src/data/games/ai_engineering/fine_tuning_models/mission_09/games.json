@@ -1,7 +1,7 @@
 {
-  "title": "Model Evaluation",
+  "title": "fine tuning models Mission 9",
   "initialState": {
-    "content": "def train(X, y, epochs=10):\n    # TODO: Training loop for Model Evaluation\n    return model"
+    "content": "def solve_mission_9():\n    # TODO: Implement solution for fine_tuning_models mission 9\n    return \"Mission 9 completed\"\\n    # TODO: Complete the implementation"
   },
   "validation": {
     "type": "ai_code",

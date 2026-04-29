@@ -1,7 +1,7 @@
 {
-  "title": "Context Injection",
+  "title": "rag systems Mission 6",
   "initialState": {
-    "content": "def evaluate(y_true, y_pred):\n    # TODO: Calculate metric for Context Injection\n    return 0.0"
+    "content": "def solve_mission_6():\n    # TODO: Implement solution for rag_systems mission 6\n    return \"Mission 6 completed\"\\n    # TODO: Complete the implementation"
   },
   "validation": {
     "type": "ai_code",

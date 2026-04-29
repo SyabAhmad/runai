@@ -1,0 +1,3 @@
+{
+  "mission_05": "Save and load model checkpoints during training to preserve progress and enable resumption."
+}

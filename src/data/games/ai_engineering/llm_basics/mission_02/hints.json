@@ -1,0 +1,7 @@
+{
+  "mission_02": [
+    "Attention computes relevance scores between tokens",
+    "Query, Key, Value matrices are learned",
+    "Scaled dot-product attention prevents vanishing gradients"
+  ]
+}

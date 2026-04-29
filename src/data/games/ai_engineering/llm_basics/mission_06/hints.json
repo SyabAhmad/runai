@@ -1,0 +1,7 @@
+{
+  "mission_06": [
+    "Batch processing improves inference speed",
+    "Memory management prevents GPU out-of-memory",
+    "Caching frequent computations accelerates responses"
+  ]
+}

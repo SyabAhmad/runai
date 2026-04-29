@@ -1,0 +1,7 @@
+{
+  "mission_07": [
+    "Temperature > 1 increases randomness, < 1 decreases it",
+    "Higher temperature = more creative, lower = more focused",
+    "Temperature = 0 makes deterministic predictions"
+  ]
+}

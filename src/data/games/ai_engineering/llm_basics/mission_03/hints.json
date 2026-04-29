@@ -1,0 +1,7 @@
+{
+  "mission_03": [
+    "Tokenization breaks text into meaningful units",
+    "Subword tokenization balances vocabulary size and coverage",
+    "Special tokens handle padding, start, and end"
+  ]
+}

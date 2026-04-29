@@ -1,7 +1,7 @@
 {
   "title": "Zero-Shot Prompts",
   "initialState": {
-    "content": "def solve(data):\n    # TODO: Implement solution for Zero-Shot Prompts\n    return result"
+    "content": "def create_zero_shot_prompt(task, context=\"\"):\n    \"\"\"\n    Create a zero-shot prompt for a specific task\n    \"\"\"\n    prompt = f\"\"\"You are an expert assistant. {task}\n\nContext: {context}\n\nPlease provide a detailed and accurate response.\"\"\"\n\n    return prompt\n\n# Example usage\ntask = \"Explain quantum computing to a 10-year-old\"\nprompt = create_zero_shot_prompt(task)\nprint(prompt)\\n    # TODO: Complete the implementation"
   },
   "validation": {
     "type": "ai_code",

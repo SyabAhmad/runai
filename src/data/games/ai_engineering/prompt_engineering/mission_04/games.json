@@ -1,7 +1,7 @@
 {
   "title": "System Prompts",
   "initialState": {
-    "content": "def transform(df):\n    # TODO: Transform dataframe for System Prompts\n    return df"
+    "content": "def create_system_prompt(role, capabilities, constraints, style):\n    \"\"\"\n    Create a comprehensive system prompt\n    \"\"\"\n    system_prompt = f\"\"\"You are {role}.\n\nCapabilities:\n{capabilities}\n\nConstraints:\n{constraints}\n\nStyle: {style}\n\nAlways respond in character and follow all guidelines.\"\"\"\n\n    return system_prompt\n\n# Example usage\nrole = \"a helpful coding tutor\"\ncapabilities = \"- Explain programming concepts clearly\\n- Provide code examples\\n- Debug code issues\"\nconstraints = \"- Stay focused on programming topics\\n- Use simple language\\n- Be encouraging\"\nstyle = \"Patient, encouraging, and use analogies\"\n\nprompt = create_system_prompt(role, capabilities, constraints, style)\nprint(prompt)\\n    # TODO: Complete the implementation"
   },
   "validation": {
     "type": "ai_code",

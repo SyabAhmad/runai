@@ -1,7 +1,7 @@
 {
-  "title": "Model Stealing",
+  "title": "ai security Mission 3",
   "initialState": {
-    "content": "import numpy as np\n\ndef compute(data):\n    # TODO: Compute model stealing\n    return np.array([])"
+    "content": "def solve_mission_3():\n    # TODO: Implement solution for ai_security mission 3\n    return \"Mission 3 completed\"\\n    # TODO: Complete the implementation"
   },
   "validation": {
     "type": "ai_code",

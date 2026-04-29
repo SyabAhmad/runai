@@ -1,0 +1,7 @@
+{
+  "mission_04": [
+    "Implement distance metrics (Euclidean, Manhattan, Cosine)",
+    "Initialize centroids randomly but try multiple initializations",
+    "Use elbow method and silhouette analysis for optimal k selection"
+  ]
+}

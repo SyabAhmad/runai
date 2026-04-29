@@ -1,0 +1,7 @@
+{
+  "mission_08": [
+    "Gradient descent finds the minimum of the loss function",
+    "Learning rate controls step size",
+    "Stochastic, mini-batch, and batch variants exist"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "mission_03": [
+    "Implement gradient descent step by step: forward pass, loss calculation, backward pass, parameter update",
+    "Use numpy for matrix operations and avoid loops where possible",
+    "Add learning rate decay and convergence checking"
+  ]
+}

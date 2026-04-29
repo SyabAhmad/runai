@@ -1,0 +1,7 @@
+{
+  "mission_04": [
+    "Embeddings map tokens to dense vector representations",
+    "Word2Vec and GloVe are traditional methods",
+    "Contextual embeddings change based on usage"
+  ]
+}

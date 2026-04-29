@@ -1,0 +1,7 @@
+{
+  "mission_05": [
+    "Start with a simple 2-layer network: input → hidden → output",
+    "Implement sigmoid/tanh/ReLU activation functions",
+    "Use proper weight initialization to avoid vanishing gradients"
+  ]
+}

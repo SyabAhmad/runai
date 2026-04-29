@@ -1,7 +1,7 @@
 {
-  "title": "Retrieval Setup",
+  "title": "rag systems Mission 5",
   "initialState": {
-    "content": "from sklearn import preprocessing\n\ndef normalize(X):\n    # TODO: Normalize data for Retrieval Setup\n    return X"
+    "content": "def solve_mission_5():\n    # TODO: Implement solution for rag_systems mission 5\n    return \"Mission 5 completed\"\\n    # TODO: Complete the implementation"
   },
   "validation": {
     "type": "ai_code",

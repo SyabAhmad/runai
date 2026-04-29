@@ -1,7 +1,7 @@
 {
   "title": "Few-Shot Examples",
   "initialState": {
-    "content": "def build_model():\n    # TODO: Build model for Few-Shot Examples\n    return None"
+    "content": "def select_few_shot_examples(task, candidate_examples, max_examples=3):\n    \"\"\"\n    Select the most relevant examples for few-shot learning\n    \"\"\"\n    # Simple relevance scoring based on task keywords\n    task_keywords = set(task.lower().split())\n\n    scored_examples = []\n    for example in candidate_examples:\n        example_text = (example.get('input', '') + ' ' + example.get('output', '')).lower()\n        example_keywords = set(example_text.split())\n\n        # Calculate overlap score\n        overlap = len(task_keywords.intersection(example_keywords))\n        diversity = len(example_keywords - task_keywords)  # Unique words\n\n        score = overlap * 0.7 + diversity * 0.3\n        scored_examples.append((score, example))\n\n    # Sort by score and select top examples\n    scored_examples.sort(reverse=True, key=lambda x: x[0])\n    selected_examples = [example for _, example in scored_examples[:max_examples]]\n\n    return selected_examples\n\n# Example usage\ntask = \"translate english to french\"\ncandidates = [\n    {\"input\": \"Hello world\", \"output\": \"Bonjour le monde\"},\n    {\"input\": \"Good morning\", \"output\": \"Bonjour\"},\n    {\"input\": \"How are you?\", \"output\": \"Comment allez-vous?\"}\n]\n\nselected = select_few_shot_examples(task, candidates)\nprint(\"Selected examples:\", selected)\\n    # TODO: Complete the implementation"
   },
   "validation": {
     "type": "ai_code",

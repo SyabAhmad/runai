@@ -1,0 +1,3 @@
+{
+  "mission_07": "import torch\nimport torch.nn.functional as F\n\ndef temperature_sampling(logits, temperature=1.0):\n    \"\"\"\n    Apply temperature scaling to logits before sampling\n    \"\"\"\n    if temperature == 0:\n        # Greedy sampling - take the highest probability token\n        return torch.argmax(logits, dim=-1, keepdim=True)\n\n    # Scale logits by temperature\n    scaled_logits = logits / temperature\n\n    # Convert to probabilities\n    probabilities = F.softmax(scaled_logits, dim=-1)\n\n    # Sample from the distribution\n    next_token = torch.multinomial(probabilities, num_samples=1)\n\n    return next_token"
+}

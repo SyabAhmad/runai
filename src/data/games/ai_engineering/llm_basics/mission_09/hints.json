@@ -1,0 +1,7 @@
+{
+  "mission_09": [
+    "Context windows limit how much text the model can process",
+    "Sliding windows handle very long documents",
+    "Chunking strategies maintain coherence"
+  ]
+}

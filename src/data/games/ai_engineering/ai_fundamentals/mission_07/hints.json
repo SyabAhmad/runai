@@ -1,0 +1,7 @@
+{
+  "mission_07": [
+    "MSE measures average squared difference between predictions and actuals",
+    "Cross-entropy works well for classification problems",
+    "Loss functions guide model optimization"
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "title": "Output Formatting",
   "initialState": {
-    "content": "def evaluate(y_true, y_pred):\n    # TODO: Calculate metric for Output Formatting\n    return 0.0"
+    "content": "def create_formatted_output_prompt(task, output_format, example=None):\n    \"\"\"\n    Create a prompt that ensures specific output formatting\n    \"\"\"\n    format_instructions = f\"\"\"Please respond with output in exactly this format:\n{output_format}\"\"\"\n\n    if example:\n        format_instructions += f\"\"\"\n\nExample:\n{example}\"\"\"\n\n    prompt = f\"\"\"{task}\n\n{format_instructions}\n\nResponse:\"\"\"\n\n    return prompt\n\n# Example usage\ntask = \"Extract contact information from this text\"\noutput_format = \"\"\"Name: [name]\nEmail: [email]\nPhone: [phone]\"\"\"\n\nexample = \"\"\"Name: John Doe\nEmail: john@example.com\nPhone: +1-555-0123\"\"\"\n\nprompt = create_formatted_output_prompt(task, output_format, example)\nprint(prompt)\\n    # TODO: Complete the implementation"
   },
   "validation": {
     "type": "ai_code",

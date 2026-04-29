@@ -1,0 +1,7 @@
+{
+  "mission_01": [
+    "Transformers use self-attention instead of RNNs",
+    "Encoder processes input, decoder generates output",
+    "Multi-head attention allows parallel processing"
+  ]
+}

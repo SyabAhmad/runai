@@ -1,7 +1,7 @@
 {
-  "title": "Translation Service",
+  "title": "generative ai apps Mission 7",
   "initialState": {
-    "content": "def build_model():\n    # TODO: Build model for Translation Service\n    return None"
+    "content": "def solve_mission_7():\n    # TODO: Implement solution for generative_ai_apps mission 7\n    return \"Mission 7 completed\"\\n    # TODO: Complete the implementation"
   },
   "validation": {
     "type": "ai_code",

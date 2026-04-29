@@ -1,7 +1,7 @@
 {
-  "title": "Model Versioning",
+  "title": "mlops ai Mission 4",
   "initialState": {
-    "content": "def transform(df):\n    # TODO: Transform dataframe for Model Versioning\n    return df"
+    "content": "def solve_mission_4():\n    # TODO: Implement solution for mlops_ai mission 4\n    return \"Mission 4 completed\"\\n    # TODO: Complete the implementation"
   },
   "validation": {
     "type": "ai_code",

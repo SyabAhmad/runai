@@ -1,0 +1,3 @@
+{
+  "mission_10": "def create_few_shot_prompt(task_description, examples, query):\n    \"\"\"\n    Create a few-shot learning prompt\n    \"\"\"\n    prompt_parts = []\n\n    # Task description\n    prompt_parts.append(f\"Task: {task_description}\")\n    prompt_parts.append(\"\")\n\n    # Examples\n    for i, example in enumerate(examples, 1):\n        prompt_parts.append(f\"Example {i}:\")\n        prompt_parts.append(f\"Input: {example['input']}\")\n        prompt_parts.append(f\"Output: {example['output']}\")\n        prompt_parts.append(\"\")\n\n    # Query\n    prompt_parts.append(\"Now answer this:\")\n    prompt_parts.append(f\"Input: {query}\")\n    prompt_parts.append(\"Output:\")\n\n    return \"\\n\".join(prompt_parts)"
+}

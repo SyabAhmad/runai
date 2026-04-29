@@ -1,7 +1,7 @@
 {
-  "title": "Agent Architecture",
+  "title": "ai agents Mission 1",
   "initialState": {
-    "content": "def solve(data):\n    # TODO: Implement solution for Agent Architecture\n    return result"
+    "content": "def solve_mission_1():\n    # TODO: Implement solution for ai_agents mission 1\n    return \"Mission 1 completed\"\\n    # TODO: Complete the implementation"
   },
   "validation": {
     "type": "ai_code",

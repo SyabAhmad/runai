@@ -1,7 +1,7 @@
 {
-  "title": "Audit Logging",
+  "title": "ai security Mission 7",
   "initialState": {
-    "content": "def build_model():\n    # TODO: Build model for Audit Logging\n    return None"
+    "content": "def solve_mission_7():\n    # TODO: Implement solution for ai_security mission 7\n    return \"Mission 7 completed\"\\n    # TODO: Complete the implementation"
   },
   "validation": {
     "type": "ai_code",

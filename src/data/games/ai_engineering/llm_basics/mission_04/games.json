@@ -1,7 +1,7 @@
 {
   "title": "Embeddings",
   "initialState": {
-    "content": "def transform(df):\n    # TODO: Transform dataframe for Embeddings\n    return df"
+    "content": "import torch\nimport torch.nn as nn\n\nclass EmbeddingLayer(nn.Module):\n    def __init__(self, vocab_size, embed_dim, max_length):\n        super().__init__()\n        self.token_embedding = nn.Embedding(vocab_size, embed_dim)\n        self.position_embedding = nn.Embedding(max_length, embed_dim)\n\n    def forward(self, token_ids):\n        \"\"\"\n        Add token and position embeddings\n        \"\"\"\n        batch_size, seq_length = token_ids.size()\n\n        # Token embeddings\n        token_embeds = self.token_embedding(token_ids)\n\n        # Position embeddings\n        positions = torch.arange(seq_length, device=token_ids.device).unsqueeze(0)\n        pos_embeds = self.position_embedding(positions)\n\n        # Combine embeddings\n        embeddings = token_embeds + pos_embeds\n\n        return embeddings\\n    # TODO: Complete the implementation"
   },
   "validation": {
     "type": "ai_code",

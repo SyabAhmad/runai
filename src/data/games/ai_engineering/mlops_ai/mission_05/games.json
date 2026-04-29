@@ -1,7 +1,7 @@
 {
-  "title": "A/B Testing",
+  "title": "mlops ai Mission 5",
   "initialState": {
-    "content": "from sklearn import preprocessing\n\ndef normalize(X):\n    # TODO: Normalize data for A/B Testing\n    return X"
+    "content": "def solve_mission_5():\n    # TODO: Implement solution for mlops_ai mission 5\n    return \"Mission 5 completed\"\\n    # TODO: Complete the implementation"
   },
   "validation": {
     "type": "ai_code",

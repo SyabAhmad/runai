@@ -1,7 +1,7 @@
 {
-  "title": "Hyperparameter Tuning",
+  "title": "fine tuning models Mission 7",
   "initialState": {
-    "content": "def build_model():\n    # TODO: Build model for Hyperparameter Tuning\n    return None"
+    "content": "def solve_mission_7():\n    # TODO: Implement solution for fine_tuning_models mission 7\n    return \"Mission 7 completed\"\\n    # TODO: Complete the implementation"
   },
   "validation": {
     "type": "ai_code",

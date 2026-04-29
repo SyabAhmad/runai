@@ -1,0 +1,7 @@
+{
+  "mission_10": [
+    "Overfitting occurs when model performs well on training but poorly on new data",
+    "Regularization techniques include L1/L2 penalties",
+    "Early stopping prevents overfitting"
+  ]
+}

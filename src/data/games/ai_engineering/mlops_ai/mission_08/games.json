@@ -1,7 +1,7 @@
 {
-  "title": "Drift Detection",
+  "title": "mlops ai Mission 8",
   "initialState": {
-    "content": "def predict(model, X_test):\n    # TODO: Make predictions for Drift Detection\n    return []"
+    "content": "def solve_mission_8():\n    # TODO: Implement solution for mlops_ai mission 8\n    return \"Mission 8 completed\"\\n    # TODO: Complete the implementation"
   },
   "validation": {
     "type": "ai_code",

@@ -1,7 +1,7 @@
 {
   "title": "Attention Mechanism",
   "initialState": {
-    "content": "def process(input_data):\n    \"\"\"\n    Attention Mechanism: Process the input data correctly.\n    \"\"\"\n    # TODO: Add your implementation\n    pass"
+    "content": "import torch\nimport torch.nn.functional as F\n\ndef scaled_dot_product_attention(query, key, value, mask=None):\n    \"\"\"\n    Compute scaled dot-product attention\n    \"\"\"\n    # Calculate attention scores\n    scores = torch.matmul(query, key.transpose(-2, -1))\n    scores = scores / (key.size(-1) ** 0.5)  # Scale by sqrt(d_k)\n\n    # Apply mask if provided\n    if mask is not None:\n        scores = scores.masked_fill(mask == 0, float('-inf'))\n\n    # Apply softmax to get attention weights\n    attention_weights = F.softmax(scores, dim=-1)\n\n    # Apply attention to values\n    output = torch.matmul(attention_weights, value)\n\n    return output, attention_weights\\n    # TODO: Complete the implementation"
   },
   "validation": {
     "type": "ai_code",

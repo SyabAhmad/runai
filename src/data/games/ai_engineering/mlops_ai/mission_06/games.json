@@ -1,7 +1,7 @@
 {
-  "title": "Canary Deployment",
+  "title": "mlops ai Mission 6",
   "initialState": {
-    "content": "def evaluate(y_true, y_pred):\n    # TODO: Calculate metric for Canary Deployment\n    return 0.0"
+    "content": "def solve_mission_6():\n    # TODO: Implement solution for mlops_ai mission 6\n    return \"Mission 6 completed\"\\n    # TODO: Complete the implementation"
   },
   "validation": {
     "type": "ai_code",

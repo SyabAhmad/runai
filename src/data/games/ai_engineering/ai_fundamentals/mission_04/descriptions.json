@@ -1,0 +1,3 @@
+{
+  "mission_04": "Create an unsupervised learning system that implements K-means clustering and hierarchical clustering algorithms. Include data preprocessing, cluster visualization, and evaluation metrics like silhouette score."
+}

@@ -1,7 +1,7 @@
 {
-  "title": "Document Loading",
+  "title": "rag systems Mission 1",
   "initialState": {
-    "content": "def solve(data):\n    # TODO: Implement solution for Document Loading\n    return result"
+    "content": "def solve_mission_1():\n    # TODO: Implement solution for rag_systems mission 1\n    return \"Mission 1 completed\"\\n    # TODO: Complete the implementation"
   },
   "validation": {
     "type": "ai_code",

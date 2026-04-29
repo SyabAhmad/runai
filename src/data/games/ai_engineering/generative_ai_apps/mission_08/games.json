@@ -1,7 +1,7 @@
 {
-  "title": "Content Moderation",
+  "title": "generative ai apps Mission 8",
   "initialState": {
-    "content": "def predict(model, X_test):\n    # TODO: Make predictions for Content Moderation\n    return []"
+    "content": "def solve_mission_8():\n    # TODO: Implement solution for generative_ai_apps mission 8\n    return \"Mission 8 completed\"\\n    # TODO: Complete the implementation"
   },
   "validation": {
     "type": "ai_code",

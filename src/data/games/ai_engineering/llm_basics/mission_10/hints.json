@@ -1,0 +1,7 @@
+{
+  "mission_10": [
+    "Few-shot learning provides examples in the prompt",
+    "Task description + examples + query format",
+    "Models learn from patterns in the examples"
+  ]
+}
