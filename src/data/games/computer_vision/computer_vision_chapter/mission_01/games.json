@@ -1,14 +1,17 @@
 {
   "title": "Image Loading",
   "initialState": {
-    "content": "def computer_vision_chapter_task_1():\n    # TODO: Load and display images with OpenCV\n    pass"
+    "content": "import cv2\nimport matplotlib.pyplot as plt\n\n# TODO: Load and display an image\n# Load \"image.jpg\" using cv2.imread()\n# Display it using matplotlib\n"
   },
   "validation": {
     "type": "ai_code",
     "rules": [
-      "must_include:TODO"
+      "must_include:cv2.imread",
+      "must_include:plt.imshow",
+      "must_include:plt.show"
     ]
   },
   "id": "mission_01",
-  "type": "ai_code"
+  "type": "ai_code",
+  "xpReward": 100
 }

@@ -1,7 +1,7 @@
 {
   "mission_09": [
-    "Start by understanding the cloud functions requirements.",
-    "Check the documentation for relevant commands or APIs.",
-    "Test your solution step by step before submitting."
+    "Azure Monitor collects metrics and logs from resources",
+    "Diagnostic settings route logs to Log Analytics workspace",
+    "You can monitor CPU, memory, disk, and network metrics"
   ]
 }

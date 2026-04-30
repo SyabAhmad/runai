@@ -1,14 +1,17 @@
 {
-  "title": "Conditional Logic",
+  "title": "Error Handling",
   "initialState": {
-    "content": "# Conditional Logic\n# TODO: Implement if-else conditions\n"
+    "content": "#!/bin/bash\n# Create a script that checks if a command succeeded\n# Use $? to check the exit code (0 = success)\n# Print \"Success\" or \"Failed\" accordingly\n\n"
   },
   "validation": {
     "type": "terminal",
     "rules": [
-      "must_include:TODO"
+      "must_include:$?",
+      "must_include:if",
+      "must_include:exit"
     ]
   },
   "id": "mission_07",
-  "type": "terminal"
+  "type": "terminal",
+  "xpReward": 150
 }

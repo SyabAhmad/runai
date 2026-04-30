@@ -1,7 +1,7 @@
 {
   "mission_08": [
-    "Start by understanding the feature detection requirements.",
-    "Check the documentation for relevant commands or APIs.",
-    "Test your solution step by step before submitting."
+    "cv2.rectangle(img, (x,y), (x+w, y+h), color, thickness)",
+    "Green in BGR is (0, 255, 0)",
+    "Coordinates: (x,y) is top-left, (x+w,y+h) is bottom-right"
   ]
 }

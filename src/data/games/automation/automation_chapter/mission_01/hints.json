@@ -1,7 +1,7 @@
 {
   "mission_01": [
-    "Start by understanding the list files and directories requirements.",
-    "Check the documentation for relevant commands or APIs.",
-    "Test your solution step by step before submitting."
+    "Use the 'echo' command followed by your message in quotes.",
+    "The syntax is: echo \"your message here\"",
+    "Make sure to include the shebang line #!/bin/bash at the top."
   ]
 }

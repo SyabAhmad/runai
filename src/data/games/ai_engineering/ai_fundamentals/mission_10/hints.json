@@ -1,7 +1,7 @@
 {
   "mission_10": [
-    "Overfitting occurs when model performs well on training but poorly on new data",
-    "Regularization techniques include L1/L2 penalties",
-    "Early stopping prevents overfitting"
+    "Confusion matrix shows true positives, false positives, etc.",
+    "ROC curve plots true positive rate vs false positive rate",
+    "F1-score balances precision and recall"
   ]
 }

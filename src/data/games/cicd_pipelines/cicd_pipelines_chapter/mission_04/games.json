@@ -1,14 +1,15 @@
 {
-  "title": "Artifact Management",
+  "title": "Linting",
   "initialState": {
-    "content": "# Artifact Management\n# TODO: Store and retrieve build artifacts\nstages:\n  - build\n  - test\n  - deploy"
+    "content": "[\"checkout\", \"build\"]"
   },
   "validation": {
     "type": "pipeline",
     "rules": [
-      "must_include:TODO"
+      "must_include:lint"
     ]
   },
   "id": "mission_04",
-  "type": "pipeline"
+  "type": "pipeline",
+  "xpReward": 150
 }

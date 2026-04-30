@@ -1,7 +1,7 @@
 {
   "mission_06": [
-    "Start by understanding the environment variables requirements.",
-    "Check the documentation for relevant commands or APIs.",
-    "Test your solution step by step before submitting."
+    "Deployment often uses specialized actions like azure/webapps-deploy",
+    "Make sure build artifacts are available",
+    "Consider environment-specific configurations"
   ]
 }

@@ -1,7 +1,7 @@
 {
   "mission_09": [
-    "Training set: 60-80%, Validation: 10-20%, Test: 10-20%",
-    "Never use test data for model selection",
-    "Validation helps tune hyperparameters"
+    "L1 regularization (Lasso) encourages sparsity",
+    "L2 regularization (Ridge) prevents large weights",
+    "Dropout randomly deactivates neurons during training"
   ]
 }

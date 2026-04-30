@@ -1,14 +1,17 @@
 {
-  "title": "Gaussian Blur",
+  "title": "Object Detection Basics",
   "initialState": {
-    "content": "def computer_vision_chapter_task_4():\n    # TODO: Apply Gaussian blur to reduce noise\n    pass"
+    "content": "import cv2\n\n# TODO: Use a pre-trained model for object detection\n# Load the COCO SSD model using cv2.dnn.readNetFromTensorflow()\n# Or use Haar cascades for face detection\n"
   },
   "validation": {
     "type": "ai_code",
     "rules": [
-      "must_include:TODO"
+      "must_include:dnn",
+      "must_include:readNet",
+      "must_include:detection"
     ]
   },
   "id": "mission_04",
-  "type": "ai_code"
+  "type": "ai_code",
+  "xpReward": 150
 }

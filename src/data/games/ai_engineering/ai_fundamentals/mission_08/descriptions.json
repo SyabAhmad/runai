@@ -1,3 +1,3 @@
 {
-  "mission_08": "Code the gradient descent optimization algorithm with learning rate and convergence criteria."
+  "mission_08": "Create robust data splitting functions that implement train/validation/test splits with stratification, cross-validation, and time series splitting. Include proper randomization and ensure no data leakage."
 }

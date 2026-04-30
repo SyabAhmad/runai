@@ -1,14 +1,15 @@
 {
-  "title": "Rollback Procedures",
+  "title": "Notifications",
   "initialState": {
-    "content": "# Rollback Procedures\n# TODO: Implement rollback on failure\nstages:\n  - build\n  - test\n  - deploy"
+    "content": "[\"checkout\", \"build\", \"test\", \"deploy\"]"
   },
   "validation": {
     "type": "pipeline",
     "rules": [
-      "must_include:TODO"
+      "must_include:notify"
     ]
   },
   "id": "mission_09",
-  "type": "pipeline"
+  "type": "pipeline",
+  "xpReward": 200
 }

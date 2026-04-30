@@ -1,14 +1,17 @@
 {
-  "title": "Process Management",
+  "title": "Loops",
   "initialState": {
-    "content": "# Process Management\n# TODO: Monitor and control system processes\n"
+    "content": "#!/bin/bash\n# Create a for loop that prints numbers 1 through 5\n# Use the seq command or brace expansion {1..5}\n\n"
   },
   "validation": {
     "type": "terminal",
     "rules": [
-      "must_include:TODO"
+      "must_include:for",
+      "must_include:do",
+      "must_include:done"
     ]
   },
   "id": "mission_04",
-  "type": "terminal"
+  "type": "terminal",
+  "xpReward": 150
 }

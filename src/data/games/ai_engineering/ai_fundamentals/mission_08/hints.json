@@ -1,7 +1,7 @@
 {
   "mission_08": [
-    "Gradient descent finds the minimum of the loss function",
-    "Learning rate controls step size",
-    "Stochastic, mini-batch, and batch variants exist"
+    "Use sklearn's train_test_split with stratify parameter",
+    "Implement k-fold cross-validation from scratch",
+    "Consider time-based splitting for temporal data"
   ]
 }

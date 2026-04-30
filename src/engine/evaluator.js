@@ -11,7 +11,10 @@ export function evaluateMission(mission, userInput) {
     case "sql":
       return evaluateSqlRules(content, validation.rules);
     case "command":
+    case "terminal":
       return evaluateCommandRules(content, validation.rules);
+    case "pipeline":
+      return evaluatePipelineRules(content, validation.rules);
     case "ai_code":
       return evaluateAiCodeRules(content, validation.rules, validation.tests);
     default:
@@ -48,13 +51,35 @@ function evaluateCommandRules(input, rules) {
   const lowerInput = normalizeForRuleMatch(input);
   for (const rule of rules) {
     if (rule.startsWith("must_include:")) {
-      const keyword = normalizeForRuleMatch(rule.slice("must_include:".length));
-      if (!lowerInput.includes(keyword)) {
+      const keyword = rule.slice("must_include:".length).toLowerCase();
+      if (!lowerInput.includes(normalizeForRuleMatch(keyword))) {
         return { success: false, message: `Missing required flag: ${keyword}` };
       }
     }
   }
   return { success: true, message: "Command is valid!" };
+}
+
+function evaluatePipelineRules(input, rules) {
+  let pipeline;
+  try {
+    pipeline = JSON.parse(input);
+    if (!Array.isArray(pipeline)) return { success: false, message: "Pipeline must be a JSON array of steps" };
+  } catch {
+    return { success: false, message: "Invalid pipeline format. Use JSON array like ['build','test','deploy']" };
+  }
+
+  const lowerPipeline = pipeline.map(s => String(s).toLowerCase());
+
+  for (const rule of rules) {
+    if (rule.startsWith("must_include:")) {
+      const keyword = rule.slice("must_include:".length).toLowerCase();
+      if (!lowerPipeline.includes(keyword)) {
+        return { success: false, message: `Pipeline missing step: ${keyword}` };
+      }
+    }
+  }
+  return { success: true, message: "Pipeline is valid!" };
 }
 
 function evaluateAiCodeRules(input, rules, tests) {

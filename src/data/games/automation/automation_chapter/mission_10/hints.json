@@ -1,7 +1,8 @@
 {
   "mission_10": [
-    "Start by understanding the script debugging requirements.",
-    "Check the documentation for relevant commands or APIs.",
-    "Test your solution step by step before submitting."
+    "Use date +%Y%m%d_%H%M%S to create a timestamp",
+    "Check if source directory exists with -d flag",
+    "rsync -av is a good choice for backups",
+    "Log to a file with >> backup.log"
   ]
 }

@@ -1,7 +1,23 @@
 {
   "title": "Jetson Deploy",
+  "description": "Intro to deploying on Jetson devices: implement a deployment function and validate output.",
+  "objectives": [
+    "Understand the Jetson deployment problem",
+    "Implement the solve function to produce a valid result",
+    "Validate the solution using given rules"
+  ],
+  "prerequisites": [],
+  "steps": [
+    "Review problem description in the prompt",
+    "Implement solve(data) in the provided skeleton",
+    "Run the validation checks to ensure output matches rules"
+  ],
+  "hints": [
+    "Focus on the contract of the solve function",
+    "Make sure the return value matches expected structure"
+  ],
   "initialState": {
-    "content": "def solve(data):\n    # TODO: Implement solution for Jetson Deploy\n    return result"
+    "content": "def solve(data):\\n    # TODO: Implement solution for Jetson Deploy\\n    return result"
   },
   "validation": {
     "type": "ai_code",
@@ -12,5 +28,9 @@
   },
   "id": "mission_01",
   "type": "ai_code",
-  "xpReward": 60
+  "xpReward": 60,
+  "durationMinutes": 20,
+  "difficulty": "easy",
+  "assets": [],
+  "localizationKeys": []
 }

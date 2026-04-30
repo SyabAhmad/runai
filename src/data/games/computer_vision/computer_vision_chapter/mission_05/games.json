@@ -1,14 +1,17 @@
 {
-  "title": "Thresholding",
+  "title": "Image Augmentation",
   "initialState": {
-    "content": "def computer_vision_chapter_task_5():\n    # TODO: Apply binary thresholding\n    pass"
+    "content": "import cv2\nimport numpy as np\n\nimg = cv2.imread(\"image.jpg\")\n# TODO: Apply transformations to training images\n# Try: rotation, flipping, brightness adjustment\n"
   },
   "validation": {
     "type": "ai_code",
     "rules": [
-      "must_include:TODO"
+      "must_include:flip",
+      "must_include:rotate",
+      "must_include:augment"
     ]
   },
   "id": "mission_05",
-  "type": "ai_code"
+  "type": "ai_code",
+  "xpReward": 150
 }

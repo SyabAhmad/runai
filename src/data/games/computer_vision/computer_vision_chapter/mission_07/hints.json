@@ -1,7 +1,7 @@
 {
   "mission_07": [
-    "Start by understanding the histogram equalization requirements.",
-    "Check the documentation for relevant commands or APIs.",
-    "Test your solution step by step before submitting."
+    "Images need to be resized to model input size (224x224 for MobileNet)",
+    "preprocess_input() normalizes pixel values",
+    "model.predict() returns predictions"
   ]
 }

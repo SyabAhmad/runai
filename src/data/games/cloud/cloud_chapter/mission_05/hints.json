@@ -1,7 +1,7 @@
 {
   "mission_05": [
-    "Start by understanding the iam policies requirements.",
-    "Check the documentation for relevant commands or APIs.",
-    "Test your solution step by step before submitting."
+    "Virtual networks isolate your cloud resources logically",
+    "Address prefix 10.0.0.0/16 gives you 65534 usable IPs",
+    "You can also create subnets within the vnet"
   ]
 }

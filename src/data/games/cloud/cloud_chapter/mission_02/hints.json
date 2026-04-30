@@ -1,7 +1,7 @@
 {
   "mission_02": [
-    "Start by understanding the vpc setup requirements.",
-    "Check the documentation for relevant commands or APIs.",
-    "Test your solution step by step before submitting."
+    "Resource groups are containers for Azure resources",
+    "The syntax is: az group create --name NAME --location LOCATION",
+    "eastus is a common Azure region"
   ]
 }

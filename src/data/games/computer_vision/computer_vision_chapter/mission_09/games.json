@@ -1,14 +1,18 @@
 {
-  "title": "Image Blending",
+  "title": "Video Processing",
   "initialState": {
-    "content": "def computer_vision_chapter_task_9():\n    # TODO: Blend two images together\n    pass"
+    "content": "import cv2\n\n# TODO: Process video frames for CV tasks\n# Open video with cv2.VideoCapture(0) for webcam\n# Read frame by frame in a loop\n# Break on 'q' key press\n"
   },
   "validation": {
     "type": "ai_code",
     "rules": [
-      "must_include:TODO"
+      "must_include:VideoCapture",
+      "must_include:read",
+      "must_include:waitKey",
+      "must_include:break"
     ]
   },
   "id": "mission_09",
-  "type": "ai_code"
+  "type": "ai_code",
+  "xpReward": 200
 }

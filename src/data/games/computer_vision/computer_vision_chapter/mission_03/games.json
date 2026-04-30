@@ -1,14 +1,17 @@
 {
-  "title": "Image Resizing",
+  "title": "Edge Detection",
   "initialState": {
-    "content": "def computer_vision_chapter_task_3():\n    # TODO: Resize images to specific dimensions\n    pass"
+    "content": "import cv2\nimport matplotlib.pyplot as plt\n\nimg = cv2.imread(\"image.jpg\")\ngray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)\n# TODO: Apply Canny edge detection\n# Use cv2.Canny() with thresholds 100 and 200\n"
   },
   "validation": {
     "type": "ai_code",
     "rules": [
-      "must_include:TODO"
+      "must_include:Canny",
+      "must_include:100",
+      "must_include:200"
     ]
   },
   "id": "mission_03",
-  "type": "ai_code"
+  "type": "ai_code",
+  "xpReward": 100
 }

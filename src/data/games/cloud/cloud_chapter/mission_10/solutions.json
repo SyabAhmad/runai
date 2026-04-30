@@ -1,3 +1,3 @@
 {
-  "mission_10": "aws cloudwatch put-dashboard"
+  "mission_10": "az group create --name runai-app-rg --location eastus\naz appservice plan create --name runai-plan --resource-group runai-app-rg --sku B1\naz webapp create --name runai-webapp --resource-group runai-app-rg --plan runai-plan\necho \"Full app stack deployed to cloud!\""
 }

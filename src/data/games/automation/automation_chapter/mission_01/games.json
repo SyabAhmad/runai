@@ -1,14 +1,16 @@
 {
-  "title": "List Files and Directories",
+  "title": "Shell Script Basics",
   "initialState": {
-    "content": "# List Files and Directories\n# TODO: Use ls and find commands to locate files\n"
+    "content": "#!/bin/bash\n# Create a shell script that prints \"Hello, Bestie!\" to the terminal\n# Use the echo command\n\n"
   },
   "validation": {
     "type": "terminal",
     "rules": [
-      "must_include:TODO"
+      "must_include:echo",
+      "must_include:Hello"
     ]
   },
   "id": "mission_01",
-  "type": "terminal"
+  "type": "terminal",
+  "xpReward": 100
 }

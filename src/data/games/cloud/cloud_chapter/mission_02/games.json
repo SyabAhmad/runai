@@ -1,14 +1,17 @@
 {
-  "title": "VPC Setup",
+  "title": "Resource Groups",
   "initialState": {
-    "content": "# VPC Setup\n# TODO: Create a virtual private cloud\n"
+    "content": "# TODO: Create a resource group named \"runai-rg\" in eastus\n# Use: az group create --name NAME --location LOCATION\n"
   },
   "validation": {
     "type": "terminal",
     "rules": [
-      "must_include:TODO"
+      "must_include:az group create",
+      "must_include:runai-rg",
+      "must_include:eastus"
     ]
   },
   "id": "mission_02",
-  "type": "terminal"
+  "type": "terminal",
+  "xpReward": 100
 }

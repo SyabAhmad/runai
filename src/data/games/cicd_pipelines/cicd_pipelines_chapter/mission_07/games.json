@@ -1,14 +1,15 @@
 {
-  "title": "Branch Strategies",
+  "title": "Artifact Management",
   "initialState": {
-    "content": "# Branch Strategies\n# TODO: Implement branch-based workflows\nstages:\n  - build\n  - test\n  - deploy"
+    "content": "[\"checkout\", \"build\"]"
   },
   "validation": {
     "type": "pipeline",
     "rules": [
-      "must_include:TODO"
+      "must_include:push"
     ]
   },
   "id": "mission_07",
-  "type": "pipeline"
+  "type": "pipeline",
+  "xpReward": 150
 }

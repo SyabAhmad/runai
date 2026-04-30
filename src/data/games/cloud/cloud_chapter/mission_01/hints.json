@@ -1,7 +1,7 @@
 {
   "mission_01": [
-    "Start by understanding the cli configuration requirements.",
-    "Check the documentation for relevant commands or APIs.",
-    "Test your solution step by step before submitting."
+    "Azure uses \"az login\" for authentication",
+    "AWS uses \"aws configure\" with access keys",
+    "After login, verify with \"az account show\" or \"aws sts get-caller-identity\""
   ]
 }

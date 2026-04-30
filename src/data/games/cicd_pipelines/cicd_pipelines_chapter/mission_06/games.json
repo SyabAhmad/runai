@@ -1,14 +1,15 @@
 {
-  "title": "Environment Variables",
+  "title": "Deployment",
   "initialState": {
-    "content": "# Environment Variables\n# TODO: Manage secrets and env vars\nstages:\n  - build\n  - test\n  - deploy"
+    "content": "[\"checkout\", \"build\", \"test\"]"
   },
   "validation": {
     "type": "pipeline",
     "rules": [
-      "must_include:TODO"
+      "must_include:deploy"
     ]
   },
   "id": "mission_06",
-  "type": "pipeline"
+  "type": "pipeline",
+  "xpReward": 150
 }

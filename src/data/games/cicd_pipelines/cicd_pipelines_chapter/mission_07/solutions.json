@@ -1,3 +1,3 @@
 {
-  "mission_07": "only: [main, develop]"
+  "mission_07": "steps:\n  - name: Checkout Code\n    uses: actions/checkout@v3\n  - name: Build\n    run: npm run build\n  - name: Upload Artifact\n    uses: actions/upload-artifact@v3\n    with:\n      name: build-output\n      path: dist/"
 }

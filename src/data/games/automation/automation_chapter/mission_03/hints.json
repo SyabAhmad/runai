@@ -1,7 +1,7 @@
 {
   "mission_03": [
-    "Start by understanding the file permissions requirements.",
-    "Check the documentation for relevant commands or APIs.",
-    "Test your solution step by step before submitting."
+    "Use \"if [ condition ]; then\" syntax",
+    "The -f flag checks if a file exists",
+    "End the block with \"fi\" (if backwards)"
   ]
 }

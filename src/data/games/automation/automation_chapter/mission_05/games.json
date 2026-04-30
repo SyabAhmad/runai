@@ -1,14 +1,17 @@
 {
-  "title": "Environment Variables",
+  "title": "Functions",
   "initialState": {
-    "content": "# Environment Variables\n# TODO: Set and export environment variables\n"
+    "content": "#!/bin/bash\n# Create a function called \"greet\" that takes a name parameter\n# Call the function with \"Bestie\" as the argument\n\n"
   },
   "validation": {
     "type": "terminal",
     "rules": [
-      "must_include:TODO"
+      "must_include:greet()",
+      "must_include:function",
+      "must_include:greet Bestie"
     ]
   },
   "id": "mission_05",
-  "type": "terminal"
+  "type": "terminal",
+  "xpReward": 150
 }

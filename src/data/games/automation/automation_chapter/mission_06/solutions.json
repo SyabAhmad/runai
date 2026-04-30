@@ -1,3 +1,3 @@
 {
-  "mission_06": "for f in *.txt; do echo $f; done"
+  "mission_06": "#!/bin/bash\nwhile read line; do\n  echo \"Line: $line\"\ndone < \"$1\""
 }

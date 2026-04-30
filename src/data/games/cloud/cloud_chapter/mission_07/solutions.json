@@ -1,3 +1,3 @@
 {
-  "mission_07": "aws autoscaling create-auto-scaling-group"
+  "mission_07": "az functionapp create --resource-group runai-rg --name runai-func --runtime dotnet --runtime-version 3.1 --consumption-plan\necho \"Serverless function deployed!\""
 }

@@ -1,7 +1,7 @@
 {
   "mission_04": [
-    "Start by understanding the process management requirements.",
-    "Check the documentation for relevant commands or APIs.",
-    "Test your solution step by step before submitting."
+    "Use \"for i in {1..5}; do ... done\" syntax",
+    "The \"do\" starts the loop body, \"done\" ends it",
+    "You can also use \"seq 5\" with backticks or $()"
   ]
 }

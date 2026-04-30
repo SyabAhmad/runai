@@ -1,14 +1,15 @@
 {
-  "title": "Deployment Stage",
+  "title": "Security Scans",
   "initialState": {
-    "content": "# Deployment Stage\n# TODO: Configure deployment to staging\nstages:\n  - build\n  - test\n  - deploy"
+    "content": "[\"checkout\", \"build\", \"test\"]"
   },
   "validation": {
     "type": "pipeline",
     "rules": [
-      "must_include:TODO"
+      "must_include:scan"
     ]
   },
   "id": "mission_05",
-  "type": "pipeline"
+  "type": "pipeline",
+  "xpReward": 150
 }

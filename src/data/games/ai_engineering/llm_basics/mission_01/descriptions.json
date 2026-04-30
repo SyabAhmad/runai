@@ -1,3 +1,3 @@
 {
-  "mission_01": "Implement the core Transformer architecture with encoder-decoder structure and self-attention layers."
+  "mission_01": "Implement the core Transformer architecture with encoder-decoder structure and self-attention layers. Create a complete transformer block with multi-head attention and feed-forward networks."
 }

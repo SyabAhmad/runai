@@ -1,14 +1,18 @@
 {
-  "title": "File Permissions",
+  "title": "Conditionals",
   "initialState": {
-    "content": "# File Permissions\n# TODO: Manage file permissions with chmod\n"
+    "content": "#!/bin/bash\n# Create a script that checks if a file exists using if-else\n# Use the -f test to check for file existence\n# Print \"File exists\" or \"File not found\"\n\n"
   },
   "validation": {
     "type": "terminal",
     "rules": [
-      "must_include:TODO"
+      "must_include:if",
+      "must_include:then",
+      "must_include:else",
+      "must_include:fi"
     ]
   },
   "id": "mission_03",
-  "type": "terminal"
+  "type": "terminal",
+  "xpReward": 100
 }

@@ -1,14 +1,15 @@
 {
-  "title": "Test Automation",
+  "title": "Test Integration",
   "initialState": {
-    "content": "# Test Automation\n# TODO: Run automated tests in CI\nstages:\n  - build\n  - test\n  - deploy"
+    "content": "[\"checkout\", \"build\"]"
   },
   "validation": {
     "type": "pipeline",
     "rules": [
-      "must_include:TODO"
+      "must_include:test"
     ]
   },
   "id": "mission_03",
-  "type": "pipeline"
+  "type": "pipeline",
+  "xpReward": 100
 }

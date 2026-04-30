@@ -1,7 +1,7 @@
 {
   "mission_04": [
-    "Start by understanding the storage buckets requirements.",
-    "Check the documentation for relevant commands or APIs.",
-    "Test your solution step by step before submitting."
+    "Storage account names must be globally unique and lowercase",
+    "Required params: --name, --resource-group, --location",
+    "Add --sku Standard_LRS for locally redundant storage"
   ]
 }

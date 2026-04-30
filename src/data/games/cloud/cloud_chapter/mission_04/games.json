@@ -1,14 +1,17 @@
 {
-  "title": "Storage Buckets",
+  "title": "Storage Accounts",
   "initialState": {
-    "content": "# Storage Buckets\n# TODO: Create and manage object storage\n"
+    "content": "# TODO: Create a storage account named \"runaistorage123\"\n# Use: az storage account create\n# Specify --resource-group and --location\n"
   },
   "validation": {
     "type": "terminal",
     "rules": [
-      "must_include:TODO"
+      "must_include:az storage account create",
+      "must_include:runaistorage123",
+      "must_include:--resource-group"
     ]
   },
   "id": "mission_04",
-  "type": "terminal"
+  "type": "terminal",
+  "xpReward": 150
 }

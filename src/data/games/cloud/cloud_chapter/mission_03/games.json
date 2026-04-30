@@ -1,14 +1,17 @@
 {
-  "title": "Instance Management",
+  "title": "VM Provisioning",
   "initialState": {
-    "content": "# Instance Management\n# TODO: Launch and manage VM instances\n"
+    "content": "# TODO: Deploy a virtual machine named \"runai-vm\"\n# Use: az vm create with --resource-group, --name, --image\n# Use ubuntu2204 as the image\n"
   },
   "validation": {
     "type": "terminal",
     "rules": [
-      "must_include:TODO"
+      "must_include:az vm create",
+      "must_include:runai-vm",
+      "must_include:ubuntu2204"
     ]
   },
   "id": "mission_03",
-  "type": "terminal"
+  "type": "terminal",
+  "xpReward": 100
 }

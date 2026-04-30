@@ -1,7 +1,7 @@
 {
   "mission_02": [
-    "Start by understanding the text filtering requirements.",
-    "Check the documentation for relevant commands or APIs.",
-    "Test your solution step by step before submitting."
+    "Variables are assigned with name=value (no spaces around =)",
+    "Access variables with $name or ${name}",
+    "Positional parameters are $1, $2, etc. for script arguments"
   ]
 }

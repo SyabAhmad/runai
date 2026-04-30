@@ -1,7 +1,7 @@
 {
   "mission_05": [
-    "Start by understanding the deployment stage requirements.",
-    "Check the documentation for relevant commands or APIs.",
-    "Test your solution step by step before submitting."
+    "npm audit checks for vulnerabilities in dependencies",
+    "Consider using OWASP ZAP for web app security",
+    "Fail the build on critical vulnerabilities"
   ]
 }

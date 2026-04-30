@@ -1,14 +1,17 @@
 {
-  "title": "Cloud Functions",
+  "title": "Monitoring",
   "initialState": {
-    "content": "# Cloud Functions\n# TODO: Deploy serverless functions\n"
+    "content": "# TODO: Enable monitoring and diagnostics for the VM\n# Use: az monitor diagnostic-settings create\n# Log to a workspace named \"runai-workspace\"\n"
   },
   "validation": {
     "type": "terminal",
     "rules": [
-      "must_include:TODO"
+      "must_include:az monitor",
+      "must_include:diagnostic-settings",
+      "must_include:runai-workspace"
     ]
   },
   "id": "mission_09",
-  "type": "terminal"
+  "type": "terminal",
+  "xpReward": 200
 }

@@ -1,3 +1,3 @@
 {
-  "mission_03": "Permissions updated"
+  "mission_03": "Perfect! Conditional logic lets your scripts make decisions. The [ ] is a test command, and -f checks for file existence."
 }

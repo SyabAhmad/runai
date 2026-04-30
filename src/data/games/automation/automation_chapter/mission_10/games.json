@@ -1,14 +1,18 @@
 {
-  "title": "Script Debugging",
+  "title": "Automation Capstone",
   "initialState": {
-    "content": "# Script Debugging\n# TODO: Debug bash scripts with set flags\n"
+    "content": "#!/bin/bash\n# Build a complete automated backup script that:\n# 1. Takes source and destination as arguments\n# 2. Checks if source exists\n# 3. Creates a timestamped backup\n# 4. Uses rsync or cp to copy files\n# 5. Logs the result\n\n"
   },
   "validation": {
     "type": "terminal",
     "rules": [
-      "must_include:TODO"
+      "must_include:if",
+      "must_include:rsync",
+      "must_include:date",
+      "must_include:echo"
     ]
   },
   "id": "mission_10",
-  "type": "terminal"
+  "type": "terminal",
+  "xpReward": 200
 }

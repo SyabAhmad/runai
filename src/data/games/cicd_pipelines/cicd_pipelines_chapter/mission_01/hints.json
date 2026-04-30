@@ -1,7 +1,7 @@
 {
   "mission_01": [
-    "Start by understanding the pipeline structure requirements.",
-    "Check the documentation for relevant commands or APIs.",
-    "Test your solution step by step before submitting."
+    "Start with checking out the code (already done)",
+    "Build should come before test",
+    "Deploy should be the final step"
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "title": "Load Balancers",
+  "title": "Containers",
   "initialState": {
-    "content": "# Load Balancers\n# TODO: Set up load distribution\n"
+    "content": "# TODO: Deploy a container instance named \"runai-container\"\n# Use: az container create with --image (use nginx)\n# Expose port 80\n"
   },
   "validation": {
     "type": "terminal",
     "rules": [
-      "must_include:TODO"
+      "must_include:az container create",
+      "must_include:nginx",
+      "must_include:--port 80"
     ]
   },
   "id": "mission_06",
-  "type": "terminal"
+  "type": "terminal",
+  "xpReward": 150
 }

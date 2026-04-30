@@ -1,0 +1,28 @@
+{
+  "templates": {
+    "A": {
+      "description": "Concept Introduction",
+      "objectives": ["Understand the concept","Identify when to apply it"],
+      "steps": ["Explain concept","Show example","Guided practice"],
+      "assessment": {"type": "quiz", "questions": []}
+    },
+    "B": {
+      "description": "Guided Practice",
+      "objectives": ["Apply the concept with guidance"],
+      "steps": ["Guided activities","Hints provided"],
+      "assessment": {"type": "hands-on", "task": "Code snippet"}
+    },
+    "C": {
+      "description": "Application Challenge",
+      "objectives": ["Solve a realistic problem"],
+      "steps": ["Problem statement","Constraints","Test cases"],
+      "assessment": {"type": "auto-check"}
+    },
+    "D": {
+      "description": "Reflection",
+      "objectives": ["Articulate what was learned"],
+      "steps": ["Summarize key takeaways","Write a short explanation"],
+      "assessment": {"type": "text"}
+    }
+  }
+}

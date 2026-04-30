@@ -1,7 +1,8 @@
 {
   "mission_10": [
-    "Start by understanding the pipeline caching requirements.",
-    "Check the documentation for relevant commands or APIs.",
-    "Test your solution step by step before submitting."
+    "Start with the trigger event (on: push)",
+    "Use jobs to organize related steps",
+    "Always run faster checks (lint) before slower ones (build, deploy)",
+    "Add notifications at the end"
   ]
 }

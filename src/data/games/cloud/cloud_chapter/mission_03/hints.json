@@ -1,7 +1,7 @@
 {
   "mission_03": [
-    "Start by understanding the instance management requirements.",
-    "Check the documentation for relevant commands or APIs.",
-    "Test your solution step by step before submitting."
+    "VM creation needs: --resource-group, --name, --image at minimum",
+    "ubuntu2204 is a common Linux image",
+    "You can also specify --admin-username and --generate-ssh-keys"
   ]
 }

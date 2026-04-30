@@ -1,7 +1,7 @@
 {
   "mission_06": [
-    "Start by understanding the loops and iteration requirements.",
-    "Check the documentation for relevant commands or APIs.",
-    "Test your solution step by step before submitting."
+    "Use \"while read line; do ... done < file.txt\" to read a file",
+    "The \"read\" command reads a line into a variable",
+    "You can also use \"cat file | while read line\""
   ]
 }

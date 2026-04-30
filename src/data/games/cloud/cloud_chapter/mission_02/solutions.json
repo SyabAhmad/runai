@@ -1,3 +1,3 @@
 {
-  "mission_02": "aws ec2 create-vpc --cidr 10.0.0.0/16"
+  "mission_02": "az group create --name runai-rg --location eastus\necho \"Resource group created successfully!\""
 }

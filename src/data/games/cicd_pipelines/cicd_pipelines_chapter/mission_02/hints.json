@@ -1,7 +1,7 @@
 {
   "mission_02": [
-    "Start by understanding the build stage requirements.",
-    "Check the documentation for relevant commands or APIs.",
-    "Test your solution step by step before submitting."
+    "Use \"npm run build\" for Node.js projects",
+    "The run keyword executes shell commands",
+    "Add a name for each step"
   ]
 }

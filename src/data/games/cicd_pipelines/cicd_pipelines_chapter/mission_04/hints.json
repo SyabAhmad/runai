@@ -1,7 +1,7 @@
 {
   "mission_04": [
-    "Start by understanding the artifact management requirements.",
-    "Check the documentation for relevant commands or APIs.",
-    "Test your solution step by step before submitting."
+    "ESLint is the standard for JavaScript/React linting",
+    "Run lint before tests to fail fast on style issues",
+    "Use \"npm run lint\" if configured in package.json"
   ]
 }

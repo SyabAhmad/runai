@@ -1,14 +1,18 @@
 {
   "title": "Pipeline Structure",
   "initialState": {
-    "content": "# Pipeline Structure\n# TODO: Define stages in a CI pipeline\nstages:\n  - build\n  - test\n  - deploy"
+    "content": "[\"checkout\"]"
   },
   "validation": {
     "type": "pipeline",
     "rules": [
-      "must_include:TODO"
+      "must_include:checkout",
+      "must_include:build",
+      "must_include:test",
+      "must_include:deploy"
     ]
   },
   "id": "mission_01",
-  "type": "pipeline"
+  "type": "pipeline",
+  "xpReward": 100
 }

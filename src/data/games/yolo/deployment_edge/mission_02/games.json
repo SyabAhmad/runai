@@ -1,7 +1,22 @@
 {
   "title": "Raspberry Pi",
+  "description": "Practice data processing on a Raspberry Pi-like environment.",
+  "objectives": [
+    "Implement a data processing function",
+    "Respect the input/output contract"
+  ],
+  "prerequisites": [],
+  "steps": [
+    "Review the problem statement",
+    "Implement process(input_data) according to the contract",
+    "Run the function with sample input and verify output"
+  ],
+  "hints": [
+    "Keep side effects minimal",
+    "Return value should align with the expected result"
+  ],
   "initialState": {
-    "content": "def process(input_data):\n    \"\"\"\n    Raspberry Pi: Process the input data correctly.\n    \"\"\"\n    # TODO: Add your implementation\n    pass"
+    "content": "def process(input_data):\\n    \"\"\"\\n    Raspberry Pi: Process the input data correctly.\\n    \"\"\"\\n    # TODO: Add your implementation\\n    pass"
   },
   "validation": {
     "type": "ai_code",
@@ -12,5 +27,9 @@
   },
   "id": "mission_02",
   "type": "ai_code",
-  "xpReward": 70
+  "xpReward": 70,
+  "durationMinutes": 25,
+  "difficulty": "easy",
+  "assets": [],
+  "localizationKeys": []
 }

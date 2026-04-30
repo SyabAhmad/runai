@@ -1,14 +1,18 @@
 {
-  "title": "Pipeline Caching",
+  "title": "Capstone Pipeline",
   "initialState": {
-    "content": "# Pipeline Caching\n# TODO: Cache dependencies for faster builds\nstages:\n  - build\n  - test\n  - deploy"
+    "content": "[\"checkout\"]"
   },
   "validation": {
     "type": "pipeline",
     "rules": [
-      "must_include:TODO"
+      "must_include:lint",
+      "must_include:test",
+      "must_include:build",
+      "must_include:deploy"
     ]
   },
   "id": "mission_10",
-  "type": "pipeline"
+  "type": "pipeline",
+  "xpReward": 200
 }

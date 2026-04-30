@@ -1,3 +1,3 @@
 {
-  "mission_01": "Pipeline structured"
+  "mission_01": "Perfect! A proper CI/CD pipeline flows from checkout → build → test → deploy. Each step depends on the previous one succeeding."
 }

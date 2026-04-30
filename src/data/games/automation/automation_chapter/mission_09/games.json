@@ -1,14 +1,17 @@
 {
-  "title": "Error Handling",
+  "title": "Process Management",
   "initialState": {
-    "content": "# Error Handling\n# TODO: Add error handling to scripts\n"
+    "content": "#!/bin/bash\n# Create a script that starts a background process\n# Use & to run a command in the background\n# Print the process ID (use $! to get the PID)\n\n"
   },
   "validation": {
     "type": "terminal",
     "rules": [
-      "must_include:TODO"
+      "must_include:&",
+      "must_include:$!",
+      "must_include:echo"
     ]
   },
   "id": "mission_09",
-  "type": "terminal"
+  "type": "terminal",
+  "xpReward": 200
 }

@@ -1,3 +1,3 @@
 {
-  "mission_02": "Filter text output with grep and awk. Complete this mission to earn XP."
+  "mission_02": "Learn to use variables and positional parameters ($1, $2, etc.) to make scripts dynamic and reusable."
 }

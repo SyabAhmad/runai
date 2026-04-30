@@ -1,3 +1,3 @@
 {
-  "mission_09": "rollback --version=previous"
+  "mission_09": "steps:\n  - name: Checkout Code\n    uses: actions/checkout@v3\n  - name: Build\n    run: npm run build\n  - name: Notify Slack\n    if: always()\n    uses: slackapi/slack-github-action@v1\n    with:\n      payload: '{\"text\":\"Build completed!\"}'\n    env:\n      SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }}"
 }

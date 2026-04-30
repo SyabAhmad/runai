@@ -1,14 +1,16 @@
 {
-  "title": "CLI Configuration",
+  "title": "Cloud CLI Setup",
   "initialState": {
-    "content": "# CLI Configuration\n# TODO: Configure cloud CLI tools\n"
+    "content": "# TODO: Configure cloud CLI and authenticate\n# Use: az login (Azure) or aws configure (AWS)\n# Print a success message\n"
   },
   "validation": {
     "type": "terminal",
     "rules": [
-      "must_include:TODO"
+      "must_include:az login",
+      "must_include:echo"
     ]
   },
   "id": "mission_01",
-  "type": "terminal"
+  "type": "terminal",
+  "xpReward": 100
 }

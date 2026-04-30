@@ -1,14 +1,18 @@
 {
-  "title": "Video Capture",
+  "title": "CV Capstone",
   "initialState": {
-    "content": "def computer_vision_chapter_task_10():\n    # TODO: Capture video from webcam\n    pass"
+    "content": "import cv2\nimport tensorflow as tf\n\n# TODO: Build an end-to-end image classification pipeline\n# 1. Load an image\n# 2. Preprocess it\n# 3. Load a pre-trained model\n# 4. Run inference\n# 5. Display results\n"
   },
   "validation": {
     "type": "ai_code",
     "rules": [
-      "must_include:TODO"
+      "must_include:imread",
+      "must_include:preprocess",
+      "must_include:predict",
+      "must_include:imshow"
     ]
   },
   "id": "mission_10",
-  "type": "ai_code"
+  "type": "ai_code",
+  "xpReward": 200
 }

@@ -1,7 +1,7 @@
 {
   "mission_04": [
-    "Start by understanding the gaussian blur requirements.",
-    "Check the documentation for relevant commands or APIs.",
-    "Test your solution step by step before submitting."
+    "OpenCV dnn module can load pre-trained models",
+    "Haar cascades are simpler but less accurate",
+    "COCO SSD can detect 80+ object types"
   ]
 }

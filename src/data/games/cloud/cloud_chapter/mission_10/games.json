@@ -1,14 +1,18 @@
 {
-  "title": "Monitoring Setup",
+  "title": "Capstone Deployment",
   "initialState": {
-    "content": "# Monitoring Setup\n# TODO: Configure cloud monitoring\n"
+    "content": "# TODO: Deploy a full app stack on cloud\n# 1. Create resource group\n# 2. Create app service plan (az appservice plan create)\n# 3. Create web app (az webapp create)\n# 4. Configure with app settings\n"
   },
   "validation": {
     "type": "terminal",
     "rules": [
-      "must_include:TODO"
+      "must_include:az group create",
+      "must_include:az appservice plan",
+      "must_include:az webapp create",
+      "must_include:echo"
     ]
   },
   "id": "mission_10",
-  "type": "terminal"
+  "type": "terminal",
+  "xpReward": 200
 }

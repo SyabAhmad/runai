@@ -1,7 +1,7 @@
 {
   "mission_09": [
-    "Start by understanding the rollback procedures requirements.",
-    "Check the documentation for relevant commands or APIs.",
-    "Test your solution step by step before submitting."
+    "Slack notifications use incoming webhooks",
+    "You can notify on success, failure, or always",
+    "GitHub Actions has built-in notification features too"
   ]
 }

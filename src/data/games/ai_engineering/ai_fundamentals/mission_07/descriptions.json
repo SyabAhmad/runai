@@ -1,3 +1,3 @@
 {
-  "mission_07": "Implement common loss functions like MSE, cross-entropy, and MAE for different tasks."
+  "mission_07": "Build a complete model training pipeline that includes data loading, preprocessing, model initialization, training loop with early stopping, validation, and model saving. Use proper error handling and logging."
 }

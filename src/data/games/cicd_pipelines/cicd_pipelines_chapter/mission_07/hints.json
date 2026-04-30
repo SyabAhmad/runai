@@ -1,7 +1,7 @@
 {
   "mission_07": [
-    "Start by understanding the branch strategies requirements.",
-    "Check the documentation for relevant commands or APIs.",
-    "Test your solution step by step before submitting."
+    "Use \"actions/upload-artifact\" to store build outputs",
+    "Specify the path to the build folder",
+    "Artifacts persist after the workflow ends"
   ]
 }

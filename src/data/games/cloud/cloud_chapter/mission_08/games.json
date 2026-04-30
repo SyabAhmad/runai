@@ -1,14 +1,17 @@
 {
-  "title": "Database Setup",
+  "title": "Scaling",
   "initialState": {
-    "content": "# Database Setup\n# TODO: Provision managed databases\n"
+    "content": "# TODO: Configure auto-scaling for the VM scale set\n# Create a scale set named \"runai-ss\" with 2 instances\n# Use: az vmss create\n"
   },
   "validation": {
     "type": "terminal",
     "rules": [
-      "must_include:TODO"
+      "must_include:az vmss create",
+      "must_include:runai-ss",
+      "must_include:--instance-count 2"
     ]
   },
   "id": "mission_08",
-  "type": "terminal"
+  "type": "terminal",
+  "xpReward": 200
 }

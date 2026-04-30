@@ -1,7 +1,8 @@
 {
   "mission_10": [
-    "Start by understanding the video capture requirements.",
-    "Check the documentation for relevant commands or APIs.",
-    "Test your solution step by step before submitting."
+    "Start by loading the image with cv2.imread()",
+    "Resize and preprocess for your model",
+    "Use MobileNetV2 or similar pre-trained model",
+    "Decode predictions to get human-readable labels"
   ]
 }

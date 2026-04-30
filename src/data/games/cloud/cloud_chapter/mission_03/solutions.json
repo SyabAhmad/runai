@@ -1,3 +1,3 @@
 {
-  "mission_03": "aws ec2 run-instances --count 1"
+  "mission_03": "az vm create --resource-group runai-rg --name runai-vm --image ubuntu2204 --admin-username azureuser --generate-ssh-keys\necho \"VM deployed successfully!\""
 }

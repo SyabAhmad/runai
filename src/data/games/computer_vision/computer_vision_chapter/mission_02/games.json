@@ -1,14 +1,17 @@
 {
-  "title": "Color Conversion",
+  "title": "Grayscale Conversion",
   "initialState": {
-    "content": "def computer_vision_chapter_task_2():\n    # TODO: Convert between color spaces\n    pass"
+    "content": "import cv2\nimport matplotlib.pyplot as plt\n\nimg = cv2.imread(\"image.jpg\")\n# TODO: Convert the image to grayscale\n# Use cv2.cvtColor() with COLOR_BGR2GRAY\n"
   },
   "validation": {
     "type": "ai_code",
     "rules": [
-      "must_include:TODO"
+      "must_include:cvtColor",
+      "must_include:COLOR_BGR2GRAY",
+      "must_include:imshow"
     ]
   },
   "id": "mission_02",
-  "type": "ai_code"
+  "type": "ai_code",
+  "xpReward": 100
 }

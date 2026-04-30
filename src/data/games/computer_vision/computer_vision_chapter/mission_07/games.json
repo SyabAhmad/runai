@@ -1,14 +1,17 @@
 {
-  "title": "Histogram Equalization",
+  "title": "Inference",
   "initialState": {
-    "content": "def computer_vision_chapter_task_7():\n    # TODO: Improve image contrast\n    pass"
+    "content": "import tensorflow as tf\nimport cv2\n\nmodel = tf.keras.applications.MobileNetV2(weights=\"imagenet\")\nimg = cv2.imread(\"image.jpg\")\n# TODO: Run inference on the image\n# Preprocess with tf.keras.applications.mobilenet_v2.preprocess_input()\n"
   },
   "validation": {
     "type": "ai_code",
     "rules": [
-      "must_include:TODO"
+      "must_include:preprocess_input",
+      "must_include:predict",
+      "must_include:resize"
     ]
   },
   "id": "mission_07",
-  "type": "ai_code"
+  "type": "ai_code",
+  "xpReward": 150
 }

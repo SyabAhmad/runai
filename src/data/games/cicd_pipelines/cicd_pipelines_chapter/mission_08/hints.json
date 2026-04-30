@@ -1,7 +1,7 @@
 {
   "mission_08": [
-    "Start by understanding the parallel jobs requirements.",
-    "Check the documentation for relevant commands or APIs.",
-    "Test your solution step by step before submitting."
+    "Define separate jobs at the top level (not under a job's steps)",
+    "Each job runs in parallel by default",
+    "Jobs can have their own runs-on and steps"
   ]
 }

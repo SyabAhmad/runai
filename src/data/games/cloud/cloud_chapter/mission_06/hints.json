@@ -1,7 +1,8 @@
 {
   "mission_06": [
-    "Start by understanding the load balancers requirements.",
-    "Check the documentation for relevant commands or APIs.",
-    "Test your solution step by step before submitting."
+    "Container instances are serverless containers",
+    "Use --image to specify the container image",
+    "Use --port to expose container ports",
+    "nginx is a popular web server image"
   ]
 }

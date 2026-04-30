@@ -1,3 +1,3 @@
 {
-  "mission_01": "import cv2\nimg = cv2.imread(\"image.jpg\")"
+  "mission_01": "import cv2\nimport matplotlib.pyplot as plt\n\nimg = cv2.imread(\"image.jpg\")\nimg_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)\nplt.imshow(img_rgb)\nplt.show()"
 }

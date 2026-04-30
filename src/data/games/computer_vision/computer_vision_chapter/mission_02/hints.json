@@ -1,7 +1,7 @@
 {
   "mission_02": [
-    "Start by understanding the color conversion requirements.",
-    "Check the documentation for relevant commands or APIs.",
-    "Test your solution step by step before submitting."
+    "cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) converts to grayscale",
+    "Grayscale images have only one channel (intensity)",
+    "Use plt.imshow(gray, cmap=\"gray\") to display grayscale"
   ]
 }

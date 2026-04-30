@@ -1,14 +1,17 @@
 {
-  "title": "IAM Policies",
+  "title": "Networking",
   "initialState": {
-    "content": "# IAM Policies\n# TODO: Configure identity and access\n"
+    "content": "# TODO: Create a virtual network named \"runai-vnet\" with address prefix 10.0.0.0/16\n# Use: az network vnet create\n"
   },
   "validation": {
     "type": "terminal",
     "rules": [
-      "must_include:TODO"
+      "must_include:az network vnet create",
+      "must_include:runai-vnet",
+      "must_include:10.0.0.0/16"
     ]
   },
   "id": "mission_05",
-  "type": "terminal"
+  "type": "terminal",
+  "xpReward": 150
 }

@@ -1,7 +1,7 @@
 {
   "mission_06": [
-    "Start by understanding the contour detection requirements.",
-    "Check the documentation for relevant commands or APIs.",
-    "Test your solution step by step before submitting."
+    "TensorFlow Hub or tf.keras.applications has pre-trained models",
+    "MobileNetV2 is lightweight and fast",
+    "model.summary() shows architecture"
   ]
 }

@@ -1,7 +1,7 @@
 {
   "mission_03": [
-    "Start by understanding the test automation requirements.",
-    "Check the documentation for relevant commands or APIs.",
-    "Test your solution step by step before submitting."
+    "Use \"npm test\" to run your test suite",
+    "Tests should run after build, before deploy",
+    "Consider adding --watch flag for CI environments"
   ]
 }

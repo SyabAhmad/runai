@@ -1,3 +1,3 @@
 {
-  "mission_03": "npm test -- --coverage"
+  "mission_03": "steps:\n  - name: Checkout Code\n    uses: actions/checkout@v3\n  - name: Build\n    run: npm run build\n  - name: Run Tests\n    run: npm test"
 }

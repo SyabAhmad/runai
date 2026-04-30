@@ -1,14 +1,15 @@
 {
   "title": "Parallel Jobs",
   "initialState": {
-    "content": "# Parallel Jobs\n# TODO: Run jobs in parallel for speed\nstages:\n  - build\n  - test\n  - deploy"
+    "content": "{\"jobs\": {\"build\": {\"steps\": []}}}"
   },
   "validation": {
     "type": "pipeline",
     "rules": [
-      "must_include:TODO"
+      "must_include:jobs"
     ]
   },
   "id": "mission_08",
-  "type": "pipeline"
+  "type": "pipeline",
+  "xpReward": 200
 }

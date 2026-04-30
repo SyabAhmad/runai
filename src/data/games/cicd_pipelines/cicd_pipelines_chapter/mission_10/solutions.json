@@ -1,3 +1,3 @@
 {
-  "mission_10": "cache: { paths: [node_modules/] }"
+  "mission_10": "name: Complete CI/CD Pipeline\non: [push]\njobs:\n  build-and-deploy:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v3\n      - run: npm install\n      - run: npm run lint\n      - run: npm test\n      - run: npm run build\n      - run: npm run deploy\n      - name: Notify\n        if: always()\n        run: echo \"Pipeline completed!\""
 }

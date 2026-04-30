@@ -1,14 +1,17 @@
 {
-  "title": "Auto Scaling",
+  "title": "Serverless",
   "initialState": {
-    "content": "# Auto Scaling\n# TODO: Configure automatic scaling\n"
+    "content": "# TODO: Deploy a serverless function app named \"runai-func\"\n# Use: az functionapp create\n# Use \"dotnet\" as runtime and \"3.1\" as runtime-version\n"
   },
   "validation": {
     "type": "terminal",
     "rules": [
-      "must_include:TODO"
+      "must_include:az functionapp create",
+      "must_include:runai-func",
+      "must_include:dotnet"
     ]
   },
   "id": "mission_07",
-  "type": "terminal"
+  "type": "terminal",
+  "xpReward": 150
 }

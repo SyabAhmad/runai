@@ -1,14 +1,18 @@
 {
-  "title": "Functions in Bash",
+  "title": "Cron Jobs",
   "initialState": {
-    "content": "# Functions in Bash\n# TODO: Create reusable bash functions\n"
+    "content": "#!/bin/bash\n# Create a cron job entry that runs a backup script every day at 2 AM\n# Format: minute hour day month weekday command\n# Write the cron entry to stdout (don't actually install it)\n\n"
   },
   "validation": {
     "type": "terminal",
     "rules": [
-      "must_include:TODO"
+      "must_include:0",
+      "must_include:2",
+      "must_include:*",
+      "must_include:cron"
     ]
   },
   "id": "mission_08",
-  "type": "terminal"
+  "type": "terminal",
+  "xpReward": 200
 }

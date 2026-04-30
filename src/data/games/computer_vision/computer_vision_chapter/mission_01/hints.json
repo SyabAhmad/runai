@@ -1,7 +1,7 @@
 {
   "mission_01": [
-    "Start by understanding the image loading requirements.",
-    "Check the documentation for relevant commands or APIs.",
-    "Test your solution step by step before submitting."
+    "cv2.imread() loads an image from file",
+    "OpenCV loads in BGR format, convert to RGB for display",
+    "plt.imshow() displays the image, plt.show() renders it"
   ]
 }

@@ -1,7 +1,7 @@
 {
   "mission_06": [
-    "Neurons receive inputs and produce outputs via activation functions",
-    "Weights determine connection strength between neurons",
-    "Backpropagation trains the network"
+    "MSE for regression, Cross-Entropy for classification",
+    "Consider the mathematical properties: convexity, differentiability",
+    "Think about outlier sensitivity and computational efficiency"
   ]
 }

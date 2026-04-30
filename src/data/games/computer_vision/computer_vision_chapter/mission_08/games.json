@@ -1,14 +1,17 @@
 {
-  "title": "Feature Detection",
+  "title": "Bounding Boxes",
   "initialState": {
-    "content": "def computer_vision_chapter_task_8():\n    # TODO: Detect keypoints with SIFT/ORB\n    pass"
+    "content": "import cv2\n\nimg = cv2.imread(\"image.jpg\")\n# TODO: Draw detection boxes on the image\n# Use cv2.rectangle() with coordinates (x, y, w, h)\n# Draw a green box (0, 255, 0) with thickness 2\n"
   },
   "validation": {
     "type": "ai_code",
     "rules": [
-      "must_include:TODO"
+      "must_include:rectangle",
+      "must_include:0, 255, 0",
+      "must_include:2"
     ]
   },
   "id": "mission_08",
-  "type": "ai_code"
+  "type": "ai_code",
+  "xpReward": 200
 }

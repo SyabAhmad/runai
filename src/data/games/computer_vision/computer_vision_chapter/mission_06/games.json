@@ -1,14 +1,17 @@
 {
-  "title": "Contour Detection",
+  "title": "Model Loading",
   "initialState": {
-    "content": "def computer_vision_chapter_task_6():\n    # TODO: Find contours in binary images\n    pass"
+    "content": "import tensorflow as tf\n\n# TODO: Load and configure a CV model\n# Load MobileNetV2 pre-trained on ImageNet\n# Print model summary\n"
   },
   "validation": {
     "type": "ai_code",
     "rules": [
-      "must_include:TODO"
+      "must_include:tf.keras",
+      "must_include:MobileNet",
+      "must_include:summary"
     ]
   },
   "id": "mission_06",
-  "type": "ai_code"
+  "type": "ai_code",
+  "xpReward": 150
 }

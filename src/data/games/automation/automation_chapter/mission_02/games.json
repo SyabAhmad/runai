@@ -1,14 +1,17 @@
 {
-  "title": "Text Filtering",
+  "title": "Variables & Parameters",
   "initialState": {
-    "content": "# Text Filtering\n# TODO: Filter text output with grep and awk\n"
+    "content": "#!/bin/bash\n# Create a script that uses a variable named \"name\" and prints a greeting\n# Then use a positional parameter $1 to personalize the greeting\n\n"
   },
   "validation": {
     "type": "terminal",
     "rules": [
-      "must_include:TODO"
+      "must_include:name=",
+      "must_include:echo",
+      "must_include:$1"
     ]
   },
   "id": "mission_02",
-  "type": "terminal"
+  "type": "terminal",
+  "xpReward": 100
 }

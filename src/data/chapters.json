@@ -93,36 +93,80 @@
       ]
     },
     {
-      "id": "automation",
+      "id": "automation_chapter",
       "title": "Automation & Scripting",
       "description": "Automate workflows with shell scripting and task scheduling",
       "icon": "terminal",
       "gameType": "terminal",
-      "missions": []
+      "missions": [
+        {"id": "mission_01", "title": "Shell Script Basics", "description": "Create a simple shell script that prints a greeting", "difficulty": "Easy", "xpReward": 100},
+        {"id": "mission_02", "title": "Variables & Parameters", "description": "Use variables and positional parameters in scripts", "difficulty": "Easy", "xpReward": 100},
+        {"id": "mission_03", "title": "Conditionals", "description": "Add if-else logic to handle script decisions", "difficulty": "Easy", "xpReward": 100},
+        {"id": "mission_04", "title": "Loops", "description": "Iterate over files or lists with for/while loops", "difficulty": "Medium", "xpReward": 150},
+        {"id": "mission_05", "title": "Functions", "description": "Define and call reusable script functions", "difficulty": "Medium", "xpReward": 150},
+        {"id": "mission_06", "title": "File Operations", "description": "Read, write, and manipulate files in scripts", "difficulty": "Medium", "xpReward": 150},
+        {"id": "mission_07", "title": "Error Handling", "description": "Handle script errors and exit codes properly", "difficulty": "Medium", "xpReward": 150},
+        {"id": "mission_08", "title": "Cron Jobs", "description": "Schedule recurring tasks with cron", "difficulty": "Hard", "xpReward": 200},
+        {"id": "mission_09", "title": "Process Management", "description": "Manage background processes and job control", "difficulty": "Hard", "xpReward": 200},
+        {"id": "mission_10", "title": "Automation Capstone", "description": "Build a complete automated backup script", "difficulty": "Hard", "xpReward": 200}
+      ]
     },
     {
-      "id": "cicd_pipelines",
+      "id": "cicd_pipelines_chapter",
       "title": "CI/CD Pipelines",
       "description": "Build, test, and deploy with continuous integration and delivery",
       "icon": "pipeline",
       "gameType": "pipeline",
-      "missions": []
+      "missions": [
+        {"id": "mission_01", "title": "Pipeline Structure", "description": "Arrange core CI/CD steps in correct order", "difficulty": "Easy", "xpReward": 100},
+        {"id": "mission_02", "title": "Build Steps", "description": "Add compile/build steps to pipeline", "difficulty": "Easy", "xpReward": 100},
+        {"id": "mission_03", "title": "Test Integration", "description": "Insert automated test steps into pipeline", "difficulty": "Easy", "xpReward": 100},
+        {"id": "mission_04", "title": "Linting", "description": "Add code quality checks to pipeline", "difficulty": "Medium", "xpReward": 150},
+        {"id": "mission_05", "title": "Security Scans", "description": "Integrate vulnerability scanning steps", "difficulty": "Medium", "xpReward": 150},
+        {"id": "mission_06", "title": "Deployment", "description": "Add production deployment steps", "difficulty": "Medium", "xpReward": 150},
+        {"id": "mission_07", "title": "Artifact Management", "description": "Handle build artifacts and storage", "difficulty": "Medium", "xpReward": 150},
+        {"id": "mission_08", "title": "Parallel Jobs", "description": "Configure parallel execution of pipeline steps", "difficulty": "Hard", "xpReward": 200},
+        {"id": "mission_09", "title": "Notifications", "description": "Add pipeline status alerts and notifications", "difficulty": "Hard", "xpReward": 200},
+        {"id": "mission_10", "title": "Capstone Pipeline", "description": "Build a complete end-to-end CI/CD pipeline", "difficulty": "Hard", "xpReward": 200}
+      ]
     },
     {
-      "id": "cloud",
+      "id": "cloud_chapter",
       "title": "Cloud Computing",
       "description": "Deploy and manage scalable applications on cloud platforms",
       "icon": "terminal",
       "gameType": "terminal",
-      "missions": []
+      "missions": [
+        {"id": "mission_01", "title": "Cloud CLI Setup", "description": "Configure cloud CLI and authenticate", "difficulty": "Easy", "xpReward": 100},
+        {"id": "mission_02", "title": "Resource Groups", "description": "Create and manage cloud resource groups", "difficulty": "Easy", "xpReward": 100},
+        {"id": "mission_03", "title": "VM Provisioning", "description": "Deploy virtual machines via CLI", "difficulty": "Easy", "xpReward": 100},
+        {"id": "mission_04", "title": "Storage Accounts", "description": "Create and configure cloud storage", "difficulty": "Medium", "xpReward": 150},
+        {"id": "mission_05", "title": "Networking", "description": "Set up virtual networks and firewalls", "difficulty": "Medium", "xpReward": 150},
+        {"id": "mission_06", "title": "Containers", "description": "Deploy container instances on cloud", "difficulty": "Medium", "xpReward": 150},
+        {"id": "mission_07", "title": "Serverless", "description": "Deploy serverless functions via CLI", "difficulty": "Medium", "xpReward": 150},
+        {"id": "mission_08", "title": "Scaling", "description": "Configure auto-scaling for cloud resources", "difficulty": "Hard", "xpReward": 200},
+        {"id": "mission_09", "title": "Monitoring", "description": "Set up logging and monitoring for resources", "difficulty": "Hard", "xpReward": 200},
+        {"id": "mission_10", "title": "Capstone Deployment", "description": "Deploy a full app stack on cloud", "difficulty": "Hard", "xpReward": 200}
+      ]
     },
     {
-      "id": "computer_vision",
+      "id": "computer_vision_chapter",
       "title": "Computer Vision",
       "description": "Build AI systems that interpret and understand visual data",
       "icon": "pipeline",
       "gameType": "ai_code",
-      "missions": []
+      "missions": [
+        {"id": "mission_01", "title": "Image Loading", "description": "Load and display images with Python", "difficulty": "Easy", "xpReward": 100},
+        {"id": "mission_02", "title": "Grayscale Conversion", "description": "Convert color images to grayscale", "difficulty": "Easy", "xpReward": 100},
+        {"id": "mission_03", "title": "Edge Detection", "description": "Apply edge detection filters to images", "difficulty": "Easy", "xpReward": 100},
+        {"id": "mission_04", "title": "Object Detection Basics", "description": "Use pre-trained models for object detection", "difficulty": "Medium", "xpReward": 150},
+        {"id": "mission_05", "title": "Image Augmentation", "description": "Apply transformations to training images", "difficulty": "Medium", "xpReward": 150},
+        {"id": "mission_06", "title": "Model Loading", "description": "Load and configure CV models", "difficulty": "Medium", "xpReward": 150},
+        {"id": "mission_07", "title": "Inference", "description": "Run inference on new images", "difficulty": "Medium", "xpReward": 150},
+        {"id": "mission_08", "title": "Bounding Boxes", "description": "Draw detection boxes on images", "difficulty": "Hard", "xpReward": 200},
+        {"id": "mission_09", "title": "Video Processing", "description": "Process video frames for CV tasks", "difficulty": "Hard", "xpReward": 200},
+        {"id": "mission_10", "title": "CV Capstone", "description": "Build an end-to-end image classification pipeline", "difficulty": "Hard", "xpReward": 200}
+      ]
     }
   ]
 }

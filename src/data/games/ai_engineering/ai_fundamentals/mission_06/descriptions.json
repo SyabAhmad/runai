@@ -1,3 +1,3 @@
 {
-  "mission_06": "Create a simple neural network architecture with input, hidden, and output layers."
+  "mission_06": "Implement and compare different loss functions (MSE, MAE, Cross-Entropy, Hinge Loss) for various machine learning tasks. Create a function that selects the appropriate loss function based on the problem type."
 }

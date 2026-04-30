@@ -1,7 +1,7 @@
 {
   "mission_07": [
-    "Start by understanding the conditional logic requirements.",
-    "Check the documentation for relevant commands or APIs.",
-    "Test your solution step by step before submitting."
+    "The $? variable holds the exit code of the last command",
+    "Exit code 0 means success, anything else means failure",
+    "Use \"exit 1\" to exit with an error code"
   ]
 }

@@ -1,14 +1,17 @@
 {
-  "title": "Loops and Iteration",
+  "title": "File Operations",
   "initialState": {
-    "content": "# Loops and Iteration\n# TODO: Use for and while loops in scripts\n"
+    "content": "#!/bin/bash\n# Create a script that reads a file line by line\n# Use \"while read line\" to process each line\n# Print each line with \"Line: \" prefix\n\n"
   },
   "validation": {
     "type": "terminal",
     "rules": [
-      "must_include:TODO"
+      "must_include:while",
+      "must_include:read",
+      "must_include:done"
     ]
   },
   "id": "mission_06",
-  "type": "terminal"
+  "type": "terminal",
+  "xpReward": 150
 }

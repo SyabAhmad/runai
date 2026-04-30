@@ -1,7 +1,7 @@
 {
   "mission_07": [
-    "Start by understanding the auto scaling requirements.",
-    "Check the documentation for relevant commands or APIs.",
-    "Test your solution step by step before submitting."
+    "Function apps need: --name, --resource-group, --runtime, --runtime-version",
+    "Consumption plan is the serverless hosting option",
+    "dotnet is one of many supported runtimes (node, python, etc.)"
   ]
 }

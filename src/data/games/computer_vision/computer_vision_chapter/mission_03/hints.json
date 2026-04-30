@@ -1,7 +1,7 @@
 {
   "mission_03": [
-    "Start by understanding the image resizing requirements.",
-    "Check the documentation for relevant commands or APIs.",
-    "Test your solution step by step before submitting."
+    "Canny edge detection is a popular algorithm",
+    "Two thresholds: lower (100) and upper (200)",
+    "Edges are detected where intensity changes sharply"
   ]
 }
