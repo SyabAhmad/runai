@@ -1,50 +1,75 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 
+export const BADGES = {
+  // Streak badges
+  streak_3:  { id: 'streak_3',  name: 'Spark Starter',    emoji: '✨',  desc: '3 day streak',          color: '#a78bfa' },
+  streak_7:  { id: 'streak_7',  name: 'Week Warrior',     emoji: '🔥',  desc: '7 day streak',          color: '#f97316' },
+  streak_14: { id: 'streak_14', name: 'Fortnight Flame',   emoji: '💥',  desc: '14 day streak',         color: '#ef4444' },
+  streak_30: { id: 'streak_30', name: 'Monthly Maven',     emoji: '👑',  desc: '30 day streak',         color: '#eab308' },
+  streak_60: { id: 'streak_60', name: 'Double Decade',     emoji: '🏆',  desc: '60 day streak',         color: '#f59e0b' },
+  streak_90: { id: 'streak_90', name: 'Legend Streaker',  emoji: '🌟',  desc: '90 day streak',         color: '#facc15' },
+  // Completion badges
+  first_mission:  { id: 'first_mission',  name: 'First Spark',     emoji: '🌱',  desc: 'Complete first mission',    color: '#34d399' },
+  ten_complete:   { id: 'ten_complete',   name: 'Deca Learner',    emoji: '📓',  desc: 'Complete 10 missions',      color: '#60a5fa' },
+  fifty_complete: { id: 'fifty_complete', name: 'Half Century',   emoji: '🎯',  desc: 'Complete 50 missions',      color: '#a78bfa' },
+  hundred_complete: { id: 'hundred_complete', name: 'Century Club', emoji: '💎',  desc: 'Complete 100 missions',     color: '#f472b6' },
+  all_sql:        { id: 'all_sql',        name: 'SQL Master',     emoji: '🗄️',  desc: 'Complete all SQL missions', color: '#38bdf8' },
+  all_docker:     { id: 'all_docker',     name: 'Docker Sage',     emoji: '🐳',  desc: 'Complete all Docker missions', color: '#22d3ee' },
+  all_linux:      { id: 'all_linux',      name: 'Linux Wizard',   emoji: '🐧',  desc: 'Complete all Linux missions', color: '#4ade80' },
+};
+
+export const STREAK_BONUSES = {
+  3:  25,
+  7:  50,
+  14: 100,
+  30: 250,
+  60: 500,
+  90: 1000,
+};
+
+const getStreakBadges = (streak) => {
+  const badges = [];
+  const thresholds = [3, 7, 14, 30, 60, 90];
+  for (const t of thresholds) {
+    if (streak >= t) badges.push(`streak_${t}`);
+  }
+  return badges;
+};
+
+const getCompletionBadges = (completedMissions, totalMissions) => {
+  const badges = [];
+  const total = Object.values(completedMissions).flat().length;
+  const sqlCount = Object.entries(completedMissions)
+    .filter(([key]) => key.startsWith('sql/'))
+    .flatMap(([, m]) => m).length;
+
+  if (total >= 1)  badges.push('first_mission');
+  if (total >= 10) badges.push('ten_complete');
+  if (total >= 50) badges.push('fifty_complete');
+  if (total >= 100) badges.push('hundred_complete');
+  return badges;
+};
+
 export const useGameStore = create(
   persist(
     (set, get) => ({
       currentTechnology: null,
       currentChapter: null,
       currentMission: null,
-      completedMissions: {}, // { "tech/chapter": ["mission_01", "mission_02"] }
+      completedMissions: {},
       xp: 0,
       level: 1,
       streak: 0,
-      lastCompletedDate: null, // ISO date string for streak tracking
-      hintsUsed: {}, // { "tech/chapter/missionId": count }
-      badges: [], // earned badge IDs
+      longestStreak: 0,
+      weeklyStreak: 0,
+      lastCompletedDate: null,
+      hintsUsed: {},
+      badges: [],
 
       setCurrentTechnology: (tech) => set({ currentTechnology: tech }),
       setCurrentChapter: (chapter) => set({ currentChapter: chapter }),
       setCurrentMission: (mission) => set({ currentMission: mission }),
-
-      getCurrentMission: () => {
-        const state = get();
-        if (!state.currentTechnology || !state.currentChapter || !state.currentMission) return {};
-        
-        const { currentTechnology, currentChapter, currentMission } = state;
-        const basePath = `../data/games/${currentTechnology}/${currentChapter}/${currentMission}`;
-        
-        try {
-          // Load mission data from JSON files
-          const games = require(`../data/games/${currentTechnology}/${currentChapter}/${currentMission}/games.json`);
-          const descriptions = require(`../data/games/${currentTechnology}/${currentChapter}/${currentMission}/descriptions.json`);
-          const hints = require(`../data/games/${currentTechnology}/${currentChapter}/${currentMission}/hints.json`);
-          const solutions = require(`../data/games/${currentTechnology}/${currentChapter}/${currentMission}/solutions.json`);
-          const outcomes = require(`../data/games/${currentTechnology}/${currentChapter}/${currentMission}/outcomes.json`);
-          
-          return {
-            game: games,
-            description: descriptions[currentMission] || '',
-            hints: hints[currentMission] || [],
-            solution: solutions[currentMission] || '',
-            outcome: outcomes[currentMission] || ''
-          };
-        } catch {
-          return {};
-        }
-      },
 
       addXp: (amount) => set((state) => {
         const newXp = state.xp + amount;
@@ -60,7 +85,6 @@ export const useGameStore = create(
       },
 
       getChapterTotal: (tech, chapter, missions) => {
-        // Count missions in the chapter folder
         return missions ? missions.length : 10;
       },
 
@@ -68,11 +92,8 @@ export const useGameStore = create(
         const state = get();
         const key = `${tech}/${chapter}`;
         const completed = state.completedMissions[key] || [];
-
-        // Extract mission number
         const missionNum = parseInt(missionId.split('_')[1]);
-        if (missionNum === 1) return true; // First mission always unlocked
-
+        if (missionNum === 1) return true;
         const prevMissionId = `mission_${String(missionNum - 1).padStart(2, '0')}`;
         return completed.includes(prevMissionId);
       },
@@ -81,8 +102,8 @@ export const useGameStore = create(
         const state = get();
         const key = `${tech}/${chapter}/${missionId}`;
         const count = state.hintsUsed[key] || 0;
-        if (count === 0) return 0; // First hint free
-        return Math.min(count * 10, 50); // -10, -20, -30, -40, -50 max
+        if (count === 0) return 0;
+        return Math.min(count * 10, 50);
       },
 
       useHint: (tech, chapter, missionId) => {
@@ -90,7 +111,7 @@ export const useGameStore = create(
         const key = `${tech}/${chapter}/${missionId}`;
         const current = state.hintsUsed[key] || 0;
         set({ hintsUsed: { ...state.hintsUsed, [key]: current + 1 } });
-        return current + 1; // Return new count
+        return current + 1;
       },
 
       completeMission: (tech, chapter, missionId, xpReward = 100) => {
@@ -99,62 +120,55 @@ export const useGameStore = create(
 
         set((state) => {
           const completed = state.completedMissions[key] || [];
-          if (completed.includes(missionId)) {
-            return state;
-          }
+          if (completed.includes(missionId)) return state;
 
-          // Streak logic
+          const yesterday = new Date(Date.now() - 86400000).toISOString().split('T')[0];
           let newStreak = state.streak;
           if (state.lastCompletedDate === today) {
-            // Same day, streak unchanged
-          } else if (state.lastCompletedDate === new Date(Date.now() - 86400000).toISOString().split('T')[0]) {
-            // Consecutive day
+          } else if (state.lastCompletedDate === yesterday) {
             newStreak = state.streak + 1;
           } else {
-            // Streak broken or first time
             newStreak = 1;
           }
+          const longestStreak = Math.max(state.longestStreak, newStreak);
 
-          // Streak bonus XP
           let streakBonus = 0;
-          if (newStreak === 7) streakBonus = 100; // 7-day badge
-          if (newStreak === 30) streakBonus = 500; // 30-day badge
-          if (newStreak > 0 && newStreak % 10 === 0) streakBonus = 50; // Every 10 days
+          for (const [threshold, bonus] of Object.entries(STREAK_BONUSES)) {
+            if (newStreak >= Number(threshold)) streakBonus = bonus;
+          }
 
-          // Hint penalty
           const hintKey = `${tech}/${chapter}/${missionId}`;
           const hintsUsed = state.hintsUsed[hintKey] || 0;
           const penalty = hintsUsed === 0 ? 0 : Math.min(hintsUsed * 10, 50);
 
           const finalXp = xpReward - penalty + streakBonus;
-          const newXp = state.xp + Math.max(finalXp, 10); // Minimum 10 XP
+          const newXp = state.xp + Math.max(finalXp, 10);
           const newLevel = Math.floor(newXp / 500) + 1;
 
-          // Badge awards
-          const newBadges = [...state.badges];
-          if (newStreak === 7 && !newBadges.includes('streak_7')) newBadges.push('streak_7');
-          if (newStreak === 30 && !newBadges.includes('streak_30')) newBadges.push('streak_30');
-          if (completed.length + 1 === 10 && !newBadges.includes(`chapter_${tech}_${chapter}`)) {
-            newBadges.push(`chapter_${tech}_${chapter}`);
-          }
+          const newCompletedMissions = {
+            ...state.completedMissions,
+            [key]: [...completed, missionId],
+          };
+          const totalCompleted = Object.values(newCompletedMissions).flat().length;
+          const streakBadges = getStreakBadges(newStreak);
+          const completionBadges = getCompletionBadges(newCompletedMissions, totalCompleted);
+          const newBadges = [...new Set([...state.badges, ...streakBadges, ...completionBadges])];
 
           return {
-            completedMissions: {
-              ...state.completedMissions,
-              [key]: [...completed, missionId]
-            },
+            completedMissions: newCompletedMissions,
             xp: newXp,
             level: newLevel,
             streak: newStreak,
+            longestStreak,
             lastCompletedDate: today,
-            badges: newBadges
+            badges: newBadges,
           };
         });
-      }
+      },
     }),
     {
       name: 'runai-progress',
-      getStorage: () => localStorage
+      getStorage: () => localStorage,
     }
   )
 );

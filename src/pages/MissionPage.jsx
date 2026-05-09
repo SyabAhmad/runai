@@ -227,6 +227,19 @@ export default function MissionPage() {
     .replace(/_/g, " ")
     .replace(/\b\w/g, (l) => l.toUpperCase());
 
+  const { streak, longestStreak } = useGameStore();
+
+  const getStreakEmoji = (s) => {
+    if (s >= 90) return "🌟";
+    if (s >= 60) return "🏆";
+    if (s >= 30) return "👑";
+    if (s >= 14) return "💥";
+    if (s >= 7) return "🔥";
+    if (s >= 3) return "✨";
+    if (s >= 1) return "💫";
+    return "🌙";
+  };
+
   return (
     <div className="h-full flex flex-col overflow-hidden relative">
       {reaction === "success" && (
@@ -252,36 +265,50 @@ export default function MissionPage() {
         <div className="result-pop error">😢 Oops... not yet. Try again!</div>
       )}
       {/* Top bar with mission info */}
-      <div className="px-6 py-4 border-b border-border bg-primary">
-        <div className="flex items-center justify-between">
-          <div>
-            <h1 className="text-xl font-bold text-text">
-              {mission.title || displayMission}
-            </h1>
-            <p className="text-sm text-text-muted mt-1">
-              {displayChapter} • {mission.type}
-            </p>
+      <div className="px-6 py-4 border-b border-border bg-primary flex items-center justify-between gap-4 flex-wrap">
+        <div>
+          <h1 className="text-xl font-bold text-text">
+            {mission.title || displayMission}
+          </h1>
+          <p className="text-sm text-text-muted mt-1">
+            {displayChapter} • {mission.type}
+          </p>
+        </div>
+        <div className="flex items-center gap-3 flex-wrap">
+          {/* Streak */}
+          <div className="flex items-center gap-1.5 rounded-full border border-amber-300/30 bg-amber-400/10 px-3 py-1.5">
+            <span className="text-lg">{getStreakEmoji(streak)}</span>
+            <div className="flex flex-col">
+              <span className="text-xs font-bold text-amber-200 leading-none">{streak}</span>
+              <span className="text-[10px] text-amber-200/70 leading-none">streak</span>
+            </div>
           </div>
-          <div className="flex items-center gap-3">
-            <span className="text-xs px-3 py-1 bg-accent/20 text-accent rounded-full">
-              +{mission.xpReward || 100} XP
-            </span>
-            <span
-              className={`text-xs px-3 py-1 rounded-full ${
-                result?.success || isCompleted
-                  ? "bg-success/20 text-success"
-                  : result?.success === false
-                    ? "bg-error/20 text-error"
-                    : "bg-secondary text-text-dim"
-              }`}
-            >
-              {result?.success || isCompleted
-                ? "Completed"
+          {/* Best streak */}
+          <div className="flex items-center gap-1.5 rounded-full border border-purple-300/30 bg-purple-400/10 px-3 py-1.5">
+            <span className="text-lg">{getStreakEmoji(longestStreak)}</span>
+            <div className="flex flex-col">
+              <span className="text-xs font-bold text-purple-200 leading-none">{longestStreak}</span>
+              <span className="text-[10px] text-purple-200/70 leading-none">best</span>
+            </div>
+          </div>
+          <span className="text-xs px-3 py-1 bg-accent/20 text-accent rounded-full">
+            +{mission.xpReward || 100} XP
+          </span>
+          <span
+            className={`text-xs px-3 py-1 rounded-full ${
+              result?.success || isCompleted
+                ? "bg-success/20 text-success"
                 : result?.success === false
-                  ? "Incorrect"
-                  : "In Progress"}
-            </span>
-          </div>
+                  ? "bg-error/20 text-error"
+                  : "bg-secondary text-text-dim"
+            }`}
+          >
+            {result?.success || isCompleted
+              ? "Completed"
+              : result?.success === false
+                ? "Incorrect"
+                : "In Progress"}
+          </span>
         </div>
       </div>
 
