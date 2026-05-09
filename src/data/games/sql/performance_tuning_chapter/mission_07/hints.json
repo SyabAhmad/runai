@@ -1,7 +1,7 @@
 {
   "mission_07": [
-    "Aggregate orders by customer_id in subquery.",
-    "Use HAVING COUNT(*) \u003e 5.",
-    "Join subquery alias back to customers."
+    "Write a subquery that groups `orders` by `customer_id`, counts them as `total_orders`, and uses `HAVING COUNT(*) > 5` to filter to only high-frequency customers.",
+    "Give the subquery an alias like `oc` (order_counts). Join it to `customers c` on `c.customer_id = oc.customer_id` using `INNER JOIN`.",
+    "Select all three columns: `c.customer_id`, `c.name`, `oc.total_orders`. Sort by `oc.total_orders DESC` so the most active customers appear first."
   ]
 }

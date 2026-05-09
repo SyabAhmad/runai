@@ -1,3 +1,3 @@
 {
-    "mission_10":  "Build a customer revenue leaderboard for completed orders in 2025 with rank and dense_rank for tie analysis."
+  "mission_10": "The executive dashboard needs a revenue leaderboard showing the top 10 customers of 2025 by total spend on completed orders. Build this as a two-CTE query: first, filter and aggregate revenue per customer; second, add `RANK()` and `DENSE_RANK()` over revenue descending. Return customer_id, revenue, both rank columns, and limit to 10 rows. This is the capstone that combines all the performance techniques from this chapter."
 }

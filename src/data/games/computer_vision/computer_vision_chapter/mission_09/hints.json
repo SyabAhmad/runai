@@ -1,7 +1,7 @@
 {
   "mission_09": [
     "cv2.VideoCapture(0) opens the webcam",
-    "cap.read() returns (ret, frame) - ret is success boolean",
+    "cap.read() returns (ret, frame)",
     "cv2.waitKey(1) waits 1ms, checks for keypress"
   ]
 }

@@ -1,6 +1,6 @@
 {
   "mission_07": [
-    "Images need to be resized to model input size (224x224 for MobileNet)",
+    "Images need resizing to model input size (224x224 for MobileNet)",
     "preprocess_input() normalizes pixel values",
     "model.predict() returns predictions"
   ]

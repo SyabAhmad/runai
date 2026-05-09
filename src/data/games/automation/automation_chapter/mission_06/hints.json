@@ -1,7 +1,7 @@
 {
   "mission_06": [
-    "Use \"while read line; do ... done < file.txt\" to read a file",
-    "The \"read\" command reads a line into a variable",
-    "You can also use \"cat file | while read line\""
+    "Pattern: while read line; do ... done < file.txt",
+    "$line contains the current line's content",
+    "The read command reads a line into a variable"
   ]
 }

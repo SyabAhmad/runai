@@ -32,7 +32,8 @@ function normalizeInput(input) {
 }
 
 function evaluateSqlRules(input, rules) {
-  const lowerInput = normalizeForRuleMatch(input);
+  const stripped = stripSqlComments(input);
+  const lowerInput = normalizeForRuleMatch(stripped);
   for (const rule of rules) {
     if (rule.startsWith("must_include:")) {
       const keyword = normalizeForRuleMatch(rule.slice("must_include:".length));
@@ -42,9 +43,24 @@ function evaluateSqlRules(input, rules) {
           message: `Missing required keyword: ${keyword}`,
         };
       }
+    } else if (rule.startsWith("must_not_include:")) {
+      const keyword = normalizeForRuleMatch(rule.slice("must_not_include:".length));
+      if (lowerInput.includes(keyword)) {
+        return {
+          success: false,
+          message: `Should not include: ${keyword}`,
+        };
+      }
     }
   }
   return { success: true, message: "SQL query is valid!" };
+}
+
+function stripSqlComments(input) {
+  return input
+    .split(/\r?\n/)
+    .filter((line) => !line.trim().startsWith("--"))
+    .join("\n");
 }
 
 function evaluateCommandRules(input, rules) {

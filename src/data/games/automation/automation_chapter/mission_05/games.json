@@ -1,14 +1,13 @@
 {
   "title": "Functions",
   "initialState": {
-    "content": "#!/bin/bash\n# Create a function called \"greet\" that takes a name parameter\n# Call the function with \"Bestie\" as the argument\n\n"
+    "content": "#!/bin/bash\n# Create a function called \"greet\" that takes a name parameter\n# Call it with \"Bestie\" as the argument\n\n"
   },
   "validation": {
     "type": "terminal",
     "rules": [
       "must_include:greet()",
-      "must_include:function",
-      "must_include:greet Bestie"
+      "must_include:$1"
     ]
   },
   "id": "mission_05",

@@ -1,7 +1,7 @@
 {
   "mission_01": [
-    "Start with checking out the code (already done)",
-    "Build should come before test",
-    "Deploy should be the final step"
+    "Start with \"checkout\" to get your code",
+    "Add \"build\" to compile your code",
+    "Add \"test\" to verify your code works"
   ]
 }

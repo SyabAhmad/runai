@@ -1,7 +1,7 @@
 {
-  "title": "Cron Jobs",
+  "title": "Cron Basics",
   "initialState": {
-    "content": "#!/bin/bash\n# Create a cron job entry that runs a backup script every day at 2 AM\n# Format: minute hour day month weekday command\n# Write the cron entry to stdout (don't actually install it)\n\n"
+    "content": "#!/bin/bash\n# Create a cron entry that runs backup.sh daily at 2 AM\n# Format: minute hour day month weekday command\n# Just print the cron line (don't actually install)\n\n"
   },
   "validation": {
     "type": "terminal",
@@ -9,7 +9,7 @@
       "must_include:0",
       "must_include:2",
       "must_include:*",
-      "must_include:cron"
+      "must_include:backup"
     ]
   },
   "id": "mission_08",

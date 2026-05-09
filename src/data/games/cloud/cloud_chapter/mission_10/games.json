@@ -1,15 +1,14 @@
 {
-  "title": "Capstone Deployment",
+  "title": "Cloud Capstone",
   "initialState": {
-    "content": "# TODO: Deploy a full app stack on cloud\n# 1. Create resource group\n# 2. Create app service plan (az appservice plan create)\n# 3. Create web app (az webapp create)\n# 4. Configure with app settings\n"
+    "content": "# TODO: Deploy a full app stack:\n# 1. Create resource group\n# 2. Create App Service Plan (az appservice plan create)\n# 3. Create Web App (az webapp create)\n# 4. Deploy a simple app\n"
   },
   "validation": {
     "type": "terminal",
     "rules": [
       "must_include:az group create",
       "must_include:az appservice plan",
-      "must_include:az webapp create",
-      "must_include:echo"
+      "must_include:az webapp create"
     ]
   },
   "id": "mission_10",

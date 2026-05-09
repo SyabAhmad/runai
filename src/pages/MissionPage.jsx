@@ -289,7 +289,7 @@ export default function MissionPage() {
       <div className="flex-1 flex overflow-hidden">
         {/* Left: Game Editor (2/3 width) */}
         <div className="flex-[2] flex flex-col overflow-hidden border-r border-border">
-          <div className="flex-1 overflow-hidden">
+          <div className="flex-1 min-h-0 overflow-hidden">
             <GameRenderer
               mission={mission}
               data={{ ...mission.initialState, content: userInput }}

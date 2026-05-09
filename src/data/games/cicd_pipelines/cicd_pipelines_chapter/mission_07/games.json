@@ -1,7 +1,7 @@
 {
-  "title": "Artifact Management",
+  "title": "Push Artifacts",
   "initialState": {
-    "content": "[\"checkout\", \"build\"]"
+    "content": "[\"checkout\", \"install\", \"build\", \"test\"]"
   },
   "validation": {
     "type": "pipeline",

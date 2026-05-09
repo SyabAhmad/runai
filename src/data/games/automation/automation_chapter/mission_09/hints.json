@@ -1,7 +1,7 @@
 {
   "mission_09": [
-    "The & symbol at the end of a command runs it in the background",
-    "The $! variable holds the PID of the last background process",
+    "The & symbol at the end runs a command in the background",
+    "$! gives you the PID of the last background process",
     "Use \"wait\" to wait for background processes to finish"
   ]
 }

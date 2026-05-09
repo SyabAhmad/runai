@@ -1,18 +1,20 @@
 {
-    "title":  "SQL Mission 5: Filter Early In CTE",
-    "initialState":  {
-                         "content":  "-- Mission 5 Guidelines\n-- CTE should filter rows first\n-- Then aggregate in outer query\n\nWITH filtered_orders AS (\n  SELECT\n    customer_id,\n    total_amount\n  FROM orders\n  WHERE\n    -- TODO status/date filters\n)\nSELECT\n  customer_id,\n  -- TODO aggregate\nFROM filtered_orders\nGROUP BY customer_id\nORDER BY total_spend DESC;"
-                     },
-    "validation":  {
-                       "type":  "sql",
-                       "rules":  [
-                                     "must_include:with filtered_orders as",
-                                     "must_include:where status = \u0027completed\u0027",
-                                     "must_include:and order_date \u003e= \u00272025-01-01\u0027",
-                                     "must_include:sum(total_amount) as total_spend",
-                                     "must_include:group by customer_id"
-                                 ]
-                   },
-    "id":  "mission_05",
-    "type":  "sql_debug"
+  "title": "SQL Mission 5: Filter Early In CTE",
+  "initialState": {
+    "content": "-- Finance team needs 2025 total spend per customer.\n-- Only completed orders count.\n--\n-- Rules:\n--   1. Filter in CTE (status + date)\n--   2. Aggregate in outer query\n--   3. Sort by total_spend descending\n--\n-- Table: orders(order_id, customer_id, order_date, status, total_amount)\n\nWITH filtered_orders AS (\n  SELECT\n    customer_id,\n    total_amount\n  FROM orders\n  WHERE\n    -- TODO: status = 'completed'\n    -- TODO: order_date >= '2025-01-01'\n)\nSELECT\n  customer_id,\n  -- TODO: SUM + alias\nFROM filtered_orders\nGROUP BY customer_id\nORDER BY total_spend DESC;"
+  },
+  "validation": {
+    "type": "sql",
+    "rules": [
+      "must_include:with filtered_orders as",
+      "must_include:where status = 'completed'",
+      "must_include:and order_date >= '2025-01-01'",
+      "must_include:sum(total_amount) as total_spend",
+      "must_include:group by customer_id"
+    ]
+  },
+  "id": "mission_05",
+  "type": "sql_debug",
+  "xpReward": 90,
+  "difficulty": "medium"
 }

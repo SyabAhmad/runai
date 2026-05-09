@@ -1,7 +1,7 @@
 {
   "mission_03": [
-    "VM creation needs: --resource-group, --name, --image at minimum",
-    "ubuntu2204 is a common Linux image",
-    "You can also specify --admin-username and --generate-ssh-keys"
+    "Storage account names must be globally unique and lowercase",
+    "Required: --name, --resource-group, --location",
+    "Add --sku Standard_LRS for locally redundant storage"
   ]
 }

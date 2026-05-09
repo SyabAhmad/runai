@@ -1,14 +1,14 @@
 {
-  "title": "Variables & Parameters",
+  "title": "Variables",
   "initialState": {
-    "content": "#!/bin/bash\n# Create a script that uses a variable named \"name\" and prints a greeting\n# Then use a positional parameter $1 to personalize the greeting\n\n"
+    "content": "#!/bin/bash\n# Create a variable called \"name\" with value \"Bestie\"\n# Print a greeting using the variable\n\n"
   },
   "validation": {
     "type": "terminal",
     "rules": [
       "must_include:name=",
       "must_include:echo",
-      "must_include:$1"
+      "must_include:$name"
     ]
   },
   "id": "mission_02",

@@ -1,3 +1,3 @@
 {
-  "mission_05": "Pre-filter completed orders in 2025 before aggregation to reduce workload. Then compute spend per customer."
+  "mission_05": "The finance team needs total spend per customer for a 2025 year-end report. However, only completed orders should count. Your task: write the query using a CTE that pre-filters the orders to only `completed` status and 2025 dates. Then compute the `SUM(total_amount)` per customer in the outer query. This two-step pattern makes the logic explicit and lets the database filter rows before doing any aggregation."
 }

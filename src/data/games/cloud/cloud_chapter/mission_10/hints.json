@@ -1,7 +1,8 @@
 {
   "mission_10": [
-    "Use App Service for hosting web applications",
-    "App Service Plan defines the pricing tier and features",
-    "You can set environment variables with --app-settings"
+    "Start with creating the resource group",
+    "App Service Plan defines the pricing tier",
+    "Create the web app and link it to the plan",
+    "Use --runtime to specify your app's runtime"
   ]
 }

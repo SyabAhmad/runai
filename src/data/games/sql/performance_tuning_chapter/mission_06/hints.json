@@ -1,7 +1,7 @@
 {
-    "mission_06":  [
-                       "Use ROW_NUMBER partitioned by customer_id.",
-                       "Sort inside window by newest date first.",
-                       "Filter in outer query with rn \u003c= 3."
-                   ]
+  "mission_06": [
+    "Use `ROW_NUMBER() OVER (PARTITION BY customer_id ORDER BY order_date DESC) AS rn` to assign rank 1 to the newest order per customer.",
+    "Write the CTE first to add the `rn` column. Then in the outer query, filter with `WHERE rn <= 3` to keep only the top 3 per customer.",
+    "Sort the final result by `customer_id, order_date DESC` so each customer's orders appear grouped together, newest first."
+  ]
 }

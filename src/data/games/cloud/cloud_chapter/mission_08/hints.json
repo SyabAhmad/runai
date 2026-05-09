@@ -2,6 +2,6 @@
   "mission_08": [
     "VM Scale Sets (VMSS) let you deploy identical VMs that scale together",
     "--instance-count sets initial size",
-    "You can also configure auto-scale rules based on metrics"
+    "You can configure auto-scale rules based on metrics"
   ]
 }

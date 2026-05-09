@@ -1,7 +1,7 @@
 {
   "mission_02": [
     "Resource groups are containers for Azure resources",
-    "The syntax is: az group create --name NAME --location LOCATION",
+    "Syntax: az group create --name NAME --location LOCATION",
     "eastus is a common Azure region"
   ]
 }

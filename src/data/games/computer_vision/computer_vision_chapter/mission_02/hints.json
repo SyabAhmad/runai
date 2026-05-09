@@ -2,6 +2,6 @@
   "mission_02": [
     "cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) converts to grayscale",
     "Grayscale images have only one channel (intensity)",
-    "Use plt.imshow(gray, cmap=\"gray\") to display grayscale"
+    "Use plt.imshow(gray, cmap=\"gray\") to display"
   ]
 }

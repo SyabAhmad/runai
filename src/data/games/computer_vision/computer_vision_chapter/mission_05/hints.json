@@ -1,7 +1,7 @@
 {
   "mission_05": [
     "cv2.flip(img, 1) flips horizontally (0=vertical, -1=both)",
-    "Use cv2.rotate() for 90/180/270 degree rotations",
-    "Brightness: img + value (clip to 0-255)"
+    "cv2.rotate() for 90/180/270 degree rotations",
+    "Brightness: np.clip(img + 30, 0, 255).astype(np.uint8)"
   ]
 }

@@ -1,14 +1,14 @@
 {
-  "title": "VM Provisioning",
+  "title": "Create Storage Account",
   "initialState": {
-    "content": "# TODO: Deploy a virtual machine named \"runai-vm\"\n# Use: az vm create with --resource-group, --name, --image\n# Use ubuntu2204 as the image\n"
+    "content": "# TODO: Create a storage account named \"runaistorage123\"\n# Use: az storage account create\n# Specify --resource-group and --location\n"
   },
   "validation": {
     "type": "terminal",
     "rules": [
-      "must_include:az vm create",
-      "must_include:runai-vm",
-      "must_include:ubuntu2204"
+      "must_include:az storage account create",
+      "must_include:runaistorage123",
+      "must_include:--resource-group"
     ]
   },
   "id": "mission_03",

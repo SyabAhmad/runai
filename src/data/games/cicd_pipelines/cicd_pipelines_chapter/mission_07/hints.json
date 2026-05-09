@@ -1,7 +1,7 @@
 {
   "mission_07": [
-    "Use \"actions/upload-artifact\" to store build outputs",
-    "Specify the path to the build folder",
-    "Artifacts persist after the workflow ends"
+    "Artifacts are build outputs that persist after pipeline ends",
+    "Add \"push\" to store build results",
+    "Artifacts can be downloaded or used by other jobs"
   ]
 }

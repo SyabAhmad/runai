@@ -1,7 +1,7 @@
 {
   "mission_05": [
-    "Define a function with \"function_name() { ... }\"",
-    "Access parameters inside functions with $1, $2, etc.",
-    "Call the function by just typing its name followed by arguments"
+    "Define functions with name() { ... } syntax",
+    "Inside a function, $1 is the first argument",
+    "Call the function by typing its name followed by arguments"
   ]
 }

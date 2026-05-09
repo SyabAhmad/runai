@@ -1,7 +1,7 @@
 {
-  "title": "Shell Script Basics",
+  "title": "Echo Greeting",
   "initialState": {
-    "content": "#!/bin/bash\n# Create a shell script that prints \"Hello, Bestie!\" to the terminal\n# Use the echo command\n\n"
+    "content": "#!/bin/bash\n# Print a greeting message to the terminal\n# Use the echo command\n\n"
   },
   "validation": {
     "type": "terminal",

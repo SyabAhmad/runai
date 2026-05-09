@@ -1,15 +1,15 @@
 {
   "title": "Automation Capstone",
   "initialState": {
-    "content": "#!/bin/bash\n# Build a complete automated backup script that:\n# 1. Takes source and destination as arguments\n# 2. Checks if source exists\n# 3. Creates a timestamped backup\n# 4. Uses rsync or cp to copy files\n# 5. Logs the result\n\n"
+    "content": "#!/bin/bash\n# Build a backup script that:\n# 1. Takes source directory and destination as arguments\n# 2. Checks if source directory exists (use -d)\n# 3. Creates a timestamped backup folder\n# 4. Uses cp -r to copy the directory\n\n"
   },
   "validation": {
     "type": "terminal",
     "rules": [
       "must_include:if",
-      "must_include:rsync",
+      "must_include:-d",
       "must_include:date",
-      "must_include:echo"
+      "must_include:cp"
     ]
   },
   "id": "mission_10",

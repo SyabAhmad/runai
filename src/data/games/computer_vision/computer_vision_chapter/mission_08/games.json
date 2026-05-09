@@ -1,7 +1,7 @@
 {
-  "title": "Bounding Boxes",
+  "title": "Draw Bounding Boxes",
   "initialState": {
-    "content": "import cv2\n\nimg = cv2.imread(\"image.jpg\")\n# TODO: Draw detection boxes on the image\n# Use cv2.rectangle() with coordinates (x, y, w, h)\n# Draw a green box (0, 255, 0) with thickness 2\n"
+    "content": "import cv2\n\nimg = cv2.imread(\"image.jpg\")\n# TODO: Draw a green rectangle (x=100, y=100, w=200, h=150)\n# Use cv2.rectangle() with color (0, 255, 0)\n"
   },
   "validation": {
     "type": "ai_code",

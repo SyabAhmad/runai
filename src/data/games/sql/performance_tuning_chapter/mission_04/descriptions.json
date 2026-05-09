@@ -1,3 +1,3 @@
 {
-  "mission_04": "For a dashboard widget, return only the top 20 highest-value orders to reduce rendering cost and data transfer."
+  "mission_04": "A dashboard widget needs to show only the 20 highest-value orders in the system — just the order ID and amount. The full query returns 180,000 rows and the widget takes 8 seconds to render. Refactor the query to return exactly 20 rows, sorted by amount descending so the widget shows the most valuable orders first."
 }

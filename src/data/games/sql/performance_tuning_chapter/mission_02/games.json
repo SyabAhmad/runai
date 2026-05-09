@@ -1,16 +1,20 @@
 {
   "title": "SQL Mission 2: Sargable Date Range",
   "initialState": {
-    "content": "-- Mission 2 Guidelines\n-- Avoid wrapping indexed column in function\n-- Use range boundaries for year 2025\n\nSELECT\n  order_id\nFROM orders\nWHERE\n  -- TODO start boundary\n  AND -- TODO end boundary\n;"
+    "content": "-- SLOW QUERY (forces full table scan):\n-- SELECT order_id FROM orders WHERE YEAR(order_date) = 2025;\n--\n-- Rewrite it using range boundaries so the index is used.\n--\n-- Rules:\n--   1. Use >= for the lower date boundary\n--   2. Use < for the upper date boundary\n--   3. Do NOT use YEAR(), MONTH(), or any function on order_date\n--\n-- Table: orders(order_id, customer_id, order_date, status, total_amount, notes)\n\nSELECT\n  order_id\nFROM orders\nWHERE\n  -- TODO: lower boundary (2025-01-01)\n  AND\n  -- TODO: upper boundary (2026-01-01)\n;"
   },
   "validation": {
     "type": "sql",
     "rules": [
-      "must_include:where order_date \u003e= \u00272025-01-01\u0027",
-      "must_include:and order_date \u003c \u00272026-01-01\u0027",
+      "must_not_include:year(",
+      "must_not_include:month(",
+      "must_include:where order_date >= '2025-01-01'",
+      "must_include:and order_date < '2026-01-01'",
       "must_include:select order_id"
     ]
   },
   "id": "mission_02",
-  "type": "sql_debug"
+  "type": "sql_debug",
+  "xpReward": 70,
+  "difficulty": "easy"
 }

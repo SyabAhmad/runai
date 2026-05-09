@@ -1,17 +1,21 @@
 {
   "title": "SQL Mission 1: Avoid SELECT *",
   "initialState": {
-    "content": "-- Mission 1 Guidelines\n-- Table: orders(order_id, customer_id, order_date, status, total_amount, notes)\n-- Return only required columns (no SELECT *)\n-- Filter completed orders\n-- Sort newest first\n\nSELECT\n  -- TODO explicit columns\nFROM orders\nWHERE\n  -- TODO\nORDER BY\n  -- TODO\n;"
+    "content": "-- The analyst's slow dashboard query\n-- TODO: Refactor it to be fast and precise\n--\n-- Rules:\n--   1. No SELECT * — list exact columns\n--   2. Filter: only 'completed' orders\n--   3. Sort: newest first\n--\n-- Table: orders(order_id, customer_id, order_date, status, total_amount, notes)\n\n-- BAD (slow):\n-- SELECT * FROM orders WHERE status = 'completed' ORDER BY order_date DESC;\n\n-- YOUR REFACTORED QUERY:\nSELECT\n  -- TODO: list only the 3 needed columns\nFROM orders\nWHERE\n  -- TODO: completed orders only\nORDER BY\n  -- TODO: newest first\n;"
   },
   "validation": {
     "type": "sql",
     "rules": [
+      "must_not_include:select *",
+      "must_not_include:select * from",
       "must_include:select order_id, customer_id, order_date",
       "must_include:from orders",
-      "must_include:where status = \u0027completed\u0027",
+      "must_include:where status = 'completed'",
       "must_include:order by order_date desc"
     ]
   },
   "id": "mission_01",
-  "type": "sql_debug"
+  "type": "sql_debug",
+  "xpReward": 60,
+  "difficulty": "easy"
 }

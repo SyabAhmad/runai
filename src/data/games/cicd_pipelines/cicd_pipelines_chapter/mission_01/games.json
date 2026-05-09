@@ -1,5 +1,5 @@
 {
-  "title": "Pipeline Structure",
+  "title": "First Pipeline",
   "initialState": {
     "content": "[\"checkout\"]"
   },
@@ -8,8 +8,7 @@
     "rules": [
       "must_include:checkout",
       "must_include:build",
-      "must_include:test",
-      "must_include:deploy"
+      "must_include:test"
     ]
   },
   "id": "mission_01",

@@ -1,7 +1,7 @@
 {
-  "title": "Containers",
+  "title": "Deploy Container Instance",
   "initialState": {
-    "content": "# TODO: Deploy a container instance named \"runai-container\"\n# Use: az container create with --image (use nginx)\n# Expose port 80\n"
+    "content": "# TODO: Deploy a container named \"runai-container\" using nginx\n# Use: az container create\n# Expose port 80\n"
   },
   "validation": {
     "type": "terminal",

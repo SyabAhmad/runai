@@ -1,14 +1,15 @@
 {
-  "title": "Loops",
+  "title": "For Loops",
   "initialState": {
-    "content": "#!/bin/bash\n# Create a for loop that prints numbers 1 through 5\n# Use the seq command or brace expansion {1..5}\n\n"
+    "content": "#!/bin/bash\n# Print numbers 1 through 5 using a for loop\n# Use brace expansion {1..5}\n\n"
   },
   "validation": {
     "type": "terminal",
     "rules": [
       "must_include:for",
       "must_include:do",
-      "must_include:done"
+      "must_include:done",
+      "must_include:echo"
     ]
   },
   "id": "mission_04",

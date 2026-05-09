@@ -1,3 +1,3 @@
 {
-  "mission_07": "Identify customers with more than 5 orders using a grouped subquery join for clarity and performance."
+  "mission_07": "The customer success team wants a list of high-frequency customers — those with more than 5 orders — for a VIP outreach campaign. Build a query that aggregates order counts per customer in a subquery, filters to those with more than 5 orders using `HAVING`, then joins back to the customers table to get their names. Return `customer_id`, `name`, and `total_orders`, sorted by order count descending."
 }

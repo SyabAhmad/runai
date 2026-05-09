@@ -1,7 +1,7 @@
 {
   "mission_10": [
     "Start by loading the image with cv2.imread()",
-    "Resize and preprocess for your model",
+    "Resize and preprocess for your model (224x224)",
     "Use MobileNetV2 or similar pre-trained model",
     "Decode predictions to get human-readable labels"
   ]

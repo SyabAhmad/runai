@@ -1,7 +1,7 @@
 {
   "mission_02": [
-    "Use \"npm run build\" for Node.js projects",
-    "The run keyword executes shell commands",
-    "Add a name for each step"
+    "Dependencies must be installed before building",
+    "Add \"install\" before \"build\"",
+    "Think about what comes first: install or build?"
   ]
 }

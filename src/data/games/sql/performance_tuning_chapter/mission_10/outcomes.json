@@ -1,3 +1,3 @@
 {
-    "mission_10":  "Capstone complete. You combined filtering, aggregation, ranking, and limiting efficiently."
+  "mission_10": "Capstone complete. You combined filtering, aggregation, ranking, and limiting into one efficient query. The database computed this from a single table scan with an index range — no full scan, no application-layer sorting. This is production-grade analytics SQL."
 }

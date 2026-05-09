@@ -1,16 +1,18 @@
 {
-    "title":  "SQL Mission 6: Latest 3 Orders Per Customer",
-    "initialState":  {
-                         "content":  "-- Mission 6 Guidelines\n-- Rank rows per customer by order_date desc\n-- Keep ranks \u003c= 3\n\nWITH ranked_orders AS (\n  SELECT\n    customer_id,\n    order_id,\n    order_date,\n    -- TODO row_number\n  FROM orders\n)\nSELECT\n  customer_id,\n  order_id,\n  order_date\nFROM ranked_orders\nWHERE\n  -- TODO\nORDER BY customer_id, order_date DESC;"
-                     },
-    "validation":  {
-                       "type":  "sql",
-                       "rules":  [
-                                     "must_include:row_number() over (partition by customer_id order by order_date desc) as rn",
-                                     "must_include:where rn \u003c= 3",
-                                     "must_include:order by customer_id, order_date desc"
-                                 ]
-                   },
-    "id":  "mission_06",
-    "type":  "sql_debug"
+  "title": "SQL Mission 6: Latest 3 Orders Per Customer",
+  "initialState": {
+    "content": "-- Dashboard needs each customer's 3 most recent orders.\n-- Use ROW_NUMBER to rank orders per customer.\n--\n-- Rules:\n--   1. Partition by customer_id\n--   2. Order by order_date DESC (newest = 1)\n--   3. Keep only rn <= 3\n--\n-- Table: orders(order_id, customer_id, order_date, status, total_amount)\n\nWITH ranked_orders AS (\n  SELECT\n    customer_id,\n    order_id,\n    order_date,\n    -- TODO: ROW_NUMBER() window function\n  FROM orders\n)\nSELECT\n  customer_id,\n  order_id,\n  order_date\nFROM ranked_orders\nWHERE\n  -- TODO: keep only top 3 per customer\nORDER BY customer_id, order_date DESC;"
+  },
+  "validation": {
+    "type": "sql",
+    "rules": [
+      "must_include:row_number() over (partition by customer_id order by order_date desc) as rn",
+      "must_include:where rn <= 3",
+      "must_include:order by customer_id, order_date desc"
+    ]
+  },
+  "id": "mission_06",
+  "type": "sql_debug",
+  "xpReward": 120,
+  "difficulty": "medium"
 }

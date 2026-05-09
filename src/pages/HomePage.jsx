@@ -1,21 +1,27 @@
-﻿import { Link } from "react-router-dom";
+﻿import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const missionModules = import.meta.glob(
   "../data/games/**/mission_*/games.json",
-  { eager: true },
 );
 
 const formatName = (value) =>
   value.replace(/_/g, " ").replace(/\b\w/g, (char) => char.toUpperCase());
 
 export default function HomePage() {
-  const techSet = new Set();
-  Object.keys(missionModules).forEach((path) => {
-    const parts = path.split("/");
-    const tech = parts[3];
-    if (tech) techSet.add(tech);
-  });
-  const technologies = Array.from(techSet).sort((a, b) => a.localeCompare(b));
+  const [technologies, setTechnologies] = useState([]);
+
+  useEffect(() => {
+    // Extract unique tech names from glob paths without loading all files
+    const techSet = new Set();
+    Object.keys(missionModules).forEach((path) => {
+      const parts = path.split("/");
+      const tech = parts[3];
+      if (tech) techSet.add(tech);
+    });
+    const sortedTechs = Array.from(techSet).sort((a, b) => a.localeCompare(b));
+    setTechnologies(sortedTechs);
+  }, []);
 
   return (
     <div className="min-h-screen bg-primary text-text">
@@ -65,9 +71,9 @@ export default function HomePage() {
                   sharp mind, and steady daily wins.
                 </h1>
                 <p className="mt-6 text-sm text-pink-50/90">
-                  This page is about her consistency, her growth, her focus,
-                  and her dedication toward learning. One mission, one level-up,
-                  one more proof of her excellence.
+                  This page is about her consistency, her growth, her focus, and
+                  her dedication toward learning. One mission, one level-up, one
+                  more proof of her excellence.
                 </p>
                 <div className="mt-6 inline-flex items-center gap-3 rounded-2xl border border-pink-300/30 bg-pink-400/10 p-3">
                   <img
@@ -85,7 +91,9 @@ export default function HomePage() {
                   </div>
                   <div className="rounded-2xl border border-amber-300/20 bg-amber-400/10 p-4">
                     <p className="text-xs text-amber-200">Step 2</p>
-                    <p className="mt-1 text-sm font-semibold">Daily Discipline</p>
+                    <p className="mt-1 text-sm font-semibold">
+                      Daily Discipline
+                    </p>
                   </div>
                   <div className="rounded-2xl border border-blue-300/20 bg-blue-400/10 p-4">
                     <p className="text-xs text-blue-200">Step 3</p>
@@ -215,4 +223,3 @@ export default function HomePage() {
     </div>
   );
 }
-

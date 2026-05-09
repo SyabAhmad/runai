@@ -1,3 +1,3 @@
 {
-  "mission_03": "Good optimization choice. EXISTS expresses intent and avoids unnecessary join expansion."
+  "mission_03": "Good optimization choice. EXISTS expresses the correct intent — one row per customer who has at least one order — without the duplication that comes from a JOIN expansion. The query is also more efficient because the database can stop scanning after finding the first match."
 }

@@ -1,14 +1,14 @@
 {
-  "title": "Storage Accounts",
+  "title": "Create Virtual Network",
   "initialState": {
-    "content": "# TODO: Create a storage account named \"runaistorage123\"\n# Use: az storage account create\n# Specify --resource-group and --location\n"
+    "content": "# TODO: Create a virtual network named \"runai-vnet\"\n# Use: az network vnet create\n# Address prefix: 10.0.0.0/16\n"
   },
   "validation": {
     "type": "terminal",
     "rules": [
-      "must_include:az storage account create",
-      "must_include:runaistorage123",
-      "must_include:--resource-group"
+      "must_include:az network vnet create",
+      "must_include:runai-vnet",
+      "must_include:10.0.0.0/16"
     ]
   },
   "id": "mission_04",

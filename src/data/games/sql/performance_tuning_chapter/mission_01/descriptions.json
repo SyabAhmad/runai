@@ -1,3 +1,3 @@
 {
-  "mission_01": "Optimize a reporting query by selecting only required columns. Return order_id, customer_id, and order_date for completed orders, newest first."
+  "mission_01": "Your team's data analyst ran a raw `SELECT * FROM orders` query and the dashboard is loading painfully slow. The report only needs three things: which order it is, which customer placed it, and when it was placed. On top of that, the manager only wants completed orders, sorted newest first so the team sees the latest activity immediately. Refactor the query to return only the three required columns, filter to completed orders, and sort by date descending."
 }

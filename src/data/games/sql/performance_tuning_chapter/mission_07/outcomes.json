@@ -1,3 +1,3 @@
 {
-    "mission_07":  "Nice. You isolated heavy logic in an aggregate block and joined cleanly."
+  "mission_07": "Nice. You isolated heavy logic in an aggregate block and joined cleanly. The subquery computed the counts once, and the join brought in customer details without duplicating or missing any records."
 }

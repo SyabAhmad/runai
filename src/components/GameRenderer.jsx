@@ -13,36 +13,30 @@ export default function GameRenderer({ mission, data, onChange }) {
     case 'sql_debug':
     case 'ai_code':
       return (
-        <div className="panel p-4">
-          <CodeEditor
-            value={data?.content || ''}
-            language={mission.type === 'sql_debug' ? 'sql' : 'python'}
-            mission={mission}
-            onChange={handleChange}
-          />
-        </div>
+        <CodeEditor
+          value={data?.content || ''}
+          language={mission.type === 'sql_debug' ? 'sql' : 'python'}
+          mission={mission}
+          onChange={handleChange}
+        />
       );
 
     case 'terminal':
       return (
-        <div className="panel p-4">
-          <Terminal
-            value={data?.content || ''}
-            mission={mission}
-            onChange={handleChange}
-          />
-        </div>
+        <Terminal
+          value={data?.content || ''}
+          mission={mission}
+          onChange={handleChange}
+        />
       );
 
     case 'pipeline':
       return (
-        <div className="panel p-4">
-          <PipelineBuilder
-            value={data?.content || ''}
-            mission={mission}
-            onChange={handleChange}
-          />
-        </div>
+        <PipelineBuilder
+          value={data?.content || ''}
+          mission={mission}
+          onChange={handleChange}
+        />
       );
 
     default:

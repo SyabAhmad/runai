@@ -1,3 +1,3 @@
 {
-    "mission_06":  "Great. You delivered an efficient top-N-per-customer pattern."
+  "mission_06": "Great. You delivered an efficient top-N-per-customer pattern. The database now returns exactly 3 rows per customer instead of their entire history. This query scales to millions of orders without breaking the dashboard."
 }

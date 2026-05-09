@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Outlet, Navigate, useParams } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
 import Header from "../components/Header";
@@ -12,7 +13,10 @@ const missionModules = import.meta.glob(
 export default function ChapterLayout() {
   const { technology } = useParams();
   const setCurrentTechnology = useGameStore((s) => s.setCurrentTechnology);
-  setCurrentTechnology(technology);
+
+  useEffect(() => {
+    setCurrentTechnology(technology);
+  }, [technology, setCurrentTechnology]);
 
   // Extract unique chapters for this technology
   const chapterSet = new Set();

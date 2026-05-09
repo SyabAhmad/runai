@@ -1,7 +1,7 @@
 {
-  "title": "File Operations",
+  "title": "Reading Files",
   "initialState": {
-    "content": "#!/bin/bash\n# Create a script that reads a file line by line\n# Use \"while read line\" to process each line\n# Print each line with \"Line: \" prefix\n\n"
+    "content": "#!/bin/bash\n# Read a file line by line and print each line\n# Use \"while read line\" pattern\n\n"
   },
   "validation": {
     "type": "terminal",

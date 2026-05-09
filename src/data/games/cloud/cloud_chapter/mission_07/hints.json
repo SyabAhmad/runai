@@ -1,7 +1,7 @@
 {
   "mission_07": [
-    "Function apps need: --name, --resource-group, --runtime, --runtime-version",
-    "Consumption plan is the serverless hosting option",
-    "dotnet is one of many supported runtimes (node, python, etc.)"
+    "App Service Plan defines the pricing tier and features",
+    "Web Apps run your code without managing servers",
+    "Specify runtime like node, python, dotnet"
   ]
 }

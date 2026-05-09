@@ -1,7 +1,7 @@
 {
   "mission_04": [
-    "Storage account names must be globally unique and lowercase",
-    "Required params: --name, --resource-group, --location",
-    "Add --sku Standard_LRS for locally redundant storage"
+    "Virtual networks isolate your cloud resources logically",
+    "Address prefix 10.0.0.0/16 gives you 65534 usable IPs",
+    "You can also create subnets within the vnet"
   ]
 }

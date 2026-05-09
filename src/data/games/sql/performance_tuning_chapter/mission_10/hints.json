@@ -1,8 +1,7 @@
-
 {
-    "mission_10":  [
-                       "Aggregate first, rank second.",
-                       "Use both RANK and DENSE_RANK window functions.",
-                       "Limit final leaderboard to top 10."
-                   ]
+  "mission_10": [
+    "CTE 1 (revenue): Filter to `status = 'completed'` and `order_date >= '2025-01-01' AND order_date < '2026-01-01'`. Use `SUM(total_amount) AS revenue` and `GROUP BY customer_id`.",
+    "CTE 2 (leaderboard): Use `RANK() OVER (ORDER BY revenue DESC) AS rnk` and `DENSE_RANK() OVER (ORDER BY revenue DESC) AS drnk` to add ranking columns.",
+    "Final SELECT: pull all four columns from the leaderboard CTE, sort by `revenue DESC`, and add `LIMIT 10` to return only the top 10."
+  ]
 }

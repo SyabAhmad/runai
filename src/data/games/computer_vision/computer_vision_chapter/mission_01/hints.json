@@ -1,7 +1,7 @@
 {
   "mission_01": [
     "cv2.imread() loads an image from file",
-    "OpenCV loads in BGR format, convert to RGB for display",
+    "OpenCV loads in BGR format by default",
     "plt.imshow() displays the image, plt.show() renders it"
   ]
 }

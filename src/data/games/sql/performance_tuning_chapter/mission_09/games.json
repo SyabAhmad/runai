@@ -1,16 +1,19 @@
 {
-    "title":  "SQL Mission 9: Conditional Aggregation In One Pass",
-    "initialState":  {
-                         "content":  "-- Mission 9 Guidelines\n-- Single grouped output for 2025\n-- Use SUM(CASE WHEN ...) for status-specific counts\n\nSELECT\n  COUNT(*) AS total_orders,\n  -- TODO completed count\n  -- TODO cancelled count\nFROM orders\nWHERE\n  -- TODO date range 2025\n;"
-                     },
-    "validation":  {
-                       "type":  "sql",
-                       "rules":  [
-                                     "must_include:sum(case when status = \u0027completed\u0027 then 1 else 0 end) as completed_orders",
-                                     "must_include:sum(case when status = \u0027cancelled\u0027 then 1 else 0 end) as cancelled_orders",
-                                     "must_include:where order_date \u003e= \u00272025-01-01\u0027 and order_date \u003c \u00272026-01-01\u0027"
-                                 ]
-                   },
-    "id":  "mission_09",
-    "type":  "sql_debug"
+  "title": "SQL Mission 9: Conditional Aggregation In One Pass",
+  "initialState": {
+    "content": "-- Build a 2025 KPI summary row: total, completed, and cancelled.\n-- Use conditional SUM with CASE WHEN — one table scan.\n--\n-- Rules:\n--   1. COUNT(*) for total\n--   2. SUM(CASE WHEN ...) for each status count\n--   3. One date filter for all metrics\n--   4. Return a single row\n--\n-- Table: orders(order_id, customer_id, order_date, status, total_amount)\n\nSELECT\n  COUNT(*) AS total_orders,\n  -- TODO: completed_orders using SUM + CASE\n  -- TODO: cancelled_orders using SUM + CASE\nFROM orders\nWHERE\n  -- TODO: 2025 date range\n;"
+  },
+  "validation": {
+    "type": "sql",
+    "rules": [
+      "must_include:count(*)",
+      "must_include:sum(case when status = 'completed' then 1 else 0 end)",
+      "must_include:sum(case when status = 'cancelled' then 1 else 0 end)",
+      "must_include:where order_date >= '2025-01-01' and order_date < '2026-01-01'"
+    ]
+  },
+  "id": "mission_09",
+  "type": "sql_debug",
+  "xpReward": 140,
+  "difficulty": "hard"
 }

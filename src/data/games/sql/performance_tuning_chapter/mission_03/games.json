@@ -1,16 +1,21 @@
 {
-  "title": "SQL Mission 3: EXISTS Instead Of Join For Presence",
+  "title": "SQL Mission 3: EXISTS Instead Of JOIN For Presence",
   "initialState": {
-    "content": "-- Mission 3 Guidelines\n-- Return: c.customer_id, c.name\n-- Use EXISTS with correlated subquery\n\nSELECT\n  c.customer_id,\n  c.name\nFROM customers c\nWHERE EXISTS (\n  -- TODO correlated subquery\n)\nORDER BY c.customer_id;"
+    "content": "-- PROBLEM: This JOIN gives duplicates\n-- (one row per order, not one row per customer)\n--\n-- Rewrite using EXISTS for a clean presence check.\n--\n-- Rules:\n--   1. Use EXISTS with a correlated subquery\n--   2. Return customer_id and name\n--   3. One row per customer who has orders\n--\n-- Tables:\n--   customers(customer_id, name, email, region)\n--   orders(order_id, customer_id, order_date, status, total_amount)\n\nSELECT\n  c.customer_id,\n  c.name\nFROM customers c\nWHERE EXISTS (\n  -- TODO: correlated subquery checking orders\n)\nORDER BY c.customer_id;"
   },
   "validation": {
     "type": "sql",
     "rules": [
-      "must_include:where exists (select 1 from orders o where o.customer_id = c.customer_id)",
-      "must_include:select c.customer_id, c.name",
-      "must_include:from customers c"
+      "must_include:where exists (",
+      "must_not_include:left join",
+      "must_not_include:inner join",
+      "must_include:select 1 from orders",
+      "must_include:o.customer_id = c.customer_id",
+      "must_include:select c.customer_id, c.name"
     ]
   },
   "id": "mission_03",
-  "type": "sql_debug"
+  "type": "sql_debug",
+  "xpReward": 80,
+  "difficulty": "easy"
 }

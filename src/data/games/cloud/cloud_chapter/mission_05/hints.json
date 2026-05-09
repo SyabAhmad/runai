@@ -1,7 +1,7 @@
 {
   "mission_05": [
-    "Virtual networks isolate your cloud resources logically",
-    "Address prefix 10.0.0.0/16 gives you 65534 usable IPs",
-    "You can also create subnets within the vnet"
+    "VM creation needs: --resource-group, --name, --image",
+    "ubuntu2204 is a common Linux image",
+    "Use --generate-ssh-keys for easy SSH access"
   ]
 }

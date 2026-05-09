@@ -1,7 +1,7 @@
 {
   "mission_03": [
-    "Use \"if [ condition ]; then\" syntax",
     "The -f flag checks if a file exists",
-    "End the block with \"fi\" (if backwards)"
+    "Syntax: if [ -f \"file.txt\" ]; then ... else ... fi",
+    "fi (if backwards) ends the if block"
   ]
 }

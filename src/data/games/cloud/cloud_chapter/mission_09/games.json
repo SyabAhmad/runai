@@ -1,14 +1,13 @@
 {
-  "title": "Monitoring",
+  "title": "Monitoring Setup",
   "initialState": {
-    "content": "# TODO: Enable monitoring and diagnostics for the VM\n# Use: az monitor diagnostic-settings create\n# Log to a workspace named \"runai-workspace\"\n"
+    "content": "# TODO: Enable monitoring for the VM\n# Use: az monitor diagnostic-settings create\n# Send to a Log Analytics workspace\n"
   },
   "validation": {
     "type": "terminal",
     "rules": [
       "must_include:az monitor",
-      "must_include:diagnostic-settings",
-      "must_include:runai-workspace"
+      "must_include:diagnostic-settings"
     ]
   },
   "id": "mission_09",

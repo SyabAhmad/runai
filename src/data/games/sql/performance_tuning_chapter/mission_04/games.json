@@ -1,7 +1,7 @@
 {
   "title": "SQL Mission 4: Top-N Results Only",
   "initialState": {
-    "content": "-- Mission 4 Guidelines\n-- Return: order_id, total_amount\n-- Sort by total_amount descending\n-- Limit result to 20 rows\n\nSELECT\n  -- TODO\nFROM orders\nORDER BY\n  -- TODO\nLIMIT\n  -- TODO\n;"
+    "content": "-- Dashboard widget needs only the top 20 highest-value orders.\n--\n-- Rules:\n--   1. Return order_id and total_amount\n--   2. Sort by total_amount descending\n--   3. Return only the top 20 rows\n--\n-- Table: orders(order_id, customer_id, order_date, status, total_amount)\n\nSELECT\n  -- TODO\nFROM orders\n-- TODO\nLIMIT 20;"
   },
   "validation": {
     "type": "sql",
@@ -12,5 +12,7 @@
     ]
   },
   "id": "mission_04",
-  "type": "sql_debug"
+  "type": "sql_debug",
+  "xpReward": 60,
+  "difficulty": "easy"
 }

@@ -1,7 +1,7 @@
 {
   "title": "Video Processing",
   "initialState": {
-    "content": "import cv2\n\n# TODO: Process video frames for CV tasks\n# Open video with cv2.VideoCapture(0) for webcam\n# Read frame by frame in a loop\n# Break on 'q' key press\n"
+    "content": "import cv2\n\n# TODO: Open webcam, read frames, convert to grayscale\n# Break loop on \"q\" key press\n"
   },
   "validation": {
     "type": "ai_code",

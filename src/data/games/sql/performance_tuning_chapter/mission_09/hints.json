@@ -1,8 +1,8 @@
-
 {
-    "mission_09":  [
-                       "Use conditional SUM for each metric.",
-                       "Keep all metrics in one SELECT.",
-                       "Filter date range once in WHERE."
-                   ]
+  "mission_09": [
+    "Use `COUNT(*)` for the total row count — it counts all rows that pass the WHERE filter.",
+    "For each status, use `SUM(CASE WHEN status = 'completed' THEN 1 ELSE 0 END)`. This counts 1 for each completed row and 0 for everything else.",
+    "Apply the date filter once in the `WHERE` clause: `order_date >= '2025-01-01' AND order_date < '2026-01-01'`. All three metrics share the same filter.",
+    "Alias each metric clearly: `total_orders`, `completed_orders`, `cancelled_orders`."
+  ]
 }

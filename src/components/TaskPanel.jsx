@@ -1,13 +1,25 @@
 import { useGameStore } from '../store/gameStore';
 
 export default function TaskPanel() {
-  const { feedback, showHint, showNextHint, resetGame } = useGameStore();
-
+  const { feedback, showHint, showNextHint, resetGame, streak, xp, level, badges } = useGameStore();
+  
   // Get mission data from store
   const getCurrentMission = useGameStore(state => state.getCurrentMission);
   const missionData = getCurrentMission();
+  
+  // Get chapter progress
+  const currentTechnology = useGameStore(state => state.currentTechnology);
+  const currentChapter = useGameStore(state => state.currentChapter);
+  const currentMission = useGameStore(state => state.currentMission);
+  const getChapterProgress = useGameStore(state => state.getChapterProgress);
+  const getChapterTotal = useGameStore(state => state.getChapterTotal);
+  const getHintPenalty = useGameStore(state => state.getHintPenalty);
+  
+  const progress = getChapterProgress(currentTechnology, currentChapter);
+  const total = getChapterTotal(currentTechnology, currentChapter);
+  const penalty = currentTechnology && currentChapter && currentMission ? getHintPenalty(currentTechnology, currentChapter, currentMission) : 0;
 
-  if (!missionData.game || !missionData.description) {
+  if (!missionData || !missionData.game) {
     return (
       <div className="h-full flex items-center justify-center text-text-dim text-sm p-6 text-center">
         <div>
@@ -20,12 +32,42 @@ export default function TaskPanel() {
     );
   }
 
-  const { description, hints, outcome } = missionData;
+  const { game, description, hints, solution, outcome } = missionData;
   const hintCount = showHint ? hints.findIndex(h => h.message === feedback?.message?.replace('Hint: ', '')) + 1 : 0;
   const currentHint = hints[hintCount - 1];
 
   return (
     <div className="h-full flex flex-col overflow-y-auto scrollbar-thin">
+      {/* Progress Bar */}
+      <div className="px-4 py-3 border-b border-border">
+        <div className="flex items-center justify-between mb-1">
+          <span className="text-xs font-semibold text-text-dim uppercase tracking-wide">Chapter Progress</span>
+          <span className="text-xs text-accent font-bold">{progress}/{total}</span>
+        </div>
+        <div className="w-full h-2 bg-secondary rounded-full overflow-hidden">
+          <div 
+            className="h-full bg-gradient-to-r from-pink-400 to-amber-400 transition-all duration-500 rounded-full" 
+            style={{ width: `${total > 0 ? (progress / total) * 100 : 0}%` }}
+          />
+        </div>
+      </div>
+
+      {/* Streak & Stats */}
+      <div className="px-4 py-2 border-b border-border flex items-center gap-4">
+        <div className="flex items-center gap-1.5">
+          <span className="text-sm">🔥</span>
+          <span className="text-xs text-text-muted">Streak: <span className="text-accent font-bold">{streak}</span></span>
+        </div>
+        <div className="flex items-center gap-1.5">
+          <span className="text-sm">⭐</span>
+          <span className="text-xs text-text-muted">Level {level}</span>
+        </div>
+        <div className="flex items-center gap-1.5">
+          <span className="text-sm">✨</span>
+          <span className="text-xs text-text-muted">{xp} XP</span>
+        </div>
+      </div>
+
       {/* Context box */}
       <div className="p-4 border-b border-border">
         <div className="flex items-start gap-2 mb-3">
@@ -34,7 +76,7 @@ export default function TaskPanel() {
           </span>
           <span className="text-xs font-semibold text-text-dim uppercase tracking-wide">Context</span>
         </div>
-        <p className="text-sm text-text leading-relaxed">{description.context}</p>
+        <p className="text-sm text-text leading-relaxed">{description}</p>
       </div>
 
       {/* Task box */}
@@ -45,32 +87,14 @@ export default function TaskPanel() {
           </span>
           <span className="text-xs font-semibold text-text-dim uppercase tracking-wide">Task</span>
         </div>
-        <p className="text-sm text-text font-medium leading-relaxed">{description.task}</p>
-      </div>
-
-      {/* Constraints */}
-      {description.constraints && description.constraints.length > 0 && (
-        <div className="px-4 py-3 border-b border-border">
-          <div className="flex items-start gap-2">
-            <svg className="w-4 h-4 text-text-dim mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-            <div className="flex-1">
-              <span className="text-xs font-semibold text-text-dim uppercase tracking-wide block mb-1">
-                Constraints
-              </span>
-              <ul className="space-y-1">
-                {description.constraints.map((constraint, i) => (
-                  <li key={i} className="text-xs text-text-muted flex items-start">
-                    <span className="mr-1.5">•</span>
-                    <span>{constraint}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+        <p className="text-sm text-text font-medium leading-relaxed">{game.title}</p>
+        <div className="mt-2 flex items-center gap-2">
+          <span className="text-xs px-2 py-0.5 rounded-full bg-accent/20 text-accent">+{game.xpReward} XP</span>
+          {penalty > 0 && (
+            <span className="text-xs px-2 py-0.5 rounded-full bg-error/20 text-error">-{penalty} XP (hints)</span>
+          )}
         </div>
-      )}
+      </div>
 
       {/* Feedback area */}
       {feedback && (
@@ -89,14 +113,16 @@ export default function TaskPanel() {
             </div>
             <div className="flex-1">
               <div className="font-medium">{feedback.message}</div>
-              {feedback.explanation && feedback.success && (
-                <div className="text-xs mt-1 opacity-80">{feedback.explanation}</div>
+              {feedback.success && (
+                <div className="text-xs mt-1 opacity-80">
+                  Final XP: +{game.xpReward - penalty} (penalty: -{penalty})
+                </div>
               )}
             </div>
           </div>
 
           {/* Success actions */}
-          {feedback.success && outcome && (
+          {feedback.success && (
             <div className="mt-3 flex items-center gap-2">
               <button onClick={resetGame} className="btn btn-sm">
                 <svg className="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -117,6 +143,7 @@ export default function TaskPanel() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
             Hints
+            {penalty > 0 && <span className="text-error text-xs">(-{penalty} XP)</span>}
           </span>
           {!showHint && hints.length > 0 && (
             <button
@@ -138,11 +165,12 @@ export default function TaskPanel() {
                   <span className="text-xs text-text-dim">(final hint)</span>
                 )}
               </div>
-              <p className="text-sm">{currentHint.message}</p>
+              <p className="text-sm">{currentHint}</p>
             </div>
           ) : (
             <div className="text-xs text-text-dim">
-              Stuck? Click "Show hint" for progressive help. Hints reduce XP reward.
+              Stuck? Click "Show hint" for progressive help. 
+              {hints.length > 0 && <span className="block mt-1">First hint is free! Later hints reduce XP.</span>}
             </div>
           )}
         </div>
@@ -154,14 +182,18 @@ export default function TaskPanel() {
           <div className="text-xs font-semibold text-success uppercase tracking-wide mb-1">
             What you learned
           </div>
-          <p className="text-xs text-text-dim mb-2">{outcome.summary}</p>
+          <p className="text-xs text-text-dim mb-2">{outcome}</p>
+        </div>
+      )}
+
+      {/* Badges */}
+      {badges.length > 0 && (
+        <div className="p-4 border-t border-border">
+          <div className="text-xs font-semibold text-text-dim uppercase tracking-wide mb-2">Badges Earned</div>
           <div className="flex flex-wrap gap-1">
-            {outcome.concepts.map((concept, i) => (
-              <span
-                key={i}
-                className="inline-flex px-2 py-0.5 rounded-full bg-success/20 text-success text-xs"
-              >
-                {concept}
+            {badges.map((badge, i) => (
+              <span key={i} className="inline-flex px-2 py-0.5 rounded-full bg-accent/20 text-accent text-xs">
+                🏆 {badge.replace('_', ' ')}
               </span>
             ))}
           </div>

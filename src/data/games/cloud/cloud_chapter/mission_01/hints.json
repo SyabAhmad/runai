@@ -1,7 +1,7 @@
 {
   "mission_01": [
-    "Azure uses \"az login\" for authentication",
-    "AWS uses \"aws configure\" with access keys",
-    "After login, verify with \"az account show\" or \"aws sts get-caller-identity\""
+    "az group list shows all resource groups",
+    "Azure CLI commands start with \"az\"",
+    "Try: az group list --output table for readable output"
   ]
 }

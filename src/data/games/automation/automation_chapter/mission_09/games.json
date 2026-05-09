@@ -1,7 +1,7 @@
 {
-  "title": "Process Management",
+  "title": "Background Processes",
   "initialState": {
-    "content": "#!/bin/bash\n# Create a script that starts a background process\n# Use & to run a command in the background\n# Print the process ID (use $! to get the PID)\n\n"
+    "content": "#!/bin/bash\n# Start a long-running command in the background\n# Print its Process ID (PID)\n\n"
   },
   "validation": {
     "type": "terminal",

@@ -1,7 +1,7 @@
 {
   "mission_04": [
-    "OpenCV dnn module can load pre-trained models",
-    "Haar cascades are simpler but less accurate",
-    "COCO SSD can detect 80+ object types"
+    "Haar cascades are fast and work well for face detection",
+    "Load cascade with cv2.CascadeClassifier()",
+    "detectMultiScale() returns face coordinates"
   ]
 }

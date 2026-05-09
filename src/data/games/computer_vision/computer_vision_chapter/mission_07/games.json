@@ -1,7 +1,7 @@
 {
-  "title": "Inference",
+  "title": "Run Inference",
   "initialState": {
-    "content": "import tensorflow as tf\nimport cv2\n\nmodel = tf.keras.applications.MobileNetV2(weights=\"imagenet\")\nimg = cv2.imread(\"image.jpg\")\n# TODO: Run inference on the image\n# Preprocess with tf.keras.applications.mobilenet_v2.preprocess_input()\n"
+    "content": "import tensorflow as tf\nimport cv2\n\nmodel = tf.keras.applications.MobileNetV2(weights=\"imagenet\")\nimg = cv2.imread(\"image.jpg\")\n# TODO: Preprocess image and run inference\n"
   },
   "validation": {
     "type": "ai_code",

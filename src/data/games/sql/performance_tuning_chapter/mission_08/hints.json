@@ -1,7 +1,8 @@
 {
-    "mission_08":  [
-                       "Use two-part keyset condition for stable paging.",
-                       "Second condition handles same-date tie by order_id.",
-                       "Keep sort order matching predicate."
-                   ]
+  "mission_08": [
+    "Think of the cursor as a position: you want all rows that come AFTER the cursor in the sorted order. `ORDER BY order_date DESC, order_id DESC` means \"newer dates first, and for same dates, higher IDs first.\"",
+    "The first condition `order_date < '2025-10-01'` captures all rows with an earlier date than the cursor — these definitely come after the cursor.",
+    "The second condition `order_date = '2025-10-01' AND order_id < 4500` handles same-date ties. For orders on the same date as the cursor, only those with a lower order_id come after it.",
+    "Combine both conditions with OR inside parentheses: `(order_date < '2025-10-01' OR (order_date = '2025-10-01' AND order_id < 4500))`. Keep the sort order as `ORDER BY order_date DESC, order_id DESC`."
+  ]
 }

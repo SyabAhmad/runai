@@ -1,3 +1,3 @@
 {
-    "mission_08":  "Implement keyset pagination for recent orders: fetch next page after a known order_date and order_id cursor."
+  "mission_08": "Your mobile app's order feed uses infinite scroll. The user has scrolled past the first page and the UI sends you a cursor — the `order_date` and `order_id` of the last order the user already saw (`2025-10-01` and `4500`). Write a query that returns the next 20 older orders using this cursor as a keyset filter. The query must handle tie-breaking when multiple orders share the same date by using `order_id` as the secondary sort key. Use constant values `2025-10-01` and `4500` in your WHERE clause."
 }

@@ -1,14 +1,14 @@
 {
-  "title": "Networking",
+  "title": "Deploy Virtual Machine",
   "initialState": {
-    "content": "# TODO: Create a virtual network named \"runai-vnet\" with address prefix 10.0.0.0/16\n# Use: az network vnet create\n"
+    "content": "# TODO: Deploy a VM named \"runai-vm\" with ubuntu2204\n# Use: az vm create\n# Add --admin-username and --generate-ssh-keys\n"
   },
   "validation": {
     "type": "terminal",
     "rules": [
-      "must_include:az network vnet create",
-      "must_include:runai-vnet",
-      "must_include:10.0.0.0/16"
+      "must_include:az vm create",
+      "must_include:runai-vm",
+      "must_include:ubuntu2204"
     ]
   },
   "id": "mission_05",

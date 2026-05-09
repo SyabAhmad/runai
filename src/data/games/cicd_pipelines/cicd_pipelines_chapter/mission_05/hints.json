@@ -1,7 +1,7 @@
 {
   "mission_05": [
-    "npm audit checks for vulnerabilities in dependencies",
-    "Consider using OWASP ZAP for web app security",
-    "Fail the build on critical vulnerabilities"
+    "Security scans check for known vulnerabilities",
+    "Add \"scan\" after install or build",
+    "npm audit is one way to scan for security issues"
   ]
 }

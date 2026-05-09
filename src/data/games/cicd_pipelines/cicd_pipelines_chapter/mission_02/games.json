@@ -1,13 +1,13 @@
 {
-  "title": "Build Steps",
+  "title": "Add Install Step",
   "initialState": {
     "content": "[\"checkout\"]"
   },
   "validation": {
     "type": "pipeline",
     "rules": [
-      "must_include:build",
-      "must_include:install"
+      "must_include:install",
+      "must_include:build"
     ]
   },
   "id": "mission_02",

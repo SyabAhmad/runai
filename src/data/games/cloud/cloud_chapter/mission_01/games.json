@@ -1,12 +1,12 @@
 {
-  "title": "Cloud CLI Setup",
+  "title": "List Resources",
   "initialState": {
-    "content": "# TODO: Configure cloud CLI and authenticate\n# Use: az login (Azure) or aws configure (AWS)\n# Print a success message\n"
+    "content": "# TODO: List all resource groups in Azure\n# Use: az group list\n# Print the output\n"
   },
   "validation": {
     "type": "terminal",
     "rules": [
-      "must_include:az login",
+      "must_include:az group list",
       "must_include:echo"
     ]
   },

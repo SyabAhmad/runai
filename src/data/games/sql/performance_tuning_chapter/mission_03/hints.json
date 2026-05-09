@@ -1,7 +1,7 @@
 {
   "mission_03": [
-    "EXISTS checks presence, not aggregation.",
-    "Correlate order row to current customer row.",
-    "Use SELECT 1 in subquery."
+    "EXISTS is the right tool for presence checks. It returns TRUE if the subquery returns any rows, FALSE otherwise — no duplicates, no aggregation needed.",
+    "Inside the EXISTS subquery, write `SELECT 1 FROM orders o WHERE o.customer_id = c.customer_id`. The correlation links each order row to the current customer row being evaluated.",
+    "The key difference from JOIN: EXISTS stops scanning as soon as it finds one matching order. It doesn't expand into multiple rows per customer."
   ]
 }

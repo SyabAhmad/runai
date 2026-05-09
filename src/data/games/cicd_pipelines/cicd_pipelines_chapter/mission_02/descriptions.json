@@ -1,3 +1,3 @@
 {
-  "mission_02": "Add compile/build steps to your pipeline to transform source code into deployable artifacts."
+  "mission_02": "Add an install step before building to set up dependencies."
 }

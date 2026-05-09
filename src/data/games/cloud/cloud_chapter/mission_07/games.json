@@ -1,14 +1,14 @@
 {
-  "title": "Serverless",
+  "title": "Create App Service",
   "initialState": {
-    "content": "# TODO: Deploy a serverless function app named \"runai-func\"\n# Use: az functionapp create\n# Use \"dotnet\" as runtime and \"3.1\" as runtime-version\n"
+    "content": "# TODO: Create an App Service Plan and Web App\n# Use: az appservice plan create and az webapp create\n# Runtime: node (for a Node.js app)\n"
   },
   "validation": {
     "type": "terminal",
     "rules": [
-      "must_include:az functionapp create",
-      "must_include:runai-func",
-      "must_include:dotnet"
+      "must_include:az appservice plan",
+      "must_include:az webapp create",
+      "must_include:node"
     ]
   },
   "id": "mission_07",

@@ -1,16 +1,20 @@
 {
-    "title":  "SQL Mission 8: Pagination With Keyset Filter",
-    "initialState":  {
-                         "content":  "-- Mission 8 Guidelines\n-- Inputs:\n--   cursor_date = \u00272025-10-01\u0027\n--   cursor_order_id = 4500\n-- Return next 20 older rows\n-- Sort by order_date DESC, order_id DESC\n\nSELECT\n  order_id,\n  order_date,\n  total_amount\nFROM orders\nWHERE\n  -- TODO keyset condition\nORDER BY order_date DESC, order_id DESC\nLIMIT 20;"
-                     },
-    "validation":  {
-                       "type":  "sql",
-                       "rules":  [
-                                     "must_include:where (order_date \u003c \u00272025-10-01\u0027 or (order_date = \u00272025-10-01\u0027 and order_id \u003c 4500))",
-                                     "must_include:order by order_date desc, order_id desc",
-                                     "must_include:limit 20"
-                                 ]
-                   },
-    "id":  "mission_08",
-    "type":  "sql_debug"
+  "title": "SQL Mission 8: Pagination With Keyset Filter",
+  "initialState": {
+    "content": "-- User scrolled past the first page.\n-- Cursor: order_date = '2025-10-01', order_id = 4500\n--\n-- Rules:\n--   1. Use keyset filter to get \"older\" rows\n--   2. Handle date ties with order_id\n--   3. Return next 20 rows\n--   4. Sort order must match WHERE predicate\n--\n-- Table: orders(order_id, customer_id, order_date, status, total_amount)\n\nSELECT\n  order_id,\n  order_date,\n  total_amount\nFROM orders\nWHERE\n  -- TODO: keyset condition using '2025-10-01' and 4500\nORDER BY order_date DESC, order_id DESC\nLIMIT 20;"
+  },
+  "validation": {
+    "type": "sql",
+    "rules": [
+      "must_include:where (order_date < '2025-10-01'",
+      "must_include:order_date = '2025-10-01'",
+      "must_include:order_id < 4500",
+      "must_include:order by order_date desc, order_id desc",
+      "must_include:limit 20"
+    ]
+  },
+  "id": "mission_08",
+  "type": "sql_debug",
+  "xpReward": 150,
+  "difficulty": "hard"
 }

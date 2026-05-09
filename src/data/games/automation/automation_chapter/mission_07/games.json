@@ -1,14 +1,14 @@
 {
-  "title": "Error Handling",
+  "title": "Exit Codes",
   "initialState": {
-    "content": "#!/bin/bash\n# Create a script that checks if a command succeeded\n# Use $? to check the exit code (0 = success)\n# Print \"Success\" or \"Failed\" accordingly\n\n"
+    "content": "#!/bin/bash\n# Run a command and check if it succeeded\n# Use $? to check exit code (0 = success)\n\n"
   },
   "validation": {
     "type": "terminal",
     "rules": [
       "must_include:$?",
       "must_include:if",
-      "must_include:exit"
+      "must_include:= 0"
     ]
   },
   "id": "mission_07",

@@ -1,7 +1,7 @@
 {
   "title": "Notifications",
   "initialState": {
-    "content": "[\"checkout\", \"build\", \"test\", \"deploy\"]"
+    "content": "[\"checkout\", \"install\", \"build\", \"test\", \"deploy\"]"
   },
   "validation": {
     "type": "pipeline",

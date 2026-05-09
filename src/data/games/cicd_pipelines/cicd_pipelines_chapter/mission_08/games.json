@@ -1,5 +1,5 @@
 {
-  "title": "Parallel Jobs",
+  "title": "Parallel Stages",
   "initialState": {
     "content": "{\"jobs\": {\"build\": {\"steps\": []}}}"
   },

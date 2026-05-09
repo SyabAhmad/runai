@@ -1,7 +1,7 @@
 {
   "mission_04": [
-    "Sort before limiting for correct top-N.",
-    "Keep selected columns minimal.",
-    "Use LIMIT 20."
+    "Always sort before limiting. `ORDER BY` tells the database which rows are \"first\" before `LIMIT` decides how many to return.",
+    "Use `ORDER BY total_amount DESC` to get the highest amounts at the top of the result set.",
+    "Add `LIMIT 20` at the end of the query to return only the top 20 rows after sorting."
   ]
 }

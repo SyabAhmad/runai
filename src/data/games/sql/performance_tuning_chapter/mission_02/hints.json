@@ -1,7 +1,7 @@
 {
   "mission_02": [
-    "Use \u003e= start of year and \u003c start of next year.",
-    "Do not use YEAR(order_date).",
-    "Keep it as a simple range predicate."
+    "Think of the date range as two boundaries: the first day of 2025 and the first day of 2026. You need a lower bound and an upper bound.",
+    "Use `>= '2025-01-01'` for the lower bound and `< '2026-01-01'` for the upper bound. The upper bound uses `<` on the first day of the next year so no 2026 rows leak in.",
+    "The rule of thumb: never wrap an indexed column in a function in a WHERE clause. Instead, express the condition as a range on the bare column."
   ]
 }

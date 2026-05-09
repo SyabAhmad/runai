@@ -1,7 +1,7 @@
 {
   "title": "CV Capstone",
   "initialState": {
-    "content": "import cv2\nimport tensorflow as tf\n\n# TODO: Build an end-to-end image classification pipeline\n# 1. Load an image\n# 2. Preprocess it\n# 3. Load a pre-trained model\n# 4. Run inference\n# 5. Display results\n"
+    "content": "import cv2\nimport tensorflow as tf\n\n# TODO: Build an end-to-end image classification pipeline:\n# 1. Load image\n# 2. Preprocess it\n# 3. Load pre-trained model\n# 4. Run inference\n# 5. Decode and print top 3 predictions\n"
   },
   "validation": {
     "type": "ai_code",
@@ -9,7 +9,7 @@
       "must_include:imread",
       "must_include:preprocess",
       "must_include:predict",
-      "must_include:imshow"
+      "must_include:decode_predictions"
     ]
   },
   "id": "mission_10",

@@ -1,3 +1,3 @@
 {
-  "mission_02": "Great. You transformed the filter into a sargable range query."
+  "mission_02": "Great. You transformed the filter into a sargable range query. The database engine can now perform an index seek on `order_date` instead of scanning all 5 million rows. This query should drop from 45 seconds to under a second."
 }

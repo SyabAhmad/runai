@@ -1,3 +1,3 @@
 {
-  "mission_02": "az group create --name runai-rg --location eastus\necho \"Resource group created successfully!\""
+  "mission_02": "az group create --name runai-rg --location eastus\necho \"Resource group created!\""
 }

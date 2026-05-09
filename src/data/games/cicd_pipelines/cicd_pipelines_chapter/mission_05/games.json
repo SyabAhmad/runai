@@ -1,7 +1,7 @@
 {
-  "title": "Security Scans",
+  "title": "Security Scan",
   "initialState": {
-    "content": "[\"checkout\", \"build\", \"test\"]"
+    "content": "[\"checkout\", \"install\", \"build\", \"test\"]"
   },
   "validation": {
     "type": "pipeline",

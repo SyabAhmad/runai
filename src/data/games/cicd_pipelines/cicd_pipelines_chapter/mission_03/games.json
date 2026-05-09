@@ -1,7 +1,7 @@
 {
   "title": "Test Integration",
   "initialState": {
-    "content": "[\"checkout\", \"build\"]"
+    "content": "[\"checkout\", \"install\", \"build\"]"
   },
   "validation": {
     "type": "pipeline",

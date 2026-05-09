@@ -1,7 +1,7 @@
 {
-  "title": "Grayscale Conversion",
+  "title": "Grayscale",
   "initialState": {
-    "content": "import cv2\nimport matplotlib.pyplot as plt\n\nimg = cv2.imread(\"image.jpg\")\n# TODO: Convert the image to grayscale\n# Use cv2.cvtColor() with COLOR_BGR2GRAY\n"
+    "content": "import cv2\nimport matplotlib.pyplot as plt\n\nimg = cv2.imread(\"image.jpg\")\n# TODO: Convert to grayscale using cv2.cvtColor()\n"
   },
   "validation": {
     "type": "ai_code",

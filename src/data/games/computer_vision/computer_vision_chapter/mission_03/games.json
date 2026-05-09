@@ -1,7 +1,7 @@
 {
   "title": "Edge Detection",
   "initialState": {
-    "content": "import cv2\nimport matplotlib.pyplot as plt\n\nimg = cv2.imread(\"image.jpg\")\ngray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)\n# TODO: Apply Canny edge detection\n# Use cv2.Canny() with thresholds 100 and 200\n"
+    "content": "import cv2\nimport matplotlib.pyplot as plt\n\nimg = cv2.imread(\"image.jpg\")\ngray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)\n# TODO: Apply Canny edge detection with thresholds 100, 200\n"
   },
   "validation": {
     "type": "ai_code",

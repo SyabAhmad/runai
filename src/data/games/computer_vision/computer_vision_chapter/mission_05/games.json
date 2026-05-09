@@ -1,14 +1,14 @@
 {
   "title": "Image Augmentation",
   "initialState": {
-    "content": "import cv2\nimport numpy as np\n\nimg = cv2.imread(\"image.jpg\")\n# TODO: Apply transformations to training images\n# Try: rotation, flipping, brightness adjustment\n"
+    "content": "import cv2\nimport numpy as np\n\nimg = cv2.imread(\"image.jpg\")\n# TODO: Apply horizontal flip and brightness adjustment\n"
   },
   "validation": {
     "type": "ai_code",
     "rules": [
       "must_include:flip",
       "must_include:rotate",
-      "must_include:augment"
+      "must_include:np.clip"
     ]
   },
   "id": "mission_05",

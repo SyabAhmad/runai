@@ -1,7 +1,7 @@
 {
-  "title": "Model Loading",
+  "title": "Load Pre-trained Model",
   "initialState": {
-    "content": "import tensorflow as tf\n\n# TODO: Load and configure a CV model\n# Load MobileNetV2 pre-trained on ImageNet\n# Print model summary\n"
+    "content": "import tensorflow as tf\n\n# TODO: Load MobileNetV2 pre-trained on ImageNet\n# Print model summary\n"
   },
   "validation": {
     "type": "ai_code",

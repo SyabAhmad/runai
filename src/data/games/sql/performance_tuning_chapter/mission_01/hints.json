@@ -1,7 +1,7 @@
 {
   "mission_01": [
-    "List columns explicitly in SELECT.",
-    "Use WHERE status = \u0027completed\u0027.",
-    "Sort with ORDER BY order_date DESC."
+    "Instead of `SELECT *`, explicitly name the three columns you need: order_id, customer_id, and order_date.",
+    "Add a WHERE clause that filters to `status = 'completed'` so the report only shows finished orders.",
+    "Use `ORDER BY order_date DESC` to show the newest orders first. Descending sort on a date column puts the most recent rows at the top."
   ]
 }

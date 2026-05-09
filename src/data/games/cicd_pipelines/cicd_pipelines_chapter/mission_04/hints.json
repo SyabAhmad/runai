@@ -1,7 +1,7 @@
 {
   "mission_04": [
-    "ESLint is the standard for JavaScript/React linting",
-    "Run lint before tests to fail fast on style issues",
-    "Use \"npm run lint\" if configured in package.json"
+    "Linting checks code style and common errors",
+    "Add \"lint\" before or after tests",
+    "ESLint is commonly used for JavaScript"
   ]
 }

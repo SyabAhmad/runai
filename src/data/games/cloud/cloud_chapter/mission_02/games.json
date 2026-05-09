@@ -1,5 +1,5 @@
 {
-  "title": "Resource Groups",
+  "title": "Create Resource Group",
   "initialState": {
     "content": "# TODO: Create a resource group named \"runai-rg\" in eastus\n# Use: az group create --name NAME --location LOCATION\n"
   },

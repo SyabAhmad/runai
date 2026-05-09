@@ -1,8 +1,8 @@
 {
   "mission_10": [
-    "Start with the trigger event (on: push)",
-    "Use jobs to organize related steps",
-    "Always run faster checks (lint) before slower ones (build, deploy)",
-    "Add notifications at the end"
+    "Start with checkout, then install dependencies",
+    "Add lint, build, test in that order",
+    "Deploy should be the final step",
+    "Consider adding notifications too"
   ]
 }

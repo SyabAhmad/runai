@@ -1,7 +1,7 @@
 {
   "mission_04": [
-    "Use \"for i in {1..5}; do ... done\" syntax",
-    "The \"do\" starts the loop body, \"done\" ends it",
-    "You can also use \"seq 5\" with backticks or $()"
+    "Brace expansion {1..5} creates a list of numbers",
+    "Syntax: for i in {1..5}; do ... done",
+    "do starts the loop body, done ends it"
   ]
 }

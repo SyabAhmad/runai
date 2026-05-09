@@ -1,7 +1,7 @@
 {
-  "title": "Scaling",
+  "title": "Scale Set",
   "initialState": {
-    "content": "# TODO: Configure auto-scaling for the VM scale set\n# Create a scale set named \"runai-ss\" with 2 instances\n# Use: az vmss create\n"
+    "content": "# TODO: Create a VM scale set named \"runai-ss\" with 2 instances\n# Use: az vmss create\n# Use ubuntu2204 and --instance-count 2\n"
   },
   "validation": {
     "type": "terminal",

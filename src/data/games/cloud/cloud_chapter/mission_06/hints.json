@@ -2,7 +2,6 @@
   "mission_06": [
     "Container instances are serverless containers",
     "Use --image to specify the container image",
-    "Use --port to expose container ports",
     "nginx is a popular web server image"
   ]
 }

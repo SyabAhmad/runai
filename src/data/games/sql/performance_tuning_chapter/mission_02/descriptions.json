@@ -1,3 +1,3 @@
 {
-  "mission_02": "Rewrite a date filter to be index-friendly: return orders from 2025 using boundary comparisons, not YEAR(order_date)."
+  "mission_02": "A junior developer wrote a report query using `WHERE YEAR(order_date) = 2025` to filter orders from this year. The `orders` table has 5 million rows and the report takes 45 seconds. Your task: rewrite the date filter to use range boundaries instead. The database has an index on `order_date`, and you need to let the query engine use it. Return only `order_id` for orders placed in 2025."
 }

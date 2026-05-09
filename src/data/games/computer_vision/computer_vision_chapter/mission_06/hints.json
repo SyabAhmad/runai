@@ -2,6 +2,6 @@
   "mission_06": [
     "TensorFlow Hub or tf.keras.applications has pre-trained models",
     "MobileNetV2 is lightweight and fast",
-    "model.summary() shows architecture"
+    "model.summary() shows the architecture"
   ]
 }
