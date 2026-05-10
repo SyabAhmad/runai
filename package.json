@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "node build-missions.cjs && vite build",
+    "build:missions": "node build-missions.cjs",
     "lint": "eslint .",
     "preview": "vite preview"
   },

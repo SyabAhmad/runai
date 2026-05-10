@@ -1,4 +1,12 @@
-
 {
-    "mission_01":  "You are helping HR shortlist high-performing Sales employees for a compensation review. Write a query that returns only employee names from the Sales department where salary is strictly above 50000. Order results so the highest salary appears first. Keep the output focused by selecting only what is needed."
+    "mission_01": "You are helping HR shortlist high-performing Sales employees for a compensation review. Write a query that returns only employee names from the Sales department where salary is strictly above 50000. Order results so the highest salary appears first. Keep the output focused by selecting only what is needed.",
+    "mission_02": "Return customer names and order dates for orders shipped after January 15, 2024. Include only orders with a status of 'shipped'. Sort by order date in ascending order.",
+    "mission_03": "Find all products in the 'Electronics' category with a stock quantity below 20. Return the product name, category, and stock level. Order by stock level ascending.",
+    "mission_04": "Calculate the average order value for each customer who has placed at least 3 orders. Return customer ID, name, and their average order value rounded to 2 decimal places.",
+    "mission_05": "List all employees who earn more than the company average salary. Return their names, departments, and salaries sorted by salary descending.",
+    "mission_06": "Find the top 5 products by total revenue (quantity sold × unit price). Include product name, total quantity sold, and total revenue. Group by product.",
+    "mission_07": "Identify customers who have ordered products from at least 3 different categories. Return customer name, email, and number of distinct categories.",
+    "mission_08": "Calculate the month-over-month growth rate for each product category. Return category name, current month revenue, previous month revenue, and growth percentage.",
+    "mission_09": "Find all orders where the total order value exceeds 3 times the customer's average order value. Return order ID, customer name, total value, and their average.",
+    "mission_10": "Create a summary showing each department's performance: total salary expenditure, average salary, number of employees, and highest paid employee name."
 }

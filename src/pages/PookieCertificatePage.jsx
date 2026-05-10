@@ -1,11 +1,7 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { useGameStore } from "../store/gameStore";
-
-const missionModules = import.meta.glob(
-  "../data/games/**/mission_*/games.json",
-  { eager: true },
-);
+import { MISSIONS } from "../data/missions";
 
 export default function PookieCertificatePage() {
   const { completedMissions, xp } = useGameStore();
@@ -14,7 +10,7 @@ export default function PookieCertificatePage() {
   );
 
   const summary = useMemo(() => {
-    const totalMissions = Object.keys(missionModules).length;
+    const totalMissions = Object.keys(MISSIONS).length;
     const completed = Object.values(completedMissions).reduce(
       (sum, missionList) => sum + missionList.length,
       0,

@@ -1,26 +1,15 @@
-﻿import { useEffect, useState } from "react";
+﻿import { useMemo } from "react";
 import { Link } from "react-router-dom";
-
-const missionModules = import.meta.glob(
-  "../data/games/**/mission_*/games.json",
-);
+import { MISSIONS } from "../data/missions";
 
 const formatName = (value) =>
   value.replace(/_/g, " ").replace(/\b\w/g, (char) => char.toUpperCase());
 
 export default function HomePage() {
-  const [technologies, setTechnologies] = useState([]);
-
-  useEffect(() => {
-    // Extract unique tech names from glob paths without loading all files
+  const technologies = useMemo(() => {
     const techSet = new Set();
-    Object.keys(missionModules).forEach((path) => {
-      const parts = path.split("/");
-      const tech = parts[3];
-      if (tech) techSet.add(tech);
-    });
-    const sortedTechs = Array.from(techSet).sort((a, b) => a.localeCompare(b));
-    setTechnologies(sortedTechs);
+    Object.values(MISSIONS).forEach(m => techSet.add(m.tech));
+    return Array.from(techSet).sort((a, b) => a.localeCompare(b));
   }, []);
 
   return (

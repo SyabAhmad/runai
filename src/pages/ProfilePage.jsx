@@ -2,11 +2,7 @@ import { useMemo } from "react";
 import { Link } from "react-router-dom";
 import { useShallow } from "zustand/react/shallow";
 import { useGameStore, BADGES } from "../store/gameStore";
-
-const missionModules = import.meta.glob(
-  "../data/games/**/mission_*/games.json",
-  { eager: true },
-);
+import { MISSIONS } from "../data/missions";
 
 const formatName = (value) =>
   value.replace(/_/g, " ").replace(/\b\w/g, (char) => char.toUpperCase());
@@ -65,23 +61,18 @@ export default function ProfilePage() {
     const chapterRows = [];
     const missionRows = [];
 
-    Object.keys(missionModules).forEach((path) => {
-      const parts = path.split("/");
-      const tech = parts[3];
-      const chapter = parts[4];
-      const missionId = parts[5];
-      if (!tech || !chapter || !missionId || !missionId.startsWith("mission_")) return;
-      if (!techStats[tech]) techStats[tech] = { total: 0, completed: 0, chapters: {} };
-      if (!techStats[tech].chapters[chapter]) techStats[tech].chapters[chapter] = { total: 0, completed: 0 };
-      const key = `${tech}/${chapter}`;
-      const done = completedSets[key]?.has(missionId) || false;
-      techStats[tech].total += 1;
-      techStats[tech].chapters[chapter].total += 1;
+    Object.values(MISSIONS).forEach(m => {
+      const key = `${m.tech}/${m.chapter}`;
+      const done = completedSets[key]?.has(m.id) || false;
+      if (!techStats[m.tech]) techStats[m.tech] = { total: 0, completed: 0, chapters: {} };
+      if (!techStats[m.tech].chapters[m.chapter]) techStats[m.tech].chapters[m.chapter] = { total: 0, completed: 0 };
+      techStats[m.tech].total += 1;
+      techStats[m.tech].chapters[m.chapter].total += 1;
       if (done) {
-        techStats[tech].completed += 1;
-        techStats[tech].chapters[chapter].completed += 1;
+        techStats[m.tech].completed += 1;
+        techStats[m.tech].chapters[m.chapter].completed += 1;
       }
-      missionRows.push({ tech, chapter, missionId, done });
+      missionRows.push({ tech: m.tech, chapter: m.chapter, missionId: m.id, done });
     });
 
     Object.entries(techStats).forEach(([tech, stats]) => {

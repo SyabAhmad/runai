@@ -1,8 +1,8 @@
 import { useMemo } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useGameStore } from '../store/gameStore';
+import { MISSIONS } from '../data/missions';
 
-const missionModules = import.meta.glob('../data/games/**/mission_*/games.json', { eager: true });
 const XP_PER_LEVEL = 500;
 
 export default function Sidebar({ technology: propTech }) {
@@ -17,38 +17,21 @@ export default function Sidebar({ technology: propTech }) {
   const chapters = useMemo(() => {
     if (!tech) return [];
     const chapterSet = new Set();
-    Object.keys(missionModules).forEach((path) => {
-      if (path.includes(`/data/games/${tech}/`)) {
-        const parts = path.split('/');
-        const chapterId = parts[4];
-        if (chapterId) chapterSet.add(chapterId);
-      }
+    Object.values(MISSIONS).forEach(m => {
+      if (m.tech === tech) chapterSet.add(m.chapter);
     });
     return Array.from(chapterSet).sort((a, b) => a.localeCompare(b));
   }, [tech]);
 
   const missions = useMemo(() => {
     if (!chapter || !tech) return [];
-    const missionList = [];
-
-    Object.entries(missionModules).forEach(([path, module]) => {
-      if (path.includes(`/data/games/${tech}/${chapter}/`)) {
-        const parts = path.split('/');
-        const missionFolder = parts[5];
-        if (missionFolder?.startsWith('mission_')) {
-          missionList.push({
-            id: missionFolder,
-            ...module.default,
-          });
-        }
-      }
-    });
-
-    return missionList.sort((a, b) => {
-      const numA = Number.parseInt(a.id.split('_')[1], 10);
-      const numB = Number.parseInt(b.id.split('_')[1], 10);
-      return numA - numB;
-    });
+    return Object.values(MISSIONS)
+      .filter(m => m.tech === tech && m.chapter === chapter)
+      .sort((a, b) => {
+        const numA = Number.parseInt(a.id.split('_')[1], 10);
+        const numB = Number.parseInt(b.id.split('_')[1], 10);
+        return numA - numB;
+      });
   }, [tech, chapter]);
 
   const formatName = (str) => {
@@ -147,7 +130,7 @@ export default function Sidebar({ technology: propTech }) {
                     }`}>
                       {renderMissionIcon(mission, isCompleted, isUnlocked)}
                     </span>
-                    <span className="flex-1 truncate">{mission.title || mission.id}</span>
+                    <span className="flex-1 truncate">{mission.title}</span>
                     <span className="text-[10px] font-medium text-accent">+{mission.xpReward || 100}</span>
                   </Link>
                 );

@@ -3,12 +3,7 @@ import { Outlet, Navigate, useParams } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
 import Header from "../components/Header";
 import { useGameStore } from "../store/gameStore";
-
-// Get all mission games.json to extract chapters
-const missionModules = import.meta.glob(
-  "../data/games/**/mission_*/games.json",
-  { eager: true },
-);
+import { MISSIONS } from "../data/missions";
 
 export default function ChapterLayout() {
   const { technology } = useParams();
@@ -18,13 +13,11 @@ export default function ChapterLayout() {
     setCurrentTechnology(technology);
   }, [technology, setCurrentTechnology]);
 
-  // Extract unique chapters for this technology
   const chapterSet = new Set();
-  Object.keys(missionModules).forEach((path) => {
-    if (path.includes(`/data/games/${technology}/`)) {
-      const parts = path.split("/");
-      const chap = parts[4]; // ../data/games/[tech]/[chapter]/mission_XX/games.json
-      if (chap) chapterSet.add(chap);
+  Object.keys(MISSIONS).forEach((key) => {
+    if (key.startsWith(`${technology}/`)) {
+      const parts = key.split("/");
+      if (parts[2]) chapterSet.add(parts[2]);
     }
   });
   const chapters = Array.from(chapterSet);

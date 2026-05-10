@@ -1,36 +1,20 @@
 import { Link, useParams } from 'react-router-dom';
 import { useGameStore } from '../store/gameStore';
-
-// Match: games/[tech]/[chapter]/mission_XX/games.json
-const missionModules = import.meta.glob('../data/games/**/mission_*/games.json', { eager: true });
+import { MISSIONS } from '../data/missions';
 
 export default function ChapterPage() {
   const { technology, chapter } = useParams();
   const { completedMissions } = useGameStore();
   const displayChapter = chapter.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
 
-  // Get all missions for this chapter
-  const missions = [];
-  Object.entries(missionModules).forEach(([path, module]) => {
-    if (path.includes(`/data/games/${technology}/${chapter}/`)) {
-      const parts = path.split('/');
-      const missionFolder = parts[5]; // mission_01, mission_02, etc.
-      if (missionFolder && missionFolder.startsWith('mission_')) {
-        const data = module.default;
-        missions.push({
-          id: missionFolder,
-          ...data
-        });
-      }
-    }
-  });
-
-  // Sort by mission number
-  missions.sort((a, b) => {
-    const numA = parseInt(a.id.split('_')[1]);
-    const numB = parseInt(b.id.split('_')[1]);
-    return numA - numB;
-  });
+  const chapterKey = `${technology}/${chapter}`;
+  const missions = Object.values(MISSIONS)
+    .filter(m => m.tech === technology && m.chapter === chapter)
+    .sort((a, b) => {
+      const numA = parseInt(a.id.split('_')[1]);
+      const numB = parseInt(b.id.split('_')[1]);
+      return numA - numB;
+    });
 
   return (
     <div className="p-6">
@@ -60,7 +44,7 @@ export default function ChapterPage() {
                     </svg>
                   ) : index + 1}
                 </div>
-                <h3 className="font-semibold text-text">{mission.title || mission.id}</h3>
+                <h3 className="font-semibold text-text">{mission.title}</h3>
               </div>
               <p className="text-sm text-text-dim mb-2">{mission.type || 'mission'}</p>
               <span className="text-xs text-accent">+{mission.xpReward || 100} XP</span>

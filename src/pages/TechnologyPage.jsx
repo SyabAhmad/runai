@@ -1,23 +1,18 @@
+import { useMemo } from 'react';
 import { Link, useParams } from 'react-router-dom';
-
-// Match: games/[tech]/[chapter]/mission_XX/games.json
-const missionModules = import.meta.glob('../data/games/**/mission_*/games.json', { eager: true });
+import { MISSIONS } from '../data/missions';
 
 export default function TechnologyPage() {
   const { technology } = useParams();
   const displayTech = technology.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
 
-  // Extract unique chapters for this technology
-  const chapterSet = new Set();
-  Object.keys(missionModules).forEach(path => {
-    if (path.includes(`/data/games/${technology}/`)) {
-      const parts = path.split('/');
-      // ../data/games/[tech]/[chapter]/mission_XX/games.json
-      const chapter = parts[4];
-      if (chapter) chapterSet.add(chapter);
-    }
-  });
-  const chapters = Array.from(chapterSet);
+  const chapters = useMemo(() => {
+    const chapterSet = new Set();
+    Object.values(MISSIONS).forEach(m => {
+      if (m.tech === technology) chapterSet.add(m.chapter);
+    });
+    return Array.from(chapterSet);
+  }, [technology]);
 
   return (
     <div className="p-6">

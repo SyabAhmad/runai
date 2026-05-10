@@ -3,32 +3,7 @@ import { useEffect, useState } from "react";
 import { useGameStore } from "../store/gameStore";
 import GameRenderer from "../components/GameRenderer";
 import { evaluateMission } from "../engine/evaluator";
-
-const missionModules = import.meta.glob(
-  "../data/games/**/mission_*/games.json",
-  { eager: true },
-);
-const descriptionModules = import.meta.glob(
-  "../data/games/**/mission_*/descriptions.json",
-  { eager: true },
-);
-const hintModules = import.meta.glob("../data/games/**/mission_*/hints.json", {
-  eager: true,
-});
-const guidelineModules = import.meta.glob(
-  "../data/games/**/mission_*/guidelines.json",
-  { eager: true },
-);
-const solutionModules = import.meta.glob(
-  "../data/games/**/mission_*/solutions.json",
-  { eager: true },
-);
-
-const getJsonModule = (modules, key) => {
-  const mod = modules[key];
-  if (!mod) return null;
-  return mod.default ?? mod;
-};
+import { MISSIONS } from "../data/missions";
 
 export default function MissionPage() {
   const { technology, chapter, mission: missionId } = useParams();
@@ -46,84 +21,38 @@ export default function MissionPage() {
   const [reactionKey, setReactionKey] = useState(0);
   const chapterKey = `${technology}/${chapter}`;
   const isCompleted = (completedMissions[chapterKey] || []).includes(missionId);
+  const missionNum = parseInt(missionId.split('_')[1]);
+  const isUnlocked = missionNum === 1 || (completedMissions[chapterKey] || []).includes(`mission_${String(missionNum - 1).padStart(2, '0')}`);
 
   useEffect(() => {
-    const basePath = `../data/games/${technology}/${chapter}/${missionId}`;
-    const gamesPath = `${basePath}/games.json`;
-    const descriptionsPath = `${basePath}/descriptions.json`;
-    const hintsPath = `${basePath}/hints.json`;
-    const guidelinesPath = `${basePath}/guidelines.json`;
-    const solutionsPath = `${basePath}/solutions.json`;
+    const chapterKey = `${technology}/${chapter}`;
+    const missionKey = `${technology}/${chapter}/${missionId}`;
     const hintProgressKey = `hintProgress:${technology}/${chapter}/${missionId}`;
     const solutionStorageKey = `missionSolution:${technology}/${chapter}/${missionId}`;
     const answerShownKey = `answerShown:${technology}/${chapter}/${missionId}`;
 
-    const loadData = async () => {
-      setResult(
-        isCompleted
-          ? { success: true, message: "Mission already completed." }
-          : null,
-      );
-      setHintIndex(0);
-      setShowAnswer(localStorage.getItem(answerShownKey) === "true");
-      setUserInput("");
-      try {
-        const gamesData = getJsonModule(missionModules, gamesPath);
-        if (!gamesData)
-          throw new Error(
-            `Missing games.json for ${technology}/${chapter}/${missionId}`,
-          );
-        setMission(gamesData);
-        const savedSolution = localStorage.getItem(solutionStorageKey);
-        setUserInput(savedSolution || gamesData.initialState?.content || "");
+    setResult(isCompleted ? { success: true, message: "Mission already completed." } : null);
+    setHintIndex(0);
+    setShowAnswer(localStorage.getItem(answerShownKey) === "true");
 
-        try {
-          const descs =
-            getJsonModule(descriptionModules, descriptionsPath) || {};
-          setDescription(descs[missionId] || "Complete the mission.");
-        } catch {
-          setDescription("Complete the mission.");
-        }
+    const data = MISSIONS[missionKey];
+    if (!data) {
+      setMission({ id: missionId, type: "unknown" });
+      return;
+    }
 
-        try {
-          const allHints = getJsonModule(hintModules, hintsPath) || {};
-          const missionHints = allHints[missionId] || [];
-          setHints(missionHints);
+    setMission(data);
+    setDescription(data.description || "Complete the mission.");
+    setGuidelines(data.guidelines || "");
+    setSolution(data.solution || "");
+    setHints(Array.isArray(data.hints) ? data.hints : []);
+    setUserInput(localStorage.getItem(solutionStorageKey) || data.initialState?.content || "");
 
-          const savedHintIndex = Number(
-            localStorage.getItem(hintProgressKey) || 0,
-          );
-          const safeHintIndex = Number.isFinite(savedHintIndex)
-            ? Math.max(0, Math.min(savedHintIndex, missionHints.length))
-            : 0;
-          setHintIndex(safeHintIndex);
-        } catch {
-          setHints([]);
-          setHintIndex(0);
-        }
-
-        try {
-          const allGuidelines =
-            getJsonModule(guidelineModules, guidelinesPath) || {};
-          setGuidelines(allGuidelines[missionId] || "");
-        } catch {
-          setGuidelines("");
-        }
-
-        try {
-          const allSolutions =
-            getJsonModule(solutionModules, solutionsPath) || {};
-          setSolution(allSolutions[missionId] || "");
-        } catch {
-          setSolution("");
-        }
-      } catch (error) {
-        console.error("Failed to load mission data:", error);
-        setMission({ id: missionId, type: "unknown" });
-      }
-    };
-
-    loadData();
+    const savedHintIndex = Number(localStorage.getItem(hintProgressKey) || 0);
+    const safeHintIndex = Number.isFinite(savedHintIndex)
+      ? Math.max(0, Math.min(savedHintIndex, data.hints?.length || 0))
+      : 0;
+    setHintIndex(safeHintIndex);
   }, [technology, chapter, missionId, isCompleted]);
 
   useEffect(() => {
@@ -182,9 +111,6 @@ export default function MissionPage() {
   };
 
   // Check if mission is unlocked
-  const isUnlocked = useGameStore
-    .getState()
-    .isUnlocked(technology, chapter, missionId);
 
   if (!mission)
     return (
@@ -472,6 +398,12 @@ export default function MissionPage() {
                 <span className="text-text-dim">Type</span>
                 <span className="text-text">{mission.type}</span>
               </div>
+              {mission.difficulty && (
+                <div className="flex justify-between text-xs">
+                  <span className="text-text-dim">Difficulty</span>
+                  <span className="text-text capitalize">{mission.difficulty}</span>
+                </div>
+              )}
               <div className="flex justify-between text-xs">
                 <span className="text-text-dim">Reward</span>
                 <span className="text-accent">
@@ -486,6 +418,19 @@ export default function MissionPage() {
                   {result?.success || isCompleted ? "Completed" : "Pending"}
                 </span>
               </div>
+              {mission.source && (
+                <div className="flex flex-col gap-1 text-xs">
+                  <span className="text-text-dim">Source</span>
+                  <a
+                    href={mission.source}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-accent hover:underline break-all"
+                  >
+                    {mission.source}
+                  </a>
+                </div>
+              )}
             </div>
           </div>
         </div>
