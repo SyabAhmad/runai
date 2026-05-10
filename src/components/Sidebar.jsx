@@ -34,12 +34,19 @@ export default function Sidebar({ technology: propTech }) {
       });
   }, [tech, chapter]);
 
+  const isUnlocked = (missionId) => {
+    const missionNum = Number.parseInt(missionId.split('_')[1], 10);
+    if (missionNum === 1) return true;
+    const prevId = `mission_${String(missionNum - 1).padStart(2, '0')}`;
+    return (completedMissions[`${tech}/${chapter}`] || []).includes(prevId);
+  };
+
   const formatName = (str) => {
     if (!str) return '';
     return str.replace(/_/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
   };
 
-  const renderMissionIcon = (mission, isCompleted, isUnlocked) => {
+  const renderMissionIcon = (mission, isCompleted, unlocked) => {
     if (isCompleted) {
       return (
         <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -47,7 +54,7 @@ export default function Sidebar({ technology: propTech }) {
         </svg>
       );
     }
-    if (!isUnlocked) {
+    if (!unlocked) {
       return (
         <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 15v2m0 0v3m0-3h3m-3 0H9m3 0a9 9 0 10-9-9c1.153 0 2.24.275 3.193.765a6.985 6.985 0 014.197 4.197A9 9 0 0112 21z" />
@@ -113,7 +120,7 @@ export default function Sidebar({ technology: propTech }) {
               {missions.map((mission) => {
                 const isCompleted = (completedMissions[`${tech}/${chapter}`] || []).includes(mission.id);
                 const isActive = urlMission === mission.id;
-                const isUnlocked = useGameStore.getState().isUnlocked(tech, chapter, mission.id);
+                const unlocked = isUnlocked(mission.id);
 
                 return (
                   <Link
@@ -123,12 +130,12 @@ export default function Sidebar({ technology: propTech }) {
                       isActive
                         ? 'border-accent/40 bg-accent/15 text-text'
                         : 'border-transparent text-text-muted hover:border-border-muted hover:bg-secondary/40 hover:text-text'
-                    } ${!isUnlocked ? 'pointer-events-none opacity-40' : ''}`}
+                    } ${!unlocked ? 'pointer-events-none opacity-40' : ''}`}
                   >
                     <span className={`flex h-5 w-5 items-center justify-center rounded border text-[10px] ${
                       isCompleted ? 'border-success/40 bg-success/10 text-success' : 'border-border text-text-dim'
                     }`}>
-                      {renderMissionIcon(mission, isCompleted, isUnlocked)}
+                      {renderMissionIcon(mission, isCompleted, unlocked)}
                     </span>
                     <span className="flex-1 truncate">{mission.title}</span>
                     <span className="text-[10px] font-medium text-accent">+{mission.xpReward || 100}</span>
