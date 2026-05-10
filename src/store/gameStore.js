@@ -169,6 +169,7 @@ export const useGameStore = create(
     {
       name: 'runai-progress',
       getStorage: () => localStorage,
+      skipHydration: true,
     }
   )
 );
