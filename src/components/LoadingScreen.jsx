@@ -1,4 +1,13 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
+
+const PARTICLE_POSITIONS = [
+  { top: 25, left: 35, delay: 0, duration: 2.5 },
+  { top: 40, left: 70, delay: 0.3, duration: 3.0 },
+  { top: 55, left: 25, delay: 0.6, duration: 2.8 },
+  { top: 30, left: 60, delay: 0.9, duration: 3.2 },
+  { top: 65, left: 45, delay: 1.2, duration: 2.6 },
+  { top: 50, left: 30, delay: 1.5, duration: 3.4 },
+];
 
 export default function LoadingScreen({ message = 'Wait bestie wait...' }) {
   const [dots, setDots] = useState('');
@@ -74,15 +83,15 @@ export default function LoadingScreen({ message = 'Wait bestie wait...' }) {
         {/* Floating particles */}
         {showCircles && (
           <div className="absolute inset-0 pointer-events-none">
-            {[...Array(6)].map((_, i) => (
+            {PARTICLE_POSITIONS.map((p, i) => (
               <div
                 key={i}
                 className="absolute w-1 h-1 bg-pink-300/40 rounded-full animate-float"
                 style={{
-                  top: `${20 + Math.random() * 60}%`,
-                  left: `${20 + Math.random() * 60}%`,
-                  animationDelay: `${i * 0.3}s`,
-                  animationDuration: `${2 + Math.random() * 2}s`
+                  top: `${p.top}%`,
+                  left: `${p.left}%`,
+                  animationDelay: `${p.delay}s`,
+                  animationDuration: `${p.duration}s`,
                 }}
               />
             ))}
