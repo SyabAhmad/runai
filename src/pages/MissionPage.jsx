@@ -7,7 +7,7 @@ import { MISSIONS } from "../data/missions";
 
 export default function MissionPage() {
   const { technology, chapter, mission: missionId } = useParams();
-  const { completeMission, completedMissions } = useGameStore();
+  const { completeMission, completedMissions, streak, longestStreak } = useGameStore();
   const [mission, setMission] = useState(null);
   const [description, setDescription] = useState("");
   const [hints, setHints] = useState([]);
@@ -152,8 +152,6 @@ export default function MissionPage() {
   const displayMission = missionId
     .replace(/_/g, " ")
     .replace(/\b\w/g, (l) => l.toUpperCase());
-
-  const { streak, longestStreak } = useGameStore();
 
   const getStreakEmoji = (s) => {
     if (s >= 90) return "🌟";
