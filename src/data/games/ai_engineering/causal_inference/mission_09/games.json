@@ -1,16 +1,20 @@
 {
-  "mission_09": {
-    "title": "Counterfactual Reasoning and Potential Outcomes",
-    "id": "mission_09",
+  "title": "Counterfactual Reasoning and Potential Outcomes",
+  "id": "mission_09",
+  "type": "ai_code",
+  "xpReward": 110,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "import numpy as np\nfrom sklearn.linear_model import LinearRegression\n\n# TODO: Implement individual treatment effect estimation\ndef estimate_ite(X, Y, T, x_new):\n    \"\"\"Estimate Individual Treatment Effects using T-learner.\n    \n    T-learner: Fit separate models for treated and control,\n    then ITE(x) = μ1(x) - μ0(x)\n    \"\"\"\n    # TODO: Fit model μ1 for treated units\n    # TODO: Fit model μ0 for control units\n    # TODO: Return ITE predictions\n    pass\n\n# TODO: Implement S-learner for ITE estimation\ndef s_learner_ite(X, Y, T, x_new):\n    \"\"\"Estimate ITE using S-learner.\n    \n    Single model: Y = μ(X, T)\n    ITE(x) = μ(x, T=1) - μ(x, T=0)\n    \"\"\"\n    # TODO: Create augmented features [X, T]\n    # TODO: Fit single model\n    # TODO: Predict with T=1 and T=0, return difference\n    pass\n\n# TODO: Implement counterfactual outcome prediction\ndef predict_counterfactual(X, Y, T, x_new, intervention):\n    \"\"\"Predict counterfactual outcome under intervention.\n    \n    Y_cf = What would Y be for x_new if T = intervention?\n    \"\"\"\n    # TODO: Use S-learner to predict counterfactual\n    pass\n\n# TODO: Implement fundamental problem of causal inference illustration\ndef fundamental_problem_demo(n_samples=100, true_effect=2.0):\n    \"\"\"Demonstrate the fundamental problem of causal inference.\n    \n    We can never observe both Y(0) and Y(1) for the same unit.\n    \"\"\"\n    # TODO: Generate potential outcomes\n    # TODO: Show that we only observe one\n    # TODO: Return observed and unobserved data\n    pass\n"
+  },
+  "validation": {
     "type": "ai_code",
-    "xpReward": 110,
-    "difficulty": "hard",
-    "initialState": {
-      "content": "import numpy as np\nfrom sklearn.linear_model import LinearRegression\n\n# TODO: Implement individual treatment effect estimation\ndef estimate_ite(X, Y, T, x_new):\n    \"\"\"Estimate Individual Treatment Effects using T-learner.\n    \n    T-learner: Fit separate models for treated and control,\n    then ITE(x) = μ1(x) - μ0(x)\n    \"\"\"\n    # TODO: Fit model μ1 for treated units\n    # TODO: Fit model μ0 for control units\n    # TODO: Return ITE predictions\n    pass\n\n# TODO: Implement S-learner for ITE estimation\ndef s_learner_ite(X, Y, T, x_new):\n    \"\"\"Estimate ITE using S-learner.\n    \n    Single model: Y = μ(X, T)\n    ITE(x) = μ(x, T=1) - μ(x, T=0)\n    \"\"\"\n    # TODO: Create augmented features [X, T]\n    # TODO: Fit single model\n    # TODO: Predict with T=1 and T=0, return difference\n    pass\n\n# TODO: Implement counterfactual outcome prediction\ndef predict_counterfactual(X, Y, T, x_new, intervention):\n    \"\"\"Predict counterfactual outcome under intervention.\n    \n    Y_cf = What would Y be for x_new if T = intervention?\n    \"\"\"\n    # TODO: Use S-learner to predict counterfactual\n    pass\n\n# TODO: Implement fundamental problem of causal inference illustration\ndef fundamental_problem_demo(n_samples=100, true_effect=2.0):\n    \"\"\"Demonstrate the fundamental problem of causal inference.\n    \n    We can never observe both Y(0) and Y(1) for the same unit.\n    \"\"\"\n    # TODO: Generate potential outcomes\n    # TODO: Show that we only observe one\n    # TODO: Return observed and unobserved data\n    pass\n"
-    },
-    "validation": {
-      "type": "ai_code",
-      "rules": ["must_include:LinearRegression", "must_include:ITE", "must_include:counterfactual", "must_include:T-learner", "must_include:S-learner"]
-    }
+    "rules": [
+      "must_include:LinearRegression",
+      "must_include:ITE",
+      "must_include:counterfactual",
+      "must_include:T-learner",
+      "must_include:S-learner"
+    ]
   }
 }

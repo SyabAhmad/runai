@@ -1,22 +1,20 @@
 {
-  "mission_10": {
-    "title": "FL Security: Poisoning and Defense",
-    "id": "mission_10",
+  "title": "FL Security: Poisoning and Defense",
+  "id": "mission_10",
+  "type": "ai_code",
+  "xpReward": 120,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "import numpy as np\n\n\nclass FLSecurity:\n    \"\"\"Federated learning security: attack and defense.\n    \n    TODO: Implement data poisoning attack\n    TODO: Implement model poisoning attack\n    TODO: Implement Krum defense (Byzantine-robust aggregation)\n    TODO: Implement outlier detection defense\n    \"\"\"\n    \n    def __init__(self, num_clients, malicious_ratio=0.2):\n        self.num_clients = num_clients\n        self.num_malicious = int(num_clients * malicious_ratio)\n    \n    def data_poison(self, data, flip_ratio=0.3):\n        \"\"\"Flip labels to poison training data.\n        \n        TODO: Randomly select flip_ratio of samples\n        TODO: Flip their labels to wrong classes\n        TODO: Return poisoned data\n        \"\"\"\n        X, y = data\n        # TODO: Select samples to flip\n        # TODO: Flip labels\n        poisoned_y = y.copy()\n        return X, poisoned_y\n    \n    def model_poison(self, clean_update, attack_strength=10.0):\n        \"\"\"Craft malicious model update.\n    \n        TODO: Scale update by attack_strength\n        TODO: Add targeted backdoor pattern\n        TODO: Return poisoned update\n        \"\"\"\n        poisoned = {}\n        for key in clean_update:\n            # TODO: Scale and invert\n            poisoned[key] = None\n        return poisoned\n    \n    def krum_aggregate(self, client_updates, num_malicious):\n        \"\"\"Krum: Byzantine-robust aggregation.\n        \n        TODO: Compute pairwise distances between all updates\n        TODO: For each update, sum distances to n-f-2 nearest neighbors\n        TODO: Select update with minimum score\n        TODO: Return selected update (or average of top-k)\n        \"\"\"\n        n = len(client_updates)\n        f = num_malicious\n        # TODO: Flatten updates for distance computation\n        # TODO: Compute pairwise distances\n        # TODO: Compute Krum scores\n        # TODO: Select and return\n        return client_updates[0]\n    \n    def detect_outliers(self, client_updates, threshold=2.0):\n        \"\"\"Detect outlier updates using cosine similarity.\n        \n        TODO: Compute mean update direction\n        TODO: Compute cosine similarity of each update to mean\n        TODO: Flag updates with similarity below threshold\n        TODO: Return list of honest client indices\n        \"\"\"\n        # TODO: Compute mean update\n        # TODO: Compute similarities\n        # TODO: Filter outliers\n        honest_indices = []\n        return honest_indices\n"
+  },
+  "validation": {
     "type": "ai_code",
-    "xpReward": 120,
-    "difficulty": "hard",
-    "initialState": {
-      "content": "import numpy as np\n\n\nclass FLSecurity:\n    \"\"\"Federated learning security: attack and defense.\n    \n    TODO: Implement data poisoning attack\n    TODO: Implement model poisoning attack\n    TODO: Implement Krum defense (Byzantine-robust aggregation)\n    TODO: Implement outlier detection defense\n    \"\"\"\n    \n    def __init__(self, num_clients, malicious_ratio=0.2):\n        self.num_clients = num_clients\n        self.num_malicious = int(num_clients * malicious_ratio)\n    \n    def data_poison(self, data, flip_ratio=0.3):\n        \"\"\"Flip labels to poison training data.\n        \n        TODO: Randomly select flip_ratio of samples\n        TODO: Flip their labels to wrong classes\n        TODO: Return poisoned data\n        \"\"\"\n        X, y = data\n        # TODO: Select samples to flip\n        # TODO: Flip labels\n        poisoned_y = y.copy()\n        return X, poisoned_y\n    \n    def model_poison(self, clean_update, attack_strength=10.0):\n        \"\"\"Craft malicious model update.\n    \n        TODO: Scale update by attack_strength\n        TODO: Add targeted backdoor pattern\n        TODO: Return poisoned update\n        \"\"\"\n        poisoned = {}\n        for key in clean_update:\n            # TODO: Scale and invert\n            poisoned[key] = None\n        return poisoned\n    \n    def krum_aggregate(self, client_updates, num_malicious):\n        \"\"\"Krum: Byzantine-robust aggregation.\n        \n        TODO: Compute pairwise distances between all updates\n        TODO: For each update, sum distances to n-f-2 nearest neighbors\n        TODO: Select update with minimum score\n        TODO: Return selected update (or average of top-k)\n        \"\"\"\n        n = len(client_updates)\n        f = num_malicious\n        # TODO: Flatten updates for distance computation\n        # TODO: Compute pairwise distances\n        # TODO: Compute Krum scores\n        # TODO: Select and return\n        return client_updates[0]\n    \n    def detect_outliers(self, client_updates, threshold=2.0):\n        \"\"\"Detect outlier updates using cosine similarity.\n        \n        TODO: Compute mean update direction\n        TODO: Compute cosine similarity of each update to mean\n        TODO: Flag updates with similarity below threshold\n        TODO: Return list of honest client indices\n        \"\"\"\n        # TODO: Compute mean update\n        # TODO: Compute similarities\n        # TODO: Filter outliers\n        honest_indices = []\n        return honest_indices\n"
-    },
-    "validation": {
-      "type": "ai_code",
-      "rules": [
-        "must_include:poison",
-        "must_include:Krum",
-        "must_include:outlier",
-        "must_include:Byzantine",
-        "must_include:cosine similarity"
-      ]
-    }
+    "rules": [
+      "must_include:poison",
+      "must_include:Krum",
+      "must_include:outlier",
+      "must_include:Byzantine",
+      "must_include:cosine similarity"
+    ]
   }
 }

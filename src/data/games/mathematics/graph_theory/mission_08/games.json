@@ -1,0 +1,17 @@
+{
+    "id":  "mission_08",
+    "validation":  {
+                       "type":  "ai_code",
+                       "rules":  [
+                                     "must_include:def",
+                                     "must_include:return"
+                                 ]
+                   },
+    "xpReward":  100,
+    "type":  "ai_code",
+    "difficulty":  "hard",
+    "title":  "graph theory - Mission 08",
+    "initialState":  {
+                         "content":  "# graph theory Mission 08\n# TODO: Implement this mission\n\npass"
+                     }
+}

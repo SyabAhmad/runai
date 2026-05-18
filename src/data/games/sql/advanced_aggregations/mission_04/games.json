@@ -1,0 +1,17 @@
+{
+    "id":  "mission_04",
+    "validation":  {
+                       "type":  "ai_code",
+                       "rules":  [
+                                     "must_include:def",
+                                     "must_include:return"
+                                 ]
+                   },
+    "xpReward":  80,
+    "type":  "ai_code",
+    "difficulty":  "medium",
+    "title":  "advanced aggregations - Mission 04",
+    "initialState":  {
+                         "content":  "# advanced aggregations Mission 04\n# TODO: Implement this mission\n\npass"
+                     }
+}

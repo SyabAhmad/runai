@@ -1,18 +1,20 @@
 {
-    "title":  "SQL Mission 1: Customer Orders (INNER JOIN)",
-    "initialState":  {
-                         "content":  "-- Mission 1 Guidelines\n-- Tables:\n--   customers(customer_id, name, region)\n--   orders(order_id, customer_id, order_date, total_amount)\n-- Return: c.name, o.order_id\n-- Use INNER JOIN and explicit ON condition\n\nSELECT\n  -- TODO\nFROM customers c\nINNER JOIN orders o\n  ON -- TODO\nORDER BY\n  -- TODO\n;"
-                     },
-    "validation":  {
-                       "type":  "sql",
-                       "rules":  [
-                                     "must_include:select c.name, o.order_id",
-                                     "must_include:from customers c",
-                                     "must_include:inner join orders o",
-                                     "must_include:on c.customer_id = o.customer_id",
-                                     "must_include:order by o.order_id"
-                                 ]
-                   },
-    "id":  "mission_01",
-    "type":  "sql_debug"
+  "title": "SQL Mission 1: Customer Orders (INNER JOIN)",
+  "initialState": {
+    "content": "-- Mission 1 Guidelines\n-- Tables:\n--   customers(customer_id, name, region)\n--   orders(order_id, customer_id, order_date, total_amount)\n-- Return: c.name, o.order_id\n-- Use INNER JOIN and explicit ON condition\n\nSELECT\n  -- TODO\nFROM customers c\nINNER JOIN orders o\n  ON -- TODO\nORDER BY\n  -- TODO\n;"
+  },
+  "validation": {
+    "type": "sql",
+    "rules": [
+      "must_include:select c.name, o.order_id",
+      "must_include:from customers c",
+      "must_include:inner join orders o",
+      "must_include:on c.customer_id = o.customer_id",
+      "must_include:order by o.order_id"
+    ]
+  },
+  "id": "mission_01",
+  "type": "sql_debug",
+  "xpReward": 60,
+  "difficulty": "easy"
 }

@@ -1,22 +1,20 @@
 {
-  "mission_10": {
-    "title": "Molecular Property Prediction",
-    "id": "mission_10",
+  "title": "Molecular Property Prediction",
+  "id": "mission_10",
+  "type": "ai_code",
+  "xpReward": 120,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "import numpy as np\n\n\nclass MolecularGNN:\n    \"\"\"GNN for molecular property prediction with atom and bond features.\n    \n    TODO: Encode atom features (element, degree, formal charge)\n    TODO: Encode bond features (type, conjugated, ring)\n    TODO: Implement message passing with bond-aware edge weights\n    TODO: Implement graph-level readout (sum, mean, max pooling)\n    TODO: Implement multi-task prediction for multiple properties\n    \"\"\"\n    \n    def __init__(self, atom_dim, bond_dim, hidden_dim, num_tasks):\n        self.hidden_dim = hidden_dim\n        self.num_tasks = num_tasks\n        \n        # TODO: Atom feature encoder\n        self.W_atom = np.random.randn(atom_dim, hidden_dim) * 0.01\n        \n        # TODO: Bond feature encoder\n        self.W_bond = np.random.randn(bond_dim, hidden_dim) * 0.01\n        \n        # TODO: Message passing weights\n        self.W_msg = np.random.randn(hidden_dim, hidden_dim) * 0.01\n        self.W_update = np.random.randn(2 * hidden_dim, hidden_dim) * 0.01\n        \n        # TODO: Readout and prediction\n        self.W_readout = np.random.randn(hidden_dim, hidden_dim) * 0.01\n        self.W_predict = np.random.randn(hidden_dim, num_tasks) * 0.01\n    \n    def encode_atoms(self, atom_features):\n        \"\"\"Encode atom features into hidden representations.\"\"\"\n        # TODO: h_atom = ReLU(atom_features @ W_atom)\n        return None\n    \n    def encode_bonds(self, bond_features):\n        \"\"\"Encode bond features into edge weights.\"\"\"\n        # TODO: e_bond = ReLU(bond_features @ W_bond)\n        return None\n    \n    def message_pass(self, H, edge_index, bond_enc):\n        \"\"\"Bond-aware message passing.\"\"\"\n        # TODO: For each edge (u, v): msg_uv = H[u] @ W_msg + bond_enc[u,v]\n        # TODO: Aggregate messages: m_v = sum(msg_uv for u in neighbors)\n        # TODO: Update: H_new[v] = ReLU(W_update @ concat(H[v], m_v))\n        H_new = np.zeros_like(H)\n        return H_new\n    \n    def readout(self, H):\n        \"\"\"Graph-level readout with multiple pooling.\"\"\"\n        # TODO: h_sum = sum(H), h_mean = mean(H), h_max = max(H)\n        # TODO: h_graph = ReLU(W_readout @ concat(h_sum, h_mean, h_max))\n        h_graph = None\n        return h_graph\n    \n    def predict(self, h_graph):\n        \"\"\"Multi-task prediction.\"\"\"\n        # TODO: predictions = h_graph @ W_predict\n        return None\n    \n    def forward(self, atom_features, bond_features, edge_index, num_message_steps=3):\n        \"\"\"Full forward pass.\"\"\"\n        # TODO: Encode atoms and bonds\n        # TODO: Message passing for num_message_steps\n        # TODO: Readout and predict\n        predictions = None\n        return predictions\n"
+  },
+  "validation": {
     "type": "ai_code",
-    "xpReward": 120,
-    "difficulty": "hard",
-    "initialState": {
-      "content": "import numpy as np\n\n\nclass MolecularGNN:\n    \"\"\"GNN for molecular property prediction with atom and bond features.\n    \n    TODO: Encode atom features (element, degree, formal charge)\n    TODO: Encode bond features (type, conjugated, ring)\n    TODO: Implement message passing with bond-aware edge weights\n    TODO: Implement graph-level readout (sum, mean, max pooling)\n    TODO: Implement multi-task prediction for multiple properties\n    \"\"\"\n    \n    def __init__(self, atom_dim, bond_dim, hidden_dim, num_tasks):\n        self.hidden_dim = hidden_dim\n        self.num_tasks = num_tasks\n        \n        # TODO: Atom feature encoder\n        self.W_atom = np.random.randn(atom_dim, hidden_dim) * 0.01\n        \n        # TODO: Bond feature encoder\n        self.W_bond = np.random.randn(bond_dim, hidden_dim) * 0.01\n        \n        # TODO: Message passing weights\n        self.W_msg = np.random.randn(hidden_dim, hidden_dim) * 0.01\n        self.W_update = np.random.randn(2 * hidden_dim, hidden_dim) * 0.01\n        \n        # TODO: Readout and prediction\n        self.W_readout = np.random.randn(hidden_dim, hidden_dim) * 0.01\n        self.W_predict = np.random.randn(hidden_dim, num_tasks) * 0.01\n    \n    def encode_atoms(self, atom_features):\n        \"\"\"Encode atom features into hidden representations.\"\"\"\n        # TODO: h_atom = ReLU(atom_features @ W_atom)\n        return None\n    \n    def encode_bonds(self, bond_features):\n        \"\"\"Encode bond features into edge weights.\"\"\"\n        # TODO: e_bond = ReLU(bond_features @ W_bond)\n        return None\n    \n    def message_pass(self, H, edge_index, bond_enc):\n        \"\"\"Bond-aware message passing.\"\"\"\n        # TODO: For each edge (u, v): msg_uv = H[u] @ W_msg + bond_enc[u,v]\n        # TODO: Aggregate messages: m_v = sum(msg_uv for u in neighbors)\n        # TODO: Update: H_new[v] = ReLU(W_update @ concat(H[v], m_v))\n        H_new = np.zeros_like(H)\n        return H_new\n    \n    def readout(self, H):\n        \"\"\"Graph-level readout with multiple pooling.\"\"\"\n        # TODO: h_sum = sum(H), h_mean = mean(H), h_max = max(H)\n        # TODO: h_graph = ReLU(W_readout @ concat(h_sum, h_mean, h_max))\n        h_graph = None\n        return h_graph\n    \n    def predict(self, h_graph):\n        \"\"\"Multi-task prediction.\"\"\"\n        # TODO: predictions = h_graph @ W_predict\n        return None\n    \n    def forward(self, atom_features, bond_features, edge_index, num_message_steps=3):\n        \"\"\"Full forward pass.\"\"\"\n        # TODO: Encode atoms and bonds\n        # TODO: Message passing for num_message_steps\n        # TODO: Readout and predict\n        predictions = None\n        return predictions\n"
-    },
-    "validation": {
-      "type": "ai_code",
-      "rules": [
-        "must_include:atom",
-        "must_include:bond",
-        "must_include:message passing",
-        "must_include:readout",
-        "must_include:multi-task"
-      ]
-    }
+    "rules": [
+      "must_include:atom",
+      "must_include:bond",
+      "must_include:message passing",
+      "must_include:readout",
+      "must_include:multi-task"
+    ]
   }
 }

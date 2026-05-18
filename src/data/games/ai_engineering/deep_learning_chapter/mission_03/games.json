@@ -40,5 +40,6 @@
   },
   "id": "mission_03",
   "type": "ai_code",
-  "xpReward": 150
+  "xpReward": 150,
+  "difficulty": "hard"
 }

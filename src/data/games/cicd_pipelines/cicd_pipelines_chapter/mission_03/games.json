@@ -11,5 +11,6 @@
   },
   "id": "mission_03",
   "type": "pipeline",
-  "xpReward": 100
+  "xpReward": 100,
+  "difficulty": "hard"
 }

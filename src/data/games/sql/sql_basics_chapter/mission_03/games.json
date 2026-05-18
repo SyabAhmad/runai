@@ -8,10 +8,12 @@
     "rules": [
       "must_include:select name",
       "must_include:from employees",
-      "must_include:where name like \u0027a%\u0027",
+      "must_include:where name like 'a%'",
       "must_include:order by name"
     ]
   },
   "id": "mission_03",
-  "type": "sql_debug"
+  "type": "sql_debug",
+  "xpReward": 60,
+  "difficulty": "easy"
 }

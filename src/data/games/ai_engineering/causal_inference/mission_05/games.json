@@ -1,16 +1,20 @@
 {
-  "mission_05": {
-    "title": "Regression Discontinuity Design",
-    "id": "mission_05",
+  "title": "Regression Discontinuity Design",
+  "id": "mission_05",
+  "type": "ai_code",
+  "xpReward": 85,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import numpy as np\nfrom sklearn.linear_model import LinearRegression\n\n# TODO: Implement sharp RDD estimator\ndef sharp_rdd(running_variable, outcome, cutoff, bandwidth):\n    \"\"\"Estimate treatment effect using Sharp Regression Discontinuity Design.\n    \n    Args:\n        running_variable: The assignment variable (n_samples,)\n        outcome: The outcome variable (n_samples,)\n        cutoff: The threshold for treatment assignment\n        bandwidth: Window around cutoff to use for estimation\n    \n    Returns:\n        treatment_effect: Estimated discontinuity at cutoff\n    \"\"\"\n    # TODO: Select observations within bandwidth\n    # TODO: Create treatment indicator (running_var >= cutoff)\n    # TODO: Fit local linear regression on both sides\n    # TODO: Estimate the discontinuity\n    pass\n\n# TODO: Implement triangular kernel weighting\ndef triangular_kernel(running_variable, cutoff, bandwidth):\n    \"\"\"Compute triangular kernel weights.\n    \n    w_i = max(0, 1 - |X_i - cutoff| / bandwidth)\n    \"\"\"\n    # TODO: Compute kernel weights\n    pass\n\n# TODO: Implement bandwidth selection using Imbens-Kalyanaraman (2012)\ndef ik_bandwidth(running_variable, outcome, cutoff):\n    \"\"\"Implement IK optimal bandwidth selector.\"\"\"\n    # TODO: Compute optimal bandwidth\n    pass\n\n# TODO: Implement placebo test for RDD validity\ndef placebo_test(running_variable, outcome, cutoff, placebo_cutoffs):\n    \"\"\"Test for discontinuities at placebo cutoffs.\"\"\"\n    # TODO: Estimate effects at fake cutoffs\n    # TODO: Return placebo effect estimates\n    pass\n"
+  },
+  "validation": {
     "type": "ai_code",
-    "xpReward": 85,
-    "difficulty": "medium",
-    "initialState": {
-      "content": "import numpy as np\nfrom sklearn.linear_model import LinearRegression\n\n# TODO: Implement sharp RDD estimator\ndef sharp_rdd(running_variable, outcome, cutoff, bandwidth):\n    \"\"\"Estimate treatment effect using Sharp Regression Discontinuity Design.\n    \n    Args:\n        running_variable: The assignment variable (n_samples,)\n        outcome: The outcome variable (n_samples,)\n        cutoff: The threshold for treatment assignment\n        bandwidth: Window around cutoff to use for estimation\n    \n    Returns:\n        treatment_effect: Estimated discontinuity at cutoff\n    \"\"\"\n    # TODO: Select observations within bandwidth\n    # TODO: Create treatment indicator (running_var >= cutoff)\n    # TODO: Fit local linear regression on both sides\n    # TODO: Estimate the discontinuity\n    pass\n\n# TODO: Implement triangular kernel weighting\ndef triangular_kernel(running_variable, cutoff, bandwidth):\n    \"\"\"Compute triangular kernel weights.\n    \n    w_i = max(0, 1 - |X_i - cutoff| / bandwidth)\n    \"\"\"\n    # TODO: Compute kernel weights\n    pass\n\n# TODO: Implement bandwidth selection using Imbens-Kalyanaraman (2012)\ndef ik_bandwidth(running_variable, outcome, cutoff):\n    \"\"\"Implement IK optimal bandwidth selector.\"\"\"\n    # TODO: Compute optimal bandwidth\n    pass\n\n# TODO: Implement placebo test for RDD validity\ndef placebo_test(running_variable, outcome, cutoff, placebo_cutoffs):\n    \"\"\"Test for discontinuities at placebo cutoffs.\"\"\"\n    # TODO: Estimate effects at fake cutoffs\n    # TODO: Return placebo effect estimates\n    pass\n"
-    },
-    "validation": {
-      "type": "ai_code",
-      "rules": ["must_include:LinearRegression", "must_include:bandwidth", "must_include:cutoff", "must_include:kernel", "must_include:triangular"]
-    }
+    "rules": [
+      "must_include:LinearRegression",
+      "must_include:bandwidth",
+      "must_include:cutoff",
+      "must_include:kernel",
+      "must_include:triangular"
+    ]
   }
 }

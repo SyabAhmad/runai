@@ -1,18 +1,20 @@
 {
-    "title":  "SQL Mission 5: Order Revenue (3-Table Join)",
-    "initialState":  {
-                         "content":  "-- Mission 5 Guidelines\n-- Joins:\n--   orders o -\u003e order_items oi on order_id\n--   order_items oi -\u003e products p on product_id\n-- Total formula: SUM(oi.quantity * p.price)\n\nSELECT\n  -- TODO\nFROM orders o\nINNER JOIN order_items oi ON -- TODO\nINNER JOIN products p ON -- TODO\nGROUP BY\n  -- TODO\nORDER BY\n  -- TODO\n;"
-                     },
-    "validation":  {
-                       "type":  "sql",
-                       "rules":  [
-                                     "must_include:sum(oi.quantity * p.price) as order_total",
-                                     "must_include:inner join order_items oi",
-                                     "must_include:inner join products p",
-                                     "must_include:group by o.order_id",
-                                     "must_include:order by order_total desc"
-                                 ]
-                   },
-    "id":  "mission_05",
-    "type":  "sql_debug"
+  "title": "SQL Mission 5: Order Revenue (3-Table Join)",
+  "initialState": {
+    "content": "-- Mission 5 Guidelines\n-- Joins:\n--   orders o -> order_items oi on order_id\n--   order_items oi -> products p on product_id\n-- Total formula: SUM(oi.quantity * p.price)\n\nSELECT\n  -- TODO\nFROM orders o\nINNER JOIN order_items oi ON -- TODO\nINNER JOIN products p ON -- TODO\nGROUP BY\n  -- TODO\nORDER BY\n  -- TODO\n;"
+  },
+  "validation": {
+    "type": "sql",
+    "rules": [
+      "must_include:sum(oi.quantity * p.price) as order_total",
+      "must_include:inner join order_items oi",
+      "must_include:inner join products p",
+      "must_include:group by o.order_id",
+      "must_include:order by order_total desc"
+    ]
+  },
+  "id": "mission_05",
+  "type": "sql_debug",
+  "xpReward": 60,
+  "difficulty": "easy"
 }

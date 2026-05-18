@@ -1,0 +1,17 @@
+{
+    "id":  "mission_06",
+    "validation":  {
+                       "type":  "ai_code",
+                       "rules":  [
+                                     "must_include:def",
+                                     "must_include:return"
+                                 ]
+                   },
+    "xpReward":  80,
+    "type":  "ai_code",
+    "difficulty":  "medium",
+    "title":  "websockets - Mission 06",
+    "initialState":  {
+                         "content":  "# websockets Mission 06\n# TODO: Implement this mission\n\npass"
+                     }
+}

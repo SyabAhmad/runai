@@ -1,7 +1,7 @@
 {
   "title": "SQL Mission 2: Department Directory",
   "initialState": {
-    "content": "-- Mission 2 Guidelines\n-- Return one row per department\n-- Remove duplicates\n-- Sort A -\u003e Z\n\nSELECT\n  -- TODO\nFROM employees\nORDER BY\n  -- TODO\n;"
+    "content": "-- Mission 2 Guidelines\n-- Return one row per department\n-- Remove duplicates\n-- Sort A -> Z\n\nSELECT\n  -- TODO\nFROM employees\nORDER BY\n  -- TODO\n;"
   },
   "validation": {
     "type": "sql",
@@ -12,5 +12,7 @@
     ]
   },
   "id": "mission_02",
-  "type": "sql_debug"
+  "type": "sql_debug",
+  "xpReward": 60,
+  "difficulty": "easy"
 }

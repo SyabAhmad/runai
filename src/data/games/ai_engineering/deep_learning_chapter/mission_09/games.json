@@ -5,7 +5,11 @@
   },
   "validation": {
     "type": "ai_code",
-    "rules": ["must_include:cuda", "must_include:device", "must_include:to"],
+    "rules": [
+      "must_include:cuda",
+      "must_include:device",
+      "must_include:to"
+    ],
     "tests": [
       {
         "type": "must_match",
@@ -36,5 +40,6 @@
   },
   "id": "mission_09",
   "type": "ai_code",
-  "xpReward": 150
+  "xpReward": 150,
+  "difficulty": "hard"
 }

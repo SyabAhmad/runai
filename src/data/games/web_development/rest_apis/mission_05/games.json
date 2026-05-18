@@ -1,0 +1,17 @@
+{
+    "id":  "mission_05",
+    "validation":  {
+                       "type":  "ai_code",
+                       "rules":  [
+                                     "must_include:def",
+                                     "must_include:return"
+                                 ]
+                   },
+    "xpReward":  80,
+    "type":  "ai_code",
+    "difficulty":  "medium",
+    "title":  "rest apis - Mission 05",
+    "initialState":  {
+                         "content":  "# rest apis Mission 05\n# TODO: Implement this mission\n\npass"
+                     }
+}

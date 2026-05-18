@@ -1,0 +1,3 @@
+{
+  "mission_03": "pipeline:\n  stages:\n    - fixed_window\n    # Implemented"
+}

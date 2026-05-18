@@ -1,16 +1,20 @@
 {
-  "mission_07": {
-    "title": "Causal Forests for Heterogeneous Treatment Effects",
-    "id": "mission_07",
+  "title": "Causal Forests for Heterogeneous Treatment Effects",
+  "id": "mission_07",
+  "type": "ai_code",
+  "xpReward": 90,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import numpy as np\nfrom sklearn.tree import DecisionTreeRegressor\nfrom sklearn.ensemble import RandomForestRegressor\n\n# TODO: Implement a simple causal tree split criterion\ndef causal_split_criterion(Y, T, feature_values, split_point):\n    \"\"\"Calculate the causal tree splitting criterion.\n    \n    Maximize the difference in treatment effects between left and right nodes.\n    \"\"\"\n    # TODO: Split data at split_point\n    # TODO: Estimate treatment effect in each node\n    # TODO: Return criterion value\n    pass\n\n# TODO: Implement honest causal forest\ndef honest_causal_forest(X, Y, T, n_trees=100, max_depth=5):\n    \"\"\"Build an honest causal forest.\n    \n    Honest forests use separate samples for tree structure and leaf estimates.\n    \"\"\"\n    # TODO: Split data into structure and estimation samples\n    # TODO: Build trees on structure sample\n    # TODO: Estimate treatment effects on estimation sample\n    pass\n\n# TODO: Estimate conditional average treatment effect (CATE)\ndef estimate_cate(model, X_new):\n    \"\"\"Estimate CATE for new observations.\"\"\"\n    # TODO: Use the forest to predict treatment effects\n    pass\n\n# TODO: Implement variable importance for causal forest\ndef causal_variable_importance(forest, X, Y, T):\n    \"\"\"Compute variable importance based on treatment effect heterogeneity.\"\"\"\n    # TODO: Measure how much each variable contributes to heterogeneity\n    pass\n"
+  },
+  "validation": {
     "type": "ai_code",
-    "xpReward": 90,
-    "difficulty": "medium",
-    "initialState": {
-      "content": "import numpy as np\nfrom sklearn.tree import DecisionTreeRegressor\nfrom sklearn.ensemble import RandomForestRegressor\n\n# TODO: Implement a simple causal tree split criterion\ndef causal_split_criterion(Y, T, feature_values, split_point):\n    \"\"\"Calculate the causal tree splitting criterion.\n    \n    Maximize the difference in treatment effects between left and right nodes.\n    \"\"\"\n    # TODO: Split data at split_point\n    # TODO: Estimate treatment effect in each node\n    # TODO: Return criterion value\n    pass\n\n# TODO: Implement honest causal forest\ndef honest_causal_forest(X, Y, T, n_trees=100, max_depth=5):\n    \"\"\"Build an honest causal forest.\n    \n    Honest forests use separate samples for tree structure and leaf estimates.\n    \"\"\"\n    # TODO: Split data into structure and estimation samples\n    # TODO: Build trees on structure sample\n    # TODO: Estimate treatment effects on estimation sample\n    pass\n\n# TODO: Estimate conditional average treatment effect (CATE)\ndef estimate_cate(model, X_new):\n    \"\"\"Estimate CATE for new observations.\"\"\"\n    # TODO: Use the forest to predict treatment effects\n    pass\n\n# TODO: Implement variable importance for causal forest\ndef causal_variable_importance(forest, X, Y, T):\n    \"\"\"Compute variable importance based on treatment effect heterogeneity.\"\"\"\n    # TODO: Measure how much each variable contributes to heterogeneity\n    pass\n"
-    },
-    "validation": {
-      "type": "ai_code",
-      "rules": ["must_include:DecisionTreeRegressor", "must_include:RandomForestRegressor", "must_include:split", "must_include:CATE", "must_include:honest"]
-    }
+    "rules": [
+      "must_include:DecisionTreeRegressor",
+      "must_include:RandomForestRegressor",
+      "must_include:split",
+      "must_include:CATE",
+      "must_include:honest"
+    ]
   }
 }

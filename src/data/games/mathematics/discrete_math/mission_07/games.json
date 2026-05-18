@@ -1,0 +1,17 @@
+{
+    "id":  "mission_07",
+    "validation":  {
+                       "type":  "ai_code",
+                       "rules":  [
+                                     "must_include:def",
+                                     "must_include:return"
+                                 ]
+                   },
+    "xpReward":  80,
+    "type":  "ai_code",
+    "difficulty":  "medium",
+    "title":  "discrete math - Mission 07",
+    "initialState":  {
+                         "content":  "# discrete math Mission 07\n# TODO: Implement this mission\n\npass"
+                     }
+}

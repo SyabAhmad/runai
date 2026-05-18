@@ -1,22 +1,20 @@
 {
-  "mission_01": {
-    "title": "ARIMA Model Implementation",
-    "id": "mission_01",
+  "title": "ARIMA Model Implementation",
+  "id": "mission_01",
+  "type": "ai_code",
+  "xpReward": 60,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "import numpy as np\nfrom scipy import stats\n\n\ndef simulate_arima_data(n=200, ar_params=None, ma_params=None, sigma=1.0):\n    \"\"\"Simulate ARIMA(p,0,q) data.\"\"\"\n    if ar_params is None:\n        ar_params = [0.7]\n    if ma_params is None:\n        ma_params = [0.3]\n    \n    p = len(ar_params)\n    q = len(ma_params)\n    \n    # TODO: Initialize arrays for time series and error terms\n    y = np.zeros(n)\n    eps = np.random.normal(0, sigma, n)\n    \n    # TODO: Generate ARIMA process\n    # y[t] = ar[0]*y[t-1] + ... + ma[0]*eps[t-1] + ... + eps[t]\n    for t in range(max(p, q), n):\n        ar_sum = sum(ar_params[i] * y[t - i - 1] for i in range(p))\n        ma_sum = sum(ma_params[i] * eps[t - i - 1] for i in range(q))\n        # TODO: Complete the ARIMA equation\n        y[t] = ar_sum + ma_sum + eps[t]\n    \n    return y\n\n\ndef check_stationarity(series, alpha=0.05):\n    \"\"\"Augmented Dickey-Fuller test for stationarity.\"\"\"\n    # TODO: Compute the ADF test statistic\n    # Use lag-1 regression: delta_y[t] = gamma * y[t-1] + ...\n    delta_y = np.diff(series)\n    y_lag = series[:-1]\n    \n    # TODO: Perform regression and extract t-statistic\n    slope, intercept, r_value, p_value, std_err = stats.linregress(y_lag, delta_y)\n    \n    # TODO: Return whether series is stationary (p-value < alpha)\n    is_stationary = p_value < alpha\n    return is_stationary, p_value\n\n\ndef forecast_arima(series, p=1, d=0, q=1, steps=10):\n    \"\"\"Simple ARIMA forecasting.\"\"\"\n    # TODO: Apply differencing if d > 0\n    diff_series = series.copy()\n    for _ in range(d):\n        diff_series = np.diff(diff_series)\n    \n    # TODO: Fit AR and MA parameters using Yule-Walker\n    # For AR(p): solve R * phi = r where R is autocorrelation matrix\n    n = len(diff_series)\n    mean = np.mean(diff_series)\n    centered = diff_series - mean\n    \n    # TODO: Compute autocorrelations\n    acf = np.array([np.sum(centered[:-k] * centered[k:]) / np.sum(centered**2) for k in range(p + 1)])\n    \n    # TODO: Solve Yule-Walker equations for AR parameters\n    if p > 0:\n        R = np.array([[acf[abs(i - j)] for j in range(p)] for i in range(p)])\n        r = acf[1:p + 1]\n        ar_params = np.linalg.solve(R, r)\n    else:\n        ar_params = []\n    \n    # TODO: Generate forecasts recursively\n    forecasts = []\n    last_values = list(diff_series[-max(p, 1):])\n    for step in range(steps):\n        pred = sum(ar_params[i] * last_values[-(i + 1)] for i in range(len(ar_params)))\n        forecasts.append(pred + mean)\n        last_values.append(pred)\n    \n    return np.array(forecasts)\n"
+  },
+  "validation": {
     "type": "ai_code",
-    "xpReward": 60,
-    "difficulty": "easy",
-    "initialState": {
-      "content": "import numpy as np\nfrom scipy import stats\n\n\ndef simulate_arima_data(n=200, ar_params=None, ma_params=None, sigma=1.0):\n    \"\"\"Simulate ARIMA(p,0,q) data.\"\"\"\n    if ar_params is None:\n        ar_params = [0.7]\n    if ma_params is None:\n        ma_params = [0.3]\n    \n    p = len(ar_params)\n    q = len(ma_params)\n    \n    # TODO: Initialize arrays for time series and error terms\n    y = np.zeros(n)\n    eps = np.random.normal(0, sigma, n)\n    \n    # TODO: Generate ARIMA process\n    # y[t] = ar[0]*y[t-1] + ... + ma[0]*eps[t-1] + ... + eps[t]\n    for t in range(max(p, q), n):\n        ar_sum = sum(ar_params[i] * y[t - i - 1] for i in range(p))\n        ma_sum = sum(ma_params[i] * eps[t - i - 1] for i in range(q))\n        # TODO: Complete the ARIMA equation\n        y[t] = ar_sum + ma_sum + eps[t]\n    \n    return y\n\n\ndef check_stationarity(series, alpha=0.05):\n    \"\"\"Augmented Dickey-Fuller test for stationarity.\"\"\"\n    # TODO: Compute the ADF test statistic\n    # Use lag-1 regression: delta_y[t] = gamma * y[t-1] + ...\n    delta_y = np.diff(series)\n    y_lag = series[:-1]\n    \n    # TODO: Perform regression and extract t-statistic\n    slope, intercept, r_value, p_value, std_err = stats.linregress(y_lag, delta_y)\n    \n    # TODO: Return whether series is stationary (p-value < alpha)\n    is_stationary = p_value < alpha\n    return is_stationary, p_value\n\n\ndef forecast_arima(series, p=1, d=0, q=1, steps=10):\n    \"\"\"Simple ARIMA forecasting.\"\"\"\n    # TODO: Apply differencing if d > 0\n    diff_series = series.copy()\n    for _ in range(d):\n        diff_series = np.diff(diff_series)\n    \n    # TODO: Fit AR and MA parameters using Yule-Walker\n    # For AR(p): solve R * phi = r where R is autocorrelation matrix\n    n = len(diff_series)\n    mean = np.mean(diff_series)\n    centered = diff_series - mean\n    \n    # TODO: Compute autocorrelations\n    acf = np.array([np.sum(centered[:-k] * centered[k:]) / np.sum(centered**2) for k in range(p + 1)])\n    \n    # TODO: Solve Yule-Walker equations for AR parameters\n    if p > 0:\n        R = np.array([[acf[abs(i - j)] for j in range(p)] for i in range(p)])\n        r = acf[1:p + 1]\n        ar_params = np.linalg.solve(R, r)\n    else:\n        ar_params = []\n    \n    # TODO: Generate forecasts recursively\n    forecasts = []\n    last_values = list(diff_series[-max(p, 1):])\n    for step in range(steps):\n        pred = sum(ar_params[i] * last_values[-(i + 1)] for i in range(len(ar_params)))\n        forecasts.append(pred + mean)\n        last_values.append(pred)\n    \n    return np.array(forecasts)\n"
-    },
-    "validation": {
-      "type": "ai_code",
-      "rules": [
-        "must_include:np.zeros",
-        "must_include:np.diff",
-        "must_include:stats.linregress",
-        "must_include:np.linalg.solve",
-        "must_include:acf"
-      ]
-    }
+    "rules": [
+      "must_include:np.zeros",
+      "must_include:np.diff",
+      "must_include:stats.linregress",
+      "must_include:np.linalg.solve",
+      "must_include:acf"
+    ]
   }
 }

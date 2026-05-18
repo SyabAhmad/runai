@@ -1,22 +1,20 @@
 {
-  "mission_02": {
-    "title": "Secure Aggregation Protocol",
-    "id": "mission_02",
+  "title": "Secure Aggregation Protocol",
+  "id": "mission_02",
+  "type": "ai_code",
+  "xpReward": 60,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "import numpy as np\n\n\nclass SecureAggregator:\n    \"\"\"Secure aggregation using pairwise masking.\n    \n    TODO: Generate pairwise random masks between clients\n    TODO: Each client masks their update with pairwise secrets\n    TODO: Server aggregates masked updates\n    TODO: Masks cancel out during aggregation\n    \"\"\"\n    \n    def __init__(self, num_clients, model_shape):\n        self.num_clients = num_clients\n        self.model_shape = model_shape\n    \n    def generate_pairwise_masks(self, seed):\n        \"\"\"Generate pairwise random masks between all client pairs.\n        \n        TODO: For each pair (i, j), generate shared random mask s_ij\n        TODO: Ensure s_ij = -s_ji so masks cancel in sum\n        \"\"\"\n        masks = {}\n        for i in range(self.num_clients):\n            for j in range(i + 1, self.num_clients):\n                # TODO: Generate shared random mask using seed\n                np.random.seed(seed + i * 1000 + j)\n                mask = np.random.randn(*self.model_shape)\n                masks[(i, j)] = mask\n                masks[(j, i)] = -mask\n        return masks\n    \n    def mask_update(self, client_update, client_id, pairwise_masks):\n        \"\"\"Mask client update with pairwise secrets.\n        \n        TODO: masked_update = client_update + sum(s_ij for all j != i)\n        \"\"\"\n        masked = client_update.copy()\n        for j in range(self.num_clients):\n            if j != client_id:\n                # TODO: Add pairwise mask\n                pass\n        return masked\n    \n    def aggregate_masked(self, masked_updates):\n        \"\"\"Aggregate masked updates. Pairwise masks should cancel.\n        \n        TODO: Sum all masked updates\n        TODO: Verify that pairwise masks cancel out\n        \"\"\"\n        # TODO: aggregated = sum(masked_updates)\n        aggregated = None\n        return aggregated\n    \n    def secure_aggregate(self, client_updates, seed):\n        \"\"\"Full secure aggregation protocol.\n        \n        TODO: Generate pairwise masks\n        TODO: Each client masks their update\n        TODO: Aggregate masked updates\n        \"\"\"\n        pairwise_masks = self.generate_pairwise_masks(seed)\n        masked_updates = []\n        for i, update in enumerate(client_updates):\n            masked = self.mask_update(update, i, pairwise_masks)\n            masked_updates.append(masked)\n        return self.aggregate_masked(masked_updates)\n"
+  },
+  "validation": {
     "type": "ai_code",
-    "xpReward": 60,
-    "difficulty": "easy",
-    "initialState": {
-      "content": "import numpy as np\n\n\nclass SecureAggregator:\n    \"\"\"Secure aggregation using pairwise masking.\n    \n    TODO: Generate pairwise random masks between clients\n    TODO: Each client masks their update with pairwise secrets\n    TODO: Server aggregates masked updates\n    TODO: Masks cancel out during aggregation\n    \"\"\"\n    \n    def __init__(self, num_clients, model_shape):\n        self.num_clients = num_clients\n        self.model_shape = model_shape\n    \n    def generate_pairwise_masks(self, seed):\n        \"\"\"Generate pairwise random masks between all client pairs.\n        \n        TODO: For each pair (i, j), generate shared random mask s_ij\n        TODO: Ensure s_ij = -s_ji so masks cancel in sum\n        \"\"\"\n        masks = {}\n        for i in range(self.num_clients):\n            for j in range(i + 1, self.num_clients):\n                # TODO: Generate shared random mask using seed\n                np.random.seed(seed + i * 1000 + j)\n                mask = np.random.randn(*self.model_shape)\n                masks[(i, j)] = mask\n                masks[(j, i)] = -mask\n        return masks\n    \n    def mask_update(self, client_update, client_id, pairwise_masks):\n        \"\"\"Mask client update with pairwise secrets.\n        \n        TODO: masked_update = client_update + sum(s_ij for all j != i)\n        \"\"\"\n        masked = client_update.copy()\n        for j in range(self.num_clients):\n            if j != client_id:\n                # TODO: Add pairwise mask\n                pass\n        return masked\n    \n    def aggregate_masked(self, masked_updates):\n        \"\"\"Aggregate masked updates. Pairwise masks should cancel.\n        \n        TODO: Sum all masked updates\n        TODO: Verify that pairwise masks cancel out\n        \"\"\"\n        # TODO: aggregated = sum(masked_updates)\n        aggregated = None\n        return aggregated\n    \n    def secure_aggregate(self, client_updates, seed):\n        \"\"\"Full secure aggregation protocol.\n        \n        TODO: Generate pairwise masks\n        TODO: Each client masks their update\n        TODO: Aggregate masked updates\n        \"\"\"\n        pairwise_masks = self.generate_pairwise_masks(seed)\n        masked_updates = []\n        for i, update in enumerate(client_updates):\n            masked = self.mask_update(update, i, pairwise_masks)\n            masked_updates.append(masked)\n        return self.aggregate_masked(masked_updates)\n"
-    },
-    "validation": {
-      "type": "ai_code",
-      "rules": [
-        "must_include:pairwise",
-        "must_include:mask",
-        "must_include:cancel",
-        "must_include:aggregate",
-        "must_include:secure"
-      ]
-    }
+    "rules": [
+      "must_include:pairwise",
+      "must_include:mask",
+      "must_include:cancel",
+      "must_include:aggregate",
+      "must_include:secure"
+    ]
   }
 }

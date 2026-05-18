@@ -1,22 +1,20 @@
 {
-  "mission_08": {
-    "title": "Dynamic Graph Neural Networks",
-    "id": "mission_08",
+  "title": "Dynamic Graph Neural Networks",
+  "id": "mission_08",
+  "type": "ai_code",
+  "xpReward": 100,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "import numpy as np\n\n\nclass DynamicGNN:\n    \"\"\"Dynamic GNN for time-evolving graphs.\n    \n    TODO: Implement temporal encoding of graph snapshots\n    TODO: Combine GNN spatial aggregation with temporal RNN\n    TODO: Implement temporal attention over snapshots\n    TODO: Predict future graph state\n    \"\"\"\n    \n    def __init__(self, input_dim, hidden_dim, num_snapshots):\n        self.hidden_dim = hidden_dim\n        self.num_snapshots = num_snapshots\n        \n        # TODO: GNN weights for spatial aggregation\n        self.W_gnn = np.random.randn(input_dim, hidden_dim) * 0.01\n        \n        # TODO: Temporal RNN weights (GRU-style)\n        self.W_update = np.random.randn(hidden_dim, hidden_dim) * 0.01\n        self.W_reset = np.random.randn(hidden_dim, hidden_dim) * 0.01\n        self.W_candidate = np.random.randn(hidden_dim, hidden_dim) * 0.01\n        \n        # TODO: Temporal attention weights\n        self.W_attn = np.random.randn(hidden_dim, hidden_dim) * 0.01\n    \n    def gnn_encode(self, A, X):\n        \"\"\"Encode single snapshot with GNN.\"\"\"\n        # TODO: H = ReLU(A_norm @ X @ W_gnn)\n        H = None\n        return H\n    \n    def temporal_update(self, H_prev, H_curr):\n        \"\"\"GRU-style temporal update.\"\"\"\n        # TODO: Compute update gate: z = sigmoid(W_update @ [H_prev, H_curr])\n        # TODO: Compute reset gate: r = sigmoid(W_reset @ [H_prev, H_curr])\n        # TODO: Compute candidate: h_tilde = tanh(W_candidate @ [r*H_prev, H_curr])\n        # TODO: H_new = (1-z)*H_prev + z*h_tilde\n        H_new = None\n        return H_new\n    \n    def temporal_attention(self, H_snapshots):\n        \"\"\"Compute temporal attention over snapshots.\"\"\"\n        # TODO: Compute attention scores for each snapshot\n        # TODO: Apply softmax to get attention weights\n        # TODO: Weighted sum of snapshot representations\n        H_attn = None\n        return H_attn\n    \n    def forward(self, snapshots, adjacencies):\n        \"\"\"Process sequence of graph snapshots.\"\"\"\n        # TODO: Encode each snapshot with GNN\n        # TODO: Apply temporal updates sequentially\n        # TODO: Apply temporal attention\n        H_final = None\n        return H_final\n"
+  },
+  "validation": {
     "type": "ai_code",
-    "xpReward": 100,
-    "difficulty": "hard",
-    "initialState": {
-      "content": "import numpy as np\n\n\nclass DynamicGNN:\n    \"\"\"Dynamic GNN for time-evolving graphs.\n    \n    TODO: Implement temporal encoding of graph snapshots\n    TODO: Combine GNN spatial aggregation with temporal RNN\n    TODO: Implement temporal attention over snapshots\n    TODO: Predict future graph state\n    \"\"\"\n    \n    def __init__(self, input_dim, hidden_dim, num_snapshots):\n        self.hidden_dim = hidden_dim\n        self.num_snapshots = num_snapshots\n        \n        # TODO: GNN weights for spatial aggregation\n        self.W_gnn = np.random.randn(input_dim, hidden_dim) * 0.01\n        \n        # TODO: Temporal RNN weights (GRU-style)\n        self.W_update = np.random.randn(hidden_dim, hidden_dim) * 0.01\n        self.W_reset = np.random.randn(hidden_dim, hidden_dim) * 0.01\n        self.W_candidate = np.random.randn(hidden_dim, hidden_dim) * 0.01\n        \n        # TODO: Temporal attention weights\n        self.W_attn = np.random.randn(hidden_dim, hidden_dim) * 0.01\n    \n    def gnn_encode(self, A, X):\n        \"\"\"Encode single snapshot with GNN.\"\"\"\n        # TODO: H = ReLU(A_norm @ X @ W_gnn)\n        H = None\n        return H\n    \n    def temporal_update(self, H_prev, H_curr):\n        \"\"\"GRU-style temporal update.\"\"\"\n        # TODO: Compute update gate: z = sigmoid(W_update @ [H_prev, H_curr])\n        # TODO: Compute reset gate: r = sigmoid(W_reset @ [H_prev, H_curr])\n        # TODO: Compute candidate: h_tilde = tanh(W_candidate @ [r*H_prev, H_curr])\n        # TODO: H_new = (1-z)*H_prev + z*h_tilde\n        H_new = None\n        return H_new\n    \n    def temporal_attention(self, H_snapshots):\n        \"\"\"Compute temporal attention over snapshots.\"\"\"\n        # TODO: Compute attention scores for each snapshot\n        # TODO: Apply softmax to get attention weights\n        # TODO: Weighted sum of snapshot representations\n        H_attn = None\n        return H_attn\n    \n    def forward(self, snapshots, adjacencies):\n        \"\"\"Process sequence of graph snapshots.\"\"\"\n        # TODO: Encode each snapshot with GNN\n        # TODO: Apply temporal updates sequentially\n        # TODO: Apply temporal attention\n        H_final = None\n        return H_final\n"
-    },
-    "validation": {
-      "type": "ai_code",
-      "rules": [
-        "must_include:temporal",
-        "must_include:GRU",
-        "must_include:attention",
-        "must_include:snapshot",
-        "must_include:gate"
-      ]
-    }
+    "rules": [
+      "must_include:temporal",
+      "must_include:GRU",
+      "must_include:attention",
+      "must_include:snapshot",
+      "must_include:gate"
+    ]
   }
 }

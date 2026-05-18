@@ -1,22 +1,20 @@
 {
-  "mission_07": {
-    "title": "Heterogeneous Graph Neural Networks",
-    "id": "mission_07",
+  "title": "Heterogeneous Graph Neural Networks",
+  "id": "mission_07",
+  "type": "ai_code",
+  "xpReward": 90,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import numpy as np\n\n\nclass HeteroGNN:\n    \"\"\"Heterogeneous GNN with type-specific transformations.\n    \n    TODO: Implement type-specific weight matrices for each node type\n    TODO: Implement type-specific message passing for each edge type\n    TODO: Aggregate messages from different edge types\n    TODO: Implement meta-path based aggregation\n    \"\"\"\n    \n    def __init__(self, node_types, edge_types, hidden_dim):\n        self.node_types = node_types\n        self.edge_types = edge_types\n        self.hidden_dim = hidden_dim\n        \n        # TODO: Create type-specific weight matrices\n        self.node_weights = {}\n        for nt in node_types:\n            self.node_weights[nt] = None\n        \n        # TODO: Create edge-type specific relation weights\n        self.edge_weights = {}\n        for et in edge_types:\n            self.edge_weights[et] = None\n    \n    def type_specific_transform(self, X, node_type):\n        \"\"\"Apply type-specific transformation.\"\"\"\n        # TODO: X_transformed = X @ self.node_weights[node_type]\n        return None\n    \n    def message_passing(self, H, edge_index, edge_type):\n        \"\"\"Message passing for a specific edge type.\"\"\"\n        # TODO: Transform source nodes\n        # TODO: Aggregate messages to target nodes\n        # TODO: Apply relation-specific weight\n        H_new = {}\n        return H_new\n    \n    def aggregate_edge_types(self, H_by_type, node_type):\n        \"\"\"Aggregate messages from different edge types for a node type.\"\"\"\n        # TODO: Sum or mean messages from all edge types\n        H_agg = None\n        return H_agg\n    \n    def forward(self, H, adj_by_edge_type):\n        \"\"\"Full forward pass through heterogeneous GNN.\"\"\"\n        # TODO: Apply type-specific transforms\n        # TODO: Message pass for each edge type\n        # TODO: Aggregate across edge types\n        # TODO: Apply ReLU\n        H_new = {}\n        return H_new\n"
+  },
+  "validation": {
     "type": "ai_code",
-    "xpReward": 90,
-    "difficulty": "medium",
-    "initialState": {
-      "content": "import numpy as np\n\n\nclass HeteroGNN:\n    \"\"\"Heterogeneous GNN with type-specific transformations.\n    \n    TODO: Implement type-specific weight matrices for each node type\n    TODO: Implement type-specific message passing for each edge type\n    TODO: Aggregate messages from different edge types\n    TODO: Implement meta-path based aggregation\n    \"\"\"\n    \n    def __init__(self, node_types, edge_types, hidden_dim):\n        self.node_types = node_types\n        self.edge_types = edge_types\n        self.hidden_dim = hidden_dim\n        \n        # TODO: Create type-specific weight matrices\n        self.node_weights = {}\n        for nt in node_types:\n            self.node_weights[nt] = None\n        \n        # TODO: Create edge-type specific relation weights\n        self.edge_weights = {}\n        for et in edge_types:\n            self.edge_weights[et] = None\n    \n    def type_specific_transform(self, X, node_type):\n        \"\"\"Apply type-specific transformation.\"\"\"\n        # TODO: X_transformed = X @ self.node_weights[node_type]\n        return None\n    \n    def message_passing(self, H, edge_index, edge_type):\n        \"\"\"Message passing for a specific edge type.\"\"\"\n        # TODO: Transform source nodes\n        # TODO: Aggregate messages to target nodes\n        # TODO: Apply relation-specific weight\n        H_new = {}\n        return H_new\n    \n    def aggregate_edge_types(self, H_by_type, node_type):\n        \"\"\"Aggregate messages from different edge types for a node type.\"\"\"\n        # TODO: Sum or mean messages from all edge types\n        H_agg = None\n        return H_agg\n    \n    def forward(self, H, adj_by_edge_type):\n        \"\"\"Full forward pass through heterogeneous GNN.\"\"\"\n        # TODO: Apply type-specific transforms\n        # TODO: Message pass for each edge type\n        # TODO: Aggregate across edge types\n        # TODO: Apply ReLU\n        H_new = {}\n        return H_new\n"
-    },
-    "validation": {
-      "type": "ai_code",
-      "rules": [
-        "must_include:type-specific",
-        "must_include:message passing",
-        "must_include:edge_type",
-        "must_include:node_type",
-        "must_include:aggregate"
-      ]
-    }
+    "rules": [
+      "must_include:type-specific",
+      "must_include:message passing",
+      "must_include:edge_type",
+      "must_include:node_type",
+      "must_include:aggregate"
+    ]
   }
 }

@@ -1,16 +1,20 @@
 {
-  "mission_01": {
-    "title": "Implementing MAML from Scratch",
-    "id": "mission_01",
+  "title": "Implementing MAML from Scratch",
+  "id": "mission_01",
+  "type": "ai_code",
+  "xpReward": 60,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "import numpy as np\n\n# TODO: Implement the inner loop adaptation step for MAML\ndef maml_inner_loop(params, support_x, support_y, learning_rate, n_steps=1):\n    \"\"\"Perform inner loop adaptation on support set.\n    \n    Args:\n        params: Model parameters (weights, biases)\n        support_x: Support set inputs\n        support_y: Support set labels\n        learning_rate: Inner loop learning rate (alpha)\n        n_steps: Number of gradient steps\n    \n    Returns:\n        adapted_params: Updated parameters after adaptation\n    \"\"\"\n    # TODO: For each gradient step:\n    #   - Compute predictions with current params\n    #   - Compute loss (MSE for regression, cross-entropy for classification)\n    #   - Compute gradients w.r.t. params\n    #   - Update params: params = params - alpha * gradients\n    pass\n\n# TODO: Implement the outer loop meta-update\ndef maml_outer_loop(task_grads, meta_learning_rate):\n    \"\"\"Update meta-parameters using accumulated task gradients.\n    \n    θ ← θ - β * Σ ∇_θ L_task(f_θ')\n    \"\"\"\n    # TODO: Average gradients across tasks\n    # TODO: Apply meta-gradient update\n    pass\n\n# TODO: Implement sinusoidal task sampling (regression)\ndef sample_sinusoidal_task(n_support=10, n_query=10, amplitude_range=(0.1, 5.0), phase_range=(0, np.pi)):\n    \"\"\"Sample a sinusoidal regression task.\n    \n    y = A * sin(x + φ) where A ~ U(amplitude_range), φ ~ U(phase_range)\n    \"\"\"\n    # TODO: Sample amplitude and phase\n    # TODO: Generate support and query sets\n    # TODO: Return task data\n    pass\n\n# TODO: Implement full MAML training loop\ndef maml_train(n_tasks=1000, inner_lr=0.01, outer_lr=0.001):\n    \"\"\"Complete MAML training loop.\"\"\"\n    # TODO: Initialize meta-parameters\n    # TODO: Sample batch of tasks\n    # TODO: Inner loop adaptation for each task\n    # TODO: Outer loop meta-update\n    pass\n"
+  },
+  "validation": {
     "type": "ai_code",
-    "xpReward": 60,
-    "difficulty": "easy",
-    "initialState": {
-      "content": "import numpy as np\n\n# TODO: Implement the inner loop adaptation step for MAML\ndef maml_inner_loop(params, support_x, support_y, learning_rate, n_steps=1):\n    \"\"\"Perform inner loop adaptation on support set.\n    \n    Args:\n        params: Model parameters (weights, biases)\n        support_x: Support set inputs\n        support_y: Support set labels\n        learning_rate: Inner loop learning rate (alpha)\n        n_steps: Number of gradient steps\n    \n    Returns:\n        adapted_params: Updated parameters after adaptation\n    \"\"\"\n    # TODO: For each gradient step:\n    #   - Compute predictions with current params\n    #   - Compute loss (MSE for regression, cross-entropy for classification)\n    #   - Compute gradients w.r.t. params\n    #   - Update params: params = params - alpha * gradients\n    pass\n\n# TODO: Implement the outer loop meta-update\ndef maml_outer_loop(task_grads, meta_learning_rate):\n    \"\"\"Update meta-parameters using accumulated task gradients.\n    \n    θ ← θ - β * Σ ∇_θ L_task(f_θ')\n    \"\"\"\n    # TODO: Average gradients across tasks\n    # TODO: Apply meta-gradient update\n    pass\n\n# TODO: Implement sinusoidal task sampling (regression)\ndef sample_sinusoidal_task(n_support=10, n_query=10, amplitude_range=(0.1, 5.0), phase_range=(0, np.pi)):\n    \"\"\"Sample a sinusoidal regression task.\n    \n    y = A * sin(x + φ) where A ~ U(amplitude_range), φ ~ U(phase_range)\n    \"\"\"\n    # TODO: Sample amplitude and phase\n    # TODO: Generate support and query sets\n    # TODO: Return task data\n    pass\n\n# TODO: Implement full MAML training loop\ndef maml_train(n_tasks=1000, inner_lr=0.01, outer_lr=0.001):\n    \"\"\"Complete MAML training loop.\"\"\"\n    # TODO: Initialize meta-parameters\n    # TODO: Sample batch of tasks\n    # TODO: Inner loop adaptation for each task\n    # TODO: Outer loop meta-update\n    pass\n"
-    },
-    "validation": {
-      "type": "ai_code",
-      "rules": ["must_include:inner_loop", "must_include:outer_loop", "must_include:gradient", "must_include:adaptation", "must_include:meta_learning_rate"]
-    }
+    "rules": [
+      "must_include:inner_loop",
+      "must_include:outer_loop",
+      "must_include:gradient",
+      "must_include:adaptation",
+      "must_include:meta_learning_rate"
+    ]
   }
 }

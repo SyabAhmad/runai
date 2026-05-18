@@ -1,22 +1,20 @@
 {
-  "mission_07": {
-    "title": "Non-IID Data Handling in FL",
-    "id": "mission_07",
+  "title": "Non-IID Data Handling in FL",
+  "id": "mission_07",
+  "type": "ai_code",
+  "xpReward": 90,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import numpy as np\n\n\nclass NonIIDHandler:\n    \"\"\"Handle non-IID data distribution in federated learning.\n    \n    TODO: Implement Dirichlet-based data partitioning\n    TODO: Implement class-balanced local training\n    TODO: Implement shared global representation layer\n    \"\"\"\n    \n    def __init__(self, num_clients, num_classes, alpha=0.5):\n        self.num_clients = num_clients\n        self.num_classes = num_classes\n        self.alpha = alpha  # Dirichlet concentration parameter\n    \n    def dirichlet_partition(self, data_labels):\n        \"\"\"Partition data using Dirichlet distribution.\n        \n        TODO: For each class, sample client proportions from Dirichlet\n        TODO: Assign samples to clients based on proportions\n        TODO: Lower alpha = more non-IID\n        \"\"\"\n        client_data = [[] for _ in range(self.num_clients)]\n        \n        for class_idx in range(self.num_classes):\n            # TODO: Get indices of this class\n            class_indices = None\n            \n            # TODO: Sample proportions from Dirichlet(alpha)\n            proportions = None\n            \n            # TODO: Assign samples to clients\n            pass\n        \n        return client_data\n    \n    def class_balanced_loss(self, predictions, labels, class_counts):\n        \"\"\"Compute class-balanced loss to handle label skew.\n        \n        TODO: Weight each class inversely proportional to its frequency\n        TODO: Compute weighted cross-entropy loss\n        \"\"\"\n        # TODO: Compute class weights: 1 / class_counts\n        # TODO: Apply weights to loss\n        loss = None\n        return loss\n    \n    def shared_representation(self, global_base, local_head, X):\n        \"\"\"Split model: shared base + local head.\n        \n        TODO: Forward through global base layers\n        TODO: Forward through local head layers\n        TODO: Only base layers are shared across clients\n        \"\"\"\n        # TODO: features = global_base(X)\n        # TODO: output = local_head(features)\n        output = None\n        return output\n"
+  },
+  "validation": {
     "type": "ai_code",
-    "xpReward": 90,
-    "difficulty": "medium",
-    "initialState": {
-      "content": "import numpy as np\n\n\nclass NonIIDHandler:\n    \"\"\"Handle non-IID data distribution in federated learning.\n    \n    TODO: Implement Dirichlet-based data partitioning\n    TODO: Implement class-balanced local training\n    TODO: Implement shared global representation layer\n    \"\"\"\n    \n    def __init__(self, num_clients, num_classes, alpha=0.5):\n        self.num_clients = num_clients\n        self.num_classes = num_classes\n        self.alpha = alpha  # Dirichlet concentration parameter\n    \n    def dirichlet_partition(self, data_labels):\n        \"\"\"Partition data using Dirichlet distribution.\n        \n        TODO: For each class, sample client proportions from Dirichlet\n        TODO: Assign samples to clients based on proportions\n        TODO: Lower alpha = more non-IID\n        \"\"\"\n        client_data = [[] for _ in range(self.num_clients)]\n        \n        for class_idx in range(self.num_classes):\n            # TODO: Get indices of this class\n            class_indices = None\n            \n            # TODO: Sample proportions from Dirichlet(alpha)\n            proportions = None\n            \n            # TODO: Assign samples to clients\n            pass\n        \n        return client_data\n    \n    def class_balanced_loss(self, predictions, labels, class_counts):\n        \"\"\"Compute class-balanced loss to handle label skew.\n        \n        TODO: Weight each class inversely proportional to its frequency\n        TODO: Compute weighted cross-entropy loss\n        \"\"\"\n        # TODO: Compute class weights: 1 / class_counts\n        # TODO: Apply weights to loss\n        loss = None\n        return loss\n    \n    def shared_representation(self, global_base, local_head, X):\n        \"\"\"Split model: shared base + local head.\n        \n        TODO: Forward through global base layers\n        TODO: Forward through local head layers\n        TODO: Only base layers are shared across clients\n        \"\"\"\n        # TODO: features = global_base(X)\n        # TODO: output = local_head(features)\n        output = None\n        return output\n"
-    },
-    "validation": {
-      "type": "ai_code",
-      "rules": [
-        "must_include:Dirichlet",
-        "must_include:class-balanced",
-        "must_include:non-IID",
-        "must_include:partition",
-        "must_include:label skew"
-      ]
-    }
+    "rules": [
+      "must_include:Dirichlet",
+      "must_include:class-balanced",
+      "must_include:non-IID",
+      "must_include:partition",
+      "must_include:label skew"
+    ]
   }
 }

@@ -1,0 +1,3 @@
+{
+    "mission_03":  "# statistics Mission 03 - Solution\n\ndef solve():\n    return True\n\nif __name__ == \u0027__main__\u0027:\n    print(solve())"
+}

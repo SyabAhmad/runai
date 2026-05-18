@@ -1,0 +1,17 @@
+{
+    "id":  "mission_01",
+    "validation":  {
+                       "type":  "ai_code",
+                       "rules":  [
+                                     "must_include:def",
+                                     "must_include:return"
+                                 ]
+                   },
+    "xpReward":  60,
+    "type":  "ai_code",
+    "difficulty":  "easy",
+    "title":  "node js - Mission 01",
+    "initialState":  {
+                         "content":  "# node js Mission 01\n# TODO: Implement this mission\n\npass"
+                     }
+}

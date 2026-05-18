@@ -1,22 +1,20 @@
 {
-  "mission_09": {
-    "title": "Forecast Evaluation Metrics",
-    "id": "mission_09",
+  "title": "Forecast Evaluation Metrics",
+  "id": "mission_09",
+  "type": "ai_code",
+  "xpReward": 110,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "import numpy as np\n\n\ndef mae(y_true, y_pred):\n    \"\"\"Mean Absolute Error.\"\"\"\n    return np.mean(np.abs(y_true - y_pred))\n\n\ndef mse(y_true, y_pred):\n    \"\"\"Mean Squared Error.\"\"\"\n    return np.mean((y_true - y_pred) ** 2)\n\n\ndef rmse(y_true, y_pred):\n    \"\"\"Root Mean Squared Error.\"\"\"\n    return np.sqrt(mse(y_true, y_pred))\n\n\ndef mape(y_true, y_pred):\n    \"\"\"Mean Absolute Percentage Error.\"\"\"\n    # TODO: Avoid division by zero\n    mask = y_true != 0\n    return np.mean(np.abs((y_true[mask] - y_pred[mask]) / y_true[mask])) * 100\n\n\ndef smape(y_true, y_pred):\n    \"\"\"Symmetric Mean Absolute Percentage Error.\"\"\"\n    # TODO: Compute symmetric denominator\n    denominator = (np.abs(y_true) + np.abs(y_pred)) / 2\n    denominator = np.where(denominator == 0, 1e-10, denominator)\n    return np.mean(np.abs(y_true - y_pred) / denominator) * 100\n\n\ndef mase(y_true, y_pred, y_train, seasonality=1):\n    \"\"\"Mean Absolute Scaled Error.\"\"\"\n    # TODO: Compute in-sample naive forecast errors\n    naive_errors = np.abs(np.diff(y_train[seasonality:]))\n    scale = np.mean(naive_errors)\n    \n    # TODO: Compute MASE\n    if scale == 0:\n        scale = 1e-10\n    return np.mean(np.abs(y_true - y_pred)) / scale\n\n\ndef coverage(y_true, y_pred_lower, y_pred_upper):\n    \"\"\"Prediction interval coverage probability.\"\"\"\n    # TODO: Count observations within prediction interval\n    within = (y_true >= y_pred_lower) & (y_true <= y_pred_upper)\n    return np.mean(within)\n\n\ndef pinball_loss(y_true, y_pred, tau=0.5):\n    \"\"\"Pinball loss for quantile forecast evaluation.\"\"\"\n    # TODO: Compute asymmetric loss\n    errors = y_true - y_pred\n    return np.mean(np.maximum(tau * errors, (tau - 1) * errors))\n\n\ndef diebold_mariano_test(e1, e2):\n    \"\"\"Diebold-Mariano test for comparing forecast accuracy.\"\"\"\n    # TODO: Compute loss differential\n    d = e1 ** 2 - e2 ** 2\n    \n    # TODO: Compute long-run variance of d using Newey-West\n    n = len(d)\n    mean_d = np.mean(d)\n    max_lag = int(4 * (n / 100) ** (2/9))\n    \n    var_d = np.var(d)\n    for k in range(1, min(max_lag + 1, n)):\n        autocov = np.mean((d[k:] - mean_d) * (d[:-k] - mean_d))\n        var_d += 2 * (1 - k / (max_lag + 1)) * autocov\n    \n    # TODO: Compute DM statistic\n    dm_stat = mean_d / np.sqrt(var_d / n)\n    return dm_stat\n\n\ndef evaluate_forecasts(y_true, y_pred, y_train=None):\n    \"\"\"Comprehensive forecast evaluation.\"\"\"\n    results = {\n        'MAE': mae(y_true, y_pred),\n        'MSE': mse(y_true, y_pred),\n        'RMSE': rmse(y_true, y_pred),\n        'MAPE': mape(y_true, y_pred),\n        'SMAPE': smape(y_true, y_pred),\n    }\n    if y_train is not None:\n        results['MASE'] = mase(y_true, y_pred, y_train)\n    return results\n"
+  },
+  "validation": {
     "type": "ai_code",
-    "xpReward": 110,
-    "difficulty": "hard",
-    "initialState": {
-      "content": "import numpy as np\n\n\ndef mae(y_true, y_pred):\n    \"\"\"Mean Absolute Error.\"\"\"\n    return np.mean(np.abs(y_true - y_pred))\n\n\ndef mse(y_true, y_pred):\n    \"\"\"Mean Squared Error.\"\"\"\n    return np.mean((y_true - y_pred) ** 2)\n\n\ndef rmse(y_true, y_pred):\n    \"\"\"Root Mean Squared Error.\"\"\"\n    return np.sqrt(mse(y_true, y_pred))\n\n\ndef mape(y_true, y_pred):\n    \"\"\"Mean Absolute Percentage Error.\"\"\"\n    # TODO: Avoid division by zero\n    mask = y_true != 0\n    return np.mean(np.abs((y_true[mask] - y_pred[mask]) / y_true[mask])) * 100\n\n\ndef smape(y_true, y_pred):\n    \"\"\"Symmetric Mean Absolute Percentage Error.\"\"\"\n    # TODO: Compute symmetric denominator\n    denominator = (np.abs(y_true) + np.abs(y_pred)) / 2\n    denominator = np.where(denominator == 0, 1e-10, denominator)\n    return np.mean(np.abs(y_true - y_pred) / denominator) * 100\n\n\ndef mase(y_true, y_pred, y_train, seasonality=1):\n    \"\"\"Mean Absolute Scaled Error.\"\"\"\n    # TODO: Compute in-sample naive forecast errors\n    naive_errors = np.abs(np.diff(y_train[seasonality:]))\n    scale = np.mean(naive_errors)\n    \n    # TODO: Compute MASE\n    if scale == 0:\n        scale = 1e-10\n    return np.mean(np.abs(y_true - y_pred)) / scale\n\n\ndef coverage(y_true, y_pred_lower, y_pred_upper):\n    \"\"\"Prediction interval coverage probability.\"\"\"\n    # TODO: Count observations within prediction interval\n    within = (y_true >= y_pred_lower) & (y_true <= y_pred_upper)\n    return np.mean(within)\n\n\ndef pinball_loss(y_true, y_pred, tau=0.5):\n    \"\"\"Pinball loss for quantile forecast evaluation.\"\"\"\n    # TODO: Compute asymmetric loss\n    errors = y_true - y_pred\n    return np.mean(np.maximum(tau * errors, (tau - 1) * errors))\n\n\ndef diebold_mariano_test(e1, e2):\n    \"\"\"Diebold-Mariano test for comparing forecast accuracy.\"\"\"\n    # TODO: Compute loss differential\n    d = e1 ** 2 - e2 ** 2\n    \n    # TODO: Compute long-run variance of d using Newey-West\n    n = len(d)\n    mean_d = np.mean(d)\n    max_lag = int(4 * (n / 100) ** (2/9))\n    \n    var_d = np.var(d)\n    for k in range(1, min(max_lag + 1, n)):\n        autocov = np.mean((d[k:] - mean_d) * (d[:-k] - mean_d))\n        var_d += 2 * (1 - k / (max_lag + 1)) * autocov\n    \n    # TODO: Compute DM statistic\n    dm_stat = mean_d / np.sqrt(var_d / n)\n    return dm_stat\n\n\ndef evaluate_forecasts(y_true, y_pred, y_train=None):\n    \"\"\"Comprehensive forecast evaluation.\"\"\"\n    results = {\n        'MAE': mae(y_true, y_pred),\n        'MSE': mse(y_true, y_pred),\n        'RMSE': rmse(y_true, y_pred),\n        'MAPE': mape(y_true, y_pred),\n        'SMAPE': smape(y_true, y_pred),\n    }\n    if y_train is not None:\n        results['MASE'] = mase(y_true, y_pred, y_train)\n    return results\n"
-    },
-    "validation": {
-      "type": "ai_code",
-      "rules": [
-        "must_include:np.abs",
-        "must_include:np.mean",
-        "must_include:np.sqrt",
-        "must_include:np.maximum",
-        "must_include:np.where"
-      ]
-    }
+    "rules": [
+      "must_include:np.abs",
+      "must_include:np.mean",
+      "must_include:np.sqrt",
+      "must_include:np.maximum",
+      "must_include:np.where"
+    ]
   }
 }

@@ -1,0 +1,17 @@
+{
+    "id":  "mission_03",
+    "validation":  {
+                       "type":  "ai_code",
+                       "rules":  [
+                                     "must_include:def",
+                                     "must_include:return"
+                                 ]
+                   },
+    "xpReward":  60,
+    "type":  "ai_code",
+    "difficulty":  "easy",
+    "title":  "missing data handling - Mission 03",
+    "initialState":  {
+                         "content":  "# missing data handling Mission 03\n# TODO: Implement this mission\n\npass"
+                     }
+}

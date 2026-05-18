@@ -1,16 +1,20 @@
 {
-  "mission_10": {
-    "title": "Causal Discovery Algorithms",
-    "id": "mission_10",
+  "title": "Causal Discovery Algorithms",
+  "id": "mission_10",
+  "type": "ai_code",
+  "xpReward": 120,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "import numpy as np\nimport networkx as nx\nfrom scipy import stats\n\n# TODO: Implement PC algorithm (simplified)\ndef pc_algorithm(data, alpha=0.05):\n    \"\"\"Implement the PC algorithm for causal discovery.\n    \n    Uses conditional independence tests to learn the DAG skeleton,\n    then orients edges using v-structure detection.\n    \"\"\"\n    # TODO: Start with complete undirected graph\n    # TODO: Remove edges based on conditional independence tests\n    # TODO: Orient v-structures (colliders)\n    # TODO: Apply Meek's rules for remaining orientations\n    pass\n\n# TODO: Implement conditional independence test\ndef conditional_independence_test(X, Y, Z, data, alpha=0.05):\n    \"\"\"Test if X ⊥ Y | Z using partial correlation.\n    \n    Returns True if X and Y are conditionally independent given Z.\n    \"\"\"\n    # TODO: Compute partial correlation\n    # TODO: Convert to z-score using Fisher's z-transform\n    # TODO: Compare to critical value\n    pass\n\n# TODO: Implement LiNGAM for linear non-Gaussian causal discovery\ndef lingam(data):\n    \"\"\"Implement LiNGAM algorithm.\n    \n    Uses independent component analysis to find causal ordering.\n    \"\"\"\n    # TODO: Whiten the data\n    # TODO: Apply ICA to find independent components\n    # TODO: Estimate causal ordering\n    # TODO: Return adjacency matrix\n    pass\n\n# TODO: Implement additive noise model test\ndef anm_test(X, Y, data):\n    \"\"\"Test if Y = f(X) + N_Y (X causes Y) vs X = f(Y) + N_X (Y causes X).\n    \n    Uses independence of residuals from the cause.\n    \"\"\"\n    # TODO: Fit Y ~ X and X ~ Y\n    # TODO: Test independence of residuals from predictor\n    # TODO: Return direction with more independent residuals\n    pass\n"
+  },
+  "validation": {
     "type": "ai_code",
-    "xpReward": 120,
-    "difficulty": "hard",
-    "initialState": {
-      "content": "import numpy as np\nimport networkx as nx\nfrom scipy import stats\n\n# TODO: Implement PC algorithm (simplified)\ndef pc_algorithm(data, alpha=0.05):\n    \"\"\"Implement the PC algorithm for causal discovery.\n    \n    Uses conditional independence tests to learn the DAG skeleton,\n    then orients edges using v-structure detection.\n    \"\"\"\n    # TODO: Start with complete undirected graph\n    # TODO: Remove edges based on conditional independence tests\n    # TODO: Orient v-structures (colliders)\n    # TODO: Apply Meek's rules for remaining orientations\n    pass\n\n# TODO: Implement conditional independence test\ndef conditional_independence_test(X, Y, Z, data, alpha=0.05):\n    \"\"\"Test if X ⊥ Y | Z using partial correlation.\n    \n    Returns True if X and Y are conditionally independent given Z.\n    \"\"\"\n    # TODO: Compute partial correlation\n    # TODO: Convert to z-score using Fisher's z-transform\n    # TODO: Compare to critical value\n    pass\n\n# TODO: Implement LiNGAM for linear non-Gaussian causal discovery\ndef lingam(data):\n    \"\"\"Implement LiNGAM algorithm.\n    \n    Uses independent component analysis to find causal ordering.\n    \"\"\"\n    # TODO: Whiten the data\n    # TODO: Apply ICA to find independent components\n    # TODO: Estimate causal ordering\n    # TODO: Return adjacency matrix\n    pass\n\n# TODO: Implement additive noise model test\ndef anm_test(X, Y, data):\n    \"\"\"Test if Y = f(X) + N_Y (X causes Y) vs X = f(Y) + N_X (Y causes X).\n    \n    Uses independence of residuals from the cause.\n    \"\"\"\n    # TODO: Fit Y ~ X and X ~ Y\n    # TODO: Test independence of residuals from predictor\n    # TODO: Return direction with more independent residuals\n    pass\n"
-    },
-    "validation": {
-      "type": "ai_code",
-      "rules": ["must_include:conditional_independence", "must_include:partial_correlation", "must_include:networkx", "must_include:fisher", "must_include:ICA"]
-    }
+    "rules": [
+      "must_include:conditional_independence",
+      "must_include:partial_correlation",
+      "must_include:networkx",
+      "must_include:fisher",
+      "must_include:ICA"
+    ]
   }
 }

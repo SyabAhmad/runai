@@ -7,10 +7,12 @@
     "type": "sql",
     "rules": [
       "must_include:row_number() over (partition by department order by salary desc) as rn",
-      "must_include:where rn \u003c= 3",
+      "must_include:where rn <= 3",
       "must_include:select department, name, salary, rn"
     ]
   },
   "id": "mission_09",
-  "type": "sql_debug"
+  "type": "sql_debug",
+  "xpReward": 60,
+  "difficulty": "easy"
 }

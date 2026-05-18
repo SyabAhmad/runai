@@ -1,16 +1,20 @@
 {
-  "mission_03": {
-    "title": "Propensity Score Matching",
-    "id": "mission_03",
+  "title": "Propensity Score Matching",
+  "id": "mission_03",
+  "type": "ai_code",
+  "xpReward": 70,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "import numpy as np\nfrom sklearn.linear_model import LogisticRegression\nfrom sklearn.neighbors import NearestNeighbors\n\n# TODO: Implement propensity score estimation using logistic regression\ndef estimate_propensity_scores(X, treatment):\n    \"\"\"Estimate propensity scores P(T=1|X) using logistic regression.\n    \n    Args:\n        X: Feature matrix (n_samples, n_features)\n        treatment: Binary treatment indicator (n_samples,)\n    \n    Returns:\n        propensity_scores: Array of propensity scores\n    \"\"\"\n    # TODO: Fit logistic regression\n    # TODO: Return predicted probabilities for treatment=1\n    pass\n\n# TODO: Implement 1:1 nearest neighbor matching\ndef match_on_propensity_scores(propensity_scores, treatment, n_neighbors=1):\n    \"\"\"Perform 1:1 nearest neighbor matching on propensity scores.\n    \n    Returns:\n        matched_indices: List of (treated_idx, control_idx) tuples\n    \"\"\"\n    # TODO: Separate treated and control propensity scores\n    # TODO: Use NearestNeighbors to find matches\n    # TODO: Return matched pairs\n    pass\n\n# TODO: Calculate the Average Treatment Effect on the Treated (ATT)\ndef calculate_att(outcomes, treatment, matched_indices):\n    \"\"\"Calculate ATT from matched pairs.\n    \n    ATT = E[Y(1) - Y(0) | T=1]\n    \"\"\"\n    # TODO: For each treated unit, find the matched control outcome\n    # TODO: Compute mean difference\n    pass\n\n# TODO: Implement standardized mean difference for balance checking\ndef standardized_mean_difference(X, treatment, matched_indices):\n    \"\"\"Compute standardized mean differences for covariate balance.\"\"\"\n    # TODO: Calculate mean difference for each covariate\n    # TODO: Standardize by pooled standard deviation\n    pass\n"
+  },
+  "validation": {
     "type": "ai_code",
-    "xpReward": 70,
-    "difficulty": "easy",
-    "initialState": {
-      "content": "import numpy as np\nfrom sklearn.linear_model import LogisticRegression\nfrom sklearn.neighbors import NearestNeighbors\n\n# TODO: Implement propensity score estimation using logistic regression\ndef estimate_propensity_scores(X, treatment):\n    \"\"\"Estimate propensity scores P(T=1|X) using logistic regression.\n    \n    Args:\n        X: Feature matrix (n_samples, n_features)\n        treatment: Binary treatment indicator (n_samples,)\n    \n    Returns:\n        propensity_scores: Array of propensity scores\n    \"\"\"\n    # TODO: Fit logistic regression\n    # TODO: Return predicted probabilities for treatment=1\n    pass\n\n# TODO: Implement 1:1 nearest neighbor matching\ndef match_on_propensity_scores(propensity_scores, treatment, n_neighbors=1):\n    \"\"\"Perform 1:1 nearest neighbor matching on propensity scores.\n    \n    Returns:\n        matched_indices: List of (treated_idx, control_idx) tuples\n    \"\"\"\n    # TODO: Separate treated and control propensity scores\n    # TODO: Use NearestNeighbors to find matches\n    # TODO: Return matched pairs\n    pass\n\n# TODO: Calculate the Average Treatment Effect on the Treated (ATT)\ndef calculate_att(outcomes, treatment, matched_indices):\n    \"\"\"Calculate ATT from matched pairs.\n    \n    ATT = E[Y(1) - Y(0) | T=1]\n    \"\"\"\n    # TODO: For each treated unit, find the matched control outcome\n    # TODO: Compute mean difference\n    pass\n\n# TODO: Implement standardized mean difference for balance checking\ndef standardized_mean_difference(X, treatment, matched_indices):\n    \"\"\"Compute standardized mean differences for covariate balance.\"\"\"\n    # TODO: Calculate mean difference for each covariate\n    # TODO: Standardize by pooled standard deviation\n    pass\n"
-    },
-    "validation": {
-      "type": "ai_code",
-      "rules": ["must_include:LogisticRegression", "must_include:NearestNeighbors", "must_include:predict_proba", "must_include:fit", "must_include:ATT"]
-    }
+    "rules": [
+      "must_include:LogisticRegression",
+      "must_include:NearestNeighbors",
+      "must_include:predict_proba",
+      "must_include:fit",
+      "must_include:ATT"
+    ]
   }
 }

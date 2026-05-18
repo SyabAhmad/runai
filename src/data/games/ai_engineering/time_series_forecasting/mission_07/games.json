@@ -1,22 +1,20 @@
 {
-  "mission_07": {
-    "title": "Multivariate Time Series Forecasting",
-    "id": "mission_07",
+  "title": "Multivariate Time Series Forecasting",
+  "id": "mission_07",
+  "type": "ai_code",
+  "xpReward": 90,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import numpy as np\n\n\ndef compute_cross_correlation(X, Y, max_lag):\n    \"\"\"Compute cross-correlation between two time series.\"\"\"\n    n = len(X)\n    mean_x, mean_y = np.mean(X), np.mean(Y)\n    std_x, std_y = np.std(X), np.std(Y)\n    \n    # TODO: Compute cross-correlation for each lag\n    ccf = np.zeros(2 * max_lag + 1)\n    for lag in range(-max_lag, max_lag + 1):\n        if lag >= 0:\n            ccf[lag + max_lag] = np.sum((X[:n-lag] - mean_x) * (Y[lag:] - mean_y)) / (n * std_x * std_y)\n        else:\n            ccf[lag + max_lag] = np.sum((X[-lag:] - mean_x) * (Y[:n+lag] - mean_y)) / (n * std_x * std_y)\n    \n    return ccf\n\n\ndef var_model(X, p=2):\n    \"\"\"Vector Autoregression model of order p.\"\"\"\n    n, k = X.shape\n    \n    # TODO: Build design matrix with lagged values\n    Y = X[p:]\n    Z = np.zeros((n - p, k * p + 1))\n    Z[:, 0] = 1  # Intercept\n    for lag in range(1, p + 1):\n        Z[:, (lag-1)*k + 1:lag*k + 1] = X[p-lag:n-lag]\n    \n    # TODO: Estimate coefficients using OLS\n    Beta = np.linalg.lstsq(Z, Y, rcond=None)[0]\n    \n    return Beta, Z, Y\n\n\ndef forecast_var(X, Beta, p, steps=10):\n    \"\"\"Generate forecasts from VAR model.\"\"\"\n    n, k = X.shape\n    forecasts = np.zeros((steps, k))\n    history = X[-p:].copy()\n    \n    # TODO: Generate recursive forecasts\n    for step in range(steps):\n        # Build input vector\n        z = np.zeros(k * p + 1)\n        z[0] = 1\n        for lag in range(1, p + 1):\n            z[(lag-1)*k + 1:lag*k + 1] = history[-lag]\n        \n        # Compute forecast\n        forecasts[step] = z @ Beta\n        history = np.vstack([history, forecasts[step:step+1]])\n    \n    return forecasts\n\n\ndef granger_causality(X, Y, max_lag=4):\n    \"\"\"Test if X Granger-causes Y.\"\"\"\n    n = len(Y)\n    \n    # TODO: Restricted model (Y only)\n    Y_lag = Y[max_lag:]\n    X_restricted = np.column_stack([np.ones(n - max_lag)] + [Y[max_lag-i:n-i] for i in range(1, max_lag+1)])\n    _, res_res, _, _ = np.linalg.lstsq(X_restricted, Y_lag, rcond=None)\n    rss_r = np.sum(res_res**2)\n    \n    # TODO: Unrestricted model (Y + X lags)\n    X_unrestricted = np.column_stack([X_restricted] + [X[max_lag-i:n-i] for i in range(1, max_lag+1)])\n    _, res_unres, _, _ = np.linalg.lstsq(X_unrestricted, Y_lag, rcond=None)\n    rss_u = np.sum(res_unres**2)\n    \n    # TODO: Compute F-statistic\n    df1 = max_lag\n    df2 = n - 2 * max_lag - 1\n    f_stat = ((rss_r - rss_u) / df1) / (rss_u / df2)\n    \n    return f_stat\n"
+  },
+  "validation": {
     "type": "ai_code",
-    "xpReward": 90,
-    "difficulty": "medium",
-    "initialState": {
-      "content": "import numpy as np\n\n\ndef compute_cross_correlation(X, Y, max_lag):\n    \"\"\"Compute cross-correlation between two time series.\"\"\"\n    n = len(X)\n    mean_x, mean_y = np.mean(X), np.mean(Y)\n    std_x, std_y = np.std(X), np.std(Y)\n    \n    # TODO: Compute cross-correlation for each lag\n    ccf = np.zeros(2 * max_lag + 1)\n    for lag in range(-max_lag, max_lag + 1):\n        if lag >= 0:\n            ccf[lag + max_lag] = np.sum((X[:n-lag] - mean_x) * (Y[lag:] - mean_y)) / (n * std_x * std_y)\n        else:\n            ccf[lag + max_lag] = np.sum((X[-lag:] - mean_x) * (Y[:n+lag] - mean_y)) / (n * std_x * std_y)\n    \n    return ccf\n\n\ndef var_model(X, p=2):\n    \"\"\"Vector Autoregression model of order p.\"\"\"\n    n, k = X.shape\n    \n    # TODO: Build design matrix with lagged values\n    Y = X[p:]\n    Z = np.zeros((n - p, k * p + 1))\n    Z[:, 0] = 1  # Intercept\n    for lag in range(1, p + 1):\n        Z[:, (lag-1)*k + 1:lag*k + 1] = X[p-lag:n-lag]\n    \n    # TODO: Estimate coefficients using OLS\n    Beta = np.linalg.lstsq(Z, Y, rcond=None)[0]\n    \n    return Beta, Z, Y\n\n\ndef forecast_var(X, Beta, p, steps=10):\n    \"\"\"Generate forecasts from VAR model.\"\"\"\n    n, k = X.shape\n    forecasts = np.zeros((steps, k))\n    history = X[-p:].copy()\n    \n    # TODO: Generate recursive forecasts\n    for step in range(steps):\n        # Build input vector\n        z = np.zeros(k * p + 1)\n        z[0] = 1\n        for lag in range(1, p + 1):\n            z[(lag-1)*k + 1:lag*k + 1] = history[-lag]\n        \n        # Compute forecast\n        forecasts[step] = z @ Beta\n        history = np.vstack([history, forecasts[step:step+1]])\n    \n    return forecasts\n\n\ndef granger_causality(X, Y, max_lag=4):\n    \"\"\"Test if X Granger-causes Y.\"\"\"\n    n = len(Y)\n    \n    # TODO: Restricted model (Y only)\n    Y_lag = Y[max_lag:]\n    X_restricted = np.column_stack([np.ones(n - max_lag)] + [Y[max_lag-i:n-i] for i in range(1, max_lag+1)])\n    _, res_res, _, _ = np.linalg.lstsq(X_restricted, Y_lag, rcond=None)\n    rss_r = np.sum(res_res**2)\n    \n    # TODO: Unrestricted model (Y + X lags)\n    X_unrestricted = np.column_stack([X_restricted] + [X[max_lag-i:n-i] for i in range(1, max_lag+1)])\n    _, res_unres, _, _ = np.linalg.lstsq(X_unrestricted, Y_lag, rcond=None)\n    rss_u = np.sum(res_unres**2)\n    \n    # TODO: Compute F-statistic\n    df1 = max_lag\n    df2 = n - 2 * max_lag - 1\n    f_stat = ((rss_r - rss_u) / df1) / (rss_u / df2)\n    \n    return f_stat\n"
-    },
-    "validation": {
-      "type": "ai_code",
-      "rules": [
-        "must_include:np.linalg.lstsq",
-        "must_include:np.column_stack",
-        "must_include:np.zeros",
-        "must_include:np.vstack",
-        "must_include:np.mean"
-      ]
-    }
+    "rules": [
+      "must_include:np.linalg.lstsq",
+      "must_include:np.column_stack",
+      "must_include:np.zeros",
+      "must_include:np.vstack",
+      "must_include:np.mean"
+    ]
   }
 }

@@ -12,5 +12,7 @@
     ]
   },
   "id": "mission_09",
-  "type": "sql_debug"
+  "type": "sql_debug",
+  "xpReward": 60,
+  "difficulty": "easy"
 }

@@ -5,7 +5,10 @@
   },
   "validation": {
     "type": "ai_code",
-    "rules": ["must_include:torch", "must_include:tensor"],
+    "rules": [
+      "must_include:torch",
+      "must_include:tensor"
+    ],
     "tests": [
       {
         "type": "must_match",
@@ -26,5 +29,6 @@
   },
   "id": "mission_01",
   "type": "ai_code",
-  "xpReward": 100
+  "xpReward": 100,
+  "difficulty": "hard"
 }

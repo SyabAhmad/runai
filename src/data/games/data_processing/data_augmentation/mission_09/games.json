@@ -1,0 +1,17 @@
+{
+    "id":  "mission_09",
+    "validation":  {
+                       "type":  "ai_code",
+                       "rules":  [
+                                     "must_include:def",
+                                     "must_include:return"
+                                 ]
+                   },
+    "xpReward":  100,
+    "type":  "ai_code",
+    "difficulty":  "hard",
+    "title":  "data augmentation - Mission 09",
+    "initialState":  {
+                         "content":  "# data augmentation Mission 09\n# TODO: Implement this mission\n\npass"
+                     }
+}

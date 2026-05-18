@@ -1,16 +1,20 @@
 {
-  "mission_05": {
-    "title": "Optimization-Based Meta-Learning with Reptile",
-    "id": "mission_05",
+  "title": "Optimization-Based Meta-Learning with Reptile",
+  "id": "mission_05",
+  "type": "ai_code",
+  "xpReward": 85,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import numpy as np\n\n# TODO: Implement Reptile inner loop (standard SGD on task)\ndef reptile_inner_loop(params, task_data, inner_lr, n_inner_steps):\n    \"\"\"Perform standard SGD on a single task.\"\"\"\n    # TODO: Copy initial params\n    # TODO: For each inner step: compute gradients, update\n    # TODO: Return adapted params\n    pass\n\n# TODO: Implement Reptile meta-update\ndef reptile_meta_update(initial_params, adapted_params, meta_lr):\n    \"\"\"Reptile meta-update: move toward adapted parameters.\n    theta <- theta + eps * (theta' - theta)\n    \"\"\"\n    # TODO: Compute direction: adapted - initial\n    # TODO: Update: initial + meta_lr * direction\n    pass\n\n# TODO: Implement full Reptile training loop\ndef reptile_train(n_iterations, n_tasks_per_iter, inner_lr, meta_lr, n_inner_steps):\n    \"\"\"Complete Reptile training loop.\"\"\"\n    # TODO: Initialize parameters\n    # TODO: For each iteration: sample tasks, inner loop, meta-update\n    pass\n\n# TODO: Compare Reptile and MAML updates\ndef compare_updates(maml_update, reptile_update):\n    \"\"\"Analyze the relationship between MAML and Reptile updates.\"\"\"\n    # TODO: Compute norms and cosine similarity\n    pass\n"
+  },
+  "validation": {
     "type": "ai_code",
-    "xpReward": 85,
-    "difficulty": "medium",
-    "initialState": {
-      "content": "import numpy as np\n\n# TODO: Implement Reptile inner loop (standard SGD on task)\ndef reptile_inner_loop(params, task_data, inner_lr, n_inner_steps):\n    \"\"\"Perform standard SGD on a single task.\"\"\"\n    # TODO: Copy initial params\n    # TODO: For each inner step: compute gradients, update\n    # TODO: Return adapted params\n    pass\n\n# TODO: Implement Reptile meta-update\ndef reptile_meta_update(initial_params, adapted_params, meta_lr):\n    \"\"\"Reptile meta-update: move toward adapted parameters.\n    theta <- theta + eps * (theta' - theta)\n    \"\"\"\n    # TODO: Compute direction: adapted - initial\n    # TODO: Update: initial + meta_lr * direction\n    pass\n\n# TODO: Implement full Reptile training loop\ndef reptile_train(n_iterations, n_tasks_per_iter, inner_lr, meta_lr, n_inner_steps):\n    \"\"\"Complete Reptile training loop.\"\"\"\n    # TODO: Initialize parameters\n    # TODO: For each iteration: sample tasks, inner loop, meta-update\n    pass\n\n# TODO: Compare Reptile and MAML updates\ndef compare_updates(maml_update, reptile_update):\n    \"\"\"Analyze the relationship between MAML and Reptile updates.\"\"\"\n    # TODO: Compute norms and cosine similarity\n    pass\n"
-    },
-    "validation": {
-      "type": "ai_code",
-      "rules": ["must_include:Reptile", "must_include:inner_loop", "must_include:meta_update", "must_include:SGD", "must_include:first_order"]
-    }
+    "rules": [
+      "must_include:Reptile",
+      "must_include:inner_loop",
+      "must_include:meta_update",
+      "must_include:SGD",
+      "must_include:first_order"
+    ]
   }
 }

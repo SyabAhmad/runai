@@ -11,5 +11,6 @@
   },
   "id": "mission_03",
   "type": "terminal",
-  "xpReward": 80
+  "xpReward": 80,
+  "difficulty": "medium"
 }

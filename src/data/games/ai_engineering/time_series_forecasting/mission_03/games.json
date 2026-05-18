@@ -1,22 +1,20 @@
 {
-  "mission_03": {
-    "title": "LSTM for Time Series Prediction",
-    "id": "mission_03",
+  "title": "LSTM for Time Series Prediction",
+  "id": "mission_03",
+  "type": "ai_code",
+  "xpReward": 70,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "import numpy as np\n\n\ndef sigmoid(x):\n    \"\"\"Sigmoid activation function.\"\"\"\n    return 1.0 / (1.0 + np.exp(-np.clip(x, -500, 500)))\n\n\ndef tanh(x):\n    \"\"\"Hyperbolic tangent activation.\"\"\"\n    return np.tanh(x)\n\n\nclass LSTMCell:\n    \"\"\"Single LSTM cell implementation.\"\"\"\n    \n    def __init__(self, input_dim, hidden_dim):\n        self.input_dim = input_dim\n        self.hidden_dim = hidden_dim\n        \n        # TODO: Initialize weight matrices for forget gate\n        self.W_f = np.random.randn(hidden_dim, input_dim) * 0.1\n        self.U_f = np.random.randn(hidden_dim, hidden_dim) * 0.1\n        self.b_f = np.zeros(hidden_dim)\n        \n        # TODO: Initialize weight matrices for input gate\n        self.W_i = np.random.randn(hidden_dim, input_dim) * 0.1\n        self.U_i = np.random.randn(hidden_dim, hidden_dim) * 0.1\n        self.b_i = np.zeros(hidden_dim)\n        \n        # TODO: Initialize weight matrices for cell candidate\n        self.W_c = np.random.randn(hidden_dim, input_dim) * 0.1\n        self.U_c = np.random.randn(hidden_dim, hidden_dim) * 0.1\n        self.b_c = np.zeros(hidden_dim)\n        \n        # TODO: Initialize weight matrices for output gate\n        self.W_o = np.random.randn(hidden_dim, input_dim) * 0.1\n        self.U_o = np.random.randn(hidden_dim, hidden_dim) * 0.1\n        self.b_o = np.zeros(hidden_dim)\n    \n    def forward(self, x, h_prev, c_prev):\n        \"\"\"Forward pass through LSTM cell.\"\"\"\n        # TODO: Compute forget gate: f = sigmoid(W_f @ x + U_f @ h + b_f)\n        f = sigmoid(self.W_f @ x + self.U_f @ h_prev + self.b_f)\n        \n        # TODO: Compute input gate: i = sigmoid(W_i @ x + U_i @ h + b_i)\n        i = sigmoid(self.W_i @ x + self.U_i @ h_prev + self.b_i)\n        \n        # TODO: Compute cell candidate: c_tilde = tanh(W_c @ x + U_c @ h + b_c)\n        c_tilde = tanh(self.W_c @ x + self.U_c @ h_prev + self.b_c)\n        \n        # TODO: Update cell state: c = f * c_prev + i * c_tilde\n        c = f * c_prev + i * c_tilde\n        \n        # TODO: Compute output gate: o = sigmoid(W_o @ x + U_o @ h + b_o)\n        o = sigmoid(self.W_o @ x + self.U_o @ h_prev + self.b_o)\n        \n        # TODO: Compute hidden state: h = o * tanh(c)\n        h = o * tanh(c)\n        \n        return h, c\n\n\ndef create_sequences(data, seq_length):\n    \"\"\"Create input sequences for LSTM training.\"\"\"\n    # TODO: Generate sliding window sequences\n    X, y = [], []\n    for i in range(len(data) - seq_length):\n        X.append(data[i:i + seq_length])\n        y.append(data[i + seq_length])\n    return np.array(X), np.array(y)\n\n\ndef predict_lstm(cell, sequence, n_steps=10):\n    \"\"\"Generate multi-step predictions using LSTM cell.\"\"\"\n    h = np.zeros(cell.hidden_dim)\n    c = np.zeros(cell.hidden_dim)\n    predictions = []\n    \n    # TODO: Process input sequence\n    for x in sequence:\n        h, c = cell.forward(x, h, c)\n    \n    # TODO: Generate future predictions\n    current_input = h\n    for _ in range(n_steps):\n        h, c = cell.forward(current_input, h, c)\n        pred = h[0]  # Use first hidden unit as prediction\n        predictions.append(pred)\n        current_input = np.array([pred] + [0] * (cell.input_dim - 1))\n    \n    return np.array(predictions)\n"
+  },
+  "validation": {
     "type": "ai_code",
-    "xpReward": 70,
-    "difficulty": "easy",
-    "initialState": {
-      "content": "import numpy as np\n\n\ndef sigmoid(x):\n    \"\"\"Sigmoid activation function.\"\"\"\n    return 1.0 / (1.0 + np.exp(-np.clip(x, -500, 500)))\n\n\ndef tanh(x):\n    \"\"\"Hyperbolic tangent activation.\"\"\"\n    return np.tanh(x)\n\n\nclass LSTMCell:\n    \"\"\"Single LSTM cell implementation.\"\"\"\n    \n    def __init__(self, input_dim, hidden_dim):\n        self.input_dim = input_dim\n        self.hidden_dim = hidden_dim\n        \n        # TODO: Initialize weight matrices for forget gate\n        self.W_f = np.random.randn(hidden_dim, input_dim) * 0.1\n        self.U_f = np.random.randn(hidden_dim, hidden_dim) * 0.1\n        self.b_f = np.zeros(hidden_dim)\n        \n        # TODO: Initialize weight matrices for input gate\n        self.W_i = np.random.randn(hidden_dim, input_dim) * 0.1\n        self.U_i = np.random.randn(hidden_dim, hidden_dim) * 0.1\n        self.b_i = np.zeros(hidden_dim)\n        \n        # TODO: Initialize weight matrices for cell candidate\n        self.W_c = np.random.randn(hidden_dim, input_dim) * 0.1\n        self.U_c = np.random.randn(hidden_dim, hidden_dim) * 0.1\n        self.b_c = np.zeros(hidden_dim)\n        \n        # TODO: Initialize weight matrices for output gate\n        self.W_o = np.random.randn(hidden_dim, input_dim) * 0.1\n        self.U_o = np.random.randn(hidden_dim, hidden_dim) * 0.1\n        self.b_o = np.zeros(hidden_dim)\n    \n    def forward(self, x, h_prev, c_prev):\n        \"\"\"Forward pass through LSTM cell.\"\"\"\n        # TODO: Compute forget gate: f = sigmoid(W_f @ x + U_f @ h + b_f)\n        f = sigmoid(self.W_f @ x + self.U_f @ h_prev + self.b_f)\n        \n        # TODO: Compute input gate: i = sigmoid(W_i @ x + U_i @ h + b_i)\n        i = sigmoid(self.W_i @ x + self.U_i @ h_prev + self.b_i)\n        \n        # TODO: Compute cell candidate: c_tilde = tanh(W_c @ x + U_c @ h + b_c)\n        c_tilde = tanh(self.W_c @ x + self.U_c @ h_prev + self.b_c)\n        \n        # TODO: Update cell state: c = f * c_prev + i * c_tilde\n        c = f * c_prev + i * c_tilde\n        \n        # TODO: Compute output gate: o = sigmoid(W_o @ x + U_o @ h + b_o)\n        o = sigmoid(self.W_o @ x + self.U_o @ h_prev + self.b_o)\n        \n        # TODO: Compute hidden state: h = o * tanh(c)\n        h = o * tanh(c)\n        \n        return h, c\n\n\ndef create_sequences(data, seq_length):\n    \"\"\"Create input sequences for LSTM training.\"\"\"\n    # TODO: Generate sliding window sequences\n    X, y = [], []\n    for i in range(len(data) - seq_length):\n        X.append(data[i:i + seq_length])\n        y.append(data[i + seq_length])\n    return np.array(X), np.array(y)\n\n\ndef predict_lstm(cell, sequence, n_steps=10):\n    \"\"\"Generate multi-step predictions using LSTM cell.\"\"\"\n    h = np.zeros(cell.hidden_dim)\n    c = np.zeros(cell.hidden_dim)\n    predictions = []\n    \n    # TODO: Process input sequence\n    for x in sequence:\n        h, c = cell.forward(x, h, c)\n    \n    # TODO: Generate future predictions\n    current_input = h\n    for _ in range(n_steps):\n        h, c = cell.forward(current_input, h, c)\n        pred = h[0]  # Use first hidden unit as prediction\n        predictions.append(pred)\n        current_input = np.array([pred] + [0] * (cell.input_dim - 1))\n    \n    return np.array(predictions)\n"
-    },
-    "validation": {
-      "type": "ai_code",
-      "rules": [
-        "must_include:sigmoid",
-        "must_include:np.tanh",
-        "must_include:np.zeros",
-        "must_include:np.random.randn",
-        "must_include:np.exp"
-      ]
-    }
+    "rules": [
+      "must_include:sigmoid",
+      "must_include:np.tanh",
+      "must_include:np.zeros",
+      "must_include:np.random.randn",
+      "must_include:np.exp"
+    ]
   }
 }

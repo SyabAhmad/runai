@@ -1,16 +1,20 @@
 {
-  "mission_10": {
-    "title": "Meta-Learning for Natural Language Processing",
-    "id": "mission_10",
+  "title": "Meta-Learning for Natural Language Processing",
+  "id": "mission_10",
+  "type": "ai_code",
+  "xpReward": 120,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "import numpy as np\nfrom collections import Counter\n\n# TODO: Implement few-shot text classification with prototypical networks\ndef few_shot_text_classification(support_texts, support_labels, query_texts, word_embeddings, n_way):\n    \"\"\"Classify text using prototypical networks with word embeddings.\n    \n    Document embedding = mean of word embeddings.\n    \"\"\"\n    # TODO: Convert texts to document embeddings (mean of word embeddings)\n    # TODO: Compute class prototypes\n    # TODO: Classify queries by distance to prototypes\n    pass\n\n# TODO: Implement prompt-based few-shot learning\ndef prompt_based_classification(query_text, demonstrations, label_space):\n    \"\"\"Few-shot classification using in-context learning with prompts.\n    \n    Format: [demo1, demo2, ..., query] -> prediction\n    \"\"\"\n    # TODO: Format demonstrations as prompt\n    # TODO: Compute similarity between query and each label\n    # TODO: Return predicted label\n    pass\n\n# TODO: Implement cross-lingual few-shot transfer\ndef cross_lingual_transfer(source_embeddings, source_labels, target_embeddings, word_translation_dict):\n    \"\"\"Transfer few-shot classifier across languages using word translation.\"\"\"\n    # TODO: Translate target word embeddings to source space\n    # TODO: Apply source classifier to translated embeddings\n    pass\n\n# TODO: Implement meta-learning for NLP task adaptation\ndef adapt_language_model(base_params, support_texts, support_labels, inner_lr, n_steps):\n    \"\"\"Adapt a language model to a new NLP task with few examples.\"\"\"\n    # TODO: Compute task-specific gradients\n    # TODO: Update model parameters\n    # TODO: Return adapted parameters\n    pass\n"
+  },
+  "validation": {
     "type": "ai_code",
-    "xpReward": 120,
-    "difficulty": "hard",
-    "initialState": {
-      "content": "import numpy as np\nfrom collections import Counter\n\n# TODO: Implement few-shot text classification with prototypical networks\ndef few_shot_text_classification(support_texts, support_labels, query_texts, word_embeddings, n_way):\n    \"\"\"Classify text using prototypical networks with word embeddings.\n    \n    Document embedding = mean of word embeddings.\n    \"\"\"\n    # TODO: Convert texts to document embeddings (mean of word embeddings)\n    # TODO: Compute class prototypes\n    # TODO: Classify queries by distance to prototypes\n    pass\n\n# TODO: Implement prompt-based few-shot learning\ndef prompt_based_classification(query_text, demonstrations, label_space):\n    \"\"\"Few-shot classification using in-context learning with prompts.\n    \n    Format: [demo1, demo2, ..., query] -> prediction\n    \"\"\"\n    # TODO: Format demonstrations as prompt\n    # TODO: Compute similarity between query and each label\n    # TODO: Return predicted label\n    pass\n\n# TODO: Implement cross-lingual few-shot transfer\ndef cross_lingual_transfer(source_embeddings, source_labels, target_embeddings, word_translation_dict):\n    \"\"\"Transfer few-shot classifier across languages using word translation.\"\"\"\n    # TODO: Translate target word embeddings to source space\n    # TODO: Apply source classifier to translated embeddings\n    pass\n\n# TODO: Implement meta-learning for NLP task adaptation\ndef adapt_language_model(base_params, support_texts, support_labels, inner_lr, n_steps):\n    \"\"\"Adapt a language model to a new NLP task with few examples.\"\"\"\n    # TODO: Compute task-specific gradients\n    # TODO: Update model parameters\n    # TODO: Return adapted parameters\n    pass\n"
-    },
-    "validation": {
-      "type": "ai_code",
-      "rules": ["must_include:word_embeddings", "must_include:prototype", "must_include:prompt", "must_include:cross_lingual", "must_include:adaptation"]
-    }
+    "rules": [
+      "must_include:word_embeddings",
+      "must_include:prototype",
+      "must_include:prompt",
+      "must_include:cross_lingual",
+      "must_include:adaptation"
+    ]
   }
 }

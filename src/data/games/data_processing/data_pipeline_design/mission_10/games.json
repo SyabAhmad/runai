@@ -1,0 +1,17 @@
+{
+    "id":  "mission_10",
+    "validation":  {
+                       "type":  "ai_code",
+                       "rules":  [
+                                     "must_include:def",
+                                     "must_include:return"
+                                 ]
+                   },
+    "xpReward":  100,
+    "type":  "ai_code",
+    "difficulty":  "hard",
+    "title":  "data pipeline design - Mission 10",
+    "initialState":  {
+                         "content":  "# data pipeline design Mission 10\n# TODO: Implement this mission\n\npass"
+                     }
+}

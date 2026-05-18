@@ -1,16 +1,20 @@
 {
-  "mission_07": {
-    "title": "Task Embeddings and Task Representations",
-    "id": "mission_07",
+  "title": "Task Embeddings and Task Representations",
+  "id": "mission_07",
+  "type": "ai_code",
+  "xpReward": 90,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import numpy as np\nfrom sklearn.decomposition import PCA\n\n# TODO: Implement task embedding from support set statistics\ndef compute_task_embedding(support_x, support_y, n_classes):\n    \"\"\"Compute a task embedding from support set statistics.\n    \n    Uses class means, variances, and overall statistics.\n    \"\"\"\n    # TODO: Compute per-class means\n    # TODO: Compute per-class variances\n    # TODO: Compute global statistics\n    # TODO: Concatenate into task embedding vector\n    pass\n\n# TODO: Implement task similarity from embeddings\ndef task_similarity(embedding1, embedding2, metric='cosine'):\n    \"\"\"Compute similarity between two task embeddings.\"\"\"\n    # TODO: Implement cosine similarity\n    # TODO: Implement Euclidean-based similarity\n    pass\n\n# TODO: Implement task clustering\ndef cluster_tasks(task_embeddings, n_clusters=5):\n    \"\"\"Cluster tasks based on their embeddings.\"\"\"\n    # TODO: Use k-means or similar clustering\n    # TODO: Return cluster assignments\n    pass\n\n# TODO: Implement task-aware model selection\ndef select_model_for_task(task_embedding, model_database):\n    \"\"\"Select the best model from a database based on task embedding.\"\"\"\n    # TODO: Find most similar tasks in database\n    # TODO: Return best performing model for similar tasks\n    pass\n"
+  },
+  "validation": {
     "type": "ai_code",
-    "xpReward": 90,
-    "difficulty": "medium",
-    "initialState": {
-      "content": "import numpy as np\nfrom sklearn.decomposition import PCA\n\n# TODO: Implement task embedding from support set statistics\ndef compute_task_embedding(support_x, support_y, n_classes):\n    \"\"\"Compute a task embedding from support set statistics.\n    \n    Uses class means, variances, and overall statistics.\n    \"\"\"\n    # TODO: Compute per-class means\n    # TODO: Compute per-class variances\n    # TODO: Compute global statistics\n    # TODO: Concatenate into task embedding vector\n    pass\n\n# TODO: Implement task similarity from embeddings\ndef task_similarity(embedding1, embedding2, metric='cosine'):\n    \"\"\"Compute similarity between two task embeddings.\"\"\"\n    # TODO: Implement cosine similarity\n    # TODO: Implement Euclidean-based similarity\n    pass\n\n# TODO: Implement task clustering\ndef cluster_tasks(task_embeddings, n_clusters=5):\n    \"\"\"Cluster tasks based on their embeddings.\"\"\"\n    # TODO: Use k-means or similar clustering\n    # TODO: Return cluster assignments\n    pass\n\n# TODO: Implement task-aware model selection\ndef select_model_for_task(task_embedding, model_database):\n    \"\"\"Select the best model from a database based on task embedding.\"\"\"\n    # TODO: Find most similar tasks in database\n    # TODO: Return best performing model for similar tasks\n    pass\n"
-    },
-    "validation": {
-      "type": "ai_code",
-      "rules": ["must_include:task_embedding", "must_include:cosine_similarity", "must_include:clustering", "must_include:statistics", "must_include:PCA"]
-    }
+    "rules": [
+      "must_include:task_embedding",
+      "must_include:cosine_similarity",
+      "must_include:clustering",
+      "must_include:statistics",
+      "must_include:PCA"
+    ]
   }
 }

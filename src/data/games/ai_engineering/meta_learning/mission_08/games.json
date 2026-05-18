@@ -1,16 +1,20 @@
 {
-  "mission_08": {
-    "title": "Cross-Validation Strategies for Meta-Learning",
-    "id": "mission_08",
+  "title": "Cross-Validation Strategies for Meta-Learning",
+  "id": "mission_08",
+  "type": "ai_code",
+  "xpReward": 100,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "import numpy as np\n\n# TODO: Implement leave-one-task-out cross-validation\ndef leave_one_task_out_cv(tasks, model_fn, eval_fn):\n    \"\"\"Leave-one-task-out cross-validation for meta-learning.\n    \n    Train on all tasks except one, evaluate on the held-out task.\n    \"\"\"\n    # TODO: For each task as held-out:\n    #   - Train model on remaining tasks\n    #   - Evaluate on held-out task\n    # TODO: Return per-task scores and mean\n    pass\n\n# TODO: Implement task-stratified k-fold CV\ndef task_stratified_kfold(tasks, labels, k=5):\n    \"\"\"Stratified k-fold cross-validation across tasks.\n    \n    Ensures each fold has similar distribution of task types.\n    \"\"\"\n    # TODO: Group tasks by label/type\n    # TODO: Split each group into k folds\n    # TODO: Return train/test splits\n    pass\n\n# TODO: Implement nested cross-validation for hyperparameter tuning\ndef nested_cv(tasks, inner_k=3, outer_k=5):\n    \"\"\"Nested CV: inner loop for hyperparameter selection, outer for evaluation.\"\"\"\n    # TODO: Outer loop: split into train/eval tasks\n    # TODO: Inner loop: further split train for hyperparameter tuning\n    # TODO: Return best hyperparameters and evaluation scores\n    pass\n\n# TODO: Implement meta-learning specific CV with task augmentation\ndef augmented_task_cv(tasks, augmentation_fn, n_augmented=5):\n    \"\"\"CV with task augmentation for more robust evaluation.\"\"\"\n    # TODO: Generate augmented versions of each task\n    # TODO: Perform CV on original + augmented tasks\n    pass\n"
+  },
+  "validation": {
     "type": "ai_code",
-    "xpReward": 100,
-    "difficulty": "hard",
-    "initialState": {
-      "content": "import numpy as np\n\n# TODO: Implement leave-one-task-out cross-validation\ndef leave_one_task_out_cv(tasks, model_fn, eval_fn):\n    \"\"\"Leave-one-task-out cross-validation for meta-learning.\n    \n    Train on all tasks except one, evaluate on the held-out task.\n    \"\"\"\n    # TODO: For each task as held-out:\n    #   - Train model on remaining tasks\n    #   - Evaluate on held-out task\n    # TODO: Return per-task scores and mean\n    pass\n\n# TODO: Implement task-stratified k-fold CV\ndef task_stratified_kfold(tasks, labels, k=5):\n    \"\"\"Stratified k-fold cross-validation across tasks.\n    \n    Ensures each fold has similar distribution of task types.\n    \"\"\"\n    # TODO: Group tasks by label/type\n    # TODO: Split each group into k folds\n    # TODO: Return train/test splits\n    pass\n\n# TODO: Implement nested cross-validation for hyperparameter tuning\ndef nested_cv(tasks, inner_k=3, outer_k=5):\n    \"\"\"Nested CV: inner loop for hyperparameter selection, outer for evaluation.\"\"\"\n    # TODO: Outer loop: split into train/eval tasks\n    # TODO: Inner loop: further split train for hyperparameter tuning\n    # TODO: Return best hyperparameters and evaluation scores\n    pass\n\n# TODO: Implement meta-learning specific CV with task augmentation\ndef augmented_task_cv(tasks, augmentation_fn, n_augmented=5):\n    \"\"\"CV with task augmentation for more robust evaluation.\"\"\"\n    # TODO: Generate augmented versions of each task\n    # TODO: Perform CV on original + augmented tasks\n    pass\n"
-    },
-    "validation": {
-      "type": "ai_code",
-      "rules": ["must_include:cross_validation", "must_include:leave_one_task_out", "must_include:kfold", "must_include:nested", "must_include:stratified"]
-    }
+    "rules": [
+      "must_include:cross_validation",
+      "must_include:leave_one_task_out",
+      "must_include:kfold",
+      "must_include:nested",
+      "must_include:stratified"
+    ]
   }
 }

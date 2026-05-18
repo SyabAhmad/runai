@@ -52,5 +52,6 @@
   },
   "id": "mission_09",
   "type": "ai_code",
-  "xpReward": 200
+  "xpReward": 200,
+  "difficulty": "hard"
 }

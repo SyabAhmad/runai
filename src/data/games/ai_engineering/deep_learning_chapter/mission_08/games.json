@@ -5,7 +5,10 @@
   },
   "validation": {
     "type": "ai_code",
-    "rules": ["must_include:StepLR", "must_include:scheduler"],
+    "rules": [
+      "must_include:StepLR",
+      "must_include:scheduler"
+    ],
     "tests": [
       {
         "type": "must_match",
@@ -36,5 +39,6 @@
   },
   "id": "mission_08",
   "type": "ai_code",
-  "xpReward": 200
+  "xpReward": 200,
+  "difficulty": "hard"
 }

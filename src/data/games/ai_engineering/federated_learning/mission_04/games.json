@@ -1,22 +1,20 @@
 {
-  "mission_04": {
-    "title": "Personalized Federated Learning",
-    "id": "mission_04",
+  "title": "Personalized Federated Learning",
+  "id": "mission_04",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import numpy as np\n\n\nclass PersonalizedFL:\n    \"\"\"Personalized FL with local fine-tuning and model interpolation.\n    \n    TODO: Implement pFedMe-style personalized model\n    TODO: Regularize local model toward global model\n    TODO: Implement model interpolation for personalization\n    \"\"\"\n    \n    def __init__(self, global_weights, lam=0.1, alpha=0.5):\n        self.global_weights = global_weights\n        self.lam = lam  # Regularization strength\n        self.alpha = alpha  # Interpolation parameter\n    \n    def local_personalized_train(self, global_w, local_data, epochs, lr):\n        \"\"\"Train with regularization toward global model.\n        \n        TODO: Initialize local model from global\n        TODO: For each epoch, compute loss + regularization\n        TODO: Regularization: lam * ||local_w - global_w||^2\n        TODO: Update with combined gradient\n        \"\"\"\n        local_w = {k: v.copy() for k, v in global_w.items()}\n        \n        for epoch in range(epochs):\n            X, y = local_data\n            # TODO: Forward pass\n            # TODO: Compute data loss\n            # TODO: Compute regularization loss\n            # TODO: Combined gradient and update\n            pass\n        \n        return local_w\n    \n    def interpolate_models(self, global_w, local_w):\n        \"\"\"Create personalized model via interpolation.\n    \n        TODO: personalized_w = alpha * local_w + (1-alpha) * global_w\n        \"\"\"\n        personalized_w = {}\n        # TODO: Interpolate each weight matrix\n        return personalized_w\n    \n    def personalized_aggregate(self, client_models, client_weights):\n        \"\"\"Aggregate with personalization awareness.\n        \n        TODO: Compute global model as weighted average\n        TODO: Each client keeps their personalized model\n        \"\"\"\n        global_w = {}\n        total = sum(client_weights)\n        for key in client_models[0].keys():\n            global_w[key] = sum(\n                w * model[key] for w, model in zip(client_weights, client_models)\n            ) / total\n        return global_w\n"
+  },
+  "validation": {
     "type": "ai_code",
-    "xpReward": 80,
-    "difficulty": "medium",
-    "initialState": {
-      "content": "import numpy as np\n\n\nclass PersonalizedFL:\n    \"\"\"Personalized FL with local fine-tuning and model interpolation.\n    \n    TODO: Implement pFedMe-style personalized model\n    TODO: Regularize local model toward global model\n    TODO: Implement model interpolation for personalization\n    \"\"\"\n    \n    def __init__(self, global_weights, lam=0.1, alpha=0.5):\n        self.global_weights = global_weights\n        self.lam = lam  # Regularization strength\n        self.alpha = alpha  # Interpolation parameter\n    \n    def local_personalized_train(self, global_w, local_data, epochs, lr):\n        \"\"\"Train with regularization toward global model.\n        \n        TODO: Initialize local model from global\n        TODO: For each epoch, compute loss + regularization\n        TODO: Regularization: lam * ||local_w - global_w||^2\n        TODO: Update with combined gradient\n        \"\"\"\n        local_w = {k: v.copy() for k, v in global_w.items()}\n        \n        for epoch in range(epochs):\n            X, y = local_data\n            # TODO: Forward pass\n            # TODO: Compute data loss\n            # TODO: Compute regularization loss\n            # TODO: Combined gradient and update\n            pass\n        \n        return local_w\n    \n    def interpolate_models(self, global_w, local_w):\n        \"\"\"Create personalized model via interpolation.\n    \n        TODO: personalized_w = alpha * local_w + (1-alpha) * global_w\n        \"\"\"\n        personalized_w = {}\n        # TODO: Interpolate each weight matrix\n        return personalized_w\n    \n    def personalized_aggregate(self, client_models, client_weights):\n        \"\"\"Aggregate with personalization awareness.\n        \n        TODO: Compute global model as weighted average\n        TODO: Each client keeps their personalized model\n        \"\"\"\n        global_w = {}\n        total = sum(client_weights)\n        for key in client_models[0].keys():\n            global_w[key] = sum(\n                w * model[key] for w, model in zip(client_weights, client_models)\n            ) / total\n        return global_w\n"
-    },
-    "validation": {
-      "type": "ai_code",
-      "rules": [
-        "must_include:regularization",
-        "must_include:interpolation",
-        "must_include:personalized",
-        "must_include:local model",
-        "must_include:global model"
-      ]
-    }
+    "rules": [
+      "must_include:regularization",
+      "must_include:interpolation",
+      "must_include:personalized",
+      "must_include:local model",
+      "must_include:global model"
+    ]
   }
 }

@@ -1,0 +1,17 @@
+{
+    "id":  "mission_05",
+    "validation":  {
+                       "type":  "ai_code",
+                       "rules":  [
+                                     "must_include:def",
+                                     "must_include:return"
+                                 ]
+                   },
+    "xpReward":  80,
+    "type":  "ai_code",
+    "difficulty":  "medium",
+    "title":  "database design - Mission 05",
+    "initialState":  {
+                         "content":  "# database design Mission 05\n# TODO: Implement this mission\n\npass"
+                     }
+}

@@ -10,5 +10,7 @@
     ]
   },
   "id": "mission_08",
-  "type": "ai_code"
+  "type": "ai_code",
+  "xpReward": 60,
+  "difficulty": "easy"
 }

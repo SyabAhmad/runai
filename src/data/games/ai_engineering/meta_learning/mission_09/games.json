@@ -1,16 +1,20 @@
 {
-  "mission_09": {
-    "title": "Online Meta-Learning and Continual Adaptation",
-    "id": "mission_09",
+  "title": "Online Meta-Learning and Continual Adaptation",
+  "id": "mission_09",
+  "type": "ai_code",
+  "xpReward": 110,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "import numpy as np\n\n# TODO: Implement online meta-learning update\ndef online_meta_update(params, task_data, inner_lr, meta_lr, n_inner_steps=1):\n    \"\"\"Update meta-parameters after observing a single task.\n    \n    In online meta-learning, tasks arrive sequentially and the model\n    must adapt and update continuously.\n    \"\"\"\n    # TODO: Inner loop adaptation\n    # TODO: Compute meta-gradient\n    # TODO: Update meta-parameters\n    pass\n\n# TODO: Implement regret tracking\ndef compute_regret(cumulative_loss, best_fixed_model_loss, t):\n    \"\"\"Compute cumulative and average regret.\n    \n    Regret measures how much worse the online algorithm performs\n    compared to the best fixed model in hindsight.\n    \"\"\"\n    # TODO: Compute cumulative regret\n    # TODO: Compute average regret\n    pass\n\n# TODO: Implement task-aware learning rate scheduling\ndef adaptive_learning_rate(base_lr, task_history, decay=0.99):\n    \"\"\"Adjust learning rate based on task performance history.\"\"\"\n    # TODO: Track recent task performance\n    # TODO: Increase LR if performance is poor, decrease if good\n    pass\n\n# TODO: Implement experience replay for online meta-learning\ndef experience_replay(buffer, task_data, buffer_size=100):\n    \"\"\"Maintain and sample from a buffer of past tasks.\"\"\"\n    # TODO: Add new task to buffer\n    # TODO: Sample tasks for replay\n    # TODO: Return updated buffer and sampled tasks\n    pass\n"
+  },
+  "validation": {
     "type": "ai_code",
-    "xpReward": 110,
-    "difficulty": "hard",
-    "initialState": {
-      "content": "import numpy as np\n\n# TODO: Implement online meta-learning update\ndef online_meta_update(params, task_data, inner_lr, meta_lr, n_inner_steps=1):\n    \"\"\"Update meta-parameters after observing a single task.\n    \n    In online meta-learning, tasks arrive sequentially and the model\n    must adapt and update continuously.\n    \"\"\"\n    # TODO: Inner loop adaptation\n    # TODO: Compute meta-gradient\n    # TODO: Update meta-parameters\n    pass\n\n# TODO: Implement regret tracking\ndef compute_regret(cumulative_loss, best_fixed_model_loss, t):\n    \"\"\"Compute cumulative and average regret.\n    \n    Regret measures how much worse the online algorithm performs\n    compared to the best fixed model in hindsight.\n    \"\"\"\n    # TODO: Compute cumulative regret\n    # TODO: Compute average regret\n    pass\n\n# TODO: Implement task-aware learning rate scheduling\ndef adaptive_learning_rate(base_lr, task_history, decay=0.99):\n    \"\"\"Adjust learning rate based on task performance history.\"\"\"\n    # TODO: Track recent task performance\n    # TODO: Increase LR if performance is poor, decrease if good\n    pass\n\n# TODO: Implement experience replay for online meta-learning\ndef experience_replay(buffer, task_data, buffer_size=100):\n    \"\"\"Maintain and sample from a buffer of past tasks.\"\"\"\n    # TODO: Add new task to buffer\n    # TODO: Sample tasks for replay\n    # TODO: Return updated buffer and sampled tasks\n    pass\n"
-    },
-    "validation": {
-      "type": "ai_code",
-      "rules": ["must_include:online_meta", "must_include:regret", "must_include:adaptive_learning_rate", "must_include:experience_replay", "must_include:buffer"]
-    }
+    "rules": [
+      "must_include:online_meta",
+      "must_include:regret",
+      "must_include:adaptive_learning_rate",
+      "must_include:experience_replay",
+      "must_include:buffer"
+    ]
   }
 }

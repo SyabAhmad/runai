@@ -5,7 +5,11 @@
   },
   "validation": {
     "type": "ai_code",
-    "rules": ["must_include:joblib", "must_include:dump", "must_include:load"],
+    "rules": [
+      "must_include:joblib",
+      "must_include:dump",
+      "must_include:load"
+    ],
     "tests": [
       {
         "type": "must_match",
@@ -31,5 +35,6 @@
   },
   "id": "mission_10",
   "type": "ai_code",
-  "xpReward": 200
+  "xpReward": 200,
+  "difficulty": "hard"
 }

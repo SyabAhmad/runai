@@ -1,22 +1,20 @@
 {
-  "mission_03": {
-    "title": "Differential Privacy in FL",
-    "id": "mission_03",
+  "title": "Differential Privacy in FL",
+  "id": "mission_03",
+  "type": "ai_code",
+  "xpReward": 70,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "import numpy as np\n\n\nclass DPFedAvg:\n    \"\"\"Federated learning with differential privacy guarantees.\n    \n    TODO: Clip client updates to bound sensitivity\n    TODO: Add calibrated Gaussian noise to aggregated update\n    TODO: Track privacy budget using moments accountant\n    \"\"\"\n    \n    def __init__(self, clip_norm, noise_multiplier, num_clients):\n        self.clip_norm = clip_norm\n        self.noise_multiplier = noise_multiplier\n        self.num_clients = num_clients\n        self.privacy_budget = 0.0\n    \n    def clip_update(self, client_update, global_weights):\n        \"\"\"Clip client update to bound sensitivity.\n        \n        TODO: Compute update delta = client_update - global_weights\n        TODO: Compute L2 norm of delta\n        TODO: If norm > clip_norm, scale delta down\n        TODO: Return clipped update = global_weights + clipped_delta\n        \"\"\"\n        # TODO: Compute update delta\n        delta = None\n        \n        # TODO: Compute L2 norm\n        norm = None\n        \n        # TODO: Clip if necessary\n        clipped_delta = None\n        \n        return global_weights + clipped_delta\n    \n    def add_noise(self, aggregated_update):\n        \"\"\"Add calibrated Gaussian noise.\n        \n        TODO: noise ~ N(0, sigma^2 * clip_norm^2)\n        TODO: noisy_update = aggregated_update + noise\n        \"\"\"\n        # TODO: Compute noise scale\n        sigma = self.noise_multiplier * self.clip_norm\n        \n        # TODO: Sample noise\n        noise = None\n        \n        return aggregated_update + noise\n    \n    def dp_aggregate(self, client_updates, global_weights):\n        \"\"\"DP-FedAvg aggregation.\n        \n        TODO: Clip each client update\n        TODO: Average clipped updates\n        TODO: Add calibrated noise\n        \"\"\"\n        # TODO: Clip all updates\n        clipped = []\n        \n        # TODO: Average\n        avg = None\n        \n        # TODO: Add noise\n        noisy_avg = None\n        \n        return noisy_avg\n"
+  },
+  "validation": {
     "type": "ai_code",
-    "xpReward": 70,
-    "difficulty": "easy",
-    "initialState": {
-      "content": "import numpy as np\n\n\nclass DPFedAvg:\n    \"\"\"Federated learning with differential privacy guarantees.\n    \n    TODO: Clip client updates to bound sensitivity\n    TODO: Add calibrated Gaussian noise to aggregated update\n    TODO: Track privacy budget using moments accountant\n    \"\"\"\n    \n    def __init__(self, clip_norm, noise_multiplier, num_clients):\n        self.clip_norm = clip_norm\n        self.noise_multiplier = noise_multiplier\n        self.num_clients = num_clients\n        self.privacy_budget = 0.0\n    \n    def clip_update(self, client_update, global_weights):\n        \"\"\"Clip client update to bound sensitivity.\n        \n        TODO: Compute update delta = client_update - global_weights\n        TODO: Compute L2 norm of delta\n        TODO: If norm > clip_norm, scale delta down\n        TODO: Return clipped update = global_weights + clipped_delta\n        \"\"\"\n        # TODO: Compute update delta\n        delta = None\n        \n        # TODO: Compute L2 norm\n        norm = None\n        \n        # TODO: Clip if necessary\n        clipped_delta = None\n        \n        return global_weights + clipped_delta\n    \n    def add_noise(self, aggregated_update):\n        \"\"\"Add calibrated Gaussian noise.\n        \n        TODO: noise ~ N(0, sigma^2 * clip_norm^2)\n        TODO: noisy_update = aggregated_update + noise\n        \"\"\"\n        # TODO: Compute noise scale\n        sigma = self.noise_multiplier * self.clip_norm\n        \n        # TODO: Sample noise\n        noise = None\n        \n        return aggregated_update + noise\n    \n    def dp_aggregate(self, client_updates, global_weights):\n        \"\"\"DP-FedAvg aggregation.\n        \n        TODO: Clip each client update\n        TODO: Average clipped updates\n        TODO: Add calibrated noise\n        \"\"\"\n        # TODO: Clip all updates\n        clipped = []\n        \n        # TODO: Average\n        avg = None\n        \n        # TODO: Add noise\n        noisy_avg = None\n        \n        return noisy_avg\n"
-    },
-    "validation": {
-      "type": "ai_code",
-      "rules": [
-        "must_include:clip",
-        "must_include:Gaussian noise",
-        "must_include:sensitivity",
-        "must_include:privacy budget",
-        "must_include:dp"
-      ]
-    }
+    "rules": [
+      "must_include:clip",
+      "must_include:Gaussian noise",
+      "must_include:sensitivity",
+      "must_include:privacy budget",
+      "must_include:dp"
+    ]
   }
 }

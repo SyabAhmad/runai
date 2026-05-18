@@ -1,22 +1,20 @@
 {
-  "mission_01": {
-    "title": "Introduction to Graph Convolutions",
-    "id": "mission_01",
+  "title": "Introduction to Graph Convolutions",
+  "id": "mission_01",
+  "type": "ai_code",
+  "xpReward": 60,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "import numpy as np\n\n\ndef compute_adjacency_norm(edge_index, num_nodes):\n    \"\"\"Compute normalized adjacency matrix for GCN.\n    \n    TODO: Create adjacency matrix from edge_index\n    TODO: Add self-loops to the adjacency matrix\n    TODO: Compute degree matrix and normalize: D^(-1/2) * A * D^(-1/2)\n    TODO: Return the normalized adjacency matrix\n    \"\"\"\n    # Step 1: Build adjacency matrix from edge list\n    # edge_index is shape (2, num_edges) with [source, target] pairs\n    A = np.zeros((num_nodes, num_nodes))\n    # TODO: Fill in adjacency matrix from edge_index\n    \n    # Step 2: Add self-loops\n    # TODO: Set diagonal elements to 1\n    \n    # Step 3: Compute degree matrix\n    # TODO: Calculate degree for each node\n    \n    # Step 4: Normalize\n    # TODO: Compute D^(-1/2) * A * D^(-1/2)\n    \n    return A\n\n\ndef gcn_layer(A_norm, X, W):\n    \"\"\"Single GCN layer forward pass.\n    \n    TODO: Implement H = sigma(A_norm @ X @ W)\n    TODO: Apply ReLU activation\n    \"\"\"\n    # TODO: Matrix multiplication: A_norm @ X @ W\n    H = None\n    \n    # TODO: Apply ReLU\n    H = None\n    \n    return H\n"
+  },
+  "validation": {
     "type": "ai_code",
-    "xpReward": 60,
-    "difficulty": "easy",
-    "initialState": {
-      "content": "import numpy as np\n\n\ndef compute_adjacency_norm(edge_index, num_nodes):\n    \"\"\"Compute normalized adjacency matrix for GCN.\n    \n    TODO: Create adjacency matrix from edge_index\n    TODO: Add self-loops to the adjacency matrix\n    TODO: Compute degree matrix and normalize: D^(-1/2) * A * D^(-1/2)\n    TODO: Return the normalized adjacency matrix\n    \"\"\"\n    # Step 1: Build adjacency matrix from edge list\n    # edge_index is shape (2, num_edges) with [source, target] pairs\n    A = np.zeros((num_nodes, num_nodes))\n    # TODO: Fill in adjacency matrix from edge_index\n    \n    # Step 2: Add self-loops\n    # TODO: Set diagonal elements to 1\n    \n    # Step 3: Compute degree matrix\n    # TODO: Calculate degree for each node\n    \n    # Step 4: Normalize\n    # TODO: Compute D^(-1/2) * A * D^(-1/2)\n    \n    return A\n\n\ndef gcn_layer(A_norm, X, W):\n    \"\"\"Single GCN layer forward pass.\n    \n    TODO: Implement H = sigma(A_norm @ X @ W)\n    TODO: Apply ReLU activation\n    \"\"\"\n    # TODO: Matrix multiplication: A_norm @ X @ W\n    H = None\n    \n    # TODO: Apply ReLU\n    H = None\n    \n    return H\n"
-    },
-    "validation": {
-      "type": "ai_code",
-      "rules": [
-        "must_include:edge_index",
-        "must_include:self-loops",
-        "must_include:D^(-1/2)",
-        "must_include:ReLU",
-        "must_include:A_norm @ X @ W"
-      ]
-    }
+    "rules": [
+      "must_include:edge_index",
+      "must_include:self-loops",
+      "must_include:D^(-1/2)",
+      "must_include:ReLU",
+      "must_include:A_norm @ X @ W"
+    ]
   }
 }
