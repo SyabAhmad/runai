@@ -1,0 +1,7 @@
+{
+  "mission_10": [
+    "Stacking multiple forecast arrays with np.stack along axis=0 creates a matrix where each row is one model's predictions, enabling vectorized ensemble operations.",
+    "The trimmed mean removes the k smallest and k largest values at each time step before averaging, where k is determined by the trim fraction times the number of models.",
+    "For stacking optimization, project weights back onto the probability simplex after each gradient step by clipping negatives and renormalizing to sum to one."
+  ]
+}

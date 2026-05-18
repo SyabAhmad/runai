@@ -1,0 +1,7 @@
+{
+  "mission_08": [
+    "Normalize each adjacency matrix before GNN encoding: add self-loops, compute degree, and apply D^(-1/2) * A * D^(-1/2)",
+    "For the GRU update: concatenate H_prev and H_curr, then apply sigmoid for gates. The update gate z controls how much of the previous state to keep",
+    "Temporal attention: compute scores as sum(H_snapshots[t] @ W_attn) for each t, then softmax. The final representation is the weighted sum of all snapshots"
+  ]
+}

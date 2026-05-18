@@ -1,0 +1,3 @@
+{
+  "mission_04": "Well done! You have worked with three fundamental probability distributions. For the Normal(50, 10), P(40 < X < 60) = 0.6827 — the famous 68% rule. The 95th percentile is about 66.45. For the Binomial(100, 0.3), P(X=30) = 0.0867 and P(X<=30) = 0.5491. For the Poisson(5), P(X=3) = 0.1404 and P(X>=8) = 0.1334. Understanding these distributions is essential for modeling data, setting priors in Bayesian analysis, and interpreting the outputs of probabilistic models."
+}

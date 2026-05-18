@@ -1,0 +1,3 @@
+{
+  "mission_02": "**Value Iteration** is a dynamic programming algorithm that finds the optimal policy for an MDP. It works by iteratively improving value estimates using the Bellman optimality equation.\n\nThe key insight: instead of alternating between policy evaluation and improvement (like Policy Iteration), Value Iteration combines both into one step — it directly updates V(s) to the best possible value.\n\n```\nV(s) = max_a sum_s' P(s'|s,a) * [R(s,a,s') + gamma * V(s')]\n```\n\nThis converges to V*, the optimal value function. The optimal policy is then simply: take the action that maximizes Q(s,a) at each state."
+}

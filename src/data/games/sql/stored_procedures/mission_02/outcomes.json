@@ -1,0 +1,3 @@
+{
+  "mission_02": "Well done! You've created a table-returning function that acts as a parameterized view. This pattern is extremely useful for encapsulating data access logic, providing a clean API for applications, and ensuring consistent filtering across all consumers of the data."
+}

@@ -1,0 +1,7 @@
+{
+  "mission_09": [
+    "The bidirectional encoder processes the input sequence in both directions and concatenates the forward and backward hidden states at each time step.",
+    "Bahdanau attention computes scores as v^T tanh(W_enc * h_enc + W_dec * h_dec), then applies softmax to get attention weights over encoder positions.",
+    "The decoder combines the previous token embedding with the attention context vector, updates its state through a GRU-style transition, and projects to vocabulary logits."
+  ]
+}

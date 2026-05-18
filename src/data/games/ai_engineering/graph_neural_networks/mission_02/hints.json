@@ -1,0 +1,7 @@
+{
+  "mission_02": [
+    "Concatenate h_i and h_j using np.concatenate([h_i, h_j]) to form the joint feature vector",
+    "The attention score is e_ij = LeakyReLU(a^T @ concat) where a is a learnable weight vector of size 2 * hidden_dim",
+    "Apply softmax across all neighbors: alpha_ij = exp(e_ij) / sum(exp(e_ik)) for all k in neighbors of i"
+  ]
+}

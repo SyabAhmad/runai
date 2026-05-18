@@ -1,0 +1,21 @@
+{
+  "title": "Hyperparameter Tuning with Pipelines",
+  "id": "mission_04",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import numpy as np\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.preprocessing import StandardScaler, PolynomialFeatures\nfrom sklearn.model_selection import GridSearchCV, train_test_split\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.datasets import make_classification\n\n# TODO: Create a classification dataset\n\n# TODO: Build a pipeline with preprocessing and a classifier\n\n# TODO: Define a parameter grid that tunes:\n# - PolynomialFeatures degree\n# - RandomForest n_estimators and max_depth\n# Use the step__parameter naming convention\n\n# TODO: Run GridSearchCV with cross-validation\n\n# TODO: Display best parameters and best score\n\ndef pipeline_hyperparameter_tuning():\n    # TODO: Generate data\n    # TODO: Build pipeline\n    # TODO: Define parameter grid\n    # TODO: Run GridSearchCV\n    # TODO: Display results\n    pass\n\n# TODO: Run the tuning\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:GridSearchCV",
+      "must_include:Pipeline",
+      "must_include:param_grid",
+      "must_include:best_params_",
+      "must_include:best_score_",
+      "must_include:cv"
+    ]
+  }
+}

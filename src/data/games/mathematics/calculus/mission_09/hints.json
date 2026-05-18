@@ -1,0 +1,10 @@
+{
+  "mission_09": [
+    "Gradient of x^2*y + y^2*z + z^2*x is [2xy + z^2, x^2 + 2yz, y^2 + 2zx].",
+    "The Hessian has entries: H[0,0] = 2y, H[0,1] = 2x, H[0,2] = 2z, etc.",
+    "Clairaut's theorem: mixed partials are equal, so Hessian is symmetric.",
+    "Use np.linalg.eig() to find eigenvalues of the Hessian.",
+    "Convex if all eigenvalues >= 0, concave if all <= 0, saddle if mixed.",
+    "Directional second derivative: v.T @ H @ v (quadratic form)."
+  ]
+}

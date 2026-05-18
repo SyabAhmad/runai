@@ -1,0 +1,7 @@
+{
+  "mission_07": [
+    "CLIP: `image_features = clip_image_encoder(image)`.",
+    "Project: `visual_tokens = projector(image_features)`.",
+    "LLM: `response = llm.generate(concat(visual_tokens, text_tokens))`."
+  ]
+}

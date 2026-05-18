@@ -1,0 +1,7 @@
+{
+  "mission_07": [
+    "Add a WHERE clause to the CREATE INDEX statement.",
+    "Use CREATE INDEX idx_orders_pending ON orders(customer_id) WHERE status = 'pending'.",
+    "The index only contains rows where status = 'pending', saving significant space."
+  ]
+}

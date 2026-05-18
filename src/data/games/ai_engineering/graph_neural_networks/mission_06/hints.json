@@ -1,0 +1,7 @@
+{
+  "mission_06": [
+    "Compute S = softmax(X @ W_assign, axis=1) to get a soft assignment of each node to each cluster",
+    "The coarsened adjacency A_pooled = S.T @ A @ S gives the connectivity between clusters, where each entry represents the expected number of edges between cluster pairs",
+    "Entropy loss = -sum(S * log(S + eps)) / (N * K) encourages each node to belong to a single cluster rather than being spread across many"
+  ]
+}

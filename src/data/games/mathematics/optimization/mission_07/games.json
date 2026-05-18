@@ -1,0 +1,18 @@
+{
+  "title": "Linear Programming Simplex",
+  "id": "mission_07",
+  "type": "ai_code",
+  "xpReward": 90,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import numpy as np\nfrom scipy.optimize import linprog\n\ndef solve_linear_program(c, A_ub, b_ub, A_eq=None, b_eq=None):\n    \"\"\"\n    Solve a linear programming problem: min c^T x subject to Ax <= b\n    c: objective function coefficients\n    A_ub: inequality constraint matrix (Ax <= b)\n    b_ub: inequality constraint values\n    A_eq: equality constraint matrix (optional)\n    b_eq: equality constraint values (optional)\n    \"\"\"\n    # TODO: Use scipy linprog to solve the LP problem\n    result = ...\n    \n    if result.success:\n        return {\n            'optimal_value': result.fun,\n            'solution': result.x,\n            'status': 'optimal'\n        }\n    else:\n        return {'status': 'infeasible or unbounded'}\n\ndef simplex_tableau(c, A, b):\n    \"\"\"\n    Implement basic simplex method tableau for a small LP\n    c: objective coefficients\n    A: constraint matrix\n    b: right-hand side\n    \"\"\"\n    m, n = A.shape\n    \n    # TODO: Create initial simplex tableau\n    # Add slack variables to form augmented matrix\n    tableau = ...\n    \n    # TODO: Perform pivot operations\n    for iteration in range(20):\n        # Find entering variable (most negative in objective row)\n        entering_col = ...\n        \n        if entering_col == -1:\n            break  # Optimal solution found\n        \n        # Find leaving variable (minimum ratio test)\n        leaving_row = ...\n        \n        if leaving_row == -1:\n            return {'status': 'unbounded'}\n        \n        # TODO: Perform pivot operation\n        pivot_val = tableau[leaving_row, entering_col]\n        tableau[leaving_row] /= pivot_val\n        for i in range(m + 1):\n            if i != leaving_row:\n                factor = tableau[i, entering_col]\n                tableau[i] -= factor * tableau[leaving_row]\n    \n    # TODO: Extract solution\n    solution = ...\n    optimal_value = ...\n    \n    return {'solution': solution, 'optimal_value': optimal_value}\n\n# Example: max 3x + 2y s.t. x + y <= 4, x - y <= 2, x,y >= 0\nc = np.array([-3, -2])  # Negate for minimization\nA_ub = np.array([[1, 1], [1, -1]])\nb_ub = np.array([4, 2])\n\nresult = solve_linear_program(c, A_ub, b_ub)\nprint(f\"Optimal value: {-result['optimal_value']}\")\nprint(f\"Solution: {result['solution']}\")"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:linprog",
+      "must_include:tableau",
+      "must_include:numpy"
+    ]
+  }
+}

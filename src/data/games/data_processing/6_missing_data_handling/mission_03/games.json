@@ -1,0 +1,21 @@
+{
+  "title": "Forward and Backward Fill for Time Series",
+  "id": "mission_03",
+  "type": "ai_code",
+  "xpReward": 70,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "import pandas as pd\nimport numpy as np\n\n# TODO: Create a time series DataFrame with datetime index\n# Include missing values at various positions\n\n# TODO: Implement forward fill (ffill)\n# Propagate last valid observation forward\n\n# TODO: Implement backward fill (bfill)\n# Propagate next valid observation backward\n\n# TODO: Implement fill with limit parameter\n# Limit the number of consecutive NaN values to fill\n\n# TODO: Compare all methods side by side\n\ndef time_series_filling():\n    # TODO: Create time series data with gaps\n    # TODO: Apply ffill, bfill, and limited fill\n    # TODO: Display comparison\n    pass\n\n# TODO: Run the demonstration\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:ffill",
+      "must_include:bfill",
+      "must_include:fillna",
+      "must_include:limit",
+      "must_include:datetime",
+      "must_include:pd.date_range"
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "title": "ControlNet (Spatial Conditioning)",
+  "id": "mission_09",
+  "type": "ai_code",
+  "xpReward": 110,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "# Diffusion Models Mission 09: ControlNet\n#\n# ControlNet adds spatial control to diffusion models:\n# - Edge maps, depth maps, poses, segmentation\n# - Locks the original U-Net weights, trains a copy with zero convolutions\n#\n# Architecture:\n# 1. Original U-Net (frozen)\n# 2. Copy of U-Net encoder (trainable)\n# 3. Zero convolutions connect copy to original\n#\n# Output = U-Net(x, t, text) + ZeroConv(ControlNet(x, t, condition))\n#\n# Your goal: Implement controlnet_forward(x, t, text, condition, unet, controlnet, zero_convs)\n#   1. Run frozen U-Net for base prediction\n#   2. Run trainable ControlNet encoder on condition\n#   3. Add zero-conv outputs to U-Net features\n#   4. Return combined prediction\n\nimport numpy as np\n\ndef controlnet_forward(x, t, text, condition, unet, controlnet, zero_convs):\n    # TODO: Run frozen U-Net\n    # TODO: Run ControlNet encoder on condition\n    # TODO: Apply zero convolutions\n    # TODO: Combine and return\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def controlnet_forward",
+      "must_include:zero_conv",
+      "must_include:condition",
+      "must_include:frozen",
+      "must_include:return"
+    ]
+  }
+}

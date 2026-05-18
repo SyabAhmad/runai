@@ -1,0 +1,7 @@
+{
+  "mission_08": [
+    "Gaussian RD: R(D) = 0.5 * log2(sigma^2 / D) for D <= sigma^2",
+    "The Blahut-Arimoto RD algorithm uses P(y|x) proportional to r(y) * exp(s * d(x,y))",
+    "The slope parameter s controls the tradeoff: more negative s means lower distortion, higher rate"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Integration Fundamentals",
+  "id": "mission_05",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import numpy as np\nfrom scipy import integrate\n\n# TODO: Define f(x) = x^2 * sin(x)\ndef f(x):\n    return None\n\n# TODO: Compute the definite integral from 0 to pi\nresult, error = None, None\n\n# TODO: Compute the integral using the trapezoidal rule numerically\nx_vals = None\ny_vals = None\ntrapezoidal_result = None\n\n# TODO: Compute the integral using Simpson's rule\nsimpson_result = None\n\n# TODO: Define g(x) = e^(-x^2) (Gaussian function)\ndef g(x):\n    return None\n\n# TODO: Integrate g from -infinity to infinity (should be sqrt(pi))\ngaussian_result, gaussian_error = None, None\n\n# TODO: Compute double integral of h(x,y) = x*y over [0,1]x[0,1]\ndef h(y, x):\n    return None\n\ndouble_result, double_error = None, None\n\nprint(f\"Integral of x^2*sin(x) from 0 to pi: {result:.6f} (error: {error:.2e})\")\nprint(f\"Trapezoidal rule: {trapezoidal_result:.6f}\")\nprint(f\"Simpson's rule: {simpson_result:.6f}\")\nprint(f\"Gaussian integral: {gaussian_result:.6f} (expected: {np.sqrt(np.pi):.6f})\")\nprint(f\"Double integral of xy: {double_result:.6f}\")\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:numpy",
+      "must_include:scipy",
+      "must_include:integrate.quad",
+      "must_include:np.trapz"
+    ]
+  }
+}

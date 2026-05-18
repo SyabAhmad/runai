@@ -1,0 +1,18 @@
+{
+  "title": "Singular Value Decomposition",
+  "id": "mission_05",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import numpy as np\n\n# TODO: Create a 4x3 matrix A (non-square)\nA = None\n\n# TODO: Perform SVD: A = U @ S @ V^T\nU, s, Vt = None, None, None\n\n# TODO: Verify the decomposition by reconstructing A\n# Convert s (1D) to a diagonal matrix\nS_matrix = None\nA_reconstructed = None\n\n# TODO: Compute the rank of A using singular values (count non-zero singular values)\nrank = None\n\n# TODO: Compute the condition number (ratio of largest to smallest non-zero singular value)\ncondition_number = None\n\n# TODO: Create a rank-2 approximation of A using only the top 2 singular values\nk = 2\nU_k = None\nS_k = None\nVt_k = None\nA_approx = None\n\n# TODO: Compute the approximation error\nerror = None\n\nprint(f\"Singular values: {s}\")\nprint(f\"Rank: {rank}\")\nprint(f\"Condition number: {condition_number:.4f}\")\nprint(f\"Reconstruction error: {np.max(np.abs(A - A_reconstructed)):.2e}\")\nprint(f\"Rank-{k} approximation error: {error:.4f}\")\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:numpy",
+      "must_include:np.linalg.svd",
+      "must_include:np.diag"
+    ]
+  }
+}

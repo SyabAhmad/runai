@@ -1,0 +1,3 @@
+{
+  "mission_09": "import numpy as np\n\ndef export_and_optimize(model, sample_input, output_path):\n    # Export\n    torch.onnx.export(model, sample_input, output_path, opset_version=17, do_constant_folding=True)\n    # Optimize\n    onnx_model = onnx.load(output_path)\n    optimized = onnxoptimizer.optimize(onnx_model)\n    onnx.save(optimized, output_path)\n    # Verify\n    original_output = model(sample_input).detach().numpy()\n    sess = onnxruntime.InferenceSession(output_path)\n    onnx_output = sess.run(None, {'input': sample_input.numpy()})[0]\n    assert np.allclose(original_output, onnx_output, atol=1e-5)\n    return output_path"
+}

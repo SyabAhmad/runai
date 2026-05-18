@@ -1,0 +1,9 @@
+{
+  "mission_02": [
+    "Set checkpoint interval: self.checkpoint_layers = list(range(0, self.n_layers, interval)).",
+    "Peak memory: peak_memory = checkpoint_memory + activation_size.",
+    "Mixed precision total: mixed_total = fp16_params + fp32_master + fp16_grads + fp32_optimizer + fp16_activations.",
+    "Savings: savings = (fp32_total - mixed_total) / fp32_total.",
+    "Free memory: self.used_memory -= self.allocations[alloc_id]['bytes']."
+  ]
+}

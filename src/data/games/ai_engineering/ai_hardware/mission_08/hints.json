@@ -1,0 +1,9 @@
+{
+  "mission_08": [
+    "MAC energy: energy += n_macs * self.energy_costs[mac_key].",
+    "Find optimal: best = min(valid, key=lambda x: x['energy_pj']).",
+    "Unstructured sparsity: mask = np.abs(weight_matrix) > threshold.",
+    "Block norm: block_norms[i, j] = np.linalg.norm(block).",
+    "Energy savings: return original_energy * (1 - sparsity)."
+  ]
+}

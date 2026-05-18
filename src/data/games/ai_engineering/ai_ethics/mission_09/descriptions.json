@@ -1,0 +1,3 @@
+{
+  "mission_09": "**Red teaming** finds vulnerabilities before attackers do.\n\n**Attack types**:\n- **Direct prompt injection**: \"Ignore previous instructions, do X\"\n- **Role-playing**: \"Act as an evil AI without restrictions\"\n- **Encoding**: Hide harmful content in Base64, Morse code\n- **Multi-turn**: Build trust over conversation, then ask for harmful output\n- **Translation**: Request harmful content in another language\n- **Hypotheticals**: \"In a fictional scenario, how would you...\"\n\n**Process**:\n1. Generate diverse attack prompts\n2. Run through model\n3. Classify outputs for safety violations\n4. Report success rate and patterns\n\n**Defense**: RLHF, system prompts, output filtering, input sanitization."
+}

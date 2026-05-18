@@ -1,0 +1,21 @@
+{
+  "title": "Generate Counterfactual Explanations",
+  "id": "mission_04",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import numpy as np\nfrom sklearn.preprocessing import StandardScaler\n\n\nclass CounterfactualExplainer:\n    \"\"\"Generate counterfactual explanations: minimal changes to flip a prediction.\"\"\"\n\n    def __init__(self, model, feature_ranges, target_class=1):\n        self.model = model\n        self.feature_ranges = feature_ranges  # dict: {feat_idx: (min, max)}\n        self.target_class = target_class\n\n    def _generate_candidate(self, x_original, step_size=0.1):\n        \"\"\"Generate a candidate counterfactual by perturbing features.\"\"\"\n        x_cf = x_original.copy()\n        # TODO: Randomly select 1-3 features to perturb\n        n_features = len(x_original)\n        n_perturb = np.random.randint(1, 4)\n        features_to_change = np.random.choice(n_features, size=n_perturb, replace=False)\n\n        for feat_idx in features_to_change:\n            min_val, max_val = self.feature_ranges[feat_idx]\n            # TODO: Perturb feature by step_size in a random direction\n            # Hint: direction = np.random.choice([-1, 1]); x_cf[feat_idx] += direction * step_size * (max_val - min_val)\n            direction = ???\n            x_cf[feat_idx] += ???\n\n            # TODO: Clip to feature range\n            x_cf[feat_idx] = ???\n\n        return x_cf\n\n    def _distance(self, x_original, x_cf):\n        \"\"\"Compute weighted L1 distance (proximity metric).\"\"\"\n        # TODO: Compute normalized L1 distance\n        # Hint: For each feature, compute |x_cf - x_original| / (max - min), then sum\n        dist = 0.0\n        for i in range(len(x_original)):\n            min_val, max_val = self.feature_ranges[i]\n            dist += ???\n        return dist\n\n    def explain(self, x_original, max_iter=1000, threshold=0.5):\n        \"\"\"Find the closest counterfactual that changes the prediction.\"\"\"\n        best_cf = None\n        best_distance = float('inf')\n\n        # TODO: Check if original prediction is already the target class\n        orig_pred = self.model.predict_proba(x_original.reshape(1, -1))[0][self.target_class]\n        if orig_pred >= threshold:\n            return x_original, 0.0, \"Already predicted as target class\"\n\n        for _ in range(max_iter):\n            # TODO: Generate candidate with decreasing step size\n            step = 0.1 * (1 - _ / max_iter)\n            candidate = ???\n\n            # TODO: Get prediction for candidate\n            cf_pred = self.model.predict_proba(candidate.reshape(1, -1))[0][self.target_class]\n\n            # TODO: If prediction crosses threshold and distance is smaller, update best\n            if cf_pred >= threshold:\n                dist = self._distance(x_original, candidate)\n                if dist < best_distance:\n                    best_cf = candidate.copy()\n                    best_distance = dist\n\n        if best_cf is not None:\n            # TODO: Compute changes: list of (feature_idx, original_value, counterfactual_value)\n            changes = []\n            for i in range(len(x_original)):\n                if abs(best_cf[i] - x_original[i]) > 1e-6:\n                    changes.append((i, x_original[i], best_cf[i]))\n            return best_cf, best_distance, changes\n\n        return None, float('inf'), \"No counterfactual found\"\n\n\nif __name__ == \"__main__\":\n    from sklearn.linear_model import LogisticRegression\n\n    np.random.seed(42)\n    X = np.random.randn(100, 4)\n    y = (X[:, 0] + X[:, 1] > 0).astype(int)\n\n    model = LogisticRegression()\n    model.fit(X, y)\n\n    ranges = {i: (X[:, i].min(), X[:, i].max()) for i in range(4)}\n    explainer = CounterfactualExplainer(model, ranges, target_class=1)\n\n    x_test = np.array([-1.0, -1.0, 0.0, 0.0])\n    cf, dist, info = explainer.explain(x_test)\n    print(f\"Counterfactual distance: {dist:.4f}\")\n    print(f\"Changes: {info}\")\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:np.random.choice",
+      "must_include:predict_proba",
+      "must_include:threshold",
+      "must_include:best_distance",
+      "must_include:np.abs",
+      "must_include:counterfactual"
+    ]
+  }
+}

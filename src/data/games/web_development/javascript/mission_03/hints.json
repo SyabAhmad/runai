@@ -1,0 +1,7 @@
+{
+  "mission_03": [
+    "map returns a new array: products.map(p => p.name) extracts just the names.",
+    "filter keeps elements where the callback returns true: products.filter(p => p.category === category && p.inStock).",
+    "reduce accumulates a value: products.reduce((total, p) => total + p.price, 0) sums all prices."
+  ]
+}

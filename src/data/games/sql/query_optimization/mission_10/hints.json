@@ -1,0 +1,7 @@
+{
+  "mission_10": [
+    "Replace the correlated subquery with a JOIN between customers and orders.",
+    "Use DISTINCT or GROUP BY to avoid duplicate customer rows.",
+    "Alternatively, use an IN clause with a simple subquery instead of EXISTS."
+  ]
+}

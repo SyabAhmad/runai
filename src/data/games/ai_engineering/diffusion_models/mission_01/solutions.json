@@ -1,0 +1,3 @@
+{
+  "mission_01": "import numpy as np\n\ndef forward_diffusion(x_0, t, alpha_bar):\n    epsilon = np.random.randn(*x_0.shape)\n    sqrt_alpha = np.sqrt(alpha_bar[t])\n    sqrt_one_minus = np.sqrt(1 - alpha_bar[t])\n    x_t = sqrt_alpha * x_0 + sqrt_one_minus * epsilon\n    return {\"x_t\": x_t, \"noise\": epsilon}"
+}

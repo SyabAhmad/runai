@@ -1,0 +1,7 @@
+{
+  "mission_07": [
+    "Draft: `draft_tokens = [draft_model.generate() for _ in range(k)]`.",
+    "Target: `target_probs = target_model.get_probs(prompt + draft_tokens)`.",
+    "Accept: for each token, `accept if rand() < target_prob / draft_prob`."
+  ]
+}

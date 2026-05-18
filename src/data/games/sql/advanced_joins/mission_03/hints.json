@@ -1,0 +1,7 @@
+{
+  "mission_03": [
+    "Join price_history p1 with price_history p2 on matching product_id.",
+    "Match p2.change_date to the maximum date that is less than p1.change_date for the same product.",
+    "Calculate the difference as p1.price - p2.price."
+  ]
+}

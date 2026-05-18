@@ -1,0 +1,3 @@
+{
+  "mission_07": "**RLHF** aligns language models with human preferences and safety.\n\n**Process**:\n1. **Supervised fine-tuning**: Train on high-quality demonstrations\n2. **Reward modeling**: Train a classifier on human preferences (A > B)\n3. **RL optimization**: Use PPO to maximize reward while staying close to base model\n\n**KL penalty**: Prevents the model from drifting too far from its original behavior. Without it, the model might exploit the reward model.\n\n**Safety alignment**: RLHF teaches models to:\n- Refuse harmful requests\n- Acknowledge uncertainty\n- Avoid generating toxic content\n- Be helpful and honest\n\n**Limitations**: RLHF can be gamed, doesn't generalize to all scenarios, and reflects the biases of the human labelers."
+}

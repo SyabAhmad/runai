@@ -1,0 +1,3 @@
+{
+  "mission_01": "Congratulations! You have implemented FedAvg, the cornerstone algorithm of federated learning. By training models locally and aggregating with weighted averaging, you have created a system that learns from distributed data without ever centralizing it. The key insight is that multiple local SGD steps before aggregation reduce communication rounds while still converging to a good global model. This algorithm powers real-world applications like keyboard prediction on mobile phones, where your model improves from billions of users without any individual's typing data leaving their device. You now understand the fundamental trade-off between local computation and communication efficiency."
+}

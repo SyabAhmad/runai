@@ -1,0 +1,21 @@
+{
+  "title": "Functions and Scope",
+  "id": "mission_02",
+  "type": "ai_code",
+  "xpReward": 60,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "// TODO: Create arrow functions, function expressions, and named functions\n// TODO: Understand block scope with let/const vs function scope with var\n// TODO: Implement default parameters and rest parameters\n// TODO: Create a higher-order function that accepts a callback\n\n// TODO: Convert this function expression to an arrow function\nconst greet = function(name) {\n  return `Hello, ${name}!`;\n};\n\n// TODO: Create a function with default parameters\nfunction createOrder(item, quantity, price) {\n  // TODO: Set defaults: quantity = 1, price = 0\n  // TODO: Return order object with total calculation\n}\n\n// TODO: Create a function using rest parameters\nfunction sum(...numbers) {\n  // TODO: Return the sum of all numbers\n}\n\n// TODO: Create a higher-order function\nfunction repeat(fn, times) {\n  // TODO: Call fn 'times' number of times\n}\n\n// TODO: Demonstrate block scope\nfunction demonstrateScope() {\n  // TODO: Show difference between let and var in a block\n}"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:=>",
+      "must_include:...",
+      "must_include:=",
+      "must_include:function",
+      "must_include:let",
+      "must_include:const"
+    ]
+  }
+}

@@ -1,0 +1,3 @@
+{
+  "mission_07": "Cross joins are ideal for creating scheduling templates and availability matrices. By combining days, time slots, and rooms, you generate every possible booking slot. This foundational grid can then be joined with actual bookings to find available slots or detect conflicts. The pattern is widely used in resource management systems."
+}

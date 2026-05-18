@@ -1,0 +1,3 @@
+{
+  "mission_07": "Conditional probability P(A|B) = P(A and B) / P(B) updates probabilities given new information. The three-card paradox shows that seeing a red face makes it more likely you picked the red-red card (2/3 probability the other side is red). The Monty Hall problem demonstrates that switching doors gives a 2/3 chance of winning vs 1/3 for staying — counterintuitive but provable by conditional probability. Both problems illustrate how conditioning on information changes probabilities in non-obvious ways. Conditional probability is the foundation of Bayesian inference, naive Bayes classifiers, and probabilistic graphical models."
+}

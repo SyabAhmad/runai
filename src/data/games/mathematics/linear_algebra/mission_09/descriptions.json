@@ -1,0 +1,3 @@
+{
+  "mission_09": "Matrix decompositions break matrices into simpler, structured components that make computation more efficient and reveal hidden properties. Cholesky decomposition (A = LL^T) works for symmetric positive definite matrices and is twice as fast as LU for solving systems. LU decomposition (PA = LU) works for any square matrix and is the basis of Gaussian elimination. Each decomposition has strengths: Cholesky for SPD systems, LU for general systems, QR for least squares, and SVD for rank-deficient problems. Choosing the right decomposition is key to efficient numerical computing in scientific applications and machine learning."
+}

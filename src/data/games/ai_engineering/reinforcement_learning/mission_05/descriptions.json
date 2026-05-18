@@ -1,0 +1,3 @@
+{
+  "mission_05": "**Deep Q-Network (DQN)** was the breakthrough that made RL work with high-dimensional inputs (like images). DeepMind used it to master Atari games from pixels alone.\n\nTwo key innovations:\n1. **Experience Replay**: Store transitions (s,a,r,s') in a buffer and sample randomly for training. This breaks correlation between consecutive samples and stabilizes learning.\n2. **Target Network**: A separate copy of the Q-network used to compute targets. Updated periodically (not every step). This prevents the moving-target problem.\n\nThe loss:\n```\nL = (Q(s,a) - [r + γ * max_a' Q_target(s',a')])²\n```\n\nDQN proved that neural networks + RL could work together, launching the deep RL revolution."
+}

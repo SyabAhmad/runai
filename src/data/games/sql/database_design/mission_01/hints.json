@@ -1,0 +1,7 @@
+{
+  "mission_01": [
+    "Create contacts table with id (PRIMARY KEY) and name.",
+    "Create contact_phones table with id, contact_id (FOREIGN KEY), and phone_number.",
+    "Each phone number gets its own row in contact_phones."
+  ]
+}

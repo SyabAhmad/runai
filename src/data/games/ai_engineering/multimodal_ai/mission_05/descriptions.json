@@ -1,0 +1,3 @@
+{
+  "mission_05": "**Multimodal fusion** is the core challenge of multimodal AI.\n\n**Fusion strategies**:\n- **Early fusion**: Concatenate features before processing. Simple but assumes aligned modalities.\n- **Late fusion**: Process each modality separately, combine predictions. Robust but misses interactions.\n- **Cross-attention**: Each modality attends to others. Captures fine-grained interactions.\n- **Tensor fusion**: Outer product of features. Captures all pairwise interactions but expensive.\n\n**Cross-attention formula**:\n```\nAttention(Q, K, V) = softmax(QK^T / √d) V\n```\nWhere Q comes from one modality, K and V from another.\n\n**Modern models**: Flamingo, BLIP-2, LLaVA use cross-attention between vision and language."
+}

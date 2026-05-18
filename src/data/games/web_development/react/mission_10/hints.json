@@ -1,0 +1,7 @@
+{
+  "mission_10": [
+    "Compound components: Create a context, provide value from parent, consume with useContext in children. Children access shared state without props.",
+    "Render props: <MouseTracker render={({x, y}) => <div>{x}, {y}</div>} />. The component calls the render function with data.",
+    "Control props: Check if value !== undefined for controlled mode. If undefined, use internal state with defaultValue for uncontrolled mode."
+  ]
+}

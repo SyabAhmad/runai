@@ -1,0 +1,7 @@
+{
+  "mission_01": [
+    "For the inner loop, implement a simple linear model y = Wx + b. Compute gradients analytically: dL/dW = 2/n * X^T(XW - Y), dL/db = 2/n * sum(XW - Y). Update: W = W - alpha * dL/dW.",
+    "For sinusoidal task sampling: A = np.random.uniform(0.1, 5.0), phi = np.random.uniform(0, np.pi), x = np.random.uniform(-5, 5, n), y = A * np.sin(x + phi).",
+    "For the outer loop, accumulate gradients from all tasks' query losses (computed using adapted parameters) and update meta-parameters: theta = theta - beta * mean(task_grads). The key is that query loss gradients flow through the inner loop updates."
+  ]
+}

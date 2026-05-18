@@ -1,0 +1,18 @@
+{
+  "title": "Feature Selection with Variance",
+  "id": "mission_04",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import pandas as pd\nimport numpy as np\nfrom sklearn.feature_selection import VarianceThreshold\n\n# TODO: Create a dataset with low-variance features\nX = np.array([\n    [1, 0, 3, 1],\n    [1, 0, 5, 2],\n    [1, 0, 7, 3],\n    [1, 0, 9, 4],\n    [1, 0, 11, 5]\n])\n\n# TODO: Apply variance threshold to remove low-variance features\nselector = VarianceThreshold(threshold=0.1)\nX_selected = ...\n\nprint(f\"Original shape: {X.shape}\")\nprint(f\"Selected shape: {X_selected.shape}\")\nprint(f\"Variances: {selector.variances_}\")\nprint(f\"Removed columns with variance < 0.1\")\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:VarianceThreshold",
+      "must_include:fit_transform",
+      "must_include:threshold"
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "mission_09": [
+    "Use SUM(amount) OVER (PARTITION BY category ORDER BY sale_date ROWS UNBOUNDED PRECEDING).",
+    "Each category gets its own running total that resets independently.",
+    "Order the final result by category and sale_date for clarity."
+  ]
+}

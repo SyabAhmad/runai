@@ -1,0 +1,22 @@
+{
+  "title": "State Management with useState",
+  "id": "mission_03",
+  "type": "ai_code",
+  "xpReward": 70,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "// TODO: Use useState for component state\n// TODO: Handle different state types: primitives, objects, arrays\n// TODO: Implement state updates with functional updates\n// TODO: Build interactive components with state\n\nimport { useState } from 'react';\n\n// TODO: Counter component with increment, decrement, reset\nfunction Counter({ initial = 0 }) {\n  // TODO: Use useState for count\n  // TODO: Implement increment, decrement, reset functions\n  // TODO: Use functional updates for safety\n}\n\n// TODO: TodoList with add, toggle, delete\nfunction TodoList() {\n  // TODO: useState for todos array\n  // TODO: useState for input value\n  // TODO: Implement addTodo, toggleTodo, deleteTodo\n}\n\n// TODO: Form with validation state\nfunction RegistrationForm() {\n  // TODO: useState for form data object\n  // TODO: useState for errors object\n  // TODO: Handle input changes with single onChange\n  // TODO: Validate on submit\n}\n\n// TODO: Tab component with active state\nfunction Tabs({ tabs }) {\n  // TODO: useState for activeTab index\n  // TODO: Render tab buttons and active tab content\n}"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:useState",
+      "must_include:setCount",
+      "must_include:setTodos",
+      "must_include:onChange",
+      "must_include:onClick",
+      "must_include:prev =>",
+      "must_import:react"
+    ]
+  }
+}

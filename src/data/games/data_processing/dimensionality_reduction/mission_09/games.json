@@ -1,0 +1,18 @@
+{
+  "title": "Feature Selection with Mutual Information",
+  "id": "mission_09",
+  "type": "ai_code",
+  "xpReward": 110,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "import pandas as pd\nimport numpy as np\nfrom sklearn.feature_selection import mutual_info_classif, SelectKBest\nfrom sklearn.datasets import load_breast_cancer\n\n# TODO: Load dataset\ndata = load_breast_cancer()\nX = data.data\ny = data.target\nfeature_names = data.feature_names\n\n# TODO: Select top 10 features using mutual information\nselector = SelectKBest(score_func=mutual_info_classif, k=10)\nX_selected = ...\n\n# TODO: Get selected feature names\nmask = selector.get_support()\nselected_features = ...\n\nprint(f\"Original features: {X.shape[1]}\")\nprint(f\"Selected features: {X_selected.shape[1]}\")\nprint(f\"Top features: {selected_features}\")\nprint(f\"MI scores: {selector.scores_[mask]}\")\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:SelectKBest",
+      "must_include:mutual_info_classif",
+      "must_include:get_support"
+    ]
+  }
+}

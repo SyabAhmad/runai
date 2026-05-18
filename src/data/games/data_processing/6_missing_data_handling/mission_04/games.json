@@ -1,0 +1,20 @@
+{
+  "title": "KNN Imputation",
+  "id": "mission_04",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import pandas as pd\nimport numpy as np\nfrom sklearn.impute import KNNImputer\nfrom sklearn.datasets import load_iris\n\n# TODO: Load the Iris dataset and introduce missing values randomly\n# Remove about 20% of values\n\n# TODO: Apply KNN imputation with different k values\n# Try n_neighbors=3, 5, and 7\n\n# TODO: Compare imputation quality\n# Calculate the mean squared error between imputed and original values\n\n# TODO: Analyze how k affects imputation accuracy\n\ndef knn_imputation_demo():\n    # TODO: Load data and add missing values\n    # TODO: Apply KNN imputation with varying k\n    # TODO: Compute and compare MSE for each k\n    pass\n\n# TODO: Run the demonstration\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:KNNImputer",
+      "must_include:n_neighbors",
+      "must_include:fit_transform",
+      "must_include:mean_squared_error",
+      "must_include:load_iris"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Evaluation Pipeline & Reporting",
+  "id": "mission_10",
+  "type": "ai_code",
+  "xpReward": 120,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "# LLM Evaluation Mission 10: Evaluation Pipeline\n#\n# Build a comprehensive evaluation pipeline that runs multiple metrics\n# and generates a report.\n#\n# Pipeline steps:\n# 1. Run automatic metrics (perplexity, ROUGE, BLEU, BERTScore)\n# 2. Run benchmark tests (MMLU, GSM8K)\n# 3. Run safety checks (toxicity, bias)\n# 4. Generate summary report with scores\n#\n# Your goal: Implement evaluation_pipeline(model, test_data)\n#   1. Run all metrics on test data\n#   2. Aggregate scores\n#   3. Generate formatted report\n#   4. Return scores dict and report string\n\nimport numpy as np\n\ndef evaluation_pipeline(model, test_data):\n    # TODO: Run automatic metrics\n    # TODO: Run benchmarks\n    # TODO: Run safety checks\n    # TODO: Generate report\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def evaluation_pipeline",
+      "must_include:perplexity",
+      "must_include:rouge",
+      "must_include:bleu",
+      "must_include:safety",
+      "must_include:report",
+      "must_include:return"
+    ]
+  }
+}

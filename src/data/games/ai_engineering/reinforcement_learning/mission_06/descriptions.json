@@ -1,0 +1,3 @@
+{
+  "mission_06": "**Actor-Critic** combines the best of both worlds: the low-variance value estimation of value-based methods with the direct policy optimization of policy gradients.\n\nTwo networks:\n- **Actor** π(a|s; θ): Decides which action to take\n- **Critic** V(s; w): Evaluates how good the current state is\n\nThe **advantage** function measures how much better an action is compared to average:\n```\nA(s,a) = Q(s,a) - V(s) ≈ r + γ*V(s') - V(s)\n```\n\nThis is the TD error — the surprise. If the outcome is better than expected (positive advantage), increase the action's probability. If worse, decrease it.\n\nA2C (Advantage Actor-Critic) is the foundation of PPO, which powers ChatGPT's RLHF training."
+}

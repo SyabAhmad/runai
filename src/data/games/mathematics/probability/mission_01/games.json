@@ -1,0 +1,18 @@
+{
+  "title": "Sample Spaces and Events",
+  "id": "mission_01",
+  "type": "ai_code",
+  "xpReward": 60,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "import numpy as np\nfrom itertools import product\n\n# TODO: Define the sample space for rolling two dice\n# Each outcome is a tuple (die1, die2)\nsample_space = None\n\n# TODO: Count the total number of outcomes\ntotal_outcomes = None\n\n# TODO: Define event A: sum of dice equals 7\nevent_A = None\nprob_A = None\n\n# TODO: Define event B: both dice show the same number (doubles)\nevent_B = None\nprob_B = None\n\n# TODO: Define event C: sum is greater than 9\nevent_C = None\nprob_C = None\n\n# TODO: Compute P(A and B) — intersection\nintersection_AB = None\nprob_AB = None\n\n# TODO: Compute P(A or B) — union\nunion_AB = None\nprob_A_or_B = None\n\n# TODO: Verify: P(A or B) = P(A) + P(B) - P(A and B)\ninclusion_exclusion = None\n\nprint(f\"Sample space size: {total_outcomes}\")\nprint(f\"P(sum=7) = {prob_A:.4f}\")\nprint(f\"P(doubles) = {prob_B:.4f}\")\nprint(f\"P(sum>9) = {prob_C:.4f}\")\nprint(f\"P(A and B) = {prob_AB:.4f}\")\nprint(f\"P(A or B) = {prob_A_or_B:.4f}\")\nprint(f\"Inclusion-exclusion check: {inclusion_exclusion:.4f}\")\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:numpy",
+      "must_include:itertools",
+      "must_include:product"
+    ]
+  }
+}

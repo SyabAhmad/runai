@@ -1,0 +1,7 @@
+{
+  "mission_09": [
+    "Outer CV: cross_val_score(GridSearchCV(...), X, y, cv=5) creates nested CV.",
+    "Inner CV: GridSearchCV handles hyperparameter tuning within each outer fold.",
+    "Compare nested vs non-nested scores to quantify optimistic bias."
+  ]
+}

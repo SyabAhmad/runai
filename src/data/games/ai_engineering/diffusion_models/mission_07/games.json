@@ -1,0 +1,20 @@
+{
+  "title": "DDIM Sampling (Faster Generation)",
+  "id": "mission_07",
+  "type": "ai_code",
+  "xpReward": 110,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "# Diffusion Models Mission 07: DDIM Sampling\n#\n# DDIM (Denoising Diffusion Implicit Models) generates images in 20-50 steps\n# instead of 1000, by using a deterministic sampling process.\n#\n# DDIM reverse step:\n# x_{t-1} = sqrt(alpha_bar_{t-1}) * (x_t - sqrt(1-alpha_bar_t)*epsilon)/sqrt(alpha_bar_t)\n#         + sqrt(1 - alpha_bar_{t-1} - sigma_t^2) * epsilon + sigma_t * z\n#\n# For deterministic DDIM: sigma_t = 0\n#\n# Your goal: Implement ddim_sampling(model, num_steps, alpha_bar, img_shape)\n#   1. Start from random noise x_T\n#   2. For each step, predict noise and apply DDIM formula\n#   3. Return generated image\n\nimport numpy as np\n\ndef ddim_sampling(model, num_steps, alpha_bar, img_shape):\n    # TODO: Initialize x_T as random noise\n    # TODO: Loop through timesteps (subsampled)\n    # TODO: Apply DDIM reverse formula\n    # TODO: Return final image\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def ddim_sampling",
+      "must_include:alpha_bar",
+      "must_include:np.random",
+      "must_include:for",
+      "must_include:return"
+    ]
+  }
+}

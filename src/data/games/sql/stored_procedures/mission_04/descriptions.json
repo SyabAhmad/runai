@@ -1,0 +1,3 @@
+{
+  "mission_04": "Transactions ensure that a group of operations either all succeed or all fail, maintaining data consistency. The ACID properties (Atomicity, Consistency, Isolation, Durability) guarantee that partial updates never leave the database in an inconsistent state. Financial transfers are the classic example: you must never debit one account without crediting another."
+}

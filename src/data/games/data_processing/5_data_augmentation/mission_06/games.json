@@ -1,0 +1,20 @@
+{
+  "title": "Mixup Data Augmentation",
+  "id": "mission_06",
+  "type": "ai_code",
+  "xpReward": 85,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import numpy as np\nfrom sklearn.datasets import make_classification\n\n# TODO: Implement the mixup augmentation function\n# Mixup creates new samples by linear interpolation:\n# x_new = lambda * x_i + (1 - lambda) * x_j\n# y_new = lambda * y_i + (1 - lambda) * y_j\n# where lambda is sampled from Beta(alpha, alpha)\n\ndef mixup(X, y, alpha=0.2):\n    # TODO: Sample lambda from Beta distribution using np.random.beta\n    # TODO: Create shuffled indices for pairing samples\n    # TODO: Compute mixed features and labels\n    # TODO: Return mixed X and y\n    pass\n\n# TODO: Generate a classification dataset\n# TODO: Apply mixup with alpha=0.2\n# TODO: Verify the mixed samples are convex combinations of originals\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:np.random.beta",
+      "must_include:shuffle",
+      "must_include:permutation",
+      "must_include:lambda",
+      "must_include:alpha"
+    ]
+  }
+}

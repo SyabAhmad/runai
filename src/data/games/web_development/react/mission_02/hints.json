@@ -1,0 +1,7 @@
+{
+  "mission_02": [
+    "Use className with template literals: className={`btn btn-${variant} btn-${size} ${className || ''}`} to combine variant classes.",
+    "The children prop contains whatever is placed between opening and closing tags: <Modal>content here</Modal> makes children = 'content here'.",
+    "Spread props with {...props} to forward onClick, disabled, and other attributes to the underlying <button> element."
+  ]
+}

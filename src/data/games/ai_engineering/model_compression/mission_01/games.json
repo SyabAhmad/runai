@@ -1,0 +1,20 @@
+{
+  "title": "Weight Pruning",
+  "id": "mission_01",
+  "type": "ai_code",
+  "xpReward": 70,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "# Model Compression Mission 01: Weight Pruning\n#\n# Pruning removes unimportant weights from a neural network to reduce size.\n# Unstructured pruning: remove individual weights below a threshold.\n# Structured pruning: remove entire neurons, channels, or layers.\n#\n# Magnitude pruning: remove weights with smallest absolute values.\n# Target sparsity: fraction of weights to remove (e.g., 50%, 90%).\n#\n# Your goal: implement magnitude_pruning(weights, sparsity=0.5)\n#   1. Flatten weights to find threshold\n#   2. Compute threshold at sparsity percentile\n#   3. Zero out weights below threshold\n#   4. Return pruned weights and mask\n\nimport numpy as np\n\ndef magnitude_pruning(weights, sparsity=0.5):\n    # TODO: Find threshold\n    # TODO: Create mask\n    # TODO: Apply mask\n    # TODO: Return pruned weights\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def magnitude_pruning",
+      "must_include:threshold",
+      "must_include:mask",
+      "must_include:sparsity",
+      "must_include:return"
+    ]
+  }
+}

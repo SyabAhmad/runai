@@ -1,0 +1,19 @@
+{
+  "title": "Partial Indexes for Filtered Data",
+  "id": "mission_07",
+  "type": "ai_code",
+  "xpReward": 90,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "-- Partial Indexes: Index only a subset of rows\n-- The orders table has columns: id, customer_id, status, total, created_at\n-- TODO: Create a partial index only for orders with status = 'pending'\n-- This saves space and speeds up queries for pending orders\n\n-- Write your CREATE INDEX with a WHERE clause:\n\n-- Test with EXPLAIN:\n\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:CREATE INDEX",
+      "must_include:WHERE",
+      "must_include:orders",
+      "must_include:status"
+    ]
+  }
+}

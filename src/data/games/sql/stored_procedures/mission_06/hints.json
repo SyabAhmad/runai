@@ -1,0 +1,7 @@
+{
+  "mission_06": [
+    "Check IF NEW.salary <= 0 OR NEW.salary > 500000.",
+    "Use RAISE EXCEPTION 'Invalid salary: %', NEW.salary to reject the row.",
+    "Create a BEFORE INSERT OR UPDATE trigger FOR EACH ROW."
+  ]
+}

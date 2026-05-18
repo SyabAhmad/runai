@@ -1,0 +1,6 @@
+{
+  "title": "Numerical Methods",
+  "description": "Learn root finding algorithms, numerical integration techniques, interpolation methods, numerical differentiation, solving linear systems, eigenvalue computation, ODE solvers, Monte Carlo methods, numerical stability, and error analysis.",
+  "difficulty": "hard",
+  "order": 8
+}

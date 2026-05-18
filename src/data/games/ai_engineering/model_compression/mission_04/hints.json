@@ -1,0 +1,7 @@
+{
+  "mission_04": [
+    "SVD: `U, S, Vt = np.linalg.svd(W, full_matrices=False)`.",
+    "Truncate: `U_r = U[:, :r]`, `S_r = S[:r]`, `V_r = Vt[:r, :]`.",
+    "Reconstruct: `W_r = U_r @ np.diag(S_r) @ V_r`, error = `np.mean((W - W_r)**2)`."
+  ]
+}

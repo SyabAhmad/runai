@@ -1,0 +1,20 @@
+{
+  "title": "Multimodal Fusion Techniques",
+  "id": "mission_05",
+  "type": "ai_code",
+  "xpReward": 90,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "# Multimodal AI Mission 05: Multimodal Fusion\n#\n# Fusion combines information from multiple modalities (text, image, audio).\n# Common techniques:\n# - Early fusion: Concatenate raw features\n# - Late fusion: Combine predictions\n# - Cross-attention: Each modality attends to others\n# - Tensor fusion: Outer product captures interactions\n#\n# Your goal: Implement multimodal_fusion(modalities, method='cross_attention')\n#   1. Encode each modality\n#   2. Apply fusion method\n#   3. Return fused representation\n\nimport numpy as np\n\ndef multimodal_fusion(modalities, method='cross_attention'):\n    # TODO: Encode each modality\n    # TODO: Apply fusion\n    # TODO: Return fused output\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def multimodal_fusion",
+      "must_include:fusion",
+      "must_include:attention",
+      "must_include:modality",
+      "must_include:return"
+    ]
+  }
+}

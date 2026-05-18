@@ -1,16 +1,20 @@
 {
-  "title": "ai agents Mission 8",
+  "title": "Multi-Agent System",
+  "id": "mission_08",
+  "type": "ai_code",
+  "xpReward": 140,
+  "difficulty": "hard",
   "initialState": {
-    "content": "def solve_mission_8():\n    # TODO: Implement solution for ai_agents mission 8\n    return \"Mission 8 completed\"\\n    # TODO: Complete the implementation"
+    "content": "# Agent Mission 08: Multi-Agent System\n#\n# Complex tasks are solved by multiple agents working\n# together. A coordinator agent delegates work to\n# specialist agents and combines their results.\n#\n# Specialist agents you'll manage:\n#   - math_agent(expr): evaluates math expressions\n#   - weather_agent(city): returns weather\n#   - greet_agent(name): returns a greeting\n#\n# Your goal: Build a coordinator_agent(task) that:\n#   1. Analyzes the task and decides which specialist to use\n#   2. Calls the specialist agent\n#   3. If multiple specialists are needed, call them in sequence\n#   4. Returns combined results\n#\n# Tasks can be:\n#   - \"calc: 2 + 2\"                   -> just math\n#   - \"weather: London\"               -> just weather\n#   - \"greet: Alice\"                  -> just greet\n#   - \"weather: London and calc: 2+2\" -> BOTH (combine results!)\n#   - anything else                   -> \"I don't know how to handle that\"\n#\n# Return format: {\"task\": task, \"results\": [...], \"status\": \"ok\" or \"error\"}\n\ndef math_agent(expr):\n    return {\"agent\": \"math\", \"result\": eval(expr)}\n\ndef weather_agent(city):\n    return {\"agent\": \"weather\", \"result\": f\"{city}: 22C, sunny\"}\n\ndef greet_agent(name):\n    return {\"agent\": \"greet\", \"result\": f\"Hello {name}, how can I help?\"}\n\ndef coordinator_agent(task):\n    # TODO: Detect which specialists are needed by checking prefixes\n    #       For combined tasks like \"weather:X and calc:Y\":\n    #         - Split by \" and \"\n    #         - Route each part to the right specialist\n    #         - Collect all results\n    #       For single tasks: just call one specialist\n    #       Return the combined response\n    pass"
   },
   "validation": {
     "type": "ai_code",
     "rules": [
-      "must_include:def",
-      "must_include:return"
+      "must_include:def coordinator_agent",
+      "must_include:math_agent",
+      "must_include:weather_agent",
+      "must_include:greet_agent",
+      "must_include:results"
     ]
-  },
-  "id": "mission_08",
-  "type": "ai_code",
-  "xpReward": 130
+  }
 }

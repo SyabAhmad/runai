@@ -1,0 +1,21 @@
+{
+  "title": "Robust Statistics and Outlier-Resistant Modeling",
+  "id": "mission_08",
+  "type": "ai_code",
+  "xpReward": 100,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "import numpy as np\nimport pandas as pd\nfrom sklearn.linear_model import LinearRegression, HuberRegressor, RANSACRegressor\nfrom sklearn.metrics import mean_squared_error, r2_score\n\n# TODO: Create a regression dataset with outliers in the response variable\n\n# TODO: Compare three regression approaches:\n# 1. Ordinary Least Squares (sensitive to outliers)\n# 2. Huber Regression (robust to outliers using Huber loss)\n# 3. RANSAC (Random Sample Consensus, fits to inliers only)\n\n# TODO: Evaluate each model:\n# - MSE on all data\n# - MSE on inlier data only\n# - R-squared score\n\n# TODO: Compare the fitted coefficients and intercepts\n\ndef robust_regression_comparison():\n    # TODO: Create data with outliers\n    # TODO: Fit OLS, Huber, and RANSAC models\n    # TODO: Compare performance metrics\n    pass\n\n# TODO: Run the comparison\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:LinearRegression",
+      "must_include:HuberRegressor",
+      "must_include:RANSACRegressor",
+      "must_include:mean_squared_error",
+      "must_include:r2_score",
+      "must_include:fit"
+    ]
+  }
+}

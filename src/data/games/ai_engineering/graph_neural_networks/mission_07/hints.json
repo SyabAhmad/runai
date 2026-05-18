@@ -1,0 +1,7 @@
+{
+  "mission_07": [
+    "Initialize node_weights[nt] as np.random.randn(input_dim[nt], hidden_dim) * sqrt(2/(fan_in+fan_out)) for each node type",
+    "For message passing on edge type (src_type, rel, dst_type): H_new[dst] += H[src] @ self.edge_weights[edge_type], then aggregate by summing over all source nodes connected to each target",
+    "When aggregating across edge types, you can use mean: H_agg = sum(H_by_type.values()) / len(H_by_type), or learn type-specific attention weights"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "title": "Build Saliency Maps for CNNs",
+  "id": "mission_03",
+  "type": "ai_code",
+  "xpReward": 70,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "import numpy as np\n\n\nclass SimpleCNN:\n    \"\"\"A simple 2-layer CNN for image classification.\"\"\"\n\n    def __init__(self, input_size=28, n_classes=10):\n        self.input_size = input_size\n        self.n_classes = n_classes\n        # TODO: Initialize convolutional weights (5x5 kernel, 1 input channel, 8 output channels)\n        # Hint: self.conv_weights = np.random.randn(8, 1, 5, 5) * 0.1\n        self.conv_weights = ???\n        self.conv_bias = np.zeros(8)\n        # TODO: Initialize fully connected weights (8 * 24 * 24 -> n_classes)\n        self.fc_weights = np.random.randn(8 * 24 * 24, n_classes) * 0.01\n        self.fc_bias = np.zeros(n_classes)\n\n    def relu(self, x):\n        return np.maximum(0, x)\n\n    def relu_derivative(self, x):\n        return (x > 0).astype(float)\n\n    def conv2d(self, x, weights, bias):\n        \"\"\"Simple 2D convolution (single channel input).\"\"\"\n        n_filters, _, kh, kw = weights.shape\n        h, w = x.shape\n        out_h = h - kh + 1\n        out_w = w - kw + 1\n        output = np.zeros((n_filters, out_h, out_w))\n        for f in range(n_filters):\n            output[f] = bias[f]\n            for i in range(out_h):\n                for j in range(out_w):\n                    output[f, i, j] += np.sum(x[i:i+kh, j:j+kw] * weights[f, 0])\n        return output\n\n    def forward(self, x):\n        \"\"\"Forward pass through the network.\"\"\"\n        # TODO: Apply convolution + ReLU\n        self.conv_out = self.conv2d(x, self.conv_weights, self.conv_bias)\n        self.conv_activated = ???\n\n        # TODO: Flatten and apply fully connected layer\n        self.flat = self.conv_activated.flatten()\n        logits = self.flat @ self.fc_weights + self.fc_bias\n        return logits\n\n    def compute_saliency(self, x, target_class):\n        \"\"\"Compute saliency map using input gradients.\"\"\"\n        # TODO: Forward pass\n        logits = ???\n\n        # TODO: Create one-hot gradient for target class\n        d_logits = np.zeros(self.n_classes)\n        d_logits[target_class] = 1.0\n\n        # TODO: Backprop through FC layer\n        d_flat = self.fc_weights @ d_logits\n        d_conv_activated = d_flat.reshape(self.conv_activated.shape)\n\n        # TODO: Backprop through ReLU\n        d_conv_out = d_conv_activated * ???\n\n        # TODO: Backprop through convolution to get input gradient\n        saliency = self._conv_backward_input(x, d_conv_out, self.conv_weights)\n\n        # TODO: Return absolute saliency map\n        return ???\n\n    def _conv_backward_input(self, x, d_out, weights):\n        \"\"\"Compute gradient w.r.t. input for convolution.\"\"\"\n        n_filters, _, kh, kw = weights.shape\n        h, w = x.shape\n        d_input = np.zeros_like(x)\n        _, out_h, out_w = d_out.shape\n        for f in range(n_filters):\n            for i in range(out_h):\n                for j in range(out_w):\n                    d_input[i:i+kh, j:j+kw] += d_out[f, i, j] * weights[f, 0]\n        return d_input\n\n\nif __name__ == \"__main__\":\n    np.random.seed(42)\n    model = SimpleCNN()\n    x = np.random.randn(28, 28)\n    saliency = model.compute_saliency(x, target_class=3)\n    print(\"Saliency map shape:\", saliency.shape)\n    print(\"Max saliency:\", np.max(np.abs(saliency)))\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:np.random.randn",
+      "must_include:np.maximum",
+      "must_include:relu_derivative",
+      "must_include:conv2d",
+      "must_include:np.abs",
+      "must_include:saliency"
+    ]
+  }
+}

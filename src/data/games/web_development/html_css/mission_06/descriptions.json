@@ -1,0 +1,3 @@
+{
+  "mission_06": "Responsive design ensures your website works beautifully on every device. The mobile-first approach means you write base styles for small screens first, then use min-width media queries to progressively enhance the layout for larger screens. In this mission, you will add breakpoints at 768px (tablet) and 1024px (desktop), transforming a single-column mobile layout into a multi-column desktop experience. The navigation shows a hamburger button on mobile and full links on larger screens."
+}

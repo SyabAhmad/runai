@@ -1,0 +1,3 @@
+{
+  "mission_01": "CREATE OR REPLACE FUNCTION calculate_total_with_tax(\n    amount NUMERIC,\n    tax_rate NUMERIC\n)\nRETURNS NUMERIC\nLANGUAGE plpgsql\nAS $$\nBEGIN\n    RETURN amount + (amount * tax_rate);\nEND;\n$$;"
+}

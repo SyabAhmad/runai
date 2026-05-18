@@ -1,0 +1,18 @@
+{
+  "title": "Channel Capacity",
+  "id": "mission_05",
+  "type": "ai_code",
+  "xpReward": 85,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import numpy as np\n\ndef binary_symmetric_channel_capacity(crossover_prob):\n    \"\"\"\n    Calculate capacity of Binary Symmetric Channel (BSC)\n    C = 1 - H(p) where H(p) is binary entropy\n    crossover_prob: probability of bit flip (p)\n    \"\"\"\n    # TODO: Compute binary entropy H(p) = -p*log2(p) - (1-p)*log2(1-p)\n    if crossover_prob == 0 or crossover_prob == 1:\n        return 1.0\n    h_p = ...\n    \n    # TODO: Channel capacity\n    capacity = ...\n    \n    return capacity\n\ndef channel_capacity_blahut_arimoto(channel_matrix, max_iter=1000, tol=1e-8):\n    \"\"\"\n    Compute channel capacity using Blahut-Arimoto algorithm\n    channel_matrix: P(Y|X) matrix where rows are inputs, columns are outputs\n    Returns: (capacity, optimal_input_distribution)\n    \"\"\"\n    n_inputs, n_outputs = channel_matrix.shape\n    \n    # TODO: Initialize input distribution uniformly\n    r = ...\n    \n    for iteration in range(max_iter):\n        # TODO: Compute output distribution q(y) = sum_x r(x) * P(y|x)\n        q = ...\n        \n        # TODO: Compute conditional probabilities P(x|y)\n        # Using Bayes' rule: P(x|y) = r(x)*P(y|x) / q(y)\n        q_safe = np.maximum(q, 1e-15)\n        p_x_given_y = ...\n        \n        # TODO: Update input distribution\n        # r_new(x) = r(x) * prod_y [P(x|y)]^P(y|x)\n        log_update = ...\n        r_new = r * np.exp(np.sum(channel_matrix * log_update, axis=1))\n        r_new = r_new / np.sum(r_new)\n        \n        # TODO: Check convergence\n        if np.max(np.abs(r_new - r)) < tol:\n            break\n        r = r_new\n    \n    # TODO: Compute final capacity\n    q = r @ channel_matrix\n    capacity = ...\n    \n    return capacity, r\n\n# Test BSC\nprint(f\"BSC capacity (p=0.1): {binary_symmetric_channel_capacity(0.1):.4f} bits\")\nprint(f\"BSC capacity (p=0.5): {binary_symmetric_channel_capacity(0.5):.4f} bits\")\n\n# Test Blahut-Arimoto\nchannel = np.array([[0.9, 0.1], [0.1, 0.9]])\ncap, opt_r = channel_capacity_blahut_arimoto(channel)\nprint(f\"Channel capacity: {cap:.4f} bits\")"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:capacity",
+      "must_include:blahut",
+      "must_include:numpy"
+    ]
+  }
+}

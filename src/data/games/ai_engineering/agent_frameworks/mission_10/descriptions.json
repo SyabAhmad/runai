@@ -1,0 +1,3 @@
+{
+  "mission_10": "**Production agent pipelines** combine everything you've learned into a complete, deployable system. A production agent needs:\n\n1. **Tool registry** — what the agent can do\n2. **Memory system** — short-term context + long-term retrieval\n3. **Safety guardrails** — input, action, and output filters\n4. **Orchestration** — ReAct loop or state machine\n5. **Evaluation** — metrics tracking for monitoring\n6. **Logging** — full trace for debugging and auditing\n\nThe pipeline:\n```\nInput → Guardrails → Memory Retrieval → Agent (ReAct) → Guardrails → Memory Store → Output\n```\n\nThis is how ChatGPT, Claude, and enterprise AI agents work in production. Every layer adds reliability, safety, and observability."
+}

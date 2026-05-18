@@ -1,0 +1,3 @@
+{
+  "mission_04": "**METEOR** (Metric for Evaluation of Translation with Explicit ORdering) addresses BLEU's limitations.\n\n**Improvements over BLEU**:\n- **Stemming**: 'running' matches 'run'\n- **Synonyms**: 'big' matches 'large' (via WordNet)\n- **Alignment**: Matches words in order, penalizes fragmentation\n- **Harmonic mean**: Balances precision and recall\n\n**Formula**:\n```\nF_mean = (10 * P * R) / (R + 9 * P)  # weights recall higher\npenalty = 0.5 * (chunks / unigrams)^3  # fragmentation penalty\nMETEOR = F_mean * (1 - penalty)\n```\n\n**Chunks**: Consecutive matched sequences. Fewer chunks = better alignment.\n\n**Use case**: Better correlation with human judgment than BLEU for translation and summarization."
+}

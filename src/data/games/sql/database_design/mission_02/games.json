@@ -1,0 +1,19 @@
+{
+  "title": "Second Normal Form (2NF): Eliminate Partial Dependencies",
+  "id": "mission_02",
+  "type": "ai_code",
+  "xpReward": 60,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "-- Second Normal Form: Eliminate partial dependencies\n-- The BAD table has a composite key but non-key columns depend on only part of it\n-- TODO: Split the order_items table to remove partial dependencies\n\n-- BAD design (violates 2NF):\n-- CREATE TABLE order_items (\n--     order_id INT,\n--     product_id INT,\n--     product_name TEXT,  -- depends only on product_id\n--     product_price NUMERIC,  -- depends only on product_id\n--     quantity INT,\n--     PRIMARY KEY (order_id, product_id)\n-- );\n\n-- TODO: Write the normalized schema:\n\nCREATE TABLE products (\n    -- TODO: Define columns\n);\n\nCREATE TABLE order_items (\n    -- TODO: Define columns with foreign keys\n);\n\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:CREATE TABLE",
+      "must_include:PRIMARY KEY",
+      "must_include:REFERENCES",
+      "must_include:products"
+    ]
+  }
+}

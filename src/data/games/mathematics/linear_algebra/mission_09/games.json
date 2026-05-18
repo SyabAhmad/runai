@@ -1,0 +1,19 @@
+{
+  "title": "Matrix Decompositions",
+  "id": "mission_09",
+  "type": "ai_code",
+  "xpReward": 110,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "import numpy as np\nfrom scipy import linalg\n\n# TODO: Create a symmetric positive definite matrix A\nA = None\n\n# TODO: Perform Cholesky decomposition: A = L @ L^T\nL = None\n\n# TODO: Verify the Cholesky decomposition\ncholesky_check = None\n\n# TODO: Solve Ax = b using Cholesky decomposition (more efficient than general solve)\nb = np.array([1, 2, 3])\n# Step 1: Solve L @ y = b (forward substitution)\ny = None\n# Step 2: Solve L^T @ x = y (backward substitution)\nx_cholesky = None\n\n# TODO: Solve the same system using scipy's general solver for comparison\nx_scipy = None\n\n# TODO: Perform LU decomposition\nP_lu, L_lu, U_lu = None, None, None\n\n# TODO: Verify LU: P @ A = L @ U\nlu_check = None\n\n# TODO: Compute the condition number using SVD\nU_svd, s_svd, Vt_svd = np.linalg.svd(A)\ncondition = None\n\nprint(f\"Cholesky factor L:\\n{L}\")\nprint(f\"Cholesky solve: {x_cholesky}\")\nprint(f\"SciPy solve: {x_scipy}\")\nprint(f\"LU decomposition verified: {np.allclose(lu_check, A)}\")\nprint(f\"Condition number: {condition:.4f}\")\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:numpy",
+      "must_include:scipy",
+      "must_include:cholesky",
+      "must_include:lu_factor"
+    ]
+  }
+}

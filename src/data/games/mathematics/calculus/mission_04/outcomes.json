@@ -1,0 +1,3 @@
+{
+  "mission_04": "Excellent! You have computed the Jacobian matrix of a vector-valued function and verified it numerically. The Jacobian of F(x,y,z) = [xy + z^2, x^2 - yz] at (1,2,3) is [[2, 1, 6], [2, -3, -2]]. You also computed the gradient of a scalar function, which is a special case of the Jacobian. The Jacobian captures how each output changes with respect to each input — this is exactly what backpropagation computes layer by layer in a neural network. The numerical verification confirms the analytical result to high precision."
+}

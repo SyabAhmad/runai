@@ -1,0 +1,3 @@
+{
+  "mission_01": "LIME (Local Interpretable Model-agnostic Explanations) is a technique that explains individual predictions by approximating the complex model with a simple interpretable model locally. The key idea is to perturb the input sample, observe how predictions change, and fit a weighted linear model where closer samples get higher weights. In this mission, you implement LIME for text classification by randomly removing words from the input, computing cosine distances between the original and perturbed samples, applying an exponential kernel for weighting, and fitting a Ridge regression to identify which words most influenced the prediction. This technique is model-agnostic and works with any black-box classifier."
+}

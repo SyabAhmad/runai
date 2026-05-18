@@ -1,0 +1,3 @@
+{
+  "mission_09": "**State machines** are the most reliable way to orchestrate complex agent workflows. Instead of letting the LLM decide what to do next (which can be unpredictable), you define explicit states and transitions.\n\nThe pattern:\n1. **Define states** — each state has an action function and transition rules\n2. **Start** at the initial state\n3. **Execute** the state's action\n4. **Transition** to the next state based on the result (success → write, fail → retry)\n5. **Terminate** when reaching a state with no outgoing transitions\n\nThis is how production agents handle complex workflows like: research → draft → review → publish. State machines guarantee deterministic behavior while still allowing LLM-powered actions at each step."
+}

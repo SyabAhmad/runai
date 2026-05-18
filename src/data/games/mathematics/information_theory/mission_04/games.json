@@ -1,0 +1,18 @@
+{
+  "title": "Mutual Information",
+  "id": "mission_04",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import numpy as np\n\ndef mutual_information(joint_probs):\n    \"\"\"\n    Calculate mutual information I(X;Y) = sum(p(x,y) * log(p(x,y)/(p(x)*p(y))))\n    joint_probs: 2D array of joint probabilities P(X,Y)\n    \"\"\"\n    # TODO: Compute marginal distributions\n    p_x = ...\n    p_y = ...\n    \n    # TODO: Compute outer product of marginals P(X)*P(Y)\n    p_independent = ...\n    \n    # TODO: Compute mutual information\n    # Filter out zero entries to avoid log(0)\n    mask = joint_probs > 0\n    mi = ...\n    \n    return mi\n\ndef normalized_mutual_information(joint_probs):\n    \"\"\"\n    Calculate normalized mutual information NMI = I(X;Y) / sqrt(H(X)*H(Y))\n    \"\"\"\n    # TODO: Compute entropies H(X) and H(Y)\n    p_x = joint_probs.sum(axis=1)\n    p_y = joint_probs.sum(axis=0)\n    h_x = ...\n    h_y = ...\n    \n    # TODO: Compute MI and normalize\n    mi = mutual_information(joint_probs)\n    nmi = ...\n    \n    return nmi\n\ndef pointwise_mi(joint_probs):\n    \"\"\"\n    Calculate pointwise mutual information for each (x,y) pair\n    PMI(x,y) = log(p(x,y) / (p(x)*p(y)))\n    \"\"\"\n    p_x = joint_probs.sum(axis=1, keepdims=True)\n    p_y = joint_probs.sum(axis=0, keepdims=True)\n    p_independent = p_x @ p_y\n    \n    # TODO: Compute PMI matrix\n    pmi = ...\n    \n    return pmi\n\n# Test with correlated variables\njoint = np.array([[0.4, 0.1], [0.1, 0.4]])\nprint(f\"Mutual Information: {mutual_information(joint):.4f} bits\")\nprint(f\"Normalized MI: {normalized_mutual_information(joint):.4f}\")"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:mutual_information",
+      "must_include:marginal",
+      "must_include:numpy"
+    ]
+  }
+}

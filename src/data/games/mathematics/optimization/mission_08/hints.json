@@ -1,0 +1,7 @@
+{
+  "mission_08": [
+    "The quadratic objective is: 0.5 * x^T @ P @ x + q^T @ x",
+    "The gradient is: P @ x + q",
+    "Convert G*x <= h to inequality constraints: h[i] - G[i] @ x >= 0"
+  ]
+}

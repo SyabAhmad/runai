@@ -1,0 +1,7 @@
+{
+  "mission_05": [
+    "BSC capacity: C = 1 - H(p) = 1 + p*log2(p) + (1-p)*log2(1-p)",
+    "Blahut-Arimoto iteratively optimizes the input distribution to maximize mutual information",
+    "The update rule uses: r_new(x) proportional to r(x) * exp(sum_y P(y|x) * log(P(x|y)))"
+  ]
+}

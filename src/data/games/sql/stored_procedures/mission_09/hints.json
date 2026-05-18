@@ -1,0 +1,7 @@
+{
+  "mission_09": [
+    "For INSERT (TG_OP = 'INSERT'), UPDATE customers SET order_count = order_count + 1 WHERE id = NEW.customer_id.",
+    "For DELETE, UPDATE customers SET order_count = order_count - 1 WHERE id = OLD.customer_id.",
+    "Create two triggers: one AFTER INSERT and one AFTER DELETE on orders."
+  ]
+}

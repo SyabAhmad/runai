@@ -1,0 +1,7 @@
+{
+  "mission_07": [
+    "Run: `for tc in test_cases: result = agent(tc.input)`.",
+    "Accuracy: `correct = sum(1 for r, e in zip(results, expected) if normalize(r) == normalize(e))`.",
+    "Tool call rate: `sum(1 for r in results if r.get('tool')) / len(results)`."
+  ]
+}

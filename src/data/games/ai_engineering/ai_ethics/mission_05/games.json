@@ -1,0 +1,20 @@
+{
+  "title": "Adversarial Robustness Testing",
+  "id": "mission_05",
+  "type": "ai_code",
+  "xpReward": 90,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "# AI Ethics Mission 05: Adversarial Robustness\n#\n# Adversarial examples are inputs designed to fool ML models.\n# FGSM (Fast Gradient Sign Method): x_adv = x + epsilon * sign(grad_x loss)\n#\n# Small, imperceptible perturbations can change predictions completely.\n# This is a safety concern for autonomous vehicles, medical AI, etc.\n#\n# Your goal: implement fgsm_attack(model, x, label, epsilon=0.01)\n#   1. Compute loss gradient w.r.t. input\n#   2. Take sign of gradient\n#   3. Add epsilon * sign to input\n#   4. Return adversarial example\n\nimport numpy as np\n\ndef fgsm_attack(model, x, label, epsilon=0.01):\n    # TODO: Compute gradient\n    # TODO: Take sign\n    # TODO: Add perturbation\n    # TODO: Return adversarial input\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def fgsm_attack",
+      "must_include:gradient",
+      "must_include:sign",
+      "must_include:epsilon",
+      "must_include:return"
+    ]
+  }
+}

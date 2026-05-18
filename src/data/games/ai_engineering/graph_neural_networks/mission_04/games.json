@@ -1,0 +1,22 @@
+{
+  "mission_04": {
+    "title": "Node Classification with GCN",
+    "id": "mission_04",
+    "type": "ai_code",
+    "xpReward": 80,
+    "difficulty": "medium",
+    "initialState": {
+      "content": "import numpy as np\n\n\nclass GCNNodeClassifier:\n    \"\"\"Two-layer GCN for node classification.\n    \n    TODO: Initialize weight matrices W1 and W2\n    TODO: Implement forward pass: Z = A_norm @ ReLU(A_norm @ X @ W1) @ W2\n    TODO: Implement softmax for output probabilities\n    TODO: Implement cross-entropy loss\n    TODO: Implement gradient descent update\n    \"\"\"\n    \n    def __init__(self, input_dim, hidden_dim, num_classes):\n        # TODO: Initialize weights with Xavier initialization\n        self.W1 = None\n        self.W2 = None\n    \n    def forward(self, A_norm, X):\n        \"\"\"Forward pass through two-layer GCN.\"\"\"\n        # TODO: First GCN layer with ReLU\n        self.H1 = None\n        \n        # TODO: Second GCN layer (no activation)\n        self.Z = None\n        \n        return self.Z\n    \n    def softmax(self, logits):\n        \"\"\"Compute softmax probabilities.\"\"\"\n        # TODO: Numerically stable softmax\n        exp_logits = None\n        return exp_logits / exp_logits.sum(axis=1, keepdims=True)\n    \n    def cross_entropy_loss(self, logits, labels, mask):\n        \"\"\"Compute cross-entropy loss for labeled nodes.\"\"\"\n        # TODO: Apply softmax\n        probs = self.softmax(logits)\n        \n        # TODO: Compute loss only for labeled nodes (using mask)\n        n_labeled = np.sum(mask)\n        loss = None\n        \n        return loss\n    \n    def train_step(self, A_norm, X, labels, mask, lr=0.01):\n        \"\"\"One training step with gradient descent.\"\"\"\n        # TODO: Forward pass\n        logits = self.forward(A_norm, X)\n        \n        # TODO: Compute loss\n        loss = self.cross_entropy_loss(logits, labels, mask)\n        \n        # TODO: Compute gradients (numerical or analytical)\n        # For simplicity, implement analytical gradients\n        probs = self.softmax(logits)\n        \n        # TODO: Backpropagate and update weights\n        # dZ = probs - one_hot(labels) (only for labeled nodes)\n        \n        return loss\n"
+    },
+    "validation": {
+      "type": "ai_code",
+      "rules": [
+        "must_include:Xavier",
+        "must_include:softmax",
+        "must_include:cross_entropy",
+        "must_include:backprop",
+        "must_include:A_norm @ X @ W"
+      ]
+    }
+  }
+}

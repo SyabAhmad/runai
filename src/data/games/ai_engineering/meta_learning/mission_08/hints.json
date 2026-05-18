@@ -1,0 +1,7 @@
+{
+  "mission_08": [
+    "For leave-one-task-out: iterate over tasks, for each task i, train on tasks[:i] + tasks[i+1:], evaluate on tasks[i]. Return list of scores and their mean.",
+    "For stratified k-fold: group task indices by label. For each group, split into k roughly equal parts. Combine the j-th part from each group to form fold j.",
+    "For nested CV: outer loop splits tasks into outer_k folds. For each outer fold, split remaining tasks into inner_k folds. Train with each inner hyperparameter setting, select best, evaluate on outer test fold. For augmentation, create modified tasks by subsampling support sets or adding noise to features."
+  ]
+}

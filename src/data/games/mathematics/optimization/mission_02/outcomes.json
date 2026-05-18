@@ -1,0 +1,3 @@
+{
+  "mission_02": "Excellent! You have implemented momentum-based gradient descent. This technique is crucial for training deep neural networks efficiently, as it helps navigate through ravines and saddle points much faster than vanilla gradient descent. The momentum term creates a form of inertia that smooths the optimization path."
+}

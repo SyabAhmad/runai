@@ -1,0 +1,3 @@
+{
+  "mission_09": "def state_machine_agent(states, initial_state, input):\n    current = initial_state\n    trace = []\n    context = input\n    max_steps = 50\n    for step in range(max_steps):\n        if current not in states:\n            break\n        state = states[current]\n        trace.append({\"state\": current, \"step\": step})\n        result = state[\"action\"](context)\n        context = result.get(\"output\", context)\n        transitions = state.get(\"transitions\", {})\n        next_state = transitions.get(result.get(\"status\", \"default\"))\n        if next_state is None:\n            break\n        current = next_state\n    return {\"final_output\": context, \"trace\": trace, \"steps\": step + 1}"
+}

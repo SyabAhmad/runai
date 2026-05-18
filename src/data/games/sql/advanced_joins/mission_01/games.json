@@ -1,0 +1,19 @@
+{
+  "title": "Self Join: Employee Hierarchy",
+  "id": "mission_01",
+  "type": "ai_code",
+  "xpReward": 60,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "-- Self Join: Find employees and their managers\n-- The employees table has columns: id, name, manager_id\n-- TODO: Write a query that returns each employee's name and their manager's name\n-- Use a self join on the employees table\n\nSELECT \nFROM employees e\n\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:JOIN",
+      "must_include:employees",
+      "must_include:manager",
+      "must_include:AS"
+    ]
+  }
+}

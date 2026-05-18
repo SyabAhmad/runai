@@ -1,0 +1,9 @@
+{
+  "mission_09": [
+    "Estimate latency: self.latency = (total_cycles / 300e6) * 1000.",
+    "Check feasibility: return (self.params <= hardware.max_params and self.latency <= hardware.max_latency_ms and self.memory <= hardware.max_memory_mb).",
+    "Predict accuracy: predicted_accuracy = accuracy_predictor(arch).",
+    "Score: score = predicted_accuracy - latency_penalty.",
+    "Pareto: check if no other architecture dominates (better accuracy AND lower latency)."
+  ]
+}

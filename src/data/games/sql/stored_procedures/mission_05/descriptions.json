@@ -1,0 +1,3 @@
+{
+  "mission_05": "EXCEPTION blocks in PL/pgSQL allow you to catch and handle errors gracefully without crashing the entire transaction. You can catch specific error codes like division_by_zero, unique_violation, or foreign_key_violation. Proper error handling makes your database code robust and user-friendly, providing meaningful error messages instead of cryptic system errors."
+}

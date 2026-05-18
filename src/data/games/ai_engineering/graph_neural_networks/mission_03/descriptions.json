@@ -1,0 +1,3 @@
+{
+  "mission_03": "GraphSAGE (Graph Sample and Aggregate) addresses a key limitation of GCNs: the need to process the entire graph at once. Instead, GraphSAGE samples a fixed-size neighborhood for each node and aggregates features from those sampled neighbors. This inductive approach allows the model to generalize to unseen nodes and graphs. The aggregation uses mean pooling over sampled neighbors, concatenates the result with the node's own features, and applies a learned transformation. By sampling fewer neighbors at deeper layers, GraphSAGE controls the receptive field growth and enables efficient mini-batch training on large graphs."
+}

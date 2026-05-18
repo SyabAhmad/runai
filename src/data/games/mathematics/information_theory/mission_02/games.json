@@ -1,0 +1,18 @@
+{
+  "title": "Cross-Entropy Loss",
+  "id": "mission_02",
+  "type": "ai_code",
+  "xpReward": 65,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "import numpy as np\n\ndef cross_entropy(true_probs, predicted_probs):\n    \"\"\"\n    Calculate cross-entropy H(P,Q) = -sum(p(x) * log2(q(x)))\n    true_probs: true probability distribution P\n    predicted_probs: predicted probability distribution Q\n    \"\"\"\n    # TODO: Clip predictions to avoid log(0)\n    q_clipped = np.clip(predicted_probs, 1e-15, 1 - 1e-15)\n    \n    # TODO: Compute cross-entropy\n    ce = ...\n    \n    return ce\n\ndef binary_cross_entropy(true_labels, predictions):\n    \"\"\"\n    Calculate binary cross-entropy for binary classification\n    true_labels: array of 0s and 1s\n    predictions: array of predicted probabilities\n    \"\"\"\n    # TODO: Clip predictions\n    p_clipped = ...\n    \n    # TODO: Compute binary cross-entropy\n    bce = ...\n    \n    return np.mean(bce)\n\ndef categorical_cross_entropy(one_hot_true, predictions):\n    \"\"\"\n    Calculate categorical cross-entropy for multi-class classification\n    one_hot_true: one-hot encoded true labels\n    predictions: predicted probability distribution\n    \"\"\"\n    # TODO: Clip and compute\n    p_clipped = np.clip(predictions, 1e-15, 1 - 1e-15)\n    return ...\n\n# Test cross-entropy\ntrue = np.array([1.0, 0.0, 0.0])\npred = np.array([0.7, 0.2, 0.1])\nprint(f\"Cross-entropy: {cross_entropy(true, pred):.4f}\")\n\n# Test binary cross-entropy\nlabels = np.array([1, 0, 1, 1])\npreds = np.array([0.9, 0.1, 0.8, 0.4])\nprint(f\"Binary CE: {binary_cross_entropy(labels, preds):.4f}\")"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:cross_entropy",
+      "must_include:clip",
+      "must_include:numpy"
+    ]
+  }
+}

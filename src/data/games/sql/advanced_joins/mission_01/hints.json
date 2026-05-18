@@ -1,0 +1,7 @@
+{
+  "mission_01": [
+    "Remember that you need to join the employees table to itself using two different aliases.",
+    "Use a LEFT JOIN so employees without managers (like the CEO) are still included.",
+    "The join condition should match e.manager_id with the manager alias's id column."
+  ]
+}

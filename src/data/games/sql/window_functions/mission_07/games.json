@@ -1,0 +1,19 @@
+{
+  "title": "Running Totals with SUM OVER",
+  "id": "mission_07",
+  "type": "ai_code",
+  "xpReward": 90,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "-- Running Totals: Calculate cumulative sales over time\n-- The daily_sales table has columns: sale_date, amount\n-- TODO: Use SUM() OVER to calculate a running total of sales\n-- Order by sale_date to accumulate chronologically\n\nSELECT \nFROM daily_sales\n\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:SUM",
+      "must_include:OVER",
+      "must_include:ORDER BY",
+      "must_include:ROWS"
+    ]
+  }
+}

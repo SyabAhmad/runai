@@ -1,0 +1,7 @@
+{
+  "mission_02": [
+    "To create G_do(X), make a copy of the graph and remove all edges pointing into X using G.remove_edges_from([(u, v) for u, v in G.in_edges(X)]).",
+    "NetworkX has nx.d_separated(G, set(X), set(Y), set(Z)) for d-separation testing in newer versions.",
+    "Each rule requires a different graph modification: Rule 1 removes edges into X, Rule 2 removes edges into X and Z, Rule 3 removes edges into X and edges out of Z that are not ancestors of W."
+  ]
+}

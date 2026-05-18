@@ -1,0 +1,23 @@
+{
+  "title": "Advanced Animations with Transforms",
+  "id": "mission_09",
+  "type": "ai_code",
+  "xpReward": 110,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "/* TODO: Create a card flip animation using 3D transforms */\n/* TODO: Build a smooth accordion with height animation */\n/* TODO: Implement a parallax scrolling effect */\n/* TODO: Create a morphing shape animation */\n\n/* TODO: Card flip */\n.card-flip {\n  perspective: 1000px;\n  width: 300px;\n  height: 200px;\n}\n\n.card-flip-inner {\n  /* TODO: Add transition and transform-style */\n}\n\n.card-flip:hover .card-flip-inner {\n  /* TODO: Rotate on Y axis */\n}\n\n.card-front, .card-back {\n  /* TODO: Position absolutely, add backface-visibility */\n}\n\n.card-back {\n  /* TODO: Start rotated 180deg */\n}\n\n/* TODO: Accordion */\n.accordion-content {\n  /* TODO: Animate max-height for smooth expand/collapse */\n  overflow: hidden;\n}\n\n/* TODO: Morphing shape */\n.morph {\n  width: 100px;\n  height: 100px;\n  background: #3b82f6;\n  /* TODO: Animate border-radius to create morphing effect */\n}"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:perspective:",
+      "must_include:transform-style: preserve-3d",
+      "must_include:backface-visibility:",
+      "must_include:rotateY",
+      "must_include:max-height",
+      "must_include:transition:",
+      "must_include:@keyframes",
+      "must_include:border-radius:"
+    ]
+  }
+}

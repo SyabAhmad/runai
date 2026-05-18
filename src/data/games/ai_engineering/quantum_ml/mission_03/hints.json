@@ -1,0 +1,9 @@
+{
+  "mission_03": [
+    "Apply RY: ry_gate = self._ry(x[q] * np.pi); full_op = self._single_qubit_gate(ry_gate, q); state = full_op @ state.",
+    "Apply CNOT: state = self._apply_cnot(state, q, q + 1).",
+    "Encode both: state1 = self.encode_data(x1); state2 = self.encode_data(x2).",
+    "Overlap: overlap = np.abs(np.dot(state1.conj(), state2)) ** 2.",
+    "Train SVM: svm.fit(K, y) where K is the kernel matrix."
+  ]
+}

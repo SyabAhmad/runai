@@ -1,0 +1,19 @@
+{
+  "title": "Creating a Trigger for Audit Logging",
+  "id": "mission_03",
+  "type": "ai_code",
+  "xpReward": 70,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "-- Creating a Trigger: Audit log for employee changes\n-- The employees table has columns: id, name, department, salary\n-- The audit_log table has columns: id, table_name, operation, old_data, new_data, changed_at\n-- TODO: Create a trigger function that logs INSERT, UPDATE, DELETE operations\n\nCREATE OR REPLACE FUNCTION log_employee_changes()\nRETURNS TRIGGER\nLANGUAGE plpgsql\nAS $$\nBEGIN\n    -- TODO: Handle TG_OP for INSERT, UPDATE, DELETE\n    -- Use row_to_json() to capture old and new data\n    -- INSERT into audit_log\n    RETURN NEW;\nEND;\n$$;\n\n-- TODO: Create the trigger on the employees table\n\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:CREATE TRIGGER",
+      "must_include:audit_log",
+      "must_include:TG_OP",
+      "must_include:employees"
+    ]
+  }
+}

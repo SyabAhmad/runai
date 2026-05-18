@@ -1,0 +1,22 @@
+{
+  "mission_05": {
+    "title": "Link Prediction with Inner Product Decoder",
+    "id": "mission_05",
+    "type": "ai_code",
+    "xpReward": 80,
+    "difficulty": "medium",
+    "initialState": {
+      "content": "import numpy as np\n\n\nclass LinkPredictor:\n    \"\"\"Link prediction using GCN embeddings and inner product decoder.\n    \n    TODO: Encode node embeddings using GCN\n    TODO: Compute link probability: sigma(z_i^T @ z_j)\n    TODO: Implement negative sampling for training\n    TODO: Compute BCE loss for positive and negative edges\n    TODO: Implement AUC evaluation\n    \"\"\"\n    \n    def __init__(self, input_dim, hidden_dim, embed_dim):\n        # TODO: Initialize GCN weights\n        self.W1 = np.random.randn(input_dim, hidden_dim) * 0.01\n        self.W2 = np.random.randn(hidden_dim, embed_dim) * 0.01\n    \n    def encode(self, A_norm, X):\n        \"\"\"Generate node embeddings via GCN.\"\"\"\n        # TODO: Two-layer GCN encoding\n        H = None\n        Z = None\n        return Z\n    \n    def decode(self, Z, edge_index):\n        \"\"\"Predict edge probabilities using inner product.\"\"\"\n        # TODO: Compute sigmoid(z_i^T * z_j) for each edge\n        src, dst = edge_index\n        probs = None\n        return probs\n    \n    def negative_sampling(self, edge_index, num_nodes, num_neg):\n        \"\"\"Sample negative edges (non-existent edges).\"\"\"\n        # TODO: Generate random edge pairs that are not in edge_index\n        neg_edges = None\n        return neg_edges\n    \n    def compute_loss(self, Z, pos_edges, neg_edges):\n        \"\"\"Compute binary cross-entropy loss.\"\"\"\n        # TODO: Positive edge predictions\n        pos_probs = self.decode(Z, pos_edges)\n        \n        # TODO: Negative edge predictions\n        neg_probs = self.decode(Z, neg_edges)\n        \n        # TODO: BCE loss\n        pos_loss = None\n        neg_loss = None\n        return pos_loss + neg_loss\n    \n    def sigmoid(self, x):\n        \"\"\"Numerically stable sigmoid.\"\"\"\n        # TODO: Implement sigmoid\n        return None\n"
+    },
+    "validation": {
+      "type": "ai_code",
+      "rules": [
+        "must_include:sigmoid",
+        "must_include:negative_sampling",
+        "must_include:BCE",
+        "must_include:inner product",
+        "must_include:AUC"
+      ]
+    }
+  }
+}

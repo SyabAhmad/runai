@@ -1,0 +1,3 @@
+{
+  "mission_09": "Advanced CSS animations leverage 3D transforms, perspective, and clever property combinations to create impressive effects. This mission challenges you with four sophisticated patterns: a card flip using rotateY and backface-visibility for a realistic two-sided card, an accordion using max-height transitions for smooth expand/collapse, and a morphing shape that animates border-radius values. These techniques demonstrate the full power of CSS animations without JavaScript."
+}

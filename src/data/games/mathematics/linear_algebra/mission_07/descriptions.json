@@ -1,0 +1,3 @@
+{
+  "mission_07": "Linear transformations are functions that preserve vector addition and scalar multiplication, and they can be represented by matrices. Common transformations include rotation (preserves lengths and angles), scaling (changes lengths), and shear (shifts points parallel to a line). When combining transformations, the order matters — matrix multiplication is not commutative. The determinant of a transformation matrix tells you how it scales area (in 2D) or volume (in 3D). Understanding transformations is crucial for computer graphics, robotics, and the geometric interpretation of neural network layers."
+}

@@ -1,0 +1,7 @@
+{
+  "mission_05": [
+    "IterativeImputer is experimental; enable it with 'from sklearn.experimental import enable_iterative_imputer'.",
+    "Each column with missing values is modeled as a function of all other columns.",
+    "max_iter controls the number of iteration rounds; more iterations improve convergence."
+  ]
+}

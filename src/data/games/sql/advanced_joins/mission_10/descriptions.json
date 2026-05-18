@@ -1,0 +1,3 @@
+{
+  "mission_10": "LATERAL joins are essential for working with JSON arrays in PostgreSQL. Functions like json_array_elements return a set of rows that can only be used in the FROM clause with LATERAL. This pattern transforms semi-structured JSON data into relational rows, enabling standard SQL operations on JSON content and bridging the gap between document and relational paradigms."
+}

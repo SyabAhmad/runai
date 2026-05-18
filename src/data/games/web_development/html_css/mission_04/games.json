@@ -1,0 +1,22 @@
+{
+  "title": "Flexbox Layout Mastery",
+  "id": "mission_04",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "/* TODO: Use Flexbox to create a responsive navigation bar */\n/* TODO: Center items vertically and space them evenly */\n/* TODO: Create a card layout with flex-wrap */\n/* TODO: Build a sticky footer layout using flex */\n\n.navbar {\n  /* TODO: Make this a flex container */\n  /* TODO: Space items between logo and links */\n  /* TODO: Align items to center vertically */\n}\n\n.nav-links {\n  /* TODO: Display links in a row with gap */\n  /* TODO: Remove default list styling */\n}\n\n.card-container {\n  /* TODO: Enable flex wrapping for cards */\n  /* TODO: Add gap between cards */\n}\n\n.card {\n  /* TODO: Set flexible width for cards */\n  /* TODO: Add minimum width to prevent squishing */\n}\n\n.page {\n  /* TODO: Use flex column layout for full-height page */\n  /* TODO: Push footer to bottom */\n}\n\n.content {\n  /* TODO: Allow content to grow and fill space */\n}"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:display: flex",
+      "must_include:justify-content",
+      "must_include:align-items",
+      "must_include:flex-wrap",
+      "must_include:gap",
+      "must_include:flex-grow",
+      "must_include:flex-direction"
+    ]
+  }
+}

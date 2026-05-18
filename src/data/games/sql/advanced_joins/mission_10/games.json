@@ -1,0 +1,19 @@
+{
+  "title": "Lateral Join: JSON Array Expansion",
+  "id": "mission_10",
+  "type": "ai_code",
+  "xpReward": 120,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "-- Lateral Join: Expand JSON array columns into rows\n-- The products table has columns: id, name, tags (JSON array)\n-- TODO: Use LATERAL JOIN with json_array_elements to expand tags into separate rows\n-- Each product should have one row per tag\n\nSELECT \nFROM products p\n\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:LATERAL",
+      "must_include:json_array_elements",
+      "must_include:products",
+      "must_include:tags"
+    ]
+  }
+}

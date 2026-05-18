@@ -1,0 +1,3 @@
+{
+  "mission_02": "Graph Attention Networks (GATs) improve upon GCNs by learning to assign different importance to different neighbors. Instead of using fixed normalization based on graph degree, GATs compute attention coefficients that determine how much each neighbor contributes to a node's representation. The attention mechanism uses a shared attention vector and LeakyReLU to compute pairwise scores, then applies softmax to obtain normalized weights. This allows the model to focus on the most relevant neighbors for each task, making it more expressive and interpretable than standard GCNs."
+}

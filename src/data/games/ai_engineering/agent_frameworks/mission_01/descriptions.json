@@ -1,0 +1,3 @@
+{
+  "mission_01": "**LangChain** is the most popular framework for building LLM-powered agents. It provides a unified interface for connecting language models to external tools, databases, and APIs.\n\nThe core pattern:\n1. **Define tools** — functions the agent can call (search, calculator, database)\n2. **Create prompt** — system message describing available tools and how to use them\n3. **Agent loop** — parse user input, select the right tool, execute it, format the result\n4. **Return response** — combine tool output with natural language\n\nThis is how ChatGPT Plugins, Claude tools, and custom agents work under the hood."
+}

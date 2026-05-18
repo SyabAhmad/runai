@@ -1,3 +1,3 @@
-﻿{
-    "mission_08":  "Excellent. You now have a reusable preprocessing block."
+{
+  "mission_08": "Congratulations! You've mastered advanced deduplication using multiple keys and normalization. By creating normalized comparison columns, sorting by a quality metric, and then dropping duplicates, you ensure that the best version of each unique entity is retained. This technique is essential for customer data management, product catalog cleaning, and any scenario where records from multiple sources need to be consolidated. The pattern of normalize-sort-deduplicate is a powerful data cleaning workflow."
 }

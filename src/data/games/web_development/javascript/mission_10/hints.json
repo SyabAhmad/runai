@@ -1,0 +1,7 @@
+{
+  "mission_10": [
+    "The Module pattern uses an IIFE: (() => { let privateVar; return { publicMethod() {} }; })(). Variables inside the IIFE are private.",
+    "For the Validator, validate(data, schema) iterates over schema keys and runs each rule, collecting errors.",
+    "The Plugin system uses a Map to store plugins. Each plugin can register for hooks, and execute(hook, data) runs all plugins registered for that hook."
+  ]
+}

@@ -1,0 +1,3 @@
+{
+  "mission_09": "SELECT u.username, u.email, a.activity_type, a.created_at, a.details\nFROM users u\nLEFT JOIN LATERAL (\n  SELECT activity_type, created_at, details\n  FROM activities\n  WHERE user_id = u.id\n  ORDER BY created_at DESC\n  LIMIT 5\n) a ON true\nORDER BY u.username, a.created_at DESC;"
+}

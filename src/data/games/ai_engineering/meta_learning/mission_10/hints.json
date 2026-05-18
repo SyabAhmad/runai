@@ -1,0 +1,7 @@
+{
+  "mission_10": [
+    "For document embeddings, split text into words, look up each word's embedding, and take the mean: doc_emb = mean([word_emb[w] for w in words if w in word_emb]). Then use prototypical networks as before.",
+    "For prompt-based classification, format demonstrations as 'Input: {text} Label: {label}' pairs, then for the query, compute similarity between the query embedding and each label's demonstration embeddings.",
+    "For cross-lingual transfer, use the word translation dict to map target language words to source language embeddings. For adaptation, compute cross-entropy loss on support texts/labels and update parameters with SGD."
+  ]
+}

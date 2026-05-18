@@ -1,0 +1,10 @@
+{
+  "mission_10": [
+    "Generate synthetic data with different means for spam vs not-spam.",
+    "Prior P(Y=1) = count of class 1 / total count.",
+    "Use scipy.stats.norm.logpdf(x, mean, std) for log-likelihood.",
+    "Work in log space to avoid numerical underflow.",
+    "Log-odds = log P(Y=1|X) - log P(Y=0|X).",
+    "MLE for Bernoulli: p_hat = k/n (sample proportion)."
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "mission_08": [
+    "HuberRegressor uses epsilon to control the transition between quadratic and linear loss.",
+    "RANSACRegressor automatically identifies inliers and fits the model to them only.",
+    "Compare coefficients across methods to see how outliers affect each approach."
+  ]
+}

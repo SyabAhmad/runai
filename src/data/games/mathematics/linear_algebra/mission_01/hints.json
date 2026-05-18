@@ -1,0 +1,10 @@
+{
+  "mission_01": [
+    "Use np.array() to create vectors from Python lists.",
+    "The magnitude of a vector is computed with np.linalg.norm(v).",
+    "Normalize by dividing the vector by its magnitude: v / np.linalg.norm(v).",
+    "The dot product uses np.dot(v, w) or v @ w.",
+    "The cross product uses np.cross(v, w) for 3D vectors.",
+    "The angle between vectors is arccos(dot_product / (norm_v * norm_w))."
+  ]
+}

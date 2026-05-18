@@ -1,0 +1,3 @@
+{
+  "mission_03": "CREATE OR REPLACE FUNCTION log_employee_changes()\nRETURNS TRIGGER\nLANGUAGE plpgsql\nAS $$\nBEGIN\n    INSERT INTO audit_log (table_name, operation, old_data, new_data, changed_at)\n    VALUES ('employees', TG_OP, CASE WHEN TG_OP = 'DELETE' THEN row_to_json(OLD) ELSE NULL END, CASE WHEN TG_OP != 'DELETE' THEN row_to_json(NEW) ELSE NULL END, NOW());\n    RETURN NEW;\nEND;\n$$;\n\nCREATE TRIGGER trg_employee_audit\nAFTER INSERT OR UPDATE OR DELETE ON employees\nFOR EACH ROW EXECUTE FUNCTION log_employee_changes();"
+}

@@ -1,0 +1,1 @@
+{"mission_09": ["Use df.groupby('customer_id')['amount'].agg(['mean', 'sum', 'count', 'std']) for aggregations.", "For tenure: df.groupby('customer_id')['transaction_date'].agg(['min', 'max']) and compute the difference.", "Merge aggregation results back with customer-level data using pd.merge() on customer_id."]}

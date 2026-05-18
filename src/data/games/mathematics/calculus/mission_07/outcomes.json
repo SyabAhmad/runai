@@ -1,0 +1,3 @@
+{
+  "mission_07": "Great work on optimization! You found critical points by solving f'(x) = 0 and classified them using the second derivative test. The BFGS optimizer found the global minimum efficiently. The Rosenbrock function, despite its challenging narrow valley, was minimized to near-zero. Optimization is at the heart of machine learning — every training algorithm is an optimization procedure. Understanding the calculus behind optimization (gradients, Hessians, critical points) helps you choose the right optimizer, tune learning rates, and debug training issues."
+}

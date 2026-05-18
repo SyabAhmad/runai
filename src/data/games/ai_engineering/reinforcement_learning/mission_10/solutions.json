@@ -1,0 +1,3 @@
+{
+  "mission_10": "import numpy as np\n\ndef rlhf_step(prompt, response, reward_model, ref_model, kl_coeff, ppo_clip):\n    r = reward_model(prompt, response)\n    kl_divergence = np.sum(response * np.log(response / (ref_model + 1e-8)))\n    total_reward = r - kl_coeff * kl_divergence\n    ratio = response / (ref_model + 1e-8)\n    clipped_ratio = np.clip(ratio, 1 - ppo_clip, 1 + ppo_clip)\n    surrogate = np.minimum(ratio * total_reward, clipped_ratio * total_reward)\n    return {\"total_reward\": total_reward, \"kl_penalty\": kl_coeff * kl_divergence, \"ppo_loss\": -np.mean(surrogate)}"
+}

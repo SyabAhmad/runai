@@ -1,0 +1,3 @@
+{
+  "mission_06": "SELECT b.browser_name, o.os_name, r.width, r.height\nFROM browsers b\nCROSS JOIN os_table o\nCROSS JOIN resolutions r\nORDER BY b.browser_name, o.os_name, r.width, r.height;"
+}

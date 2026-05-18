@@ -1,0 +1,22 @@
+{
+  "mission_06": {
+    "title": "Stationarity Testing",
+    "id": "mission_06",
+    "type": "ai_code",
+    "xpReward": 85,
+    "difficulty": "medium",
+    "initialState": {
+      "content": "import numpy as np\nfrom scipy import stats\n\n\ndef compute_autocorrelation(series, lag):\n    \"\"\"Compute autocorrelation at a specific lag.\"\"\"\n    # TODO: Compute mean and variance\n    mean = np.mean(series)\n    var = np.var(series)\n    \n    # TODO: Compute autocorrelation\n    n = len(series)\n    acf = np.sum((series[:n - lag] - mean) * (series[lag:] - mean)) / (n * var)\n    return acf\n\n\ndef compute_partial_autocorrelation(series, max_lag):\n    \"\"\"Compute partial autocorrelation using Durbin-Levinson algorithm.\"\"\"\n    n = len(series)\n    acf = np.array([compute_autocorrelation(series, k) for k in range(max_lag + 1)])\n    \n    # TODO: Initialize PACF array\n    pacf = np.zeros(max_lag + 1)\n    pacf[0] = 1.0\n    \n    # TODO: Initialize phi matrix for Durbin-Levinson\n    phi = np.zeros((max_lag + 1, max_lag + 1))\n    phi[1, 1] = acf[1]\n    pacf[1] = acf[1]\n    \n    # TODO: Iterate through lags using Durbin-Levinson recursion\n    for k in range(2, max_lag + 1):\n        numerator = acf[k] - sum(phi[k-1, j] * acf[k-j] for j in range(1, k))\n        denominator = 1 - sum(phi[k-1, j] * acf[j] for j in range(1, k))\n        phi[k, k] = numerator / denominator\n        \n        for j in range(1, k):\n            phi[k, j] = phi[k-1, j] - phi[k, k] * phi[k-1, k-j]\n        \n        pacf[k] = phi[k, k]\n    \n    return pacf\n\n\ndef adf_test(series, max_lag=None):\n    \"\"\"Augmented Dickey-Fuller test for unit root.\"\"\"\n    if max_lag is None:\n        max_lag = int(12 * (len(series) / 100) ** 0.25)\n    \n    # TODO: Compute first difference\n    delta_y = np.diff(series)\n    y_lag = series[:-1]\n    \n    # TODO: Build augmented regression matrix with lagged differences\n    X = np.column_stack([np.ones(len(y_lag) - max_lag), y_lag[max_lag:]])\n    for lag in range(1, max_lag + 1):\n        delta_lag = delta_y[max_lag - lag:-lag] if lag < len(delta_y) else np.zeros(len(y_lag) - max_lag)\n        if len(delta_lag) == len(y_lag) - max_lag:\n            X = np.column_stack([X, delta_lag])\n    \n    # TODO: Run regression\n    y_dependent = delta_y[max_lag:]\n    params, residuals, rank, s = np.linalg.lstsq(X[:len(y_dependent)], y_dependent, rcond=None)\n    \n    # TODO: Extract t-statistic for the lag level coefficient\n    se = np.sqrt(np.sum(residuals) / (len(y_dependent) - X[:len(y_dependent)].shape[1]))\n    se_beta = se / np.sqrt(np.sum((X[:len(y_dependent), 1] - np.mean(X[:len(y_dependent), 1]))**2))\n    t_stat = params[1] / se_beta\n    \n    return t_stat\n\n\ndef kpss_test(series, nlags=None):\n    \"\"\"KPSS test for stationarity around deterministic trend.\"\"\"\n    n = len(series)\n    if nlags is None:\n        nlags = int(4 * (n / 100) ** 0.25)\n    \n    # TODO: Detrend the series\n    t = np.arange(n)\n    X = np.column_stack([np.ones(n), t])\n    params, residuals, rank, s = np.linalg.lstsq(X, series, rcond=None)\n    e = series - X @ params\n    \n    # TODO: Compute partial sum of residuals\n    S = np.cumsum(e)\n    \n    # TODO: Compute long-run variance using Newey-West estimator\n    sigma2 = np.sum(e**2) / n\n    for l in range(1, nlags + 1):\n        autocov = np.sum(e[l:] * e[:-l]) / n\n        sigma2 += 2 * (1 - l / (nlags + 1)) * autocov\n    \n    # TODO: Compute KPSS statistic\n    kpss_stat = np.sum(S**2) / (n**2 * sigma2)\n    return kpss_stat\n"
+    },
+    "validation": {
+      "type": "ai_code",
+      "rules": [
+        "must_include:np.mean",
+        "must_include:np.var",
+        "must_include:np.diff",
+        "must_include:np.linalg.lstsq",
+        "must_include:np.cumsum"
+      ]
+    }
+  }
+}

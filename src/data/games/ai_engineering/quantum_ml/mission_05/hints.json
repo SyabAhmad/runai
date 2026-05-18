@@ -1,0 +1,9 @@
+{
+  "mission_05": [
+    "Normalize amplitude: x_normalized = x / (np.linalg.norm(x) + 1e-10).",
+    "Pad/truncate: state[:n] = x_normalized[:n] where n = min(len(x), dim).",
+    "Renormalize: state = state / (np.linalg.norm(state) + 1e-10).",
+    "IQP Hadamard: full_op = self._single_qubit_gate(H, q); state = full_op @ state.",
+    "IQP entangling: cp[i,i] = np.exp(1j * np.pi / 4) when both qubit bits are 1."
+  ]
+}

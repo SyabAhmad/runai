@@ -1,0 +1,7 @@
+{
+  "mission_09": [
+    "Use df.rolling(window=20).mean() and .std() for rolling statistics.",
+    "Use statsmodels.tsa.seasonal.seasonal_decompose for trend/seasonal/residual separation.",
+    "Use df.ewm(span=10).mean() for exponential smoothing forecasts."
+  ]
+}

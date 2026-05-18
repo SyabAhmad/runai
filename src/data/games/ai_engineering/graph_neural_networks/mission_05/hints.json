@@ -1,0 +1,7 @@
+{
+  "mission_05": [
+    "The sigmoid function can be implemented as 1 / (1 + exp(-x)), but use the numerically stable version: exp(-max(0,x)) / (1 + exp(-abs(x)))",
+    "For negative sampling, generate random (src, dst) pairs and reject those that exist in the positive edge set. Use a set for O(1) lookup",
+    "BCE loss = -mean(log(pos_probs) + log(1 - neg_probs)). Clip probabilities to [1e-7, 1-1e-7] to avoid log(0)"
+  ]
+}

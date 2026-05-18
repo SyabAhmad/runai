@@ -1,7 +1,7 @@
-﻿{
-    "mission_06":  [
-                       "Use quantile(0.25) and quantile(0.75).",
-                       "Compute lower and upper bounds from IQR.",
-                       "Use clip(lower=..., upper=...)."
-                   ]
+{
+  "mission_06": [
+    "Use iterrows() to loop through DataFrame rows for pairwise comparison",
+    "Convert strings to lowercase and split into word sets for comparison",
+    "Calculate similarity as intersection over union of word sets"
+  ]
 }

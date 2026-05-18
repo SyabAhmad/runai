@@ -1,0 +1,3 @@
+{
+  "mission_03": "Excellent! You have implemented Mahalanobis distance, the gold standard for multivariate outlier detection. By accounting for feature correlations through the covariance matrix, this method detects points that are unusual in the joint distribution even when they appear normal marginally. The chi-squared threshold provides a statistically sound cutoff based on the desired significance level. This technique is essential in quality control, where a product may pass individual specifications but fail due to an unusual combination of measurements. Mahalanobis distance also forms the basis for more advanced methods like Minimum Covariance Determinant (MCD) and is a fundamental tool in any data scientist outlier detection toolkit."
+}

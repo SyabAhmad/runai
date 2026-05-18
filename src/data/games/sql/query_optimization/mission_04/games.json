@@ -1,0 +1,19 @@
+{
+  "title": "Creating B-Tree Indexes",
+  "id": "mission_04",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "-- Creating B-Tree Indexes: Speed up filtered queries\n-- The orders table has columns: id, customer_id, order_date, status, total\n-- TODO: Create an index on the customer_id column to speed up lookups\n-- Then verify the index is used with EXPLAIN\n\n-- Write your CREATE INDEX statement:\n\n-- Verify with EXPLAIN:\n\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:CREATE INDEX",
+      "must_include:orders",
+      "must_include:customer_id",
+      "must_include:EXPLAIN"
+    ]
+  }
+}

@@ -1,0 +1,3 @@
+{
+  "mission_05": "Excellent! You have implemented Lagrange multipliers for constrained optimization. This elegant mathematical technique allows you to solve optimization problems with equality constraints by introducing dual variables. The Lagrange multiplier itself has physical meaning - it represents the rate of change of the optimal value with respect to the constraint."
+}

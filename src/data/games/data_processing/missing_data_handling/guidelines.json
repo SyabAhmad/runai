@@ -1,0 +1,6 @@
+{
+  "title": "Missing Data Handling",
+  "description": "Learn strategies for handling missing data including mean/median imputation, KNN imputation, MICE, interpolation, and indicator variables.",
+  "difficulty": "medium",
+  "order": 6
+}

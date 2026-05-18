@@ -1,0 +1,16 @@
+{
+  "mission_08": {
+    "title": "Mediation Analysis and Path Decomposition",
+    "id": "mission_08",
+    "type": "ai_code",
+    "xpReward": 100,
+    "difficulty": "hard",
+    "initialState": {
+      "content": "import numpy as np\nfrom sklearn.linear_model import LinearRegression\n\n# TODO: Implement Baron-Kenny mediation analysis\ndef baron_kenny_mediation(X, M, Y):\n    \"\"\"Perform Baron-Kenny mediation analysis.\n    \n    X -> M -> Y (indirect effect)\n    X -> Y (direct effect)\n    \n    Returns:\n        total_effect: c path\n        direct_effect: c' path\n        indirect_effect: a * b paths\n    \"\"\"\n    # TODO: Step 1: Regress Y on X (total effect)\n    # TODO: Step 2: Regress M on X (a path)\n    # TODO: Step 3: Regress Y on X and M (direct effect c')\n    # TODO: Calculate indirect effect\n    pass\n\n# TODO: Implement natural direct and indirect effects\ndef natural_effects(X, M, Y, x_treatment=1, x_control=0):\n    \"\"\"Estimate natural direct and indirect effects.\n    \n    NDE = E[Y(x, M(x*))] - E[Y(x*, M(x*))]\n    NIE = E[Y(x, M(x))] - E[Y(x, M(x*))]\n    \"\"\"\n    # TODO: Estimate mediator model M|X\n    # TODO: Estimate outcome model Y|X,M\n    # TODO: Compute NDE and NIE using g-computation\n    pass\n\n# TODO: Implement bootstrap confidence intervals for mediation\ndef bootstrap_mediation(X, M, Y, n_bootstrap=1000):\n    \"\"\"Compute bootstrap confidence intervals for indirect effect.\"\"\"\n    # TODO: Resample with replacement\n    # TODO: Estimate indirect effect for each bootstrap sample\n    # TODO: Compute percentile confidence intervals\n    pass\n\n# TODO: Implement sensitivity analysis for unmeasured mediator-outcome confounding\ndef sensitivity_analysis(X, M, Y, rho_values):\n    \"\"\"Sensitivity analysis for unmeasured M-Y confounding.\"\"\"\n    # TODO: Vary correlation between error terms\n    # TODO: Report how estimates change\n    pass\n"
+    },
+    "validation": {
+      "type": "ai_code",
+      "rules": ["must_include:LinearRegression", "must_include:indirect_effect", "must_include:direct_effect", "must_include:bootstrap", "must_include:sensitivity"]
+    }
+  }
+}

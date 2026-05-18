@@ -1,0 +1,20 @@
+{
+  "title": "RLHF: Reinforcement Learning from Human Feedback",
+  "id": "mission_10",
+  "type": "ai_code",
+  "xpReward": 200,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "# RL Mission 10: RLHF (Reinforcement Learning from Human Feedback)\n#\n# RLHF aligns language models with human preferences.\n# Three steps: 1) Collect human preferences, 2) Train reward model,\n# 3) Fine-tune policy with PPO using the reward model.\n#\n# Your goal: Implement rlhf_step(prompt, response, reward_model,\n#   ref_model, kl_coeff, ppo_clip)\n#   1. Get reward from reward model: r = reward_model(prompt, response)\n#   2. Compute KL penalty: kl = log(response/ref_model)\n#   3. Combine: total_reward = r - kl_coeff * kl\n#   4. Apply PPO clipping to policy update\n#   5. Return total reward and policy update signal\n\nimport numpy as np\n\ndef rlhf_step(prompt, response, reward_model, ref_model, kl_coeff, ppo_clip):\n    # TODO: Get reward from reward model\n    # TODO: Compute KL divergence penalty\n    # TODO: Combine reward with KL penalty\n    # TODO: Apply PPO clipping\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def rlhf_step",
+      "must_include:kl_coeff",
+      "must_include:ppo_clip",
+      "must_include:kl_divergence",
+      "must_include:return"
+    ]
+  }
+}

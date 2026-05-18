@@ -1,0 +1,3 @@
+{
+  "mission_03": "Triggers automatically execute functions in response to data modification events (INSERT, UPDATE, DELETE). They're essential for audit logging, enforcing complex business rules, maintaining denormalized data, and implementing soft deletes. The TG_OP variable tells you which operation fired the trigger, while NEW and OLD provide access to the affected row data."
+}

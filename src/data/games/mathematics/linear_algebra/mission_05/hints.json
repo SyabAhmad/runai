@@ -1,0 +1,10 @@
+{
+  "mission_05": [
+    "Use np.linalg.svd(A) to compute the SVD decomposition.",
+    "np.linalg.svd returns U, s (1D array), and Vt (V transposed).",
+    "Convert s to a diagonal matrix with np.diag(s) for reconstruction.",
+    "The rank equals the number of non-zero singular values (use a tolerance).",
+    "Condition number = max(singular_values) / min(non-zero singular_values).",
+    "For rank-k approximation, use only the first k columns/rows of U, S, and Vt."
+  ]
+}

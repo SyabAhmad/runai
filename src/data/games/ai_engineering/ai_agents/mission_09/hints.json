@@ -1,7 +1,7 @@
 {
   "mission_09": [
-    "Think about the core concepts",
-    "Consider best practices",
-    "Use appropriate tools"
+    "Convert the topic to lowercase and search knowledge dict keys (also lowered) for a case-insensitive match.",
+    "Use `knowledge.get(topic_lower)` where topic_lower is key converted to lowercase for matching.",
+    "For the \"list\" command, join the keys: `\", \".join(knowledge.keys())`"
   ]
 }

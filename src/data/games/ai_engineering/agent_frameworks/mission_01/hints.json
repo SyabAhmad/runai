@@ -1,0 +1,7 @@
+{
+  "mission_01": [
+    "Build registry: `registry = {t.name: t.func for t in tools}`.",
+    "Detect intent by checking keywords in input that match tool descriptions.",
+    "Call tool: `result = registry[tool_name](input_args)` and format the response."
+  ]
+}

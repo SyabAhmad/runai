@@ -1,0 +1,3 @@
+{
+  "mission_02": "Well done! You have extended your imputation toolkit to handle categorical data and special cases. Mode imputation is the categorical equivalent of mean imputation, filling missing categories with the most frequent one. Constant value imputation gives you full control, allowing you to use domain knowledge to set meaningful defaults like 0 for counts or Unknown for categories. These strategies are particularly valuable when missingness itself carries information, as constant imputation with a special value like Missing or Unknown explicitly marks imputed entries. Combined with mean and median imputation from the previous mission, you now have a complete set of simple imputation strategies for any data type."
+}

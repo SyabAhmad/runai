@@ -1,0 +1,22 @@
+{
+  "mission_02": {
+    "title": "wav2vec 2.0 Architecture",
+    "id": "mission_02",
+    "type": "ai_code",
+    "xpReward": 65,
+    "difficulty": "easy",
+    "initialState": {
+      "content": "import numpy as np\n\n\ndef conv_feature_extractor(signal, stride=320, kernel_sizes=[10, 3, 3, 3, 3, 2, 2], n_filters=[512, 512, 512, 512, 512, 512, 512]):\n    \"\"\"Simulate wav2vec 2.0 convolutional feature extractor.\"\"\"\n    # TODO: Start with signal as 1D input\n    x = signal[np.newaxis, np.newaxis, :]  # (1, 1, T)\n    \n    # TODO: Apply convolutional layers sequentially\n    for kernel, n_out in zip(kernel_sizes, n_filters):\n        # Simulate conv output: (T - kernel) // stride + 1\n        if kernel == kernel_sizes[0]:\n            s = stride\n        else:\n            s = 1\n        t_out = max(1, (x.shape[-1] - kernel) // s + 1)\n        x = np.random.randn(1, n_out, t_out) * 0.1\n    \n    # TODO: Transpose to (T, B, C) format\n    features = x[0].T  # (T, C)\n    return features\n\n\ndef positional_encoding_1d(seq_len, d_model):\n    \"\"\"1D convolutional positional encoding for wav2vec 2.0.\"\"\"\n    # TODO: Create position indices\n    position = np.arange(seq_len)[:, np.newaxis]\n    \n    # TODO: Compute sinusoidal encoding\n    div_term = np.exp(np.arange(0, d_model, 2) * -(np.log(10000.0) / d_model))\n    pe = np.zeros((seq_len, d_model))\n    pe[:, 0::2] = np.sin(position * div_term)\n    pe[:, 1::2] = np.cos(position * div_term)\n    \n    return pe\n\n\ndef masked_prediction_loss(features, mask_indices, vocab_size=320):\n    \"\"\"Compute masked prediction loss for contrastive pre-training.\"\"\"\n    # TODO: Extract masked features\n    masked_features = features[mask_indices]  # (M, C)\n    \n    # TODO: Compute cosine similarity with codebook entries\n    # Simulate codebook lookup\n    codebook = np.random.randn(vocab_size, features.shape[-1])\n    codebook = codebook / (np.linalg.norm(codebook, axis=1, keepdims=True) + 1e-8)\n    masked_features_norm = masked_features / (np.linalg.norm(masked_features, axis=1, keepdims=True) + 1e-8)\n    \n    # TODO: Compute similarity scores\n    similarity = masked_features_norm @ codebook.T  # (M, V)\n    \n    # TODO: Compute cross-entropy loss\n    targets = np.argmax(similarity, axis=1)\n    sim_exp = np.exp(similarity - np.max(similarity, axis=1, keepdims=True))\n    log_probs = similarity - np.log(np.sum(sim_exp, axis=1, keepdims=True))\n    loss = -np.mean(log_probs[np.arange(len(targets)), targets])\n    \n    return loss\n\n\ndef diversity_loss(features, codebook, num_groups=2, vars_per_group=320):\n    \"\"\"Compute diversity loss to encourage codebook utilization.\"\"\"\n    # TODO: Compute average probability distribution over codebook entries\n    # Simulate assignment probabilities\n    probs = np.ones(vars_per_group) / vars_per_group\n    \n    # TODO: Compute entropy-based diversity\n    entropy = -np.sum(probs * np.log(probs + 1e-8))\n    max_entropy = np.log(vars_per_group)\n    \n    # Diversity = exp(entropy) / num_entries\n    diversity = np.exp(entropy) / vars_per_group\n    \n    return diversity\n\n\ndef wav2vec_forward(signal, d_model=768, vocab_size=320):\n    \"\"\"Complete wav2vec 2.0 forward pass simulation.\"\"\"\n    # TODO: Extract convolutional features\n    features = conv_feature_extractor(signal)\n    seq_len = features.shape[0]\n    \n    # TODO: Add positional encoding\n    if seq_len > 0:\n        pe = positional_encoding_1d(seq_len, d_model)\n        # Project features to d_model if needed\n        if features.shape[1] != d_model:\n            W_proj = np.random.randn(features.shape[1], d_model) * 0.02\n            features = features @ W_proj\n        features = features + pe\n    \n    # TODO: Compute masked prediction loss\n    mask_indices = np.random.choice(seq_len, size=min(10, seq_len), replace=False)\n    loss = masked_prediction_loss(features, mask_indices, vocab_size)\n    \n    return features, loss\n"
+    },
+    "validation": {
+      "type": "ai_code",
+      "rules": [
+        "must_include:np.sin",
+        "must_include:np.cos",
+        "must_include:np.exp",
+        "must_include:np.linalg.norm",
+        "must_include:np.random.randn"
+      ]
+    }
+  }
+}

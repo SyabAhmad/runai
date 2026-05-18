@@ -1,0 +1,3 @@
+{
+  "mission_02": "Excellent! Bayes' theorem reveals a counterintuitive result: even with a positive test from a 95% sensitive test, the probability of having the disease is only about 8.8%. This is because the disease is rare (1% prevalence), and the 10% false positive rate from the 99% healthy population produces many more false positives than true positives. With two independent positive tests, the probability jumps to about 47%. A negative test, however, gives strong evidence against the disease (P(D|Neg) ≈ 0.0006). Bayes' theorem is the foundation of Bayesian statistics, spam filters, and any system that updates beliefs with evidence."
+}

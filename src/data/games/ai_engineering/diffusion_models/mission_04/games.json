@@ -1,0 +1,21 @@
+{
+  "title": "U-Net Architecture",
+  "id": "mission_04",
+  "type": "ai_code",
+  "xpReward": 90,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "# Diffusion Models Mission 04: U-Net Architecture\n#\n# U-Net is the backbone of diffusion models. It has:\n# - Encoder (downsampling): captures context\n# - Decoder (upsampling): enables precise localization\n# - Skip connections: preserve fine details\n#\n# Your goal: Implement a simplified U-Net forward pass\n#   1. Downsample with conv + pool (encoder)\n#   2. Bottleneck: conv layers\n#   3. Upsample with conv transpose + concatenate (decoder)\n#   4. Return output with same shape as input\n\nimport numpy as np\n\ndef conv2d(x, kernel, stride=1, padding=0):\n    # Simplified 2D convolution\n    pass\n\ndef unet_forward(x, weights, t):\n    # TODO: Encoder: downsample x\n    # TODO: Bottleneck: apply conv layers\n    # TODO: Decoder: upsample + skip connections\n    # TODO: Return output\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def unet_forward",
+      "must_include:encoder",
+      "must_include:decoder",
+      "must_include:skip",
+      "must_include:concatenate",
+      "must_include:return"
+    ]
+  }
+}

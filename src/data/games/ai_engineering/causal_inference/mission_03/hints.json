@@ -1,0 +1,7 @@
+{
+  "mission_03": [
+    "Fit a LogisticRegression model with X as features and treatment as the target, then use model.predict_proba(X)[:, 1] to get propensity scores.",
+    "Separate treated (treatment==1) and control (treatment==0) indices, then use NearestNeighbors(n_neighbors=1) on control propensity scores to find matches for treated units.",
+    "ATT = mean(outcomes[treated] - outcomes[matched_controls]). For balance, compute (mean_treated - mean_control) / sqrt((var_treated + var_control) / 2) for each covariate."
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "CSS Grid Layout",
+  "id": "mission_05",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "/* TODO: Create a 3-column grid layout for a dashboard */\n/* TODO: Use grid-template-areas for named placement */\n/* TODO: Make the sidebar span 2 rows */\n/* TODO: Use repeat() and minmax() for responsive columns */\n\n.dashboard {\n  /* TODO: Set up CSS Grid with named areas */\n  /* TODO: Define columns using repeat and minmax */\n  /* TODO: Define rows with appropriate heights */\n}\n\n.header {\n  /* TODO: Place in the 'header' area */\n}\n\n.sidebar {\n  /* TODO: Place in the 'sidebar' area and span 2 rows */\n}\n\n.main-content {\n  /* TODO: Place in the 'main' area */\n}\n\n.widgets {\n  /* TODO: Place in the 'widgets' area */\n}\n\n.footer {\n  /* TODO: Place in the 'footer' area */\n}"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:display: grid",
+      "must_include:grid-template-areas",
+      "must_include:grid-template-columns",
+      "must_include:grid-template-rows",
+      "must_include:grid-area",
+      "must_include:repeat(",
+      "must_include:minmax("
+    ]
+  }
+}

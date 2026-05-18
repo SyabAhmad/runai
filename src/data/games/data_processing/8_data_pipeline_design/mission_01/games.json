@@ -1,0 +1,22 @@
+{
+  "title": "Building sklearn Pipelines",
+  "id": "mission_01",
+  "type": "ai_code",
+  "xpReward": 60,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "import numpy as np\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.preprocessing import StandardScaler, PolynomialFeatures\nfrom sklearn.linear_model import LogisticRegression\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split\n\n# TODO: Create a classification dataset and split into train/test\n\n# TODO: Build a sklearn Pipeline that:\n# 1. Scales features with StandardScaler\n# 2. Adds polynomial features with PolynomialFeatures\n# 3. Trains a LogisticRegression classifier\n\n# TODO: Fit the pipeline on training data\n\n# TODO: Evaluate on test data using accuracy score\n\n# TODO: Demonstrate the benefits of pipelines:\n# - Single fit/predict call\n# - Prevents data leakage\n# - Easy to modify and extend\n\ndef build_classification_pipeline():\n    # TODO: Generate data\n    # TODO: Build pipeline\n    # TODO: Train and evaluate\n    pass\n\n# TODO: Run the demonstration\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:Pipeline",
+      "must_include:StandardScaler",
+      "must_include:PolynomialFeatures",
+      "must_include:LogisticRegression",
+      "must_include:fit",
+      "must_include:predict",
+      "must_include:accuracy_score"
+    ]
+  }
+}

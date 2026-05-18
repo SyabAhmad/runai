@@ -1,0 +1,3 @@
+{
+  "mission_10": "Congratulations on completing the Linear Algebra chapter! You have connected linear algebra to machine learning by implementing linear regression via the normal equation and performing PCA from scratch. The estimated weights closely match the true weights, and the R-squared value shows how much variance the model captures. PCA revealed the principal directions of variation in the data. These techniques — least squares, eigendecomposition, and variance analysis — are the mathematical backbone of ML. You are now ready to tackle calculus, which provides the optimization machinery that makes learning possible."
+}

@@ -1,0 +1,7 @@
+{
+  "mission_01": [
+    "Use edge_index[0] as source nodes and edge_index[1] as target nodes to populate the adjacency matrix",
+    "Add self-loops by setting A[i, i] = 1 for all nodes, or use np.fill_diagonal(A, 1)",
+    "The degree matrix D is diagonal where D[i,i] equals the sum of row i in A. Compute D^(-1/2) by taking the inverse square root of each degree"
+  ]
+}

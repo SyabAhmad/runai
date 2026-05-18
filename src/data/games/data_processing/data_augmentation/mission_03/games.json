@@ -1,0 +1,18 @@
+{
+  "title": "Image Data Augmentation",
+  "id": "mission_03",
+  "type": "ai_code",
+  "xpReward": 70,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "import numpy as np\nimport pandas as pd\n\n# Simulated image data: 5 images of 28x28 pixels (grayscale)\nnp.random.seed(42)\nimages = np.random.randint(0, 256, (5, 28, 28), dtype=np.uint8)\n\n# TODO: Implement horizontal flip augmentation\n# TODO: Implement rotation by 90 degrees\n# TODO: Implement brightness adjustment (multiply by factor)\n# TODO: Apply all augmentations to create augmented dataset\n# TODO: Print the original and augmented dataset shapes\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:flip",
+      "must_include:rot90",
+      "must_include:brightness"
+    ]
+  }
+}

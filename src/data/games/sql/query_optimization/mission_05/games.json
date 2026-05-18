@@ -1,0 +1,19 @@
+{
+  "title": "Composite Indexes for Multi-Column Queries",
+  "id": "mission_05",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "-- Composite Indexes: Optimize queries with multiple filter conditions\n-- The orders table has columns: id, customer_id, order_date, status, total\n-- TODO: Create a composite index on (customer_id, order_date) for common queries\n-- The column order matters: most selective column first\n\n-- Write your CREATE INDEX statement:\n\n-- Test with a query that filters on both columns:\n\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:CREATE INDEX",
+      "must_include:customer_id",
+      "must_include:order_date",
+      "must_include:EXPLAIN"
+    ]
+  }
+}

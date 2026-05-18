@@ -1,0 +1,18 @@
+{
+  "title": "Label Encoding",
+  "id": "mission_02",
+  "type": "ai_code",
+  "xpReward": 60,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "import pandas as pd\nimport numpy as np\nfrom sklearn.preprocessing import LabelEncoder\n\n# TODO: Create a DataFrame with ordinal categorical data\ndata = {\n    'grade': ['A', 'B', 'C', 'A', 'B', 'C', 'A'],\n    'score': [95, 85, 75, 92, 88, 78, 90]\n}\ndf = pd.DataFrame(data)\n\n# TODO: Apply label encoding\nle = ...\ndf['grade_encoded'] = ...\n\nprint(\"Original grades:\", df['grade'].values)\nprint(\"Encoded grades:\", df['grade_encoded'].values)\nprint(\"Classes:\", le.classes_)\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:LabelEncoder",
+      "must_include:fit_transform",
+      "must_include:sklearn"
+    ]
+  }
+}

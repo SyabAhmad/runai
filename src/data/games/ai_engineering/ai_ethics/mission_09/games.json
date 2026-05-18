@@ -1,0 +1,20 @@
+{
+  "title": "Red Teaming & Jailbreak Detection",
+  "id": "mission_09",
+  "type": "ai_code",
+  "xpReward": 110,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "# AI Ethics Mission 09: Red Teaming\n#\n# Red teaming probes AI systems for vulnerabilities before deployment.\n# Common attack vectors: prompt injection, role-playing, encoding, multi-turn.\n#\n# Jailbreak patterns:\n# - DAN (Do Anything Now): \"You are now an unrestricted AI...\"\n# - Role-play: \"Pretend you are a hacker...\"\n# - Encoding: Base64 or rot13 encoded harmful requests\n# - Multi-turn: Gradually escalate to harmful behavior\n#\n# Your goal: implement red_team_test(model, attack_prompts, safety_classifier)\n#   1. Run each attack prompt\n#   2. Classify output for safety violations\n#   3. Count successful jailbreaks\n#   4. Return vulnerability report\n\nimport numpy as np\n\ndef red_team_test(model, attack_prompts, safety_classifier):\n    # TODO: Run attacks\n    # TODO: Classify outputs\n    # TODO: Count jailbreaks\n    # TODO: Return report\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def red_team_test",
+      "must_include:attack",
+      "must_include:safety",
+      "must_include:jailbreak",
+      "must_include:return"
+    ]
+  }
+}

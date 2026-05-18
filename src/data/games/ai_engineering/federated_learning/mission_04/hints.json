@@ -1,0 +1,7 @@
+{
+  "mission_04": [
+    "The regularized loss is: L_total = L_data + lam * sum(||local_w[k] - global_w[k]||^2) for all weight matrices k",
+    "The regularization gradient is: 2 * lam * (local_w - global_w). Add this to the data gradient before updating",
+    "Model interpolation: personalized_w[k] = alpha * local_w[k] + (1 - alpha) * global_w[k]. Alpha near 1 means more personalization"
+  ]
+}

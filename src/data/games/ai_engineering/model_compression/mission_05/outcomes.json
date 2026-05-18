@@ -1,0 +1,3 @@
+{
+  "mission_05": "You implemented LoRA! This technique revolutionized LLM fine-tuning. You can now adapt a 70B model on a single GPU with just a few MB of trainable parameters."
+}

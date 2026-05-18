@@ -1,0 +1,3 @@
+{
+  "mission_06": "Implement verification of the Karush-Kuhn-Tucker (KKT) conditions, which are necessary conditions for optimality in nonlinear programming problems with inequality and equality constraints. The KKT conditions generalize Lagrange multipliers to handle inequality constraints and consist of four parts: stationarity (gradient condition), primal feasibility (constraints satisfied), dual feasibility (non-negative multipliers for inequalities), and complementary slackness (active constraints have non-zero multipliers). These conditions are fundamental in convex optimization and form the basis for many optimization algorithms."
+}

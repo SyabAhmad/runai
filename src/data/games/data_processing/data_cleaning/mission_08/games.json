@@ -1,45 +1,18 @@
-﻿{
-    "title":  "Data Preprocessing Mission 8: Build ColumnTransformer",
-    "initialState":  {
-                         "content":  "# TODO: Build a ColumnTransformer preprocessor\n\ndef build_preprocessor(numeric_cols, categorical_cols):\n    # TODO: add StandardScaler for numeric columns\n\n    # TODO: add OneHotEncoder(handle_unknown=\"ignore\") for categorical columns\n\n    # TODO: return ColumnTransformer"
-                     },
-    "validation":  {
-                       "rules":  [
-                                     "must_include:def build_preprocessor",
-                                     "must_include:ColumnTransformer",
-                                     "must_include:StandardScaler",
-                                     "must_include:OneHotEncoder",
-                                     "must_include:handle_unknown=\"ignore\""
-                                 ],
-                       "tests":  [
-                                     {
-                                         "type":  "must_match",
-                                         "name":  "function signature",
-                                         "pattern":  "def\\s+build_preprocessor\\s*\\(\\s*numeric_cols\\s*,\\s*categorical_cols\\s*\\)",
-                                         "message":  "Define build_preprocessor(numeric_cols, categorical_cols)."
-                                     },
-                                     {
-                                         "type":  "must_include_all",
-                                         "name":  "transformer pieces",
-                                         "values":  [
-                                                        "ColumnTransformer",
-                                                        "(\"num\"",
-                                                        "(\"cat\"",
-                                                        "StandardScaler",
-                                                        "OneHotEncoder"
-                                                    ],
-                                         "message":  "Build num and cat transformers inside ColumnTransformer."
-                                     },
-                                     {
-                                         "type":  "must_match",
-                                         "name":  "ignore unknown",
-                                         "pattern":  "handle_unknown\\s*=\\s*[\"\u0027]ignore[\"\u0027]",
-                                         "message":  "Set OneHotEncoder(handle_unknown=\"ignore\")."
-                                     }
-                                 ],
-                       "type":  "ai_code"
-                   },
-    "id":  "mission_08",
-    "type":  "ai_code",
-    "xpReward":  100
+{
+  "title": "Deduplicate with Multiple Keys",
+  "id": "mission_08",
+  "type": "ai_code",
+  "xpReward": 100,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "import pandas as pd\nimport numpy as np\n\n# TODO: Create a DataFrame with duplicates across multiple columns\ndata = {\n    'first_name': ['John', 'john', 'JOHN', 'Jane', 'jane'],\n    'last_name': ['Smith', 'smith', 'SMITH', 'Doe', 'DOE'],\n    'email': ['john@email.com', 'JOHN@EMAIL.COM', 'john@email.com', 'jane@email.com', 'JANE@EMAIL.COM'],\n    'score': [85, 85, 90, 92, 92]\n}\ndf = pd.DataFrame(data)\n\n# TODO: Normalize text columns for comparison\ndf['first_name_norm'] = ...\ndf['last_name_norm'] = ...\ndf['email_norm'] = ...\n\n# TODO: Drop duplicates based on normalized columns, keeping highest score\ndf_sorted = ...\ndf_clean = ...\n\n# TODO: Clean up temporary columns\ndf_clean = df_clean.drop(columns=['first_name_norm', 'last_name_norm', 'email_norm'])\n\nprint(f\"Original: {len(df)} rows, Clean: {len(df_clean)} rows\")\nprint(df_clean)\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:drop_duplicates",
+      "must_include:sort_values",
+      "must_include:str.lower"
+    ]
+  }
 }

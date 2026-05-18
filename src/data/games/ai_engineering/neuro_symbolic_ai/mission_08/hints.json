@@ -1,0 +1,9 @@
+{
+  "mission_08": [
+    "Forward pass: output = self.forward(X[i]).",
+    "Data loss: data_loss = -np.log(prob) where prob = np.clip(output[y[i]], 1e-7, 1.0).",
+    "Logic loss: l_loss = self.logic_loss(output, clauses).",
+    "Combined gradient: combined_grad = grad_output + logic_weight * logic_grad.",
+    "Backprop through hidden: grad_hidden = (combined_grad @ self.W2.T) * (hidden * (1 - hidden))."
+  ]
+}

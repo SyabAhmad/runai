@@ -1,0 +1,3 @@
+{
+  "mission_01": "CREATE TABLE contacts (\n    id SERIAL PRIMARY KEY,\n    name TEXT NOT NULL\n);\n\nCREATE TABLE contact_phones (\n    id SERIAL PRIMARY KEY,\n    contact_id INTEGER REFERENCES contacts(id),\n    phone_number TEXT NOT NULL\n);"
+}

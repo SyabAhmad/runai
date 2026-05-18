@@ -1,0 +1,3 @@
+{
+  "mission_06": "Well done! You have implemented DiffPool, a powerful differentiable graph pooling method. By learning soft cluster assignments, your model can create hierarchical representations of graphs at multiple scales. The coarsened adjacency matrix captures inter-cluster connectivity, enabling deeper GNN architectures on pooled graphs. The link prediction and entropy losses work together to produce meaningful clusters that preserve graph structure while being interpretable. This hierarchical approach is essential for graph classification tasks on molecular datasets, social networks, and any domain where graph-level predictions are needed."
+}

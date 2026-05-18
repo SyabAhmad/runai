@@ -1,0 +1,1 @@
+{"mission_04": ["Sample lambda from Beta distribution: lam = np.random.beta(alpha, alpha) where alpha is typically 0.2.", "Shuffle indices: index = np.random.permutation(len(X)), then mix X with X[index].", "Mixed labels are soft (continuous): y_mix = lam * y + (1-lam) * y[index]."]}

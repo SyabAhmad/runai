@@ -1,0 +1,18 @@
+{
+  "title": "Nesterov Accelerated Gradient",
+  "id": "mission_03",
+  "type": "ai_code",
+  "xpReward": 70,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "import numpy as np\n\ndef nesterov_accelerated_gradient(f, grad_f, x0, learning_rate=0.01, momentum=0.9, max_iter=1000, tol=1e-6):\n    \"\"\"\n    Implement Nesterov Accelerated Gradient (NAG)\n    Unlike standard momentum, NAG looks ahead by computing gradient at approximate future position\n    \"\"\"\n    x = x0.copy()\n    velocity = np.zeros_like(x)\n    history = [x.copy()]\n    \n    for i in range(max_iter):\n        # TODO: Compute lookahead position\n        x_lookahead = ...\n        \n        # TODO: Compute gradient at lookahead position\n        grad = ...\n        \n        # TODO: Update velocity using NAG formula\n        velocity = ...\n        \n        # TODO: Update position\n        x = ...\n        \n        history.append(x.copy())\n        \n        if np.linalg.norm(grad) < tol:\n            break\n    \n    return x, history\n\n# Test with quadratic bowl\ndef f(x):\n    return 0.5 * x[0]**2 + 0.25 * x[1]**2\n\ndef grad_f(x):\n    return np.array([x[0], 0.5 * x[1]])\n\nx0 = np.array([5.0, 5.0])\nx_opt, history = nesterov_accelerated_gradient(f, grad_f, x0, learning_rate=0.1, momentum=0.9)\nprint(f\"Optimal x: {x_opt}\")"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:lookahead",
+      "must_include:velocity",
+      "must_include:numpy"
+    ]
+  }
+}

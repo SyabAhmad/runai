@@ -1,0 +1,18 @@
+{
+  "title": "Datetime Feature Extraction",
+  "id": "mission_07",
+  "type": "ai_code",
+  "xpReward": 90,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import pandas as pd\nimport numpy as np\n\n# TODO: Create a DataFrame with datetime data\ndata = {\n    'timestamp': ['2024-01-15 08:30:00', '2024-03-20 14:45:00', '2024-06-10 22:15:00',\n                  '2024-09-05 03:00:00', '2024-12-25 12:00:00'],\n    'value': [100, 200, 300, 400, 500]\n}\ndf = pd.DataFrame(data)\n\n# TODO: Convert to datetime\ndf['timestamp'] = ...\n\n# TODO: Extract datetime features\ndf['year'] = ...\ndf['month'] = ...\ndf['day'] = ...\ndf['hour'] = ...\ndf['day_of_week'] = ...\n\nprint(df)\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:pd.to_datetime",
+      "must_include:dt.year",
+      "must_include:dt.month"
+    ]
+  }
+}

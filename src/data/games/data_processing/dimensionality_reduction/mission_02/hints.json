@@ -1,0 +1,1 @@
+{"mission_02": ["Create tsne = TSNE(n_components=2, random_state=42) and use X_tsne = tsne.fit_transform(X).", "Combine with labels: df_tsne = pd.DataFrame({'x': X_tsne[:, 0], 'y': X_tsne[:, 1], 'label': y}).", "t-SNE preserves local neighborhoods, making it ideal for cluster visualization but not for feature engineering."]}

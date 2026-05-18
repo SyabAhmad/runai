@@ -1,0 +1,20 @@
+{
+  "title": "Encoder Block",
+  "id": "mission_04",
+  "type": "ai_code",
+  "xpReward": 90,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "# Transformers Mission 04: Encoder Block\n#\n# A transformer encoder block combines:\n#   1. Multi-head self-attention\n#   2. Residual connection (add & norm)\n#   3. Feed-forward network (FFN)\n#   4. Another residual connection (add & norm)\n#\n# The flow: x -> self-attention -> add+norm -> FFN -> add+norm -> output\n#\n# Your goal: Implement encoder_block(x, W_q, W_k, W_v, W_o, W_ff1, W_ff2, num_heads)\n#   1. Compute self-attention: attn = multi_head_attention(x, ...)\n#   2. Add residual + layer norm: x1 = layer_norm(x + attn)\n#   3. Feed-forward: ffn = relu(x1 @ W_ff1) @ W_ff2\n#   4. Add residual + layer norm: output = layer_norm(x1 + ffn)\n\nimport numpy as np\n\ndef layer_norm(x, eps=1e-5):\n    mean = np.mean(x, axis=-1, keepdims=True)\n    std = np.std(x, axis=-1, keepdims=True)\n    return (x - mean) / (std + eps)\n\ndef multi_head_attention(x, W_q, W_k, W_v, W_o, num_heads):\n    Q = np.matmul(x, W_q)\n    K = np.matmul(x, W_k)\n    V = np.matmul(x, W_v)\n    d_k = K.shape[-1] // num_heads\n    heads = []\n    for i in range(num_heads):\n        q_h = Q[:, i*d_k:(i+1)*d_k]\n        k_h = K[:, i*d_k:(i+1)*d_k]\n        v_h = V[:, i*d_k:(i+1)*d_k]\n        d_k_h = k_h.shape[-1]\n        scores = np.matmul(q_h, k_h.T) / np.sqrt(d_k_h)\n        e_x = np.exp(scores - np.max(scores, axis=-1, keepdims=True))\n        attn = e_x / np.sum(e_x, axis=-1, keepdims=True)\n        heads.append(np.matmul(attn, v_h))\n    concat = np.concatenate(heads, axis=-1)\n    return np.matmul(concat, W_o)\n\ndef encoder_block(x, W_q, W_k, W_v, W_o, W_ff1, W_ff2, num_heads):\n    # TODO: Self-attention\n    # TODO: Residual + layer norm\n    # TODO: Feed-forward: relu(x1 @ W_ff1) @ W_ff2\n    # TODO: Residual + layer norm\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def encoder_block",
+      "must_include:layer_norm",
+      "must_include:multi_head_attention",
+      "must_include:relu",
+      "must_include:return"
+    ]
+  }
+}

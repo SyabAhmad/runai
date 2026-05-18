@@ -1,0 +1,6 @@
+{
+  "title": "Information Theory",
+  "description": "Explore entropy, cross-entropy, KL divergence, mutual information, channel capacity, source coding, Huffman coding, rate-distortion theory, Fisher information, and the information bottleneck method.",
+  "difficulty": "hard",
+  "order": 7
+}

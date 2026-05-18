@@ -1,0 +1,7 @@
+{
+  "mission_10": [
+    "Fairness: `fairness_metrics(predictions, labels, protected)`.",
+    "Safety: `toxicity_filter(outputs)`, `fgsm_attack(model, x, label)`.",
+    "Risk: weighted average of all dimension scores."
+  ]
+}

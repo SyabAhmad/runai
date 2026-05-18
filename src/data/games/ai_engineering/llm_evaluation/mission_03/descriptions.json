@@ -1,0 +1,3 @@
+{
+  "mission_03": "**BLEU** (Bilingual Evaluation Understudy) is the standard metric for machine translation.\n\n**Key difference from ROUGE**: BLEU measures precision (how much of generated text is correct), while ROUGE measures recall (how much of reference is covered).\n\n**Components**:\n1. **N-gram precision**: For n=1 to 4, count overlapping n-grams\n2. **Brevity penalty**: Penalizes outputs shorter than reference\n3. **Geometric mean**: Combines precisions with equal weights\n\n**Formula**:\n```\nBLEU = BP * exp(Σ w_n * log p_n)\nBP = min(1, exp(1 - ref_len / gen_len))\n```\n\n**Interpretation**: 0-100 scale. Human translation scores ~60-70. Good MT systems score 30-40."
+}

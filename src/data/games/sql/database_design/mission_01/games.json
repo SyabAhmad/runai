@@ -1,0 +1,19 @@
+{
+  "title": "First Normal Form (1NF): Atomic Values",
+  "id": "mission_01",
+  "type": "ai_code",
+  "xpReward": 60,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "-- First Normal Form: Eliminate repeating groups and ensure atomic values\n-- The BAD table stores multiple phone numbers in a single column\n-- TODO: Design a normalized schema that separates phone numbers into their own table\n\n-- BAD design (violates 1NF):\n-- CREATE TABLE contacts (id INT, name TEXT, phones TEXT);\n-- phones contains: '555-0101,555-0102,555-0103'\n\n-- TODO: Write the normalized CREATE TABLE statements:\n\nCREATE TABLE contacts (\n    -- TODO: Define columns\n);\n\nCREATE TABLE contact_phones (\n    -- TODO: Define columns with foreign key to contacts\n);\n\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:CREATE TABLE",
+      "must_include:FOREIGN KEY",
+      "must_include:contact_phones",
+      "must_include:contacts"
+    ]
+  }
+}

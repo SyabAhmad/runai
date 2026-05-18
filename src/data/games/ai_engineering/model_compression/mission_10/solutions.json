@@ -1,0 +1,3 @@
+{
+  "mission_10": "import numpy as np\n\ndef edge_deployment_pipeline(model, calibration_data, target='mobile'):\n    # Prune\n    pruned_weights = {}\n    for name, w in model.weights.items():\n        pruned, mask, sparsity = magnitude_pruning(w, sparsity=0.7)\n        pruned_weights[name] = pruned\n    # Quantize with calibration\n    quantized = int8_quantize(pruned_weights, calibration_data)\n    # Export\n    if target == 'mobile':\n        exported = convert_to_tflite(quantized)\n    else:\n        exported = convert_to_onnx(quantized)\n    # Benchmark\n    latency = benchmark(exported, calibration_data)\n    size = get_model_size(exported)\n    return exported, {'latency_ms': latency, 'size_mb': size}"
+}

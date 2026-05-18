@@ -1,0 +1,19 @@
+{
+  "title": "Advanced Error Handling with SAVEPOINT",
+  "id": "mission_08",
+  "type": "ai_code",
+  "xpReward": 100,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "-- Advanced Error Handling: Batch insert with SAVEPOINT\n-- The products table has columns: id, name, price, category\n-- TODO: Create a procedure that inserts multiple products\n-- Use SAVEPOINT to continue processing even if some inserts fail\n\nCREATE OR REPLACE PROCEDURE batch_insert_products(\n    product_names TEXT[],\n    product_prices NUMERIC[]\n)\nLANGUAGE plpgsql\nAS $$\nDECLARE\n    i INTEGER;\nBEGIN\n    FOR i IN 1..array_length(product_names, 1) LOOP\n        -- TODO: Create a SAVEPOINT before each insert\n        -- TODO: Attempt the insert\n        -- TODO: EXCEPTION handler to ROLLBACK to SAVEPOINT and continue\n    END LOOP;\nEND;\n$$;\n\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:SAVEPOINT",
+      "must_include:ROLLBACK TO",
+      "must_include:EXCEPTION",
+      "must_include:products"
+    ]
+  }
+}

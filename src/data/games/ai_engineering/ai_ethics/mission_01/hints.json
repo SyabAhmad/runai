@@ -1,0 +1,7 @@
+{
+  "mission_01": [
+    "Groups: `groups = np.unique(protected_attribute)`.",
+    "Representation: `ratio = count(group) / total` for each group.",
+    "Outcome diff: `outcome_rate[group] = mean(outcome[group])`."
+  ]
+}

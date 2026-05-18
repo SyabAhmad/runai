@@ -1,0 +1,7 @@
+{
+  "mission_04": [
+    "Text: `text_emb = text_encoder(text)`.",
+    "Regions: `region_embs = [image_encoder(crop(image, box)) for box in proposals]`.",
+    "Similarity: `scores = [cosine_sim(text_emb, r) for r in region_embs]`, return `proposals[argmax(scores)]`."
+  ]
+}

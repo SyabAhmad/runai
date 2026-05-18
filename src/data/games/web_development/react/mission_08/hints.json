@@ -1,0 +1,7 @@
+{
+  "mission_08": [
+    "React.memo(Component) does a shallow comparison of props. If props are the same, the component skips re-rendering.",
+    "useMemo(() => expensiveComputation(a, b), [a, b]) only recalculates when a or b changes. Without it, the computation runs every render.",
+    "useCallback(() => { ... }, [deps]) returns a memoized function. Use it when passing callbacks to memoized children to prevent unnecessary re-renders."
+  ]
+}

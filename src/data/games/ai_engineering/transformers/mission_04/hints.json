@@ -1,0 +1,7 @@
+{
+  "mission_04": [
+    "Self-attention: `attn = multi_head_attention(x, W_q, W_k, W_v, W_o, num_heads)`",
+    "Residual + norm: `x1 = layer_norm(x + attn)`",
+    "FFN: `ffn = np.matmul(np.maximum(np.matmul(x1, W_ff1), 0), W_ff2)` where `maximum(..., 0)` is ReLU."
+  ]
+}

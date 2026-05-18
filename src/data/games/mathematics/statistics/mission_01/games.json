@@ -1,0 +1,19 @@
+{
+  "title": "Hypothesis Testing",
+  "id": "mission_01",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import numpy as np\nfrom scipy import stats\n\n# TODO: Two-sample t-test scenario\n# Drug A vs Drug B: does Drug A lower blood pressure more?\nnp.random.seed(42)\n\n# Drug A: mean reduction = 12, std = 3, n = 30\ndrug_A = None\n\n# Drug B: mean reduction = 10, std = 3, n = 30\ndrug_B = None\n\n# TODO: State the hypotheses\n# H0: mu_A = mu_B (no difference)\n# H1: mu_A != mu_B (two-tailed)\n\n# TODO: Perform a two-sample t-test\nt_stat, p_value = None, None\n\n# TODO: Interpret the result at alpha = 0.05\nalpha = 0.05\nreject_null = None\n\n# TODO: Compute the effect size (Cohen's d)\nmean_A = None\nmean_B = None\npooled_std = None\ncohens_d = None\n\n# TODO: One-sample t-test: is the mean of Drug A different from 10?\nt_stat_one, p_value_one = None, None\n\n# TODO: Compute the 95% confidence interval for the mean of Drug A\nci_lower, ci_upper = None, None\n\nprint(f\"Drug A mean: {mean_A:.2f}, Drug B mean: {mean_B:.2f}\")\nprint(f\"t-statistic: {t_stat:.4f}\")\nprint(f\"p-value: {p_value:.4f}\")\nprint(f\"Reject H0 at alpha={alpha}: {reject_null}\")\nprint(f\"Cohen's d: {cohens_d:.4f}\")\nprint(f\"One-sample t-test p-value: {p_value_one:.4f}\")\nprint(f\"95% CI for Drug A mean: ({ci_lower:.2f}, {ci_upper:.2f})\")\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:numpy",
+      "must_include:scipy",
+      "must_include:stats.ttest_ind",
+      "must_include:stats.ttest_1samp"
+    ]
+  }
+}

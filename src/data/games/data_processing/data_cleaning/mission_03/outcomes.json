@@ -1,3 +1,3 @@
-﻿{
-    "mission_03":  "Perfect. Categorical features are model-ready now."
+{
+  "mission_03": "Congratulations! You've mastered text standardization techniques in pandas. By combining str.strip(), str.lower(), str.title(), and regex-based transformations, you can clean virtually any messy text data. These skills are essential when working with user-generated content, imported CSV files, or data from multiple sources with inconsistent formatting. Text standardization is a prerequisite for accurate string matching, grouping operations, and creating reliable lookup tables."
 }

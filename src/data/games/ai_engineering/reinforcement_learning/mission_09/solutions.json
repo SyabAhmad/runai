@@ -1,0 +1,3 @@
+{
+  "mission_09": "import numpy as np\n\ndef mcts_select(node, exploration_c=1.4):\n    total_visits = node.total_visits\n    if total_visits == 0:\n        return None\n    best_action = None\n    best_ucb = float(\"-inf\")\n    for action in node.available_actions:\n        if action not in node.explored_actions:\n            return None\n        q = node.q_values.get(action, 0)\n        n_sa = node.action_visits.get(action, 0)\n        if n_sa == 0:\n            return action\n        ucb = q + exploration_c * np.sqrt(np.log(total_visits) / n_sa)\n        if ucb > best_ucb:\n            best_ucb = ucb\n            best_action = action\n    return best_action"
+}

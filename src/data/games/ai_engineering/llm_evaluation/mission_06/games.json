@@ -1,0 +1,20 @@
+{
+  "title": "Human Evaluation Design",
+  "id": "mission_06",
+  "type": "ai_code",
+  "xpReward": 90,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "# LLM Evaluation Mission 06: Human Evaluation Design\n#\n# Human evaluation is the gold standard for LLM assessment.\n# Common dimensions: fluency, coherence, relevance, factuality, helpfulness.\n#\n# Likert scale (1-5) is standard. Need multiple annotators for reliability.\n# Inter-annotator agreement measured with Cohen's Kappa or Fleiss' Kappa.\n#\n# Your goal: Implement compute_kappa(annotations, num_categories=5)\n#   1. Compute observed agreement (P_o)\n#   2. Compute expected agreement by chance (P_e)\n#   3. Kappa = (P_o - P_e) / (1 - P_e)\n\nimport numpy as np\n\ndef compute_kappa(annotations, num_categories=5):\n    # TODO: Compute observed agreement\n    # TODO: Compute expected agreement\n    # TODO: Return kappa\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def compute_kappa",
+      "must_include:observed",
+      "must_include:expected",
+      "must_include:agreement",
+      "must_include:return"
+    ]
+  }
+}

@@ -1,0 +1,3 @@
+{
+  "mission_09": "Implement Newton's method for optimization, which uses second-order derivative information (the Hessian matrix) to achieve quadratic convergence near the optimum. Unlike gradient descent that only uses first-order information, Newton's method approximates the function locally as a quadratic and jumps directly to the minimum of this approximation. The Newton direction is computed by solving H * delta = -grad, where H is the Hessian. However, Newton's method requires the Hessian to be positive definite and can be computationally expensive for high-dimensional problems. Regularization techniques like adding a small multiple of the identity matrix help handle non-positive-definite Hessians."
+}

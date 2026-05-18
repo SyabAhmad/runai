@@ -1,0 +1,6 @@
+{
+  "title": "Stored Procedures",
+  "description": "Master database programming with stored procedures, functions, triggers, transactions, and error handling. Learn to encapsulate business logic in the database, enforce data integrity with triggers, manage atomic operations with transactions, and build robust error handling for production-grade database code.",
+  "difficulty": "advanced",
+  "order": 4
+}

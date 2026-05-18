@@ -1,0 +1,3 @@
+{
+  "mission_08": "Orthogonal vectors are perpendicular to each other (dot product = 0), and orthonormal vectors are orthogonal unit vectors. The Gram-Schmidt process converts any set of linearly independent vectors into an orthogonal set by iteratively subtracting projections. The projection matrix P = A(A^T A)^(-1) A^T projects any vector onto the column space of A. When A has orthonormal columns, this simplifies to P = AA^T. Orthogonality is crucial because it eliminates redundancy, simplifies computations, and ensures numerical stability. QR decomposition, least squares, and PCA all rely on orthogonalization."
+}

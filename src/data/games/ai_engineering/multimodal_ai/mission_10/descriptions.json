@@ -1,0 +1,3 @@
+{
+  "mission_10": "**Multimodal RAG** extends retrieval-augmented generation to images and text.\n\n**How it works**:\n1. User asks a question (text or image)\n2. System retrieves relevant documents AND images from a knowledge base\n3. LLM uses both text and visual context to generate a richer answer\n\n**Index**: CLIP embeddings for both text and images in a shared space. Enables cross-modal retrieval (text query → image results, image query → text results).\n\n**Applications**:\n- Visual QA with external knowledge\n- Product search (text → images, image → similar products)\n- Medical diagnosis (symptom + X-ray → diagnosis with reference images)\n- Education (explain concepts with relevant diagrams)"
+}

@@ -1,0 +1,7 @@
+{
+  "mission_09": [
+    "For the card flip, set transform-style: preserve-3d on the inner container and backface-visibility: hidden on both faces. Rotate the back face 180deg initially.",
+    "For the accordion, animate max-height from 0 to a large value like 500px. The actual height will be constrained by content.",
+    "For the morphing shape, animate border-radius through different percentage combinations like 60% 40% 30% 70% / 60% 30% 70% 40%."
+  ]
+}

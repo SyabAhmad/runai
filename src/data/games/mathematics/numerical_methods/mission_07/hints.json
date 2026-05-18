@@ -1,0 +1,7 @@
+{
+  "mission_07": [
+    "Gaussian elimination: eliminate below diagonal, then back-substitute",
+    "LU decomposition: L[i,k] = U[i,k]/U[k,k], then U[i,k:] -= L[i,k]*U[k,k:]",
+    "Condition number: cond(A) = sigma_max / sigma_min using np.linalg.cond(A)"
+  ]
+}

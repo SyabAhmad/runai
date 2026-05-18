@@ -1,0 +1,7 @@
+{
+  "mission_08": [
+    "Initialize: `z = np.random.randn(1, 4, 64, 64)`.",
+    "Loop: predict eps with CFG, apply DDIM step in latent space.",
+    "Decode: `image = vae_decoder(z_final)`."
+  ]
+}

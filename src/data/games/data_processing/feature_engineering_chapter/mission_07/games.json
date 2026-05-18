@@ -1,4 +1,4 @@
-﻿{
+{
     "title":  "Feature Engineering Mission 7: Build Feature List by Prefix",
     "initialState":  {
                          "content":  "# TODO: Select model features by naming convention\n\ndef select_model_features(df):\n    # TODO: return columns starting with feat_ except feat_target_leak"

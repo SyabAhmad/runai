@@ -1,0 +1,7 @@
+{
+  "mission_09": [
+    "Event delegation: container.addEventListener('click', e => { if (e.target.closest('.delete-btn')) { ... } }). Use data attributes to identify actions.",
+    "EventEmitter stores callbacks in an object keyed by event name. on() pushes to the array, emit() iterates and calls each callback.",
+    "For drag and drop, set draggable.draggable = true, listen for dragstart on the source and dragover/drop on the target. Call e.preventDefault() on dragover."
+  ]
+}

@@ -1,0 +1,3 @@
+{
+  "mission_04": "The **U-Net** is the workhorse of diffusion models. Named for its U-shape:\n\n**Encoder (left side)**: Downsampling blocks that reduce spatial dimensions while increasing channels. Captures semantic context.\n\n**Bottleneck**: Deepest layer with most channels. Captures global information.\n\n**Decoder (right side)**: Upsampling blocks that restore spatial dimensions. Generates the output.\n\n**Skip connections**: Connect encoder to decoder at each level. Preserve fine details that would be lost during downsampling.\n\n**Time embedding**: The diffusion timestep t is injected via sinusoidal encoding + MLP, added to each layer.\n\nStable Diffusion uses a U-Net with attention blocks in the bottleneck for text conditioning."
+}

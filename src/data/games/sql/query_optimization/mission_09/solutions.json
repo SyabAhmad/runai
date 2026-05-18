@@ -1,0 +1,3 @@
+{
+  "mission_09": "EXPLAIN ANALYZE SELECT o.id, c.name, o.total, o.order_date\nFROM orders o\nJOIN customers c ON o.customer_id = c.id\nWHERE c.region = 'West';"
+}

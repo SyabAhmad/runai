@@ -1,0 +1,6 @@
+{
+  "title": "Outlier Detection",
+  "description": "Master outlier detection techniques to identify anomalous data points that can skew analysis and model performance. Learn the IQR method for robust statistical detection, Z-score for parametric approaches, Isolation Forest for tree-based anomaly detection, DBSCAN for density-based clustering, and Local Outlier Factor for neighborhood-based methods. These techniques are essential for data cleaning, fraud detection, anomaly detection, and robust statistical analysis.",
+  "difficulty": "intermediate",
+  "order": 7
+}

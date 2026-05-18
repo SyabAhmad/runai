@@ -1,0 +1,3 @@
+{
+  "mission_07": "Async/await is syntactic sugar over promises that makes asynchronous code read like synchronous code. The async keyword marks a function as returning a promise, and await pauses execution until a promise resolves. Error handling uses familiar try/catch blocks instead of .catch() chains. You can still use Promise.all inside async functions for parallel execution. This mission focuses on converting promise patterns to async/await, building data pipelines, and implementing retry logic with exponential backoff."
+}

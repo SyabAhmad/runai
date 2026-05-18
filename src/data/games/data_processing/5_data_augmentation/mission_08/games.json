@@ -1,0 +1,23 @@
+{
+  "title": "Advanced Text Augmentation Pipeline",
+  "id": "mission_08",
+  "type": "ai_code",
+  "xpReward": 100,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "import random\nimport nltk\nfrom nltk.corpus import wordnet\n\n# TODO: Build a comprehensive text augmentation pipeline\n# Implement multiple augmentation strategies:\n# 1. Synonym replacement (replace random words with synonyms)\n# 2. Random insertion (insert random synonyms at random positions)\n# 3. Random swap (swap adjacent words)\n# 4. Random deletion (delete words with probability p)\n\nclass TextAugmenter:\n    def __init__(self):\n        # TODO: Initialize augmentation parameters\n        pass\n    \n    def synonym_replacement(self, text, n=2):\n        # TODO: Replace n words with synonyms\n        pass\n    \n    def random_insertion(self, text, n=2):\n        # TODO: Insert n random synonyms at random positions\n        pass\n    \n    def random_swap(self, text, n=2):\n        # TODO: Swap n pairs of adjacent words\n        pass\n    \n    def random_deletion(self, text, p=0.2):\n        # TODO: Delete each word with probability p\n        pass\n    \n    def augment(self, text, strategy='all'):\n        # TODO: Apply selected strategy or all strategies\n        pass\n\n# TODO: Test the augmenter on sample sentences\n# Compare outputs from different strategies\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:class TextAugmenter",
+      "must_include:synonym_replacement",
+      "must_include:random_insertion",
+      "must_include:random_swap",
+      "must_include:random_deletion",
+      "must_include:wordnet",
+      "must_include:synsets",
+      "must_include:random"
+    ]
+  }
+}

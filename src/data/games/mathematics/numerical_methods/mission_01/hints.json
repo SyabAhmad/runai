@@ -1,0 +1,7 @@
+{
+  "mission_01": [
+    "Midpoint: c = (a + b) / 2",
+    "If f(a) * f(c) < 0, root is in [a,c], so set b = c; otherwise set a = c",
+    "Estimated iterations: n = ceil(log2((b-a)/tol))"
+  ]
+}

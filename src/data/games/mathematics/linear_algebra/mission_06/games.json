@@ -1,0 +1,18 @@
+{
+  "title": "Vector Spaces and Subspaces",
+  "id": "mission_06",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import numpy as np\n\n# TODO: Create a set of vectors as columns of a matrix\nvectors = np.array([[1, 2, 3],\n                    [2, 4, 6],\n                    [1, 0, -1],\n                    [0, 1, 2]])\n\n# TODO: Find the rank (dimension of the column space)\nrank = None\n\n# TODO: Find a basis for the column space using QR decomposition\nQ, R = None, None\n\n# TODO: Extract the basis vectors (columns of Q corresponding to non-zero rows of R)\nbasis = None\n\n# TODO: Check if vector b is in the column space by solving the least squares problem\nb = np.array([3, 6, 2, 3])\ncoefficients, residuals, _, _ = None, None, None, None\n\n# TODO: Compute the projection of b onto the column space\nprojection = None\n\n# TODO: Compute the orthogonal complement (residual)\nresidual_vector = None\n\nprint(f\"Rank: {rank}\")\nprint(f\"Basis vectors:\\n{basis}\")\nprint(f\"Coefficients: {coefficients}\")\nprint(f\"Projection: {projection}\")\nprint(f\"Residual norm: {np.linalg.norm(residual_vector):.6f}\")\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:numpy",
+      "must_include:np.linalg.qr",
+      "must_include:np.linalg.lstsq"
+    ]
+  }
+}

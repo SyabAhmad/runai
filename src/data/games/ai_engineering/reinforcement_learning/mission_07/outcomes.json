@@ -1,0 +1,3 @@
+{
+  "mission_07": "You implemented PPO's core objective! The clipping mechanism is elegantly simple but incredibly effective. It prevents the policy from changing too aggressively while still allowing meaningful learning. This is why PPO is the default choice for most RL applications today."
+}

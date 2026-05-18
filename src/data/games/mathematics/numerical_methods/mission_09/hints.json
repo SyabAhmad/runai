@@ -1,0 +1,7 @@
+{
+  "mission_09": [
+    "Euler: y_{n+1} = y_n + h * f(t_n, y_n)",
+    "RK4: weighted average of 4 slope estimates at t, t+h/2, t+h/2, t+h",
+    "RK45: compare 4th and 5th order solutions to estimate error and adjust step size"
+  ]
+}

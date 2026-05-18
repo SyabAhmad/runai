@@ -1,0 +1,3 @@
+{
+  "mission_04": "You implemented METEOR! This metric better captures semantic similarity than BLEU by considering stemming, synonyms, and word order. It's widely used in machine translation evaluation."
+}

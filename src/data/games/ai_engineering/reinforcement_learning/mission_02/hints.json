@@ -1,0 +1,7 @@
+{
+  "mission_02": [
+    "Initialize `V = np.zeros(len(states))`.",
+    "For each state, compute `Q[a] = sum(transitions[s][a][s'] * (rewards[s][a][s'] + gamma * V[s']))`.",
+    "Update `V_new[s] = max(Q)` and check `max(abs(V_new - V)) < threshold`."
+  ]
+}

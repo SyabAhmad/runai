@@ -1,0 +1,19 @@
+{
+  "title": "EXPLAIN: Reading Query Plans",
+  "id": "mission_01",
+  "type": "ai_code",
+  "xpReward": 60,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "-- EXPLAIN: Analyze a simple query execution plan\n-- The users table has columns: id, name, email, created_at\n-- TODO: Write an EXPLAIN statement to see the query plan for finding users by email\n-- Identify whether the query uses an index scan or sequential scan\n\n-- Write your EXPLAIN query below:\n\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:EXPLAIN",
+      "must_include:SELECT",
+      "must_include:users",
+      "must_include:email"
+    ]
+  }
+}

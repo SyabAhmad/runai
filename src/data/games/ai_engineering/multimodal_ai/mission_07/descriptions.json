@@ -1,0 +1,3 @@
+{
+  "mission_07": "**LLaVA** (Large Language and Vision Assistant) is a simple but powerful VLM.\n\n**Architecture**: CLIP ViT → Linear projector → LLM. That's it.\n\n**Training**:\n1. **Stage 1**: Freeze CLIP and LLM, train projector on 595K image-caption pairs\n2. **Stage 2**: Unfreeze projector, fine-tune on 158K visual instruction data\n\n**Why it works**:\n- CLIP already has rich visual features\n- LLM already has strong language understanding\n- Projector just needs to translate between the two spaces\n\n**Performance**: LLaVA achieves state-of-the-art on VQA, captioning, and visual reasoning with only a linear projector. Simplicity wins."
+}

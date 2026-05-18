@@ -1,0 +1,3 @@
+{
+  "mission_06": "Graph pooling is essential for graph-level tasks like graph classification, where you need a single representation for the entire graph. DiffPool (Differentiable Pooling) learns a soft cluster assignment matrix that maps nodes to clusters, creating a coarsened graph at each pooling layer. The assignment matrix S is computed via a softmax over learned cluster scores, making the pooling operation differentiable. Node features are pooled by S transpose times X, and the adjacency is coarsened by S transpose times A times S. Two auxiliary losses improve clustering: link prediction loss encourages the assignment to preserve graph structure, and entropy regularization pushes assignments toward crisp one-hot vectors."
+}

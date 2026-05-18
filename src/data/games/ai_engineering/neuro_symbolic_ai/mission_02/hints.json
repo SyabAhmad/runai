@@ -1,0 +1,9 @@
+{
+  "mission_02": [
+    "Fuzzy AND (product t-norm): return a * b.",
+    "Fuzzy OR (probabilistic sum): return a + b - a * b.",
+    "Fuzzy implication (Reichenbach): return 1.0 - a + a * b.",
+    "Fuzzy equivalence: return self.fuzzy_and(self.fuzzy_implies(a, b), self.fuzzy_implies(b, a)).",
+    "Numerical gradient: gradients[var] = (perturbed_loss - loss) / epsilon."
+  ]
+}

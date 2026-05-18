@@ -1,0 +1,6 @@
+{
+  "title": "Quantum Machine Learning",
+  "description": "Explore the intersection of quantum computing and machine learning. Learn quantum circuits, variational quantum circuits, quantum kernels, quantum neural networks, quantum feature maps, quantum advantage in ML, hybrid quantum-classical models, quantum data encoding, quantum optimization, and quantum ML frameworks.",
+  "difficulty": "advanced",
+  "order": 4
+}

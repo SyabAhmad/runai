@@ -1,0 +1,19 @@
+{
+  "title": "RANK: Handling Ties in Rankings",
+  "id": "mission_02",
+  "type": "ai_code",
+  "xpReward": 60,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "-- RANK: Rank students by their test scores\n-- The students table has columns: id, name, test_score\n-- TODO: Use RANK() to rank students by test_score DESC\n-- Notice how ties receive the same rank\n\nSELECT \nFROM students\n\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:RANK",
+      "must_include:OVER",
+      "must_include:ORDER BY",
+      "must_include:test_score"
+    ]
+  }
+}

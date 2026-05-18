@@ -1,0 +1,3 @@
+{
+  "mission_05": "You implemented the diffusion training loop! The simplicity is remarkable — just predict noise at random timesteps. Yet this single objective produces models that generate photorealistic images, art, and even video."
+}

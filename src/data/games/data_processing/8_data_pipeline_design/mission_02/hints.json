@@ -1,0 +1,7 @@
+{
+  "mission_02": [
+    "ColumnTransformer takes a list of (name, transformer, columns) tuples.",
+    "Use Pipeline inside ColumnTransformer to chain multiple steps per column type.",
+    "remainder='passthrough' keeps untransformed columns in the output."
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "mission_08": [
+    "Create a class to encapsulate all augmentation methods with shared state.",
+    "Use wordnet.synsets() to find synonyms for both replacement and insertion.",
+    "For random deletion, iterate through words and keep each with probability (1-p)."
+  ]
+}

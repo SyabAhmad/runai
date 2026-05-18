@@ -1,0 +1,23 @@
+{
+  "title": "CSS Animations and Transitions",
+  "id": "mission_08",
+  "type": "ai_code",
+  "xpReward": 100,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "/* TODO: Create smooth hover transitions for interactive elements */\n/* TODO: Build a keyframe animation for a loading spinner */\n/* TODO: Animate elements entering the viewport */\n/* TODO: Create a pulsing notification badge */\n\n/* TODO: Button hover transition */\n.btn {\n  background: #3b82f6;\n  color: white;\n  padding: 0.75rem 1.5rem;\n  border: none;\n  border-radius: 6px;\n  /* TODO: Add transition for smooth hover effect */\n}\n\n/* TODO: Loading spinner animation */\n.spinner {\n  width: 40px;\n  height: 40px;\n  border: 4px solid #e5e7eb;\n  border-radius: 50%;\n  /* TODO: Add animation for spinning effect */\n}\n\n/* TODO: Fade-in animation for elements */\n.fade-in {\n  /* TODO: Define fade-in keyframes and apply animation */\n}\n\n/* TODO: Pulsing notification badge */\n.badge {\n  width: 12px;\n  height: 12px;\n  background: #ef4444;\n  border-radius: 50%;\n  /* TODO: Add pulse animation */\n}"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:transition:",
+      "must_include:@keyframes",
+      "must_include:animation:",
+      "must_include:transform:",
+      "must_include:hover",
+      "must_include:infinite",
+      "must_include:@keyframes spin",
+      "must_include:@keyframes pulse"
+    ]
+  }
+}

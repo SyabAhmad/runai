@@ -1,0 +1,3 @@
+{
+  "mission_02": "Excellent! Multi-head attention is the \"secret sauce\" of transformers. By running attention in parallel with different projections, the model captures multiple types of relationships simultaneously. This is why a single transformer can handle syntax, semantics, and coreference all at once."
+}

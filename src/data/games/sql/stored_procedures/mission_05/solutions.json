@@ -1,0 +1,3 @@
+{
+  "mission_05": "CREATE OR REPLACE FUNCTION safe_divide(\n    numerator NUMERIC,\n    denominator NUMERIC\n)\nRETURNS NUMERIC\nLANGUAGE plpgsql\nAS $$\nBEGIN\n    RETURN numerator / denominator;\nEXCEPTION\n    WHEN division_by_zero THEN\n        RAISE NOTICE 'Division by zero attempted';\n        RETURN NULL;\nEND;\n$$;"
+}

@@ -1,0 +1,18 @@
+{
+  "title": "Binning Continuous Variables",
+  "id": "mission_03",
+  "type": "ai_code",
+  "xpReward": 70,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "import pandas as pd\nimport numpy as np\n\n# TODO: Create a DataFrame with continuous age data\ndata = {\n    'age': [5, 12, 18, 25, 35, 45, 55, 65, 75, 85],\n    'name': ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']\n}\ndf = pd.DataFrame(data)\n\n# TODO: Create age bins with labels\nbins = [0, 18, 35, 55, 75, 100]\nlabels = ['Child', 'Young Adult', 'Adult', 'Middle Age', 'Senior']\ndf['age_group'] = ...\n\nprint(df)\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:pd.cut",
+      "must_include:bins",
+      "must_include:labels"
+    ]
+  }
+}

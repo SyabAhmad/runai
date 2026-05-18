@@ -1,0 +1,3 @@
+{
+  "mission_05": "Expectation is the weighted average of all possible values, and variance measures how spread out the values are around the mean. For discrete variables, E[X] = sum(x * p(x)). For continuous variables, E[X] = integral(x * f(x)dx). Key properties: E[aX + b] = a*E[X] + b (linearity), Var(aX + b) = a^2 * Var(X), and for independent X, Y: Var(X + Y) = Var(X) + Var(Y). The standard deviation is the square root of variance and has the same units as X. These properties are used constantly in ML: in computing loss functions, understanding model uncertainty, and in the analysis of ensemble methods."
+}

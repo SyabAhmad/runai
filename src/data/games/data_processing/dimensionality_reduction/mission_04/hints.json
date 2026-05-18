@@ -1,0 +1,1 @@
+{"mission_04": ["Calculate variance with df.var() to see which features have low variance.", "Create selector = VarianceThreshold(threshold=0.1) and use selector.fit_transform(df).", "Use selector.get_feature_names_out() or selector.get_support() to identify kept features."]}

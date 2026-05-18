@@ -1,0 +1,9 @@
+{
+  "mission_04": [
+    "Apply RY-RZ-RY: state = self._single_qubit_gate(ry1, q) @ state (repeat for rz and ry2).",
+    "Entangling: state = self._apply_cnot(state, q, target) where target = (q+1) % n_qubits.",
+    "Initialize and encode: state[0] = 1.0; state = self.encode_input(state, x[:self.n_inputs]).",
+    "Apply layers: for layer in range(self.n_layers): state = self.variational_layer(state, params, layer).",
+    "Z expectation: z_operator[i,i] = 1 if first_bit==0 else -1; expectation = np.real(state.conj() @ (z_operator @ state))."
+  ]
+}

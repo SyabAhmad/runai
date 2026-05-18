@@ -1,0 +1,9 @@
+{
+  "mission_10": [
+    "Scale logits: scaled = logits / temperature.",
+    "Numerically stable softmax: exp_scaled = np.exp(scaled - np.max(scaled, axis=-1, keepdims=True)).",
+    "Combine targets: combined_targets = alpha * soft_targets + (1 - alpha) * np.eye(n_classes)[hard_targets].",
+    "Train student: self.student.fit(X, combined_targets) or use one-vs-rest for multi-class.",
+    "Evaluate fidelity: accuracy_score(teacher_pred, student_pred)."
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "mission_09": [
+    "The server orchestration is weighted averaging: global_w[key] = sum(n_k * client_w[k][key]) / sum(n_k) where n_k is the sample size for client k",
+    "Client training: copy global weights, run local SGD for local_epochs, return updated weights. Use the same training loop as in mission 1",
+    "Evaluation: forward pass through the global model on test data, compute accuracy as mean(predictions == labels) and MSE loss as mean((pred - true)^2)"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Optimizing Subqueries vs JOINs",
+  "id": "mission_10",
+  "type": "ai_code",
+  "xpReward": 120,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "-- Optimizing Subqueries vs JOINs: Rewrite for better performance\n-- The orders table has columns: id, customer_id, order_date, total\n-- The customers table has columns: id, name, email, signup_date\n-- The BAD query uses a correlated subquery that runs once per row\n-- TODO: Rewrite using a JOIN for better performance\n\n-- BAD query (correlated subquery):\n-- SELECT name, email FROM customers c\n-- WHERE EXISTS (SELECT 1 FROM orders o WHERE o.customer_id = c.id AND o.total > 1000);\n\n-- TODO: Rewrite this using a JOIN:\n\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:SELECT",
+      "must_include:JOIN",
+      "must_include:customers",
+      "must_include:orders"
+    ]
+  }
+}

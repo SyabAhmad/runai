@@ -1,0 +1,3 @@
+{
+  "mission_05": "Singular Value Decomposition (SVD) is one of the most powerful tools in linear algebra. It factorizes ANY matrix (even non-square) as A = U @ S @ V^T, where U and V are orthogonal matrices and S contains the singular values. SVD reveals the rank, condition number, and best low-rank approximations of a matrix. It is used in image compression, recommendation systems (Netflix prize), natural language processing (latent semantic analysis), noise reduction, and solving least-squares problems. The singular values tell you the importance of each component."
+}

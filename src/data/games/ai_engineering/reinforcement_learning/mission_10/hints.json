@@ -1,0 +1,7 @@
+{
+  "mission_10": [
+    "Reward: `r = reward_model(prompt, response)`.",
+    "KL divergence: `kl_divergence = np.sum(response * np.log(response / (ref_model + 1e-8)))`.",
+    "Total: `total_reward = r - kl_coeff * kl_divergence`, then apply PPO clipping."
+  ]
+}

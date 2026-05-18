@@ -1,0 +1,7 @@
+{
+  "mission_09": [
+    "BFS ordering: start from node 0, use a queue to visit neighbors in order. This creates a canonical ordering that reduces the space of possible sequences",
+    "The graph-level RNN takes the previous adjacency row as input and updates the graph hidden state. The node-level RNN generates each edge bit sequentially",
+    "For edge prediction, compute logit = h_node @ W_out, then sigmoid to get probability. Sample edge_bit ~ Bernoulli(prob) during generation"
+  ]
+}

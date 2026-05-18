@@ -1,0 +1,3 @@
+{
+  "mission_05": "SMOTE (Synthetic Minority Over-sampling Technique) addresses class imbalance by generating synthetic samples for minority classes rather than simply duplicating existing ones. It works by selecting a minority class sample, finding its k nearest neighbors within the same class, and creating new samples along the line segments connecting them in feature space. This approach introduces diversity into the minority class while avoiding the overfitting that comes from naive duplication. SMOTE is widely used in fraud detection, medical diagnosis, and any domain where rare events are critical to detect. The imbalanced-learn library provides a clean implementation that integrates seamlessly with scikit-learn workflows."
+}

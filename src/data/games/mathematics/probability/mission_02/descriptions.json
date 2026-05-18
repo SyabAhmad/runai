@@ -1,0 +1,3 @@
+{
+  "mission_02": "Bayes' theorem updates beliefs in light of new evidence: P(A|B) = P(B|A) * P(A) / P(B). The prior P(A) is your belief before seeing evidence, the likelihood P(B|A) is how likely the evidence is given A, and the posterior P(A|B) is your updated belief. The classic medical test paradox shows that even with a 95% accurate test, a positive result for a rare disease (1% prevalence) gives only about 8.8% probability of actually having the disease. This is because false positives from the 99% healthy population overwhelm true positives. Bayes' theorem is fundamental to Bayesian inference, spam filtering, medical diagnosis, and probabilistic machine learning."
+}

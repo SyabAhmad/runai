@@ -1,0 +1,3 @@
+{
+  "mission_06": "CREATE INDEX idx_users_dept ON users(department) INCLUDE (name, email);\n\nEXPLAIN ANALYZE SELECT name, email FROM users WHERE department = 'Engineering';"
+}

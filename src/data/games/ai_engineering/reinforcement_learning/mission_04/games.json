@@ -1,0 +1,20 @@
+{
+  "title": "Policy Gradient (REINFORCE)",
+  "id": "mission_04",
+  "type": "ai_code",
+  "xpReward": 90,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "# RL Mission 04: Policy Gradient (REINFORCE)\n#\n# Instead of learning Q-values, policy gradient methods\n# directly optimize the policy parameters theta.\n#\n# REINFORCE update:\n#   theta = theta + alpha * G * grad(log(pi(a|s)))\n#\n# Where G is the return (sum of discounted rewards).\n#\n# Your goal: Implement reinforce(env, episodes, alpha, gamma)\n#   1. Initialize policy parameters theta\n#   2. For each episode:\n#      a. Generate trajectory using current policy\n#      b. Compute returns G for each step\n#      c. Update theta using gradient ascent\n#   3. Return trained theta and episode rewards\n\nimport numpy as np\n\ndef reinforce(env, episodes, alpha, gamma):\n    # TODO: Initialize theta (policy parameters)\n    # TODO: For each episode, collect trajectory\n    # TODO: Compute discounted returns G\n    # TODO: Update theta using REINFORCE rule\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def reinforce",
+      "must_include:gamma",
+      "must_include:theta",
+      "must_include:return",
+      "must_include:gradient"
+    ]
+  }
+}

@@ -1,0 +1,3 @@
+{
+  "mission_03": "import numpy as np\n\ndef kl_divergence(p, q):\n    p_clipped = np.clip(p, 1e-15, 1)\n    q_clipped = np.clip(q, 1e-15, 1)\n    p_clipped = p_clipped / np.sum(p_clipped)\n    q_clipped = q_clipped / np.sum(q_clipped)\n    kl = np.sum(p_clipped * np.log(p_clipped / q_clipped))\n    return kl\n\ndef js_divergence(p, q):\n    m = 0.5 * (p + q)\n    js = 0.5 * kl_divergence(p, m) + 0.5 * kl_divergence(q, m)\n    return js\n\np = np.array([0.5, 0.3, 0.2])\nq = np.array([0.4, 0.3, 0.3])\nprint(f\"KL(P||Q): {kl_divergence(p, q):.4f}\")\nprint(f\"KL(Q||P): {kl_divergence(q, p):.4f}\")\nprint(f\"JS(P||Q): {js_divergence(p, q):.4f}\")"
+}

@@ -1,4 +1,4 @@
-﻿{
+{
     "title":  "Feature Engineering Mission 9: Reusable Preprocessing Pipeline",
     "initialState":  {
                          "content":  "# TODO: Build reusable preprocessing pipeline for numeric features\n\ndef make_preprocessing_pipeline():\n    # TODO: create Pipeline with imputer and scaler\n\n    # TODO: return the pipeline"

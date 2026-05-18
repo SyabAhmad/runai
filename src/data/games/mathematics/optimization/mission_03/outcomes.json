@@ -1,0 +1,3 @@
+{
+  "mission_03": "Well done! You have implemented Nesterov Accelerated Gradient, a powerful optimization technique that provides theoretical convergence guarantees and practical performance benefits. The lookahead mechanism is a clever innovation that makes NAG superior to classical momentum in many scenarios."
+}

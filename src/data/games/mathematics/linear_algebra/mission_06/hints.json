@@ -1,0 +1,10 @@
+{
+  "mission_06": [
+    "Use np.linalg.matrix_rank() to find the rank of the matrix.",
+    "QR decomposition with np.linalg.qr() gives orthogonal Q and upper-triangular R.",
+    "Use np.linalg.lstsq() to solve the least-squares problem.",
+    "The projection is vectors @ coefficients.",
+    "The residual is b - projection, which should be orthogonal to the column space.",
+    "The number of basis vectors equals the rank."
+  ]
+}

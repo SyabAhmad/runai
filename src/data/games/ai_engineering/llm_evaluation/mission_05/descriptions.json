@@ -1,0 +1,3 @@
+{
+  "mission_05": "**BERTScore** leverages pretrained language models for evaluation.\n\n**Why it's better than n-gram metrics**:\n- Captures semantic similarity: 'big' ≈ 'large'\n- Contextual: 'bank' in 'river bank' ≠ 'bank' in 'bank account'\n- No exact word matching required\n\n**Algorithm**:\n1. Get BERT embeddings for each token in generated and reference\n2. Compute cosine similarity matrix (gen × ref)\n3. For each generated token, find max similarity to any reference token (precision)\n4. For each reference token, find max similarity to any generated token (recall)\n5. F1 = harmonic mean of P and R\n\n**Correlation**: BERTScore correlates much better with human judgment than BLEU/ROUGE, especially for paraphrasing and summarization."
+}

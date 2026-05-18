@@ -1,0 +1,3 @@
+{
+  "mission_03": "**Q-Learning** is the most famous model-free RL algorithm. It learns the optimal action-value function Q(s,a) — the expected return of taking action a in state s and following the optimal policy thereafter.\n\nThe update rule:\n```\nQ(s,a) ← Q(s,a) + α * [r + γ * max_a' Q(s',a') - Q(s,a)]\n```\n\nWhere:\n- **α (learning rate)**: How much new information overrides old\n- **γ (discount)**: Future reward importance\n- **TD error**: `r + γ * max Q(s',a') - Q(s,a)` — the surprise\n\n**Epsilon-greedy** balances exploration vs exploitation:\n- With probability ε: random action (explore)\n- With probability 1-ε: best known action (exploit)\n\nThis is the algorithm behind DeepMind's Atari-playing AI (with neural networks instead of tables)."
+}

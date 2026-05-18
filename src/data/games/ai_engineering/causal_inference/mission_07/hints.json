@@ -1,0 +1,7 @@
+{
+  "mission_07": [
+    "For the causal split criterion, split data into left/right based on feature_values < split_point. Estimate treatment effect in each node as mean(Y[T==1]) - mean(Y[T==0]). The criterion is n_left * τ_left² + n_right * τ_right².",
+    "For honest forests, randomly split data 50/50. Use one half to build tree structure (splits), the other half to estimate leaf treatment effects.",
+    "To estimate CATE for new X, find which leaf each observation falls into in each tree, then average the treatment effect estimates across trees. For variable importance, track how often each variable is used for splits weighted by the treatment effect heterogeneity it creates."
+  ]
+}

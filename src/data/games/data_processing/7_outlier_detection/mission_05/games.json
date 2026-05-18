@@ -1,0 +1,21 @@
+{
+  "title": "DBSCAN for Density-Based Outlier Detection",
+  "id": "mission_05",
+  "type": "ai_code",
+  "xpReward": 85,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import numpy as np\nimport pandas as pd\nfrom sklearn.cluster import DBSCAN\nfrom sklearn.datasets import make_moons\nfrom sklearn.preprocessing import StandardScaler\n\n# TODO: Generate a dataset with non-convex clusters and noise points\n\n# TODO: Apply DBSCAN clustering:\n# 1. Set eps (maximum distance between points in same neighborhood)\n# 2. Set min_samples (minimum points to form a dense region)\n# 3. Points labeled as -1 are considered outliers/noise\n\n# TODO: Analyze the clustering results:\n# - Count clusters found\n# - Count noise points (outliers)\n# - Examine cluster sizes\n\ndef dbscan_outlier_detection():\n    # TODO: Generate non-convex data with noise\n    # TODO: Apply DBSCAN\n    # TODO: Analyze and display results\n    pass\n\n# TODO: Run the detection\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:DBSCAN",
+      "must_include:eps",
+      "must_include:min_samples",
+      "must_include:fit_predict",
+      "must_include:labels_",
+      "must_include:make_moons"
+    ]
+  }
+}

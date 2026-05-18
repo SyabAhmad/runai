@@ -1,0 +1,7 @@
+{
+  "mission_10": [
+    "The generator maps from noise_dim to output_dim using Linear and ReLU layers.",
+    "The discriminator maps from input_dim to 1 (real/fake probability) using Linear and Sigmoid.",
+    "Use BCELoss for both generator and discriminator training with appropriate labels."
+  ]
+}

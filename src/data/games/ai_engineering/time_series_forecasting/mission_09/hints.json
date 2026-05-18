@@ -1,0 +1,7 @@
+{
+  "mission_09": [
+    "SMAPE uses (|actual| + |predicted|) / 2 as the denominator, which is symmetric and handles cases where actual values are near zero.",
+    "MASE scales the forecast MAE by the mean absolute difference of the training data, so values below 1 indicate the forecast beats the naive method.",
+    "The Diebold-Mariano test uses a Newey-West heteroskedasticity-and-autocorrelation-consistent variance estimator for the loss differential."
+  ]
+}

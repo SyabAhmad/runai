@@ -1,0 +1,7 @@
+{
+  "mission_07": [
+    "Ratio: `r = new_probs / (old_probs + 1e-8)` (add epsilon to avoid division by zero).",
+    "Clipped: `r_clipped = np.clip(r, 1 - clip_epsilon, 1 + clip_epsilon)`.",
+    "Surrogate: `np.minimum(r * advantages, r_clipped * advantages)`."
+  ]
+}

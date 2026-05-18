@@ -1,0 +1,3 @@
+{
+  "mission_04": "You implemented low-rank factorization! SVD-based compression is mathematically optimal for linear approximation. It's widely used to compress embedding layers and attention projections."
+}

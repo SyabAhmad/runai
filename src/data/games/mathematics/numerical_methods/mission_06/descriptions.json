@@ -1,0 +1,3 @@
+{
+  "mission_06": "Implement numerical differentiation methods that approximate derivatives using function values at nearby points. Forward difference has O(h) error, central difference improves to O(h^2) by using symmetric points, and the five-point stencil achieves O(h^4) accuracy. Richardson extrapolation combines approximations with different step sizes to eliminate leading error terms, achieving even higher accuracy. Numerical differentiation is essential in optimization (computing gradients), solving differential equations, and sensitivity analysis. However, numerical differentiation is inherently unstable due to subtractive cancellation, making the choice of step size critical."
+}

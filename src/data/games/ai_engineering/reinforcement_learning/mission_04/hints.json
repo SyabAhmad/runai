@@ -1,0 +1,7 @@
+{
+  "mission_04": [
+    "For a softmax policy: `probs = softmax(theta @ state_features)`.",
+    "Compute returns backwards: `G[t] = reward[t] + gamma * G[t+1]`.",
+    "Update: `theta += alpha * G[t] * state_features * (one_hot_action - probs)`."
+  ]
+}

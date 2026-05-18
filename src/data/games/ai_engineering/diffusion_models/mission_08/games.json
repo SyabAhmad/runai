@@ -1,0 +1,21 @@
+{
+  "title": "Latent Diffusion (Stable Diffusion)",
+  "id": "mission_08",
+  "type": "ai_code",
+  "xpReward": 110,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "# Diffusion Models Mission 08: Latent Diffusion\n#\n# Stable Diffusion runs the diffusion process in latent space, not pixel space.\n# This is 4-8x faster and uses less memory.\n#\n# Pipeline:\n# 1. Encode image to latent: z = encoder(x)\n# 2. Run diffusion in latent space\n# 3. Decode latent to image: x = decoder(z)\n#\n# The encoder/decoder is a VAE (Variational Autoencoder).\n# Latent space is typically 64x64x4 vs image 512x512x3.\n#\n# Your goal: Implement latent_diffusion_pipeline(vae_encoder, unet, vae_decoder, prompt, steps)\n#   1. Start from random latent z_T\n#   2. Run DDIM sampling in latent space with CFG\n#   3. Decode latent to image\n\nimport numpy as np\n\ndef latent_diffusion_pipeline(vae_encoder, unet, vae_decoder, prompt, steps=50):\n    # TODO: Sample initial latent z_T\n    # TODO: Run diffusion sampling loop\n    # TODO: Apply CFG at each step\n    # TODO: Decode latent to image\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def latent_diffusion_pipeline",
+      "must_include:vae_encoder",
+      "must_include:vae_decoder",
+      "must_include:unet",
+      "must_include:cfg",
+      "must_include:return"
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "mission_04": [
+    "Whisper's encoder uses two conv layers: first with GELU, then max pooling with stride 2, then second conv with GELU.",
+    "The causal mask is an upper triangular matrix of -inf values that prevents decoder positions from attending to future positions.",
+    "In the decoder, self-attention uses the decoder's own tokens with causal masking, while cross-attention queries from decoder and keys/values from encoder."
+  ]
+}

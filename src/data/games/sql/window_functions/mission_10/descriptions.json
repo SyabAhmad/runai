@@ -1,0 +1,3 @@
+{
+  "mission_10": "NTILE(n) divides the result set into n approximately equal groups, assigning each row a bucket number. This is ideal for quartile analysis, percentile grouping, and creating balanced segments. Combined with CTEs and aggregation, NTILE enables powerful distribution analysis and statistical summaries."
+}

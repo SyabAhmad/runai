@@ -1,0 +1,6 @@
+{
+  "title": "Deep Learning",
+  "description": "Learn deep learning fundamentals with PyTorch. Covers tensors, autograd, neural networks, training loops, optimizers, loss functions, CNNs, RNNs, and model saving/loading.",
+  "difficulty": "medium",
+  "order": 10
+}

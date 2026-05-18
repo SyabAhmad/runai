@@ -1,0 +1,3 @@
+{
+  "mission_04": "Eigenvalues and eigenvectors reveal the intrinsic structure of a matrix. An eigenvector is a special direction that does not change under a linear transformation — it only gets scaled. The scaling factor is the eigenvalue. For symmetric matrices, eigenvectors are orthogonal and eigenvalues are real. The eigendecomposition A = V @ diag(lambda) @ V^T is used in Principal Component Analysis (PCA), stability analysis, vibration analysis, and Google's PageRank algorithm. The spectral radius (largest |eigenvalue|) determines convergence of iterative methods."
+}

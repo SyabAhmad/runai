@@ -1,0 +1,19 @@
+{
+  "title": "Gradient Descent Mathematics",
+  "id": "mission_10",
+  "type": "ai_code",
+  "xpReward": 120,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "import numpy as np\n\n# TODO: Define the loss function: L(w) = (1/2n) * sum((X @ w - y)^2)\ndef loss(X, y, w):\n    n = X.shape[0]\n    return None\n\n# TODO: Define the gradient: grad_L(w) = (1/n) * X^T @ (X @ w - y)\ndef gradient(X, y, w):\n    n = X.shape[0]\n    return None\n\n# TODO: Generate synthetic data\nnp.random.seed(42)\nn_samples = 100\nX = None\ntrue_w = None\ny = None\n\n# TODO: Add bias column\nX_bias = None\n\n# TODO: Implement gradient descent\nlearning_rate = 0.01\nn_iterations = 1000\nw = None  # Initialize to zeros\n\nloss_history = []\nfor i in range(n_iterations):\n    grad = None\n    w = None  # Update rule: w = w - lr * grad\n    current_loss = None\n    loss_history.append(current_loss)\n\n# TODO: Compare with the normal equation solution\nw_normal = None\n\n# TODO: Compute final metrics\nfinal_loss = None\nnormal_loss = None\nweight_error = None\n\n# TODO: Implement momentum-based gradient descent\nbeta = 0.9\nw_momentum = None\nvelocity = None\n\nfor i in range(n_iterations):\n    grad = None\n    velocity = None\n    w_momentum = None\n\nprint(f\"GD solution: {w}\")\nprint(f\"Normal equation: {w_normal}\")\nprint(f\"Final GD loss: {final_loss:.6f}\")\nprint(f\"Normal equation loss: {normal_loss:.6f}\")\nprint(f\"Weight error: {weight_error:.6f}\")\nprint(f\"Momentum solution: {w_momentum}\")\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:numpy",
+      "must_include:def loss",
+      "must_include:def gradient",
+      "must_include:np.linalg.inv"
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "title": "ONNX Export & Optimization",
+  "id": "mission_09",
+  "type": "ai_code",
+  "xpReward": 110,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "# Model Compression Mission 09: ONNX Export & Optimization\n#\n# ONNX (Open Neural Network Exchange) is a standard format for ML models.\n# Exporting to ONNX enables optimization and deployment across frameworks.\n#\n# Steps:\n# 1. Export PyTorch model to ONNX\n# 2. Run ONNX optimizer (fuse conv+bn, eliminate dead nodes)\n# 3. Apply ONNX Runtime optimizations\n# 4. Verify output matches original\n#\n# Your goal: implement export_and_optimize(model, sample_input, output_path)\n#   1. Export model to ONNX format\n#   2. Optimize the ONNX graph\n#   3. Verify correctness\n#   4. Return optimized model path\n\nimport numpy as np\n\ndef export_and_optimize(model, sample_input, output_path):\n    # TODO: Export to ONNX\n    # TODO: Optimize graph\n    # TODO: Verify correctness\n    # TODO: Return path\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def export_and_optimize",
+      "must_include:onnx",
+      "must_include:optimize",
+      "must_include:verify",
+      "must_include:return"
+    ]
+  }
+}

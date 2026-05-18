@@ -1,40 +1,18 @@
-﻿{
-    "title":  "Data Preprocessing Mission 3: One-Hot Encode Categoricals",
-    "initialState":  {
-                         "content":  "# TODO: One-hot encode categorical columns\n\ndef encode_categoricals(df):\n    # TODO: detect categorical columns\n\n    # TODO: if no categorical columns, return df\n\n    # TODO: apply pd.get_dummies(..., drop_first=True)\n\n    return df"
-                     },
-    "validation":  {
-                       "rules":  [
-                                     "must_include:def encode_categoricals",
-                                     "must_include:get_dummies",
-                                     "must_include:drop_first=True"
-                                 ],
-                       "tests":  [
-                                     {
-                                         "type":  "must_match",
-                                         "name":  "function signature",
-                                         "pattern":  "def\\s+encode_categoricals\\s*\\(\\s*df\\s*\\)",
-                                         "message":  "Define encode_categoricals(df)."
-                                     },
-                                     {
-                                         "type":  "must_include_all",
-                                         "name":  "encoding config",
-                                         "values":  [
-                                                        "get_dummies",
-                                                        "drop_first=True"
-                                                    ],
-                                         "message":  "Use get_dummies with drop_first=True."
-                                     },
-                                     {
-                                         "type":  "must_match",
-                                         "name":  "returns df-like",
-                                         "pattern":  "return\\s+",
-                                         "message":  "Return the transformed DataFrame."
-                                     }
-                                 ],
-                       "type":  "ai_code"
-                   },
-    "id":  "mission_03",
-    "type":  "ai_code",
-    "xpReward":  100
+{
+  "title": "Standardize Text Data",
+  "id": "mission_03",
+  "type": "ai_code",
+  "xpReward": 70,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "import pandas as pd\n\n# TODO: Create a DataFrame with inconsistent text data\ndata = {\n    'name': ['  alice ', 'BOB', 'Charlie ', '  diana', 'EVE  '],\n    'email': ['ALICE@EMAIL.COM', 'bob@email.com', 'CHARLIE@Email.Com', 'diana@email.com', 'eve@EMAIL.COM'],\n    'phone': ['(555) 123-4567', '555.234.5678', '5553456789', '555-456-7890', '(555) 567 8901']\n}\ndf = pd.DataFrame(data)\n\n# TODO: Strip whitespace and title-case names\ndf['name'] = ...\n\n# TODO: Lowercase all emails\ndf['email'] = ...\n\n# TODO: Standardize phone format to (XXX) XXX-XXXX\nimport re\ndef format_phone(phone):\n    digits = re.sub(r'\\D', '', phone)\n    return f\"({digits[:3]}) {digits[3:6]}-{digits[6:]}\"\n\ndf['phone'] = ...\n\nprint(df)\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:str.strip",
+      "must_include:str.lower",
+      "must_include:str.title"
+    ]
+  }
 }

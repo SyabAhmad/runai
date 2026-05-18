@@ -1,0 +1,7 @@
+{
+  "mission_03": [
+    "Wrap the first row in <thead> and change <td> to <th> with scope=\"col\" for each header cell.",
+    "Wrap the data rows in <tbody> and keep them as <td> elements.",
+    "Add a <tfoot> with a summary row, and place a <caption> as the first child of <table> to describe the data."
+  ]
+}

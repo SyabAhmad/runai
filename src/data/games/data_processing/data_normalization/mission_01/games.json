@@ -1,0 +1,18 @@
+{
+  "title": "Min-Max Normalization",
+  "id": "mission_01",
+  "type": "ai_code",
+  "xpReward": 60,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "import pandas as pd\nimport numpy as np\n\n# TODO: Create a DataFrame with numerical data\ndata = {\n    'feature_a': [10, 20, 30, 40, 50],\n    'feature_b': [100, 200, 300, 400, 500],\n    'feature_c': [0.1, 0.5, 0.3, 0.8, 0.9]\n}\ndf = pd.DataFrame(data)\n\n# TODO: Implement min-max normalization: (x - min) / (max - min)\ndf_normalized = (df - df.min()) / ...\n\nprint(\"Original:\")\nprint(df)\nprint(\"\\nNormalized:\")\nprint(df_normalized)\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:df.min",
+      "must_include:df.max",
+      "must_include:pandas"
+    ]
+  }
+}

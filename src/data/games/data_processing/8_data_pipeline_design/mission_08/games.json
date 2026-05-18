@@ -1,0 +1,21 @@
+{
+  "title": "Reproducible ML Experiments with Pipelines",
+  "id": "mission_08",
+  "type": "ai_code",
+  "xpReward": 100,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "import numpy as np\nimport json\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.model_selection import cross_val_score, StratifiedKFold\nfrom sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier\nfrom sklearn.linear_model import LogisticRegression\nfrom sklearn.datasets import make_classification\n\n# TODO: Build a reproducible experiment framework that:\n# 1. Defines experiment configurations as dictionaries\n# 2. Runs multiple experiments with different pipelines\n# 3. Records all results with full metadata\n# 4. Ensures reproducibility through random seeds\n# 5. Exports experiment results as JSON\n\nclass ExperimentRunner:\n    def __init__(self, random_state=42):\n        # TODO: Initialize with reproducibility settings\n        pass\n    \n    def add_experiment(self, name, pipeline, cv=5):\n        # TODO: Register an experiment configuration\n        pass\n    \n    def run_all(self, X, y):\n        # TODO: Run all registered experiments\n        # TODO: Record scores, timing, and metadata\n        pass\n    \n    def get_results(self):\n        # TODO: Return results as a structured dictionary\n        pass\n    \n    def export_results(self, filename):\n        # TODO: Export results to JSON file\n        pass\n\n# TODO: Define multiple experiments and run them\n# TODO: Compare and rank results\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:class ExperimentRunner",
+      "must_include:cross_val_score",
+      "must_include:random_state",
+      "must_include:Pipeline",
+      "must_include:json",
+      "must_include:dump"
+    ]
+  }
+}

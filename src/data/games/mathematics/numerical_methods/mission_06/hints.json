@@ -1,0 +1,7 @@
+{
+  "mission_06": [
+    "Forward: f'(x) ≈ (f(x+h) - f(x)) / h with O(h) error",
+    "Central: f'(x) ≈ (f(x+h) - f(x-h)) / (2h) with O(h^2) error",
+    "Richardson: D[i,j] = (4^j * D[i,j-1] - D[i-1,j-1]) / (4^j - 1)"
+  ]
+}

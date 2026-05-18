@@ -1,0 +1,7 @@
+{
+  "mission_10": [
+    "Get [CLS] embedding: `cls = model(input_ids)[0]` — the first token's representation.",
+    "Logits: `logits = np.matmul(cls, class_head)`, then softmax for probabilities.",
+    "Gradient update: `class_head -= learning_rate * (probs - one_hot_label) * cls.reshape(-1, 1)`."
+  ]
+}

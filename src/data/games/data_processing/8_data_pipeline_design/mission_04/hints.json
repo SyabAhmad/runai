@@ -1,0 +1,7 @@
+{
+  "mission_04": [
+    "Use 'step_name__parameter' syntax to reference parameters in grid search.",
+    "GridSearchCV fits the entire pipeline for each parameter combination and fold.",
+    "Access best parameters via grid_search.best_params_ after fitting."
+  ]
+}

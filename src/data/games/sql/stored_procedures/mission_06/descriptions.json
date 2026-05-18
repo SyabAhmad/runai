@@ -1,0 +1,3 @@
+{
+  "mission_06": "BEFORE triggers can validate and modify data before it's written to the table. Unlike CHECK constraints, trigger-based validation can reference other tables and implement complex business logic. Using RAISE EXCEPTION in a BEFORE trigger prevents invalid data from ever reaching the table, providing a powerful enforcement mechanism."
+}

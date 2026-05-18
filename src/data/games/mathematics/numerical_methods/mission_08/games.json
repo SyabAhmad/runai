@@ -1,0 +1,18 @@
+{
+  "title": "Eigenvalue Computation",
+  "id": "mission_08",
+  "type": "ai_code",
+  "xpReward": 100,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "import numpy as np\n\ndef power_iteration(A, max_iter=1000, tol=1e-10):\n    \"\"\"\n    Find dominant eigenvalue and eigenvector using power iteration\n    A: square matrix\n    Returns: (eigenvalue, eigenvector)\n    \"\"\"\n    n = A.shape[0]\n    # TODO: Initialize random vector\n    v = ...\n    v = v / np.linalg.norm(v)\n    \n    eigenvalue = 0\n    \n    for i in range(max_iter):\n        # TODO: Matrix-vector multiplication\n        Av = ...\n        \n        # TODO: Rayleigh quotient for eigenvalue estimate\n        new_eigenvalue = ...\n        \n        # TODO: Normalize\n        v = Av / np.linalg.norm(Av)\n        \n        if abs(new_eigenvalue - eigenvalue) < tol:\n            break\n        eigenvalue = new_eigenvalue\n    \n    return eigenvalue, v\n\ndef inverse_iteration(A, mu, max_iter=1000, tol=1e-10):\n    \"\"\"\n    Inverse iteration: find eigenvalue closest to shift mu\n    Uses (A - mu*I)^{-1} to converge to eigenvalue near mu\n    \"\"\"\n    n = A.shape[0]\n    v = np.random.randn(n)\n    v = v / np.linalg.norm(v)\n    \n    # TODO: Form shifted matrix\n    A_shifted = ...\n    \n    for i in range(max_iter):\n        # TODO: Solve (A - mu*I) * w = v\n        w = ...\n        \n        v_new = w / np.linalg.norm(w)\n        eigenvalue = v_new @ A @ v_new\n        \n        if np.linalg.norm(v_new - v) < tol:\n            break\n        v = v_new\n    \n    return eigenvalue, v\n\ndef qr_algorithm(A, max_iter=1000, tol=1e-10):\n    \"\"\"\n    QR algorithm for computing all eigenvalues\n    Repeatedly compute QR decomposition and form RQ\n    \"\"\"\n    n = A.shape[0]\n    Ak = A.copy().astype(float)\n    \n    for i in range(max_iter):\n        # TODO: QR decomposition\n        Q, R = ...\n        \n        # TODO: Form next iterate\n        Ak = ...\n        \n        # Check convergence (off-diagonal elements small)\n        off_diag = np.sum(np.abs(np.tril(Ak, -1)))\n        if off_diag < tol:\n            break\n    \n    # Eigenvalues are on diagonal\n    return np.diag(Ak)\n\n# Test power iteration\nA = np.array([[4, 1, 0], [1, 3, 1], [0, 1, 2]], dtype=float)\neigenval, eigenvec = power_iteration(A)\nprint(f\"Dominant eigenvalue: {eigenval:.6f}\")\nprint(f\"Eigenvector: {eigenvec}\")\nprint(f\"Verification: {A @ eigenvec} vs {eigenval * eigenvec}\")"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:eigenvalue",
+      "must_include:power_iteration",
+      "must_include:numpy"
+    ]
+  }
+}

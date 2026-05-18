@@ -1,0 +1,3 @@
+{
+  "mission_01": "You implemented the core mechanism behind every modern LLM! Scaled dot-product attention lets each token dynamically focus on the most relevant parts of the input. This is why transformers understand context better than any previous architecture — they see all tokens at once and weigh their importance."
+}

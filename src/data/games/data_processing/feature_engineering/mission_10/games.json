@@ -1,0 +1,19 @@
+{
+  "title": "Complete Feature Engineering Pipeline",
+  "id": "mission_10",
+  "type": "ai_code",
+  "xpReward": 120,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "import pandas as pd\nimport numpy as np\nfrom sklearn.preprocessing import LabelEncoder, PolynomialFeatures\n\n# TODO: Create a complex dataset\ndata = {\n    'age': [25, 30, 35, 40, 45],\n    'city': ['NY', 'LA', 'NY', 'Chicago', 'LA'],\n    'income': [50000, 60000, 70000, 80000, 90000],\n    'join_date': ['2020-01-15', '2019-06-20', '2021-03-10', '2018-11-05', '2022-02-28'],\n    'target': [1, 0, 1, 1, 0]\n}\ndf = pd.DataFrame(data)\n\n# TODO: Step 1 - Encode categorical variables\nle = ...\ndf['city_encoded'] = ...\n\n# TODO: Step 2 - Extract datetime features\ndf['join_date'] = ...\ndf['join_year'] = ...\ndf['join_month'] = ...\n\n# TODO: Step 3 - Create interaction features\ndf['age_income'] = ...\n\n# TODO: Step 4 - Polynomial features for numeric columns\nnumeric_cols = ['age', 'income']\npoly = PolynomialFeatures(degree=2, include_bias=False)\npoly_features = ...\ndf_poly = pd.DataFrame(poly_features, columns=poly.get_feature_names_out(numeric_cols))\n\nprint(\"Final feature set:\")\nprint(df)\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:LabelEncoder",
+      "must_include:PolynomialFeatures",
+      "must_include:pd.to_datetime",
+      "must_include:groupby"
+    ]
+  }
+}

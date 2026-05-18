@@ -1,0 +1,19 @@
+{
+  "title": "DENSE_RANK: Continuous Ranking",
+  "id": "mission_03",
+  "type": "ai_code",
+  "xpReward": 70,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "-- DENSE_RANK: Rank products by sales without gaps\n-- The products table has columns: id, name, category, total_sales\n-- TODO: Use DENSE_RANK() to rank products by total_sales DESC\n-- Unlike RANK, DENSE_RANK does not skip numbers after ties\n\nSELECT \nFROM products\n\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:DENSE_RANK",
+      "must_include:OVER",
+      "must_include:ORDER BY",
+      "must_include:total_sales"
+    ]
+  }
+}

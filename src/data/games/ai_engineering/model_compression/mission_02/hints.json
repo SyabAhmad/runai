@@ -1,0 +1,7 @@
+{
+  "mission_02": [
+    "Scale: `scale = (max - min) / (2^bits - 1)`.",
+    "Zero point: `zero_point = round(-min / scale)`.",
+    "Quantize: `q = clip(round(w / scale) + zero_point, 0, 2^bits-1)`."
+  ]
+}

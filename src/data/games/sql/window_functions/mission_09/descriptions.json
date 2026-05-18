@@ -1,0 +1,3 @@
+{
+  "mission_09": "Combining PARTITION BY with running totals creates independent cumulative calculations for each group. This is incredibly powerful for multi-dimensional analysis, allowing you to track progress within categories, departments, or any segmentation. The window function resets its accumulation at each partition boundary."
+}

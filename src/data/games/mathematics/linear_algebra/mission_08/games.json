@@ -1,0 +1,18 @@
+{
+  "title": "Orthogonality and Projections",
+  "id": "mission_08",
+  "type": "ai_code",
+  "xpReward": 100,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "import numpy as np\n\n# TODO: Create three vectors in R^4\na = np.array([1, 2, 3, 4])\nb = np.array([2, -1, 0, 1])\nc = np.array([1, 0, -1, 2])\n\n# TODO: Apply Gram-Schmidt process to orthogonalize these vectors\n# Step 1: u1 = a\nu1 = None\n# Step 2: u2 = b - proj_u1(b)\nproj_u1_b = None\nu2 = None\n# Step 3: u3 = c - proj_u1(c) - proj_u2(c)\nproj_u1_c = None\nproj_u2_c = None\nu3 = None\n\n# TODO: Normalize to get orthonormal vectors\ne1 = None\ne2 = None\ne3 = None\n\n# TODO: Verify orthogonality (all dot products should be ~0)\northo_12 = None\northo_13 = None\northo_23 = None\n\n# TODO: Build the projection matrix P = A(A^T A)^(-1) A^T for the subspace spanned by orthonormal vectors\nA_ortho = None\nP = None\n\n# TODO: Project a test vector onto the subspace\nv = np.array([5, 3, 1, 0])\nproj_v = None\n\nprint(f\"Orthogonal vectors:\")\nprint(f\"u1 = {u1}\")\nprint(f\"u2 = {u2}\")\nprint(f\"u3 = {u3}\")\nprint(f\"Orthogonality checks: {ortho_12:.2e}, {ortho_13:.2e}, {ortho_23:.2e}\")\nprint(f\"Projection of v: {proj_v}\")\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:numpy",
+      "must_include:np.dot",
+      "must_include:np.linalg.inv"
+    ]
+  }
+}

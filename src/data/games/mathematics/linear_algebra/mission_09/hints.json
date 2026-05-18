@@ -1,0 +1,10 @@
+{
+  "mission_09": [
+    "A symmetric positive definite matrix can be built as A = M @ M.T + I.",
+    "Use scipy.linalg.cholesky(A, lower=True) for Cholesky decomposition.",
+    "Solve Ly = b with scipy.linalg.solve_triangular(L, b, lower=True).",
+    "Solve L^T x = y with scipy.linalg.solve_triangular(L.T, y, lower=False).",
+    "Use scipy.linalg.lu(A) for LU decomposition (returns P, L, U).",
+    "Verify Cholesky with np.allclose(L @ L.T, A)."
+  ]
+}

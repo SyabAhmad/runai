@@ -1,4 +1,4 @@
-﻿{
+{
     "title":  "Feature Engineering Mission 10: End-to-End Feature Builder",
     "initialState":  {
                          "content":  "# TODO: Build end-to-end model matrix from raw tabular data\n\ndef build_model_matrix(df, target_col):\n    # TODO: create at least one interaction feature\n\n    # TODO: create one transformed feature (e.g., log)\n\n    # TODO: one-hot encode categorical columns with drop_first=True\n\n    # TODO: split into X and y and return both"

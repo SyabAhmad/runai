@@ -1,0 +1,18 @@
+{
+  "title": "ADMM Constrained Optimizer",
+  "id": "mission_10",
+  "type": "ai_code",
+  "xpReward": 120,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "import numpy as np\n\ndef admm_solver(f, g, A, b, rho=1.0, max_iter=1000, tol=1e-4):\n    \"\"\"\n    Implement Alternating Direction Method of Multipliers (ADMM)\n    Solves: min f(x) + g(z) subject to Ax + Bz = c\n    Simplified version: min f(x) + g(z) subject to x - z = 0\n    f: first objective function\n    g: second objective function (e.g., L1 regularization)\n    A: constraint matrix\n    b: constraint vector\n    rho: penalty parameter\n    \"\"\"\n    n = A.shape[1]\n    x = np.zeros(n)\n    z = np.zeros(n)\n    u = np.zeros(n)  # scaled dual variable\n    \n    history = []\n    \n    for i in range(max_iter):\n        # TODO: x-update: minimize f(x) + (rho/2) * ||x - z + u||^2\n        # Use gradient descent for the x-update\n        x_old = x.copy()\n        for _ in range(20):  # inner iterations\n            grad_f = ...\n            grad_quad = ...\n            x = x - 0.01 * (grad_f + grad_quad)\n        \n        # TODO: z-update: minimize g(z) + (rho/2) * ||x - z + u||^2\n        # For g(z) = lambda * ||z||_1, this is soft thresholding\n        z_old = z.copy()\n        threshold = ...\n        z = ...\n        \n        # TODO: dual update (u-update)\n        u = ...\n        \n        # TODO: Check convergence\n        r_norm = np.linalg.norm(x - z)\n        s_norm = np.linalg.norm(-rho * (z - z_old))\n        \n        history.append({'x': x.copy(), 'z': z.copy(), 'r_norm': r_norm})\n        \n        if r_norm < tol and s_norm < tol:\n            break\n    \n    return x, z, u, history\n\ndef soft_threshold(v, threshold):\n    \"\"\"Soft thresholding operator for L1 regularization\"\"\"\n    return ...\n\n# Example: Lasso regression min ||Ax - b||^2 + lambda * ||x||_1\nnp.random.seed(42)\nA_mat = np.random.randn(50, 10)\nb_vec = np.random.randn(50)\nlambda_reg = 0.5\n\ndef f(x):\n    return np.sum((A_mat @ x - b_vec)**2)\n\ndef g(z):\n    return lambda_reg * np.sum(np.abs(z))\n\nx_opt, z_opt, u_opt, history = admm_solver(f, g, np.eye(10), np.zeros(10), rho=1.0)\nprint(f\"Solution: {x_opt}\")"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:admm",
+      "must_include:soft_threshold",
+      "must_include:numpy"
+    ]
+  }
+}

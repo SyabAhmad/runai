@@ -1,0 +1,3 @@
+{
+  "mission_08": "**Audio-Visual Speech Recognition** uses both sound and sight.\n\n**Why multimodal?**\n- Audio alone fails in noisy environments\n- Visual (lip reading) alone is ambiguous (many sounds look the same)\n- Together: robust in all conditions\n\n**Visual stream**: Extract lip region from video frames, encode with 3D CNN or ViT.\n\n**Audio stream**: Extract MFCC/spectrogram features, encode with CNN or wav2vec.\n\n**Fusion**: Cross-attention or concatenation at each timestep.\n\n**CTC loss**: Connectionist Temporal Classification handles variable-length alignment between audio/video and text."
+}

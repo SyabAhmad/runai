@@ -1,0 +1,18 @@
+{
+  "title": "One-Hot Encoding Basics",
+  "id": "mission_01",
+  "type": "ai_code",
+  "xpReward": 60,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "import pandas as pd\nimport numpy as np\n\n# TODO: Create a DataFrame with categorical data\ndata = {\n    'color': ['red', 'blue', 'green', 'red', 'blue'],\n    'size': ['S', 'M', 'L', 'M', 'S'],\n    'value': [10, 20, 30, 40, 50]\n}\ndf = pd.DataFrame(data)\n\n# TODO: Apply one-hot encoding using pd.get_dummies()\ndf_encoded = ...\n\nprint(\"Original:\")\nprint(df)\nprint(\"\\nOne-Hot Encoded:\")\nprint(df_encoded)\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:get_dummies",
+      "must_include:pandas",
+      "must_include:DataFrame"
+    ]
+  }
+}

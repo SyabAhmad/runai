@@ -1,0 +1,7 @@
+{
+  "mission_10": [
+    "Use CROSS JOIN LATERAL with json_array_elements(p.tags) to expand the JSON array.",
+    "Cast the resulting JSON value to text using ::text or the ->> operator.",
+    "Select product name alongside each expanded tag value."
+  ]
+}

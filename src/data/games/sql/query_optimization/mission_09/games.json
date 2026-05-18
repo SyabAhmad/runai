@@ -1,0 +1,19 @@
+{
+  "title": "Analyzing Join Strategies in Query Plans",
+  "id": "mission_09",
+  "type": "ai_code",
+  "xpReward": 110,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "-- Analyzing Join Strategies: Understand how the database joins tables\n-- The orders table has columns: id, customer_id, order_date, total\n-- The customers table has columns: id, name, email, region\n-- TODO: Write EXPLAIN ANALYZE for a join query and identify the join strategy\n-- Look for Nested Loop, Hash Join, or Merge Join in the output\n\n-- Write your EXPLAIN ANALYZE for the join:\n\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:EXPLAIN ANALYZE",
+      "must_include:JOIN",
+      "must_include:orders",
+      "must_include:customers"
+    ]
+  }
+}

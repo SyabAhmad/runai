@@ -1,0 +1,3 @@
+{
+  "mission_05": "Great work with error handling! EXCEPTION blocks make your database functions resilient to unexpected inputs and edge cases. By catching specific errors and providing graceful fallbacks, you create robust code that handles real-world data quality issues without crashing."
+}

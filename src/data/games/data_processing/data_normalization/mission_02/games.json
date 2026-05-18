@@ -1,0 +1,18 @@
+{
+  "title": "Z-Score Standardization",
+  "id": "mission_02",
+  "type": "ai_code",
+  "xpReward": 60,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "import pandas as pd\nimport numpy as np\n\n# TODO: Create a DataFrame with numerical data\ndata = {\n    'height': [160, 170, 175, 180, 185],\n    'weight': [55, 65, 70, 80, 90],\n    'age': [25, 30, 35, 40, 45]\n}\ndf = pd.DataFrame(data)\n\n# TODO: Implement z-score standardization: (x - mean) / std\ndf_standardized = (df - df.mean()) / ...\n\nprint(\"Original means:\", df.mean().values)\nprint(\"Standardized means:\", df_standardized.mean().values)\nprint(\"Standardized stds:\", df_standardized.std().values)\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:df.mean",
+      "must_include:df.std",
+      "must_include:pandas"
+    ]
+  }
+}

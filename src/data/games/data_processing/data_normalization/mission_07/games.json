@@ -1,0 +1,18 @@
+{
+  "title": "Normalize with sklearn",
+  "id": "mission_07",
+  "type": "ai_code",
+  "xpReward": 90,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import pandas as pd\nimport numpy as np\nfrom sklearn.preprocessing import MinMaxScaler, StandardScaler, RobustScaler\n\n# TODO: Create a DataFrame\ndata = {\n    'feature_1': [10, 20, 30, 40, 50],\n    'feature_2': [100, 200, 300, 400, 500],\n    'feature_3': [0.1, 0.2, 0.3, 0.4, 0.5]\n}\ndf = pd.DataFrame(data)\n\n# TODO: Apply MinMaxScaler\nminmax_scaler = ...\ndf_minmax = pd.DataFrame(..., columns=df.columns)\n\n# TODO: Apply StandardScaler\nstd_scaler = ...\ndf_standard = pd.DataFrame(..., columns=df.columns)\n\n# TODO: Apply RobustScaler\nrobust_scaler = ...\ndf_robust = pd.DataFrame(..., columns=df.columns)\n\nprint(\"MinMax scaled:\\n\", df_minmax)\nprint(\"\\nStandard scaled:\\n\", df_standard)\nprint(\"\\nRobust scaled:\\n\", df_robust)\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:MinMaxScaler",
+      "must_include:StandardScaler",
+      "must_include:fit_transform"
+    ]
+  }
+}

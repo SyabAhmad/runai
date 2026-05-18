@@ -1,0 +1,19 @@
+{
+  "title": "Trigger for Data Validation",
+  "id": "mission_06",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "-- Trigger for Data Validation: Enforce salary constraints\n-- The employees table has columns: id, name, department, salary\n-- TODO: Create a BEFORE INSERT OR UPDATE trigger that validates salary\n-- Salary must be positive and not exceed 500000\n\nCREATE OR REPLACE FUNCTION validate_employee_salary()\nRETURNS TRIGGER\nLANGUAGE plpgsql\nAS $$\nBEGIN\n    -- TODO: Check if NEW.salary is valid\n    -- TODO: RAISE EXCEPTION if validation fails\n    RETURN NEW;\nEND;\n$$;\n\n-- TODO: Create the trigger\n\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:CREATE TRIGGER",
+      "must_include:RAISE EXCEPTION",
+      "must_include:BEFORE",
+      "must_include:salary"
+    ]
+  }
+}

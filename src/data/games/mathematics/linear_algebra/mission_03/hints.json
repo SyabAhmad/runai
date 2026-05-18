@@ -1,0 +1,9 @@
+{
+  "mission_03": [
+    "Use np.linalg.det() to compute the determinant.",
+    "A matrix is invertible if its determinant is not zero.",
+    "The determinant of a product equals the product of determinants.",
+    "det(A^T) = det(A) — the transpose has the same determinant.",
+    "Use a small tolerance (e.g., abs(det) > 1e-10) when checking for zero due to floating-point precision."
+  ]
+}

@@ -1,0 +1,3 @@
+{
+  "mission_04": "Well done with transactions! You've learned to group operations into atomic units that maintain data consistency. The AND balance >= 500 check prevents overdrafts, and the transaction ensures both updates succeed or fail together. This pattern is fundamental for any operation that modifies multiple related pieces of data."
+}

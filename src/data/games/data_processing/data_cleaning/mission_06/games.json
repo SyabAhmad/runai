@@ -1,49 +1,18 @@
-﻿{
-    "title":  "Data Preprocessing Mission 6: IQR Outlier Capping",
-    "initialState":  {
-                         "content":  "# TODO: Cap outliers using IQR method\n\ndef cap_outliers_iqr(df, col):\n    # TODO: compute q1 and q3\n\n    # TODO: compute iqr, lower, upper bounds\n\n    # TODO: clip values in df[col]\n\n    return df"
-                     },
-    "validation":  {
-                       "rules":  [
-                                     "must_include:def cap_outliers_iqr",
-                                     "must_include:quantile(0.25)",
-                                     "must_include:quantile(0.75)",
-                                     "must_include:clip",
-                                     "must_include:return df"
-                                 ],
-                       "tests":  [
-                                     {
-                                         "type":  "must_match",
-                                         "name":  "function signature",
-                                         "pattern":  "def\\s+cap_outliers_iqr\\s*\\(\\s*df\\s*,\\s*col\\s*\\)",
-                                         "message":  "Define cap_outliers_iqr(df, col)."
-                                     },
-                                     {
-                                         "type":  "must_include_all",
-                                         "name":  "iqr components",
-                                         "values":  [
-                                                        "q1",
-                                                        "q3",
-                                                        "iqr",
-                                                        "lower",
-                                                        "upper"
-                                                    ],
-                                         "message":  "Compute q1, q3, iqr, lower, and upper bounds."
-                                     },
-                                     {
-                                         "type":  "must_include_all",
-                                         "name":  "apply clipping",
-                                         "values":  [
-                                                        "clip",
-                                                        "lower=",
-                                                        "upper="
-                                                    ],
-                                         "message":  "Clip using calculated lower/upper bounds."
-                                     }
-                                 ],
-                       "type":  "ai_code"
-                   },
-    "id":  "mission_06",
-    "type":  "ai_code",
-    "xpReward":  100
+{
+  "title": "Fuzzy Match Records",
+  "id": "mission_06",
+  "type": "ai_code",
+  "xpReward": 85,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import pandas as pd\n\n# TODO: Create two DataFrames with similar but not identical records\ndf1 = pd.DataFrame({\n    'id': [1, 2, 3],\n    'name': ['Apple Inc', 'Microsoft Corp', 'Google LLC']\n})\n\ndf2 = pd.DataFrame({\n    'id': [101, 102, 103],\n    'name': ['Apple Incorporated', 'Microsoft Corporation', 'Google']\n})\n\n# TODO: Create a simple fuzzy matching function using string similarity\ndef similarity(s1, s2):\n    s1, s2 = s1.lower(), s2.lower()\n    words1 = set(s1.split())\n    words2 = set(s2.split())\n    return len(words1 & words2) / len(words1 | words2)\n\n# TODO: Find best matches between df1 and df2\nmatches = []\nfor _, row1 in df1.iterrows():\n    best_score = 0\n    best_match = None\n    for _, row2 in df2.iterrows():\n        score = ...\n        if score > best_score:\n            best_score = score\n            best_match = row2\n    matches.append({'name1': row1['name'], 'name2': best_match['name'], 'score': best_score})\n\nresult = pd.DataFrame(matches)\nprint(result)\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:iterrows",
+      "must_include:lower",
+      "must_include:similarity"
+    ]
+  }
 }

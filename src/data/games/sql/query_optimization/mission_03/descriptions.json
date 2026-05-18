@@ -1,0 +1,3 @@
+{
+  "mission_03": "Sequential scans read every row in a table, which is efficient for small tables but terrible for large ones. They occur when no suitable index exists or when the planner determines a full scan is cheaper. Identifying sequential scans on large tables is the first step in performance optimization, as adding appropriate indexes can yield dramatic improvements."
+}

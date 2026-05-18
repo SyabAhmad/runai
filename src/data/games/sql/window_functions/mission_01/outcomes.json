@@ -1,0 +1,3 @@
+{
+  "mission_01": "Great start! You've used ROW_NUMBER() to assign sequential identifiers to ordered rows. This fundamental window function is the building block for more complex analytical queries. You'll use this pattern for pagination, ranking, deduplication, and many other data processing tasks."
+}

@@ -1,0 +1,9 @@
+{
+  "mission_07": [
+    "Create PE grid: self.pe_grid = [[ProcessingElement() for _ in range(array_cols)] for _ in range(array_rows)].",
+    "Systolic compute: C[i, j] += A_padded[i, k] * B_padded[k, j].",
+    "Execution time: time_seconds = cycles / (arch['clock_mhz'] * 1e6).",
+    "Throughput: throughput_tops = (total_ops / time_seconds) / 1e12.",
+    "Total time: total_time = max(compute_time, memory_time)."
+  ]
+}

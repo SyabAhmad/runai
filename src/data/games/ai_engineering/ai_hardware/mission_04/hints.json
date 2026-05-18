@@ -1,0 +1,9 @@
+{
+  "mission_04": [
+    "Map weights to conductance: self.conductance = normalized * (G_max - G_min) + G_min.",
+    "Matrix-vector multiply: output = input_vector @ self.conductance.",
+    "Differential readout: output = (output_pos - output_neg) * self.max_weight.",
+    "Add noise: self.conductance = np.clip(self.conductance + noise, min, max).",
+    "Accuracy: error = np.linalg.norm(ideal - actual) / (np.linalg.norm(ideal) + 1e-10)."
+  ]
+}

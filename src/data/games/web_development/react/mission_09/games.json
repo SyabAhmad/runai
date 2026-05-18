@@ -1,0 +1,23 @@
+{
+  "title": "React Testing Patterns",
+  "id": "mission_09",
+  "type": "ai_code",
+  "xpReward": 110,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "// TODO: Write unit tests for React components using Testing Library\n// TODO: Test user interactions, async behavior, and state changes\n// TODO: Mock API calls and external dependencies\n// TODO: Test custom hooks\n\nimport { render, screen, fireEvent, waitFor, act } from '@testing-library/react';\n\n// TODO: Test a Counter component\nfunction testCounter() {\n  // TODO: Render Counter with initial value\n  // TODO: Verify initial display\n  // TODO: Click increment button and verify new value\n  // TODO: Click decrement and verify\n  // TODO: Click reset and verify\n}\n\n// TODO: Test a form with validation\nfunction testFormValidation() {\n  // TODO: Render form\n  // TODO: Submit empty form and verify error messages\n  // TODO: Fill form correctly and verify submission\n  // TODO: Test email validation\n}\n\n// TODO: Test async data fetching\nfunction testAsyncFetch() {\n  // TODO: Mock fetch API\n  // TODO: Render component that fetches data\n  // TODO: Verify loading state\n  // TODO: Wait for data and verify display\n  // TODO: Verify error state on failed fetch\n}\n\n// TODO: Test a custom hook\nfunction testCustomHook() {\n  // TODO: Create a test component that uses the hook\n  // TODO: Render and interact with the test component\n  // TODO: Verify hook behavior\n}"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:render",
+      "must_include:screen",
+      "must_include:fireEvent",
+      "must_include:waitFor",
+      "must_include:expect",
+      "must_include:jest.fn",
+      "must_include:describe",
+      "must_include:it("
+    ]
+  }
+}

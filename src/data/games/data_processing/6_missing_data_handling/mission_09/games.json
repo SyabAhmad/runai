@@ -1,0 +1,20 @@
+{
+  "title": "Missing Data Pattern Analysis",
+  "id": "mission_09",
+  "type": "ai_code",
+  "xpReward": 110,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "import pandas as pd\nimport numpy as np\nimport matplotlib\nmatplotlib.use('Agg')\nimport matplotlib.pyplot as plt\n\n# TODO: Create a dataset with complex missing data patterns\n# Include MCAR, MAR, and MNAR mechanisms\n\n# TODO: Analyze missing data patterns:\n# 1. Calculate missingness percentage per column\n# 2. Identify common missingness patterns (combinations of missing columns)\n# 3. Create a missingness heatmap showing correlations between missing indicators\n# 4. Classify the missingness mechanism for each column\n\ndef analyze_missing_patterns():\n    # TODO: Create dataset with different missingness mechanisms\n    # TODO: Compute missingness statistics\n    # TODO: Identify and count missing patterns\n    # TODO: Create missingness correlation matrix\n    pass\n\n# TODO: Run the analysis\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:isnull",
+      "must_include:isna",
+      "must_include:value_counts",
+      "must_include:corr",
+      "must_include:heatmap"
+    ]
+  }
+}

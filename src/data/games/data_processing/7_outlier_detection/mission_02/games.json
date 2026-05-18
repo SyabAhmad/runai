@@ -1,0 +1,21 @@
+{
+  "title": "Z-Score Outlier Detection",
+  "id": "mission_02",
+  "type": "ai_code",
+  "xpReward": 65,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "import numpy as np\nimport pandas as pd\nfrom scipy import stats\n\n# TODO: Create a dataset with outliers\n# Include normally distributed data with some extreme values\n\n# TODO: Implement Z-score outlier detection:\n# 1. Calculate the mean and standard deviation\n# 2. Compute Z-scores: z = (x - mean) / std\n# 3. Flag points with |z| > threshold (typically 3) as outliers\n\n# TODO: Compare with modified Z-score using median and MAD\n# Modified Z-score: z = 0.6745 * (x - median) / MAD\n\n# TODO: Visualize or tabulate the results\n\ndef zscore_detection(data, threshold=3.0):\n    # TODO: Calculate Z-scores\n    # TODO: Identify outliers\n    # TODO: Return results\n    pass\n\n# TODO: Test both standard and modified Z-score methods\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:mean",
+      "must_include:std",
+      "must_include:zscore",
+      "must_include:threshold",
+      "must_include:median",
+      "must_include:mad"
+    ]
+  }
+}

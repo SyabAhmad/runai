@@ -1,3 +1,3 @@
 {
-  "mission_07": "Complete ai agents mission 7 to master this technology."
+  "mission_07": "Production agents **never crash** — they handle errors gracefully and report what went wrong. A robust agent wraps tool calls in try/except blocks, catches specific exceptions, and returns structured error responses.\n\nYour tools:\n- **`risky_calculator(expr)`** — can raise `ValueError` (bad input) or `ZeroDivisionError` (divide by zero)\n- **`fetch_user_data(user_id)`** — returns `None` if user not found\n\nBuild `robust_agent(task)` that:\n1. Routes `\"calc:...\"` to `risky_calculator()` with try/except\n2. Routes `\"user:...\"` to `fetch_user_data()` and checks for `None`\n3. Returns `{\"task\": task, \"result\": result, \"status\": \"ok\" | \"error\"}`\n\nThis is the foundation of reliable agent systems — always fail gracefully with informative messages."
 }

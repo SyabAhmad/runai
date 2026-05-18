@@ -1,0 +1,3 @@
+{
+  "mission_01": "Great start! You've learned to use EXPLAIN to peek inside the query optimizer's decision-making process. Reading query plans is a fundamental skill for database optimization. By understanding whether queries use index scans or sequential scans, you can make informed decisions about index creation and query restructuring."
+}

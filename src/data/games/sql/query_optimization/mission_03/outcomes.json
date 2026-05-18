@@ -1,0 +1,3 @@
+{
+  "mission_03": "Good work identifying sequential scans! Understanding when and why the database falls back to full table scans is crucial. Leading wildcard LIKE patterns, functions on indexed columns, and missing indexes all trigger sequential scans. Recognizing these patterns helps you design better queries and indexes."
+}

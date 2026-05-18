@@ -1,0 +1,3 @@
+{
+  "mission_04": "import numpy as np\n\ndef unet_forward(x, weights, t):\n    # Encoder\n    x1 = np.maximum(x @ weights['enc1'] + weights['enc1_b'], 0)  # conv + ReLU\n    x1_p = x1[::2, ::2]  # max pool\n    x2 = np.maximum(x1_p @ weights['enc2'] + weights['enc2_b'], 0)\n    x2_p = x2[::2, ::2]\n    # Bottleneck\n    b = np.maximum(x2_p @ weights['bottleneck'] + weights['bottleneck_b'], 0)\n    # Decoder\n    up2 = np.kron(b, np.ones((2, 2)))  # upsample\n    up2 = np.concatenate([up2, x2], axis=-1)\n    up2 = np.maximum(up2 @ weights['dec2'] + weights['dec2_b'], 0)\n    up1 = np.kron(up2, np.ones((2, 2)))\n    up1 = np.concatenate([up1, x1], axis=-1)\n    output = up1 @ weights['out'] + weights['out_b']\n    return output"
+}

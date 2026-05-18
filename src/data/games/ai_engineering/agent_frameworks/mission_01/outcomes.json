@@ -1,0 +1,3 @@
+{
+  "mission_01": "You built a LangChain-style agent! The tool registry pattern is the foundation of all agent frameworks — define what the agent can do, detect intent, route to the right tool, and return results. This is how production agents connect LLMs to the real world."
+}

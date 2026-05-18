@@ -1,0 +1,3 @@
+{
+  "mission_05": "import numpy as np\n\ndef lora_forward(x, W, A, B, alpha=16, r=8):\n    h = W @ x\n    delta = B @ (A @ x)\n    h = h + (alpha / r) * delta\n    return h"
+}

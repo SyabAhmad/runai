@@ -1,0 +1,22 @@
+{
+  "mission_04": {
+    "title": "Transformer for Time Series",
+    "id": "mission_04",
+    "type": "ai_code",
+    "xpReward": 80,
+    "difficulty": "medium",
+    "initialState": {
+      "content": "import numpy as np\n\n\ndef positional_encoding(seq_len, d_model):\n    \"\"\"Compute sinusoidal positional encoding.\"\"\"\n    # TODO: Create position and angle arrays\n    position = np.arange(seq_len)[:, np.newaxis]\n    div_term = np.exp(np.arange(0, d_model, 2) * -(np.log(10000.0) / d_model))\n    \n    # TODO: Compute positional encoding with sin/cos\n    pe = np.zeros((seq_len, d_model))\n    pe[:, 0::2] = np.sin(position * div_term)\n    pe[:, 1::2] = np.cos(position * div_term)\n    \n    return pe\n\n\ndef scaled_dot_product_attention(Q, K, V, mask=None):\n    \"\"\"Compute scaled dot-product attention.\"\"\"\n    d_k = Q.shape[-1]\n    \n    # TODO: Compute attention scores: Q @ K^T / sqrt(d_k)\n    scores = Q @ K.T / np.sqrt(d_k)\n    \n    # TODO: Apply mask if provided\n    if mask is not None:\n        scores = scores + mask * -1e9\n    \n    # TODO: Apply softmax to get attention weights\n    scores_exp = np.exp(scores - np.max(scores, axis=-1, keepdims=True))\n    attention_weights = scores_exp / np.sum(scores_exp, axis=-1, keepdims=True)\n    \n    # TODO: Compute output as weighted sum of values\n    output = attention_weights @ V\n    return output, attention_weights\n\n\ndef multi_head_attention(x, W_q, W_k, W_v, W_o, n_heads):\n    \"\"\"Multi-head attention mechanism.\"\"\"\n    d_model = x.shape[-1]\n    d_k = d_model // n_heads\n    \n    # TODO: Project Q, K, V\n    Q = x @ W_q\n    K = x @ W_k\n    V = x @ W_v\n    \n    # TODO: Split into heads and compute attention for each head\n    outputs = []\n    for h in range(n_heads):\n        Q_h = Q[:, h * d_k:(h + 1) * d_k]\n        K_h = K[:, h * d_k:(h + 1) * d_k]\n        V_h = V[:, h * d_k:(h + 1) * d_k]\n        out_h, _ = scaled_dot_product_attention(Q_h, K_h, V_h)\n        outputs.append(out_h)\n    \n    # TODO: Concatenate heads and apply output projection\n    multi_out = np.concatenate(outputs, axis=-1)\n    output = multi_out @ W_o\n    return output\n\n\ndef transformer_forecast(series, seq_len=20, d_model=64, n_heads=4, steps=10):\n    \"\"\"Time series forecasting using transformer attention.\"\"\"\n    # TODO: Create input sequence with positional encoding\n    pe = positional_encoding(seq_len, d_model)\n    x = series[-seq_len:, np.newaxis] * np.ones((seq_len, d_model))\n    x = x + pe\n    \n    # TODO: Initialize projection matrices\n    W_q = np.random.randn(d_model, d_model) * 0.02\n    W_k = np.random.randn(d_model, d_model) * 0.02\n    W_v = np.random.randn(d_model, d_model) * 0.02\n    W_o = np.random.randn(d_model, d_model) * 0.02\n    \n    # TODO: Apply multi-head attention\n    attended = multi_head_attention(x, W_q, W_k, W_v, W_o, n_heads)\n    \n    # TODO: Generate forecasts from attended representation\n    forecasts = attended[-1, 0] * np.ones(steps)\n    return forecasts\n"
+    },
+    "validation": {
+      "type": "ai_code",
+      "rules": [
+        "must_include:np.sin",
+        "must_include:np.cos",
+        "must_include:np.exp",
+        "must_include:np.sqrt",
+        "must_include:np.concatenate"
+      ]
+    }
+  }
+}

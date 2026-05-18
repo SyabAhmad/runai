@@ -1,0 +1,3 @@
+{
+  "mission_01": "The IQR (Interquartile Range) method is one of the most robust and widely used techniques for outlier detection. It works by calculating the range between the first quartile (Q1, 25th percentile) and third quartile (Q3, 75th percentile), then flagging any points that fall below Q1 - 1.5*IQR or above Q3 + 1.5*IQR as outliers. Unlike the Z-score method, IQR does not assume a normal distribution, making it suitable for skewed data. The 1.5 multiplier is a convention established by John Tukey that balances sensitivity and specificity. The IQR method is particularly effective for univariate outlier detection and is the default choice for box plots, where outliers are displayed as individual points beyond the whiskers."
+}

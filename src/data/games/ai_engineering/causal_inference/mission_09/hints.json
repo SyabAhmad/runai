@@ -1,0 +1,7 @@
+{
+  "mission_09": [
+    "T-learner: Split data by T. Fit model1 on X[T==1], Y[T==1] and model0 on X[T==0], Y[T==0]. ITE(x) = model1.predict(x) - model0.predict(x).",
+    "S-learner: Create X_augmented = np.column_stack([X, T]). Fit single model on X_augmented, Y. For prediction, create X_with_T1 = np.column_stack([x_new, np.ones(len(x_new))]) and X_with_T0 = np.column_stack([x_new, np.zeros(len(x_new))]). ITE = pred_T1 - pred_T0.",
+    "For counterfactual prediction, use the S-learner: set T to the intervention value and predict. For the fundamental problem demo, generate Y0 and Y1, then show that observed Y = T * Y1 + (1-T) * Y0, meaning one potential outcome is always missing."
+  ]
+}

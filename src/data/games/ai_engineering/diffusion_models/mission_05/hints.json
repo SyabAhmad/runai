@@ -1,0 +1,8 @@
+{
+  "mission_05": [
+    "Sample t: `t = np.random.randint(0, num_steps)`.",
+    "Noise: `epsilon = np.random.randn(*x_0.shape)`.",
+    "Noisy: `x_t = np.sqrt(alpha_bar[t]) * x_0 + np.sqrt(1 - alpha_bar[t]) * epsilon`.",
+    "Loss: `mse = np.mean((epsilon - model(x_t, t)) ** 2)`."
+  ]
+}

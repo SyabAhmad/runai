@@ -1,0 +1,3 @@
+{
+  "mission_02": "import numpy as np\n\ndef f(u):\n    return np.sin(u)\n\ndef f_prime(u):\n    return np.cos(u)\n\ndef g(x):\n    return x**2 + 1\n\ndef g_prime(x):\n    return 2 * x\n\ndef h(x):\n    return f(g(x))\n\ndef h_prime(x):\n    return f_prime(g(x)) * g_prime(x)\n\nx0 = 1.5\nu_val = g(x0)\nf_of_u = f(u_val)\ng_val = g(x0)\nh_val = h(x0)\nh_prime_val = h_prime(x0)\n\nh_prime_numerical = (h(x0 + 1e-7) - h(x0 - 1e-7)) / (2e-7)\n\nprint(f\"g({x0}) = {g_val}\")\nprint(f\"f(g({x0})) = {h_val}\")\nprint(f\"h'({x0}) = {h_prime_val}\")\nprint(f\"h'({x0}) numerical = {h_prime_numerical}\")\nprint(f\"Error: {abs(h_prime_val - h_prime_numerical):.2e}\")\n"
+}

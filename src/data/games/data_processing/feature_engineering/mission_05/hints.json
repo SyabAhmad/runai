@@ -1,0 +1,1 @@
+{"mission_05": ["Use df.groupby('city')['sales'].mean() to calculate mean sales per city.", "Map the means back: df['city_encoded'] = df['city'].map(mean_sales).", "For smoothing, blend category mean with global mean: smoothed = (n * mean + m * global_mean) / (n + m)."]}

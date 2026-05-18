@@ -1,0 +1,3 @@
+{
+  "mission_04": "useEffect handles side effects in React components — data fetching, subscriptions, DOM manipulation, and timers. The dependency array controls when effects run: [] runs once on mount, [dep] runs when dep changes, no array runs after every render. Cleanup functions (returned from useEffect) prevent memory leaks by removing listeners, aborting requests, and resetting state when components unmount or dependencies change. This mission covers data fetching, window resize tracking, localStorage persistence, document title management, and online status detection."
+}

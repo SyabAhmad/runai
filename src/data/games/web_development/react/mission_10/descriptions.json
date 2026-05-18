@@ -1,0 +1,3 @@
+{
+  "mission_10": "React design patterns are proven solutions to common component architecture challenges. Compound components share state through context (like Select/Option). Render props pass a function as children for flexible rendering. Higher-order components (HOCs) wrap components to add behavior. State reducers use useReducer for predictable state transitions. Control props support both controlled and uncontrolled modes. Mastering these patterns lets you build flexible, reusable component libraries that other developers love to use. This capstone mission brings together everything you have learned about React."
+}

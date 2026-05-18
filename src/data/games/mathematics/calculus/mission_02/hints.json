@@ -1,0 +1,10 @@
+{
+  "mission_02": [
+    "The chain rule: d/dx[f(g(x))] = f'(g(x)) * g'(x).",
+    "First compute the inner function g(x), then apply the outer function f.",
+    "For the derivative, multiply f'(g(x)) by g'(x).",
+    "f(u) = sin(u), so f'(u) = cos(u).",
+    "g(x) = x^2 + 1, so g'(x) = 2x.",
+    "Verify your analytical derivative against numerical differentiation."
+  ]
+}

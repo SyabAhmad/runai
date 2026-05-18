@@ -1,0 +1,7 @@
+{
+  "mission_03": [
+    "HueSaturationValue works in HSV color space for perceptually meaningful color changes.",
+    "RGBShift operates directly on RGB channels for sensor-level color variation.",
+    "CLAHE improves local contrast and is especially useful for medical and satellite imagery."
+  ]
+}

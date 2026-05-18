@@ -1,0 +1,10 @@
+{
+  "mission_07": [
+    "P(A|B) = P(A and B) / P(B).",
+    "For the three-card problem: 3 outcomes have red face up, 2 of them have red on the other side.",
+    "In Monty Hall, Monty always opens a door with a goat — this gives information.",
+    "Simulate Monty Hall with many trials to see the 2/3 vs 1/3 result.",
+    "Monty's choice is constrained: he cannot open the car door or your chosen door.",
+    "The switch wins 2/3 of the time because you initially picked wrong 2/3 of the time."
+  ]
+}

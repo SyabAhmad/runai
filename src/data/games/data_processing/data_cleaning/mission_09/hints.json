@@ -1,7 +1,7 @@
-﻿{
-    "mission_09":  [
-                       "Use sklearn.pipeline.Pipeline.",
-                       "Include StandardScaler then LogisticRegression(max_iter=1000).",
-                       "Compute scores with cross_val_score(..., cv=5)."
-                   ]
+{
+  "mission_09": [
+    "Use df['email'].str.strip().str.lower() to normalize email addresses",
+    "Define regex pattern: r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$'",
+    "Use re.match(pattern, email) to validate and df['email'].apply() for row-wise operations"
+  ]
 }

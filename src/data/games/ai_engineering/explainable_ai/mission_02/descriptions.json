@@ -1,0 +1,3 @@
+{
+  "mission_02": "SHAP (SHapley Additive exPlanations) values are based on cooperative game theory's Shapley values. They provide a unified measure of feature importance by computing the marginal contribution of each feature across all possible feature subsets. The key property is efficiency: the sum of SHAP values equals the difference between the prediction and the average prediction. In this mission, you implement brute-force SHAP computation by enumerating all subsets, computing marginal contributions with proper Shapley weighting (|S|! * (M-|S|-1)! / M!), and accumulating contributions for each feature. While computationally expensive for many features, this exact computation reveals the mathematical foundation of SHAP."
+}

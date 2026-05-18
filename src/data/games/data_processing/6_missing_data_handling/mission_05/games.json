@@ -1,0 +1,21 @@
+{
+  "title": "MICE - Multiple Imputation by Chained Equations",
+  "id": "mission_05",
+  "type": "ai_code",
+  "xpReward": 85,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import pandas as pd\nimport numpy as np\nfrom sklearn.experimental import enable_iterative_imputer\nfrom sklearn.impute import IterativeImputer\nfrom sklearn.ensemble import RandomForestRegressor\n\n# TODO: Create a dataset with correlated features and missing values\n# Introduce missing values in multiple columns\n\n# TODO: Apply MICE using IterativeImputer\n# Use BayesianRidge as the default estimator\n# Set max_iter=10 and random_state for reproducibility\n\n# TODO: Try with RandomForestRegressor as the estimator\n# Compare results between different estimators\n\n# TODO: Analyze the imputation quality\n\ndef mice_imputation():\n    # TODO: Create correlated dataset with missing values\n    # TODO: Apply IterativeImputer with different estimators\n    # TODO: Compare and display results\n    pass\n\n# TODO: Run the demonstration\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:IterativeImputer",
+      "must_include:max_iter",
+      "must_include:random_state",
+      "must_include:fit_transform",
+      "must_include:RandomForestRegressor",
+      "must_include:BayesianRidge"
+    ]
+  }
+}

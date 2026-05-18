@@ -1,0 +1,3 @@
+{
+  "mission_07": "You implemented hallucination detection! This is essential for deploying LLMs in production. NLI-based detection is the most practical approach for real-world systems."
+}

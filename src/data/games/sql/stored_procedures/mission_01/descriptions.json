@@ -1,0 +1,3 @@
+{
+  "mission_01": "Functions encapsulate reusable logic within the database, reducing code duplication and ensuring consistent calculations across applications. A well-designed function takes input parameters, performs a computation, and returns a result. Functions can be used directly in SELECT statements, making them powerful building blocks for complex queries."
+}

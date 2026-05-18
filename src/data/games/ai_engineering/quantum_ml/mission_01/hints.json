@@ -1,0 +1,9 @@
+{
+  "mission_01": [
+    "Initialize state: self.state[0] = 1.0 (all others zero).",
+    "Apply gate: self.state = full_op @ self.state.",
+    "Build full operator using np.kron for each qubit position.",
+    "Measure probability: prob_1 += np.abs(self.state[i]) ** 2 for states where qubit bit is 1.",
+    "Collapse: set amplitudes for non-matching outcomes to 0, then normalize."
+  ]
+}

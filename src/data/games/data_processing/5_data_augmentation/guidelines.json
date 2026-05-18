@@ -1,0 +1,6 @@
+{
+  "title": "Data Augmentation",
+  "description": "Master data augmentation techniques to artificially expand your training datasets. Learn image augmentation with transforms, text augmentation with synonym replacement and back-translation, SMOTE for oversampling minority classes, Mixup for linear interpolation between samples, and CutMix for region-based mixing. These techniques are essential for improving model generalization and combating overfitting.",
+  "difficulty": "intermediate",
+  "order": 5
+}

@@ -1,0 +1,3 @@
+{
+  "mission_05": "SELECT d.sale_date, s.store_name, COALESCE(sl.amount, 0) AS sales_amount\nFROM dates d\nCROSS JOIN stores s\nLEFT JOIN sales sl ON s.id = sl.store_id AND d.sale_date = sl.sale_date\nORDER BY d.sale_date, s.store_name;"
+}

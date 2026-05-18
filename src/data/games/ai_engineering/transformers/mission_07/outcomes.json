@@ -1,0 +1,3 @@
+{
+  "mission_07": "You implemented BPE tokenization! This is the exact algorithm used by GPT models. By building a vocabulary of subword units, BPE handles any text — even words it has never seen — by breaking them into known pieces. This is why GPT can process technical jargon, names, and typos without failing."
+}

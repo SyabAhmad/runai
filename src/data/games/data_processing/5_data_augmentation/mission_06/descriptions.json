@@ -1,0 +1,3 @@
+{
+  "mission_06": "Mixup is a powerful data augmentation technique that trains models on convex combinations of pairs of samples and their labels. By sampling a mixing coefficient lambda from a Beta distribution, mixup creates virtual training examples that lie on the line segments between real data points in feature space. This encourages models to behave linearly in between training examples, which acts as a strong regularizer and improves generalization. Mixup has been shown to reduce memorization of noisy labels, increase robustness to adversarial examples, and improve calibration of predicted probabilities. The alpha parameter of the Beta distribution controls the strength of interpolation, with smaller values producing samples closer to the original data."
+}

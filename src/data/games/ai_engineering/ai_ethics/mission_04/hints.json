@@ -1,0 +1,7 @@
+{
+  "mission_04": [
+    "Subsets: All combinations of features excluding feature_idx.",
+    "Marginal: `f(subset + feature) - f(subset)`.",
+    "Weight: `|S|!(n-|S|-1)!/n!` for each subset size."
+  ]
+}

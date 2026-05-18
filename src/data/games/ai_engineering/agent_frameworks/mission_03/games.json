@@ -1,0 +1,20 @@
+{
+  "title": "AutoGen Conversational Agents",
+  "id": "mission_03",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "# Agent Frameworks Mission 03: AutoGen Conversational Agents\n#\n# AutoGen (Microsoft) uses multi-agent conversations where\n# agents talk to each other to solve problems.\n#\n# Your goal: Implement chat_between_agents(user_proxy, assistant,\n#   max_turns)\n#   1. User proxy sends initial message\n#   2. Assistant responds\n#   3. User proxy evaluates and either continues or terminates\n#   4. Repeat until max_turns or termination\n#   5. Return conversation history\n\ndef chat_between_agents(user_proxy, assistant, max_turns=10):\n    # TODO: Initialize conversation history\n    # TODO: Loop max_turns: user sends, assistant responds\n    # TODO: Check for termination signal\n    # TODO: Return conversation history\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def chat_between_agents",
+      "must_include:max_turns",
+      "must_include:conversation",
+      "must_include:terminate",
+      "must_include:return"
+    ]
+  }
+}

@@ -1,0 +1,3 @@
+{
+  "mission_07": "Great work with stored procedures! You've created a complete business operation that checks inventory, creates an order, and updates stock atomically. Procedures with transaction control are the backbone of reliable database applications, ensuring complex operations complete successfully or roll back cleanly on failure."
+}

@@ -1,0 +1,21 @@
+{
+  "title": "Multivariate Outlier Detection with Mahalanobis Distance",
+  "id": "mission_03",
+  "type": "ai_code",
+  "xpReward": 70,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "import numpy as np\nimport pandas as pd\nfrom scipy.spatial.distance import mahalanobis\nfrom scipy.stats import chi2\n\n# TODO: Create a multivariate dataset with correlated features\n# Include some multivariate outliers that may not be univariate outliers\n\n# TODO: Implement Mahalanobis distance:\n# D^2 = (x - mu)^T * Sigma^(-1) * (x - mu)\n# where mu is the mean vector and Sigma is the covariance matrix\n\n# TODO: Use chi-squared distribution to determine the outlier threshold\n# For p dimensions, D^2 follows chi-squared distribution with p degrees of freedom\n\n# TODO: Detect and display multivariate outliers\n\ndef mahalanobis_detection(data, alpha=0.01):\n    # TODO: Calculate mean vector and covariance matrix\n    # TODO: Compute Mahalanobis distance for each point\n    # TODO: Determine threshold using chi-squared distribution\n    # TODO: Return outlier indices and distances\n    pass\n\n# TODO: Test with multivariate data\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:mahalanobis",
+      "must_include:cov",
+      "must_include:chi2",
+      "must_include:ppf",
+      "must_include:inv",
+      "must_include:mean"
+    ]
+  }
+}

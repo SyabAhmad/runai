@@ -1,0 +1,3 @@
+{
+  "mission_02": "Well done! You have implemented the core mechanics of the Prophet forecasting model. By decomposing a time series into trend, seasonality, and noise components, you can see how each contributes to the overall pattern. The piecewise linear trend with changepoint adjustments is particularly powerful because it allows the model to adapt to structural changes in the data without requiring manual intervention. This additive modeling approach makes Prophet highly interpretable and robust for business forecasting tasks where stakeholders need to understand the drivers behind predictions. The least squares fitting approach provides a computationally efficient way to estimate all model parameters simultaneously."
+}

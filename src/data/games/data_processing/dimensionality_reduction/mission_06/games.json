@@ -1,0 +1,18 @@
+{
+  "title": "PCA Component Analysis",
+  "id": "mission_06",
+  "type": "ai_code",
+  "xpReward": 85,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import pandas as pd\nimport numpy as np\nfrom sklearn.decomposition import PCA\nfrom sklearn.preprocessing import StandardScaler\n\n# TODO: Create a dataset\nnp.random.seed(42)\nX = np.random.randn(100, 5)\n\n# TODO: Standardize and apply PCA\nscaler = StandardScaler()\nX_scaled = scaler.fit_transform(X)\npca = PCA()\npca.fit(X_scaled)\n\n# TODO: Analyze components\nprint(\"Explained variance ratio:\", pca.explained_variance_ratio_)\nprint(\"Cumulative variance:\", np.cumsum(pca.explained_variance_ratio_))\nprint(\"\\nPrincipal components (loadings):\")\nprint(pca.components_)\n\n# TODO: Find number of components for 95% variance\nn_components_95 = ...\nprint(f\"\\nComponents needed for 95% variance: {n_components_95}\")\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:explained_variance_ratio_",
+      "must_include:cumsum",
+      "must_include:components_"
+    ]
+  }
+}

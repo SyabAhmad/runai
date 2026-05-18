@@ -1,0 +1,20 @@
+{
+  "title": "Full Transformer Model",
+  "id": "mission_06",
+  "type": "ai_code",
+  "xpReward": 110,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "# Transformers Mission 06: Full Transformer Model\n#\n# Now combine everything into a complete transformer:\n#   - Input embedding + positional encoding\n#   - N encoder blocks stacked\n#   - N decoder blocks stacked\n#   - Final linear projection to vocabulary\n#\n# Your goal: Implement transformer(src_tokens, tgt_tokens,\n#   src_embed, tgt_embed, pos_encoding,\n#   encoder_params, decoder_params, output_linear,\n#   num_layers, num_heads)\n#\n#   1. Embed source tokens + add positional encoding\n#   2. Embed target tokens + add positional encoding\n#   3. Pass through N encoder blocks\n#   4. Pass through N decoder blocks (with encoder output)\n#   5. Project to vocabulary: logits = output @ output_linear\n#   6. Return logits (before softmax for training)\n\nimport numpy as np\n\ndef transformer(src_tokens, tgt_tokens,\n                src_embed, tgt_embed, pos_encoding,\n                encoder_params, decoder_params, output_linear,\n                num_layers, num_heads):\n    # TODO: Embed tokens: src = src_tokens @ src_embed\n    # TODO: Add positional encoding: src += pos_encoding\n    # TODO: Stack encoder blocks\n    # TODO: Stack decoder blocks\n    # TODO: Final linear projection to vocabulary\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def transformer",
+      "must_include:pos_encoding",
+      "must_include:encoder",
+      "must_include:decoder",
+      "must_include:return"
+    ]
+  }
+}

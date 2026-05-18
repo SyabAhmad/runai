@@ -1,0 +1,3 @@
+{
+  "mission_08": "SAVEPOINTs create named checkpoints within a transaction that you can roll back to without aborting the entire transaction. This enables partial failure handling: if one operation in a batch fails, you can roll back to the savepoint and continue with the remaining operations. This pattern is essential for bulk data processing where some records may be invalid."
+}

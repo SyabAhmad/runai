@@ -1,0 +1,3 @@
+{
+  "mission_01": "import numpy as np\n\ndef calculate_perplexity(model, text):\n    tokens = tokenizer.encode(text)\n    log_probs = []\n    for i in range(1, len(tokens)):\n        probs = model.predict(tokens[:i])\n        log_probs.append(np.log(probs[tokens[i]] + 1e-10))\n    avg_neg_log_prob = -np.mean(log_probs)\n    perplexity = np.exp(avg_neg_log_prob)\n    return perplexity"
+}

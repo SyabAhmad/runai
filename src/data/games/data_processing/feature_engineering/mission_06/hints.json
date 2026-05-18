@@ -1,0 +1,1 @@
+{"mission_06": ["BMI formula: weight / (height_in_meters)^2, so weight / (height/100)**2.", "Interaction: df['age_exercise'] = df['age'] * df['exercise_hours'].", "Ratio: df['exercise_per_year'] = df['exercise_hours'] / df['age']."]}

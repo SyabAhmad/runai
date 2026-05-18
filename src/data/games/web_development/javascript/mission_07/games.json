@@ -1,0 +1,21 @@
+{
+  "title": "Async/Await Patterns",
+  "id": "mission_07",
+  "type": "ai_code",
+  "xpReward": 90,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "// TODO: Convert promise chains to async/await\n// TODO: Implement error handling with try/catch\n// TODO: Run async operations in parallel with Promise.all\n// TODO: Create an async iterator pattern\n\n// Simulated API functions\nconst api = {\n  getUser: (id) => new Promise(r => setTimeout(() => r({ id, name: `User ${id}` }), 200)),\n  getPosts: (userId) => new Promise(r => setTimeout(() => r([{ id: 1, title: \"Post 1\" }]), 300)),\n  getComments: (postId) => new Promise(r => setTimeout(() => r([{ id: 1, text: \"Great!\" }]), 150))\n};\n\n// TODO: Fetch user data with proper error handling\nasync function getUserProfile(userId) {\n  // TODO: Use try/catch with await\n  // TODO: Fetch user and their posts sequentially\n}\n\n// TODO: Fetch multiple users in parallel\nasync function getUserProfiles(userIds) {\n  // TODO: Use Promise.all with async/await\n}\n\n// TODO: Build a data pipeline with async/await\nasync function buildUserReport(userId) {\n  // TODO: Fetch user -> posts -> comments for each post\n  // TODO: Combine into a report object\n}\n\n// TODO: Implement async retry with exponential backoff\nasync function fetchWithBackoff(fn, maxRetries = 3) {\n  // TODO: Retry with increasing delays: 1s, 2s, 4s\n}"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:async",
+      "must_include:await",
+      "must_include:try {",
+      "must_include:catch",
+      "must_include:Promise.all",
+      "must_include:throw"
+    ]
+  }
+}

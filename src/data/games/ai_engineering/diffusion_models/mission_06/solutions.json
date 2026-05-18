@@ -1,0 +1,3 @@
+{
+  "mission_06": "import numpy as np\n\ndef classifier_free_guidance(x_t, t, model, prompt_embed, scale=7.5):\n    null_embed = np.zeros_like(prompt_embed)\n    eps_cond = model(x_t, t, prompt_embed)\n    eps_uncond = model(x_t, t, null_embed)\n    eps_guided = eps_uncond + scale * (eps_cond - eps_uncond)\n    return eps_guided"
+}

@@ -1,0 +1,3 @@
+{
+  "mission_02": "import re\n\ndef create_crew(agents, tasks):\n    agent_map = {a[\"name\"]: a for a in agents}\n    for task in tasks:\n        assert task[\"agent\"] in agent_map, f\"Unknown agent: {task['agent']}\"\n    context = None\n    outputs = []\n    for task in tasks:\n        agent = agent_map[task[\"agent\"]]\n        prompt = f\"As a {agent['role']}, {task['description']}\"\n        if context:\n            prompt += f\"\\nContext from previous: {context}\"\n        result = agent[\"execute\"](prompt)\n        outputs.append({\"task\": task[\"description\"], \"agent\": task[\"agent\"], \"output\": result})\n        context = result\n    return {\"outputs\": outputs, \"final_output\": context}"
+}

@@ -1,3 +1,3 @@
 {
-  "mission_01": "Complete ai agents mission 1 to master this technology."
+  "mission_01": "Welcome to AI Agents! \n\nAn AI agent is a function that takes a task description and returns a structured result. The simplest agent follows three steps:\n\n1. **Receive** a task\n2. **Acknowledge** it (print)\n3. **Return** a structured result\n\nYour `agent(task)` function should:\n- Print `Processing: {task}` so we can observe execution\n- Return `{\"task\": task, \"result\": \"done\"}` — a dict with task and result keys\n\nThis task-in/result-out pattern is the foundation of every agent system, from simple chatbots to AutoGPT and beyond."
 }

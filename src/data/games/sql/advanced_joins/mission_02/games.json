@@ -1,0 +1,19 @@
+{
+  "title": "Self Join: Same Department Colleagues",
+  "id": "mission_02",
+  "type": "ai_code",
+  "xpReward": 60,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "-- Self Join: Find pairs of employees in the same department\n-- The employees table has columns: id, name, department_id\n-- TODO: Write a query that finds all pairs of employees who work in the same department\n-- Each pair should appear only once (avoid duplicates like A-B and B-A)\n\nSELECT \nFROM employees e1\n\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:JOIN",
+      "must_include:department",
+      "must_include:e1",
+      "must_include:e2"
+    ]
+  }
+}

@@ -1,0 +1,3 @@
+{
+  "mission_09": "You implemented text-to-image generation! This combines CLIP, diffusion models, and classifier-free guidance — the exact pipeline used by DALL-E, Stable Diffusion, and Midjourney."
+}

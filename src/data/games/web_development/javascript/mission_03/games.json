@@ -1,0 +1,21 @@
+{
+  "title": "Array Methods and Iteration",
+  "id": "mission_03",
+  "type": "ai_code",
+  "xpReward": 70,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "// TODO: Use map, filter, reduce, find, and some/every\n// TODO: Transform, filter, and aggregate array data\n// TODO: Chain array methods for complex data processing\n\nconst products = [\n  { id: 1, name: \"Laptop\", price: 999, category: \"electronics\", inStock: true },\n  { id: 2, name: \"Mouse\", price: 25, category: \"electronics\", inStock: true },\n  { id: 3, name: \"Desk\", price: 350, category: \"furniture\", inStock: false },\n  { id: 4, name: \"Chair\", price: 200, category: \"furniture\", inStock: true },\n  { id: 5, name: \"Monitor\", price: 450, category: \"electronics\", inStock: true }\n];\n\n// TODO: Get array of product names using map\nfunction getProductNames(products) {\n  // TODO: Use .map()\n}\n\n// TODO: Filter products by category and stock status\nfunction getAvailableProducts(products, category) {\n  // TODO: Use .filter()\n}\n\n// TODO: Calculate total value of all in-stock products\nfunction getTotalInventoryValue(products) {\n  // TODO: Use .reduce()\n}\n\n// TODO: Find the most expensive product\nfunction findMostExpensive(products) {\n  // TODO: Use .reduce() or .sort()\n}\n\n// TODO: Check if all products in a category are in stock\nfunction areAllInStock(products, category) {\n  // TODO: Use .filter() and .every()\n}"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:.map(",
+      "must_include:.filter(",
+      "must_include:.reduce(",
+      "must_include:.every(",
+      "must_include:=>",
+      "must_include:return"
+    ]
+  }
+}

@@ -1,0 +1,3 @@
+{
+  "mission_03": "Forward fill (ffill) and backward fill (bfill) are essential techniques for handling missing values in time series data. Forward fill propagates the last known observation forward to fill gaps, which is appropriate when values are expected to remain stable between measurements. Backward fill uses the next known observation, useful when looking ahead is acceptable. Both methods preserve the temporal structure of the data, unlike mean or median imputation which ignores time ordering. The limit parameter controls how many consecutive missing values to fill, preventing unrealistic propagation over long gaps. These techniques are the default choice for sensor data, stock prices, and any sequential data where adjacent observations are correlated."
+}

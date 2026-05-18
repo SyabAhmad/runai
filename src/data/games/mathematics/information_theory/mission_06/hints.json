@@ -1,0 +1,7 @@
+{
+  "mission_06": [
+    "Use a min-heap (priority queue) to efficiently extract the two lowest probability nodes",
+    "When merging, prepend '0' to codes from the left child and '1' to codes from the right child",
+    "Average code length L = sum(p_i * len(code_i)), efficiency = H(X) / L"
+  ]
+}

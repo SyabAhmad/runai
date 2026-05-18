@@ -1,0 +1,3 @@
+{
+  "mission_06": "SELECT date, temperature, LEAD(temperature) OVER (ORDER BY date) AS next_temp, LEAD(temperature) OVER (ORDER BY date) - temperature AS temp_change, CASE WHEN LEAD(temperature) OVER (ORDER BY date) > temperature THEN 'warming' WHEN LEAD(temperature) OVER (ORDER BY date) < temperature THEN 'cooling' ELSE 'stable' END AS trend\nFROM weather\nORDER BY date;"
+}

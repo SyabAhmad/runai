@@ -1,0 +1,3 @@
+{
+  "mission_03": "Implement Nesterov Accelerated Gradient, a refinement of classical momentum that computes the gradient at an approximate future position rather than the current position. This lookahead property gives NAG a corrective mechanism that reduces overshooting and provides better convergence guarantees. NAG is widely used in deep learning frameworks and often outperforms standard momentum, especially on convex optimization problems."
+}

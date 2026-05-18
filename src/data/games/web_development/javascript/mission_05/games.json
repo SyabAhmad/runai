@@ -1,0 +1,21 @@
+{
+  "title": "ES6+ Modern JavaScript",
+  "id": "mission_05",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "// TODO: Use destructuring, spread/rest, template literals, and optional chaining\n// TODO: Implement modern JavaScript patterns for cleaner code\n\nconst config = {\n  database: {\n    host: \"localhost\",\n    port: 5432,\n    credentials: {\n      username: \"admin\",\n      password: \"secret\"\n    }\n  },\n  features: [\"auth\", \"logging\", \"caching\"]\n};\n\n// TODO: Destructure nested properties\nfunction getDbConfig(config) {\n  // TODO: Extract host, port, username using destructuring\n  // TODO: Return { host, port, username }\n}\n\n// TODO: Use spread operator to merge configs\nfunction mergeConfigs(defaults, overrides) {\n  // TODO: Return merged config using spread\n}\n\n// TODO: Use optional chaining and nullish coalescing\nfunction getUserDisplayName(user) {\n  // TODO: Safely access user.profile.name with optional chaining\n  // TODO: Fall back to \"Anonymous\" using nullish coalescing\n}\n\n// TODO: Use template literals for multi-line strings\nfunction generateReport(title, data) {\n  // TODO: Return formatted report string using template literals\n}"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:{",
+      "must_include:...",
+      "must_include:?.",
+      "must_include:??",
+      "must_include:`",
+      "must_include:return"
+    ]
+  }
+}

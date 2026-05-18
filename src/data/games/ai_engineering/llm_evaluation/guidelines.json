@@ -1,0 +1,6 @@
+{
+  "title": "LLM Evaluation",
+  "description": "Learn how to evaluate large language models using automatic metrics (perplexity, ROUGE, BLEU, BERTScore), human evaluation, hallucination detection, LLM-as-a-Judge, and benchmark datasets (MMLU, GSM8K, HumanEval).",
+  "difficulty": "medium",
+  "order": 6
+}

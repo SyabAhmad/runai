@@ -1,0 +1,22 @@
+{
+  "title": "CSS Custom Properties (Variables)",
+  "id": "mission_07",
+  "type": "ai_code",
+  "xpReward": 90,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "/* TODO: Define CSS custom properties for a design system */\n/* TODO: Create a light and dark theme using variables */\n/* TODO: Use var() with fallback values */\n/* TODO: Implement component-level variable overrides */\n\n/* TODO: Define root-level design tokens */\n/* :root {\n  --color-primary: ???;\n  --color-secondary: ???;\n  --color-bg: ???;\n  --color-text: ???;\n  --spacing-sm: ???;\n  --spacing-md: ???;\n  --spacing-lg: ???;\n  --radius: ???;\n  --font-family: ???;\n  --transition: ???;\n} */\n\n/* TODO: Create dark theme override */\n/* [data-theme=\"dark\"] {\n  ???\n} */\n\n/* TODO: Build components using variables */\n.button {\n  /* TODO: Use var() for colors, spacing, radius */\n}\n\n.card {\n  /* TODO: Use var() for background, text, spacing, radius */\n}\n\n.alert {\n  /* TODO: Use var() with fallback values */\n}"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include::root",
+      "must_include:--color-",
+      "must_include:--spacing-",
+      "must_include:var(",
+      "must_include:[data-theme=\"dark\"]",
+      "must_include:var(--color-primary",
+      "must_include:var(--radius"
+    ]
+  }
+}

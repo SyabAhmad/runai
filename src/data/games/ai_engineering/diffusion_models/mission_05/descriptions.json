@@ -1,0 +1,3 @@
+{
+  "mission_05": "Training diffusion models is elegant in its simplicity:\n\n**The algorithm**:\n1. Pick a random timestep t (uniform from 1 to T)\n2. Generate random noise ε ~ N(0, I)\n3. Create noisy image: x_t = √(ᾱ_t) · x_0 + √(1 - ᾱ_t) · ε\n4. Feed x_t and t to the U-Net\n5. Compute MSE between predicted and actual noise\n\n**Why it works**: By training on all timesteps simultaneously, the model learns to denoise at every noise level. The loss is always MSE on noise prediction — no complex objectives.\n\n**Training tips**:\n- Use EMA (Exponential Moving Average) of weights for better samples\n- Train for 200K-1M steps on millions of images\n- Use mixed precision (FP16) for speed\n- Batch size 256-1024 works well"
+}

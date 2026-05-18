@@ -1,0 +1,22 @@
+{
+  "title": "AI Impact Assessment Framework",
+  "id": "mission_10",
+  "type": "ai_code",
+  "xpReward": 120,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "# AI Ethics Mission 10: Impact Assessment\n#\n# Before deploying an AI system, conduct a comprehensive impact assessment.\n# Evaluate: fairness, privacy, safety, transparency, accountability, societal impact.\n#\n# Your goal: implement ai_impact_assessment(model, dataset, deployment_context)\n#   1. Run fairness audit\n#   2. Run privacy analysis\n#   3. Run safety tests (adversarial, toxicity)\n#   4. Generate comprehensive report with risk score\n\nimport numpy as np\n\ndef ai_impact_assessment(model, dataset, deployment_context):\n    # TODO: Fairness audit\n    # TODO: Privacy analysis\n    # TODO: Safety tests\n    # TODO: Generate report\n    # TODO: Return risk score\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def ai_impact_assessment",
+      "must_include:fairness",
+      "must_include:privacy",
+      "must_include:safety",
+      "must_include:risk",
+      "must_include:report",
+      "must_include:return"
+    ]
+  }
+}

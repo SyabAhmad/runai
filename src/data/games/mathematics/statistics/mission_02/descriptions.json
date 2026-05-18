@@ -1,0 +1,3 @@
+{
+  "mission_02": "The p-value is the probability of observing data as extreme as yours if the null hypothesis is true. Under H0, p-values are uniformly distributed — about 5% will be below 0.05 by chance alone (false positives). Statistical power is the probability of correctly rejecting H0 when H1 is true. The multiple testing problem: if you run 20 tests at alpha=0.05, the probability of at least one false positive is 1 - 0.95^20 = 0.64. The Bonferroni correction divides alpha by the number of tests. Understanding p-values prevents common misinterpretations: p is NOT the probability that H0 is true, and a non-significant result does NOT prove H0."
+}

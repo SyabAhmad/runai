@@ -1,0 +1,3 @@
+{
+  "mission_03": "Great state management skills! You have implemented useState across multiple patterns: counters with functional updates, todo lists with array state, forms with object state, and tabs with index state. The key takeaway is always creating new references for objects and arrays — never mutate state directly. Functional updates (prev => ...) ensure you work with the latest state value. These patterns cover 90% of state management needs in React applications."
+}

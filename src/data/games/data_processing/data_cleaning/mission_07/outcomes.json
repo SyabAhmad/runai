@@ -1,3 +1,3 @@
-﻿{
-    "mission_07":  "Great. Dataset splitting is reproducible and correct."
+{
+  "mission_07": "Congratulations! You've built a data profiling report from scratch. By computing column-level statistics including data type, count, mean, standard deviation, min, max, and null percentage, you now have a systematic approach to understanding any dataset. Data profiling is the foundation of exploratory data analysis and should precede any modeling or transformation work. These profiling metrics help you identify data quality issues, understand distributions, and make informed decisions about preprocessing strategies."
 }

@@ -1,0 +1,7 @@
+{
+  "mission_04": [
+    "IsolationForest(contamination=0.1) expects about 10% of data to be anomalies.",
+    "fit_predict returns -1 for anomalies and 1 for normal points.",
+    "decision_function returns anomaly scores; more negative means more anomalous."
+  ]
+}

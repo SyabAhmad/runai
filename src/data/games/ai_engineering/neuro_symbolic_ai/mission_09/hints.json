@@ -1,0 +1,9 @@
+{
+  "mission_09": [
+    "Compute premise strength: premise_strength *= symbol_probs[p].",
+    "Update reasoned probability: reasoned_probs[rule['conclusion']] = max(reasoned_probs[rule['conclusion']], new_prob).",
+    "Perceive: symbol_probs = self.perceive(x).",
+    "Reason: final_probs = self.reason(symbol_probs).",
+    "Explain: trace perceived symbols, reasoned symbols, and applied rules with their strengths."
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Error Handling with EXCEPTION Blocks",
+  "id": "mission_05",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "-- Error Handling: Safe division function with EXCEPTION\n-- TODO: Create a function that safely divides two numbers\n-- Handle division by zero using an EXCEPTION block\n\nCREATE OR REPLACE FUNCTION safe_divide(\n    numerator NUMERIC,\n    denominator NUMERIC\n)\nRETURNS NUMERIC\nLANGUAGE plpgsql\nAS $$\nBEGIN\n    -- TODO: Attempt the division\n    -- TODO: Add EXCEPTION block to handle division_by_zero\nEND;\n$$;\n\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:CREATE FUNCTION",
+      "must_include:EXCEPTION",
+      "must_include:division_by_zero",
+      "must_include:RETURN"
+    ]
+  }
+}

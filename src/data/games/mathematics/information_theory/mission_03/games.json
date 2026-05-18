@@ -1,0 +1,18 @@
+{
+  "title": "KL Divergence",
+  "id": "mission_03",
+  "type": "ai_code",
+  "xpReward": 70,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "import numpy as np\n\ndef kl_divergence(p, q):\n    \"\"\"\n    Calculate KL divergence D_KL(P||Q) = sum(p(x) * log(p(x)/q(x)))\n    p: true distribution\n    q: approximating distribution\n    Note: KL divergence is NOT symmetric: D_KL(P||Q) != D_KL(Q||P)\n    \"\"\"\n    # TODO: Clip distributions to avoid division by zero\n    p_clipped = np.clip(p, 1e-15, 1)\n    q_clipped = np.clip(q, 1e-15, 1)\n    \n    # TODO: Normalize to ensure they sum to 1\n    p_clipped = p_clipped / np.sum(p_clipped)\n    q_clipped = q_clipped / np.sum(q_clipped)\n    \n    # TODO: Compute KL divergence\n    kl = ...\n    \n    return kl\n\n\ndef js_divergence(p, q):\n    \"\"\"\n    Calculate Jensen-Shannon divergence (symmetric version of KL)\n    JS(P||Q) = 0.5 * D_KL(P||M) + 0.5 * D_KL(Q||M)\n    where M = 0.5 * (P + Q)\n    \"\"\"\n    # TODO: Compute midpoint distribution M\n    m = ...\n    \n    # TODO: Compute JS divergence\n    js = ...\n    \n    return js\n\n# Test KL divergence\np = np.array([0.5, 0.3, 0.2])\nq = np.array([0.4, 0.3, 0.3])\nprint(f\"KL(P||Q): {kl_divergence(p, q):.4f}\")\nprint(f\"KL(Q||P): {kl_divergence(q, p):.4f}\")\nprint(f\"JS(P||Q): {js_divergence(p, q):.4f}\")"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:kl_divergence",
+      "must_include:log",
+      "must_include:numpy"
+    ]
+  }
+}

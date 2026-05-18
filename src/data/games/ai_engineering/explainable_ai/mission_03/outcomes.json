@@ -1,0 +1,3 @@
+{
+  "mission_03": "Well done! You have built saliency maps from scratch by implementing gradient-based attribution for a CNN. Your implementation correctly propagates the target class gradient backward through the fully connected layer, ReLU activation (using the derivative mask), and convolution operation to produce a pixel-level importance map. Saliency maps are the foundation of many visualization techniques including Grad-CAM, Integrated Gradients, and SmoothGrad. The absolute value aggregation captures both positive and negative influences on the prediction, revealing which image regions the model focuses on for its decision."
+}

@@ -1,0 +1,7 @@
+{
+  "mission_02": [
+    "DP: `abs(mean(pred[A==0]) - mean(pred[A==1]))`.",
+    "EO: `abs(mean(pred[(A==0)&(y==1)]) - mean(pred[(A==1)&(y==1)]))`.",
+    "EOdds: max(EO difference, FPR difference)."
+  ]
+}

@@ -1,0 +1,3 @@
+{
+  "mission_02": "**CrewAI** orchestrates multiple AI agents working together as a team. Each agent has a specialized role, goal, and backstory that shapes how it approaches tasks.\n\nThe crew pattern:\n1. **Define agents** — researcher, writer, reviewer, each with unique expertise\n2. **Define tasks** — what needs to be done, who does it, what tools they use\n3. **Execute sequentially** — output of one task becomes context for the next\n4. **Return final result** — the completed deliverable\n\nThis mirrors how human teams work: specialists handle their domain and pass results downstream. CrewAI is used for research pipelines, content creation, and code review workflows."
+}

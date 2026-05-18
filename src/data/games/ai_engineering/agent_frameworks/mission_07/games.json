@@ -1,0 +1,20 @@
+{
+  "title": "Agent Evaluation Framework",
+  "id": "mission_07",
+  "type": "ai_code",
+  "xpReward": 120,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "# Agent Frameworks Mission 07: Agent Evaluation Framework\n#\n# How do you know if your agent is working well?\n# You need systematic evaluation with metrics.\n#\n# Your goal: Implement evaluate_agent(agent, test_cases, metrics)\n#   1. Run agent on each test case\n#   2. Compare output against expected result\n#   3. Compute metrics: accuracy, tool_call_rate, avg_steps\n#   4. Return evaluation report\n#\n# Metrics:\n#   - accuracy: % of correct answers\n#   - tool_call_rate: % of cases where tools were used\n#   - avg_steps: average number of reasoning steps\n\nimport re\n\ndef evaluate_agent(agent, test_cases, metrics):\n    # TODO: Run agent on each test case\n    # TODO: Compare output with expected result\n    # TODO: Compute accuracy, tool_call_rate, avg_steps\n    # TODO: Return evaluation report dict\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def evaluate_agent",
+      "must_include:test_cases",
+      "must_include:accuracy",
+      "must_include:metrics",
+      "must_include:return"
+    ]
+  }
+}

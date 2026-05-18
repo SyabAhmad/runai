@@ -1,0 +1,7 @@
+{
+  "mission_03": [
+    "Precision: `overlap / max(len(gen_ngrams), 1)` for each n.",
+    "Brevity: `BP = min(1, exp(1 - ref_len / gen_len))`.",
+    "BLEU: `BP * exp(mean(log(p_n + 1e-10)))`."
+  ]
+}

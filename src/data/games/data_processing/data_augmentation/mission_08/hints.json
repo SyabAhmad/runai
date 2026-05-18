@@ -1,0 +1,1 @@
+{"mission_08": ["First apply SMOTE: smote = SMOTE(random_state=42); X_res, y_res = smote.fit_resample(X, y).", "Then apply mixup on resampled data: lam = np.random.beta(0.2, 0.2); X_mix = lam * X_res + (1-lam) * X_res[perm].", "Track sizes: print(f\"Original: {len(X)}, After SMOTE: {len(X_res)}, After mixup: {len(X_mix)}\")."]}

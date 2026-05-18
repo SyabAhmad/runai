@@ -1,0 +1,3 @@
+{
+  "mission_06": "Covering indexes include all columns needed by a query, enabling index-only scans that avoid visiting the table heap entirely. The INCLUDE clause adds non-key columns to the index leaf pages without affecting the B-tree structure. This dramatically speeds up queries that only need a subset of columns, as the database never reads the main table."
+}

@@ -1,0 +1,7 @@
+{
+  "mission_02": [
+    "SimpleImputer works with both numeric and string/categorical columns.",
+    "strategy='most_frequent' fills with the mode (most common value) of each column.",
+    "strategy='constant' requires fill_value parameter to specify the replacement."
+  ]
+}

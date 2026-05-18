@@ -1,0 +1,3 @@
+{
+  "mission_07": "def bpe_tokenize(text, merges, vocab):\n    words = [list(w + \"</w>\") for w in text.split()]\n    for merge in merges:\n        a, b = merge\n        new_words = []\n        for word in words:\n            new_word = []\n            i = 0\n            while i < len(word):\n                if i < len(word) - 1 and word[i] == a and word[i+1] == b:\n                    new_word.append(a + b)\n                    i += 2\n                else:\n                    new_word.append(word[i])\n                    i += 1\n            new_words.append(new_word)\n        words = new_words\n    return [\" \".join(w) for w in words]"
+}

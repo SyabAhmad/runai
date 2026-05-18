@@ -1,4 +1,4 @@
-﻿{
+{
     "mission_07":  [
                        "Iterate over df.columns.",
                        "Use startswith(\"feat_\").",

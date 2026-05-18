@@ -1,0 +1,3 @@
+{
+  "mission_04": "Excellent! You have implemented symbolic knowledge injection, embedding domain rules as soft constraints in neural network training. Your injector evaluates rule satisfaction using fuzzy implication, combines data-driven and knowledge-driven losses, and verifies that the trained model respects injected knowledge. This approach is powerful when domain expertise exists alongside training data — medical diagnosis with known disease relationships, legal reasoning with established precedents, or scientific modeling with physical constraints. The knowledge weight parameter controls the trade-off between fitting data and respecting rules, allowing you to prioritize domain knowledge when data is scarce or noisy."
+}

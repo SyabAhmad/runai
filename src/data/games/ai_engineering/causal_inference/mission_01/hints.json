@@ -1,0 +1,7 @@
+{
+  "mission_01": [
+    "Use nx.DiGraph() to create a directed graph object, then add nodes with G.add_node() and edges with G.add_edge().",
+    "NetworkX provides nx.is_directed_acyclic_graph(G) to verify a graph has no cycles.",
+    "Parents are found via G.predecessors(node) and children via G.successors(node) — convert the results to lists."
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "title": "Query Optimization",
+  "description": "Learn to analyze and optimize SQL queries using EXPLAIN ANALYZE, query execution plans, index strategies, and covering indexes. This chapter teaches you to identify performance bottlenecks, understand how the database engine processes queries, and apply optimization techniques to dramatically improve query performance.",
+  "difficulty": "advanced",
+  "order": 3
+}

@@ -1,0 +1,7 @@
+{
+  "mission_07": [
+    "For task embedding, compute per-class means: for each class k, mean_k = np.mean(support_x[support_y == k], axis=0). Also compute per-class variances and global mean/std. Flatten and concatenate: embedding = np.concatenate([all_means.flatten(), all_vars.flatten(), [global_mean, global_std]]).",
+    "Cosine similarity: sim = dot(a, b) / (norm(a) * norm(b)). Euclidean-based similarity: sim = 1 / (1 + distance(a, b)).",
+    "For clustering, implement simple k-means: initialize centroids, assign points to nearest centroid, update centroids as mean of assigned points, repeat. For model selection, compute similarity between new task embedding and all database entries, then return the model that performed best on the most similar tasks."
+  ]
+}

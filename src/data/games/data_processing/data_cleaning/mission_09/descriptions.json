@@ -1,3 +1,3 @@
-﻿{
-    "mission_09":  "Implement evaluate_baseline_model(X, y) using a Pipeline with StandardScaler and LogisticRegression, then return the mean 5-fold cross_val_score."
+{
+  "mission_09": "Email validation and cleaning combines regex pattern matching with string manipulation to ensure email addresses conform to standard formats. A valid email follows the pattern: local-part@domain.tld, where the local part can contain alphanumeric characters, dots, underscores, percent signs, plus signs, and hyphens. The domain must have at least one dot followed by a valid top-level domain. Real-world email data often contains leading/trailing whitespace, mixed case, multiple addresses separated by semicolons, or completely invalid entries. Using re.match() with a well-crafted regex pattern allows you to validate and extract valid emails from messy data."
 }

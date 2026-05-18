@@ -1,0 +1,3 @@
+{
+  "mission_02": "You implemented Value Iteration! This is one of the most important algorithms in RL — it guarantees finding the optimal policy for any finite MDP. The Bellman equation is the foundation of all RL: current value = best immediate reward + discounted future value."
+}

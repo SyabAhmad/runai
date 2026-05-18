@@ -1,0 +1,7 @@
+{
+  "mission_10": [
+    "Monte Carlo integration: integral ≈ Volume * mean(f(samples))",
+    "For pi estimation: pi ≈ 4 * (points inside circle) / (total points)",
+    "Metropolis-Hastings: accept with probability min(1, target(proposal)/target(current))"
+  ]
+}

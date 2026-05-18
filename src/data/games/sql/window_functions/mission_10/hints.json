@@ -1,0 +1,7 @@
+{
+  "mission_10": [
+    "In the CTE, use NTILE(4) OVER (ORDER BY salary DESC) AS quartile.",
+    "In the outer query, GROUP BY quartile and calculate AVG(salary), MIN(salary), MAX(salary).",
+    "Count employees per quartile using COUNT(*)."
+  ]
+}

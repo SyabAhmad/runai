@@ -1,0 +1,7 @@
+{
+  "mission_03": [
+    "Inherit from both BaseEstimator and TransformerMixin for full sklearn compatibility.",
+    "fit() must return self to enable method chaining in pipelines.",
+    "transform() should return a numpy array or DataFrame with the transformed data."
+  ]
+}

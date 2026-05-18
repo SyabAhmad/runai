@@ -1,0 +1,19 @@
+{
+  "title": "Cross Join: Test Scenario Generation",
+  "id": "mission_06",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "-- Cross Join: Generate test scenarios for QA\n-- The browsers table has columns: id, browser_name\n-- The os_table has columns: id, os_name\n-- The resolutions table has columns: id, width, height\n-- TODO: Generate all browser-OS-resolution combinations for testing\n\nSELECT \nFROM browsers\n\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:CROSS JOIN",
+      "must_include:browsers",
+      "must_include:os",
+      "must_include:resolutions"
+    ]
+  }
+}

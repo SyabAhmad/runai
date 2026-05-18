@@ -1,0 +1,6 @@
+{
+  "title": "React Development",
+  "description": "Master React component architecture. Learn components, props, state, hooks (useState, useEffect, useContext), custom hooks, routing, context API, performance optimization, testing, and design patterns.",
+  "difficulty": "medium",
+  "order": 3
+}

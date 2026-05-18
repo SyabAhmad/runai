@@ -1,0 +1,3 @@
+{
+  "mission_08": "Implement a quadratic programming solver that minimizes a quadratic objective function subject to linear inequality and equality constraints. Quadratic programming extends linear programming by allowing a quadratic term in the objective, making it suitable for problems like portfolio optimization, support vector machines, and least squares with constraints. When the matrix P is positive semi-definite, the problem is convex and can be solved efficiently. The objective function has the form 0.5*x^T*P*x + q^T*x, where P determines the curvature of the quadratic surface."
+}

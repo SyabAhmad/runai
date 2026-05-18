@@ -1,0 +1,1 @@
+{"mission_09": ["Save the scaler after fitting: scaler = MinMaxScaler(); scaler.fit_transform(df).", "Use scaler.inverse_transform(scaled_data) to recover original values.", "Verify with np.allclose(original, recovered) which handles floating-point precision."]}

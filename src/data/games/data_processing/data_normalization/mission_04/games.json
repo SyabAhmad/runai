@@ -1,0 +1,18 @@
+{
+  "title": "Log Transform",
+  "id": "mission_04",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import pandas as pd\nimport numpy as np\n\n# TODO: Create a DataFrame with right-skewed data\ndata = {\n    'income': [1000, 5000, 10000, 50000, 100000, 500000, 1000000],\n    'population': [100, 500, 1000, 5000, 10000, 50000, 100000]\n}\ndf = pd.DataFrame(data)\n\n# TODO: Apply log transform (log1p for values that may include zero)\ndf_log = ...\n\nprint(\"Original skewness:\")\nprint(df.skew())\nprint(\"\\nLog-transformed skewness:\")\nprint(df_log.skew())\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:np.log1p",
+      "must_include:skew",
+      "must_include:numpy"
+    ]
+  }
+}

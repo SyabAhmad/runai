@@ -1,0 +1,3 @@
+{
+  "mission_05": "**Tool calling** (also called function calling) is how modern LLMs like GPT-4, Claude, and Gemini interact with external tools. Instead of parsing free text, the model returns structured JSON specifying which tool to call and with what arguments.\n\nThe protocol:\n1. **Define schemas** — describe each tool's name, description, and parameters\n2. **Send to LLM** — include schemas in the system prompt\n3. **Parse response** — extract JSON tool call from the LLM output\n4. **Validate** — check tool name exists and required params are present\n5. **Execute** — call the tool with validated arguments\n6. **Return** — format results back for the LLM\n\nThis is how ChatGPT plugins, Claude tools, and Gemini function calling work."
+}

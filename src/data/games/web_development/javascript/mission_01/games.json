@@ -1,0 +1,21 @@
+{
+  "title": "Variables and Data Types",
+  "id": "mission_01",
+  "type": "ai_code",
+  "xpReward": 60,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "// TODO: Declare variables using let and const (no var)\n// TODO: Use appropriate data types: string, number, boolean, null, undefined\n// TODO: Create a user profile object with different data types\n// TODO: Implement type checking with typeof\n\n// TODO: Create a function that builds a user profile\nfunction createUserProfile(name, age, email, isActive) {\n  // TODO: Use const for values that won't change\n  // TODO: Use let for values that might be updated\n  // TODO: Return an object with all user data\n}\n\n// TODO: Create a function that checks and reports types\nfunction reportTypes(value) {\n  // TODO: Use typeof to determine the type\n  // TODO: Return a descriptive string\n}\n\n// TODO: Test your functions\n// const user = createUserProfile(\"Alice\", 30, \"alice@example.com\", true);\n// console.log(reportTypes(user.name));\n// console.log(reportTypes(user.age));"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:const",
+      "must_include:let",
+      "must_include:typeof",
+      "must_include:return",
+      "must_include:typeof",
+      "must_include:function"
+    ]
+  }
+}

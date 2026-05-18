@@ -1,0 +1,7 @@
+{
+  "mission_10": [
+    "Encode: `z_orig = vae_encoder(original_image)`.",
+    "Noise original: `z_orig_noisy = sqrt(ab[t]) * z_orig + sqrt(1 - ab[t]) * noise`.",
+    "Blend: `z = mask * z_generated + (1 - mask) * z_orig_noisy`."
+  ]
+}

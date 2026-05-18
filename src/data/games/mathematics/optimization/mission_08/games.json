@@ -1,0 +1,18 @@
+{
+  "title": "Quadratic Programming",
+  "id": "mission_08",
+  "type": "ai_code",
+  "xpReward": 100,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "import numpy as np\nfrom scipy.optimize import minimize\n\ndef solve_quadratic_program(P, q, G, h, A=None, b=None):\n    \"\"\"\n    Solve quadratic program: min 0.5*x^T*P*x + q^T*x subject to G*x <= h, A*x = b\n    P: positive semi-definite matrix (quadratic term)\n    q: linear term vector\n    G: inequality constraint matrix\n    h: inequality constraint vector\n    A: equality constraint matrix (optional)\n    b: equality constraint vector (optional)\n    \"\"\"\n    n = len(q)\n    \n    # TODO: Define the quadratic objective function\n    def objective(x):\n        return ...\n    \n    # TODO: Define the gradient of the objective\n    def gradient(x):\n        return ...\n    \n    # TODO: Set up inequality constraints G*x <= h as h - G*x >= 0\n    constraints = []\n    for i in range(len(h)):\n        constraints.append({\n            'type': 'ineq',\n            'fun': lambda x, i=i: ...\n        })\n    \n    # TODO: Add equality constraints if provided\n    if A is not None and b is not None:\n        for j in range(len(b)):\n            constraints.append({\n                'type': 'eq',\n                'fun': lambda x, j=j: ...\n            })\n    \n    # TODO: Solve using scipy minimize with SLSQP\n    x0 = np.zeros(n)\n    result = ...\n    \n    return result\n\n# Example: min x^2 + y^2 s.t. x + y >= 1\nP = np.array([[2, 0], [0, 2]])\nq = np.array([0, 0])\nG = np.array([[-1, -1]])  # -x - y <= -1 means x + y >= 1\nh = np.array([-1])\n\nresult = solve_quadratic_program(P, q, G, h)\nprint(f\"Optimal solution: {result.x}\")\nprint(f\"Optimal value: {result.fun}\")"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:objective",
+      "must_include:quadratic",
+      "must_include:numpy"
+    ]
+  }
+}

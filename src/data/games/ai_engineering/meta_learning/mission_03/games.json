@@ -1,0 +1,16 @@
+{
+  "mission_03": {
+    "title": "Few-Shot Learning with Siamese Networks",
+    "id": "mission_03",
+    "type": "ai_code",
+    "xpReward": 70,
+    "difficulty": "easy",
+    "initialState": {
+      "content": "import numpy as np\nfrom scipy.spatial.distance import cosine, euclidean\n\n# TODO: Implement a simple Siamese network forward pass\ndef siamese_forward(x1, x2, weights):\n    \"\"\"Compute similarity between two inputs using shared weights.\"\"\"\n    # TODO: Apply shared embedding\n    # TODO: Compute L1 distance between embeddings\n    # TODO: Return similarity score\n    pass\n\n# TODO: Implement contrastive loss\ndef contrastive_loss(similarity, label, margin=1.0):\n    \"\"\"Contrastive loss for Siamese networks.\"\"\"\n    # TODO: Compute loss based on label\n    pass\n\n# TODO: Implement few-shot classification using pairwise comparisons\ndef few_shot_classification(query, support_set, support_labels, weights):\n    \"\"\"Classify query by comparing to all support examples.\"\"\"\n    # TODO: Compute similarity between query and each support example\n    # TODO: Use weighted voting\n    # TODO: Return predicted label\n    pass\n\n# TODO: Implement pair generation for training\ndef generate_pairs(X, y, n_pairs=1000, positive_ratio=0.5):\n    \"\"\"Generate training pairs (similar and dissimilar).\"\"\"\n    # TODO: Create positive pairs (same class)\n    # TODO: Create negative pairs (different classes)\n    pass\n"
+    },
+    "validation": {
+      "type": "ai_code",
+      "rules": ["must_include:siamese", "must_include:contrastive_loss", "must_include:embedding", "must_include:margin", "must_include:similarity"]
+    }
+  }
+}

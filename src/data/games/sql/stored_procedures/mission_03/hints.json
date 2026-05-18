@@ -1,0 +1,7 @@
+{
+  "mission_03": [
+    "Check TG_OP to determine if the operation is INSERT, UPDATE, or DELETE.",
+    "For INSERT, log row_to_json(NEW). For DELETE, log row_to_json(OLD).",
+    "Create the trigger with CREATE TRIGGER ... AFTER INSERT OR UPDATE OR DELETE ON employees FOR EACH ROW."
+  ]
+}

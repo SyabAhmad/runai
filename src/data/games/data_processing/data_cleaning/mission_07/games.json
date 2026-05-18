@@ -1,44 +1,18 @@
-﻿{
-    "title":  "Data Preprocessing Mission 7: Train/Test Split",
-    "initialState":  {
-                         "content":  "# TODO: Split features and target into train/test sets\n\ndef split_features_target(df, target_col):\n    # TODO: create X by dropping target_col\n\n    # TODO: create y from target_col\n\n    # TODO: return train_test_split with test_size=0.2 and random_state=42"
-                     },
-    "validation":  {
-                       "rules":  [
-                                     "must_include:def split_features_target",
-                                     "must_include:train_test_split",
-                                     "must_include:test_size=0.2",
-                                     "must_include:random_state=42"
-                                 ],
-                       "tests":  [
-                                     {
-                                         "type":  "must_match",
-                                         "name":  "function signature",
-                                         "pattern":  "def\\s+split_features_target\\s*\\(\\s*df\\s*,\\s*target_col\\s*\\)",
-                                         "message":  "Define split_features_target(df, target_col)."
-                                     },
-                                     {
-                                         "type":  "must_include_all",
-                                         "name":  "x and y prep",
-                                         "values":  [
-                                                        "drop(columns=[target_col])",
-                                                        "y = df[target_col]"
-                                                    ],
-                                         "message":  "Create X from all non-target columns and y from target_col."
-                                     },
-                                     {
-                                         "type":  "must_include_all",
-                                         "name":  "split settings",
-                                         "values":  [
-                                                        "test_size=0.2",
-                                                        "random_state=42"
-                                                    ],
-                                         "message":  "Use test_size=0.2 and random_state=42."
-                                     }
-                                 ],
-                       "type":  "ai_code"
-                   },
-    "id":  "mission_07",
-    "type":  "ai_code",
-    "xpReward":  100
+{
+  "title": "Data Profiling Report",
+  "id": "mission_07",
+  "type": "ai_code",
+  "xpReward": 90,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import pandas as pd\nimport numpy as np\n\ndata = {\n    'age': [25, 30, 35, 40, 45, 50, 28, 33, 38, 42],\n    'income': [50000, 60000, 70000, 80000, 90000, 100000, 55000, 65000, 75000, 85000],\n    'score': [85, 92, 78, 95, 88, 91, 82, 94, 79, 90]\n}\ndf = pd.DataFrame(data)\n\ndef profile_data(df):\n    report = {}\n    for col in df.columns:\n        report[col] = {\n            'dtype': str(df[col].dtype),\n            'count': int(df[col].count()),\n            'mean': float(df[col].mean()),\n            'std': float(df[col].std()),\n            'min': float(df[col].min()),\n            'max': float(df[col].max()),\n            'null_count': int(df[col].isnull().sum()),\n            'null_pct': float(df[col].isnull().mean() * 100)\n        }\n    return report\n\nprofile = profile_data(df)\nfor col, stats in profile.items():\n    print(f'\\n{col}:')\n    for k, v in stats.items():\n        print(f'  {k}: {v}')"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:describe",
+      "must_include:isnull",
+      "must_include:df.columns"
+    ]
+  }
 }

@@ -1,3 +1,3 @@
-﻿{
-    "mission_02":  "Implement dedupe_and_normalize(df) that removes duplicate rows, trims whitespace in the name column, and lowercases values in city. Return the cleaned DataFrame."
+{
+  "mission_02": "Data type validation ensures that each column in your dataset contains values of the expected type. In pandas, the astype() method performs explicit type conversion, while pd.to_numeric() with errors='coerce' safely converts strings to numbers, turning invalid entries into NaN. Boolean parsing requires custom logic since real-world data uses various representations like 'yes/no', 'true/false', or '1/0'. Proper type validation prevents runtime errors during analysis and enables correct operations like numerical computations on numeric columns. Always verify conversions with df.dtypes to confirm successful type transformations."
 }

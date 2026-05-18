@@ -1,0 +1,18 @@
+{
+  "title": "Aggregation Features",
+  "id": "mission_09",
+  "type": "ai_code",
+  "xpReward": 110,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "import pandas as pd\nimport numpy as np\n\n# TODO: Create a dataset with groups\ndata = {\n    'user': ['A', 'A', 'A', 'B', 'B', 'B', 'C', 'C', 'C'],\n    'purchase': [100, 200, 150, 300, 250, 350, 50, 75, 100],\n    'date': ['2024-01-01', '2024-02-01', '2024-03-01',\n             '2024-01-01', '2024-02-01', '2024-03-01',\n             '2024-01-01', '2024-02-01', '2024-03-01']\n}\ndf = pd.DataFrame(data)\n\n# TODO: Create aggregation features per user\ndf['user_mean'] = ...\ndf['user_std'] = ...\ndf['user_max'] = ...\ndf['user_min'] = ...\n\nprint(df)\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:groupby",
+      "must_include:transform",
+      "must_include:agg"
+    ]
+  }
+}

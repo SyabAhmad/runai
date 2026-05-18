@@ -1,0 +1,18 @@
+{
+  "title": "Multivariate Calculus",
+  "id": "mission_09",
+  "type": "ai_code",
+  "xpReward": 110,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "import numpy as np\n\n# TODO: Define f(x, y, z) = x^2*y + y^2*z + z^2*x\ndef f(x, y, z):\n    return None\n\n# TODO: Compute the gradient (vector of partial derivatives)\ndef gradient(x, y, z):\n    return None\n\n# TODO: Compute the Hessian matrix (matrix of second partial derivatives)\ndef hessian(x, y, z):\n    # H = [[d2f/dx2, d2f/dxdy, d2f/dxdz],\n    #      [d2f/dydx, d2f/dy2, d2f/dydz],\n    #      [d2f/dzdx, d2f/dzdy, d2f/dz2]]\n    return None\n\n# TODO: Evaluate at point (1, 2, 3)\npoint = (1, 2, 3)\ngrad_val = None\nhess_val = None\n\n# TODO: Check if the Hessian is symmetric (Clairaut's theorem)\nis_symmetric = None\n\n# TODO: Compute eigenvalues of the Hessian to determine convexity\neigenvalues = None\nis_convex = None  # True if all eigenvalues >= 0\n\n# TODO: Compute the directional second derivative in direction v = [1, 1, 1]\nv = None\nv_normalized = None\nsecond_directional = None  # v^T @ H @ v\n\nprint(f\"Gradient at {point}: {grad_val}\")\nprint(f\"Hessian at {point}:\\n{hess_val}\")\nprint(f\"Hessian symmetric: {is_symmetric}\")\nprint(f\"Eigenvalues: {eigenvalues}\")\nprint(f\"Is convex: {is_convex}\")\nprint(f\"Second directional derivative: {second_directional:.4f}\")\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:numpy",
+      "must_include:np.linalg.eig",
+      "must_include:np.allclose"
+    ]
+  }
+}

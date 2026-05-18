@@ -1,0 +1,7 @@
+{
+  "mission_06": [
+    "Conditional: `eps_cond = model(x_t, t, prompt_embed)`.",
+    "Unconditional: `eps_uncond = model(x_t, t, null_embed)`.",
+    "Guidance: `eps = eps_uncond + scale * (eps_cond - eps_uncond)`."
+  ]
+}

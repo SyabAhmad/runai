@@ -1,0 +1,7 @@
+{
+  "mission_06": [
+    "The 2x2 DiD estimator is: (mean(post_treatment) - mean(pre_treatment)) - (mean(post_control) - mean(pre_control)).",
+    "For TWFE, create the interaction term: treat × post. The coefficient on this interaction is the DiD estimate. Use np.column_stack to build the design matrix with unit and time dummies.",
+    "For parallel trends, regress (outcome_treated - outcome_control) on time indicators for pre-periods. Non-significant time coefficients support the parallel trends assumption. For event study, create indicator variables for each period relative to treatment time."
+  ]
+}

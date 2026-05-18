@@ -1,0 +1,19 @@
+{
+  "title": "Matrix Operations",
+  "id": "mission_02",
+  "type": "ai_code",
+  "xpReward": 60,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "import numpy as np\n\n# TODO: Create a 3x3 matrix A\nA = None\n\n# TODO: Create a 3x3 matrix B\nB = None\n\n# TODO: Compute the element-wise sum of A and B\nmatrix_sum = None\n\n# TODO: Compute the matrix product (not element-wise) of A and B\nmatrix_product = None\n\n# TODO: Compute the transpose of A\nA_transpose = None\n\n# TODO: Compute the inverse of A\nA_inverse = None\n\n# TODO: Verify that A @ A_inverse gives the identity matrix\nidentity_check = None\n\nprint(f\"Matrix A:\\n{A}\")\nprint(f\"Matrix B:\\n{B}\")\nprint(f\"Sum:\\n{matrix_sum}\")\nprint(f\"Product:\\n{matrix_product}\")\nprint(f\"Transpose of A:\\n{A_transpose}\")\nprint(f\"Inverse of A:\\n{A_inverse}\")\nprint(f\"Identity check:\\n{np.round(identity_check)}\")\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:numpy",
+      "must_include:np.linalg.inv",
+      "must_include:.T",
+      "must_include:np.array"
+    ]
+  }
+}

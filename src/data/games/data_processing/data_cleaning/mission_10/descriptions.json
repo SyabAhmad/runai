@@ -1,3 +1,3 @@
-﻿{
-    "mission_10":  "Create preprocess_for_modeling(df, target_col) that performs: missing-value handling, one-hot encoding, and train/test split (20%, random_state=42). Return X_train, X_test, y_train, y_test."
+{
+  "mission_10": "An advanced data cleaning pipeline combines multiple cleaning techniques into a cohesive workflow that transforms raw, messy data into analysis-ready format. The pipeline typically follows a sequence: deduplication, text normalization, type conversion, missing value handling, and date standardization. Each step builds on the previous one, and the order matters. For example, deduplication should happen early to avoid redundant processing, while type conversion should happen after text cleaning. Building reusable pipeline functions with clear input/output contracts makes your data cleaning code maintainable and testable."
 }

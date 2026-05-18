@@ -1,0 +1,18 @@
+{
+  "title": "Inverse Transform",
+  "id": "mission_08",
+  "type": "ai_code",
+  "xpReward": 100,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "import pandas as pd\nimport numpy as np\nfrom sklearn.preprocessing import MinMaxScaler, StandardScaler\n\n# TODO: Create original data\noriginal = np.array([[10, 100], [20, 200], [30, 300], [40, 400], [50, 500]])\n\n# TODO: Fit and transform with MinMaxScaler\nscaler = ...\nscaled = ...\n\n# TODO: Inverse transform back to original space\nrestored = ...\n\n# TODO: Verify restoration\nprint(\"Original:\\n\", original)\nprint(\"\\nScaled:\\n\", scaled)\nprint(\"\\nRestored:\\n\", restored)\nprint(\"\\nRestoration error:\", np.abs(original - restored).sum())\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:fit_transform",
+      "must_include:inverse_transform",
+      "must_include:MinMaxScaler"
+    ]
+  }
+}

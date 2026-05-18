@@ -1,0 +1,6 @@
+{
+  "mission_01": [
+    "Destructure props in the function signature: function UserProfile({ name, email, avatar }) { ... }.",
+    "For conditional rendering, use ternary: status === 'online' ? <span>Online</span> : null, or {status === 'online' && <span>Online</span>}."
+  ]
+}

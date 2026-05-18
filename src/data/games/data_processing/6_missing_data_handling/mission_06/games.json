@@ -1,0 +1,22 @@
+{
+  "title": "Interpolation Methods for Time Series",
+  "id": "mission_06",
+  "type": "ai_code",
+  "xpReward": 85,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import pandas as pd\nimport numpy as np\n\n# TODO: Create a time series with missing values\n# Use a sine wave pattern with some noise\n\n# TODO: Apply linear interpolation\n# Use method='linear'\n\n# TODO: Apply polynomial interpolation\n# Use method='polynomial' with order=2\n\n# TODO: Apply spline interpolation\n# Use method='spline' with order=3\n\n# TODO: Compare all methods visually and numerically\n# Calculate MSE against the original complete series\n\ndef interpolation_methods():\n    # TODO: Create time series data with gaps\n    # TODO: Apply linear, polynomial, and spline interpolation\n    # TODO: Compare results with MSE\n    pass\n\n# TODO: Run the demonstration\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:interpolate",
+      "must_include:method",
+      "must_include:linear",
+      "must_include:polynomial",
+      "must_include:spline",
+      "must_include:order",
+      "must_include:mean_squared_error"
+    ]
+  }
+}

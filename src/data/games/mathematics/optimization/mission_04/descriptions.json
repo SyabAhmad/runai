@@ -1,0 +1,3 @@
+{
+  "mission_04": "Implement a convexity checker that determines whether a function is convex by analyzing its Hessian matrix. A function is convex if and only if its Hessian is positive semi-definite everywhere in its domain. For single-variable functions, this means the second derivative is non-negative. For multivariable functions, all eigenvalues of the Hessian must be non-negative. Convex optimization is fundamental because convex problems guarantee that any local minimum is also a global minimum."
+}

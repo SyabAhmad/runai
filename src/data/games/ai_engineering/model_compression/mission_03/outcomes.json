@@ -1,0 +1,3 @@
+{
+  "mission_03": "You implemented knowledge distillation! This technique enables deploying large models on edge devices. DistilBERT (40% smaller, 97% accuracy) and TinyBERT are industry standards."
+}

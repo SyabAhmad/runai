@@ -1,0 +1,3 @@
+{
+  "mission_07": "CSS custom properties (variables) enable maintainable, themeable stylesheets. By defining design tokens like colors, spacing, and typography as variables on :root, you create a single source of truth for your design system. These variables can be overridden in specific scopes — for example, a [data-theme=\"dark\"] selector can redefine all color variables to create a dark mode. Components reference variables with var(), optionally providing fallback values for graceful degradation."
+}

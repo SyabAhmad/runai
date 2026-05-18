@@ -1,0 +1,3 @@
+{
+  "mission_10": "**Evaluation pipelines** automate comprehensive model assessment.\n\n**Components**:\n1. **Language quality**: Perplexity, fluency scores\n2. **Task performance**: ROUGE, BLEU, BERTScore on downstream tasks\n3. **Knowledge**: MMLU, TriviaQA accuracy\n4. **Reasoning**: GSM8K, LogicLM accuracy\n5. **Code**: HumanEval pass@1\n6. **Safety**: Toxicity, bias, jailbreak resistance\n\n**Reporting**:\n- Aggregate scores into a dashboard\n- Compare against baseline models\n- Track improvements over time\n- Highlight strengths and weaknesses\n\n**Continuous evaluation**: Run pipeline on every model version. Catch regressions before deployment."
+}

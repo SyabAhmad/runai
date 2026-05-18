@@ -1,0 +1,7 @@
+{
+  "mission_02": [
+    "Project: `Q = np.matmul(x, W_q)`, same for K and V.",
+    "Split heads by reshaping: `Q.reshape(batch, seq_len, num_heads, d_k)` then transpose.",
+    "After attention, concatenate with `np.concatenate(heads, axis=-1)` and project: `output @ W_o`."
+  ]
+}

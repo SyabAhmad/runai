@@ -1,0 +1,20 @@
+{
+  "title": "Indicator Variables for Missingness",
+  "id": "mission_07",
+  "type": "ai_code",
+  "xpReward": 90,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import pandas as pd\nimport numpy as np\nfrom sklearn.impute import SimpleImputer\n\n# TODO: Create a dataset where missingness itself is informative\n# For example, high-income people may be less likely to report income\n\n# TODO: Implement the indicator variable approach:\n# 1. Create binary indicator columns for each column with missing values\n# 2. Impute the missing values (use mean or median)\n# 3. Include both imputed values and indicator columns in the final dataset\n\n# TODO: Demonstrate how indicator variables preserve missingness information\n# Show that the indicator columns correlate with the target variable\n\ndef indicator_variable_approach():\n    # TODO: Create dataset with informative missingness\n    # TODO: Create indicator columns\n    # TODO: Impute and combine\n    # TODO: Analyze correlation between indicators and target\n    pass\n\n# TODO: Run the demonstration\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:isnull",
+      "must_include:isna",
+      "must_include:SimpleImputer",
+      "must_include:add_indicator",
+      "must_include:indicator"
+    ]
+  }
+}

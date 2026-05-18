@@ -1,0 +1,3 @@
+{
+  "mission_03": "Excellent! You have implemented differentially private federated learning, combining the privacy benefits of FL with rigorous mathematical guarantees. The gradient clipping ensures no single client can exert undue influence on the global model, while the calibrated noise makes it statistically impossible to determine whether any specific client participated. The privacy budget epsilon provides a quantifiable measure of privacy loss that accumulates over training rounds. This approach is used in production systems where regulatory compliance (GDPR, HIPAA) requires provable privacy guarantees. The trade-off is that noise reduces model accuracy, so tuning the clip norm and noise multiplier is critical for balancing privacy and utility."
+}

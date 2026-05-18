@@ -1,0 +1,20 @@
+{
+  "title": "Forward Diffusion Process",
+  "id": "mission_01",
+  "type": "ai_code",
+  "xpReward": 60,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "# Diffusion Models Mission 01: Forward Diffusion Process\n#\n# Diffusion models work by gradually adding noise to data\n# until it becomes pure Gaussian noise.\n#\n# Forward process: x_t = sqrt(alpha_t) * x_0 + sqrt(1 - alpha_t) * epsilon\n#\n# Your goal: Implement forward_diffusion(x_0, t, alpha_bar)\n#   1. Sample noise epsilon from N(0, I)\n#   2. Compute sqrt_alpha = sqrt(alpha_bar[t])\n#   3. Compute sqrt_one_minus = sqrt(1 - alpha_bar[t])\n#   4. Return noisy image: x_t = sqrt_alpha * x_0 + sqrt_one_minus * epsilon\n\nimport numpy as np\n\ndef forward_diffusion(x_0, t, alpha_bar):\n    # TODO: Sample noise epsilon ~ N(0, 1)\n    # TODO: Compute sqrt(alpha_bar[t]) and sqrt(1 - alpha_bar[t])\n    # TODO: Return x_t = sqrt_alpha * x_0 + sqrt_one_minus * epsilon\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def forward_diffusion",
+      "must_include:alpha_bar",
+      "must_include:sqrt",
+      "must_include:noise",
+      "must_include:return"
+    ]
+  }
+}

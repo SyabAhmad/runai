@@ -1,0 +1,20 @@
+{
+  "title": "Model Interpretability (SHAP Values)",
+  "id": "mission_04",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "# AI Ethics Mission 04: SHAP Values\n#\n# SHAP (SHapley Additive exPlanations) explains individual predictions.\n# Based on cooperative game theory: each feature's contribution to the prediction.\n#\n# Shapley value: average marginal contribution across all feature subsets.\n# phi_i = sum over S: [|S|!(n-|S|-1)!/n!] * [f(S+i) - f(S)]\n#\n# Your goal: implement shap_value(model, x, feature_idx, background)\n#   1. Generate feature subsets\n#   2. Compute marginal contribution for each subset\n#   3. Weight by subset size\n#   4. Return SHAP value\n\nimport numpy as np\nfrom itertools import combinations\n\ndef shap_value(model, x, feature_idx, background):\n    # TODO: Generate subsets\n    # TODO: Compute marginal contributions\n    # TODO: Weight and average\n    # TODO: Return SHAP value\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def shap_value",
+      "must_include:subset",
+      "must_include:marginal",
+      "must_include:contribution",
+      "must_include:return"
+    ]
+  }
+}

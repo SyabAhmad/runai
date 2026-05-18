@@ -1,0 +1,3 @@
+{
+  "mission_10": "Correlated subqueries execute once per outer row, which can be devastating for performance on large datasets. Rewriting them as JOINs allows the optimizer to choose efficient join strategies and leverage indexes. While modern optimizers can sometimes transform subqueries automatically, explicit JOINs give you more control and are generally more readable and maintainable."
+}

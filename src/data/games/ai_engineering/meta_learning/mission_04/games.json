@@ -1,0 +1,16 @@
+{
+  "mission_04": {
+    "title": "Metric-Based Meta-Learning with Relation Networks",
+    "id": "mission_04",
+    "type": "ai_code",
+    "xpReward": 80,
+    "difficulty": "medium",
+    "initialState": {
+      "content": "import numpy as np\nfrom scipy.spatial.distance import cdist\n\n# TODO: Implement relation module (learned similarity function)\ndef relation_module(embedding_query, embedding_support, relation_weights):\n    \"\"\"Learned relation score between query and support embeddings.\"\"\"\n    # TODO: Concatenate query and support embeddings\n    # TODO: Apply relation network: FC -> ReLU -> FC -> Sigmoid\n    # TODO: Return relation score in [0, 1]\n    pass\n\n# TODO: Implement relation network classification\ndef relation_classify(query_embedding, support_embeddings, support_labels, relation_weights, n_way):\n    \"\"\"Classify using relation scores.\"\"\"\n    # TODO: Compute prototypes for each class\n    # TODO: Compute relation scores between query and each prototype\n    # TODO: Return predicted class\n    pass\n\n# TODO: Implement the relation network loss\ndef relation_loss(query_embedding, query_label, support_embeddings, support_labels, relation_weights, n_way):\n    \"\"\"Compute cross-entropy loss for relation network.\"\"\"\n    # TODO: Compute relation scores for all classes\n    # TODO: Apply softmax\n    # TODO: Compute cross-entropy loss\n    pass\n\n# TODO: Implement feature embedding function\ndef embed_features(X, embedding_weights):\n    \"\"\"Extract features using the embedding function.\"\"\"\n    # TODO: Apply embedding network\n    pass\n"
+    },
+    "validation": {
+      "type": "ai_code",
+      "rules": ["must_include:relation_module", "must_include:relation_score", "must_include:prototype", "must_include:sigmoid", "must_include:concatenate"]
+    }
+  }
+}

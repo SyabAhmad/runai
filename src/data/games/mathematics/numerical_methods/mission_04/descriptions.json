@@ -1,0 +1,3 @@
+{
+  "mission_04": "Implement Simpson's rule and Romberg integration for higher-accuracy numerical integration. Simpson's 1/3 rule uses quadratic interpolation over pairs of subintervals, achieving O(h^4) error compared to O(h^2) for the trapezoidal rule. The formula uses weighted sums with coefficients 1, 4, 2, 4, 2, ..., 4, 1. Simpson's 3/8 rule uses cubic interpolation and requires n divisible by 3. Romberg integration combines trapezoidal estimates with different step sizes using Richardson extrapolation, achieving very high accuracy with relatively few function evaluations. These methods form the backbone of numerical integration libraries."
+}

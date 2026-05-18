@@ -1,0 +1,3 @@
+{
+  "mission_06": "Excellent! You have explored covariance and correlation by generating correlated data and computing their relationships. The correlation between X and Y is approximately 0.7 as designed. The manual calculation confirms that corr = Cov / (std_X * std_Y). For W = -2X + 3, the correlation is -1 (perfect negative linear relationship), demonstrating that adding a constant doesn't affect correlation and multiplying by a negative flips the sign. Covariance and correlation are fundamental to understanding relationships between features, building covariance matrices for multivariate models, and performing PCA."
+}

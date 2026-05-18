@@ -1,3 +1,3 @@
 {
-  "mission_03": "Mission 3 in ai agents completed successfully!"
+  "mission_03": "Excellent! Your agent now follows instructions and knows its boundaries. This is the core of safe AI agent design — define scope, detect intent, route to tools, and refuse politely when out of scope. Production agents use exactly this pattern with their system prompts."
 }

@@ -1,0 +1,7 @@
+{
+  "mission_08": [
+    "Use LATERAL with a subquery that selects from orders where customer_id matches c.id.",
+    "Order the subquery results by total_amount DESC and LIMIT to 3.",
+    "Select customer name along with order details from the lateral subquery."
+  ]
+}

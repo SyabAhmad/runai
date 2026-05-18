@@ -1,0 +1,7 @@
+{
+  "mission_06": [
+    "Sample lambda from Beta(alpha, alpha) using np.random.beta(alpha, alpha).",
+    "Use np.random.permutation to create shuffled indices for pairing samples.",
+    "Apply the same lambda to both features and labels for consistent interpolation."
+  ]
+}

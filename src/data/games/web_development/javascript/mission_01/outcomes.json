@@ -1,0 +1,3 @@
+{
+  "mission_01": "Great start! You have learned the foundation of JavaScript variables and data types. Using const by default and let only when reassignment is needed is a best practice that prevents accidental mutations. The typeof operator is your tool for runtime type checking, though remember its quirk with null. These fundamentals will serve you in every JavaScript program you write."
+}

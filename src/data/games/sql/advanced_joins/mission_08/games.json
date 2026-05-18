@@ -1,0 +1,19 @@
+{
+  "title": "Lateral Join: Top N Per Group",
+  "id": "mission_08",
+  "type": "ai_code",
+  "xpReward": 100,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "-- Lateral Join: Find the top 3 orders per customer\n-- The customers table has columns: id, name\n-- The orders table has columns: id, customer_id, order_date, total_amount\n-- TODO: Use a LATERAL JOIN to get the top 3 orders by amount for each customer\n\nSELECT \nFROM customers c\n\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:LATERAL",
+      "must_include:customers",
+      "must_include:orders",
+      "must_include:LIMIT"
+    ]
+  }
+}

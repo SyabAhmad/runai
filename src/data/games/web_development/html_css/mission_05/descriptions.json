@@ -1,0 +1,3 @@
+{
+  "mission_05": "CSS Grid is a two-dimensional layout system that lets you define rows and columns simultaneously. Unlike Flexbox which works in one direction, Grid excels at complex page layouts. In this mission, you will build a dashboard using grid-template-areas for visual placement, repeat() with minmax() for responsive columns, and grid-row to make the sidebar span multiple rows. Grid transforms complicated layout problems into declarative, readable code."
+}

@@ -1,0 +1,3 @@
+{
+  "mission_08": "Impressive! You have built Taylor series approximations from scratch. The Taylor polynomial of degree 10 for e^x at x=1 gives an error on the order of 10^-8. You also implemented the Taylor series for sin(x) using only odd powers with alternating signs. The pattern is clear: higher-degree polynomials provide better approximations. Taylor series are the mathematical foundation of numerical function evaluation — every time you call np.exp() or np.sin(), the computer uses a polynomial approximation. In optimization, the second-order Taylor expansion underlies Newton's method."
+}

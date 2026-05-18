@@ -1,0 +1,7 @@
+{
+  "mission_10": [
+    "Create a Pipeline that chains imputation with a RandomForestClassifier.",
+    "Use cross_val_score to get reliable performance estimates for each strategy.",
+    "Compare mean cross-validation scores to rank imputation strategies objectively."
+  ]
+}

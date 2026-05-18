@@ -1,0 +1,7 @@
+{
+  "mission_04": [
+    "Use CREATE INDEX idx_orders_customer_id ON orders(customer_id).",
+    "After creating the index, run EXPLAIN SELECT * FROM orders WHERE customer_id = 42.",
+    "Look for 'Index Scan' or 'Index Only Scan' in the output instead of 'Seq Scan'."
+  ]
+}

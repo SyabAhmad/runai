@@ -1,0 +1,3 @@
+{
+  "mission_02": "Props are how React components communicate. Beyond simple values, props enable powerful composition patterns. The children prop lets components wrap other content (like Modal or Card). Default props provide fallback values when props are not specified. The spread operator ({...props}) forwards unknown props to underlying elements. In this mission, you will build a Button with variants, a Modal using children, a FormGroup wrapper, and a configurable DataTable — all demonstrating professional component composition patterns."
+}

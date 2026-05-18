@@ -1,0 +1,3 @@
+{
+  "mission_02": "Implement cross-entropy, a measure of the difference between two probability distributions that is widely used as a loss function in machine learning. Cross-entropy H(P,Q) = -sum(p(x) * log(q(x))) measures the average number of bits needed to encode data from distribution P using a code optimized for distribution Q. In classification, cross-entropy loss penalizes confident wrong predictions heavily, making it ideal for training neural networks. Binary cross-entropy handles two-class problems while categorical cross-entropy extends to multi-class classification with one-hot encoded labels."
+}

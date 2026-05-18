@@ -1,0 +1,7 @@
+{
+  "mission_04": [
+    "Use nltk.word_tokenize to split text into individual words before processing.",
+    "wordnet.synsets(word) returns a list of synonym sets for a given word.",
+    "Access individual synonym words via synset.lemmas() and extract the name from each lemma."
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "title": "LEAD: Access Future Row Values",
+  "id": "mission_06",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "-- LEAD: Compare each day's temperature with the next day\n-- The weather table has columns: date, temperature, city\n-- TODO: Use LEAD() to get the next day's temperature\n-- Calculate the temperature change and identify warming/cooling trends\n\nSELECT \nFROM weather\n\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:LEAD",
+      "must_include:OVER",
+      "must_include:ORDER BY",
+      "must_include:temperature"
+    ]
+  }
+}

@@ -1,0 +1,3 @@
+{
+  "mission_02": "Functions that return tables (SETOF) act like parameterized views, allowing you to encapsulate complex queries with input parameters. The RETURNS TABLE clause defines the structure of the returned rows, and RETURN QUERY executes the underlying SELECT. This pattern is ideal for creating reusable data access layers within the database."
+}

@@ -1,0 +1,21 @@
+{
+  "title": "Isolation Forest for Anomaly Detection",
+  "id": "mission_04",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import numpy as np\nimport pandas as pd\nfrom sklearn.ensemble import IsolationForest\nfrom sklearn.datasets import make_blobs\n\n# TODO: Generate a dataset with normal clusters and scattered anomalies\n\n# TODO: Train an Isolation Forest model:\n# 1. Set contamination parameter to expected outlier proportion\n# 2. Configure n_estimators and max_samples\n# 3. Fit the model to the data\n\n# TODO: Predict outliers:\n# -1 indicates anomaly, 1 indicates inlier\n\n# TODO: Analyze anomaly scores\n# Lower scores indicate more anomalous points\n\ndef isolation_forest_detection():\n    # TODO: Generate data with anomalies\n    # TODO: Train IsolationForest\n    # TODO: Predict and analyze results\n    pass\n\n# TODO: Run the detection\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:IsolationForest",
+      "must_include:contamination",
+      "must_include:n_estimators",
+      "must_include:fit_predict",
+      "must_include:decision_function",
+      "must_include:make_blobs"
+    ]
+  }
+}

@@ -1,0 +1,3 @@
+{
+  "mission_01": "Great start with functions! You've created a reusable calculation that can be used anywhere in your SQL queries. Functions promote code reuse, centralize business logic, and ensure consistent behavior across all applications that access the database."
+}

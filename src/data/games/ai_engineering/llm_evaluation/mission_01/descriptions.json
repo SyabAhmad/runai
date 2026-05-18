@@ -1,0 +1,3 @@
+{
+  "mission_01": "**Perplexity** is the standard metric for evaluating language models.\n\n**Intuition**: Perplexity = weighted average branching factor. A perplexity of 100 means the model is as uncertain as if it were choosing uniformly among 100 words at each step.\n\n**Formula**:\n```\nPP(W) = exp(-1/N * Σ log P(w_i | w_<i))\n```\n\n**Interpretation**:\n- Lower = better (model is more confident)\n- GPT-2: ~15-20 on WikiText\n- GPT-3: ~10-15\n- GPT-4: ~5-8\n\n**Limitations**: Perplexity doesn't measure factual accuracy, coherence, or usefulness — only how well the model predicts the next token."
+}

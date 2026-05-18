@@ -1,0 +1,7 @@
+{
+  "mission_03": [
+    "Create `pos = np.arange(seq_len).reshape(-1, 1)` and `dims = np.arange(d_model).reshape(1, -1)`.",
+    "Compute the angle: `angles = pos / np.power(10000, 2 * (dims // 2) / d_model)`.",
+    "Apply sin to even columns `[:, 0::2]` and cos to odd columns `[:, 1::2]`."
+  ]
+}

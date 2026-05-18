@@ -1,0 +1,22 @@
+{
+  "title": "Adversarial Data Augmentation with FGSM",
+  "id": "mission_09",
+  "type": "ai_code",
+  "xpReward": 110,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "import numpy as np\nimport torch\nimport torch.nn as nn\nimport torch.nn.functional as F\n\n# TODO: Implement FGSM (Fast Gradient Sign Method) adversarial augmentation\n# FGSM creates adversarial examples by:\n# 1. Computing the gradient of the loss w.r.t. the input\n# 2. Taking the sign of the gradient\n# 3. Adding epsilon * sign(gradient) to the input\n# x_adv = x + epsilon * sign(grad_loss_wrt_x)\n\ndef fgsm_attack(model, image, label, epsilon=0.1):\n    # TODO: Set requires_grad=True on the image\n    # TODO: Compute the loss (use cross-entropy)\n    # TODO: Backpropagate to get gradients w.r.t. input\n    # TODO: Collect the sign of the gradient\n    # TODO: Create the adversarial image\n    # TODO: Clip to valid pixel range [0, 1]\n    pass\n\n# TODO: Create a simple CNN model\n# TODO: Generate a sample input and apply FGSM\n# TODO: Compare predictions on original vs adversarial image\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:requires_grad",
+      "must_include:backward",
+      "must_include:grad",
+      "must_include:sign",
+      "must_include:epsilon",
+      "must_include:clamp",
+      "must_include:cross_entropy"
+    ]
+  }
+}

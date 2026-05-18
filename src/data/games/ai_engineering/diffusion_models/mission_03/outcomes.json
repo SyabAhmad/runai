@@ -1,0 +1,3 @@
+{
+  "mission_03": "You implemented noise schedules! The schedule is a hyperparameter that dramatically affects output quality. Cosine schedules are used in DALL-E 2 and Imagen for their smooth noise progression."
+}

@@ -1,0 +1,3 @@
+{
+  "mission_07": "Well done with partial indexes! They're an underutilized optimization that can dramatically reduce index size and improve performance for targeted queries. When a significant portion of your queries filter on a specific condition, a partial index on that condition is often better than a full index."
+}

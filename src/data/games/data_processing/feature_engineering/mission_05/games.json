@@ -1,0 +1,18 @@
+{
+  "title": "Target Encoding",
+  "id": "mission_05",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import pandas as pd\nimport numpy as np\n\n# TODO: Create a dataset with categorical features and a target\ndata = {\n    'city': ['NY', 'LA', 'NY', 'Chicago', 'LA', 'NY', 'Chicago', 'LA'],\n    'target': [1, 0, 1, 1, 0, 0, 1, 1]\n}\ndf = pd.DataFrame(data)\n\n# TODO: Compute target encoding (mean of target per category)\ntarget_means = ...\ndf['city_encoded'] = ...\n\nprint(\"Target means per city:\")\nprint(target_means)\nprint(\"\\nEncoded DataFrame:\")\nprint(df)\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:groupby",
+      "must_include:mean",
+      "must_include:map"
+    ]
+  }
+}

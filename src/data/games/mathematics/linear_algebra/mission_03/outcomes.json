@@ -1,0 +1,3 @@
+{
+  "mission_03": "Well done! You have explored determinants and their key properties. You verified that det(AC) = det(A) * det(C), one of the most important determinant properties. You also learned to check matrix invertibility using the determinant. The determinant tells you whether a matrix transformation preserves volume (non-zero) or collapses space (zero). This concept is crucial for understanding matrix invertibility, eigenvalue computation, and the Jacobian in multivariate calculus."
+}

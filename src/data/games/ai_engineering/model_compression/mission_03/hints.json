@@ -1,0 +1,7 @@
+{
+  "mission_03": [
+    "Hard loss: `CE = -sum(labels * log(softmax(student)))`.",
+    "Soft loss: `KL = sum(softmax(teacher/T) * log(softmax(teacher/T) / softmax(student/T)))`.",
+    "Total: `L = alpha * hard_loss + (1-alpha) * T**2 * soft_loss`."
+  ]
+}

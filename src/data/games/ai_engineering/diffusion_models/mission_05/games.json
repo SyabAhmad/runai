@@ -1,0 +1,20 @@
+{
+  "title": "Training Loop & Loss",
+  "id": "mission_05",
+  "type": "ai_code",
+  "xpReward": 90,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "# Diffusion Models Mission 05: Training Loop\n#\n# Training a diffusion model is surprisingly simple:\n# 1. Sample random timestep t\n# 2. Sample noise epsilon ~ N(0, I)\n# 3. Create noisy image: x_t = sqrt(alpha_bar_t) * x_0 + sqrt(1 - alpha_bar_t) * epsilon\n# 4. Predict noise with model: epsilon_pred = model(x_t, t)\n# 5. Loss = MSE(epsilon, epsilon_pred)\n#\n# Your goal: Implement diffusion_training_step(x_0, model, alpha_bar, num_steps)\n#   1. Sample t uniformly from [0, num_steps)\n#   2. Sample noise epsilon\n#   3. Create noisy x_t\n#   4. Predict noise and compute MSE loss\n\nimport numpy as np\n\ndef diffusion_training_step(x_0, model, alpha_bar, num_steps):\n    # TODO: Sample t\n    # TODO: Sample noise\n    # TODO: Create noisy image\n    # TODO: Predict noise and compute loss\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def diffusion_training_step",
+      "must_include:np.random",
+      "must_include:alpha_bar",
+      "must_include:mse",
+      "must_include:return"
+    ]
+  }
+}

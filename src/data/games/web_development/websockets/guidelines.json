@@ -1,0 +1,6 @@
+{
+  "title": "WebSockets",
+  "description": "Master real-time web communication with WebSockets including connection handling, messaging, broadcasting, rooms, authentication, reconnection, scaling, real-time chat, and presence.",
+  "difficulty": "hard",
+  "order": 7
+}

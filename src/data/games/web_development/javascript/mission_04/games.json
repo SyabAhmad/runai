@@ -1,0 +1,22 @@
+{
+  "title": "Objects and Prototypes",
+  "id": "mission_04",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "// TODO: Create objects with different patterns\n// TODO: Implement object methods, getters, and setters\n// TODO: Use Object.keys, Object.values, Object.entries\n// TODO: Implement deep clone and merge utilities\n\n// TODO: Create a BankAccount class using constructor function\nfunction BankAccount(owner, balance) {\n  // TODO: Set properties\n  // TODO: Add deposit, withdraw, and getBalance methods\n}\n\n// TODO: Create an object with getters and setters\nconst temperature = {\n  _celsius: 0,\n  // TODO: Add getter for fahrenheit\n  // TODO: Add setter for fahrenheit\n};\n\n// TODO: Create utility functions\nfunction deepClone(obj) {\n  // TODO: Return a deep copy of the object\n}\n\nfunction mergeObjects(target, ...sources) {\n  // TODO: Merge all sources into target deeply\n}\n\nfunction getObjectStats(obj) {\n  // TODO: Return { keys, values, entries, count } using Object methods\n}"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:get",
+      "must_include:set",
+      "must_include:Object.keys",
+      "must_include:Object.values",
+      "must_include:Object.entries",
+      "must_include:function",
+      "must_include:this."
+    ]
+  }
+}

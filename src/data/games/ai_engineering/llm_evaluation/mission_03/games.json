@@ -1,0 +1,20 @@
+{
+  "title": "BLEU Score (Bilingual Evaluation Understudy)",
+  "id": "mission_03",
+  "type": "ai_code",
+  "xpReward": 70,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "# LLM Evaluation Mission 03: BLEU Score\n#\n# BLEU measures precision of n-gram overlap between generated and reference.\n# Uses brevity penalty to penalize short outputs.\n#\n# BLEU = BP * exp(sum(w_n * log p_n))\n# BP = min(1, exp(1 - ref_len / gen_len))\n#\n# Your goal: Implement compute_bleu(generated, reference, max_n=4)\n#   1. Compute n-gram precisions for n=1..max_n\n#   2. Apply brevity penalty\n#   3. Compute geometric mean with uniform weights\n\nimport numpy as np\nfrom collections import Counter\n\ndef compute_bleu(generated, reference, max_n=4):\n    # TODO: Compute n-gram precisions\n    # TODO: Apply brevity penalty\n    # TODO: Compute geometric mean\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def compute_bleu",
+      "must_include:brevity",
+      "must_include:precision",
+      "must_include:np.exp",
+      "must_include:return"
+    ]
+  }
+}

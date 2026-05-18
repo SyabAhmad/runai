@@ -1,7 +1,7 @@
-﻿{
-    "mission_02":  [
-                       "drop_duplicates() removes repeated records.",
-                       "Use .str.strip() for leading/trailing spaces.",
-                       "Use .str.lower() for case normalization."
-                   ]
+{
+  "mission_02": [
+    "Use pd.to_numeric(df['column'], errors='coerce') to safely convert strings to numbers",
+    "Use df['column'].astype(int) for integer conversion after cleaning",
+    "Create a custom function with lambda or apply() for boolean parsing"
+  ]
 }

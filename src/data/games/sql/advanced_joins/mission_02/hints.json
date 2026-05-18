@@ -1,0 +1,7 @@
+{
+  "mission_02": [
+    "Join employees to itself with aliases e1 and e2 on matching department_id.",
+    "Add a WHERE clause with e1.id < e2.id to prevent duplicate pairs and self-matches.",
+    "Select the names from both aliases along with the department_id."
+  ]
+}

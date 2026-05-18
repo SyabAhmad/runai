@@ -1,0 +1,7 @@
+{
+  "mission_03": [
+    "For the Siamese forward pass, apply the same weights to both inputs: h1 = ReLU(W2 @ ReLU(W1 @ x1 + b1) + b2), h2 = same for x2. Then compute L1 distance: d = |h1 - h2| and similarity = exp(-sum(d)).",
+    "Contrastive loss: if label==1 (similar), loss = d^2. If label==0 (dissimilar), loss = max(0, margin - d)^2. The margin controls how far apart dissimilar pairs should be.",
+    "For few-shot classification, compute similarity between query and each support example, then use weighted voting: weight each support label by its similarity to the query. For pair generation, randomly sample same-class pairs for positives and different-class pairs for negatives."
+  ]
+}

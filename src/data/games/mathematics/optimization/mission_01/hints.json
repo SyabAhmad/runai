@@ -1,0 +1,7 @@
+{
+  "mission_01": [
+    "The gradient descent update rule is: x_new = x_old - learning_rate * gradient",
+    "Convergence can be checked by comparing the norm of the gradient to a tolerance threshold",
+    "Use np.linalg.norm(grad) < tol to check if the gradient is small enough"
+  ]
+}

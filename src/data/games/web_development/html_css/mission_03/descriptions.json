@@ -1,0 +1,3 @@
+{
+  "mission_03": "HTML tables are designed for tabular data, not layout. A well-structured table uses <caption> to describe its purpose, <thead> for column headers, <tbody> for data rows, and <tfoot> for summary information. Header cells use <th> with scope attributes (scope=\"col\" or scope=\"row\") so assistive technologies can associate data cells with their headers. This structure also enables better CSS styling and makes the table meaningful to all users."
+}

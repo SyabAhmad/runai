@@ -1,0 +1,20 @@
+{
+  "title": "Vector Operations",
+  "id": "mission_01",
+  "type": "ai_code",
+  "xpReward": 60,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "import numpy as np\n\n# TODO: Create a 3D vector v = [3, 4, 5]\nv = None\n\n# TODO: Compute the magnitude (norm) of v\nmagnitude = None\n\n# TODO: Normalize v to get a unit vector\nunit_v = None\n\n# TODO: Create another vector w = [1, -2, 3]\nw = None\n\n# TODO: Compute the dot product of v and w\ndot_product = None\n\n# TODO: Compute the cross product of v and w\ncross_product = None\n\n# TODO: Compute the angle between v and w in radians\nangle = None\n\nprint(f\"Vector v: {v}\")\nprint(f\"Magnitude: {magnitude:.4f}\")\nprint(f\"Unit vector: {unit_v}\")\nprint(f\"Dot product: {dot_product}\")\nprint(f\"Cross product: {cross_product}\")\nprint(f\"Angle (radians): {angle:.4f}\")\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:numpy",
+      "must_include:np.linalg.norm",
+      "must_include:np.dot",
+      "must_include:np.cross",
+      "must_include:np.arccos"
+    ]
+  }
+}

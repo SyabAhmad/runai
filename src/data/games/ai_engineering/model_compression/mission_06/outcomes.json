@@ -1,0 +1,3 @@
+{
+  "mission_06": "You implemented KV cache quantization! This is critical for long-context LLM inference. INT8 KV cache halves memory usage, enabling 2x longer contexts or 2x larger batch sizes."
+}

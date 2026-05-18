@@ -1,0 +1,3 @@
+{
+  "mission_05": "import numpy as np\n\ndef fgsm_attack(model, x, label, epsilon=0.01):\n    grad = compute_gradient(model, x, label)\n    perturbation = epsilon * np.sign(grad)\n    x_adv = np.clip(x + perturbation, 0, 1)\n    return x_adv"
+}

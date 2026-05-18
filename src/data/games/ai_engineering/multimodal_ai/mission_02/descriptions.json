@@ -1,0 +1,3 @@
+{
+  "mission_02": "**Image captioning** bridges vision and language.\n\n**Architecture**:\n- **Encoder**: CNN (ResNet) or ViT extracts image features\n- **Decoder**: Transformer generates caption token by token\n- **Cross-attention**: Decoder attends to image features at each step\n\n**Training**: Teacher forcing — feed ground truth tokens as input, predict next token.\n\n**Inference**:\n- **Greedy**: Pick most likely token at each step\n- **Beam search**: Keep top-k candidates, expand all, pick best\n- **Nucleus sampling**: Sample from top-p probability mass\n\n**Applications**: Accessibility (describing images for visually impaired), image search, content moderation, robotics."
+}

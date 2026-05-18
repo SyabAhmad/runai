@@ -1,0 +1,3 @@
+{
+  "mission_05": "ES6+ brought transformative features to JavaScript. Destructuring extracts values from objects and arrays into named variables. The spread operator (...) copies and merges objects/arrays, while rest parameters collect remaining items. Template literals with backticks enable multi-line strings and expression interpolation. Optional chaining (?.) safely accesses nested properties without null checks, and nullish coalescing (??) provides fallback values for null/undefined. These features make code cleaner and safer."
+}

@@ -1,0 +1,3 @@
+{
+  "mission_01": "import numpy as np\nfrom scipy.misc import derivative\n\ndef f(x):\n    return x**3 - 2*x**2 + 3*x - 1\n\ndef f_prime(x):\n    return 3*x**2 - 4*x + 3\n\nx0 = 2.0\nh = 1e-7\nnumerical_deriv = (f(x0 + h) - f(x0 - h)) / (2 * h)\n\nanalytical_deriv = f_prime(x0)\n\ndef f_double_prime(x):\n    return 6*x - 4\n\nf_val = f(x0)\nf_prime_val = f_prime(x0)\nf_double_prime_val = f_double_prime(x0)\n\nerror = abs(numerical_deriv - analytical_deriv)\n\nprint(f\"f({x0}) = {f_val}\")\nprint(f\"f'({x0}) analytical = {f_prime_val}\")\nprint(f\"f'({x0}) numerical = {numerical_deriv}\")\nprint(f\"f''({x0}) = {f_double_prime_val}\")\nprint(f\"Error: {error:.2e}\")\n"
+}

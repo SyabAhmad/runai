@@ -1,0 +1,7 @@
+{
+  "mission_07": [
+    "Shannon-Fano splits symbols into two groups with approximately equal total probability",
+    "Kraft's inequality: sum(2^(-l_i)) <= 1 is necessary and sufficient for prefix-free codes",
+    "Source coding theorem: H(X) <= L < H(X) + 1 where L is average code length"
+  ]
+}

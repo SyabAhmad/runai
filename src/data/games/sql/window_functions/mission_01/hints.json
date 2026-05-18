@@ -1,0 +1,7 @@
+{
+  "mission_01": [
+    "Use ROW_NUMBER() OVER (ORDER BY salary DESC) to rank employees by salary.",
+    "Include the employee name, department, and salary in your SELECT.",
+    "The OVER clause defines the window specification for the function."
+  ]
+}

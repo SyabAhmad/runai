@@ -1,0 +1,3 @@
+{
+  "mission_10": "Gradient descent is the workhorse of machine learning optimization. Starting from random parameters, it iteratively moves in the direction opposite to the gradient: w = w - alpha * grad(L). The learning rate alpha controls step size — too large and it diverges, too small and it converges slowly. Momentum accelerates convergence by accumulating a velocity vector: v = beta * v + grad, w = w - alpha * v. The loss function for linear regression is convex, guaranteeing convergence to the global minimum. The normal equation gives the exact solution, but gradient descent scales to problems where the normal equation is computationally infeasible."
+}

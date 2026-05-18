@@ -1,0 +1,7 @@
+{
+  "mission_09": [
+    "Write EXPLAIN ANALYZE for a JOIN between orders and customers.",
+    "Look for 'Nested Loop', 'Hash Join', or 'Merge Join' in the plan output.",
+    "Nested Loop is efficient with indexes; Hash Join is better for large tables without indexes."
+  ]
+}

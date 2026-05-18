@@ -1,0 +1,21 @@
+{
+  "title": "ColumnTransformer for Heterogeneous Data",
+  "id": "mission_02",
+  "type": "ai_code",
+  "xpReward": 65,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "import pandas as pd\nimport numpy as np\nfrom sklearn.compose import ColumnTransformer\nfrom sklearn.preprocessing import StandardScaler, OneHotEncoder\nfrom sklearn.impute import SimpleImputer\nfrom sklearn.pipeline import Pipeline\n\n# TODO: Create a DataFrame with mixed column types:\n# - Numeric columns (age, income, score)\n# - Categorical columns (city, department)\n# - Include missing values in both types\n\n# TODO: Build a ColumnTransformer that:\n# 1. Applies imputation + scaling to numeric columns\n# 2. Applies imputation + one-hot encoding to categorical columns\n\n# TODO: Wrap in a full Pipeline with a classifier\n\n# TODO: Fit and evaluate the pipeline\n\ndef heterogeneous_data_pipeline():\n    # TODO: Create mixed-type DataFrame\n    # TODO: Build ColumnTransformer\n    # TODO: Build full Pipeline\n    # TODO: Train and evaluate\n    pass\n\n# TODO: Run the demonstration\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:ColumnTransformer",
+      "must_include:StandardScaler",
+      "must_include:OneHotEncoder",
+      "must_include:SimpleImputer",
+      "must_include:Pipeline",
+      "must_include:fit_transform"
+    ]
+  }
+}

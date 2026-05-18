@@ -1,0 +1,3 @@
+{
+  "mission_05": "Well done! You have explored numerical integration using multiple methods. The integral of x^2*sin(x) from 0 to pi equals pi^2 - 4 ≈ 5.8696. The trapezoidal and Simpson's rules both approximate this accurately with enough points. The Gaussian integral confirms the beautiful result that the integral of e^(-x^2) over all real numbers equals sqrt(pi). The double integral of xy over the unit square equals 0.25. Integration is essential in probability theory, physics simulations, and computing expected values in machine learning models."
+}

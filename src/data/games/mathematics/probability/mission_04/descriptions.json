@@ -1,0 +1,3 @@
+{
+  "mission_04": "Probability distributions describe how probability is distributed over possible values. The Normal (Gaussian) distribution is bell-shaped and defined by mean and standard deviation — about 68% of values fall within 1 standard deviation. The Binomial distribution counts successes in n independent trials with probability p. The Poisson distribution counts events occurring at a constant average rate. These three distributions are ubiquitous in ML: Normal for noise modeling and weight initialization, Binomial for classification accuracy, and Poisson for count data (web traffic, rare events). scipy.stats provides PDF, CDF, and inverse CDF (PPF) for all standard distributions."
+}

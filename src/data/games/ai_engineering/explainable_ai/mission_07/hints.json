@@ -1,0 +1,9 @@
+{
+  "mission_07": [
+    "Train CAV classifier: cav_classifier.fit(all_activations, labels).",
+    "Extract and normalize CAV: cav = cav_classifier.coef_.flatten(); cav /= np.linalg.norm(cav).",
+    "Compute directional derivative: directional_derivative = np.dot(gradient, cav).",
+    "TCAV score: tcav_score = np.mean([s > 0 for s in scores]).",
+    "P-value: p_value = np.mean([r >= tcav_score for r in random_scores])."
+  ]
+}

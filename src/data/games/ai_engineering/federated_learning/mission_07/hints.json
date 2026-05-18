@@ -1,0 +1,7 @@
+{
+  "mission_07": [
+    "Use np.random.dirichlet([alpha] * num_clients) to sample proportions for each class. Lower alpha (e.g., 0.1) creates more skewed distributions",
+    "Class weights: w_c = total_samples / (num_classes * count_c). Multiply the loss for each sample by the weight of its class",
+    "For shared representation: the base layers extract general features from all data, while local heads specialize for each client's distribution. Only aggregate base layer weights during FL"
+  ]
+}

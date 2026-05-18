@@ -1,0 +1,7 @@
+{
+  "mission_02": [
+    "The wav2vec 2.0 feature encoder uses 7 convolutional layers; the first has stride 320 (20ms at 16kHz) and the rest have stride 1.",
+    "The contrastive loss computes cosine similarity between masked features and codebook entries, then applies cross-entropy with the correct entry as the target.",
+    "The diversity loss measures how uniformly codebook entries are used by computing the entropy of the average assignment probability distribution."
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "mission_08": [
+    "Map: `for each data point: source = sources[data_id]`.",
+    "Check: `compatible = license in ['MIT', 'Apache', 'CC-BY', 'Public Domain']`.",
+    "Flag: `if source is None or license == 'unknown': flag`."
+  ]
+}

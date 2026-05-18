@@ -1,0 +1,21 @@
+{
+  "title": "Feature Union and Parallel Processing",
+  "id": "mission_05",
+  "type": "ai_code",
+  "xpReward": 85,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import numpy as np\nfrom sklearn.pipeline import Pipeline, FeatureUnion\nfrom sklearn.preprocessing import StandardScaler, PolynomialFeatures\nfrom sklearn.decomposition import PCA\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.datasets import make_classification\n\n# TODO: Create a classification dataset\n\n# TODO: Build a FeatureUnion that processes features in parallel:\n# 1. Original scaled features\n# 2. Polynomial features (degree 2)\n# 3. PCA-reduced features (n_components=5)\n\n# TODO: Combine FeatureUnion with a classifier in a Pipeline\n\n# TODO: Compare performance with and without FeatureUnion\n\ndef feature_union_demo():\n    # TODO: Generate data\n    # TODO: Build FeatureUnion with parallel branches\n    # TODO: Build full pipeline\n    # TODO: Compare with baseline\n    pass\n\n# TODO: Run the demonstration\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:FeatureUnion",
+      "must_include:Pipeline",
+      "must_include:StandardScaler",
+      "must_include:PolynomialFeatures",
+      "must_include:PCA",
+      "must_include:fit_transform"
+    ]
+  }
+}

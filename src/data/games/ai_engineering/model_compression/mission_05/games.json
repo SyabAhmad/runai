@@ -1,0 +1,20 @@
+{
+  "title": "LoRA (Low-Rank Adaptation)",
+  "id": "mission_05",
+  "type": "ai_code",
+  "xpReward": 90,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "# Model Compression Mission 05: LoRA\n#\n# LoRA freezes the pretrained model and trains low-rank decomposition matrices.\n# Instead of updating W (d×d), train A (d×r) and B (r×d) where r << d.\n# Forward pass: h = Wx + BAx\n#\n# This reduces trainable parameters from d² to 2dr.\n# For d=4096, r=8: 16M → 65K parameters (250x reduction).\n#\n# Your goal: implement lora_forward(x, W, A, B, alpha=16, r=8)\n#   1. Compute original output: h = Wx\n#   2. Compute LoRA update: delta = B @ (A @ x)\n#   3. Scale update: delta = (alpha/r) * delta\n#   4. Return h + delta\n\nimport numpy as np\n\ndef lora_forward(x, W, A, B, alpha=16, r=8):\n    # TODO: Original output\n    # TODO: LoRA update\n    # TODO: Scale and add\n    # TODO: Return result\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def lora_forward",
+      "must_include:alpha",
+      "must_include:rank",
+      "must_include:update",
+      "must_include:return"
+    ]
+  }
+}

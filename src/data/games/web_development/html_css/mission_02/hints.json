@@ -1,0 +1,7 @@
+{
+  "mission_02": [
+    "Each <input> needs a unique id, and each <label> needs a matching for attribute that points to that id.",
+    "Wrap the radio buttons in a <fieldset> with a <legend> that describes the group (e.g., 'Gender').",
+    "Use type=\"email\" for email, type=\"password\" for password, type=\"number\" for age, and add required where appropriate."
+  ]
+}

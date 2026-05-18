@@ -1,0 +1,22 @@
+{
+  "title": "React Components and JSX",
+  "id": "mission_01",
+  "type": "ai_code",
+  "xpReward": 60,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "// TODO: Create functional components with JSX\n// TODO: Use props to pass data between components\n// TODO: Implement conditional rendering and list rendering\n// TODO: Style components with inline styles and className\n\n// TODO: Create a UserProfile component\nfunction UserProfile(props) {\n  // TODO: Display user name, email, and avatar\n  // TODO: Use destructuring for props\n  // TODO: Return JSX with proper structure\n}\n\n// TODO: Create a BadgeList component\nfunction BadgeList({ badges }) {\n  // TODO: Render a list of badges using .map()\n  // TODO: Handle empty badges array\n  // TODO: Add key prop to list items\n}\n\n// TODO: Create a StatusIndicator component\nfunction StatusIndicator({ status }) {\n  // TODO: Render different content based on status:\n  // 'online' -> green dot + \"Online\"\n  // 'away' -> yellow dot + \"Away\"\n  // 'offline' -> gray dot + \"Offline\"\n  // TODO: Use conditional rendering\n}\n\n// TODO: Create a Card component that composes the above\nfunction UserCard({ user }) {\n  // TODO: Combine UserProfile, BadgeList, and StatusIndicator\n  // TODO: Apply className for styling\n}"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:function",
+      "must_include:return (",
+      "must_include:className",
+      "must_include:.map(",
+      "must_include:key=",
+      "must_include:props",
+      "must_include:=>"
+    ]
+  }
+}

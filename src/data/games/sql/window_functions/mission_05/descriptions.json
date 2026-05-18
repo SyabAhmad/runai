@@ -1,0 +1,3 @@
+{
+  "mission_05": "LAG() accesses data from a previous row without a self join. It takes the column to retrieve, an optional offset (default 1), and an optional default value for the first row. LAG is essential for period-over-period comparisons, trend analysis, and calculating differences between consecutive records."
+}

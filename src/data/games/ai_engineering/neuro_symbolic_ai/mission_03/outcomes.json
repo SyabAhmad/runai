@@ -1,0 +1,3 @@
+{
+  "mission_03": "Great work! You have built a Neural Theorem Prover that learns inference rules through gradient-based optimization. Your implementation performs differentiable forward chaining, propagating truth values through learned rule matrices and an inference network across multiple reasoning steps. The prover can be trained on premise-conclusion pairs, strengthening the parameters that lead to correct proofs. This approach bridges the gap between symbolic theorem proving (with its clear logical structure) and neural learning (with its ability to handle uncertainty and learn from data). The trace of intermediate fact values provides an interpretable reasoning path from premises to conclusions."
+}

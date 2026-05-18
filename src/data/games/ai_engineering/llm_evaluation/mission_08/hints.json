@@ -1,0 +1,7 @@
+{
+  "mission_08": [
+    "Prompt: f\"Score this response: {output}\\nRubric: {rubric}\".",
+    "Parse: Extract score from judge response with regex.",
+    "Position bias: Swap outputs, re-evaluate, compare scores."
+  ]
+}

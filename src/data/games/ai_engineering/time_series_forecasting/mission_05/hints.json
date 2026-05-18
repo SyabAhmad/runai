@@ -1,0 +1,7 @@
+{
+  "mission_05": [
+    "Use np.convolve with a uniform kernel (np.ones(window) / window) to compute the centered moving average for trend estimation.",
+    "For the seasonal component, average the detrended values at each position within the seasonal cycle using slicing with step equal to the period.",
+    "In multiplicative decomposition, guard against division by zero by replacing zero trend values with a small epsilon before computing ratios."
+  ]
+}

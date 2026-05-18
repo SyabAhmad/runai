@@ -1,0 +1,7 @@
+{
+  "mission_09": [
+    "Export: `torch.onnx.export(model, sample_input, path, opset_version=17)`.",
+    "Optimize: `optimized = onnxoptimizer.optimize(onnx.load(path))`.",
+    "Verify: `np.allclose(original_output, onnx_output, atol=1e-5)`."
+  ]
+}

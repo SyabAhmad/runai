@@ -1,0 +1,3 @@
+{
+  "mission_04": "**ReAct** (Reasoning + Acting) is a powerful pattern where the agent alternates between thinking and doing. Instead of blindly calling tools, the agent reasons about what to do, acts, observes the result, and reasons again.\n\nThe ReAct loop:\n```\nThought: I need to find the population of Paris\nAction: Search[\"population of Paris\"]\nObservation: Paris has 2.2 million people\nThought: That answers the question\nFinal Answer: Paris has 2.2 million people\n```\n\nThis interleaving of reasoning and action produces better results than pure chain-of-thought (no action) or pure tool-use (no reasoning). ReAct is used by LangChain agents, AutoGPT, and many production systems."
+}

@@ -1,53 +1,19 @@
-﻿{
-    "title":  "Data Preprocessing Mission 10: End-to-End Preprocess Function",
-    "initialState":  {
-                         "content":  "# TODO: End-to-end preprocessing for modeling\n\ndef preprocess_for_modeling(df, target_col):\n    # TODO: fill missing values (numeric median, categorical mode)\n\n    # TODO: one-hot encode categorical columns with drop_first=True\n\n    # TODO: split into X and y\n\n    # TODO: split into train/test with test_size=0.2 and random_state=42\n\n    # TODO: return X_train, X_test, y_train, y_test"
-                     },
-    "validation":  {
-                       "rules":  [
-                                     "must_include:def preprocess_for_modeling",
-                                     "must_include:fillna",
-                                     "must_include:get_dummies",
-                                     "must_include:train_test_split",
-                                     "must_include:return X_train, X_test, y_train, y_test"
-                                 ],
-                       "tests":  [
-                                     {
-                                         "type":  "must_match",
-                                         "name":  "function signature",
-                                         "pattern":  "def\\s+preprocess_for_modeling\\s*\\(\\s*df\\s*,\\s*target_col\\s*\\)",
-                                         "message":  "Define preprocess_for_modeling(df, target_col)."
-                                     },
-                                     {
-                                         "type":  "must_include_all",
-                                         "name":  "full pipeline",
-                                         "values":  [
-                                                        "fillna",
-                                                        "get_dummies",
-                                                        "train_test_split",
-                                                        "target_col"
-                                                    ],
-                                         "message":  "Implement missing-value handling, encoding, and splitting."
-                                     },
-                                     {
-                                         "type":  "must_include_all",
-                                         "name":  "deterministic split",
-                                         "values":  [
-                                                        "test_size=0.2",
-                                                        "random_state=42"
-                                                    ],
-                                         "message":  "Use deterministic split settings."
-                                     },
-                                     {
-                                         "type":  "min_non_empty_lines",
-                                         "name":  "sufficient depth",
-                                         "value":  14,
-                                         "message":  "Provide full end-to-end logic, not a stub."
-                                     }
-                                 ],
-                       "type":  "ai_code"
-                   },
-    "id":  "mission_10",
-    "type":  "ai_code",
-    "xpReward":  100
+{
+  "title": "Advanced Data Cleaning Pipeline",
+  "id": "mission_10",
+  "type": "ai_code",
+  "xpReward": 120,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "import pandas as pd\nimport numpy as np\n\n# TODO: Create a messy dataset with multiple issues\ndata = {\n    'id': ['1', '2', '2', '3', '4', '5', '5'],\n    'name': ['  alice ', 'BOB', 'bob', 'Charlie', 'DIANA', 'eve', 'EVE'],\n    'age': ['25', 'thirty', '30', '35', '', '28', '28'],\n    'salary': ['$50,000', '$60,000', '$60,000', '$70,000', '$80,000', '$55,000', '$55,000'],\n    'join_date': ['2020-01-15', '2019/06/20', '2019-06-20', '03-15-2021', '2022-02-28', '2021-11-10', '2021-11-10']\n}\ndf = pd.DataFrame(data)\n\n# TODO: Step 1 - Remove duplicates\ndf = ...\n\n# TODO: Step 2 - Clean text (strip, title case)\ndf['name'] = ...\n\n# TODO: Step 3 - Convert age to numeric, fill invalid with median\ndf['age'] = pd.to_numeric(df['age'], errors='coerce')\nmedian_age = ...\ndf['age'] = ...\n\n# TODO: Step 4 - Clean salary (remove $ and commas, convert to int)\ndf['salary'] = ...\n\n# TODO: Step 5 - Standardize dates to YYYY-MM-DD\ndef parse_date(d):\n    for fmt in ('%Y-%m-%d', '%Y/%m/%d', '%m-%d-%Y'):\n        try:\n            return pd.to_datetime(d, format=fmt).strftime('%Y-%m-%d')\n        except:\n            continue\n    return None\n\ndf['join_date'] = ...\n\nprint(df)\nprint(f\"\\nNull counts:\\n{df.isnull().sum()}\")\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:drop_duplicates",
+      "must_include:pd.to_numeric",
+      "must_include:pd.to_datetime",
+      "must_include:fillna"
+    ]
+  }
 }

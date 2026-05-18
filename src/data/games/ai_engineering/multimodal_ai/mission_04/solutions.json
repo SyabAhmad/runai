@@ -1,0 +1,3 @@
+{
+  "mission_04": "import numpy as np\n\ndef visual_grounding(image, text, proposals):\n    text_emb = text_encoder(text)\n    region_embs = []\n    for box in proposals:\n        region = crop(image, box)\n        region_emb = image_encoder(region)\n        region_embs.append(region_emb)\n    region_embs = np.array(region_embs)\n    # Cosine similarity\n    norms_text = np.linalg.norm(text_emb)\n    norms_regions = np.linalg.norm(region_embs, axis=1)\n    scores = (region_embs @ text_emb) / (norms_regions * norms_text + 1e-10)\n    best_idx = np.argmax(scores)\n    return proposals[best_idx]"
+}

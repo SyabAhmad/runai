@@ -1,0 +1,9 @@
+{
+  "mission_04": [
+    "Initialize MLP: MLPClassifier(hidden_layer_sizes=(hidden_dim,), max_iter=1, warm_start=True, random_state=42).",
+    "Get predictions: predictions = self.model.predict_proba(X_train).",
+    "Compute data loss: data_loss -= np.log(prob) for each sample.",
+    "Compute knowledge loss: k_loss = self.knowledge_loss(predictions).",
+    "Combined loss: total_loss = data_loss + knowledge_weight * k_loss."
+  ]
+}

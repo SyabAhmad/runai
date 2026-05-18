@@ -1,0 +1,16 @@
+{
+  "mission_04": {
+    "title": "Instrumental Variables Estimation",
+    "id": "mission_04",
+    "type": "ai_code",
+    "xpReward": 80,
+    "difficulty": "medium",
+    "initialState": {
+      "content": "import numpy as np\nfrom sklearn.linear_model import LinearRegression\n\n# TODO: Implement Two-Stage Least Squares (2SLS) estimator\ndef two_stage_least_squares(Z, X, Y):\n    \"\"\"Estimate causal effect using 2SLS with instrumental variable Z.\n    \n    Args:\n        Z: Instrument matrix (n_samples, n_instruments)\n        X: Endogenous treatment variable (n_samples,)\n        Y: Outcome variable (n_samples,)\n    \n    Returns:\n        causal_effect: Estimated causal effect of X on Y\n        standard_error: Standard error of the estimate\n    \"\"\"\n    # TODO: Stage 1: Regress X on Z to get predicted X\n    # TODO: Stage 2: Regress Y on predicted X\n    # TODO: Calculate standard errors\n    pass\n\n# TODO: Implement the Wald estimator for binary instrument\ndef wald_estimator(Z, X, Y):\n    \"\"\"Wald estimator for binary instrument Z.\n    \n    Effect = E[Y|Z=1] - E[Y|Z=0] / E[X|Z=1] - E[X|Z=0]\n    \"\"\"\n    # TODO: Compute means for Z=1 and Z=0 groups\n    # TODO: Calculate Wald estimator\n    pass\n\n# TODO: Implement first-stage F-statistic for instrument strength\ndef first_stage_f_statistic(Z, X):\n    \"\"\"Compute F-statistic for first stage regression.\n    \n    F > 10 indicates strong instruments (Staiger-Stock rule of thumb)\n    \"\"\"\n    # TODO: Fit first stage regression\n    # TODO: Compute F-statistic from R-squared\n    pass\n\n# TODO: Implement weak instrument diagnostics\ndef instrument_diagnostics(Z, X, Y):\n    \"\"\"Run full instrument diagnostics.\"\"\"\n    # TODO: Check relevance (F-statistic)\n    # TODO: Return diagnostics dict\n    pass\n"
+    },
+    "validation": {
+      "type": "ai_code",
+      "rules": ["must_include:LinearRegression", "must_include:two_stage", "must_include:wald", "must_include:F-statistic", "must_include:predict"]
+    }
+  }
+}

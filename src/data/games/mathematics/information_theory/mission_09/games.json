@@ -1,0 +1,18 @@
+{
+  "title": "Fisher Information",
+  "id": "mission_09",
+  "type": "ai_code",
+  "xpReward": 110,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "import numpy as np\n\ndef fisher_information_scalar(log_likelihood_grad, samples, theta):\n    \"\"\"\n    Compute Fisher information I(theta) = E[(d/d_theta log p(X;theta))^2]\n    log_likelihood_grad: function returning gradient of log-likelihood\n    samples: data samples\n    theta: parameter value\n    \"\"\"\n    # TODO: Compute score function for each sample\n    scores = np.array([log_likelihood_grad(x, theta) for x in samples])\n    \n    # TODO: Fisher information = E[score^2]\n    fisher_info = ...\n    \n    return fisher_info\n\ndef fisher_information_matrix(log_likelihood_hessian, samples, theta):\n    \"\"\"\n    Compute Fisher information matrix I(theta) = -E[Hessian of log-likelihood]\n    log_likelihood_hessian: function returning Hessian of log-likelihood\n    \"\"\"\n    n = len(samples)\n    d = len(theta)\n    \n    # TODO: Compute expected Hessian\n    fisher_matrix = np.zeros((d, d))\n    for x in samples:\n        hess = log_likelihood_hessian(x, theta)\n        fisher_matrix += ...\n    \n    fisher_matrix = -fisher_matrix / n\n    \n    return fisher_matrix\n\ndef cramer_rao_bound(fisher_info, n_samples):\n    \"\"\"\n    Compute Cramer-Rao lower bound: Var(theta_hat) >= 1 / (n * I(theta))\n    \"\"\"\n    # TODO: Compute CRLB\n    crlb = ...\n    return crlb\n\ndef jeffreys_prior(fisher_info_func, theta_range, n_points=100):\n    \"\"\"\n    Compute Jeffreys prior: p(theta) proportional to sqrt(det(I(theta)))\n    \"\"\"\n    thetas = np.linspace(theta_range[0], theta_range[1], n_points)\n    # TODO: Compute Jeffreys prior at each theta\n    prior = np.array([np.sqrt(fisher_info_func(t)) for t in thetas])\n    prior = prior / np.sum(prior)  # Normalize\n    return thetas, prior\n\n# Example: Fisher information for Bernoulli(p)\ndef bernoulli_score(x, p):\n    return (x - p) / (p * (1 - p))\n\ndef bernoulli_hessian(x, p):\n    return -x / (p**2) - (1-x) / ((1-p)**2)\n\nsamples = np.array([1, 0, 1, 1, 0, 1, 0, 1])\nfi = fisher_information_scalar(bernoulli_score, samples, 0.6)\nprint(f\"Fisher information: {fi:.4f}\")\nprint(f\"Cramer-Rao bound: {cramer_rao_bound(fi, len(samples)):.4f}\")"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:fisher",
+      "must_include:cramer_rao",
+      "must_include:numpy"
+    ]
+  }
+}

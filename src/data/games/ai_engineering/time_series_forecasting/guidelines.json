@@ -1,0 +1,6 @@
+{
+  "title": "Time Series Forecasting",
+  "description": "Master the art and science of predicting future values from historical time-ordered data. This chapter covers classical statistical methods like ARIMA and seasonal decomposition, modern machine learning approaches with Prophet, deep learning techniques using LSTM and Transformer architectures, and advanced topics including multivariate forecasting, anomaly detection, and ensemble methods. You will learn to test for stationarity, decompose signals into trend and seasonal components, and combine multiple models for robust predictions.",
+  "difficulty": "intermediate",
+  "order": 1
+}

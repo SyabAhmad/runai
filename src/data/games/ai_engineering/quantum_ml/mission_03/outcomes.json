@@ -1,0 +1,3 @@
+{
+  "mission_03": "Great work! You have implemented quantum kernel methods that leverage quantum feature maps for classical machine learning. Your quantum kernel encodes data into quantum states using parameterized rotations and entanglement, then computes the kernel as the squared overlap between states. This implicitly maps data into a 2^n-dimensional feature space, where n is the number of qubits. The SVM trained with this quantum kernel can potentially find decision boundaries that are intractable for classical kernels. Quantum kernel methods are one of the most promising near-term quantum ML approaches because they combine the power of quantum feature spaces with the robustness of classical optimization (the SVM training is entirely classical)."
+}

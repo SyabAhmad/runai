@@ -1,0 +1,3 @@
+{
+  "mission_01": "JavaScript variables are declared with let (reassignable) and const (constant). Avoid var because it has function scope instead of block scope, which leads to bugs. JavaScript is dynamically typed, meaning variables can hold any type, but you should use typeof to check types at runtime when needed. In this mission, you will create a user profile function that uses const and const appropriately, and a type-reporting function that uses typeof to identify strings, numbers, booleans, and objects."
+}

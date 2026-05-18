@@ -1,0 +1,7 @@
+{
+  "mission_03": [
+    "KL divergence: D_KL(P||Q) = sum(p * log(p/q)) = sum(p * log(p)) - sum(p * log(q))",
+    "KL divergence is asymmetric: D_KL(P||Q) != D_KL(Q||P)",
+    "JS divergence uses M = 0.5*(P+Q) as midpoint: JS = 0.5*KL(P||M) + 0.5*KL(Q||M)"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "mission_03": [
+    "Filter on a column that likely has no index, such as a text column.",
+    "Use EXPLAIN to check if the plan shows 'Seq Scan'.",
+    "Sequential scans on large tables indicate a need for indexing."
+  ]
+}

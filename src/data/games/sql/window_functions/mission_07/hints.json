@@ -1,0 +1,7 @@
+{
+  "mission_07": [
+    "Use SUM(amount) OVER (ORDER BY sale_date ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) for running total.",
+    "Include the daily amount alongside the cumulative total.",
+    "You can omit the frame clause as ORDER BY implies the default cumulative frame."
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "JavaScript Modules and Architecture",
+  "id": "mission_10",
+  "type": "ai_code",
+  "xpReward": 120,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "// TODO: Implement ES module patterns (export/import)\n// TODO: Create a module-based application architecture\n// TODO: Implement the Module pattern with private state\n// TODO: Build a plugin system using modules\n\n// TODO: Storage module (simulated ES module)\nconst StorageModule = (() => {\n  // TODO: Private state\n  let data = {};\n\n  return {\n    // TODO: set(key, value) - store data\n    // TODO: get(key) - retrieve data\n    // TODO: remove(key) - delete data\n    // TODO: clear() - reset all data\n    // TODO: getAll() - return copy of all data\n  };\n})();\n\n// TODO: Validator module\nconst ValidatorModule = (() => {\n  // TODO: Private validation rules\n  const rules = {\n    email: (v) => /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(v),\n    required: (v) => v !== undefined && v !== null && v !== \"\",\n    minLength: (min) => (v) => v.length >= min,\n    maxNumber: (max) => (v) => typeof v === \"number\" && v <= max\n  };\n\n  return {\n    // TODO: validate(data, schema) - validate object against schema\n    // TODO: addRule(name, fn) - add custom validation rule\n  };\n})();\n\n// TODO: Plugin system\nconst PluginSystem = (() => {\n  const plugins = new Map();\n\n  return {\n    // TODO: register(name, plugin) - add a plugin\n    // TODO: execute(hook, data) - run all plugins for a hook\n    // TODO: unregister(name) - remove a plugin\n  };\n})();\n\n// TODO: App that composes all modules\nconst App = (() => {\n  // TODO: Initialize with Storage, Validator, PluginSystem\n  // TODO: Provide public API: init, run, shutdown\n})();\n\nexport { StorageModule, ValidatorModule, PluginSystem, App };"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:export",
+      "must_include:import",
+      "must_include:IIFE",
+      "must_include:return",
+      "must_include:Map",
+      "must_include:const",
+      "must_include:=>"
+    ]
+  }
+}

@@ -1,0 +1,3 @@
+{
+  "mission_07": "SELECT d.day_name, r.room_name, t.start_time, t.end_time, CONCAT(t.start_time, ' - ', t.end_time) AS time_range\nFROM days d\nCROSS JOIN time_slots t\nCROSS JOIN rooms r\nORDER BY d.id, t.start_time, r.room_name;"
+}

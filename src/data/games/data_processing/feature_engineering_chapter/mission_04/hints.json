@@ -1,4 +1,4 @@
-﻿{
+{
     "mission_04":  [
                        "Use pd.to_datetime with errors=\"coerce\".",
                        "Subtract datetime columns and use .dt.days.",

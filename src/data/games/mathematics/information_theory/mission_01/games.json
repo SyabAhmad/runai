@@ -1,0 +1,18 @@
+{
+  "title": "Shannon Entropy",
+  "id": "mission_01",
+  "type": "ai_code",
+  "xpReward": 60,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "import numpy as np\n\ndef shannon_entropy(probabilities):\n    \"\"\"\n    Calculate Shannon entropy H(X) = -sum(p(x) * log2(p(x)))\n    probabilities: array of probability values (must sum to 1)\n    \"\"\"\n    # TODO: Filter out zero probabilities to avoid log(0)\n    p = probabilities[probabilities > 0]\n    \n    # TODO: Compute Shannon entropy\n    entropy = ...\n    \n    return entropy\n\ndef joint_entropy(joint_probs):\n    \"\"\"\n    Calculate joint entropy H(X,Y) from joint probability distribution\n    joint_probs: 2D array of joint probabilities\n    \"\"\"\n    # TODO: Flatten and compute entropy\n    p = joint_probs.flatten()\n    p = p[p > 0]\n    return ...\n\ndef conditional_entropy(joint_probs):\n    \"\"\"\n    Calculate conditional entropy H(Y|X) = H(X,Y) - H(X)\n    \"\"\"\n    # TODO: Compute marginal P(X)\n    p_x = ...\n    \n    # TODO: Compute H(X) and H(X,Y)\n    h_x = ...\n    h_xy = ...\n    \n    return h_xy - h_x\n\n# Test with fair coin\nfair_coin = np.array([0.5, 0.5])\nprint(f\"Fair coin entropy: {shannon_entropy(fair_coin)} bits\")\n\n# Test with biased coin\nbiased_coin = np.array([0.9, 0.1])\nprint(f\"Biased coin entropy: {shannon_entropy(biased_coin):.4f} bits\")"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:entropy",
+      "must_include:log2",
+      "must_include:numpy"
+    ]
+  }
+}

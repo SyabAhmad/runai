@@ -1,0 +1,1 @@
+{"mission_03": ["Use df.median() for the median and df.quantile([0.25, 0.75]) for Q1 and Q3.", "IQR = Q3 - Q1. The robust scaling formula is: (x - median) / IQR.", "Compare results: the outlier value (500000) will have an extreme min-max score but a moderate robust score."]}

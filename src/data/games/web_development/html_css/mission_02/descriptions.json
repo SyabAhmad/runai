@@ -1,0 +1,3 @@
+{
+  "mission_02": "Forms are how users interact with web applications, and making them accessible is essential. Every input needs a <label> linked via the for/id attributes so screen readers can announce what each field expects. Use <fieldset> and <legend> to group related controls like radio buttons. Add proper input types (email, password, number) for built-in validation and mobile keyboard optimization. Mark required fields and provide helpful placeholder text to guide users through the form."
+}

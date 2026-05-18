@@ -1,0 +1,22 @@
+{
+  "mission_05": {
+    "title": "Seasonal Decomposition",
+    "id": "mission_05",
+    "type": "ai_code",
+    "xpReward": 85,
+    "difficulty": "medium",
+    "initialState": {
+      "content": "import numpy as np\nfrom scipy import signal\n\n\ndef moving_average(series, window):\n    \"\"\"Compute centered moving average.\"\"\"\n    # TODO: Create uniform kernel for convolution\n    kernel = np.ones(window) / window\n    \n    # TODO: Apply convolution with 'same' mode\n    ma = np.convolve(series, kernel, mode='same')\n    \n    return ma\n\n\ndef decompose_additive(series, period):\n    \"\"\"Additive seasonal decomposition: Y = Trend + Seasonal + Residual.\"\"\"\n    # TODO: Estimate trend using moving average\n    trend = moving_average(series, period)\n    \n    # TODO: Detrend the series\n    detrended = series - trend\n    \n    # TODO: Compute seasonal component by averaging detrended values for each season\n    n_seasons = len(detrended) // period\n    seasonal = np.zeros(len(series))\n    for i in range(period):\n        indices = list(range(i, len(detrended), period))\n        seasonal_val = np.mean([detrended[j] for j in indices if j < len(detrended)])\n        seasonal[i::period] = seasonal_val\n    \n    # TODO: Normalize seasonal to sum to zero\n    seasonal = seasonal - np.mean(seasonal)\n    \n    # TODO: Compute residual\n    residual = series - trend - seasonal\n    \n    return trend, seasonal, residual\n\n\ndef decompose_multiplicative(series, period):\n    \"\"\"Multiplicative seasonal decomposition: Y = Trend * Seasonal * Residual.\"\"\"\n    # TODO: Estimate trend using moving average\n    trend = moving_average(series, period)\n    \n    # TODO: Avoid division by zero\n    trend = np.where(trend == 0, 1e-10, trend)\n    \n    # TODO: Compute detrended ratio\n    detrended = series / trend\n    \n    # TODO: Compute seasonal indices\n    n_seasons = len(detrended) // period\n    seasonal = np.ones(len(series))\n    for i in range(period):\n        indices = list(range(i, len(detrended), period))\n        seasonal_val = np.mean([detrended[j] for j in indices if j < len(detrended)])\n        seasonal[i::period] = seasonal_val\n    \n    # TODO: Normalize seasonal to average to one\n    seasonal = seasonal / np.mean(seasonal)\n    \n    # TODO: Compute residual\n    residual = series / (trend * seasonal)\n    \n    return trend, seasonal, residual\n\n\ndef reconstruct_series(trend, seasonal, residual, mode='additive'):\n    \"\"\"Reconstruct original series from components.\"\"\"\n    if mode == 'additive':\n        return trend + seasonal + residual\n    else:\n        return trend * seasonal * residual\n"
+    },
+    "validation": {
+      "type": "ai_code",
+      "rules": [
+        "must_include:np.convolve",
+        "must_include:np.ones",
+        "must_include:np.mean",
+        "must_include:np.where",
+        "must_include:np.zeros"
+      ]
+    }
+  }
+}

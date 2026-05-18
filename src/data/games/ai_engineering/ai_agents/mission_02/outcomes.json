@@ -1,3 +1,3 @@
 {
-  "mission_02": "Mission 2 in ai agents completed successfully!"
+  "mission_02": "Great work! You've given your agent a tool. The key pattern: the agent detects intent, routes to the right tool, and returns a structured response. This is exactly how real agents decide which function to call based on user input."
 }

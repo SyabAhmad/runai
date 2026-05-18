@@ -1,0 +1,3 @@
+{
+  "mission_01": "Congratulations! You have successfully built your first causal DAG and learned to programmatically verify its acyclic structure. You now understand how to represent causal assumptions as graph structures, identify parent and child relationships, and validate that no feedback loops exist. This foundational skill is critical — every causal inference method you will learn builds on the DAG framework. In the next missions, you will use these graphs to reason about confounding, identify causal effects, and apply do-calculus."
+}

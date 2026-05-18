@@ -1,0 +1,7 @@
+{
+  "mission_08": [
+    "Call `phi_current = potential_fn(state)` and `phi_next = potential_fn(next_state)`.",
+    "Shaping bonus: `F = gamma * phi_next - phi_current`.",
+    "Return `base_reward + F`."
+  ]
+}

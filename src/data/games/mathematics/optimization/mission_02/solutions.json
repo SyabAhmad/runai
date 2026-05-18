@@ -1,0 +1,3 @@
+{
+  "mission_02": "import numpy as np\n\ndef momentum_gradient_descent(f, grad_f, x0, learning_rate=0.01, momentum=0.9, max_iter=1000, tol=1e-6):\n    x = x0.copy()\n    velocity = np.zeros_like(x)\n    history = [x.copy()]\n    \n    for i in range(max_iter):\n        grad = grad_f(x)\n        velocity = momentum * velocity + learning_rate * grad\n        x = x - velocity\n        history.append(x.copy())\n        \n        if np.linalg.norm(grad) < tol:\n            break\n    \n    return x, history\n\ndef f(x):\n    return x[0]**2 + 2*x[1]**2\n\ndef grad_f(x):\n    return np.array([2*x[0], 4*x[1]])\n\nx0 = np.array([3.0, 3.0])\nx_opt, history = momentum_gradient_descent(f, grad_f, x0, learning_rate=0.1, momentum=0.9)\nprint(f\"Optimal x: {x_opt}\")"
+}

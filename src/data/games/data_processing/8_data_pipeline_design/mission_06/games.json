@@ -1,0 +1,21 @@
+{
+  "title": "Pipeline Serialization and Deployment",
+  "id": "mission_06",
+  "type": "ai_code",
+  "xpReward": 85,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import numpy as np\nimport pickle\nimport joblib\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.ensemble import GradientBoostingClassifier\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split\n\n# TODO: Train a complete pipeline on classification data\n\n# TODO: Serialize the pipeline using two methods:\n# 1. pickle (Python standard library)\n# 2. joblib (optimized for numpy/scipy objects)\n\n# TODO: Load the serialized pipelines and verify they produce\n# identical predictions to the original\n\n# TODO: Compare file sizes between pickle and joblib\n\n# TODO: Demonstrate loading and making predictions with the\n# deserialized pipeline\n\ndef pipeline_serialization():\n    # TODO: Train pipeline\n    # TODO: Save with pickle and joblib\n    # TODO: Load and verify predictions\n    # TODO: Compare file sizes\n    pass\n\n# TODO: Run the demonstration\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:pickle",
+      "must_include:joblib",
+      "must_include:dumps",
+      "must_include:loads",
+      "must_include:dump",
+      "must_include:load"
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "mission_01": [
+    "Use np.nan to represent missing values in pandas DataFrames.",
+    "SimpleImputer(strategy='mean') replaces NaN with column means.",
+    "SimpleImputer(strategy='median') is more robust to outliers than mean imputation."
+  ]
+}

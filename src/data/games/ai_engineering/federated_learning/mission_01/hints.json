@@ -1,0 +1,7 @@
+{
+  "mission_01": [
+    "For local training, copy the global weights and run standard SGD: w = w - lr * gradient for each epoch",
+    "The FedAvg weighted average is: global_w[key] = sum(n_k * client_w[k][key]) / sum(n_k) where n_k is the number of samples on client k",
+    "Make sure to aggregate each weight matrix separately: the keys of the weight dictionary should match across all clients"
+  ]
+}

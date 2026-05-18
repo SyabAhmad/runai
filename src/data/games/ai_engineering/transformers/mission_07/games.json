@@ -1,0 +1,20 @@
+{
+  "title": "Byte-Pair Encoding (BPE) Tokenizer",
+  "id": "mission_07",
+  "type": "ai_code",
+  "xpReward": 120,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "# Transformers Mission 07: Byte-Pair Encoding (BPE) Tokenizer\n#\n# Before text enters a transformer, it must be tokenized.\n# BPE starts with characters and iteratively merges the\n# most frequent adjacent pairs.\n#\n# Your goal: Implement bpe_tokenize(text, merges, vocab)\n#   1. Split text into character lists with </w> marker\n#   2. For each merge pair (a, b) in merges list:\n#      - Find all occurrences of a followed by b\n#      - Merge them into a+b\n#   3. Return the tokenized result as strings\n#\n# Example:\n#   text = \"low lowest\"\n#   merges = [(\"l\", \"o\"), (\"lo\", \"w\")]\n#   Result: [\"lo w </w>\", \"lo w e s t </w>\"]\n\ndef bpe_tokenize(text, merges, vocab):\n    # TODO: Split text into words, add </w> to each\n    # TODO: Convert each word to a list of characters\n    # TODO: Apply each merge in order\n    # TODO: Return list of tokenized word strings\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def bpe_tokenize",
+      "must_include:merge",
+      "must_include:vocab",
+      "must_include:join",
+      "must_include:return"
+    ]
+  }
+}

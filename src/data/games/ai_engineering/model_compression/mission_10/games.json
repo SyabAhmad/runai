@@ -1,0 +1,21 @@
+{
+  "title": "Edge Deployment Pipeline",
+  "id": "mission_10",
+  "type": "ai_code",
+  "xpReward": 120,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "# Model Compression Mission 10: Edge Deployment Pipeline\n#\n# Deploying models on edge devices requires a full compression pipeline:\n# 1. Prune unimportant weights\n# 2. Quantize to INT8\n# 3. Export to optimized format (TFLite/ONNX)\n# 4. Benchmark on target hardware\n#\n# Target: Mobile CPU with <50MB model size and <100ms latency.\n#\n# Your goal: implement edge_deployment_pipeline(model, calibration_data, target='mobile')\n#   1. Apply pruning\n#   2. Fine-tune pruned model\n#   3. Quantize with calibration\n#   4. Export and benchmark\n#   5. Return compressed model and metrics\n\nimport numpy as np\n\ndef edge_deployment_pipeline(model, calibration_data, target='mobile'):\n    # TODO: Prune\n    # TODO: Fine-tune\n    # TODO: Quantize\n    # TODO: Export and benchmark\n    # TODO: Return results\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def edge_deployment_pipeline",
+      "must_include:prune",
+      "must_include:quantize",
+      "must_include:export",
+      "must_include:benchmark",
+      "must_include:return"
+    ]
+  }
+}

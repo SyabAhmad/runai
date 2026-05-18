@@ -1,0 +1,3 @@
+{
+  "mission_06": "import numpy as np\n\ndef compute_kappa(annotations, num_categories=5):\n    n = len(annotations)\n    agreements = sum(1 for a, b in annotations if a == b)\n    p_o = agreements / n\n    counts = np.bincount([a for a, b in annotations] + [b for a, b in annotations], minlength=num_categories)\n    probs = counts / (2 * n)\n    p_e = np.sum(probs ** 2)\n    kappa = (p_o - p_e) / (1 - p_e + 1e-10)\n    return kappa"
+}

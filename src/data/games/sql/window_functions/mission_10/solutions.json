@@ -1,0 +1,3 @@
+{
+  "mission_10": "WITH quartiles AS (\n  SELECT name, department, salary, NTILE(4) OVER (ORDER BY salary DESC) AS quartile\n  FROM employees\n)\nSELECT quartile, COUNT(*) AS employee_count, AVG(salary) AS avg_salary, MIN(salary) AS min_salary, MAX(salary) AS max_salary\nFROM quartiles\nGROUP BY quartile\nORDER BY quartile;"
+}

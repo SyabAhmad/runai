@@ -1,0 +1,7 @@
+{
+  "mission_01": [
+    "Use np.percentile(data, 25) and np.percentile(data, 75) to find Q1 and Q3.",
+    "IQR = Q3 - Q1 gives the spread of the middle 50% of data.",
+    "Points below Q1 - 1.5*IQR or above Q3 + 1.5*IQR are flagged as outliers."
+  ]
+}

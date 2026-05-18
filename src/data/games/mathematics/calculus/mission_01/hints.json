@@ -1,0 +1,10 @@
+{
+  "mission_01": [
+    "Apply the power rule: d/dx[x^n] = n * x^(n-1) term by term.",
+    "The numerical derivative uses (f(x+h) - f(x-h)) / (2h) for better accuracy.",
+    "The second derivative is the derivative of the first derivative.",
+    "Use a small h (like 1e-7) for numerical differentiation.",
+    "The error between numerical and analytical should be very small.",
+    "f(x) = x^3 - 2x^2 + 3x - 1, so f'(x) = 3x^2 - 4x + 3."
+  ]
+}

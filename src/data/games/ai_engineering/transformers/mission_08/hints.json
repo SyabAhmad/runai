@@ -1,0 +1,7 @@
+{
+  "mission_08": [
+    "Use `np.random.random(len(token_ids)) < mask_prob` to select mask positions.",
+    "For the 80-10-10 rule: split masked positions into 3 groups using `np.random.choice`.",
+    "Cross-entropy: `-np.log(softmax(logits[mask_positions])[range(len), original_tokens])`."
+  ]
+}

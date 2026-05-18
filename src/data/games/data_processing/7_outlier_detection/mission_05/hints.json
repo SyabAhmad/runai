@@ -1,0 +1,7 @@
+{
+  "mission_05": [
+    "DBSCAN labels points as -1 for noise (outliers) and 0, 1, 2... for clusters.",
+    "eps controls the neighborhood size; too small creates many clusters, too large merges them.",
+    "min_samples determines the minimum density; higher values make the algorithm more selective."
+  ]
+}

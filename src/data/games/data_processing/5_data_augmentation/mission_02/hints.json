@@ -1,0 +1,7 @@
+{
+  "mission_02": [
+    "ShiftScaleRotate combines three geometric operations in one transform for efficiency.",
+    "ElasticTransform uses alpha for displacement magnitude and sigma for smoothness.",
+    "GridDistortion's num_steps controls the grid granularity and distort_limit controls intensity."
+  ]
+}

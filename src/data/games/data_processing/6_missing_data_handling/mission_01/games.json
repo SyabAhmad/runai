@@ -1,0 +1,21 @@
+{
+  "title": "Mean and Median Imputation",
+  "id": "mission_01",
+  "type": "ai_code",
+  "xpReward": 60,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "import pandas as pd\nimport numpy as np\nfrom sklearn.impute import SimpleImputer\n\n# TODO: Create a DataFrame with missing values (use np.nan)\n# Include both numeric columns with different distributions\n\n# TODO: Implement mean imputation using SimpleImputer\n# Set strategy='mean'\n\n# TODO: Implement median imputation using SimpleImputer\n# Set strategy='median'\n\n# TODO: Compare the results\n# Print the original DataFrame with missing values\n# Print the mean-imputed and median-imputed versions\n\ndef demonstrate_imputation():\n    # TODO: Create sample data with NaN values\n    # TODO: Apply mean imputation\n    # TODO: Apply median imputation\n    # TODO: Display comparison\n    pass\n\n# TODO: Run the demonstration\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:SimpleImputer",
+      "must_include:strategy",
+      "must_include:mean",
+      "must_include:median",
+      "must_include:np.nan",
+      "must_include:fit_transform"
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "mission_05": [
+    "Embeddings: `gen_emb = bert.encode(gen_tokens)`, `ref_emb = bert.encode(ref_tokens)`.",
+    "Similarity: `sim = gen_emb @ ref_emb.T / (norms_gen * norms_ref)`.",
+    "P = mean(max(sim, axis=1)), R = mean(max(sim, axis=0)), F1 = 2*P*R/(P+R)."
+  ]
+}

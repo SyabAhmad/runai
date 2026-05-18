@@ -1,0 +1,9 @@
+{
+  "mission_10": [
+    "Shuffle: indices = np.random.permutation(n_samples).",
+    "Compute batch loss: batch_loss -= np.log(probs[batch_y[i]] + 1e-10).",
+    "Numerical gradient: grad[pi] = (loss_plus - loss_minus) / (2 * shift).",
+    "Update: all_params -= lr * grad; self._extract_all_params(all_params).",
+    "Accuracy: accuracy = np.mean(np.argmax(self.predict(X), axis=1) == y)."
+  ]
+}

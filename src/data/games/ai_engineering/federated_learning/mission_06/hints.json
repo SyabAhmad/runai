@@ -1,0 +1,7 @@
+{
+  "mission_06": [
+    "Use np.argpartition to find top-k indices efficiently: top_k_idx = np.argpartition(np.abs(flat), -k)[-k:]",
+    "For quantization: levels = 2^num_bits - 1. Quantized = round((update - min) / (max - min) * levels). Dequantize by reversing the mapping",
+    "Combine sparsification and quantization: first keep only top-k values, then quantize those values. This gives multiplicative compression: ratio * (num_bits/32)"
+  ]
+}

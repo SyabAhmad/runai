@@ -1,0 +1,3 @@
+{
+  "mission_02": "import numpy as np\n\ndef quantize_dequantize(weights, bits=8):\n    q_min, q_max = 0, 2**bits - 1\n    w_min, w_max = weights.min(), weights.max()\n    scale = (w_max - w_min) / (q_max - q_min)\n    zero_point = round(-w_min / scale)\n    quantized = np.clip(np.round(weights / scale) + zero_point, q_min, q_max)\n    dequantized = (quantized - zero_point) * scale\n    error = np.mean((weights - dequantized) ** 2)\n    return quantized.astype(np.int8), dequantized, error"
+}

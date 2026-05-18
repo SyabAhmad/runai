@@ -1,0 +1,18 @@
+{
+  "title": "Compare PCA vs t-SNE vs UMAP",
+  "id": "mission_08",
+  "type": "ai_code",
+  "xpReward": 100,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "import pandas as pd\nimport numpy as np\nfrom sklearn.decomposition import PCA\nfrom sklearn.manifold import TSNE\ntry:\n    import umap\n    HAS_UMAP = True\nexcept ImportError:\n    HAS_UMAP = False\nfrom sklearn.datasets import load_digits\nfrom sklearn.preprocessing import StandardScaler\n\n# TODO: Load digits dataset\ndigits = load_digits()\nX = digits.data\ny = digits.target\n\n# TODO: Standardize\nscaler = StandardScaler()\nX_scaled = scaler.fit_transform(X)\n\n# TODO: Apply PCA\npca = PCA(n_components=2)\nX_pca = ...\n\n# TODO: Apply t-SNE\ntsne = TSNE(n_components=2, random_state=42)\nX_tsne = ...\n\nprint(f\"PCA shape: {X_pca.shape}\")\nprint(f\"t-SNE shape: {X_tsne.shape}\")\nif HAS_UMAP:\n    reducer = umap.UMAP(n_components=2, random_state=42)\n    X_umap = reducer.fit_transform(X_scaled)\n    print(f\"UMAP shape: {X_umap.shape}\")\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:PCA",
+      "must_include:TSNE",
+      "must_include:StandardScaler"
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "title": "Visual Question Answering (VQA)",
+  "id": "mission_03",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "# Multimodal AI Mission 03: Visual Question Answering\n#\n# VQA answers natural language questions about images.\n# Requires understanding both visual content and question semantics.\n#\n# Architecture:\n# 1. Encode image: V = VisionEncoder(image)\n# 2. Encode question: Q = TextEncoder(question)\n# 3. Multimodal fusion: F = Fuse(V, Q)\n# 4. Classify answer: P = Classifier(F)\n#\n# Your goal: Implement vqa(image_features, question_embed, answer_vocab)\n#   1. Encode both modalities\n#   2. Apply multimodal attention/fusion\n#   3. Classify answer\n#   4. Return predicted answer\n\nimport numpy as np\n\ndef vqa(image_features, question_embed, answer_vocab):\n    # TODO: Encode image and question\n    # TODO: Multimodal fusion\n    # TODO: Classify answer\n    # TODO: Return answer\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def vqa",
+      "must_include:fusion",
+      "must_include:image",
+      "must_include:question",
+      "must_include:return"
+    ]
+  }
+}

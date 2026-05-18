@@ -1,0 +1,3 @@
+{
+  "mission_04": "You have mastered instrumental variables estimation, a critical tool for causal inference when randomized experiments are impossible and unmeasured confounding exists. You implemented 2SLS, the Wald estimator, and instrument strength diagnostics. The key insight is that instruments provide a source of exogenous variation in treatment — like a natural experiment. Always check the F-statistic; weak instruments (F < 10) produce biased estimates that can be worse than OLS. Remember that IV estimates the Local Average Treatment Effect (LATE) for compliers, not the average treatment effect for the entire population."
+}

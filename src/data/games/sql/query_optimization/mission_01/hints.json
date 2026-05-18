@@ -1,0 +1,7 @@
+{
+  "mission_01": [
+    "Use EXPLAIN before your SELECT statement: EXPLAIN SELECT * FROM users WHERE email = 'test@example.com'.",
+    "Look for 'Seq Scan' (sequential) vs 'Index Scan' in the output.",
+    "The cost estimates show the planner's expected resource usage."
+  ]
+}

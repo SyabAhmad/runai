@@ -1,0 +1,20 @@
+{
+  "title": "Activation Quantization (KV Cache)",
+  "id": "mission_06",
+  "type": "ai_code",
+  "xpReward": 90,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "# Model Compression Mission 06: KV Cache Quantization\n#\n# During LLM inference, the KV cache stores attention key/value vectors\n# for all previous tokens. For long contexts, this dominates memory.\n#\n# Quantizing KV cache from FP16 to INT8 cuts memory in half.\n# Per-token quantization: each token's KV is quantized independently.\n#\n# Your goal: implement quantize_kv_cache(kv_cache, bits=8)\n#   1. For each token, compute per-token scale\n#   2. Quantize KV values\n#   3. Store scales for dequantization\n#   4. Return quantized cache and scales\n\nimport numpy as np\n\ndef quantize_kv_cache(kv_cache, bits=8):\n    # TODO: Compute per-token scales\n    # TODO: Quantize each token's KV\n    # TODO: Store scales\n    # TODO: Return quantized cache\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def quantize_kv_cache",
+      "must_include:scale",
+      "must_include:per_token",
+      "must_include:quantize",
+      "must_include:return"
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "title": "Mode and Constant Value Imputation",
+  "id": "mission_02",
+  "type": "ai_code",
+  "xpReward": 65,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "import pandas as pd\nimport numpy as np\nfrom sklearn.impute import SimpleImputer\n\n# TODO: Create a DataFrame with both numeric and categorical columns\n# Include missing values in both types of columns\n\n# TODO: Implement mode (most_frequent) imputation\n# Use strategy='most_frequent'\n\n# TODO: Implement constant value imputation\n# Use strategy='constant' with fill_value for numeric and categorical\n\n# TODO: Compare results for different column types\n\ndef categorical_imputation():\n    # TODO: Create mixed-type DataFrame with NaN\n    # TODO: Apply most_frequent imputation\n    # TODO: Apply constant value imputation\n    # TODO: Display and compare results\n    pass\n\n# TODO: Run the demonstration\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:SimpleImputer",
+      "must_include:most_frequent",
+      "must_include:constant",
+      "must_include:fill_value",
+      "must_include:fit_transform"
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Covering Indexes: Index-Only Scans",
+  "id": "mission_06",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "-- Covering Indexes: Include all needed columns in the index\n-- The users table has columns: id, name, email, department, created_at\n-- TODO: Create a covering index that includes all columns needed by a common query\n-- Use INCLUDE to add non-key columns that are only needed in the SELECT\n\n-- Write your CREATE INDEX with INCLUDE:\n\n-- Verify with EXPLAIN ANALYZE:\n\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:CREATE INDEX",
+      "must_include:INCLUDE",
+      "must_include:users",
+      "must_include:EXPLAIN"
+    ]
+  }
+}

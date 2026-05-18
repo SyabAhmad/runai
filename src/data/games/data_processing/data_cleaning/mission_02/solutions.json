@@ -1,3 +1,3 @@
-﻿{
-    "mission_02":  "def dedupe_and_normalize(df):\\n    df = df.drop_duplicates()\\n\\n    if \"name\" in df.columns:\\n        df[\"name\"] = df[\"name\"].astype(str).str.strip()\\n\\n    if \"city\" in df.columns:\\n        df[\"city\"] = df[\"city\"].astype(str).str.strip().str.lower()\\n\\n    return df"
+{
+  "mission_02": "import pandas as pd\n\n# Create a DataFrame with mixed data types\ndata = {\n    'id': ['1', '2', '3', '4', '5'],\n    'name': ['Alice', 'Bob', 'Charlie', 'Diana', 'Eve'],\n    'score': ['85.5', '92.0', 'invalid', '78.3', '88.1'],\n    'active': ['True', 'False', 'yes', 'True', 'no']\n}\ndf = pd.DataFrame(data)\n\n# Convert 'id' column to integer type\ndf['id'] = df['id'].astype(int)\n\n# Convert 'score' to numeric, coercing errors to NaN\ndf['score'] = pd.to_numeric(df['score'], errors='coerce')\n\n# Standardize 'active' to boolean\ndef parse_bool(val):\n    return val.lower() in ('true', 'yes', '1')\n\ndf['active'] = df['active'].apply(parse_bool)\n\nprint(df.dtypes)"
 }

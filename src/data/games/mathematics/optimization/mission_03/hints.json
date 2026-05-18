@@ -1,0 +1,7 @@
+{
+  "mission_03": [
+    "First compute the lookahead: x_lookahead = x - momentum * velocity",
+    "Then compute the gradient at the lookahead position: grad = grad_f(x_lookahead)",
+    "Update velocity: velocity = momentum * velocity + learning_rate * grad, then x = x - velocity"
+  ]
+}

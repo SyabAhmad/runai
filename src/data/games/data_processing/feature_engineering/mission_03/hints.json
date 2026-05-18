@@ -1,0 +1,1 @@
+{"mission_03": ["Use pd.cut(df['age'], bins=[0, 25, 35, 50, 65, 100], labels=['Young', 'Adult', 'Middle', 'Senior', 'Elderly']).", "Use pd.qcut(df['income'], q=4, labels=['Low', 'Medium', 'High', 'Very High']) for quantile binning.", "Check bin distribution with df['age_bin'].value_counts() to see how samples are distributed."]}

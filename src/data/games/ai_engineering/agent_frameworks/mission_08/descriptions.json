@@ -1,0 +1,3 @@
+{
+  "mission_08": "**Agent safety guardrails** are essential for production systems. Without them, agents can execute harmful actions, leak sensitive data, or generate inappropriate content.\n\nThree layers of defense:\n1. **Input filter** — blocks harmful prompts before they reach the agent\n2. **Action filter** — validates tool calls before execution (e.g., no `rm -rf /`)\n3. **Output filter** — checks the final response for harmful content\n\nEach guardrail is a function that returns `True` (safe) or `False` (blocked). If any guardrail fails, the agent's action is blocked and a safe response is returned.\n\nGuardrails are used by every production AI system — from ChatGPT's content filters to enterprise agents that handle sensitive data."
+}

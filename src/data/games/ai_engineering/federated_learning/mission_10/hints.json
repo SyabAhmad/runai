@@ -1,0 +1,7 @@
+{
+  "mission_10": [
+    "Data poisoning: select flip_ratio of indices randomly, then flip labels: poisoned_y[idx] = (y[idx] + 1) % num_classes for simple label flipping",
+    "Model poisoning: multiply the clean update by -attack_strength to push the global model in the opposite direction. For backdoor attacks, add a pattern to specific weights",
+    "Krum: compute pairwise L2 distances between all flattened updates. For each update i, sum distances to its n-f-2 nearest neighbors. Select the update with minimum score. This ignores f malicious updates"
+  ]
+}

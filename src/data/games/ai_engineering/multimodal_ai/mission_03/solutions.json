@@ -1,0 +1,3 @@
+{
+  "mission_03": "import numpy as np\n\ndef vqa(image_features, question_embed, answer_vocab):\n    # Cross-attention: question attends to image\n    attn_scores = question_embed @ image_features.T\n    attn_weights = np.exp(attn_scores) / np.sum(np.exp(attn_scores), axis=1, keepdims=True)\n    fused = attn_weights @ image_features\n    # Combine with question\n    combined = np.concatenate([fused, question_embed])\n    # Classify\n    logits = combined @ classifier_weights + classifier_bias\n    probs = np.exp(logits) / np.sum(np.exp(logits))\n    answer_idx = np.argmax(probs)\n    return answer_vocab[answer_idx]"
+}

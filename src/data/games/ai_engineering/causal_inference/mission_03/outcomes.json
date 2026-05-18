@@ -1,0 +1,3 @@
+{
+  "mission_03": "You have successfully implemented propensity score matching, a cornerstone method for causal inference in observational studies. By estimating the probability of treatment assignment and matching on these scores, you created comparable treated and control groups that mimic randomization. You calculated the ATT and assessed balance using standardized mean differences — values below 0.1 indicate good balance. This method is widely used in medicine, economics, and policy evaluation. Remember that propensity scores only adjust for observed confounders; unmeasured confounding remains a threat to validity."
+}

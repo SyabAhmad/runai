@@ -1,0 +1,7 @@
+{
+  "mission_05": [
+    "Define grid-template-areas as a visual map: each string is a row, each quoted name is a column area.",
+    "Use grid-template-columns: repeat(3, minmax(200px, 1fr)) to create three columns that are at least 200px and share remaining space equally.",
+    "Assign each child element its area using grid-area: header, grid-area: sidebar, etc., and use grid-row: span 2 on the sidebar."
+  ]
+}

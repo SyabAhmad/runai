@@ -1,0 +1,3 @@
+{
+  "mission_06": "Implement Huffman coding, an optimal prefix-free variable-length encoding scheme that minimizes the expected code length. Huffman coding assigns shorter codewords to more probable symbols and longer codewords to less probable ones. The algorithm builds a binary tree bottom-up by repeatedly merging the two nodes with lowest probabilities. The resulting code is optimal among all prefix-free codes, meaning no codeword is a prefix of another. The average code length satisfies H(X) <= L < H(X) + 1, where H(X) is the source entropy. Huffman coding is used in JPEG, MP3, and many other compression standards."
+}

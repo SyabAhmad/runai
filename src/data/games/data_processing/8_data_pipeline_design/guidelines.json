@@ -1,0 +1,6 @@
+{
+  "title": "Data Pipeline Design",
+  "description": "Master the design and implementation of robust data processing pipelines using scikit-learn. Learn to build sklearn Pipelines for reproducible workflows, ColumnTransformer for heterogeneous data handling, custom transformers for domain-specific transformations, feature stores for centralized feature management, and reproducibility best practices for production ML systems. These skills are essential for building maintainable, scalable, and reliable machine learning systems.",
+  "difficulty": "advanced",
+  "order": 8
+}

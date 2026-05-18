@@ -1,0 +1,3 @@
+{
+  "mission_04": "Personalized federated learning addresses a key limitation of standard FL: the global model may not perform well for individual clients with unique data distributions. Personalization techniques allow each client to maintain a model tailored to their local data while still benefiting from collaborative learning. This mission implements two approaches: regularized local training (similar to pFedMe) where clients optimize a combined objective of local loss plus a regularization term pulling them toward the global model, and model interpolation where each client creates a personalized model by blending their locally-trained model with the global model. The interpolation parameter alpha controls the trade-off between personalization and generalization."
+}

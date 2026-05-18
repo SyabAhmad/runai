@@ -1,0 +1,20 @@
+{
+  "title": "Agent Safety Guardrails",
+  "id": "mission_08",
+  "type": "ai_code",
+  "xpReward": 140,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "# Agent Frameworks Mission 08: Agent Safety Guardrails\n#\n# Production agents need safety checks to prevent harmful actions.\n# Guardrails validate inputs, outputs, and tool calls.\n#\n# Your goal: implement guarded_agent(agent, guardrails, input)\n#   1. Validate input against input guardrails\n#   2. Run agent to get proposed action\n#   3. Validate proposed action against action guardrails\n#   4. Validate output against output guardrails\n#   5. Return safe output or blocked response\n#\n# Guardrail types:\n#   - input_filter: block harmful prompts\n#   - action_filter: block dangerous tool calls\n#   - output_filter: block harmful responses\n\nimport re\n\ndef guarded_agent(agent, guardrails, input):\n    # TODO: Check input against input_filter guardrails\n    # TODO: Run agent to get proposed action\n    # TODO: Check action against action_filter guardrails\n    # TODO: Check output against output_filter guardrails\n    # TODO: Return safe result or blocked message\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def guarded_agent",
+      "must_include:guardrails",
+      "must_include:input_filter",
+      "must_include:output_filter",
+      "must_include:return"
+    ]
+  }
+}

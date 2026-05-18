@@ -1,0 +1,21 @@
+{
+  "title": "Comparing Outlier Detection Methods",
+  "id": "mission_07",
+  "type": "ai_code",
+  "xpReward": 90,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import numpy as np\nimport pandas as pd\nfrom sklearn.ensemble import IsolationForest\nfrom sklearn.neighbors import LocalOutlierFactor\nfrom sklearn.cluster import DBSCAN\nfrom scipy import stats\n\n# TODO: Create a benchmark dataset with known outliers\n\n# TODO: Implement and compare multiple detection methods:\n# 1. IQR method\n# 2. Z-score method\n# 3. Isolation Forest\n# 4. DBSCAN\n# 5. Local Outlier Factor\n\n# TODO: Evaluate each method using:\n# - Precision (what fraction of detected outliers are true outliers)\n# - Recall (what fraction of true outliers were detected)\n# - F1 score (harmonic mean of precision and recall)\n\ndef compare_methods():\n    # TODO: Create dataset with known outliers\n    # TODO: Apply all detection methods\n    # TODO: Compute precision, recall, F1 for each\n    # TODO: Display comparison table\n    pass\n\n# TODO: Run the comparison\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:IsolationForest",
+      "must_include:LocalOutlierFactor",
+      "must_include:DBSCAN",
+      "must_include:precision_score",
+      "must_include:recall_score",
+      "must_include:f1_score"
+    ]
+  }
+}

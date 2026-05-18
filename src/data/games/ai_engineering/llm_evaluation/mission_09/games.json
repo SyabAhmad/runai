@@ -1,0 +1,20 @@
+{
+  "title": "Benchmark Datasets (MMLU, GSM8K, HumanEval)",
+  "id": "mission_09",
+  "type": "ai_code",
+  "xpReward": 110,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "# LLM Evaluation Mission 09: Benchmark Datasets\n#\n# Standard benchmarks measure LLM capabilities across domains.\n#\n# MMLU: 57 subjects, multiple choice (knowledge)\n# GSM8K: Grade school math word problems (reasoning)\n# HumanEval: Python coding problems (code generation)\n#\n# Your goal: Implement run_benchmark(model, dataset, task_type)\n#   1. Load dataset samples\n#   2. For each sample, generate model response\n#   3. Compare with ground truth\n#   4. Return accuracy\n\nimport numpy as np\n\ndef run_benchmark(model, dataset, task_type='multiple_choice'):\n    # TODO: Load dataset\n    # TODO: Generate responses\n    # TODO: Evaluate against ground truth\n    # TODO: Return accuracy\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def run_benchmark",
+      "must_include:dataset",
+      "must_include:accuracy",
+      "must_include:ground_truth",
+      "must_include:return"
+    ]
+  }
+}

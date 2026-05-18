@@ -1,0 +1,7 @@
+{
+  "mission_04": [
+    "Encoder: `x1 = conv(x)`, `x1_pooled = pool(x1)`, `x2 = conv(x1_pooled)`.",
+    "Bottleneck: `bottleneck = conv(conv(x2_pooled))`.",
+    "Decoder: `up = upsample(bottleneck)`, `up = concatenate(up, x2)`, repeat for x1."
+  ]
+}

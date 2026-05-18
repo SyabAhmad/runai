@@ -1,0 +1,7 @@
+{
+  "mission_09": [
+    "Set image.requires_grad_(True) before computing the forward pass.",
+    "After loss.backward(), access the gradient via image.grad.",
+    "Use torch.sign() to get the direction and clamp the result to [0, 1]."
+  ]
+}

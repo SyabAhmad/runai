@@ -1,0 +1,3 @@
+{
+  "mission_02": "SELECT e1.name AS employee1, e2.name AS employee2, e1.department_id\nFROM employees e1\nJOIN employees e2 ON e1.department_id = e2.department_id\nWHERE e1.id < e2.id\nORDER BY e1.department_id, e1.name;"
+}

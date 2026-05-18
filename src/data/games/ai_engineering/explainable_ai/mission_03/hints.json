@@ -1,0 +1,9 @@
+{
+  "mission_03": [
+    "Initialize conv weights with np.random.randn(8, 1, 5, 5) * 0.1.",
+    "Initialize FC weights with np.random.randn(8 * 24 * 24, n_classes) * 0.01.",
+    "Apply ReLU: self.conv_activated = self.relu(self.conv_out).",
+    "Backprop through ReLU: d_conv_out = d_conv_activated * self.relu_derivative(self.conv_out).",
+    "Return absolute saliency: return np.abs(saliency)."
+  ]
+}

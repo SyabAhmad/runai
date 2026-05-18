@@ -1,0 +1,3 @@
+{
+  "mission_04": "**Low-rank factorization** decomposes large matrices into smaller ones.\n\n**SVD**: Any matrix W can be decomposed as U @ S @ V^T, where:\n- U: left singular vectors (orthogonal)\n- S: singular values (diagonal, sorted)\n- V^T: right singular vectors (orthogonal)\n\n**Approximation**: Keep only top-r singular values:\n```\nW_r = U[:, :r] @ S[:r, :r] @ V[:r, :].T\n```\n\n**Compression**: Original: m×n parameters. Factorized: m×r + r×n parameters.\nIf r = n/4, compression = 4x.\n\n**Applications**: Compressing fully connected layers, attention projections, embedding tables. Often combined with fine-tuning to recover accuracy."
+}

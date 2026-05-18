@@ -1,0 +1,22 @@
+{
+  "mission_09": {
+    "title": "FL Frameworks and Implementation",
+    "id": "mission_09",
+    "type": "ai_code",
+    "xpReward": 110,
+    "difficulty": "hard",
+    "initialState": {
+      "content": "import numpy as np\n\n\nclass FLFramework:\n    \"\"\"Minimal federated learning framework with server-client architecture.\n    \n    TODO: Implement server orchestration\n    TODO: Implement client management\n    TODO: Implement training loop with checkpointing\n    TODO: Implement evaluation and metrics tracking\n    \"\"\"\n    \n    def __init__(self, num_clients, model_fn, config):\n        self.num_clients = num_clients\n        self.model_fn = model_fn\n        self.config = config\n        self.global_model = model_fn()\n        self.metrics_history = {'round': [], 'loss': [], 'accuracy': []}\n    \n    def server_orchestrate(self, client_models, sample_sizes):\n        \"\"\"Server: aggregate client models and broadcast.\n        \n        TODO: Weighted average of client models\n        TODO: Track aggregation metrics\n        TODO: Return updated global model\n        \"\"\"\n        total = sum(sample_sizes)\n        global_w = {}\n        for key in client_models[0].keys():\n            # TODO: Weighted average\n            pass\n        self.global_model = global_w\n        return global_w\n    \n    def client_train(self, client_id, local_data, global_w):\n        \"\"\"Client: train on local data.\n        \n        TODO: Initialize from global weights\n        TODO: Train for local_epochs\n        TODO: Return updated weights and metrics\n        \"\"\"\n        local_w = {k: v.copy() for k, v in global_w.items()}\n        epochs = self.config.get('local_epochs', 5)\n        lr = self.config.get('lr', 0.01)\n        \n        for epoch in range(epochs):\n            # TODO: Training step\n            pass\n        \n        return local_w\n    \n    def evaluate(self, test_data):\n        \"\"\"Evaluate global model on test data.\n        \n        TODO: Forward pass through global model\n        TODO: Compute accuracy and loss\n        \"\"\"\n        X, y = test_data\n        # TODO: Forward pass\n        # TODO: Compute metrics\n        accuracy = None\n        loss = None\n        return accuracy, loss\n    \n    def train_round(self, client_data_list, test_data):\n        \"\"\"Complete FL training round.\n        \n        TODO: Send global model to clients\n        TODO: Collect trained models\n        TODO: Aggregate on server\n        TODO: Evaluate and track metrics\n        \"\"\"\n        client_models = []\n        sample_sizes = []\n        \n        for i, data in enumerate(client_data_list):\n            w = self.client_train(i, data, self.global_model)\n            client_models.append(w)\n            sample_sizes.append(len(data[0]))\n        \n        self.server_orchestrate(client_models, sample_sizes)\n        acc, loss = self.evaluate(test_data)\n        \n        return acc, loss\n"
+    },
+    "validation": {
+      "type": "ai_code",
+      "rules": [
+        "must_include:server",
+        "must_include:client",
+        "must_include:orchestrate",
+        "must_include:evaluate",
+        "must_include:checkpoint"
+      ]
+    }
+  }
+}

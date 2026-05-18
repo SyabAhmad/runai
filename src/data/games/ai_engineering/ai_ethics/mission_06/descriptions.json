@@ -1,0 +1,3 @@
+{
+  "mission_06": "**Toxicity detection** keeps AI outputs safe for users.\n\n**Categories**:\n- **Hate speech**: Attacks based on identity\n- **Harassment**: Targeted abuse\n- **Self-harm**: Encouraging dangerous behavior\n- **Sexual**: Explicit content\n- **Violence**: Graphic or threatening content\n\n**Implementation**:\n- Pretrained classifiers (Perspective API, Detoxify)\n- Score each category 0-1\n- Block if any score exceeds threshold\n- Log blocked content for review\n\n**Challenges**:\n- False positives: Sarcasm, reclaimed language, educational content\n- Cultural context: What's toxic varies by region\n- Adversarial prompts: Users try to bypass filters"
+}

@@ -1,0 +1,3 @@
+{
+  "mission_03": "You've added the missing piece — positional awareness! Without this, transformers can't distinguish word order. The sine/cosine pattern is beautiful because it naturally encodes relative positions: the model can learn that token at position pos+k is always a fixed transformation away from position pos."
+}

@@ -1,0 +1,3 @@
+{
+  "mission_01": "Implement Shannon entropy, the fundamental measure of uncertainty in information theory. Entropy quantifies the average amount of information produced by a stochastic source of data. For a discrete random variable X with probability distribution p(x), the entropy is H(X) = -sum(p(x) * log2(p(x))). A fair coin has maximum entropy of 1 bit, while a biased coin has less entropy because its outcomes are more predictable. Entropy is central to data compression, cryptography, and machine learning, where it measures the impurity of data distributions."
+}

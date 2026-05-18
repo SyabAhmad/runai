@@ -1,0 +1,7 @@
+{
+  "mission_05": [
+    "Create context: const ThemeContext = createContext(). Wrap your app with <ThemeContext.Provider value={{ theme, toggleTheme }}>.",
+    "Consume context: const { theme } = useContext(ThemeContext). Create custom hooks like useTheme() that wrap useContext for cleaner APIs.",
+    "For auto-removing notifications, use useEffect with setTimeout: useEffect(() => { const timer = setTimeout(() => remove(id), 5000); return () => clearTimeout(timer); }, [id, remove]);."
+  ]
+}

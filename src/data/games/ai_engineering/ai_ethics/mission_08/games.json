@@ -1,0 +1,20 @@
+{
+  "title": "Data Provenance & Copyright",
+  "id": "mission_08",
+  "type": "ai_code",
+  "xpReward": 100,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "# AI Ethics Mission 08: Data Provenance\n#\n# Tracking where training data comes from is essential for copyright compliance.\n# Each data point should have: source URL, license, date collected, consent status.\n#\n# Your goal: implement track_provenance(dataset, sources, licenses)\n#   1. Map each data point to its source\n#   2. Check license compatibility\n#   3. Flag data with unclear provenance\n#   4. Return provenance report\n\nimport numpy as np\n\ndef track_provenance(dataset, sources, licenses):\n    # TODO: Map data to sources\n    # TODO: Check licenses\n    # TODO: Flag unclear provenance\n    # TODO: Return report\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def track_provenance",
+      "must_include:source",
+      "must_include:license",
+      "must_include:provenance",
+      "must_include:return"
+    ]
+  }
+}

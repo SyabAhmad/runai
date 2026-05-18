@@ -1,0 +1,7 @@
+{
+  "mission_06": [
+    "Actor: `probs = softmax(actor_weights[state])`, Critic: `value = critic_weights[state]`.",
+    "Advantage: `advantage = reward + gamma * next_value - current_value`.",
+    "Actor update: `actor_weights[state][action] += alpha * advantage * (1 - probs[action])`."
+  ]
+}

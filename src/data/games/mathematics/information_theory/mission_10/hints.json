@@ -1,0 +1,7 @@
+{
+  "mission_10": [
+    "IB objective: minimize I(X;T) - beta * I(T;Y) for compressed representation T",
+    "The self-consistent update: P(t|x) proportional to P(t) * exp(-beta * KL(P(Y|x) || P(Y|t)))",
+    "KL(P(Y|x) || P(Y|t)) = sum_y P(y|x) * log(P(y|x) / P(y|t))"
+  ]
+}

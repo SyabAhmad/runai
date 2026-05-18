@@ -1,0 +1,9 @@
+{
+  "mission_05": [
+    "Build MZI matrix: [[exp(i*phi)*cos(theta), -exp(i*phi)*sin(theta)], [sin(theta), cos(theta)]].",
+    "Apply MZI: output[i], output[j] = u @ v_ij.",
+    "SVD decomposition: U, S, Vt = np.linalg.svd(W, full_matrices=False).",
+    "Apply V^T: v_out = self._apply_real_unitary(Vt, input_complex).",
+    "Power efficiency: output_power / (input_power + 1e-10)."
+  ]
+}

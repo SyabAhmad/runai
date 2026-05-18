@@ -1,0 +1,7 @@
+{
+  "mission_01": [
+    "Shannon entropy formula: H(X) = -sum(p * log2(p)) for all p > 0",
+    "Use np.log2() for base-2 logarithm to get entropy in bits",
+    "Filter out zero probabilities before computing log to avoid -inf"
+  ]
+}

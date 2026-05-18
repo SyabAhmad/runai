@@ -1,0 +1,18 @@
+{
+  "title": "Compare Scaling Methods",
+  "id": "mission_06",
+  "type": "ai_code",
+  "xpReward": 85,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import pandas as pd\nimport numpy as np\n\n# TODO: Create a DataFrame with mixed-scale features\ndata = {\n    'age': [25, 30, 35, 40, 45],\n    'income': [50000, 60000, 70000, 80000, 90000],\n    'score': [0.8, 0.9, 0.7, 0.95, 0.85]\n}\ndf = pd.DataFrame(data)\n\n# TODO: Apply min-max scaling\ndf_minmax = ...\n\n# TODO: Apply z-score standardization\ndf_zscore = ...\n\n# TODO: Apply robust scaling\nmedian = df.median()\nq1 = df.quantile(0.25)\nq3 = df.quantile(0.75)\niqr = q3 - q1\ndf_robust = ...\n\nprint(\"Min-Max ranges:\", df_minmax.max() - df_minmax.min())\nprint(\"Z-Score stds:\", df_zscore.std())\nprint(\"Robust IQR:\", df_robust.quantile(0.75) - df_robust.quantile(0.25))\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:df.min",
+      "must_include:df.mean",
+      "must_include:df.median"
+    ]
+  }
+}

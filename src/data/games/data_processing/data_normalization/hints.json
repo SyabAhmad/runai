@@ -1,0 +1,52 @@
+{
+  "mission_01": [
+    "Min-max formula: (x - min) / (max - min) scales values to [0, 1]",
+    "Use df.min() and df.max() to compute column-wise min and max",
+    "Verify with df_normalized.min() == 0 and df_normalized.max() == 1"
+  ],
+  "mission_02": [
+    "Z-score formula: (x - mean) / std centers data at 0 with std of 1",
+    "Use df.mean() and df.std() to compute column-wise statistics",
+    "Verify standardized data has mean ≈ 0 and std ≈ 1"
+  ],
+  "mission_03": [
+    "Robust scaling formula: (x - median) / IQR where IQR = Q3 - Q1",
+    "Use df.median() and df.quantile(0.75) - df.quantile(0.25)",
+    "Robust scaling is less affected by outliers than z-score"
+  ],
+  "mission_04": [
+    "Use np.log1p(x) which computes log(1 + x) and handles zeros safely",
+    "Compare skewness before and after with df.skew()",
+    "Log transform reduces right-skewness by compressing large values"
+  ],
+  "mission_05": [
+    "Use scipy.stats.boxcox() which returns (transformed_data, lambda)",
+    "Box-Cox requires strictly positive values (no zeros or negatives)",
+    "Lambda near 0 indicates log-like transformation, lambda=1 means no transform needed"
+  ],
+  "mission_06": [
+    "Apply all three methods and compare their effects on the data",
+    "Min-max: (df - df.min()) / (df.max() - df.min())",
+    "Z-score: (df - df.mean()) / df.std(), Robust: (df - df.median()) / IQR"
+  ],
+  "mission_07": [
+    "Create scaler instances: MinMaxScaler(), StandardScaler(), RobustScaler()",
+    "Use fit_transform(df.values) to compute and apply scaling in one step",
+    "Wrap result in pd.DataFrame(scaled, columns=df.columns) to preserve column names"
+  ],
+  "mission_08": [
+    "Fit scaler with scaler.fit(original) or scaler.fit_transform(original)",
+    "Restore with scaler.inverse_transform(scaled)",
+    "Compare original and restored with np.abs(original - restored).sum()"
+  ],
+  "mission_09": [
+    "Create StandardScaler() and call fit_transform(features)",
+    "Use pd.DataFrame(scaled, columns=feature_columns) to restore structure",
+    "Combine with target using df_processed['target'] = df['target'].values"
+  ],
+  "mission_10": [
+    "Use RobustScaler().fit_transform(df) for outlier-resistant scaling",
+    "Use PowerTransformer(method='yeo-johnson') for distribution normalization",
+    "Compare skewness metrics to evaluate transformation effectiveness"
+  ]
+}

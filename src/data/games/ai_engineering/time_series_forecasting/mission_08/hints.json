@@ -1,0 +1,7 @@
+{
+  "mission_08": [
+    "Rolling statistics use a sliding window to compute local mean and standard deviation, making the z-score adaptive to changing baseline conditions.",
+    "CUSUM maintains two cumulative sums: one for detecting upward shifts and one for downward shifts, each resetting to zero when they go negative.",
+    "In isolation forest, the anomaly score is 2 raised to the negative average path length divided by the expected path length, so shorter paths yield higher scores."
+  ]
+}

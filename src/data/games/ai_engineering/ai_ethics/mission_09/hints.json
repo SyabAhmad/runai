@@ -1,0 +1,7 @@
+{
+  "mission_09": [
+    "Run: `outputs = [model(prompt) for prompt in attack_prompts]`.",
+    "Classify: `violations = [safety_classifier.check(out) for out in outputs]`.",
+    "Report: `jailbreak_rate = sum(violations) / len(violations)`."
+  ]
+}

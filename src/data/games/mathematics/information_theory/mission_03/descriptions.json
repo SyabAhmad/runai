@@ -1,0 +1,3 @@
+{
+  "mission_03": "Implement KL (Kullback-Leibler) divergence, a measure of how one probability distribution differs from a reference distribution. KL divergence D_KL(P||Q) = sum(p(x) * log(p(x)/q(x))) is always non-negative and equals zero only when P = Q. It is not symmetric and does not satisfy the triangle inequality, so it is not a true distance metric. The Jensen-Shannon divergence addresses this by symmetrizing KL divergence using a midpoint distribution. KL divergence is fundamental in variational inference, VAEs, and many other machine learning applications where we approximate complex distributions."
+}

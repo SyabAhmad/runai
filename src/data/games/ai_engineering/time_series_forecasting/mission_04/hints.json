@@ -1,0 +1,7 @@
+{
+  "mission_04": [
+    "Positional encoding uses sin and cos functions with geometrically increasing wavelengths to give the model information about the position of each element in the sequence.",
+    "The scaling factor sqrt(d_k) in dot-product attention prevents the softmax from entering regions with extremely small gradients when d_k is large.",
+    "Multi-head attention splits the model dimension by the number of heads, computes attention independently for each head, then concatenates and projects the results."
+  ]
+}

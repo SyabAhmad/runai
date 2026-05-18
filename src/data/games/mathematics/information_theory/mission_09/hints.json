@@ -1,0 +1,7 @@
+{
+  "mission_09": [
+    "Fisher information: I(theta) = E[(score)^2] where score = d/d_theta log p(X;theta)",
+    "Cramer-Rao bound: Var(theta_hat) >= 1/(n * I(theta)) for any unbiased estimator",
+    "For Bernoulli(p): I(p) = 1/(p*(1-p))"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "title": "Taylor Series",
+  "id": "mission_08",
+  "type": "ai_code",
+  "xpReward": 100,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "import numpy as np\nimport matplotlib\nmatplotlib.use('Agg')\n\n# TODO: Define f(x) = e^x\ndef f(x):\n    return None\n\n# TODO: Define the nth derivative of e^x (always e^x)\ndef nth_derivative(x, n):\n    return None\n\n# TODO: Build the Taylor polynomial of degree n centered at a=0\ndef taylor_exp(x, n, a=0):\n    result = None\n    for i in range(n + 1):\n        # term = f^(i)(a) / i! * (x - a)^i\n        term = None\n        result += term\n    return result\n\n# TODO: Evaluate the true function and Taylor approximations at x = 1\nx_val = 1.0\ntrue_val = None\n\n# TODO: Compute approximations for n = 1, 2, 3, 5, 10\ndegrees = [1, 2, 3, 5, 10]\napproximations = {}\nerrors = {}\nfor n in degrees:\n    approx = None\n    approximations[n] = approx\n    errors[n] = None\n\n# TODO: Build Taylor series for sin(x) centered at 0\ndef taylor_sin(x, n):\n    result = 0.0\n    for i in range(n + 1):\n        # sin Taylor: sum of (-1)^k * x^(2k+1) / (2k+1)!\n        k = i\n        term = None\n        result += term\n    return result\n\n# TODO: Evaluate sin Taylor approximation at x = pi/4\nsin_true = None\nsin_approx = None\n\nprint(f\"e^1 = {true_val:.6f}\")\nfor n in degrees:\n    print(f\"Taylor degree {n}: {approximations[n]:.6f}, error: {errors[n]:.2e}\")\nprint(f\"sin(pi/4) = {sin_true:.6f}\")\nprint(f\"Taylor sin(pi/4) = {sin_approx:.6f}\")\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:numpy",
+      "must_include:np.exp",
+      "must_include:math.factorial"
+    ]
+  }
+}

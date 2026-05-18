@@ -1,4 +1,4 @@
-﻿{
+{
     "title":  "Feature Engineering Mission 8: Polynomial Features",
     "initialState":  {
                          "content":  "# TODO: Create degree-2 polynomial features\n\ndef build_poly_features(X):\n    # TODO: initialize PolynomialFeatures with include_bias=False\n\n    # TODO: return transformed X"

@@ -1,0 +1,9 @@
+{
+  "mission_07": [
+    "Pre-process: z = x @ self.W_pre + self.b_pre; return np.maximum(0, z).",
+    "Quantum layer: encode with RY rotations, apply variational RY-RZ layers with CNOT entanglement.",
+    "Extract features: z_op[i,i] = 1 if bit==0 else -1; features[q] = np.real(state.conj() @ (z_op @ state)).",
+    "Post-process: return features @ self.W_post + self.b_post.",
+    "Forward: preprocessed = self.classical_preprocess(x); state = self.quantum_layer(preprocessed); features = self.extract_features(state); output = self.classical_postprocess(features)."
+  ]
+}

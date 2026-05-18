@@ -1,0 +1,3 @@
+{
+  "mission_04": "B-tree indexes are the default and most versatile index type in PostgreSQL. They support equality, range, and sorted queries efficiently. Creating the right index can transform a sequential scan into an index scan, reducing query time from seconds to milliseconds. However, indexes also add overhead to write operations, so they should be created strategically."
+}

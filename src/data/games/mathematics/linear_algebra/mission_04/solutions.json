@@ -1,0 +1,3 @@
+{
+  "mission_04": "import numpy as np\n\nA = np.array([[4, 2, 1],\n              [2, 5, 3],\n              [1, 3, 2]])\n\neigenvalues, eigenvectors = np.linalg.eig(A)\n\nv1 = eigenvectors[:, 0]\nlam1 = eigenvalues[0]\nA_v1 = A @ v1\nlambda_v1 = lam1 * v1\n\nv2 = eigenvectors[:, 1]\northo_check = np.dot(v1, v2)\n\nA_reconstructed = eigenvectors @ np.diag(eigenvalues) @ eigenvectors.T\n\nspectral_radius = np.max(np.abs(eigenvalues))\n\nprint(f\"Eigenvalues: {eigenvalues}\")\nprint(f\"A @ v1 = {A_v1}\")\nprint(f\"lambda1 * v1 = {lambda_v1}\")\nprint(f\"Orthogonality check (v1 . v2): {ortho_check:.6f}\")\nprint(f\"Reconstruction error: {np.max(np.abs(A - A_reconstructed)):.2e}\")\nprint(f\"Spectral radius: {spectral_radius:.4f}\")\n"
+}

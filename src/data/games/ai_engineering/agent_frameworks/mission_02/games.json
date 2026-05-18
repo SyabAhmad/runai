@@ -1,0 +1,20 @@
+{
+  "title": "CrewAI Multi-Agent Team",
+  "id": "mission_02",
+  "type": "ai_code",
+  "xpReward": 70,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "# Agent Frameworks Mission 02: CrewAI Multi-Agent Team\n#\n# CrewAI orchestrates multiple specialized agents working\n# together as a team. Each agent has a role, goal, and backstory.\n#\n# Your goal: Implement create_crew(agents, tasks)\n#   1. Define agents with roles (researcher, writer, reviewer)\n#   2. Define tasks with descriptions and assigned agents\n#   3. Execute tasks in sequence (sequential process)\n#   4. Return final output\n\nimport re\n\ndef create_crew(agents, tasks):\n    # TODO: Validate each task has an assigned agent\n    # TODO: Execute tasks in order, passing output to next task\n    # TODO: Each agent processes its task using its role context\n    # TODO: Return the final output from the last task\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def create_crew",
+      "must_include:agents",
+      "must_include:tasks",
+      "must_include:role",
+      "must_include:return"
+    ]
+  }
+}

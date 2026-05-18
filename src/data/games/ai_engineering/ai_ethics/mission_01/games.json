@@ -1,0 +1,20 @@
+{
+  "title": "Bias Detection in Training Data",
+  "id": "mission_01",
+  "type": "ai_code",
+  "xpReward": 60,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "# AI Ethics Mission 01: Bias Detection\n#\n# AI models inherit biases from their training data.\n# Detecting bias requires analyzing demographic representation and outcomes.\n#\n# Common bias types:\n# - Representation bias: Some groups underrepresented\n# - Measurement bias: Features correlate with protected attributes\n# - Aggregation bias: Model performs differently across groups\n#\n# Your goal: implement detect_bias(data, protected_attribute, outcome)\n#   1. Group data by protected attribute\n#   2. Compute representation ratios\n#   3. Compute outcome differences\n#   4. Return bias metrics\n\nimport numpy as np\n\ndef detect_bias(data, protected_attribute, outcome):\n    # TODO: Group by protected attribute\n    # TODO: Compute representation ratios\n    # TODO: Compute outcome differences\n    # TODO: Return bias metrics\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def detect_bias",
+      "must_include:group",
+      "must_include:ratio",
+      "must_include:outcome",
+      "must_include:return"
+    ]
+  }
+}

@@ -1,0 +1,3 @@
+{
+  "mission_07": "import numpy as np\n\ndef llava_inference(image, prompt, projector, llm):\n    image_features = clip_image_encoder(image)\n    visual_tokens = projector(image_features)\n    text_tokens = tokenizer.encode(f\"USER: <image>\\n{prompt}\\nASSISTANT:\")\n    inputs = np.concatenate([visual_tokens, text_tokens])\n    response = llm.generate(inputs, max_length=512)\n    return response"
+}

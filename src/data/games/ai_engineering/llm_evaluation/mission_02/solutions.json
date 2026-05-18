@@ -1,0 +1,3 @@
+{
+  "mission_02": "import numpy as np\nfrom collections import Counter\n\ndef compute_rouge_n(generated, reference, n=1):\n    ref_tokens = reference.lower().split()\n    gen_tokens = generated.lower().split()\n    ref_ngrams = [tuple(ref_tokens[i:i+n]) for i in range(len(ref_tokens)-n+1)]\n    gen_ngrams = [tuple(gen_tokens[i:i+n]) for i in range(len(gen_tokens)-n+1)]\n    ref_counts = Counter(ref_ngrams)\n    gen_counts = Counter(gen_ngrams)\n    overlap = sum((ref_counts & gen_counts).values())\n    recall = overlap / max(len(ref_ngrams), 1)\n    return recall"
+}

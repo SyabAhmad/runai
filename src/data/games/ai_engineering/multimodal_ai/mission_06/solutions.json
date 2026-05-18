@@ -1,0 +1,3 @@
+{
+  "mission_06": "import numpy as np\n\ndef blip2_inference(image, question, q_former, llm):\n    image_features = frozen_image_encoder(image)\n    learnable_queries = np.random.randn(32, image_features.shape[-1])\n    visual_tokens = q_former(learnable_queries, image_features)\n    question_tokens = tokenizer.encode(question)\n    combined = np.concatenate([visual_tokens, question_tokens])\n    answer = llm.generate(combined)\n    return answer"
+}

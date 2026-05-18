@@ -1,0 +1,7 @@
+{
+  "mission_07": [
+    "Cross join days, time_slots, and rooms to create the full schedule grid.",
+    "Concatenate start_time and end_time to create a formatted time range string.",
+    "Order by day_name, then start_time for a logical schedule layout."
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Responsive Design with Media Queries",
+  "id": "mission_06",
+  "type": "ai_code",
+  "xpReward": 90,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "/* TODO: Implement mobile-first responsive design */\n/* TODO: Add breakpoints for tablet (768px) and desktop (1024px) */\n/* TODO: Make navigation collapse to hamburger on mobile */\n/* TODO: Adjust grid columns at different breakpoints */\n\n/* Base mobile styles (default) */\n.container {\n  width: 100%;\n  padding: 1rem;\n}\n\n.nav-menu {\n  /* TODO: Hidden on mobile by default */\n  display: none;\n}\n\n.hamburger {\n  /* TODO: Visible on mobile */\n  display: block;\n}\n\n.grid {\n  /* TODO: Single column on mobile */\n  display: grid;\n  grid-template-columns: 1fr;\n  gap: 1rem;\n}\n\n.card {\n  padding: 1rem;\n}\n\n/* TODO: Add tablet breakpoint at 768px */\n/* TODO: Add desktop breakpoint at 1024px */"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:@media",
+      "must_include:min-width:",
+      "must_include:768px",
+      "must_include:1024px",
+      "must_include:grid-template-columns:",
+      "must_include:display: none",
+      "must_include:display: block"
+    ]
+  }
+}

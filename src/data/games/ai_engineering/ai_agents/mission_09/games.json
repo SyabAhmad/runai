@@ -1,16 +1,19 @@
 {
-  "title": "ai agents Mission 9",
+  "title": "Agent with Knowledge Retrieval (RAG)",
+  "id": "mission_09",
+  "type": "ai_code",
+  "xpReward": 160,
+  "difficulty": "hard",
   "initialState": {
-    "content": "def solve_mission_9():\n    # TODO: Implement solution for ai_agents mission 9\n    return \"Mission 9 completed\"\\n    # TODO: Complete the implementation"
+    "content": "# Agent Mission 09: Agent with Knowledge Retrieval (RAG)\n#\n# RAG = Retrieval-Augmented Generation.\n# Agents with RAG can look up information from a knowledge\n# base before responding, making them much more capable.\n#\n# Our knowledge base is a dict of topics:\n#   knowledge_base = {\n#       \"python\": \"Python is a high-level programming language...\",\n#       \"docker\": \"Docker is a containerization platform...\",\n#       \"sql\": \"SQL is a language for managing databases...\",\n#       \"agent\": \"An AI agent is a system that perceives...\",\n#   }\n#\n# Your goal: Build a rag_agent(task, knowledge) that:\n#   1. Searches the knowledge base for relevant information\n#   2. If found, returns the knowledge + a response\n#   3. If not found, returns \"I don't have information about that\"\n#\n# Queries:\n#   - \"ask: <topic>\" -> search knowledge base for the topic\n#   - \"list\" -> return all available topics\n#   - anything else -> \"I can only answer about known topics\"\n#\n# Return: {\"task\": task, \"knowledge\": ..., \"result\": ..., \"status\": \"ok\" | \"error\"}\n\nknowledge_base = {\n    \"python\": \"Python is a high-level, interpreted programming language known for readability and wide application in web development, data science, and AI.\",\n    \"docker\": \"Docker is a containerization platform that packages applications and dependencies into lightweight, portable containers.\",\n    \"sql\": \"SQL (Structured Query Language) is a domain-specific language for managing and querying relational databases.\",\n    \"agent\": \"An AI agent is a software system that perceives its environment, makes decisions, and takes actions to achieve goals.\",\n}\n\ndef rag_agent(task, knowledge):\n    # TODO: Parse the task\n    #   \"ask: <topic>\" -> check if topic exists in knowledge\n    #                     If yes: return the knowledge text and a response\n    #                     If no: return \"I don't know about that topic\"\n    #   \"list\" -> return available topics as a string\n    #   else -> \"I can only answer about known topics\"\n    pass"
   },
   "validation": {
     "type": "ai_code",
     "rules": [
-      "must_include:def",
-      "must_include:return"
+      "must_include:def rag_agent",
+      "must_include:knowledge",
+      "must_include:return",
+      "must_include:status"
     ]
-  },
-  "id": "mission_09",
-  "type": "ai_code",
-  "xpReward": 140
+  }
 }

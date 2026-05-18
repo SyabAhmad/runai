@@ -1,0 +1,3 @@
+{
+  "mission_10": "SELECT p.name AS product_name, tag.value AS tag\nFROM products p\nCROSS JOIN LATERAL json_array_elements_text(p.tags) AS tag(value)\nORDER BY p.name, tag.value;"
+}

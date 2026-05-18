@@ -1,0 +1,20 @@
+{
+  "title": "Scaled Dot-Product Attention",
+  "id": "mission_01",
+  "type": "ai_code",
+  "xpReward": 60,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "# Transformers Mission 01: Scaled Dot-Product Attention\n#\n# The attention mechanism is the core of every transformer.\n# It computes how much each token should attend to every other token.\n#\n# Formula: Attention(Q, K, V) = softmax(Q @ K^T / sqrt(d_k)) @ V\n#\n# Your goal: Implement scaled_dot_product_attention(Q, K, V, mask=None)\n#   1. Compute scores = Q @ K^T (matrix multiply)\n#   2. Scale scores by dividing by sqrt(d_k) where d_k = K.shape[-1]\n#   3. Apply mask if provided (set masked positions to -1e9)\n#   4. Apply softmax to get attention weights\n#   5. Return weights @ V\n\nimport numpy as np\n\ndef scaled_dot_product_attention(Q, K, V, mask=None):\n    # TODO: Compute attention scores: Q @ K^T\n    # TODO: Scale by sqrt(d_k)\n    # TODO: Apply mask (if provided, add -1e9 to masked positions)\n    # TODO: Apply softmax\n    # TODO: Return attention_weights @ V\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def scaled_dot_product_attention",
+      "must_include:softmax",
+      "must_include:sqrt",
+      "must_include:matmul",
+      "must_include:return"
+    ]
+  }
+}

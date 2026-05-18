@@ -1,0 +1,21 @@
+{
+  "title": "Custom Transformers with sklearn",
+  "id": "mission_03",
+  "type": "ai_code",
+  "xpReward": 70,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "import numpy as np\nimport pandas as pd\nfrom sklearn.base import BaseEstimator, TransformerMixin\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.preprocessing import StandardScaler\n\n# TODO: Create custom transformers by inheriting from BaseEstimator and TransformerMixin:\n# 1. FeatureSelector: select specific columns by name or index\n# 2. LogTransformer: apply log transformation to specified columns\n# 3. BinningTransformer: convert continuous features into bins\n# 4. InteractionFeatures: create interaction terms between pairs of features\n\n# Each custom transformer must implement:\n# - fit(X, y=None): learn parameters (return self)\n# - transform(X): apply transformation\n\nclass FeatureSelector(BaseEstimator, TransformerMixin):\n    def __init__(self, columns):\n        self.columns = columns\n    \n    def fit(self, X, y=None):\n        return self\n    \n    def transform(self, X):\n        # TODO: Select specified columns\n        pass\n\n# TODO: Implement remaining custom transformers\n# TODO: Build a pipeline using all custom transformers\n# TODO: Test the pipeline on sample data\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:BaseEstimator",
+      "must_include:TransformerMixin",
+      "must_include:class FeatureSelector",
+      "must_include:def fit",
+      "must_include:def transform",
+      "must_include:Pipeline"
+    ]
+  }
+}

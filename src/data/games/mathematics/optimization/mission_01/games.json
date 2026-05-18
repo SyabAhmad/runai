@@ -1,0 +1,18 @@
+{
+  "title": "Vanilla Gradient Descent",
+  "id": "mission_01",
+  "type": "ai_code",
+  "xpReward": 60,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "import numpy as np\n\ndef gradient_descent(f, grad_f, x0, learning_rate=0.01, max_iter=1000, tol=1e-6):\n    \"\"\"\n    Implement vanilla gradient descent algorithm\n    f: objective function\n    grad_f: gradient of f\n    x0: initial point\n    learning_rate: step size\n    \"\"\"\n    x = x0.copy()\n    history = [x.copy()]\n    \n    for i in range(max_iter):\n        # TODO: Compute gradient at current point\n        grad = ...\n        \n        # TODO: Update x using gradient descent rule\n        x = ...\n        \n        history.append(x.copy())\n        \n        # TODO: Check convergence based on gradient norm\n        if ...:\n            break\n    \n    return x, history\n\n# Test with quadratic function: f(x) = x^2\ndef f(x):\n    return x ** 2\n\ndef grad_f(x):\n    return 2 * x\n\nx0 = np.array([5.0])\nx_opt, history = gradient_descent(f, grad_f, x0, learning_rate=0.1)\nprint(f\"Optimal x: {x_opt}\")\nprint(f\"Optimal f(x): {f(x_opt)}\")"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:grad_f",
+      "must_include:learning_rate",
+      "must_include:numpy"
+    ]
+  }
+}

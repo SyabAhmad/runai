@@ -1,0 +1,3 @@
+{
+  "mission_05": "Implement channel capacity calculations, which determine the maximum rate at which information can be reliably transmitted through a noisy communication channel. Shannon's noisy channel coding theorem states that the capacity C = max_{p(x)} I(X;Y), the maximum mutual information between input and output over all possible input distributions. For a Binary Symmetric Channel with crossover probability p, the capacity is C = 1 - H(p) where H(p) is the binary entropy function. The Blahut-Arimoto algorithm is an iterative method that computes channel capacity for arbitrary discrete memoryless channels by alternating optimization of the input distribution."
+}

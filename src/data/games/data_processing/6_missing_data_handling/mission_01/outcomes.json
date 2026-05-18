@@ -1,0 +1,3 @@
+{
+  "mission_01": "Great start! You have learned the foundational techniques for handling missing data. Mean imputation preserves the overall average of your dataset, while median imputation provides robustness against outliers. Both methods are implemented efficiently through sklearn SimpleImputer, which integrates seamlessly into machine learning pipelines. These simple techniques are often the first approach to try when dealing with missing values, especially when the missingness rate is below 5%. Remember that while they are computationally efficient and easy to interpret, they do not capture relationships between variables. For more sophisticated handling, you will explore KNN imputation, MICE, and other advanced methods in upcoming missions."
+}

@@ -1,0 +1,3 @@
+{
+  "mission_08": "SELECT reading_date, temperature, ROUND(AVG(temperature) OVER (ORDER BY reading_date ROWS BETWEEN 6 PRECEDING AND CURRENT ROW), 2) AS moving_avg_7day\nFROM temperature_readings\nORDER BY reading_date;"
+}

@@ -1,0 +1,20 @@
+{
+  "title": "Hallucination Detection",
+  "id": "mission_07",
+  "type": "ai_code",
+  "xpReward": 100,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "# LLM Evaluation Mission 07: Hallucination Detection\n#\n# Hallucinations are factual claims not supported by the source.\n# Detection methods: NLI (Natural Language Inference), fact verification.\n#\n# Approach: Extract claims from generated text, check each against source.\n# Use NLI model: entailment = supported, contradiction = hallucination, neutral = unverifiable.\n#\n# Your goal: Implement detect_hallucinations(generated, source, nli_model)\n#   1. Extract factual claims from generated text\n#   2. For each claim, run NLI against source\n#   3. Count contradictions as hallucinations\n#   4. Return hallucination rate\n\nimport numpy as np\n\ndef detect_hallucinations(generated, source, nli_model):\n    # TODO: Extract claims\n    # TODO: Run NLI for each claim\n    # TODO: Count hallucinations\n    # TODO: Return rate\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def detect_hallucinations",
+      "must_include:claim",
+      "must_include:nli",
+      "must_include:contradiction",
+      "must_include:return"
+    ]
+  }
+}

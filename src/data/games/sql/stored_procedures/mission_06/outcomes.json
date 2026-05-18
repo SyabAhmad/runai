@@ -1,0 +1,3 @@
+{
+  "mission_06": "Excellent! You've created a validation trigger that enforces business rules at the database level. This ensures data integrity regardless of which application or user modifies the data. Database-level validation is a critical defense-in-depth strategy that complements application-level validation."
+}

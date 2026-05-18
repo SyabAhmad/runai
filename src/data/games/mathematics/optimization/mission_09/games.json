@@ -1,0 +1,18 @@
+{
+  "title": "Newton's Method Optimization",
+  "id": "mission_09",
+  "type": "ai_code",
+  "xpReward": 110,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "import numpy as np\n\ndef newtons_method(f, grad_f, hessian_f, x0, max_iter=100, tol=1e-8):\n    \"\"\"\n    Implement Newton's method for optimization\n    Uses second-order information (Hessian) for faster convergence\n    f: objective function\n    grad_f: gradient function\n    hessian_f: Hessian matrix function\n    x0: initial point\n    \"\"\"\n    x = x0.copy().astype(float)\n    history = [x.copy()]\n    \n    for i in range(max_iter):\n        grad = grad_f(x)\n        \n        # TODO: Compute Hessian matrix at current point\n        H = ...\n        \n        # TODO: Solve H * delta = -grad for the Newton direction\n        # Use np.linalg.solve for numerical stability\n        delta = ...\n        \n        # TODO: Add regularization if Hessian is not positive definite\n        # Add small multiple of identity if needed\n        min_eigenvalue = np.min(np.linalg.eigvalsh(H))\n        if min_eigenvalue < 0:\n            H_reg = ...\n            delta = ...\n        \n        # TODO: Update x with Newton step\n        x = ...\n        \n        history.append(x.copy())\n        \n        # TODO: Check convergence\n        if np.linalg.norm(grad) < tol:\n            break\n    \n    return x, history\n\n# Test with Rosenbrock function\ndef rosenbrock(x):\n    return (1 - x[0])**2 + 100 * (x[1] - x[0]**2)**2\n\ndef rosenbrock_grad(x):\n    return np.array([\n        -2*(1-x[0]) - 400*x[0]*(x[1]-x[0]**2),\n        200*(x[1]-x[0]**2)\n    ])\n\ndef rosenbrock_hessian(x):\n    return np.array([\n        [2 - 400*x[1] + 1200*x[0]**2, -400*x[0]],\n        [-400*x[0], 200]\n    ])\n\nx0 = np.array([0.0, 0.0])\nx_opt, history = newtons_method(rosenbrock, rosenbrock_grad, rosenbrock_hessian, x0)\nprint(f\"Optimal: {x_opt}\")\nprint(f\"Function value: {rosenbrock(x_opt)}\")"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:hessian",
+      "must_include:newton",
+      "must_include:numpy"
+    ]
+  }
+}

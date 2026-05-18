@@ -1,0 +1,19 @@
+{
+  "title": "Creating a Simple Function",
+  "id": "mission_01",
+  "type": "ai_code",
+  "xpReward": 60,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "-- Creating a Simple Function: Calculate order total with tax\n-- TODO: Create a function that takes an amount and tax rate, returns total\n-- The function should be named calculate_total_with_tax\n\n-- Write your CREATE FUNCTION statement:\n\nCREATE OR REPLACE FUNCTION calculate_total_with_tax(\n    -- TODO: Define parameters\n)\nRETURNS NUMERIC\nLANGUAGE plpgsql\nAS $$\nBEGIN\n    -- TODO: Return amount + (amount * tax_rate)\nEND;\n$$;\n\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:CREATE FUNCTION",
+      "must_include:RETURNS",
+      "must_include:BEGIN",
+      "must_include:RETURN"
+    ]
+  }
+}

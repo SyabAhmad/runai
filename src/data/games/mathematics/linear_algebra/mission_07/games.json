@@ -1,0 +1,19 @@
+{
+  "title": "Linear Transformations",
+  "id": "mission_07",
+  "type": "ai_code",
+  "xpReward": 90,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import numpy as np\n\n# TODO: Define a rotation matrix for 45 degrees (in 2D)\ntheta = np.pi / 4\nrotation = None\n\n# TODO: Define a scaling matrix (scale x by 2, y by 0.5)\nscaling = None\n\n# TODO: Define a shear matrix (shear x by y)\nshear = None\n\n# TODO: Create a combined transformation: rotate, then scale, then shear\n# Remember: transformations are applied right-to-left in matrix multiplication\ncombined = None\n\n# TODO: Apply the combined transformation to a set of points\npoints = np.array([[1, 0], [0, 1], [1, 1], [-1, 1]])\n# Points as column vectors: transform each point\ntransformed_points = None\n\n# TODO: Compute the determinant of the combined transformation\n# This tells you how area is scaled\ndet_combined = None\n\n# TODO: Find the inverse of the combined transformation\ncombined_inv = None\n\n# TODO: Verify: combined @ combined_inv = I\nidentity_check = None\n\nprint(f\"Rotation matrix:\\n{rotation}\")\nprint(f\"Scaling matrix:\\n{scaling}\")\nprint(f\"Combined transformation:\\n{combined}\")\nprint(f\"Transformed points:\\n{transformed_points}\")\nprint(f\"Determinant (area scaling): {det_combined:.4f}\")\nprint(f\"Identity check error: {np.max(np.abs(identity_check - np.eye(2))):.2e}\")\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:numpy",
+      "must_include:np.cos",
+      "must_include:np.sin",
+      "must_include:np.linalg.inv"
+    ]
+  }
+}

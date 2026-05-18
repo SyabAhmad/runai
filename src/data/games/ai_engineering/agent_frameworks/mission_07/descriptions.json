@@ -1,0 +1,3 @@
+{
+  "mission_07": "**Agent evaluation** is critical for production systems. You need to measure not just whether the agent gets the right answer, but how efficiently it gets there.\n\nKey metrics:\n- **Accuracy**: % of test cases where the agent produces the correct answer\n- **Tool call rate**: % of cases where the agent correctly uses tools (vs. hallucinating)\n- **Average steps**: How many reasoning/tool-calling steps the agent takes\n- **Latency**: How long each response takes\n- **Cost**: How many tokens are consumed\n\nEvaluation frameworks like LangSmith, Phoenix, and Arize track these metrics over time to detect regressions when you update your agent."
+}

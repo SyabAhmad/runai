@@ -1,0 +1,18 @@
+{
+  "title": "Computing Derivatives",
+  "id": "mission_01",
+  "type": "ai_code",
+  "xpReward": 60,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "import numpy as np\nfrom scipy.misc import derivative\n\n# TODO: Define the function f(x) = x^3 - 2x^2 + 3x - 1\ndef f(x):\n    return None\n\n# TODO: Define the analytical derivative f'(x) = 3x^2 - 4x + 3\ndef f_prime(x):\n    return None\n\n# TODO: Compute the numerical derivative at x = 2 using finite differences\nx0 = 2.0\nh = 1e-7\nnumerical_deriv = None\n\n# TODO: Compute the analytical derivative at x = 2\nanalytical_deriv = None\n\n# TODO: Compute the second derivative f''(x) = 6x - 4 analytically\ndef f_double_prime(x):\n    return None\n\n# TODO: Evaluate f, f', f'' at x = 2\nf_val = None\nf_prime_val = None\nf_double_prime_val = None\n\n# TODO: Compute the error between numerical and analytical derivatives\nerror = None\n\nprint(f\"f({x0}) = {f_val}\")\nprint(f\"f'({x0}) analytical = {f_prime_val}\")\nprint(f\"f'({x0}) numerical = {numerical_deriv}\")\nprint(f\"f''({x0}) = {f_double_prime_val}\")\nprint(f\"Error: {error:.2e}\")\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:numpy",
+      "must_include:def f",
+      "must_include:def f_prime"
+    ]
+  }
+}

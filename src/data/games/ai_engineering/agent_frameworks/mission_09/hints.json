@@ -1,0 +1,7 @@
+{
+  "mission_09": [
+    "Initialize: `current = initial_state`, `trace = []`, `context = input`.",
+    "Execute: `result = states[current]['action'](context)`.",
+    "Transition: `next_state = states[current]['transitions'].get(result['status'])`."
+  ]
+}

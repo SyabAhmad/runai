@@ -1,0 +1,6 @@
+{
+  "title": "Speech Recognition",
+  "description": "Dive into the world of automatic speech recognition (ASR) and build systems that convert spoken language into text. This chapter covers the full pipeline from audio feature extraction using MFCCs to state-of-the-art deep learning models including wav2vec 2.0, Whisper, and end-to-end ASR architectures. You will implement CTC loss for sequence alignment, build speaker diarization systems, handle noise robustness, design streaming ASR for real-time transcription, implement keyword spotting, and create multilingual speech recognition systems.",
+  "difficulty": "advanced",
+  "order": 2
+}

@@ -1,0 +1,18 @@
+{
+  "title": "LDA for Classification",
+  "id": "mission_05",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import pandas as pd\nimport numpy as np\nfrom sklearn.discriminant_analysis import LinearDiscriminantAnalysis\nfrom sklearn.datasets import load_iris\n\n# TODO: Load the iris dataset\niris = load_iris()\nX = iris.data\ny = iris.target\n\n# TODO: Apply LDA to reduce to 2 components\nlda = LinearDiscriminantAnalysis(n_components=2)\nX_lda = ...\n\nprint(f\"Original shape: {X.shape}\")\nprint(f\"LDA shape: {X_lda.shape}\")\nprint(f\"Explained variance ratio: {lda.explained_variance_ratio_}\")\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:LinearDiscriminantAnalysis",
+      "must_include:n_components",
+      "must_include:fit_transform"
+    ]
+  }
+}

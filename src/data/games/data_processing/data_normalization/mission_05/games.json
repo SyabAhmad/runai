@@ -1,0 +1,18 @@
+{
+  "title": "Power Transform (Box-Cox)",
+  "id": "mission_05",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import pandas as pd\nimport numpy as np\nfrom scipy import stats\n\n# TODO: Create a DataFrame with positive skewed data\ndata = {\n    'sales': [10, 25, 50, 100, 200, 400, 800],\n    'visits': [5, 15, 30, 60, 120, 240, 480]\n}\ndf = pd.DataFrame(data)\n\n# TODO: Apply Box-Cox power transform\n# Box-Cox requires strictly positive values\ndf_boxcox, lambda_sales = ...\ndf_boxcox, lambda_visits = ...\n\nprint(f\"Lambda for sales: {lambda_sales:.4f}\")\nprint(f\"Lambda for visits: {lambda_visits:.4f}\")\nprint(\"\\nTransformed data:\")\nprint(df_boxcox)\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:stats.boxcox",
+      "must_include:scipy",
+      "must_include:lambda"
+    ]
+  }
+}

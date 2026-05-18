@@ -1,0 +1,3 @@
+{
+  "mission_05": "Integration is the inverse operation of differentiation, connected by the Fundamental Theorem of Calculus. The definite integral computes the area under a curve. Numerical integration methods include the trapezoidal rule (approximating with trapezoids) and Simpson's rule (using parabolas). The Gaussian integral of e^(-x^2) from -inf to inf equals sqrt(pi) — a fundamental result in probability. Double integrals compute volumes under surfaces. In machine learning, integration appears in computing expectations, marginalizing probability distributions, and in the loss functions of probabilistic models."
+}

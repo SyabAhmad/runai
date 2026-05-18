@@ -1,0 +1,7 @@
+{
+  "mission_02": [
+    "Generate pairwise masks using a shared seed: both clients i and j use seed(i,j) to generate the same random vector, but client j negates it",
+    "Masked update for client i: update_i + sum(masks[(i,j)] for all j != i). This adds a unique random offset that only cancels when all clients contribute",
+    "When summing all masked updates, each pair (i,j) contributes s_ij + s_ji = s_ij + (-s_ij) = 0, so only the sum of original updates remains"
+  ]
+}

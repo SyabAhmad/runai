@@ -1,0 +1,19 @@
+{
+  "title": "PARTITION BY: Rankings Within Groups",
+  "id": "mission_04",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "-- PARTITION BY: Rank employees within each department\n-- The employees table has columns: id, name, department, salary\n-- TODO: Use ROW_NUMBER() with PARTITION BY department to rank within each department\n\nSELECT \nFROM employees\n\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:ROW_NUMBER",
+      "must_include:PARTITION BY",
+      "must_include:department",
+      "must_include:salary"
+    ]
+  }
+}

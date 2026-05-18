@@ -1,0 +1,3 @@
+{
+  "mission_03": "DENSE_RANK() is like RANK() but without gaps in the ranking sequence. If two products tie for 1st place, the next product gets rank 2 (not 3). This is ideal for scenarios where you care about the distinct ranking positions rather than the ordinal position, such as leaderboards and percentile calculations."
+}

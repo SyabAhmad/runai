@@ -1,0 +1,18 @@
+{
+  "title": "Advanced Scaling with Outliers",
+  "id": "mission_10",
+  "type": "ai_code",
+  "xpReward": 120,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "import pandas as pd\nimport numpy as np\nfrom sklearn.preprocessing import RobustScaler, PowerTransformer\nimport matplotlib\nmatplotlib.use('Agg')\nimport matplotlib.pyplot as plt\n\n# TODO: Create data with extreme outliers\nnp.random.seed(42)\ndata = {\n    'normal': np.random.normal(50, 10, 100),\n    'skewed': np.random.exponential(10, 100),\n    'outlier': list(np.random.normal(50, 10, 95)) + [500, 600, 700, 800, 900]\n}\ndf = pd.DataFrame(data)\n\n# TODO: Apply RobustScaler to handle outliers\nrobust = RobustScaler()\ndf_robust = pd.DataFrame(robust.fit_transform(df), columns=df.columns)\n\n# TODO: Apply PowerTransformer (Yeo-Johnson handles negative values)\npower = PowerTransformer(method='yeo-johnson')\ndf_power = pd.DataFrame(power.fit_transform(df), columns=df.columns)\n\nprint(\"Original skewness:\")\nprint(df.skew())\nprint(\"\\nRobust scaled skewness:\")\nprint(df_robust.skew())\nprint(\"\\nPower transformed skewness:\")\nprint(df_power.skew())\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:RobustScaler",
+      "must_include:PowerTransformer",
+      "must_include:yeo-johnson"
+    ]
+  }
+}

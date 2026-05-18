@@ -1,0 +1,1 @@
+{"mission_08": ["Use np.cumsum(pca.explained_variance_ratio_) >= 0.95 to find the number of components for 95% variance.", "After fitting PCA, use X_reduced = pca.transform(X_scaled) and X_denoised = pca.inverse_transform(X_reduced).", "Compare MSE: mean_squared_error(X_clean, X_noisy) vs mean_squared_error(X_clean, X_denoised). Lower MSE means better denoising."]}

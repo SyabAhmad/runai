@@ -1,0 +1,3 @@
+{
+  "mission_01": "Image augmentation is a cornerstone technique in computer vision that artificially expands training datasets by applying random but realistic transformations to images. By using libraries like albumentations, you can compose pipelines that apply horizontal flips, rotations, brightness adjustments, and many other transforms with configurable probabilities. This helps models generalize better by exposing them to varied versions of the same image during training, reducing overfitting and improving robustness to real-world variations in lighting, orientation, and perspective."
+}

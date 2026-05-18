@@ -1,0 +1,18 @@
+{
+  "title": "Normalization Pipeline",
+  "id": "mission_09",
+  "type": "ai_code",
+  "xpReward": 110,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "import pandas as pd\nimport numpy as np\nfrom sklearn.preprocessing import MinMaxScaler, StandardScaler\nfrom sklearn.pipeline import Pipeline\n\n# TODO: Create a dataset with mixed features\ndata = {\n    'age': [25, 30, 35, 40, 45, 50],\n    'income': [50000, 60000, 70000, 80000, 90000, 100000],\n    'score': [0.8, 0.9, 0.7, 0.95, 0.85, 0.75],\n    'target': [0, 1, 0, 1, 1, 0]\n}\ndf = pd.DataFrame(data)\n\n# TODO: Create a preprocessing pipeline\n# Apply StandardScaler to age and income, leave score as-is\nfeatures = df[['age', 'income', 'score']]\n\n# TODO: Fit scaler and transform\nscaler = ...\nfeatures_scaled = ...\n\n# TODO: Combine with target\ndf_processed = pd.DataFrame(features_scaled, columns=['age', 'income', 'score'])\ndf_processed['target'] = df['target'].values\n\nprint(df_processed)\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:StandardScaler",
+      "must_include:fit_transform",
+      "must_include:Pipeline"
+    ]
+  }
+}

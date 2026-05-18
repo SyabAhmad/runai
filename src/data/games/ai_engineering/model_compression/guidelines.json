@@ -1,0 +1,6 @@
+{
+  "title": "Model Compression",
+  "description": "Learn how to make AI models smaller and faster. Covers weight pruning, INT8 quantization, knowledge distillation, low-rank factorization, LoRA, KV cache quantization, speculative decoding, neural architecture search, ONNX optimization, and edge deployment.",
+  "difficulty": "medium",
+  "order": 8
+}

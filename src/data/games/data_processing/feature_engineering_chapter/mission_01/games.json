@@ -1,4 +1,4 @@
-﻿{
+{
     "title":  "Feature Engineering Mission 1: Basic Interaction Features",
     "initialState":  {
                          "content":  "# TODO: Add interaction features from existing numeric columns\n\ndef add_interaction_features(df):\n    # TODO: create total_spend_per_visit safely\n\n    # TODO: create spend_times_items\n\n    return df"

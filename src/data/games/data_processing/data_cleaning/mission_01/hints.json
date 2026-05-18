@@ -1,7 +1,7 @@
-﻿{
-    "mission_01":  [
-                       "Use select_dtypes(include=[\"number\"]) to get numeric columns.",
-                       "Median is robust for numeric missing values.",
-                       "For text columns, use mode()[0] and then fillna."
-                   ]
+{
+  "mission_01": [
+    "Use df.drop_duplicates() to remove rows where all columns have identical values",
+    "The 'keep' parameter controls which duplicate to retain: 'first', 'last', or False",
+    "Check for duplicates with df.duplicated().sum() before and after cleaning"
+  ]
 }

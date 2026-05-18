@@ -1,0 +1,3 @@
+{
+  "mission_01": "Well done! You have modeled TPU architecture by simulating its core systolic array for matrix multiplication. Your implementation demonstrates how the TPU achieves massive parallelism: at each timestep, a column of A and row of B are broadcast across the processing element grid, and all PEs simultaneously compute their multiply-accumulate operations. The outer product formulation C += a_col @ b_row captures the essence of systolic computation — decomposing matrix multiplication into a sequence of rank-1 updates. This architecture is why TPUs can achieve hundreds of teraflops for neural network workloads: the systolic array maximizes arithmetic intensity and minimizes data movement, the two dominant factors in AI hardware efficiency."
+}

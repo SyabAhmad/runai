@@ -1,0 +1,20 @@
+{
+  "title": "Differential Privacy",
+  "id": "mission_03",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "# AI Ethics Mission 03: Differential Privacy\n#\n# Differential privacy adds calibrated noise to protect individual data.\n# (epsilon, delta)-DP: The output distribution changes by at most e^epsilon\n# when any single data point is added or removed.\n#\n# DP-SGD: Clip gradients, add Gaussian noise, scale by batch size.\n# noise_scale = sigma * clipping_norm / batch_size\n#\n# Your goal: implement dp_sgd_gradient(gradient, clipping_norm, noise_scale)\n#   1. Clip gradient to max norm\n#   2. Add Gaussian noise\n#   3. Return noisy gradient\n\nimport numpy as np\n\ndef dp_sgd_gradient(gradient, clipping_norm, noise_scale):\n    # TODO: Clip gradient\n    # TODO: Add noise\n    # TODO: Return noisy gradient\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def dp_sgd_gradient",
+      "must_include:clip",
+      "must_include:noise",
+      "must_include:gaussian",
+      "must_include:return"
+    ]
+  }
+}

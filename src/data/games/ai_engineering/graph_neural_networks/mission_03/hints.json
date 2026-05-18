@@ -1,0 +1,7 @@
+{
+  "mission_03": [
+    "Use np.random.choice with replace=False to sample neighbors, or use all neighbors if fewer than sample_size",
+    "Mean pooling: compute np.mean(H_curr[sampled], axis=0) to get the aggregated neighbor representation",
+    "Concatenate self features with pooled neighbor features: np.concatenate([h_self, h_neigh]), then apply W @ concat followed by ReLU"
+  ]
+}

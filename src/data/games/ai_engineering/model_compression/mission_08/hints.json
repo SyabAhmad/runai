@@ -1,0 +1,7 @@
+{
+  "mission_08": [
+    "Sample: `arch = random.choice(search_space)`.",
+    "Evaluate: `accuracy, latency = evaluator(arch)`.",
+    "Keep best: `if accuracy > best_acc and latency < budget: best = arch`."
+  ]
+}

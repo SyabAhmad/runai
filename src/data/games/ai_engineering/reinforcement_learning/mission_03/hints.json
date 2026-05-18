@@ -1,0 +1,7 @@
+{
+  "mission_03": [
+    "Epsilon-greedy: `if np.random.random() < epsilon: action = random else: action = np.argmax(Q[state])`.",
+    "TD error: `td_error = reward + gamma * np.max(Q[next_state]) - Q[state][action]`.",
+    "Update: `Q[state][action] += alpha * td_error`."
+  ]
+}

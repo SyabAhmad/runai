@@ -1,0 +1,3 @@
+{
+  "mission_03": "Great work! You have implemented KL divergence and Jensen-Shannon divergence, two essential measures of distributional difference. KL divergence is the foundation of variational methods in machine learning, while JS divergence provides a symmetric, bounded alternative that is useful for comparing distributions in generative models."
+}

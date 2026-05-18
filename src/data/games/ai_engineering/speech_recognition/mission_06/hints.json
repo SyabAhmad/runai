@@ -1,0 +1,7 @@
+{
+  "mission_06": [
+    "Spectral subtraction computes clean magnitude as sqrt(max(|noisy|^2 - alpha * |noise|^2, 0)) and applies a spectral floor to prevent musical noise.",
+    "The Wiener filter gain at each frequency is S / (S + N), where S is the estimated signal power and N is the noise power.",
+    "SNR in decibels is computed as 10 * log10(signal_power / noise_power), and noise is scaled to achieve the target SNR by multiplying by sqrt(desired_noise_var / actual_noise_var)."
+  ]
+}

@@ -1,0 +1,3 @@
+{
+  "mission_09": "Excellent work on multivariate calculus! You computed the gradient and Hessian of a function of three variables. The Hessian at (1,2,3) is symmetric as guaranteed by Clairaut's theorem. The eigenvalues reveal the curvature properties — with mixed signs, this point is a saddle point (neither purely convex nor concave). The directional second derivative tells you the curvature in any specific direction. The Hessian is crucial in second-order optimization methods (Newton's method) and in understanding why some loss landscapes are easier to optimize than others."
+}

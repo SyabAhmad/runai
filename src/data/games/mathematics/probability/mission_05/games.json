@@ -1,0 +1,18 @@
+{
+  "title": "Expectation and Variance",
+  "id": "mission_05",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import numpy as np\nfrom scipy import stats\n\n# TODO: Define a discrete random variable with custom PMF\nvalues = np.array([1, 2, 3, 4, 5])\nprobabilities = np.array([0.1, 0.2, 0.3, 0.25, 0.15])\n\n# TODO: Compute E[X] = sum(x * p(x))\nexpected_value = None\n\n# TODO: Compute E[X^2] = sum(x^2 * p(x))\nexpected_x_squared = None\n\n# TODO: Compute Var(X) = E[X^2] - (E[X])^2\nvariance = None\n\n# TODO: Compute the standard deviation\nstd_dev = None\n\n# TODO: For a continuous random variable X ~ Normal(0, 1):\n# Verify E[X] = 0 and Var(X) = 1 using numerical integration\nx_vals = None\npdf_vals = None\nE_X_continuous = None\nE_X2_continuous = None\nVar_X_continuous = None\n\n# TODO: Properties: Var(aX + b) = a^2 * Var(X)\na, b = 3, 5\nVar_transformed = None\n\n# TODO: For independent X, Y: Var(X + Y) = Var(X) + Var(Y)\n# Simulate to verify\nnp.random.seed(42)\nsim_X = None\nsim_Y = None\nsim_sum = None\nVar_X_sim = None\nVar_Y_sim = None\nVar_sum_sim = None\n\nprint(f\"E[X] = {expected_value}\")\nprint(f\"Var(X) = {variance:.4f}\")\nprint(f\"Std(X) = {std_dev:.4f}\")\nprint(f\"Continuous E[X]: {E_X_continuous:.4f}\")\nprint(f\"Continuous Var(X): {Var_X_continuous:.4f}\")\nprint(f\"Var(3X+5) = {Var_transformed:.4f}\")\nprint(f\"Var(X)+Var(Y) = {Var_X_sim + Var_Y_sim:.4f}, Var(X+Y) = {Var_sum_sim:.4f}\")\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:numpy",
+      "must_include:scipy",
+      "must_include:np.trapz"
+    ]
+  }
+}

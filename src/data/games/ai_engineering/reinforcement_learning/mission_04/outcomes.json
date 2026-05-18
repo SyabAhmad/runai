@@ -1,0 +1,3 @@
+{
+  "mission_04": "You implemented REINFORCE! Policy gradient methods directly optimize the policy, making them more flexible than value-based methods. They can learn stochastic policies and work with continuous actions. This is the foundation of PPO, which trained ChatGPT using RLHF."
+}

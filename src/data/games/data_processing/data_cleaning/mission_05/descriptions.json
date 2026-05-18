@@ -1,3 +1,3 @@
-﻿{
-    "mission_05":  "Build extract_datetime_features(df) that converts signup_date to datetime and creates signup_year and signup_month columns. Return df."
+{
+  "mission_05": "Outlier detection using the Interquartile Range (IQR) method is a robust statistical technique for identifying anomalous data points. The IQR is calculated as Q3 - Q1, where Q1 and Q3 are the 25th and 75th percentiles respectively. Data points below Q1 - 1.5*IQR or above Q3 + 1.5*IQR are considered outliers. This method is preferred over z-score-based approaches when data is not normally distributed, as it does not assume any underlying distribution. Removing or treating outliers is important because they can disproportionately influence statistical measures and machine learning model training."
 }

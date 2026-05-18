@@ -1,0 +1,9 @@
+{
+  "mission_01": [
+    "Initialize output: C = np.zeros((M, N), dtype=self.precision).",
+    "Outer product: C += a_col @ b_row (or a_col * b_row with broadcasting).",
+    "Quantize and multiply: C = self.systolic_array_multiply(A_q, B_q).",
+    "Relative error: error = np.linalg.norm(tpu_result - cpu_result) / (np.linalg.norm(cpu_result) + 1e-10).",
+    "Throughput: throughput = total_ops / (cycles / clock_freq)."
+  ]
+}

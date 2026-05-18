@@ -1,0 +1,7 @@
+{
+  "mission_10": [
+    "Query: `query_emb = clip_encode(query)`.",
+    "Retrieve: `scores = query_emb @ index_embeddings.T`, `top_k = argsort(scores)[-k:]`.",
+    "Generate: `context = format_retrieved(top_k_items)`, `response = llm(query + context)`."
+  ]
+}

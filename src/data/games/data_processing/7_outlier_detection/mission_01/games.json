@@ -1,0 +1,21 @@
+{
+  "title": "IQR Method for Outlier Detection",
+  "id": "mission_01",
+  "type": "ai_code",
+  "xpReward": 60,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "import numpy as np\nimport pandas as pd\n\n# TODO: Create a dataset with clear outliers\n# Include a main distribution and some extreme values\n\n# TODO: Implement the IQR (Interquartile Range) method:\n# 1. Calculate Q1 (25th percentile) and Q3 (75th percentile)\n# 2. Compute IQR = Q3 - Q1\n# 3. Define lower bound = Q1 - 1.5 * IQR\n# 4. Define upper bound = Q3 + 1.5 * IQR\n# 5. Flag values outside these bounds as outliers\n\n# TODO: Apply the IQR method to detect outliers\n# Print the detected outlier values and their indices\n\ndef iqr_outlier_detection(data):\n    # TODO: Calculate Q1, Q3, IQR\n    # TODO: Define bounds\n    # TODO: Identify outliers\n    # TODO: Return outlier information\n    pass\n\n# TODO: Test with sample data and display results\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:percentile",
+      "must_include:quantile",
+      "must_include:IQR",
+      "must_include:1.5",
+      "must_include:lower_bound",
+      "must_include:upper_bound"
+    ]
+  }
+}

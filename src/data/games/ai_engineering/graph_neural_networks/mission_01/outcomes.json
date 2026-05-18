@@ -1,0 +1,3 @@
+{
+  "mission_01": "Congratulations! You have successfully implemented the foundational building block of Graph Convolutional Networks. By constructing the normalized adjacency matrix and implementing the GCN layer, you now understand how graph structure guides feature aggregation. This symmetric normalization ensures that information flows smoothly across the graph, with each node receiving a balanced mixture of its neighbors' features. You are ready to explore more advanced graph neural network architectures!"
+}

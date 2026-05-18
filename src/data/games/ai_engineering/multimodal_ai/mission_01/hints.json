@@ -1,0 +1,7 @@
+{
+  "mission_01": [
+    "Similarity: `sim = image_embeds @ text_embeds.T`.",
+    "Temperature: `logits = sim / temperature`.",
+    "Loss: `cross_entropy(softmax(logits), eye(N))` for both directions."
+  ]
+}

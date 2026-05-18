@@ -1,0 +1,3 @@
+{
+  "mission_06": "import numpy as np\n\nvectors = np.array([[1, 2, 3],\n                    [2, 4, 6],\n                    [1, 0, -1],\n                    [0, 1, 2]])\n\nrank = np.linalg.matrix_rank(vectors)\n\nQ, R = np.linalg.qr(vectors)\n\nbasis = Q[:, :rank]\n\nb = np.array([3, 6, 2, 3])\ncoefficients, residuals, _, _ = np.linalg.lstsq(vectors, b, rcond=None)\n\nprojection = vectors @ coefficients\n\nresidual_vector = b - projection\n\nprint(f\"Rank: {rank}\")\nprint(f\"Basis vectors:\\n{basis}\")\nprint(f\"Coefficients: {coefficients}\")\nprint(f\"Projection: {projection}\")\nprint(f\"Residual norm: {np.linalg.norm(residual_vector):.6f}\")\n"
+}

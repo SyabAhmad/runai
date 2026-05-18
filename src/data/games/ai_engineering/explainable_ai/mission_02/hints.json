@@ -1,0 +1,9 @@
+{
+  "mission_02": [
+    "Initialize SHAP values with np.zeros((n_samples, n_features)).",
+    "Compute baseline as np.mean(model.predict(X), axis=0).",
+    "Create reference input with x_ref = np.mean(X, axis=0).",
+    "Build perturbed input: x_perturbed = x_ref.copy(); x_perturbed[list(subset)] = sample[0, list(subset)].",
+    "Add weighted marginal contribution: weight * (pred_with_j - pred) to shap_values[i, j]."
+  ]
+}

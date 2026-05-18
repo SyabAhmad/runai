@@ -1,0 +1,25 @@
+{
+  "title": "Geometric Transforms for Images",
+  "id": "mission_02",
+  "type": "ai_code",
+  "xpReward": 65,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "import numpy as np\nimport albumentations as A\n\n# TODO: Create a pipeline with geometric transforms\n# Add ShiftScaleRotate with shift_limit=0.0625, scale_limit=0.1, rotate_limit=45\n# Add ElasticTransform with alpha=1.0, sigma=50.0\n# Add GridDistortion with num_steps=5, distort_limit=0.3\n\ndef geometric_augmentation_pipeline():\n    # TODO: Build and return the geometric augmentation pipeline\n    pass\n\n# TODO: Create a sample image and apply the pipeline\n# Print the shape before and after augmentation\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:ShiftScaleRotate",
+      "must_include:ElasticTransform",
+      "must_include:GridDistortion",
+      "must_include:shift_limit",
+      "must_include:scale_limit",
+      "must_include:rotate_limit",
+      "must_include:alpha",
+      "must_include:sigma",
+      "must_include:num_steps",
+      "must_include:distort_limit"
+    ]
+  }
+}

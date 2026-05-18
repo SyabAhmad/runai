@@ -1,0 +1,1 @@
+{"mission_03": ["Use np.fliplr(img) for horizontal flip on each 2D image array.", "Use np.rot90(img, k=1) for 90-degree rotation.", "For brightness: np.clip(img * factor, 0, 255).astype(np.uint8) to prevent overflow."]}

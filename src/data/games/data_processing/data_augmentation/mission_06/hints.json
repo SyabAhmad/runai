@@ -1,0 +1,1 @@
+{"mission_06": ["Check distribution with Counter(y) before and Counter(y_resampled) after ADASYN.", "Create adasyn = ADASYN(random_state=42) and use X_res, y_res = adasyn.fit_resample(X, y).", "ADASYN generates more samples near the decision boundary where minority samples are harder to classify."]}

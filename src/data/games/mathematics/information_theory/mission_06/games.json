@@ -1,0 +1,18 @@
+{
+  "title": "Huffman Coding",
+  "id": "mission_06",
+  "type": "ai_code",
+  "xpReward": 85,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import numpy as np\nimport heapq\n\ndef huffman_encoding(symbols, probabilities):\n    \"\"\"\n    Build Huffman code for given symbols and probabilities\n    symbols: list of symbol names\n    probabilities: list of symbol probabilities\n    Returns: dict mapping symbols to binary codewords\n    \"\"\"\n    # TODO: Create priority queue with (probability, [symbol, code])\n    heap = []\n    for i, (sym, prob) in enumerate(zip(symbols, probabilities)):\n        heapq.heappush(heap, (prob, i, [sym, '']))\n    \n    # TODO: Build Huffman tree by merging two lowest probability nodes\n    counter = len(symbols)\n    while len(heap) > 1:\n        # Extract two lowest probability nodes\n        prob1, _, node1 = heapq.heappop(heap)\n        prob2, _, node2 = heapq.heappop(heap)\n        \n        # TODO: Add '0' to all codes in node1 and '1' to all codes in node2\n        # node structure: [symbol, code] or [[sym1, code1], [sym2, code2], ...]\n        merged = ...\n        \n        heapq.heappush(heap, (prob1 + prob2, counter, merged))\n        counter += 1\n    \n    # TODO: Extract final codes\n    _, _, final_node = heap[0]\n    codes = {}\n    if isinstance(final_node[0], list):\n        for item in final_node:\n            codes[item[0]] = item[1]\n    else:\n        codes[final_node[0]] = final_node[1]\n    \n    return codes\n\ndef average_code_length(codes, probabilities, symbols):\n    \"\"\"\n    Calculate average code length L = sum(p_i * l_i)\n    \"\"\"\n    # TODO: Compute weighted average of code lengths\n    avg_length = ...\n    return avg_length\n\ndef encoding_efficiency(codes, probabilities, symbols):\n    \"\"\"\n    Calculate efficiency = H(X) / L where H(X) is entropy and L is avg code length\n    \"\"\"\n    # TODO: Compute entropy\n    p = np.array(probabilities)\n    entropy = ...\n    \n    # TODO: Compute efficiency\n    avg_len = average_code_length(codes, probabilities, symbols)\n    efficiency = ...\n    \n    return efficiency\n\n# Test Huffman coding\nsymbols = ['A', 'B', 'C', 'D', 'E']\nprobs = [0.35, 0.25, 0.20, 0.15, 0.05]\ncodes = huffman_encoding(symbols, probs)\nprint(f\"Huffman codes: {codes}\")\nprint(f\"Average length: {average_code_length(codes, probs, symbols):.4f}\")"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:huffman",
+      "must_include:heapq",
+      "must_include:numpy"
+    ]
+  }
+}

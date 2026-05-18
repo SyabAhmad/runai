@@ -1,0 +1,7 @@
+{
+  "mission_10": [
+    "Check inventory stock and price, RAISE EXCEPTION if insufficient.",
+    "INSERT the order, capture the id with RETURNING, UPDATE inventory.",
+    "Log each step to order_log. Use EXCEPTION block to ROLLBACK and set error status."
+  ]
+}

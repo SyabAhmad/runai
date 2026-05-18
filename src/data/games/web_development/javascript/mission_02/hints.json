@@ -1,0 +1,7 @@
+{
+  "mission_02": [
+    "Arrow functions: const greet = (name) => `Hello, ${name}!`; — remove the function keyword and add =>.",
+    "Default parameters: function createOrder(item, quantity = 1, price = 0) — defaults go in the parameter list.",
+    "Rest parameters use ... to gather arguments: function sum(...numbers) then use numbers.reduce((a, b) => a + b, 0)."
+  ]
+}

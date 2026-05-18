@@ -1,0 +1,3 @@
+{
+  "mission_07": "You implemented RLHF reward computation! This is how ChatGPT, Claude, and other aligned models are trained. The KL penalty is crucial — it prevents reward hacking."
+}

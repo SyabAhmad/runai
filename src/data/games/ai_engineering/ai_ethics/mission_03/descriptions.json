@@ -1,0 +1,3 @@
+{
+  "mission_03": "**Differential privacy** provides mathematical guarantees against data leakage.\n\n**Definition**: An algorithm is (ε, δ)-DP if changing one data point changes the output distribution by at most e^ε.\n\n**Privacy budget ε**:\n- ε < 1: Strong privacy\n- ε = 1-10: Moderate privacy\n- ε > 10: Weak privacy\n\n**DP-SGD**:\n1. Compute per-sample gradients\n2. Clip each gradient to max norm C\n3. Add Gaussian noise with scale σ·C/batch_size\n4. Average and update\n\n**Trade-off**: More noise = more privacy but lower accuracy. DP-trained models typically lose 1-5% accuracy compared to non-DP training."
+}

@@ -1,0 +1,7 @@
+{
+  "mission_06": [
+    "Use LEAD(temperature) OVER (ORDER BY date) to get the next day's temperature.",
+    "Calculate the change as LEAD result minus current temperature.",
+    "Use a CASE expression to label trends as 'warming', 'cooling', or 'stable'."
+  ]
+}

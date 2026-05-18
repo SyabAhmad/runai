@@ -1,0 +1,20 @@
+{
+  "title": "Knowledge Distillation",
+  "id": "mission_03",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "# Model Compression Mission 03: Knowledge Distillation\n#\n# Knowledge distillation trains a small student model to mimic a large teacher.\n# The student learns from soft targets (teacher's logits) not just hard labels.\n#\n# Loss = alpha * CE(student, labels) + (1-alpha) * KL(teacher/T || student/T)\n# Temperature T smooths the probability distribution.\n#\n# Your goal: implement distillation_loss(student_logits, teacher_logits, labels, T=2.0, alpha=0.5)\n#   1. Compute hard loss (CE with labels)\n#   2. Compute soft loss (KL with teacher logits)\n#   3. Combine with alpha weighting\n#   4. Return total loss\n\nimport numpy as np\n\ndef distillation_loss(student_logits, teacher_logits, labels, T=2.0, alpha=0.5):\n    # TODO: Hard loss (CE)\n    # TODO: Soft loss (KL)\n    # TODO: Combine\n    # TODO: Return total\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def distillation_loss",
+      "must_include:temperature",
+      "must_include:cross_entropy",
+      "must_include:kl_divergence",
+      "must_include:return"
+    ]
+  }
+}

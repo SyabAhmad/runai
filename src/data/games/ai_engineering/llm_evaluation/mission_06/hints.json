@@ -1,0 +1,7 @@
+{
+  "mission_06": [
+    "P_o = fraction of pairs where annotators agree.",
+    "P_e = sum of (category_frequency / total)^2 for each category.",
+    "Kappa = (P_o - P_e) / (1 - P_e)."
+  ]
+}

@@ -1,0 +1,3 @@
+{
+  "mission_04": "Flexbox is a one-dimensional layout model that excels at distributing space and aligning items within a container. In this mission, you will apply Flexbox to solve common layout challenges: creating a navigation bar with space-between alignment, building a responsive card grid with flex-wrap, and implementing a sticky footer pattern using flex-direction: column with flex-grow. Master these patterns and you will handle most UI layouts with ease."
+}

@@ -1,0 +1,23 @@
+{
+  "title": "Web Accessibility (a11y)",
+  "id": "mission_10",
+  "type": "ai_code",
+  "xpReward": 120,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "<!-- TODO: Add ARIA attributes for screen reader support -->\n<!-- TODO: Implement keyboard navigation for interactive elements -->\n<!-- TODO: Add skip navigation link -->\n<!-- TODO: Ensure sufficient color contrast -->\n<!-- TODO: Add focus-visible styles -->\n\n<!-- TODO: Add skip link as first element -->\n\n<nav class=\"navbar\">\n  <!-- TODO: Add aria-label for navigation -->\n  <a href=\"/\">Home</a>\n  <a href=\"/about\">About</a>\n  <button class=\"dropdown-toggle\">Menu</button>\n  <!-- TODO: Add aria-expanded and aria-controls for dropdown -->\n  <div class=\"dropdown-menu\">\n    <a href=\"/profile\">Profile</a>\n    <a href=\"/settings\">Settings</a>\n  </div>\n</nav>\n\n<!-- TODO: Add role, aria-live for status messages -->\n<div class=\"status-message\">Form submitted successfully!</div>\n\n<!-- TODO: Add aria-describedby for form validation -->\n<form>\n  <label for=\"email\">Email</label>\n  <input id=\"email\" type=\"email\">\n  <span class=\"error\">Please enter a valid email</span>\n</form>\n\n/* TODO: Add focus-visible styles */\n/* TODO: Add sr-only class for screen reader text */"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:aria-label",
+      "must_include:aria-expanded",
+      "must_include:aria-controls",
+      "must_include:aria-live",
+      "must_include:aria-describedby",
+      "must_include:focus-visible",
+      "must_include:skip",
+      "must_include:sr-only"
+    ]
+  }
+}

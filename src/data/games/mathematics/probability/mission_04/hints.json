@@ -1,0 +1,10 @@
+{
+  "mission_04": [
+    "Use scipy.stats.norm.pdf(x, loc=mu, scale=sigma) for the normal PDF.",
+    "Use scipy.stats.norm.cdf(x, loc=mu, scale=sigma) for the normal CDF.",
+    "P(a < X < b) = CDF(b) - CDF(a).",
+    "Use scipy.stats.norm.ppf(0.95) for the 95th percentile.",
+    "Use scipy.stats.binom.pmf(k, n, p) for binomial probabilities.",
+    "Use scipy.stats.poisson.pmf(k, mu) for Poisson probabilities."
+  ]
+}

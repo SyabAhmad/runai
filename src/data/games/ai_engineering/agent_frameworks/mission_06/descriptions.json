@@ -1,0 +1,3 @@
+{
+  "mission_06": "Agents need **multiple types of memory** to function effectively:\n\n1. **Short-term memory** — the conversation history that fits in the context window\n2. **Long-term memory** — a vector database of past interactions, searchable by similarity\n3. **Working memory** — the current task state and intermediate results\n\nThe challenge: context windows are finite. When the conversation gets too long, you must:\n- **Summarize** older messages into a compressed form\n- **Archive** the summary in long-term memory\n- **Retrieve** relevant past interactions when needed\n\nThis is how ChatGPT remembers your preferences across sessions and how enterprise agents maintain context over days or weeks of interaction."
+}

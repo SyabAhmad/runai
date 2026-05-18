@@ -1,0 +1,3 @@
+{
+  "mission_04": "Great progress! You have implemented KNN imputation, a powerful technique that leverages feature similarity to fill missing values intelligently. By finding the k nearest neighbors for each incomplete sample and averaging their values, KNN imputation captures local structure in the data that simple methods miss. You observed how the choice of k affects accuracy, with the optimal value depending on the dataset characteristics. KNN imputation is particularly effective when features are correlated and the dataset has meaningful clusters or patterns. While computationally more expensive than mean imputation, the quality improvement often justifies the additional cost, especially for downstream tasks that are sensitive to imputation accuracy."
+}

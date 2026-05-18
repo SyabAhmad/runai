@@ -1,0 +1,6 @@
+{
+  "title": "Web Security",
+  "description": "Secure web applications against XSS, CSRF, and other attacks. Covers CORS, CSP headers, authentication best practices, input validation, HTTPS, security headers, OWASP top 10, and secure session management.",
+  "difficulty": "hard",
+  "order": 10
+}

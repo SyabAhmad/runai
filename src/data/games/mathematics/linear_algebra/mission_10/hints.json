@@ -1,0 +1,10 @@
+{
+  "mission_10": [
+    "Generate X with np.random.randn(100, 3) and set seed for reproducibility.",
+    "Compute y = X @ true_weights + noise.",
+    "Add bias column with np.column_stack([np.ones(100), X]).",
+    "Normal equation: w = np.linalg.inv(X_bias.T @ X_bias) @ X_bias.T @ y.",
+    "R-squared = 1 - SS_res / SS_tot where SS_res = sum((y - y_pred)^2).",
+    "Center data by subtracting the mean of each feature before PCA."
+  ]
+}

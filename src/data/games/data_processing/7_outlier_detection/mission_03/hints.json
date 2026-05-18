@@ -1,0 +1,7 @@
+{
+  "mission_03": [
+    "Use np.cov(data.T) to compute the covariance matrix of the data.",
+    "The inverse covariance matrix (precision matrix) is needed for Mahalanobis distance.",
+    "Use chi2.ppf(1-alpha, df=p) to get the threshold from the chi-squared distribution."
+  ]
+}

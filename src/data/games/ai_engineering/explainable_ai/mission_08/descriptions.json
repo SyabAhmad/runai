@@ -1,0 +1,3 @@
+{
+  "mission_08": "Attention visualization reveals how transformer models allocate their focus across input tokens. Multi-head attention computes scaled dot-product attention: Q @ K^T / sqrt(d_k), followed by softmax, then applied to V. Each attention head learns different patterns — some focus on local context, others on long-range dependencies, and some exhibit positional or syntactic patterns. In this mission, you implement multi-head attention from scratch with Q, K, V projections, head splitting via reshape and transpose, scaled dot-product computation with softmax normalization, and attention application. You also implement analysis functions that compute attention entropy (focus measure), self-attention ratios, and attention flow across layers."
+}

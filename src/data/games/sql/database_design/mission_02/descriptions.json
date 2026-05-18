@@ -1,0 +1,3 @@
+{
+  "mission_02": "Second Normal Form (2NF) requires that all non-key columns depend on the entire primary key, not just part of it. When a table has a composite key, columns that depend on only one part of the key should be moved to a separate table. This eliminates data duplication and update anomalies."
+}

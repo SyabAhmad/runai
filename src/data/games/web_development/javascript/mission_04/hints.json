@@ -1,0 +1,7 @@
+{
+  "mission_04": [
+    "In the constructor, use this.owner = owner and this.balance = balance. Add methods to the prototype or as class methods.",
+    "Getters and setters use the get and set keywords: get fahrenheit() { return this._celsius * 9/5 + 32; }.",
+    "For deep clone, use JSON.parse(JSON.stringify(obj)) for simple objects, or implement recursive cloning for complex cases."
+  ]
+}

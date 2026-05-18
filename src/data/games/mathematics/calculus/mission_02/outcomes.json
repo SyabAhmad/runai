@@ -1,0 +1,3 @@
+{
+  "mission_02": "Excellent! You have applied the chain rule to differentiate a composite function. For h(x) = sin(x^2 + 1), the derivative is h'(x) = cos(x^2 + 1) * 2x. At x = 1.5, this gives h'(1.5) = cos(3.25) * 3. The numerical verification confirms the result. The chain rule is the mathematical foundation of backpropagation — every neural network training step applies the chain rule through dozens or hundreds of layers. Mastering this rule means you understand the core mechanism that enables deep learning."
+}

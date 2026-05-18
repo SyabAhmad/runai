@@ -1,0 +1,20 @@
+{
+  "title": "LangChain Agent with Tools",
+  "id": "mission_01",
+  "type": "ai_code",
+  "xpReward": 60,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "# Agent Frameworks Mission 01: LangChain Agent with Tools\n#\n# LangChain is the most popular agent framework.\n# It connects LLMs to tools (search, calculators, APIs).\n#\n# Your goal: Implement create_agent_with_tools(llm, tools)\n#   1. Define a tool registry: {name: function}\n#   2. Create a prompt template with tool descriptions\n#   3. Build agent loop: parse input -> select tool -> execute -> format output\n#   4. Return agent response\n\nimport re\n\ndef create_agent_with_tools(llm, tools):\n    # TODO: Build tool registry from tools list\n    # TODO: Create prompt with available tool descriptions\n    # TODO: Implement agent loop: detect intent, call tool, return result\n    # TODO: Handle unknown requests gracefully\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def create_agent_with_tools",
+      "must_include:tools",
+      "must_include:llm",
+      "must_include:registry",
+      "must_include:return"
+    ]
+  }
+}

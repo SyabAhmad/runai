@@ -1,0 +1,3 @@
+{
+  "mission_01": "The derivative measures the instantaneous rate of change of a function. Geometrically, it is the slope of the tangent line at a point. The power rule states that d/dx[x^n] = n*x^(n-1). Numerical differentiation uses finite differences: f'(x) ≈ (f(x+h) - f(x))/h for small h. The second derivative measures curvature — positive means concave up, negative means concave down. Derivatives are the foundation of optimization: finding where f'(x) = 0 locates critical points (minima, maxima, saddle points). In machine learning, gradients (multivariate derivatives) drive every training algorithm."
+}

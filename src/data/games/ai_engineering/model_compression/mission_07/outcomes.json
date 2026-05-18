@@ -1,0 +1,3 @@
+{
+  "mission_07": "You implemented speculative decoding! This gives 2-3x speedup with zero quality loss. It's the most practical acceleration technique for LLM inference and is supported by vLLM, TGI, and llama.cpp."
+}

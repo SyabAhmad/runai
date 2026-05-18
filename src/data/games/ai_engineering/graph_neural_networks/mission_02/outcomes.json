@@ -1,0 +1,3 @@
+{
+  "mission_02": "Excellent work! You have implemented the Graph Attention mechanism that powers GATs. By learning attention coefficients, your model can now dynamically weigh the importance of each neighbor, making it far more expressive than fixed-weight aggregation. This attention mechanism is the foundation for many modern graph architectures, including Graph Transformers. You now understand how to compute pairwise scores, apply softmax normalization, and perform weighted feature aggregation."
+}

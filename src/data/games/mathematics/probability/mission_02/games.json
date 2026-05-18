@@ -1,0 +1,17 @@
+{
+  "title": "Bayes' Theorem",
+  "id": "mission_02",
+  "type": "ai_code",
+  "xpReward": 60,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "import numpy as np\n\n# TODO: Medical test scenario\n# Disease prevalence: P(D) = 0.01 (1% of population has the disease)\np_disease = None\n\n# TODO: Test sensitivity: P(Positive | Disease) = 0.95\np_pos_given_disease = None\n\n# TODO: Test specificity: P(Negative | No Disease) = 0.90\np_neg_given_no_disease = None\n\n# TODO: Compute P(Positive | No Disease) = 1 - specificity\np_pos_given_no_disease = None\n\n# TODO: Compute P(Positive) using law of total probability\n# P(Pos) = P(Pos|D)*P(D) + P(Pos|~D)*P(~D)\np_positive = None\n\n# TODO: Apply Bayes' theorem: P(Disease | Positive) = P(Pos|D)*P(D) / P(Pos)\np_disease_given_positive = None\n\n# TODO: What if the patient tests positive twice (independent tests)?\n# P(D | Pos, Pos) = P(Pos|D)^2 * P(D) / P(Pos, Pos)\np_disease_given_two_positive = None\n\n# TODO: Compute P(Disease | Negative)\np_disease_given_negative = None\n\nprint(f\"P(Disease) = {p_disease}\")\nprint(f\"P(Positive|Disease) = {p_pos_given_disease}\")\nprint(f\"P(Positive) = {p_positive:.4f}\")\nprint(f\"P(Disease|Positive) = {p_disease_given_positive:.4f}\")\nprint(f\"P(Disease|Two Positive) = {p_disease_given_two_positive:.4f}\")\nprint(f\"P(Disease|Negative) = {p_disease_given_negative:.6f}\")\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:numpy",
+      "must_include:bayes"
+    ]
+  }
+}

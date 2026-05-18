@@ -1,0 +1,7 @@
+{
+  "mission_08": [
+    "Power iteration: v_{k+1} = A*v_k / ||A*v_k||, eigenvalue = v^T * A * v",
+    "Inverse iteration: solve (A - mu*I)*w = v, then normalize w",
+    "QR algorithm: A_{k+1} = R_k * Q_k where A_k = Q_k * R_k"
+  ]
+}

@@ -1,0 +1,3 @@
+{
+  "mission_02": "import numpy as np\n\ndef reverse_diffusion(x_t, t, model, alpha_bar, beta):\n    alpha = 1 - beta\n    epsilon_pred = model(x_t, t)\n    coef1 = 1.0 / np.sqrt(alpha[t])\n    coef2 = (1 - alpha[t]) / np.sqrt(1 - alpha_bar[t])\n    x_prev = coef1 * (x_t - coef2 * epsilon_pred)\n    if t > 0:\n        sigma = np.sqrt(beta[t])\n        x_prev += sigma * np.random.randn(*x_t.shape)\n    return x_prev"
+}

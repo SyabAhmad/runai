@@ -1,0 +1,6 @@
+{
+  "title": "SQL Basics",
+  "description": "Learn SQL fundamentals including SELECT, WHERE, ORDER BY, GROUP BY, basic joins, and common functions.",
+  "difficulty": "easy",
+  "order": 1
+}

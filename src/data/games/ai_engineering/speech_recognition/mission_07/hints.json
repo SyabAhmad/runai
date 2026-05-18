@@ -1,0 +1,7 @@
+{
+  "mission_07": [
+    "The streaming buffer accumulates incoming audio until it reaches chunk_size, then processes the chunk and retains the overlap portion for the next iteration.",
+    "The encoder state is passed between chunks: new_state = tanh(input_proj + prev_state @ W_state), enabling temporal continuity across chunk boundaries.",
+    "Finalize pads any remaining buffer content to chunk_size and processes it, ensuring no audio is lost at the end of the stream."
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "title": "Building Accessible Forms",
+  "id": "mission_02",
+  "type": "ai_code",
+  "xpReward": 60,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "<!-- TODO: Add proper labels associated with each input -->\n<!-- TODO: Use fieldset and legend to group related fields -->\n<!-- TODO: Add required, placeholder, and type attributes -->\n<!-- TODO: Include proper form structure with submit button -->\n\n<form>\n  <div>Full Name: <input name=\"fullname\"></div>\n  <div>Email: <input name=\"email\"></div>\n  <div>Password: <input name=\"password\"></div>\n  <div>Age: <input name=\"age\"></div>\n  <div>Subscribe to newsletter: <input type=\"checkbox\" name=\"subscribe\"></div>\n  <div>\n    Gender:\n    <input type=\"radio\" name=\"gender\" value=\"male\"> Male\n    <input type=\"radio\" name=\"gender\" value=\"female\"> Female\n  </div>\n  <div><button>Send</button></div>\n</form>"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:<label",
+      "must_include:<fieldset>",
+      "must_include:<legend>",
+      "must_include:for=",
+      "must_include:id=",
+      "must_include:required",
+      "must_include:type=\"email\"",
+      "must_include:type=\"password\""
+    ]
+  }
+}

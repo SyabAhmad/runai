@@ -1,3 +1,3 @@
-﻿{
-    "mission_07":  "Implement split_features_target(df, target_col) that separates X and y and returns train_test_split(X, y, test_size=0.2, random_state=42)."
+{
+  "mission_07": "Data profiling is the systematic examination of a dataset to understand its structure, content, and quality. A comprehensive profile includes statistics for each column: data type, row count, mean, standard deviation, minimum, maximum, and null percentage. This information helps identify data quality issues, understand distributions, and determine appropriate preprocessing steps. Profiling should be the first step in any data analysis project, as it reveals patterns, anomalies, and potential problems before they impact downstream analysis. Automated profiling tools can generate these reports quickly, but understanding the underlying statistics is essential for proper interpretation."
 }

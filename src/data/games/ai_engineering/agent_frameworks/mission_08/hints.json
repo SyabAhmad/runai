@@ -1,0 +1,7 @@
+{
+  "mission_08": [
+    "Input check: `for g in guardrails['input_filter']: if not g(input): return blocked`.",
+    "Action check: `if 'action_filter' in guardrails: for g in guardrails['action_filter']: if not g(action): return blocked`.",
+    "Output check: `for g in guardrails['output_filter']: if not g(output): return blocked`."
+  ]
+}

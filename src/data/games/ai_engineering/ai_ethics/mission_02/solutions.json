@@ -1,0 +1,3 @@
+{
+  "mission_02": "import numpy as np\n\ndef fairness_metrics(predictions, labels, protected):\n    groups = np.unique(protected)\n    g0, g1 = groups[0], groups[1]\n    # Demographic parity\n    dp = abs(np.mean(predictions[protected == g0]) - np.mean(predictions[protected == g1]))\n    # Equal opportunity\n    tpr_0 = np.mean(predictions[(protected == g0) & (labels == 1)])\n    tpr_1 = np.mean(predictions[(protected == g1) & (labels == 1)])\n    eo = abs(tpr_0 - tpr_1)\n    # Equalized odds\n    fpr_0 = np.mean(predictions[(protected == g0) & (labels == 0)])\n    fpr_1 = np.mean(predictions[(protected == g1) & (labels == 0)])\n    eodds = max(eo, abs(fpr_0 - fpr_1))\n    return {'demographic_parity': dp, 'equal_opportunity': eo, 'equalized_odds': eodds}"
+}

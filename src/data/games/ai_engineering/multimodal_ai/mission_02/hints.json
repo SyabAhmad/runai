@@ -1,0 +1,7 @@
+{
+  "mission_02": [
+    "Start: `caption = [vocab['<start>']]`.",
+    "Attention: `context = attention(decoder_hidden, image_features)`.",
+    "Generate: `next_token = argmax(softmax(decoder(context, caption)))`."
+  ]
+}

@@ -1,0 +1,3 @@
+{
+  "mission_09": "The query planner chooses between Nested Loop, Hash Join, and Merge Join strategies based on table sizes, available indexes, and statistics. Nested Loops work well for small result sets with indexes, Hash Joins excel for large unsorted data, and Merge Joins are optimal when both inputs are sorted. Understanding these strategies helps you guide the planner toward better plans."
+}

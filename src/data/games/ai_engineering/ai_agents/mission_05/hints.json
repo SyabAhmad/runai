@@ -1,7 +1,7 @@
 {
   "mission_05": [
-    "Think about the core concepts",
-    "Consider best practices",
-    "Use appropriate tools"
+    "For \"remember: X is Y\", split on \" is \" after removing the prefix to get key and value.",
+    "For \"recall: X\", use `memory.get(key, \"Not found\")` for safe lookup.",
+    "For \"list\", join the memory items: `\", \".join(f\"{k}={v}\" for k, v in memory.items())`"
   ]
 }

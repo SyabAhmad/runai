@@ -1,0 +1,20 @@
+{
+  "title": "RLHF: Safety Alignment",
+  "id": "mission_07",
+  "type": "ai_code",
+  "xpReward": 100,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "# AI Ethics Mission 07: RLHF Safety Alignment\n#\n# RLHF (Reinforcement Learning from Human Feedback) aligns models with human values.\n# Steps:\n# 1. Collect human preference data (response A vs B)\n# 2. Train reward model to predict preferences\n# 3. Optimize policy with PPO using reward model\n# 4. Add KL penalty to prevent drift from base model\n#\n# Reward: R = reward_model(output) - beta * KL(policy || reference)\n#\n# Your goal: implement rlhf_reward(output, reference, reward_model, beta=0.1)\n#   1. Get reward from reward model\n#   2. Compute KL divergence from reference\n#   3. Apply KL penalty\n#   4. Return final reward\n\nimport numpy as np\n\ndef rlhf_reward(output, reference, reward_model, beta=0.1):\n    # TODO: Get reward\n    # TODO: Compute KL\n    # TODO: Apply penalty\n    # TODO: Return final reward\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def rlhf_reward",
+      "must_include:reward_model",
+      "must_include:kl_divergence",
+      "must_include:beta",
+      "must_include:return"
+    ]
+  }
+}

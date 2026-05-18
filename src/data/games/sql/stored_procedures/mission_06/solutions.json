@@ -1,0 +1,3 @@
+{
+  "mission_06": "CREATE OR REPLACE FUNCTION validate_employee_salary()\nRETURNS TRIGGER\nLANGUAGE plpgsql\nAS $$\nBEGIN\n    IF NEW.salary <= 0 OR NEW.salary > 500000 THEN\n        RAISE EXCEPTION 'Invalid salary: %. Must be between 0 and 500000', NEW.salary;\n    END IF;\n    RETURN NEW;\nEND;\n$$;\n\nCREATE TRIGGER trg_validate_salary\nBEFORE INSERT OR UPDATE ON employees\nFOR EACH ROW EXECUTE FUNCTION validate_employee_salary();"
+}

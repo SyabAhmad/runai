@@ -1,0 +1,20 @@
+{
+  "title": "Markov Decision Process (MDP)",
+  "id": "mission_01",
+  "type": "ai_code",
+  "xpReward": 60,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "# RL Mission 01: Markov Decision Process (MDP)\n#\n# An MDP defines a reinforcement learning environment with:\n#   - States (S): possible situations\n#   - Actions (A): possible moves\n#   - Transition probabilities P(s'|s,a)\n#   - Rewards R(s,a,s')\n#   - Discount factor gamma\n#\n# Your goal: Implement simulate_mdp(states, actions, transitions,\n#   rewards, policy, gamma, max_steps)\n#   1. Start at state 0\n#   2. For each step: choose action from policy[current_state]\n#   3. Sample next state from transitions[current_state][action]\n#   4. Accumulate discounted reward: total += gamma^step * reward\n#   5. Return total reward and trajectory\n\nimport numpy as np\n\ndef simulate_mdp(states, actions, transitions, rewards, policy, gamma, max_steps):\n    # TODO: Initialize state = 0, total_reward = 0, trajectory = []\n    # TODO: Loop max_steps: pick action, sample next state, add reward\n    # TODO: Apply discount factor gamma^step\n    # TODO: Return total_reward and trajectory\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def simulate_mdp",
+      "must_include:gamma",
+      "must_include:trajectory",
+      "must_include:reward",
+      "must_include:return"
+    ]
+  }
+}

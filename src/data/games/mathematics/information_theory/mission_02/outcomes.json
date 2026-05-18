@@ -1,0 +1,3 @@
+{
+  "mission_02": "Well done! You have implemented cross-entropy loss functions used in virtually all modern classification models. Cross-entropy is the standard loss function for neural network classifiers because it provides strong gradients when predictions are wrong and vanishing gradients when predictions are correct, enabling efficient training through backpropagation."
+}

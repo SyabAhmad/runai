@@ -1,0 +1,3 @@
+{
+  "mission_10": "JavaScript modules organize code into reusable, encapsulated units. ES modules (import/export) are the standard for modern JavaScript, but the Module pattern using IIFEs (Immediately Invoked Function Expressions) provides encapsulation in environments without module support. A plugin system lets third-party code hook into your application at defined extension points. In this capstone mission, you will build a Storage module, a Validator module, a Plugin system, and an App that composes them all — demonstrating professional JavaScript architecture."
+}

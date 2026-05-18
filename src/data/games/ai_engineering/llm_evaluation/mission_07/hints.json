@@ -1,0 +1,7 @@
+{
+  "mission_07": [
+    "Extract claims: split generated text into sentences.",
+    "NLI: `result = nli_model(premise=source, hypothesis=claim)`.",
+    "Hallucination rate: `contradictions / total_claims`."
+  ]
+}

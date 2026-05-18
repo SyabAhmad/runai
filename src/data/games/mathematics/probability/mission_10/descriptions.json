@@ -1,0 +1,3 @@
+{
+  "mission_10": "Probability is the mathematical language of uncertainty in machine learning. Naive Bayes classifiers use Bayes' theorem with the assumption that features are conditionally independent given the class. Despite this strong assumption, Naive Bayes works remarkably well for text classification. Maximum Likelihood Estimation (MLE) finds the parameters that maximize the probability of observing the data. The log-odds ratio compares the relative likelihood of two classes. Probability underpins all of ML: from loss functions (cross-entropy) to regularization (Bayesian priors) to model evaluation (confidence intervals). Understanding probability makes you a better ML practitioner."
+}

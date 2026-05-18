@@ -1,0 +1,3 @@
+{
+  "mission_06": "Excellent! You have implemented constraint-based learning that enforces domain knowledge during model training. Your learner supports multiple constraint types — monotonicity ensures parameters maintain expected signs, ordering enforces relative importance, sum constraints fix total weight budgets, and sparsity encourages parsimonious models. The dual approach of soft penalties (gradient-based) and hard projections (feasibility enforcement) ensures both data fit and constraint satisfaction. This is essential for building trustworthy AI systems in regulated domains: monotonic models for credit scoring, ordering constraints for clinical risk factors, and sparsity for interpretable feature selection."
+}

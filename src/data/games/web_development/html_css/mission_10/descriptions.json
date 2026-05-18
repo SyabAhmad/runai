@@ -1,0 +1,3 @@
+{
+  "mission_10": "Web accessibility (a11y) ensures that people with disabilities can perceive, understand, navigate, and interact with your website. This mission covers essential accessibility patterns: skip navigation links for keyboard users, ARIA attributes (aria-label, aria-expanded, aria-controls, aria-live, aria-describedby) for screen reader support, focus-visible styles for visible keyboard focus, and a sr-only utility class for visually hidden but screen-reader-accessible text. Accessibility is not optional — it is a fundamental requirement of professional web development."
+}

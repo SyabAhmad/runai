@@ -1,0 +1,20 @@
+{
+  "title": "Noise Schedule (Linear & Cosine)",
+  "id": "mission_03",
+  "type": "ai_code",
+  "xpReward": 70,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "# Diffusion Models Mission 03: Noise Schedule\n#\n# The noise schedule β_t controls how much noise is added at each step.\n# Common schedules: linear, cosine, quadratic.\n#\n# Linear: β_t = β_1 + (t/T) * (β_T - β_1)\n# Cosine: β_t = cos((t/T + s) / (1 + s) * π/2)^2\n#\n# Your goal: Implement create_noise_schedule(num_steps, schedule_type)\n#   1. For 'linear': compute linearly increasing values\n#   2. For 'cosine': compute cosine-based schedule\n#   3. Return β, α (1-β), and α_bar (cumprod of α)\n\nimport numpy as np\n\ndef create_noise_schedule(num_steps, schedule_type='linear'):\n    # TODO: Implement linear schedule\n    # TODO: Implement cosine schedule\n    # TODO: Compute alpha and alpha_bar\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def create_noise_schedule",
+      "must_include:linear",
+      "must_include:cosine",
+      "must_include:cumprod",
+      "must_include:return"
+    ]
+  }
+}

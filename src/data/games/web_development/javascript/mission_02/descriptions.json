@@ -1,0 +1,3 @@
+{
+  "mission_02": "Functions are the building blocks of JavaScript. Arrow functions (=>) provide concise syntax and lexically bind this, while traditional functions have their own this context. Default parameters let you specify fallback values, rest parameters (...args) collect remaining arguments into an array, and higher-order functions accept or return other functions. Understanding scope — block scope with let/const versus function scope with var — is critical for writing predictable code."
+}

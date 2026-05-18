@@ -1,0 +1,3 @@
+{
+  "mission_09": "**Text-to-image generation** is the flagship multimodal application.\n\n**DALL-E architecture**: CLIP text encoder + Diffusion model.\n\n**Process**:\n1. Text → CLIP embedding (768-dim)\n2. Start from random noise (64×64×4 latent)\n3. At each step, U-Net predicts noise conditioned on text\n4. Classifier-free guidance steers generation toward the prompt\n5. VAE decoder converts latent to pixel image\n\n**Key techniques**:\n- **Classifier-free guidance**: Combines conditional and unconditional predictions\n- **Latent diffusion**: Operates in compressed space for speed\n- **CFG scale**: Controls prompt adherence (7.5 is standard)\n\n**Modern systems**: DALL-E 3, Midjourney, Stable Diffusion all use this paradigm."
+}

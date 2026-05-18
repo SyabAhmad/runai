@@ -1,0 +1,9 @@
+{
+  "mission_05": [
+    "Create grid with np.linspace(feature_values.min(), feature_values.max(), grid_resolution).",
+    "Copy X: X_modified = X.copy().",
+    "Get predictions: predictions = model.predict(X_modified).",
+    "Average: pd_values[i] = np.mean(predictions).",
+    "For 2D PDP: set both features and average; for ICE: modify only sample s and store individual prediction."
+  ]
+}

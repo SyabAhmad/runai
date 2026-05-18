@@ -1,0 +1,20 @@
+{
+  "title": "CLIP: Contrastive Language-Image Pretraining",
+  "id": "mission_01",
+  "type": "ai_code",
+  "xpReward": 70,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "# Multimodal AI Mission 01: CLIP\n#\n# CLIP learns visual concepts from natural language supervision.\n# It trains an image encoder and text encoder to maximize cosine similarity\n# of matching image-text pairs.\n#\n# Contrastive loss: For a batch of N pairs, compute N×N similarity matrix.\n# Diagonal = positive pairs, off-diagonal = negative pairs.\n# Loss = -log(exp(sim(i,j)/τ) / Σ_k exp(sim(i,k)/τ))\n#\n# Your goal: Implement clip_contrastive_loss(image_embeds, text_embeds, temperature)\n#   1. Compute similarity matrix (image × text)\n#   2. Apply temperature scaling\n#   3. Compute cross-entropy loss for both directions\n#   4. Return average loss\n\nimport numpy as np\n\ndef clip_contrastive_loss(image_embeds, text_embeds, temperature=0.07):\n    # TODO: Compute similarity matrix\n    # TODO: Apply temperature\n    # TODO: Compute cross-entropy loss\n    # TODO: Return average\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def clip_contrastive_loss",
+      "must_include:similarity",
+      "must_include:temperature",
+      "must_include:softmax",
+      "must_include:return"
+    ]
+  }
+}

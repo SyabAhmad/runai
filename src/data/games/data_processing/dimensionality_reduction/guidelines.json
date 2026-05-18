@@ -1,0 +1,6 @@
+{
+  "title": "Dimensionality Reduction",
+  "description": "Master dimensionality reduction techniques including PCA, t-SNE, UMAP, feature selection, and LDA. Learn to reduce feature space while preserving information, visualize high-dimensional data, and improve model performance.",
+  "difficulty": "advanced",
+  "order": 4
+}

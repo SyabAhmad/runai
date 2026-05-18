@@ -1,0 +1,6 @@
+{
+  "title": "Database Design",
+  "description": "Master the principles of relational database design including normalization forms (1NF, 2NF, 3NF, BCNF), entity-relationship modeling, constraint design, and foreign key relationships. Learn to design schemas that eliminate redundancy, ensure data integrity, and scale efficiently.",
+  "difficulty": "intermediate",
+  "order": 5
+}

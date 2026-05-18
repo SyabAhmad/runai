@@ -1,3 +1,3 @@
 {
-  "mission_09": "Complete ai agents mission 9 to master this technology."
+  "mission_09": "RAG (Retrieval-Augmented Generation) is how modern AI agents access knowledge. Instead of relying only on their training data, agents retrieve relevant information from a knowledge base before responding. This is how ChatGPT browsing, Bing Chat, and Perplexity work.\n\nYour agent has a `knowledge_base` dictionary. Build `rag_agent(task, knowledge)` that:\n1. **`ask: <topic>`** — searches the knowledge base for the topic (case-insensitive)\n2. **`list`** — returns all available topics\n3. Returns `{\"task\": task, \"knowledge\": knowledge_text, \"result\": response, \"status\": \"ok\" | \"error\"}`\n\nIn production, the knowledge base would be a vector database like Pinecone or Weaviate, but the pattern is the same — retrieve relevant context, then respond."
 }

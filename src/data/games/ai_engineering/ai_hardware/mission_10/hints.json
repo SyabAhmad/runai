@@ -1,0 +1,9 @@
+{
+  "mission_10": [
+    "Total latency: total_latency = max(compute_latency, memory_latency).",
+    "Average power: avg_power = total_energy / (total_latency / 1000).",
+    "Feasibility: within_power and sram_fit.",
+    "Optimal latency: min(feasible, key=lambda x: x['latency_ms']).",
+    "Pareto: check no other point has both lower latency AND lower energy."
+  ]
+}

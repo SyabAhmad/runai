@@ -1,0 +1,21 @@
+{
+  "title": "Time Series Anomaly Detection",
+  "id": "mission_09",
+  "type": "ai_code",
+  "xpReward": 110,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "import numpy as np\nimport pandas as pd\n\n# TODO: Create a time series with trends, seasonality, and anomalies\n\n# TODO: Implement multiple time series anomaly detection methods:\n# 1. Rolling Z-score (deviation from rolling mean)\n# 2. Seasonal decomposition residuals\n# 3. Exponential smoothing prediction errors\n\n# TODO: For each method:\n# - Compute anomaly scores\n# - Set appropriate thresholds\n# - Flag anomalous time points\n\n# TODO: Compare detection results across methods\n\ndef time_series_anomaly_detection():\n    # TODO: Create time series with known anomalies\n    # TODO: Apply rolling Z-score method\n    # TODO: Apply decomposition-based method\n    # TODO: Compare results\n    pass\n\n# TODO: Run the detection\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:rolling",
+      "must_include:mean",
+      "must_include:std",
+      "must_include:seasonal_decompose",
+      "must_include:resid",
+      "must_include:ewm"
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "title": "KKT Conditions",
+  "id": "mission_06",
+  "type": "ai_code",
+  "xpReward": 85,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import numpy as np\n\ndef verify_kkt_conditions(x, grad_f, grad_g, grad_h, g_vals, h_vals, lambda_vals, mu_vals):\n    \"\"\"\n    Verify Karush-Kuhn-Tucker conditions for optimality\n    x: candidate solution point\n    grad_f: gradient of objective function at x\n    grad_g: gradients of inequality constraints g_i(x) <= 0\n    grad_h: gradients of equality constraints h_j(x) = 0\n    g_vals: values of inequality constraints at x\n    h_vals: values of equality constraints at x\n    lambda_vals: Lagrange multipliers for inequality constraints\n    mu_vals: Lagrange multipliers for equality constraints\n    \"\"\"\n    tol = 1e-6\n    \n    # TODO: Check stationarity: grad_f + sum(lambda_i * grad_g_i) + sum(mu_j * grad_h_j) = 0\n    stationarity = ...\n    \n    # TODO: Check primal feasibility: g_i(x) <= 0 and h_j(x) = 0\n    primal_feasible_ineq = ...\n    primal_feasible_eq = ...\n    \n    # TODO: Check dual feasibility: lambda_i >= 0\n    dual_feasible = ...\n    \n    # TODO: Check complementary slackness: lambda_i * g_i(x) = 0\n    comp_slackness = ...\n    \n    return {\n        'stationarity': np.linalg.norm(stationarity) < tol,\n        'primal_feasible': primal_feasible_ineq and primal_feasible_eq,\n        'dual_feasible': dual_feasible,\n        'complementary_slackness': comp_slackness\n    }\n\n# Example: min x^2 + y^2 s.t. x + y >= 1 (i.e., -x - y + 1 <= 0)\nx = np.array([0.5, 0.5])\ngrad_f = np.array([1.0, 1.0])\ngrad_g = np.array([[-1.0, -1.0]])\ng_vals = np.array([0.0])\nlambda_vals = np.array([1.0])\n\nresult = verify_kkt_conditions(x, grad_f, grad_g, np.array([]).reshape(0,2), \n                                g_vals, np.array([]), lambda_vals, np.array([]))\nprint(f\"KKT conditions satisfied: {all(result.values())}\")"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:stationarity",
+      "must_include:complementary_slackness",
+      "must_include:numpy"
+    ]
+  }
+}

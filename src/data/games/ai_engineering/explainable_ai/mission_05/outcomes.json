@@ -1,0 +1,3 @@
+{
+  "mission_05": "Great work! You have implemented Partial Dependence Plots and ICE curves for model interpretation. Your PDP implementation correctly marginalizes over the feature distribution by replacing the target feature with grid values across all samples and averaging predictions. The 2D PDP reveals feature interactions, while ICE curves expose heterogeneous effects that the average PDP might hide. These tools are essential for understanding global model behavior and validating that models capture expected relationships between features and targets."
+}

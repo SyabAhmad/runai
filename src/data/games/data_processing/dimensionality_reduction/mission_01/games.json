@@ -1,0 +1,18 @@
+{
+  "title": "PCA Basics",
+  "id": "mission_01",
+  "type": "ai_code",
+  "xpReward": 60,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "import pandas as pd\nimport numpy as np\nfrom sklearn.decomposition import PCA\nfrom sklearn.preprocessing import StandardScaler\n\n# TODO: Create a dataset with correlated features\nnp.random.seed(42)\nX = np.random.randn(100, 4)\nX[:, 1] = X[:, 0] * 0.8 + np.random.randn(100) * 0.2\nX[:, 2] = X[:, 0] * 0.6 + np.random.randn(100) * 0.3\n\n# TODO: Standardize the data\nscaler = ...\nX_scaled = ...\n\n# TODO: Apply PCA to reduce to 2 components\npca = ...\nX_pca = ...\n\nprint(f\"Explained variance ratio: {pca.explained_variance_ratio_}\")\nprint(f\"Total variance explained: {sum(pca.explained_variance_ratio_):.4f}\")\nprint(f\"Transformed shape: {X_pca.shape}\")\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:PCA",
+      "must_include:StandardScaler",
+      "must_include:fit_transform"
+    ]
+  }
+}

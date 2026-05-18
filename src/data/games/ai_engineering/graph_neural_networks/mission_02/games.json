@@ -1,0 +1,22 @@
+{
+  "mission_02": {
+    "title": "Graph Attention Networks",
+    "id": "mission_02",
+    "type": "ai_code",
+    "xpReward": 60,
+    "difficulty": "easy",
+    "initialState": {
+      "content": "import numpy as np\n\n\ndef compute_attention_scores(h_i, h_j, a):\n    \"\"\"Compute attention scores between node i and node j.\n    \n    TODO: Concatenate h_i and h_j\n    TODO: Compute e_ij = LeakyReLU(a^T @ [h_i || h_j])\n    \"\"\"\n    # TODO: Concatenate neighbor features\n    concat = None\n    \n    # TODO: Apply attention mechanism\n    e_ij = None\n    \n    # TODO: Apply LeakyReLU with alpha=0.2\n    e_ij = None\n    \n    return e_ij\n\n\ndef attention_aggregate(H, edge_index, a, W):\n    \"\"\"Graph Attention layer: aggregate neighbors with attention weights.\n    \n    TODO: Transform features: h_i = W @ x_i\n    TODO: Compute attention scores for all edges\n    TODO: Apply softmax over neighbors for each node\n    TODO: Aggregate neighbor features weighted by attention\n    \"\"\"\n    num_nodes = H.shape[0]\n    out_dim = W.shape[1]\n    H_new = np.zeros((num_nodes, out_dim))\n    \n    # TODO: Transform features\n    H_trans = None\n    \n    # TODO: For each node, compute attention over neighbors\n    for i in range(num_nodes):\n        # Find neighbors of node i\n        neighbors = edge_index[1][edge_index[0] == i]\n        \n        if len(neighbors) == 0:\n            H_new[i] = H_trans[i]\n            continue\n        \n        # TODO: Compute attention scores\n        scores = []\n        for j in neighbors:\n            e_ij = compute_attention_scores(H_trans[i], H_trans[j], a)\n            scores.append(e_ij)\n        \n        # TODO: Apply softmax\n        scores = np.array(scores)\n        # alpha = exp(e_ij) / sum(exp(e_ik)) for k in neighbors\n        \n        # TODO: Weighted aggregation\n        # H_new[i] = sum(alpha_ij * H_trans[j])\n    \n    return H_new\n"
+    },
+    "validation": {
+      "type": "ai_code",
+      "rules": [
+        "must_include:concatenate",
+        "must_include:LeakyReLU",
+        "must_include:softmax",
+        "must_include:attention",
+        "must_include:W @ x"
+      ]
+    }
+  }
+}

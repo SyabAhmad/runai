@@ -1,3 +1,3 @@
-﻿{
-    "mission_05":  "Excellent. Time features are now explicit for downstream models."
+{
+  "mission_05": "Congratulations! You've mastered outlier detection using the IQR method. By calculating quartiles and identifying data points beyond 1.5 times the IQR from the quartile boundaries, you can systematically flag anomalous values. This technique is distribution-free and works well with skewed data, making it more robust than standard deviation-based methods. Understanding outlier detection is crucial for exploratory data analysis, fraud detection, and ensuring your machine learning models aren't influenced by extreme values."
 }

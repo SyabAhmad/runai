@@ -1,0 +1,3 @@
+{
+  "mission_07": "Brilliant! You have implemented CutMix, a powerful region-based augmentation that combines the best aspects of image mixing and spatial preservation. By cutting and pasting rectangular patches between images, CutMix creates training samples that retain local structure from both source images. The label mixing proportional to patch area provides natural supervision that teaches the model to reason about partial objects. This technique has proven superior to both Mixup and random erasing on many benchmarks, improving classification accuracy, localization ability, and adversarial robustness. CutMix is now a standard component in modern computer vision training pipelines and is supported by most deep learning frameworks."
+}

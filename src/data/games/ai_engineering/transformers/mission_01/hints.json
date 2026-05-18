@@ -1,0 +1,7 @@
+{
+  "mission_01": [
+    "Use `np.matmul(Q, K.T)` or `Q @ K.T` to compute attention scores.",
+    "Scale with `scores / np.sqrt(K.shape[-1])` where `K.shape[-1]` is d_k.",
+    "For softmax: `np.exp(scores) / np.sum(np.exp(scores), axis=-1, keepdims=True)` or use `scipy.special.softmax`."
+  ]
+}

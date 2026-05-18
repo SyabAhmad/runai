@@ -1,0 +1,3 @@
+{
+  "mission_01": "Implement the bisection method, one of the simplest and most reliable root-finding algorithms. The bisection method repeatedly halves an interval [a,b] where f(a) and f(b) have opposite signs, guaranteeing convergence to a root. The method converges linearly, with the error halving at each step, requiring approximately log2((b-a)/tol) iterations to achieve tolerance tol. While slower than Newton's method, bisection is guaranteed to converge for any continuous function with a sign change, making it a robust choice when derivative information is unavailable or unreliable."
+}

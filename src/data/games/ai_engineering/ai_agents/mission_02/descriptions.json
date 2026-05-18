@@ -1,3 +1,3 @@
 {
-  "mission_02": "Complete ai agents mission 2 to master this technology."
+  "mission_02": "Agents become useful when they can use **tools**. A tool is any function an agent can call to interact with the outside world — calculators, web search, databases, APIs.\n\nIn this mission, you'll give your agent a `calculator` tool. The agent should:\n\n1. **Parse** the task to see if it's a calculator request (starts with `\"calc:\"`)\n2. **Use the tool** — extract the expression and call `calculator(expr)`\n3. **Fall back gracefully** — if the task doesn't match, return a polite \"cannot do\" message\n4. **Always return** the structured `{\"task\": ..., \"result\": ...}` format\n\nThis pattern — detect intent, call the right tool, return structured output — is how real agents like ChatGPT Plugins and AutoGPT decide which tool to invoke."
 }

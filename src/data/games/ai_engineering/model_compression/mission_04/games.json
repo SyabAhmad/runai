@@ -1,0 +1,20 @@
+{
+  "title": "Low-Rank Factorization",
+  "id": "mission_04",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "# Model Compression Mission 04: Low-Rank Factorization\n#\n# Large weight matrices can be approximated as product of two smaller matrices.\n# W (m×n) ≈ A (m×r) @ B (r×n) where r << min(m, n).\n#\n# SVD decomposition: W = U @ S @ V^T\n# Keep top-r singular values: W_r = U_r @ S_r @ V_r^T\n#\n# Your goal: implement low_rank_approximation(W, rank)\n#   1. Compute SVD of W\n#   2. Keep top-r singular values\n#   3. Reconstruct approximated matrix\n#   4. Return A, B matrices and reconstruction error\n\nimport numpy as np\n\ndef low_rank_approximation(W, rank):\n    # TODO: SVD decomposition\n    # TODO: Truncate to rank r\n    # TODO: Reconstruct\n    # TODO: Return factors and error\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def low_rank_approximation",
+      "must_include:svd",
+      "must_include:rank",
+      "must_include:reconstruct",
+      "must_include:return"
+    ]
+  }
+}

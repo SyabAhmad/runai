@@ -1,0 +1,7 @@
+{
+  "mission_08": [
+    "Create a SAVEPOINT before each insert: SAVEPOINT sp_insert.",
+    "In the EXCEPTION block, use ROLLBACK TO sp_insert to undo just the failed insert.",
+    "Use CONTINUE in the exception handler to proceed to the next iteration."
+  ]
+}

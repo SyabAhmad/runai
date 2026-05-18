@@ -1,0 +1,7 @@
+{
+  "mission_03": [
+    "Use DENSE_RANK() OVER (ORDER BY total_sales DESC) for continuous ranking.",
+    "Compare results with RANK() to see the difference in gap handling.",
+    "Include product name, category, and total_sales in the output."
+  ]
+}

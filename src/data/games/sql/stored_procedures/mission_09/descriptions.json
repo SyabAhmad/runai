@@ -1,0 +1,3 @@
+{
+  "mission_09": "Denormalized counters maintained by triggers provide fast read access to aggregated data without expensive COUNT queries. By incrementing/decrementing counters on each insert/delete, you trade a small write overhead for significant read performance gains. This pattern is widely used for social media metrics, dashboard counters, and any frequently accessed aggregate."
+}

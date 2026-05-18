@@ -1,0 +1,3 @@
+{
+  "mission_01": "import re\n\ndef create_agent_with_tools(llm, tools):\n    registry = {t[\"name\"]: t[\"func\"] for t in tools}\n    descriptions = {t[\"name\"]: t[\"description\"] for t in tools}\n    def agent(query):\n        for name, desc in descriptions.items():\n            if any(kw in query.lower() for kw in desc.lower().split()):\n                try:\n                    result = registry[name](query)\n                    return {\"tool\": name, \"result\": result}\n                except Exception as e:\n                    return {\"tool\": name, \"error\": str(e)}\n        return {\"tool\": None, \"result\": llm(query)}\n    return agent"
+}

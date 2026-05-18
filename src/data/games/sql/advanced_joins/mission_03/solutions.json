@@ -1,0 +1,3 @@
+{
+  "mission_03": "SELECT p1.product_id, p1.change_date, p1.price AS current_price, p2.price AS previous_price, p1.price - p2.price AS price_diff\nFROM price_history p1\nJOIN price_history p2 ON p1.product_id = p2.product_id\n  AND p2.change_date = (SELECT MAX(change_date) FROM price_history WHERE product_id = p1.product_id AND change_date < p1.change_date)\nORDER BY p1.product_id, p1.change_date;"
+}

@@ -1,0 +1,9 @@
+{
+  "mission_06": [
+    "Forward pass: predictions = X @ self.params.",
+    "Data loss (MSE): data_loss = np.mean((predictions - y) ** 2).",
+    "Constraint loss: c_loss = self.constraint_loss().",
+    "Update: self.params -= lr * (data_grad + constraint_weight * constraint_grad).",
+    "Project: self.params = self.project(self.params) every 10 epochs."
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "title": "Feature Store Concepts with sklearn",
+  "id": "mission_07",
+  "type": "ai_code",
+  "xpReward": 90,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import numpy as np\nimport pandas as pd\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.feature_selection import SelectKBest, f_classif\nimport json\n\n# TODO: Implement a simple Feature Store that:\n# 1. Registers feature definitions with metadata\n# 2. Stores fitted preprocessing pipelines\n# 3. Tracks feature versions and lineage\n# 4. Provides feature retrieval by name\n# 5. Exports feature specifications as JSON\n\nclass FeatureStore:\n    def __init__(self):\n        # TODO: Initialize storage for features, pipelines, metadata\n        pass\n    \n    def register_feature(self, name, pipeline, description, version='1.0'):\n        # TODO: Register a feature with its pipeline and metadata\n        pass\n    \n    def get_feature(self, name, X):\n        # TODO: Retrieve and transform a feature\n        pass\n    \n    def get_all_features(self, X):\n        # TODO: Transform all registered features\n        pass\n    \n    def export_spec(self):\n        # TODO: Export feature store specification as dict/JSON\n        pass\n\n# TODO: Test the feature store with sample features\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:class FeatureStore",
+      "must_include:register_feature",
+      "must_include:get_feature",
+      "must_include:Pipeline",
+      "must_include:StandardScaler",
+      "must_include:SelectKBest"
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "mission_03": [
+    "Treat all other variables as constants when computing a partial derivative.",
+    "df/dx of x^2*y + 3*x*y^2 - 2*y = 2xy + 3y^2.",
+    "df/dy of x^2*y + 3*x*y^2 - 2*y = x^2 + 6xy - 2.",
+    "The gradient is [df/dx, df/dy] as a vector.",
+    "Normalize the direction vector before computing the directional derivative.",
+    "Directional derivative = gradient . (v / ||v||)."
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "title": "Image Captioning (Encoder-Decoder)",
+  "id": "mission_02",
+  "type": "ai_code",
+  "xpReward": 70,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "# Multimodal AI Mission 02: Image Captioning\n#\n# Image captioning generates natural language descriptions of images.\n# Architecture: CNN/ViT encoder + Transformer decoder.\n#\n# Process:\n# 1. Encode image to features: V = encoder(image)\n# 2. Decoder generates caption autoregressively:\n#    P(w_t | w_<t, V) = softmax(Decoder(w_<t, V))\n#\n# Your goal: Implement image_captioning(image_features, vocab, max_length=20)\n#   1. Start with <start> token\n#   2. Attend to image features\n#   3. Generate next token\n#   4. Repeat until <end> or max_length\n\nimport numpy as np\n\ndef image_captioning(image_features, vocab, max_length=20):\n    # TODO: Initialize with start token\n    # TODO: Loop: attend + generate\n    # TODO: Return caption\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def image_captioning",
+      "must_include:attention",
+      "must_include:token",
+      "must_include:generate",
+      "must_include:return"
+    ]
+  }
+}

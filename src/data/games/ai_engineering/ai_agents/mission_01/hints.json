@@ -1,7 +1,7 @@
 {
   "mission_01": [
-    "Think about the core concepts",
-    "Consider best practices",
-    "Use appropriate tools"
+    "Use `print(f\"Processing: {task}\")` to display the task name.",
+    "Return a dictionary: `return {\"task\": task, \"result\": \"done\"}`",
+    "Make sure your function has a proper `def agent(task):` signature."
   ]
 }

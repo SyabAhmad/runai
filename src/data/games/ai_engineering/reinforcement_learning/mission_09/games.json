@@ -1,0 +1,20 @@
+{
+  "title": "Monte Carlo Tree Search (MCTS)",
+  "id": "mission_09",
+  "type": "ai_code",
+  "xpReward": 160,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "# RL Mission 09: Monte Carlo Tree Search (MCTS)\n#\n# MCTS builds a search tree by simulating many games\n# and using UCB1 to balance exploration vs exploitation.\n#\n# UCB1 = Q(s,a) + c * sqrt(ln(N(s)) / N(s,a))\n#\n# Your goal: Implement mcts_select(node, exploration_c)\n#   1. For each child action, compute UCB1 score\n#   2. Select the action with highest UCB1\n#   3. If node is unexplored, return None (for expansion)\n#\n# UCB1 components:\n#   - Q(s,a): average reward of action a\n#   - N(s): total visits to state s\n#   - N(s,a): visits to action a from state s\n#   - c: exploration constant\n\nimport numpy as np\n\ndef mcts_select(node, exploration_c=1.4):\n    # TODO: If node has unexplored actions, return None\n    # TODO: Compute UCB1 for each explored action\n    # TODO: Return action with highest UCB1\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def mcts_select",
+      "must_include:exploration",
+      "must_include:ucb",
+      "must_include:sqrt",
+      "must_include:return"
+    ]
+  }
+}

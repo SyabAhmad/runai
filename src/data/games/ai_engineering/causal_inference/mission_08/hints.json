@@ -1,0 +1,7 @@
+{
+  "mission_08": [
+    "Baron-Kenny: (1) Y = cX + e1 gives total effect c. (2) M = aX + e2 gives path a. (3) Y = c'X + bM + e3 gives direct effect c'. Indirect effect = a × b = c - c'.",
+    "For natural effects, fit M = α + aX and Y = β + c'X + bM. Then NDE = c' × (x_treatment - x_control), NIE = a × b × (x_treatment - x_control).",
+    "For bootstrap: resample (X, M, Y) rows with replacement n_bootstrap times, compute indirect effect each time, then take 2.5th and 97.5th percentiles for 95% CI. For sensitivity, introduce correlation ρ between error terms of M and Y equations and observe how the indirect effect changes."
+  ]
+}

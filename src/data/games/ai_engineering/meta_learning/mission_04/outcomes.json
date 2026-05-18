@@ -1,0 +1,3 @@
+{
+  "mission_04": "You have implemented Relation Networks, which learn the similarity metric rather than relying on fixed distances. This learned relation module can capture complex, non-linear relationships between query and support examples that Euclidean or cosine distance might miss. The key architectural choice — concatenating embeddings before computing the relation score — allows the network to learn interactions between features. Relation networks sit between prototypical networks (which use fixed metrics) and attention-based methods (which learn to weight support examples). They have been successfully applied to few-shot image classification, few-shot regression, and cross-domain few-shot learning."
+}

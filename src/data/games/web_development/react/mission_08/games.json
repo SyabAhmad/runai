@@ -1,0 +1,22 @@
+{
+  "title": "Performance Optimization",
+  "id": "mission_08",
+  "type": "ai_code",
+  "xpReward": 100,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "// TODO: Use React.memo to prevent unnecessary re-renders\n// TODO: Use useMemo for expensive computations\n// TODO: Use useCallback to memoize functions\n// TODO: Implement virtualization for long lists\n// TODO: Lazy load components with React.lazy and Suspense\n\nimport { useState, useMemo, useCallback, memo, lazy, Suspense } from 'react';\n\n// TODO: Memoized component that only re-renders when props change\nconst ExpensiveCard = memo(function ExpensiveCard({ data, onClick }) {\n  // TODO: Render card with data\n  // TODO: This should NOT re-render unless data or onClick changes\n});\n\n// TODO: Component with expensive computation\nfunction DataDashboard({ items, filter }) {\n  // TODO: Use useMemo to filter and sort items\n  // TODO: Only recalculate when items or filter changes\n}\n\n// TODO: Search component with debounced results\nfunction SearchResults({ query }) {\n  // TODO: Use useMemo for filtering results\n  // TODO: Use useCallback for event handlers passed to children\n}\n\n// TODO: Virtualized list for large datasets\nfunction VirtualList({ items, itemHeight }) {\n  // TODO: Only render visible items based on scroll position\n  // TODO: Use container height and scroll position to calculate visible range\n}\n\n// TODO: Lazy loaded component\nconst HeavyComponent = lazy(() => import('./HeavyComponent'));\n\nfunction LazyLoader() {\n  // TODO: Wrap HeavyComponent in Suspense with fallback\n}"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:React.memo",
+      "must_include:useMemo",
+      "must_include:useCallback",
+      "must_include:lazy",
+      "must_include:Suspense",
+      "must_include:() => import(",
+      "must_import:react"
+    ]
+  }
+}

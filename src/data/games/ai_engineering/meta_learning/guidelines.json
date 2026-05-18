@@ -1,0 +1,6 @@
+{
+  "title": "Meta-Learning",
+  "description": "Learn to learn — master meta-learning techniques that enable models to adapt quickly to new tasks with minimal data. Cover MAML, prototypical networks, few-shot learning, metric-based and optimization-based approaches, task embeddings, cross-validation strategies, online meta-learning, and meta-learning applications for NLP.",
+  "difficulty": "advanced",
+  "order": 2
+}

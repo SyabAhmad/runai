@@ -1,0 +1,19 @@
+{
+  "title": "Complete Transaction with Error Recovery",
+  "id": "mission_10",
+  "type": "ai_code",
+  "xpReward": 120,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "-- Complete Transaction: Multi-step order processing with full error recovery\n-- The orders table has columns: id, customer_id, product_id, quantity, total, status\n-- The inventory table has columns: id, product_id, stock_quantity, price\n-- The order_log table has columns: id, order_id, action, timestamp\n-- TODO: Create a procedure that processes an order with full error handling\n-- Log each step, rollback on failure, and return status\n\nCREATE OR REPLACE PROCEDURE process_order(\n    p_customer_id INTEGER,\n    p_product_id INTEGER,\n    p_quantity INTEGER,\n    INOUT p_order_id INTEGER DEFAULT NULL,\n    INOUT p_status TEXT DEFAULT 'pending'\n)\nLANGUAGE plpgsql\nAS $$\nDECLARE\n    v_price NUMERIC;\n    v_stock INTEGER;\nBEGIN\n    -- TODO: Full transaction with logging, validation, and error handling\nEND;\n$$;\n\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:CREATE PROCEDURE",
+      "must_include:EXCEPTION",
+      "must_include:ROLLBACK",
+      "must_include:order_log"
+    ]
+  }
+}

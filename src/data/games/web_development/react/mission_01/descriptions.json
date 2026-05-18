@@ -1,0 +1,3 @@
+{
+  "mission_01": "React components are JavaScript functions that return JSX — a syntax extension that looks like HTML but compiles to React.createElement calls. Components accept props (properties) as arguments and use them to render dynamic UI. JSX supports JavaScript expressions in curly braces, conditional rendering with ternary operators or &&, and list rendering with .map(). Every list item needs a unique key prop for React to efficiently update the DOM. In this mission, you will build composable components that form a user card interface."
+}

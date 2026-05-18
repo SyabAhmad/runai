@@ -1,0 +1,3 @@
+{
+  "mission_06": "Custom hooks let you extract and reuse stateful logic across components. They follow the \"use\" naming convention and can use any React hooks internally. Custom hooks are one of React's most powerful features — they turn complex patterns into simple function calls. In this mission, you will build five essential custom hooks: useLocalStorage for persistent state, useDebounce for input throttling, useFetch for data fetching, usePrevious for tracking prior values, and useClickOutside for dropdown/modal dismissal. These hooks are used in production applications everywhere."
+}

@@ -1,0 +1,20 @@
+{
+  "title": "METEOR Score (Semantic Matching)",
+  "id": "mission_04",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "# LLM Evaluation Mission 04: METEOR Score\n#\n# METEOR improves on BLEU by using stemming, synonyms, and alignment.\n# It computes harmonic mean of precision and recall with penalty.\n#\n# METEOR = F_mean * (1 - penalty)\n# F_mean = (10 * P * R) / (R + 9 * P)\n# penalty = 0.5 * (chunks / unigrams)^3\n#\n# Your goal: Implement compute_meteor(generated, reference)\n#   1. Match words (exact, stem, synonym)\n#   2. Compute precision and recall\n#   3. Compute F-mean and fragmentation penalty\n\nimport numpy as np\n\ndef compute_meteor(generated, reference):\n    # TODO: Match words between texts\n    # TODO: Compute P and R\n    # TODO: Apply F-mean and penalty\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def compute_meteor",
+      "must_include:precision",
+      "must_include:recall",
+      "must_include:penalty",
+      "must_include:return"
+    ]
+  }
+}

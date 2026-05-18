@@ -1,0 +1,22 @@
+{
+  "mission_02": {
+    "title": "Prophet Forecasting Model",
+    "id": "mission_02",
+    "type": "ai_code",
+    "xpReward": 65,
+    "difficulty": "easy",
+    "initialState": {
+      "content": "import numpy as np\n\n\ndef generate_prophet_data(n=365, trend_slope=0.05, seasonality_amp=10.0, noise_std=5.0):\n    \"\"\"Generate synthetic time series with trend and yearly seasonality.\"\"\"\n    t = np.arange(n)\n    \n    # TODO: Create linear trend component\n    trend = trend_slope * t\n    \n    # TODO: Create yearly seasonal component using sine/cosine\n    yearly = seasonality_amp * np.sin(2 * np.pi * t / 365.25)\n    \n    # TODO: Add Gaussian noise\n    noise = np.random.normal(0, noise_std, n)\n    \n    # TODO: Combine all components\n    y = trend + yearly + noise\n    return t, y\n\n\ndef fit_prophet_trend(t, y):\n    \"\"\"Fit piecewise linear trend with changepoints.\"\"\"\n    # TODO: Define changepoints at regular intervals\n    n_changepoints = 5\n    changepoints = np.linspace(t.min(), t.max(), n_changepoints + 2)[1:-1]\n    \n    # TODO: Build design matrix with trend and changepoint adjustments\n    X = np.column_stack([np.ones(len(t)), t])\n    for cp in changepoints:\n        adjustment = np.maximum(0, t - cp)\n        X = np.column_stack([X, adjustment])\n    \n    # TODO: Solve using least squares\n    params, residuals, rank, s = np.linalg.lstsq(X, y, rcond=None)\n    \n    # TODO: Compute fitted values\n    y_fit = X @ params\n    return y_fit, changepoints, params\n\n\ndef forecast_prophet(t, y_fit, changepoints, params, steps=30):\n    \"\"\"Extend Prophet forecast into the future.\"\"\"\n    last_t = t[-1]\n    future_t = np.arange(last_t + 1, last_t + steps + 1)\n    \n    # TODO: Build future design matrix\n    X_future = np.column_stack([np.ones(steps), future_t])\n    for cp in changepoints:\n        adjustment = np.maximum(0, future_t - cp)\n        X_future = np.column_stack([X_future, adjustment])\n    \n    # TODO: Generate forecasts\n    forecasts = X_future @ params\n    return future_t, forecasts\n"
+    },
+    "validation": {
+      "type": "ai_code",
+      "rules": [
+        "must_include:np.sin",
+        "must_include:np.linspace",
+        "must_include:np.maximum",
+        "must_include:np.linalg.lstsq",
+        "must_include:np.column_stack"
+      ]
+    }
+  }
+}

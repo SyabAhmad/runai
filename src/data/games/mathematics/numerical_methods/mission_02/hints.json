@@ -1,0 +1,7 @@
+{
+  "mission_02": [
+    "Newton update: x_new = x - f(x) / f'(x)",
+    "Convergence check: |x_new - x| < tol or |f(x)| < tol",
+    "For systems: solve J(x) * delta = -F(x), then x_new = x + delta"
+  ]
+}

@@ -1,0 +1,3 @@
+{
+  "mission_04": "The Jacobian matrix generalizes the derivative to vector-valued functions. For F: R^n -> R^m, the Jacobian is an m x n matrix where entry (i,j) is the partial derivative of output i with respect to input j. When m = 1, the Jacobian reduces to the gradient (a row vector). The Jacobian is essential in backpropagation through layers with multiple outputs, in robotics for computing end-effector velocities from joint velocities, and in the change-of-variables formula for multivariate integration. Understanding the Jacobian bridges single-variable calculus to the multivariate world of machine learning."
+}

@@ -1,0 +1,7 @@
+{
+  "mission_10": [
+    "Initialize: `tools = config['tools']`, `guardrails = config['guardrails']`, `memory = config['memory']`.",
+    "Pipeline: validate input → retrieve context → run agent → validate output → store memory.",
+    "Metadata: `{'latency': elapsed, 'tool_calls': count, 'safety': 'passed', 'tokens': estimate}`."
+  ]
+}

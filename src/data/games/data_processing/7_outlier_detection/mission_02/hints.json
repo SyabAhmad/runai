@@ -1,0 +1,7 @@
+{
+  "mission_02": [
+    "Use scipy.stats.zscore to compute standard Z-scores directly.",
+    "MAD = median(|x - median(x)|) is the robust alternative to standard deviation.",
+    "The modified Z-score constant 0.6745 makes MAD comparable to std for normal data."
+  ]
+}

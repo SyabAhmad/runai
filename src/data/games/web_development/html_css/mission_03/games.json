@@ -1,0 +1,21 @@
+{
+  "title": "Creating Data Tables",
+  "id": "mission_03",
+  "type": "ai_code",
+  "xpReward": 70,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "<!-- TODO: Add proper table structure with thead, tbody, tfoot -->\n<!-- TODO: Use th for header cells with scope attributes -->\n<!-- TODO: Add caption to describe the table -->\n<!-- TODO: Include a footer row with summary data -->\n\n<table>\n  <tr>\n    <td>Name</td>\n    <td>Department</td>\n    <td>Salary</td>\n    <td>Start Date</td>\n  </tr>\n  <tr>\n    <td>Alice Johnson</td>\n    <td>Engineering</td>\n    <td>95000</td>\n    <td>2023-01-15</td>\n  </tr>\n  <tr>\n    <td>Bob Smith</td>\n    <td>Design</td>\n    <td>82000</td>\n    <td>2022-06-20</td>\n  </tr>\n  <tr>\n    <td>Carol White</td>\n    <td>Engineering</td>\n    <td>91000</td>\n    <td>2024-03-10</td>\n  </tr>\n</table>"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:<caption>",
+      "must_include:<thead>",
+      "must_include:<tbody>",
+      "must_include:<tfoot>",
+      "must_include:<th",
+      "must_include:scope="
+    ]
+  }
+}

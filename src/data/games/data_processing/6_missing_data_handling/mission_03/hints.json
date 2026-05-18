@@ -1,0 +1,7 @@
+{
+  "mission_03": [
+    "Use df.ffill() or df.fillna(method='ffill') for forward fill.",
+    "Use df.bfill() or df.fillna(method='bfill') for backward fill.",
+    "Add limit=n to restrict filling to at most n consecutive NaN values."
+  ]
+}

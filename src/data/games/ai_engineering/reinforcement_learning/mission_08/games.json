@@ -1,0 +1,20 @@
+{
+  "title": "Reward Shaping",
+  "id": "mission_08",
+  "type": "ai_code",
+  "xpReward": 140,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "# RL Mission 08: Reward Shaping\n#\n# Sparse rewards make learning slow. Reward shaping adds\n# intermediate rewards to guide the agent toward the goal.\n#\n# Potential-based shaping (Ng et al., 1999):\n#   F(s,s') = gamma * Phi(s') - Phi(s)\n#\n# This guarantees the optimal policy is unchanged!\n#\n# Your goal: Implement shaped_reward(env, state, next_state,\n#   base_reward, potential_fn, gamma)\n#   1. Compute Phi(state) and Phi(next_state)\n#   2. Compute shaping bonus: F = gamma * Phi(next) - Phi(state)\n#   3. Return base_reward + F\n#\n# Example potential: Phi(s) = -distance_to_goal(s)\n\nimport numpy as np\n\ndef shaped_reward(env, state, next_state, base_reward, potential_fn, gamma):\n    # TODO: Compute potential of current state\n    # TODO: Compute potential of next state\n    # TODO: Apply potential-based shaping formula\n    # TODO: Return shaped reward\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def shaped_reward",
+      "must_include:potential",
+      "must_include:gamma",
+      "must_include:base_reward",
+      "must_include:return"
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "mission_06": [
+    "Use np.random.randn(n) to generate standard normal samples.",
+    "np.cov(X, Y) returns the 2x2 covariance matrix.",
+    "np.corrcoef(X, Y) returns the 2x2 correlation matrix.",
+    "corr(X,Y) = Cov(X,Y) / (std(X) * std(Y)).",
+    "For W = aX + b: Cov(X, W) = a * Var(X) and corr(X, W) = sign(a).",
+    "Cov(X, Y+Z) = Cov(X,Y) + Cov(X,Z) when Z is independent of X."
+  ]
+}

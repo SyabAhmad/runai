@@ -1,0 +1,6 @@
+{
+  "title": "Web Performance",
+  "description": "Optimize web application performance with lazy loading, code splitting, image optimization, caching strategies, CDN, Core Web Vitals, bundle analysis, SSR vs CSR, and performance monitoring.",
+  "difficulty": "hard",
+  "order": 9
+}

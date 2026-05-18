@@ -1,0 +1,3 @@
+{
+  "mission_05": "import numpy as np\n\ndef multimodal_fusion(modalities, method='cross_attention'):\n    embeddings = [encoder(m) for m in modalities]\n    if method == 'concat':\n        return np.concatenate(embeddings, axis=-1)\n    elif method == 'cross_attention':\n        Q, K, V = embeddings[0], embeddings[1], embeddings[1]\n        attn = np.exp(Q @ K.T / np.sqrt(K.shape[-1]))\n        attn = attn / np.sum(attn, axis=1, keepdims=True)\n        return attn @ V\n    elif method == 'tensor':\n        outer = np.einsum('i,j->ij', embeddings[0], embeddings[1])\n        return outer.flatten()"
+}

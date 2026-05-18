@@ -1,0 +1,1 @@
+{"mission_05": ["Create selector = SelectKBest(score_func=f_classif, k=4) and use selector.fit_transform(X, y).", "Access selector.scores_ for F-scores and selector.pvalues_ for p-values.", "Lower p-values indicate stronger statistical significance. Features with p < 0.05 are typically considered significant."]}

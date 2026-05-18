@@ -1,0 +1,7 @@
+{
+  "mission_02": [
+    "For prototype computation, iterate over classes: for class k, prototypes[k] = np.mean(embeddings[labels == k], axis=0).",
+    "For classification, use scipy.spatial.distance.cdist(query_embeddings, prototypes, 'euclidean') to get distances. Then probs = softmax(-distances, axis=1).",
+    "For episode sampling, randomly select n_way classes from unique labels. For each class, randomly sample k_shot support and n_query query examples. For the loss, compute cross-entropy: -mean(log(probs[range(n_query), query_labels])). Use np.exp and np.sum for softmax: softmax(x) = exp(x) / sum(exp(x))."
+  ]
+}

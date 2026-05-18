@@ -1,0 +1,3 @@
+{
+  "mission_06": "**KV cache quantization** reduces memory for long-context LLM inference.\n\n**The problem**: KV cache stores key and value vectors for every token in the context. For a 7B model with 32K context:\n- FP16: 32K × 2 × 32 × 128 × 2 bytes ≈ 16 GB\n- This limits batch size and context length\n\n**Solution**: Quantize KV cache to INT8:\n- Per-token quantization: each token gets its own scale\n- Preserves attention quality (relative values matter more than absolute)\n- 2x memory reduction with negligible accuracy loss\n\n**Advanced**: KV cache can be quantized to INT4 or even binary for extreme compression, but accuracy degrades."
+}

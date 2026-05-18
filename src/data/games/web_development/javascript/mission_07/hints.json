@@ -1,0 +1,7 @@
+{
+  "mission_07": [
+    "Replace .then() chains with await: const user = await api.getUser(id); — much cleaner.",
+    "Wrap await calls in try/catch: try { const data = await fn(); } catch (error) { handleError(error); }.",
+    "For parallel execution inside async functions, use const results = await Promise.all(promises)."
+  ]
+}

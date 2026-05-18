@@ -1,0 +1,7 @@
+{
+  "mission_06": [
+    "Image: `image_features = frozen_image_encoder(image)`.",
+    "Q-Former: `visual_tokens = q_former(learnable_queries, image_features)`.",
+    "LLM: `answer = llm(visual_tokens + question_tokens)`."
+  ]
+}

@@ -1,0 +1,3 @@
+{
+  "mission_07": "Implement Shannon-Fano encoding and verify Kraft's inequality, exploring the theoretical foundations of source coding. Shannon's source coding theorem establishes that the minimum average number of bits needed to encode a source is bounded by its entropy: H(X) <= L < H(X) + 1. Shannon-Fano encoding was an early approach that recursively splits symbols into two groups of approximately equal probability. Kraft's inequality provides a necessary and sufficient condition for the existence of a prefix-free code with given codeword lengths: sum(2^(-l_i)) <= 1. These results form the theoretical backbone of lossless data compression."
+}

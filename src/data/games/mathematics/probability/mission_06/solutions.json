@@ -1,0 +1,3 @@
+{
+  "mission_06": "import numpy as np\n\nnp.random.seed(42)\nn = 1000\n\nX = np.random.randn(n)\n\nZ = np.random.randn(n)\nY = 0.7 * X + np.sqrt(1 - 0.7**2) * Z\n\ncov_matrix = np.cov(X, Y)\n\ncov_XY = cov_matrix[0, 1]\n\ncorr_matrix = np.corrcoef(X, Y)\n\ncorr_XY = corr_matrix[0, 1]\n\nmanual_corr = cov_XY / (np.std(X) * np.std(Y))\n\nW = -2 * X + 3\n\ncov_XW = np.cov(X, W)[0, 1]\ncorr_XW = np.corrcoef(X, W)[0, 1]\n\ncov_X_YplusZ = np.cov(X, Y + Z)[0, 1]\ncorr_X_YplusZ = np.corrcoef(X, Y + Z)[0, 1]\n\nprint(f\"Covariance matrix:\\n{cov_matrix}\")\nprint(f\"Cov(X, Y) = {cov_XY:.4f}\")\nprint(f\"Corr(X, Y) = {corr_XY:.4f}\")\nprint(f\"Manual correlation: {manual_corr:.4f}\")\nprint(f\"Cov(X, W) = {cov_XW:.4f}, Corr(X, W) = {corr_XW:.4f}\")\n"
+}

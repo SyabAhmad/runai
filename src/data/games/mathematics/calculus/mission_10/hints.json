@@ -1,0 +1,10 @@
+{
+  "mission_10": [
+    "The MSE loss is (1/2n) * sum((X @ w - y)^2).",
+    "The gradient is (1/n) * X.T @ (X @ w - y).",
+    "Initialize weights to np.zeros(n_features).",
+    "Update: w = w - learning_rate * gradient.",
+    "Normal equation: w = np.linalg.inv(X.T @ X) @ X.T @ y.",
+    "Momentum: velocity = beta * velocity + gradient; w = w - lr * velocity."
+  ]
+}

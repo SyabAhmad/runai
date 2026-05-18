@@ -1,0 +1,7 @@
+{
+  "mission_07": [
+    "Define all design tokens in :root using the -- prefix: --color-primary, --spacing-md, --radius, etc.",
+    "Create a dark theme by redefining color variables inside [data-theme=\"dark\"] — the cascade handles the rest.",
+    "Use var(--variable-name, fallback) in components. The fallback is used if the variable is not defined."
+  ]
+}

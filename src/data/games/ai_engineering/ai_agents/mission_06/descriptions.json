@@ -1,3 +1,3 @@
 {
-  "mission_06": "Complete ai agents mission 6 to master this technology."
+  "mission_06": "The most powerful agents **plan before they act**. Instead of blindly executing, they break tasks into steps, reason about each one, then execute. This is the ReAct (Reasoning + Acting) pattern used by AutoGPT, BabyAGI, and GPT-4 with chain-of-thought.\n\nBuild a `plan_and_execute(task)` function that:\n1. **Generates a plan** — a list of step descriptions explaining what needs to happen\n2. **Executes** each step (use `calculator()` for math, print progress)\n3. **Returns** `{\"task\": task, \"plan\": [steps...], \"result\": final_value}`\n\nThis plan-then-execute pattern transforms agents from simple routers into reasoning systems that can handle complex multi-step tasks."
 }

@@ -1,0 +1,19 @@
+{
+  "title": "Perplexity Calculation",
+  "id": "mission_01",
+  "type": "ai_code",
+  "xpReward": 60,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "# LLM Evaluation Mission 01: Perplexity\n#\n# Perplexity measures how well a language model predicts a sample.\n# Lower perplexity = better model.\n#\n# Formula: PP(W) = exp(-1/N * sum(log P(w_i | w_<i)))\n#\n# Your goal: Implement calculate_perplexity(model, text)\n#   1. Tokenize the text\n#   2. Get log probabilities for each token\n#   3. Compute average negative log probability\n#   4. Return exp of that value\n\nimport numpy as np\n\ndef calculate_perplexity(model, text):\n    # TODO: Tokenize text\n    # TODO: Get log probabilities\n    # TODO: Compute perplexity\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def calculate_perplexity",
+      "must_include:np.exp",
+      "must_include:log",
+      "must_include:return"
+    ]
+  }
+}

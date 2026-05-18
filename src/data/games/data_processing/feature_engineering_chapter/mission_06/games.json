@@ -1,4 +1,4 @@
-﻿{
+{
     "title":  "Feature Engineering Mission 6: Target Leakage Guard",
     "initialState":  {
                          "content":  "# TODO: Remove potential leakage columns before modeling\n\ndef remove_leaky_features(df):\n    # TODO: drop target_probability and post_event_score safely\n\n    return df"

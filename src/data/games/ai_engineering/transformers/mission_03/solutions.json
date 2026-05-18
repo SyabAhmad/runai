@@ -1,0 +1,3 @@
+{
+  "mission_03": "import numpy as np\n\ndef positional_encoding(seq_len, d_model):\n    pos = np.arange(seq_len).reshape(-1, 1)\n    dims = np.arange(d_model).reshape(1, -1)\n    angles = pos / np.power(10000, 2 * (dims // 2) / d_model)\n    angles[:, 0::2] = np.sin(angles[:, 0::2])\n    angles[:, 1::2] = np.cos(angles[:, 1::2])\n    return angles"
+}

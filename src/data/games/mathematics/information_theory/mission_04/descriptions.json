@@ -1,0 +1,3 @@
+{
+  "mission_04": "Implement mutual information, a measure of the amount of information shared between two random variables. Mutual information I(X;Y) = sum(p(x,y) * log(p(x,y)/(p(x)*p(y)))) quantifies the reduction in uncertainty about X given knowledge of Y. It equals zero if and only if X and Y are independent. MI can also be expressed as I(X;Y) = H(X) - H(X|Y) = H(Y) - H(Y|X) = H(X) + H(Y) - H(X,Y). Mutual information is widely used in feature selection, image registration, and understanding dependencies in data."
+}

@@ -1,0 +1,3 @@
+{
+  "mission_02": "Great job building an accessible form! You have connected labels to inputs, grouped related fields with fieldsets, and added proper input types. These changes mean screen reader users can navigate your form confidently, mobile users get optimized keyboards, and the browser provides built-in validation. Accessible forms lead to higher completion rates and better user experiences for everyone."
+}

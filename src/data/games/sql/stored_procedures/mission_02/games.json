@@ -1,0 +1,19 @@
+{
+  "title": "Function with Table Return",
+  "id": "mission_02",
+  "type": "ai_code",
+  "xpReward": 60,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "-- Function with Table Return: Get orders by customer\n-- The orders table has columns: id, customer_id, order_date, total, status\n-- TODO: Create a function that returns all orders for a given customer_id\n-- The function should return a SETOF records\n\nCREATE OR REPLACE FUNCTION get_customer_orders(\n    -- TODO: Define customer_id parameter\n)\nRETURNS TABLE (\n    -- TODO: Define return columns\n)\nLANGUAGE plpgsql\nAS $$\nBEGIN\n    -- TODO: RETURN QUERY with SELECT from orders\nEND;\n$$;\n\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:CREATE FUNCTION",
+      "must_include:RETURNS TABLE",
+      "must_include:RETURN QUERY",
+      "must_include:orders"
+    ]
+  }
+}

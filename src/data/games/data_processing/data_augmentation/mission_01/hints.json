@@ -1,0 +1,1 @@
+{"mission_01": ["Check class distribution with Counter(y) or np.bincount(y).", "Create smote = SMOTE(random_state=42) and use X_resampled, y_resampled = smote.fit_resample(X, y).", "Compare Counter(y) before and Counter(y_resampled) after to see the balancing effect."]}

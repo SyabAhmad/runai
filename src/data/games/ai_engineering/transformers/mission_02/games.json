@@ -1,0 +1,20 @@
+{
+  "title": "Multi-Head Attention",
+  "id": "mission_02",
+  "type": "ai_code",
+  "xpReward": 70,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "# Transformers Mission 02: Multi-Head Attention\n#\n# Instead of one attention function, transformers use multiple\n# \"heads\" that each learn different attention patterns.\n# This is like having multiple experts looking at the input\n# from different perspectives.\n#\n# Your goal: Implement multi_head_attention(x, W_q, W_k, W_v, W_o, num_heads)\n#   1. Project x into Q, K, V using weight matrices\n#   2. Split each into num_heads (reshape)\n#   3. Apply scaled_dot_product_attention to each head\n#   4. Concatenate all heads back together\n#   5. Apply output projection W_o\n#\n# Hint: Use the scaled_dot_product_attention from Mission 01.\n\nimport numpy as np\n\ndef scaled_dot_product_attention(Q, K, V, mask=None):\n    d_k = K.shape[-1]\n    scores = np.matmul(Q, K.T) / np.sqrt(d_k)\n    if mask is not None:\n        scores = scores + mask * -1e9\n    e_x = np.exp(scores - np.max(scores, axis=-1, keepdims=True))\n    attn = e_x / np.sum(e_x, axis=-1, keepdims=True)\n    return np.matmul(attn, V)\n\ndef multi_head_attention(x, W_q, W_k, W_v, W_o, num_heads):\n    # TODO: Project x into Q, K, V: Q = x @ W_q, K = x @ W_k, V = x @ W_v\n    # TODO: Split each into num_heads\n    # TODO: Apply attention to each head\n    # TODO: Concatenate heads\n    # TODO: Apply output projection: output = concat @ W_o\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def multi_head_attention",
+      "must_include:scaled_dot_product_attention",
+      "must_include:concatenate",
+      "must_include:num_heads",
+      "must_include:return"
+    ]
+  }
+}

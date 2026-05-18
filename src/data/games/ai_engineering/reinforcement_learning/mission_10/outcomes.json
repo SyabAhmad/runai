@@ -1,0 +1,3 @@
+{
+  "mission_10": "You implemented the core of RLHF! This is the exact technique used to train ChatGPT, Claude, and Gemini. The reward model captures human preferences, the KL penalty keeps the model grounded, and PPO optimizes the policy. Together, they transform raw language models into helpful, safe assistants."
+}

@@ -1,0 +1,21 @@
+{
+  "title": "Implement SHAP Values from Scratch",
+  "id": "mission_02",
+  "type": "ai_code",
+  "xpReward": 65,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "import numpy as np\nfrom itertools import combinations\n\n\ndef compute_shap_values(model, X, feature_names):\n    \"\"\"Compute approximate SHAP values using brute-force enumeration.\"\"\"\n    n_samples, n_features = X.shape\n    # TODO: Initialize SHAP values array of shape (n_samples, n_features)\n    shap_values = ???\n\n    # TODO: Compute baseline prediction (expected value)\n    # Hint: baseline = np.mean(model.predict(X), axis=0)\n    baseline = ???\n\n    for i in range(n_samples):\n        sample = X[i:i+1]\n        # TODO: Iterate over all possible feature subsets\n        # For each subset S, compute the marginal contribution of each feature\n        for n_subset in range(n_features + 1):\n            for subset in combinations(range(n_features), n_subset):\n                # TODO: Create background reference (mean of all features)\n                # Hint: x_ref = np.mean(X, axis=0)\n                x_ref = ???\n\n                # TODO: Create perturbed input: use actual values for features in subset, reference for others\n                # Hint: x_perturbed = x_ref.copy(); x_perturbed[list(subset)] = sample[0, list(subset)]\n                x_perturbed = ???\n\n                # TODO: Compute prediction for this subset\n                pred = model.predict(x_perturbed.reshape(1, -1))[0]\n\n                # TODO: For each feature NOT in subset, add marginal contribution\n                # Marginal contribution = f(S union {j}) - f(S)\n                for j in range(n_features):\n                    if j not in subset:\n                        # Create S union {j}\n                        subset_with_j = list(subset) + [j]\n                        x_with_j = x_ref.copy()\n                        x_with_j[subset_with_j] = sample[0, subset_with_j]\n                        pred_with_j = model.predict(x_with_j.reshape(1, -1))[0]\n\n                        # TODO: Add weighted marginal contribution to SHAP value\n                        # Weight = |S|! * (M - |S| - 1)! / M!\n                        weight = np.math.factorial(len(subset)) * np.math.factorial(n_features - len(subset) - 1) / np.math.factorial(n_features)\n                        shap_values[i, j] += ???\n\n        # TODO: The SHAP value should sum to f(x) - E[f(x)]\n        # Normalize if needed\n\n    return shap_values\n\n\n# Test with a simple linear model\nif __name__ == \"__main__\":\n    np.random.seed(42)\n    X = np.random.randn(10, 3)\n    true_weights = np.array([2.0, -1.0, 0.5])\n\n    def linear_model(x):\n        return x @ true_weights\n\n    feature_names = [\"feature_0\", \"feature_1\", \"feature_2\"]\n    shap_vals = compute_shap_values(linear_model, X, feature_names)\n    print(\"SHAP values shape:\", shap_vals.shape)\n    print(\"Mean SHAP values:\", np.mean(shap_vals, axis=0))\n    print(\"True weights:\", true_weights)\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:combinations",
+      "must_include:np.zeros",
+      "must_include:np.mean",
+      "must_include:np.math.factorial",
+      "must_include:marginal",
+      "must_include:shap_values"
+    ]
+  }
+}

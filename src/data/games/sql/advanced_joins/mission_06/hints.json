@@ -1,0 +1,7 @@
+{
+  "mission_06": [
+    "Use CROSS JOIN to combine browsers, os_table, and resolutions.",
+    "Chain multiple CROSS JOINs: browsers CROSS JOIN os_table CROSS JOIN resolutions.",
+    "Select browser_name, os_name, width, and height from the result."
+  ]
+}

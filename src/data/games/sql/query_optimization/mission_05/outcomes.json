@@ -1,0 +1,3 @@
+{
+  "mission_05": "Great work with composite indexes! Understanding column ordering in multi-column indexes is crucial for optimization. The leftmost prefix rule means a composite index (A, B, C) can efficiently serve queries on A, (A, B), or (A, B, C), but not on B or C alone. Design your indexes to match your most common query patterns."
+}

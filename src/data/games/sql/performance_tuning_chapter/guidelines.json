@@ -1,0 +1,6 @@
+{
+  "title": "Performance Tuning",
+  "description": "Learn SQL performance tuning including execution plans, index strategies, query optimization, and bottleneck identification.",
+  "difficulty": "hard",
+  "order": 3
+}

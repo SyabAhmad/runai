@@ -1,0 +1,3 @@
+{
+  "mission_03": "Well done! You have implemented GraphSAGE's core aggregation mechanism with neighborhood sampling. This inductive approach enables GNNs to scale to massive graphs and generalize to unseen nodes. The key insight is that by sampling a fixed number of neighbors at each layer, you control computational complexity while still capturing rich structural information. The mean pooling aggregator you implemented is just one of several options - GraphSAGE also supports LSTM and pooling aggregators. Your understanding of sampling-based GNNs opens the door to training on graphs with millions of nodes."
+}

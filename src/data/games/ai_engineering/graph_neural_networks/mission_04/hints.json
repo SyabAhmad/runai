@@ -1,0 +1,7 @@
+{
+  "mission_04": [
+    "Use Xavier initialization: W = np.random.randn(fan_in, fan_out) * np.sqrt(2.0 / (fan_in + fan_out))",
+    "For softmax, subtract the max logit for numerical stability: exp(x - max(x)) / sum(exp(x - max(x)))",
+    "The gradient of cross-entropy with softmax is simply (probs - one_hot_labels). Mask this gradient using the training mask before backpropagating"
+  ]
+}

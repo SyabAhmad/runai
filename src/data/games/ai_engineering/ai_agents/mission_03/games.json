@@ -1,16 +1,20 @@
 {
-  "title": "ai agents Mission 3",
+  "title": "Agent with System Instructions",
+  "id": "mission_03",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "easy",
   "initialState": {
-    "content": "def solve_mission_3():\n    # TODO: Implement solution for ai_agents mission 3\n    return \"Mission 3 completed\"\\n    # TODO: Complete the implementation"
+    "content": "# Agent Mission 03: Agent with System Instructions\n#\n# Agents follow instructions (system prompts) that define\n# their behavior. The instructions set boundaries on what\n# the agent can and cannot do.\n#\n# System Instructions:\n#   - You are a polite assistant\n#   - If asked about the weather, call get_weather(city)\n#   - If asked anything else, say \"I can only check weather\"\n#\n# Your goal: Complete the agent(task) function so it\n# follows the system instructions above.\n#\n# Tip: Use task.lower() to make case-insensitive checks.\n\ndef get_weather(city):\n    return f\"The weather in {city} is sunny, 24C\"\n\ndef agent(task):\n    # TODO: Convert task to lowercase for matching\n\n    # TODO: If task contains \"weather\" or \"temperature\":\n    #         extract the city name (after \"in\" or \"for\")\n    #         call get_weather(city)\n    #         return {\"task\": task, \"result\": result}\n    #\n    # TODO: Otherwise, return {\"task\": task, \"result\": \"I can only check weather\"}\n    pass"
   },
   "validation": {
     "type": "ai_code",
     "rules": [
-      "must_include:def",
-      "must_include:return"
+      "must_include:def agent",
+      "must_include:get_weather",
+      "must_include:weather",
+      "must_include:return",
+      "must_include:lower"
     ]
-  },
-  "id": "mission_03",
-  "type": "ai_code",
-  "xpReward": 80
+  }
 }

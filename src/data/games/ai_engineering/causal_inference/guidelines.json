@@ -1,0 +1,6 @@
+{
+  "title": "Causal Inference",
+  "description": "Master the art and science of determining cause-and-effect relationships from observational and experimental data. Learn DAGs, do-calculus, propensity score matching, instrumental variables, regression discontinuity, difference-in-differences, causal forests, mediation analysis, counterfactual reasoning, and causal discovery algorithms.",
+  "difficulty": "intermediate",
+  "order": 1
+}

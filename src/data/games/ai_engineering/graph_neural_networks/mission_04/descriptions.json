@@ -1,0 +1,3 @@
+{
+  "mission_04": "Node classification is one of the most fundamental tasks in graph machine learning. Given a graph where some nodes have known labels, the goal is to predict labels for unlabeled nodes. GCNs excel at this task by leveraging both node features and graph structure. In this mission, you will build a complete two-layer GCN classifier with training loop. The first layer learns hidden representations by aggregating neighbor information, and the second layer maps these representations to class probabilities. You will implement cross-entropy loss with masking (since only some nodes are labeled), softmax normalization, and gradient-based weight updates. This semi-supervised setting is where GNNs truly shine."
+}

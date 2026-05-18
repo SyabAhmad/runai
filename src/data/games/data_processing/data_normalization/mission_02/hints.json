@@ -1,0 +1,1 @@
+{"mission_02": ["The z-score formula is: (x - mean) / standard_deviation.", "Use df.mean() and df.std() to compute column statistics.", "Verify with df_standardized.mean() (should be ~0) and df_standardized.std() (should be ~1)."]}

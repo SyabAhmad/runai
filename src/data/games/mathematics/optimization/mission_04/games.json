@@ -1,0 +1,18 @@
+{
+  "title": "Convex Optimization Checker",
+  "id": "mission_04",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import numpy as np\n\ndef is_convex_function(f, x_range, n_points=100):\n    \"\"\"\n    Check if a function is convex by verifying the Hessian is positive semi-definite\n    f: function to check\n    x_range: tuple (min, max) for the domain\n    \"\"\"\n    x_values = np.linspace(x_range[0], x_range[1], n_points)\n    \n    # TODO: Compute numerical second derivative (Hessian for 1D)\n    hessian_values = []\n    for x in x_values:\n        h = 1e-5\n        # Use central difference for second derivative\n        f_xx = ...\n        hessian_values.append(f_xx)\n    \n    # TODO: Check if all Hessian values are non-negative\n    is_convex = ...\n    \n    return is_convex, np.array(hessian_values)\n\ndef check_convexity_multivariable(H):\n    \"\"\"\n    Check if a matrix H is positive semi-definite (convexity condition)\n    \"\"\"\n    # TODO: Compute eigenvalues of H\n    eigenvalues = ...\n    \n    # TODO: Check if all eigenvalues are non-negative\n    return ...\n\n# Test functions\ndef f1(x):\n    return x**2  # Convex\n\ndef f2(x):\n    return -x**2  # Concave\n\nprint(f\"f1(x)=x^2 convex: {is_convex_function(f1, (-5, 5))[0]}\")\nprint(f\"f2(x)=-x^2 convex: {is_convex_function(f2, (-5, 5))[0]}\")"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:eigenvalues",
+      "must_include:hessian",
+      "must_include:numpy"
+    ]
+  }
+}

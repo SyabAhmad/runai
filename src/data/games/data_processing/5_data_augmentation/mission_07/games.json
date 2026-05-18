@@ -1,0 +1,21 @@
+{
+  "title": "CutMix Augmentation for Images",
+  "id": "mission_07",
+  "type": "ai_code",
+  "xpReward": 90,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import numpy as np\n\n# TODO: Implement CutMix augmentation\n# CutMix cuts a patch from one image and pastes it onto another\n# The label is mixed proportionally to the area of the patch\n# Formula: y_new = lambda * y_i + (1 - lambda) * y_j\n# where lambda = 1 - (patch_area / total_area)\n\ndef cutmix(image1, image2, label1, label2, alpha=1.0):\n    # TODO: Sample lambda from Beta(alpha, alpha)\n    # TODO: Calculate the bounding box for the cut region\n    # TODO: Create the mixed image by replacing the patch\n    # TODO: Compute the mixed label based on patch area ratio\n    # TODO: Return mixed image and label\n    pass\n\n# TODO: Create two sample images and test CutMix\n# Verify the output contains regions from both images\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:np.random.beta",
+      "must_include:randint",
+      "must_include:lambda",
+      "must_include:alpha",
+      "must_include:image1",
+      "must_include:image2"
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "mission_10": [
+    "Create a class that encapsulates multiple detection methods with a unified interface.",
+    "Use RobustScaler instead of StandardScaler to avoid distortion by outliers.",
+    "Combine predictions using majority voting: outlier if >= 2 out of 3 methods agree."
+  ]
+}

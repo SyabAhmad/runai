@@ -1,7 +1,7 @@
 {
   "mission_07": [
-    "Think about the core concepts",
-    "Consider best practices",
-    "Use appropriate tools"
+    "Wrap `risky_calculator()` in try/except ValueError and except ZeroDivisionError blocks.",
+    "For `fetch_user_data()`, check if result is None and return a \"User not found\" message with status \"error\".",
+    "Use the startswith() pattern to route between \"calc:\" and \"user:\" commands."
   ]
 }

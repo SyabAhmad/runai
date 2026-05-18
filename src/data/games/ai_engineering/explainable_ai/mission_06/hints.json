@@ -1,0 +1,9 @@
+{
+  "mission_06": [
+    "Compute baseline: baseline_score = metric_fn(y, baseline_pred).",
+    "Copy X: X_permuted = X.copy().",
+    "Shuffle indices: shuffle_idx = np.random.permutation(n_samples).",
+    "Apply shuffle: X_permuted[:, feat_idx] = X[shuffle_idx, feat_idx].",
+    "Compute permuted score and importance: importances_all[feat_idx, repeat] = baseline_score - perm_score."
+  ]
+}

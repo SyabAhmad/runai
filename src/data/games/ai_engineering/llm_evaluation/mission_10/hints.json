@@ -1,0 +1,7 @@
+{
+  "mission_10": [
+    "Run each metric: `scores['perplexity'] = calculate_perplexity(model, text)`.",
+    "Aggregate: `scores = {metric: score for metric, score in results}`.",
+    "Report: Format scores into a readable table with comparisons."
+  ]
+}

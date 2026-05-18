@@ -1,0 +1,18 @@
+{
+  "title": "Fundamental Theorem of Calculus",
+  "id": "mission_06",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import numpy as np\nfrom scipy import integrate\n\n# TODO: Define f(x) = 3x^2 + 2x - 1\ndef f(x):\n    return None\n\n# TODO: Define the antiderivative F(x) = x^3 + x^2 - x\ndef F(x):\n    return None\n\n# TODO: Verify the Fundamental Theorem: integral from a to b = F(b) - F(a)\na, b = 0, 3\nintegral_result, _ = None, None\nftc_result = None\n\n# TODO: Define G(x) = integral from 0 to x of f(t) dt (accumulation function)\ndef G(x):\n    result, _ = integrate.quad(f, 0, x)\n    return result\n\n# TODO: Verify that G'(x) = f(x) numerically\nx0 = 2.0\nh = 1e-7\nG_prime_numerical = None\nf_at_x0 = None\n\n# TODO: Compute the area between f(x) and the x-axis from -2 to 2\n# Need to split at roots of f\narea = None\n\nprint(f\"Integral from {a} to {b}: {integral_result:.6f}\")\nprint(f\"F({b}) - F({a}): {ftc_result:.6f}\")\nprint(f\"G'({x0}) numerical: {G_prime_numerical:.6f}\")\nprint(f\"f({x0}): {f_at_x0:.6f}\")\nprint(f\"Total area from -2 to 2: {area:.6f}\")\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:numpy",
+      "must_include:scipy",
+      "must_include:integrate.quad"
+    ]
+  }
+}

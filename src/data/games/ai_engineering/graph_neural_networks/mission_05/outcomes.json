@@ -1,0 +1,3 @@
+{
+  "mission_05": "Excellent! You have implemented a complete link prediction system with GCN embeddings and inner product decoding. The negative sampling strategy you built is fundamental to training on sparse graphs, where the number of non-edges vastly exceeds the number of edges. By contrasting positive and negative edge scores through binary cross-entropy loss, your model learns to distinguish real connections from random pairs. This architecture powers real-world applications like friend recommendations in social networks, drug-target interaction prediction, and knowledge graph completion. The embeddings you generate can also be reused for other downstream tasks."
+}

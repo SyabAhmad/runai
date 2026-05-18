@@ -1,0 +1,7 @@
+{
+  "mission_04": [
+    "KNNImputer from sklearn.impute handles the entire imputation process.",
+    "The n_neighbors parameter controls how many neighbors contribute to each imputation.",
+    "Use mean_squared_error to quantify imputation accuracy against known values."
+  ]
+}

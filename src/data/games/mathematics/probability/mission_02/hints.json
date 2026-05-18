@@ -1,0 +1,10 @@
+{
+  "mission_02": [
+    "Bayes' theorem: P(A|B) = P(B|A) * P(A) / P(B).",
+    "Use the law of total probability: P(B) = P(B|A)*P(A) + P(B|~A)*P(~A).",
+    "P(~D) = 1 - P(D) = 0.99.",
+    "P(Pos|~D) = 1 - specificity = 0.10.",
+    "For two independent positive tests, square the likelihoods.",
+    "P(D|Neg) = P(Neg|D)*P(D) / P(Neg) — this should be very small."
+  ]
+}

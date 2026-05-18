@@ -1,0 +1,6 @@
+{
+  "title": "Web Testing",
+  "description": "Test web applications thoroughly with unit testing, integration testing, E2E testing, Jest, React Testing Library, Cypress, mocking, TDD, test coverage, and CI testing.",
+  "difficulty": "hard",
+  "order": 8
+}

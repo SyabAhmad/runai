@@ -1,0 +1,20 @@
+{
+  "title": "Toxicity Detection & Content Filtering",
+  "id": "mission_06",
+  "type": "ai_code",
+  "xpReward": 90,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "# AI Ethics Mission 06: Toxicity Detection\n#\n# Content filtering protects users from harmful AI outputs.\n# Toxicity categories: hate speech, harassment, self-harm, sexual, violence.\n#\n# Approach: Use a classifier to score text on each toxicity dimension.\n# Block outputs exceeding a threshold.\n#\n# Your goal: implement toxicity_filter(text, classifier, threshold=0.7)\n#   1. Score text on each toxicity dimension\n#   2. Check if any score exceeds threshold\n#   3. Return toxicity scores and whether to block\n\nimport numpy as np\n\ndef toxicity_filter(text, classifier, threshold=0.7):\n    # TODO: Score text\n    # TODO: Check threshold\n    # TODO: Return scores and decision\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def toxicity_filter",
+      "must_include:toxicity",
+      "must_include:threshold",
+      "must_include:block",
+      "must_include:return"
+    ]
+  }
+}

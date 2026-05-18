@@ -1,0 +1,7 @@
+{
+  "mission_02": [
+    "Use EXPLAIN ANALYZE before your SELECT statement.",
+    "Look for 'Actual Rows' vs 'Planning Rows' to spot estimate inaccuracies.",
+    "Pay attention to 'Execution Time' in milliseconds at the bottom."
+  ]
+}

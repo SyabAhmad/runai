@@ -1,0 +1,22 @@
+{
+  "title": "Promises and Async Operations",
+  "id": "mission_06",
+  "type": "ai_code",
+  "xpReward": 90,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "// TODO: Create and chain Promises for async operations\n// TODO: Handle success and error cases with .then/.catch\n// TODO: Use Promise.all and Promise.race for concurrent operations\n// TODO: Implement retry logic with promises\n\n// TODO: Create a promise-based API call simulator\nfunction fetchUserData(userId) {\n  // TODO: Return a Promise that resolves with user data after delay\n  // TODO: Reject if userId is invalid\n}\n\n// TODO: Chain multiple async operations\nfunction getUserWithOrders(userId) {\n  // TODO: Fetch user, then fetch their orders, then combine results\n}\n\n// TODO: Fetch multiple users concurrently\nfunction fetchAllUsers(userIds) {\n  // TODO: Use Promise.all to fetch all users at once\n}\n\n// TODO: Implement retry logic\nfunction fetchWithRetry(fn, retries = 3, delay = 1000) {\n  // TODO: Retry the promise fn up to 'retries' times on failure\n}\n\n// TODO: Race between two promises\nfunction fetchWithTimeout(promise, timeout) {\n  // TODO: Use Promise.race to timeout if promise takes too long\n}"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:new Promise",
+      "must_include:.then(",
+      "must_include:.catch(",
+      "must_include:Promise.all",
+      "must_include:Promise.race",
+      "must_include:resolve",
+      "must_include:reject"
+    ]
+  }
+}

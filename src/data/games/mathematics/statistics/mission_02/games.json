@@ -1,0 +1,19 @@
+{
+  "title": "P-Values and Significance",
+  "id": "mission_02",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import numpy as np\nfrom scipy import stats\n\n# TODO: Simulate the distribution of p-values under the null hypothesis\nnp.random.seed(42)\nn_simulations = 10000\nn_per_group = 30\n\n# Under H0: both groups from the same distribution\np_values_null = []\nfor _ in range(n_simulations):\n    group_A = None\n    group_B = None\n    _, p = stats.ttest_ind(group_A, group_B)\n    p_values_null.append(p)\n\np_values_null = None\n\n# TODO: What fraction of p-values are below 0.05? (Should be ~5%)\nfalse_positive_rate = None\n\n# TODO: Simulate under the alternative hypothesis (there IS a difference)\n# Group A: Normal(0, 1), Group B: Normal(0.5, 1)\np_values_alt = []\nfor _ in range(n_simulations):\n    group_A = None\n    group_B = None\n    _, p = stats.ttest_ind(group_A, group_B)\n    p_values_alt.append(p)\n\np_values_alt = None\n\n# TODO: What fraction of p-values are below 0.05? (This is the power)\npower = None\n\n# TODO: Explore the multiple testing problem\n# If you run 20 independent tests at alpha=0.05, what's the probability of at least one false positive?\nn_tests = 20\nalpha = 0.05\nprob_at_least_one_fp = None\n\n# TODO: Apply Bonferroni correction\nbonferroni_alpha = None\n\nprint(f\"False positive rate (under H0): {false_positive_rate:.4f}\")\nprint(f\"Statistical power (under H1): {power:.4f}\")\nprint(f\"P(at least 1 FP in {n_tests} tests): {prob_at_least_one_fp:.4f}\")\nprint(f\"Bonferroni-corrected alpha: {bonferroni_alpha:.4f}\")\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:numpy",
+      "must_include:scipy",
+      "must_include:stats.ttest_ind",
+      "must_include:np.random"
+    ]
+  }
+}

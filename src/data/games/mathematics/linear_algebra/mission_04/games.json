@@ -1,0 +1,18 @@
+{
+  "title": "Eigenvalues and Eigenvectors",
+  "id": "mission_04",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import numpy as np\n\n# TODO: Create a 3x3 symmetric matrix A\nA = None\n\n# TODO: Compute eigenvalues and eigenvectors of A\neigenvalues, eigenvectors = None, None\n\n# TODO: Verify the eigenvalue equation: A @ v = lambda * v for the first eigenvector\nv1 = eigenvectors[:, 0]\nlam1 = eigenvalues[0]\nA_v1 = None\nlambda_v1 = None\n\n# TODO: Verify that eigenvectors are orthonormal (for symmetric matrices)\n# Compute the dot product of eigenvector 1 with eigenvector 2\northo_check = None\n\n# TODO: Reconstruct A from its eigendecomposition: A = V @ diag(eigenvalues) @ V^T\nA_reconstructed = None\n\n# TODO: Compute the spectral radius (largest absolute eigenvalue)\nspectral_radius = None\n\nprint(f\"Eigenvalues: {eigenvalues}\")\nprint(f\"A @ v1 = {A_v1}\")\nprint(f\"lambda1 * v1 = {lambda_v1}\")\nprint(f\"Orthogonality check (v1 . v2): {ortho_check:.6f}\")\nprint(f\"Reconstruction error: {np.max(np.abs(A - A_reconstructed)):.2e}\")\nprint(f\"Spectral radius: {spectral_radius:.4f}\")\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:numpy",
+      "must_include:np.linalg.eig",
+      "must_include:np.diag"
+    ]
+  }
+}

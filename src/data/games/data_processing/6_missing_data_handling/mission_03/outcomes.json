@@ -1,0 +1,3 @@
+{
+  "mission_03": "Excellent! You have mastered time series-specific filling techniques that respect temporal ordering. Forward fill is the most natural choice for real-time systems where only past observations are available, while backward fill is useful for retrospective analysis. The limit parameter is crucial for preventing unrealistic value propagation over extended gaps. The combined approach of forward fill followed by backward fill ensures complete coverage while prioritizing the most recent available data. These methods are indispensable for IoT sensor data, financial time series, and any sequential dataset where the order of observations carries critical information that must be preserved during imputation."
+}

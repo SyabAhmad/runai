@@ -1,0 +1,1 @@
+{"mission_01": ["The min-max formula is: (x - df.min()) / (df.max() - df.min()).", "Apply it column-wise: (df - df.min()) / (df.max() - df.min()).", "Verify with df_scaled.min() and df_scaled.max() to confirm [0, 1] range."]}

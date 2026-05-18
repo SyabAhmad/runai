@@ -1,0 +1,3 @@
+{
+  "mission_01": "**Weight pruning** removes unnecessary connections from neural networks.\n\n**Types**:\n- **Unstructured**: Remove individual weights. High sparsity but irregular memory access.\n- **Structured**: Remove entire channels/filters. Hardware-friendly but less accurate.\n\n**Magnitude pruning**: Simplest approach — remove weights with smallest absolute values.\n\n**Process**:\n1. Train model to convergence\n2. Compute threshold at sparsity percentile\n3. Zero out weights below threshold\n4. Fine-tune to recover accuracy\n\n**Results**: 90% sparsity with <1% accuracy drop is achievable on ResNet-50. Pruned models are smaller and faster (with sparse hardware support)."
+}

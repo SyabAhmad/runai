@@ -1,0 +1,9 @@
+{
+  "mission_05": [
+    "Compute rule input: rule_input = x @ self.rule_weights + self.rule_bias.",
+    "Compute logits: logits = rule_activations @ self.output_weights + self.output_bias.",
+    "Sort explanation by contribution: explanation.sort(key=lambda e: abs(e['activation'] * e['output_weight']), reverse=True).",
+    "Compute gradient: grad = output.copy(); grad[y[i]] -= 1.0.",
+    "Update weights: self.output_weights += -lr * np.outer(rule_acts, grad)."
+  ]
+}

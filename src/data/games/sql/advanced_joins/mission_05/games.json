@@ -1,0 +1,19 @@
+{
+  "title": "Cross Join: Date-Store Sales Matrix",
+  "id": "mission_05",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "-- Cross Join: Create a date-store matrix for sales reporting\n-- The dates table has columns: sale_date\n-- The stores table has columns: id, store_name\n-- The sales table has columns: store_id, sale_date, amount\n-- TODO: Generate all date-store combinations and LEFT JOIN with actual sales\n-- Show 0 for dates/stores with no sales\n\nSELECT \nFROM dates\n\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:CROSS JOIN",
+      "must_include:LEFT JOIN",
+      "must_include:COALESCE",
+      "must_include:stores"
+    ]
+  }
+}

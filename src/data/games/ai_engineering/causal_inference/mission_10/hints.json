@@ -1,0 +1,7 @@
+{
+  "mission_10": [
+    "For conditional independence, compute partial correlation of X and Y given Z. Use Fisher's z-transform: z = 0.5 * ln((1+r)/(1-r)). Under the null, z * sqrt(n - |Z| - 3) ~ N(0,1).",
+    "PC algorithm: start with complete graph. For each pair (X,Y), test CI given subsets of neighbors. Remove edge if CI found. Then find v-structures: X-Z-Y where X and Y are not adjacent and Z is not in the separating set.",
+    "For LiNGAM, use FastICA from sklearn to find independent components. The mixing matrix reveals the causal ordering. For ANM, fit regression in both directions and test if residuals are independent of the predictor using HSIC or distance correlation — the correct direction should have independent residuals."
+  ]
+}

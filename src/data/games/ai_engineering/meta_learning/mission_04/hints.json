@@ -1,0 +1,7 @@
+{
+  "mission_04": [
+    "For the relation module, concatenate query and support: combined = np.concatenate([query, support]). Then apply: h = ReLU(W1 @ combined + b1), score = sigmoid(W2 @ h + b2).",
+    "For classification, compute prototypes (mean embeddings per class), then compute relation score between query and each prototype. Predict the class with the highest score.",
+    "For the loss, collect relation scores for all classes into a vector, apply softmax, and compute cross-entropy with the true label. sigmoid(x) = 1 / (1 + exp(-x)). For embedding, apply: embed = ReLU(W @ X + b)."
+  ]
+}

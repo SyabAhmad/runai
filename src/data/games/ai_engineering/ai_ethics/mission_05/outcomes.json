@@ -1,0 +1,3 @@
+{
+  "mission_05": "You implemented FGSM! This simple attack reveals a fundamental weakness in neural networks. Adversarial training is the most effective defense — it's now standard for safety-critical applications."
+}

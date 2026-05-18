@@ -1,0 +1,3 @@
+{
+  "mission_06": "Promises represent the eventual result of an asynchronous operation. Instead of callback hell, promises provide a chainable API with .then() for success and .catch() for errors. Promise.all runs multiple promises concurrently and waits for all to settle, while Promise.race resolves or rejects as soon as the first promise settles. Understanding promises is essential before learning async/await, which is syntactic sugar over promises. In this mission, you will build promise-based utilities for API simulation, concurrent fetching, retry logic, and timeouts."
+}

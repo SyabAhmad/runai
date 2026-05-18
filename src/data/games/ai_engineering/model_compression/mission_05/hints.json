@@ -1,0 +1,7 @@
+{
+  "mission_05": [
+    "Original: `h = W @ x`.",
+    "LoRA: `delta = B @ (A @ x)`.",
+    "Scale: `h = h + (alpha/r) * delta`."
+  ]
+}

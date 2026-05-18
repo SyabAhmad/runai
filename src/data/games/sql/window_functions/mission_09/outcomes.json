@@ -1,0 +1,3 @@
+{
+  "mission_09": "Excellent! You've combined PARTITION BY with running totals to create category-level cumulative calculations. This advanced pattern enables sophisticated multi-dimensional analysis in a single query. You can now track progress within any grouping dimension without resorting to multiple queries or complex joins."
+}

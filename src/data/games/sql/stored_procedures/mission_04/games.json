@@ -1,0 +1,19 @@
+{
+  "title": "Transaction Management with BEGIN/COMMIT",
+  "id": "mission_04",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "-- Transaction Management: Transfer funds between accounts\n-- The accounts table has columns: id, holder_name, balance\n-- TODO: Write a transaction that transfers money from one account to another\n-- Use BEGIN, COMMIT, and handle the case where the source has insufficient funds\n\n-- TODO: Write the transaction block:\n\nBEGIN;\n    -- TODO: Deduct from source account\n    -- TODO: Add to destination account\n    -- TODO: Check for insufficient funds and ROLLBACK if needed\nCOMMIT;\n\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:BEGIN",
+      "must_include:COMMIT",
+      "must_include:UPDATE",
+      "must_include:accounts"
+    ]
+  }
+}

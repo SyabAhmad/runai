@@ -1,0 +1,3 @@
+{
+  "mission_04": "Excellent! You have computed eigenvalues and eigenvectors and verified the fundamental eigenvalue equation A @ v = lambda * v. You confirmed that eigenvectors of symmetric matrices are orthogonal (dot product near zero). The reconstruction A = V @ diag(lambda) @ V^T shows that a matrix can be decomposed into its eigenstructure. The spectral radius tells you the maximum stretching factor of the transformation. This decomposition is the mathematical foundation behind PCA, spectral clustering, and many dimensionality reduction techniques."
+}

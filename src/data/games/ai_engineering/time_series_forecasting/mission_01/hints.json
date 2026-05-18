@@ -1,0 +1,7 @@
+{
+  "mission_01": [
+    "Use np.zeros(n) to initialize the time series array before filling it with ARIMA values.",
+    "The ADF test regresses the first difference delta_y on the lagged level y[t-1]; a significant negative coefficient indicates stationarity.",
+    "The Yule-Walker equations relate AR parameters to autocorrelations: construct the Toeplitz matrix from ACF values and solve the linear system."
+  ]
+}

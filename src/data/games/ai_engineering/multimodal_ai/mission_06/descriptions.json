@@ -1,0 +1,3 @@
+{
+  "mission_06": "**BLIP-2** efficiently connects vision to language without retraining everything.\n\n**Key insight**: Instead of fine-tuning the entire model, use a lightweight Q-Former to bridge frozen components.\n\n**Q-Former**: A small transformer with learnable query tokens. It:\n1. Attends to image features from the frozen encoder\n2. Outputs a fixed number of visual tokens\n3. These tokens are understood by the frozen LLM\n\n**Training stages**:\n1. **Stage 1**: Train Q-Former with image-text contrastive/objective matching/captioning losses\n2. **Stage 2**: Train Q-Former to generate visual tokens that help LLM answer questions\n\n**Advantage**: Only Q-Former is trained — image encoder and LLM stay frozen. Much cheaper than full fine-tuning."
+}

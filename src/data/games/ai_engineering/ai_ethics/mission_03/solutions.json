@@ -1,0 +1,3 @@
+{
+  "mission_03": "import numpy as np\n\ndef dp_sgd_gradient(gradient, clipping_norm, noise_scale):\n    grad_norm = np.linalg.norm(gradient)\n    clipped = gradient * min(1, clipping_norm / (grad_norm + 1e-10))\n    noise = np.random.normal(0, noise_scale, clipped.shape)\n    noisy_gradient = clipped + noise\n    return noisy_gradient"
+}

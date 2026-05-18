@@ -1,0 +1,9 @@
+{
+  "mission_01": [
+    "For OR weights: use np.ones(n_inputs) * 10.0 (same magnitude as AND).",
+    "Compute weighted sum: z = np.dot(self.weights, x) + self.bias.",
+    "For NOT: return self._sigmoid(-x[0]) (negate the input).",
+    "Create neurons: neuron = LogicNeuron(n_inputs, logic_types[i]).",
+    "Forward through neuron: outputs.append(neuron.forward(x))."
+  ]
+}

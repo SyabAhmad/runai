@@ -1,0 +1,1 @@
+{"mission_08": ["MinMaxScaler(feature_range=(0, 100)) scales directly to the desired range.", "The manual formula is: (x-min)/(max-min) * (new_max-new_min) + new_min.", "Verify with df_scaled.min() >= target_min and df_scaled.max() <= target_max."]}

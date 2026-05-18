@@ -1,0 +1,6 @@
+{
+  "title": "Data Pipeline Design",
+  "description": "Learn to build robust data pipelines using sklearn pipelines, column transformers, custom transformers, feature stores, and reproducibility patterns.",
+  "difficulty": "hard",
+  "order": 8
+}

@@ -1,0 +1,20 @@
+{
+  "title": "ReAct Agent Pattern",
+  "id": "mission_04",
+  "type": "ai_code",
+  "xpReward": 90,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "# Agent Frameworks Mission 04: ReAct Agent Pattern\n#\n# ReAct = Reasoning + Acting. The agent alternates between\n# thinking (reasoning) and doing (acting with tools).\n#\n# Thought -> Action -> Observation -> Thought -> ...\n#\n# Your goal: Implement react_agent(query, tools, max_iterations)\n#   1. Generate initial thought about the query\n#   2. Decide which tool to use (or finish)\n#   3. Execute tool, get observation\n#   4. Generate new thought based on observation\n#   5. Repeat until answer found or max_iterations\n\nimport re\n\ndef react_agent(query, tools, max_iterations=5):\n    # TODO: Initialize thought and trajectory\n    # TODO: Loop max_iterations: think, act, observe\n    # TODO: Detect when answer is found (\"Final Answer:\")\n    # TODO: Return final answer and reasoning trace\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def react_agent",
+      "must_include:thought",
+      "must_include:observation",
+      "must_include:max_iterations",
+      "must_include:return"
+    ]
+  }
+}

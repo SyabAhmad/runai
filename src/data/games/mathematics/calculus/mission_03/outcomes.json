@@ -1,0 +1,3 @@
+{
+  "mission_03": "Great work! You have computed partial derivatives of a function of two variables and assembled them into the gradient vector. At (2, 3), the gradient is [39, 38], meaning the function increases most rapidly in that direction. The directional derivative in the [1, 1] direction is approximately 54.45. The gradient is the workhorse of optimization — gradient descent moves in the negative gradient direction to minimize functions. Every parameter update in neural network training is a step guided by partial derivatives."
+}

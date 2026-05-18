@@ -1,0 +1,9 @@
+{
+  "mission_09": [
+    "Train pedagogical tree: tree.fit(X, nn_predictions).",
+    "Get hidden activations: hidden = self._get_hidden_activations(X).",
+    "Train decompositional tree: tree.fit(hidden, nn_predictions).",
+    "Create rule string: rule_str = ' AND '.join(f'{f} {op} {t:.3f}' for f, op, t in conditions).",
+    "Compute correlations: np.abs(np.corrcoef(X[:, f], hidden[:, h_idx])[0, 1])."
+  ]
+}

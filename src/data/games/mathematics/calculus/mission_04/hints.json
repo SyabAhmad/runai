@@ -1,0 +1,10 @@
+{
+  "mission_04": [
+    "The Jacobian of F: R^3 -> R^2 is a 2x3 matrix.",
+    "Row i contains partial derivatives of output component i.",
+    "For F = [x*y + z^2, x^2 - y*z]: J = [[y, x, 2z], [2x, -z, -y]].",
+    "The gradient of g(x,y,z) = x^2+y^2+z^2 is [2x, 2y, 2z].",
+    "Verify numerically: J[i,j] ≈ (F_i(x+he_j) - F_i(x-he_j)) / (2h).",
+    "Use np.array to construct the Jacobian matrix."
+  ]
+}

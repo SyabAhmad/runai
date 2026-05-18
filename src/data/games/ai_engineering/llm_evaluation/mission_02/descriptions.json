@@ -1,0 +1,3 @@
+{
+  "mission_02": "**ROUGE** (Recall-Oriented Understudy for Gisting Evaluation) measures text overlap.\n\n**Variants**:\n- **ROUGE-1**: Unigram overlap (word-level)\n- **ROUGE-2**: Bigram overlap (phrase-level)\n- **ROUGE-L**: Longest common subsequence (sentence-level)\n\n**Formula** (ROUGE-N Recall):\n```\nROUGE-N = Σ overlapping n-grams / Σ reference n-grams\n```\n\n**Use cases**: Summarization evaluation, machine translation\n\n**Limitations**:\n- Only measures surface overlap, not meaning\n- Synonyms counted as different\n- Doesn't capture fluency or coherence\n\nStill widely used because it's fast, simple, and correlates reasonably with human judgment."
+}

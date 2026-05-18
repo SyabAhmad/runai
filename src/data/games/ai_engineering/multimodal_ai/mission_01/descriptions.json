@@ -1,0 +1,3 @@
+{
+  "mission_01": "**CLIP** (Contrastive Language-Image Pretraining) connects vision and language.\n\n**Architecture**:\n- **Image encoder**: ViT or ResNet\n- **Text encoder**: Transformer\n- Both project to a shared embedding space\n\n**Training**: Given N (image, text) pairs:\n1. Compute all N×N similarities\n2. Diagonal = correct pairs (should be high)\n3. Off-diagonal = incorrect pairs (should be low)\n4. Contrastive loss pushes correct pairs together, incorrect apart\n\n**Temperature (τ)**: Controls sharpness of similarity distribution. Lower τ = more confident predictions.\n\n**Applications**: Zero-shot classification, image search, DALL-E text encoder, Stable Diffusion guidance."
+}

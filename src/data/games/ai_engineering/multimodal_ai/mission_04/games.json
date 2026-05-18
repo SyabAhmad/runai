@@ -1,0 +1,20 @@
+{
+  "title": "Visual Grounding (Referring Expression)",
+  "id": "mission_04",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "# Multimodal AI Mission 04: Visual Grounding\n#\n# Visual grounding locates objects in an image described by text.\n# Given an image and a referring expression (\"the red car on the left\"),\n# output the bounding box of the referenced object.\n#\n# Approach:\n# 1. Detect candidate objects (bounding boxes)\n# 2. Encode each object region and the text\n# 3. Compute similarity between text and each region\n# 4. Select region with highest similarity\n#\n# Your goal: implement visual_grounding(image, text, proposals)\n#   1. Encode text query\n#   2. Encode each proposal region\n#   3. Compute similarity scores\n#   4. Return best matching box\n\nimport numpy as np\n\ndef visual_grounding(image, text, proposals):\n    # TODO: Encode text\n    # TODO: Encode each proposal\n    # TODO: Compute similarities\n    # TODO: Return best box\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def visual_grounding",
+      "must_include:encode",
+      "must_include:similarity",
+      "must_include:proposal",
+      "must_include:return"
+    ]
+  }
+}

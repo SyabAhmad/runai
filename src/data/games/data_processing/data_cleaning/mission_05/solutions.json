@@ -1,3 +1,3 @@
-﻿{
-    "mission_05":  "import pandas as pd\\n\\ndef extract_datetime_features(df):\\n    df[\"signup_date\"] = pd.to_datetime(df[\"signup_date\"], errors=\"coerce\")\\n    df[\"signup_year\"] = df[\"signup_date\"].dt.year\\n    df[\"signup_month\"] = df[\"signup_date\"].dt.month\\n    return df"
+{
+  "mission_05": "import pandas as pd\nimport numpy as np\n\n# Create a DataFrame with outliers\ndata = {\n    'product': ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'],\n    'price': [10, 12, 11, 13, 100, 12, 11, 200]\n}\ndf = pd.DataFrame(data)\n\n# Calculate Q1, Q3, and IQR\nQ1 = df['price'].quantile(0.25)\nQ3 = df['price'].quantile(0.75)\nIQR = Q3 - Q1\n\n# Define outlier bounds\nlower_bound = Q1 - 1.5 * IQR\nupper_bound = Q3 + 1.5 * IQR\n\n# Filter out outliers\ndf_clean = df[(df['price'] >= lower_bound) & (df['price'] <= upper_bound)]\n\nprint(f\"Original: {len(df)} rows, Clean: {len(df_clean)} rows\")"
 }

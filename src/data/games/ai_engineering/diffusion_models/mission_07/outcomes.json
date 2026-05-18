@@ -1,0 +1,3 @@
+{
+  "mission_07": "You implemented DDIM sampling! This 20x speedup made diffusion models practical for real applications. Stable Diffusion uses DDIM or similar samplers (DPM-Solver, Euler) for fast generation."
+}

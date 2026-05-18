@@ -1,0 +1,22 @@
+{
+  "title": "Advanced Imputation with Model-Based Evaluation",
+  "id": "mission_10",
+  "type": "ai_code",
+  "xpReward": 120,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "import pandas as pd\nimport numpy as np\nfrom sklearn.impute import SimpleImputer, KNNImputer, IterativeImputer\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.model_selection import cross_val_score\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.datasets import make_classification\n\n# TODO: Compare multiple imputation strategies by their impact on\n# downstream model performance:\n# 1. Mean imputation\n# 2. KNN imputation (k=5)\n# 3. MICE (IterativeImputer)\n# 4. Drop rows with missing values\n\n# TODO: For each strategy:\n# 1. Apply imputation\n# 2. Train a RandomForest classifier\n# 3. Evaluate using cross-validation\n# 4. Record accuracy scores\n\ndef evaluate_imputation_strategies():\n    # TODO: Create dataset with missing values\n    # TODO: Define imputation strategies to compare\n    # TODO: Build pipeline for each strategy\n    # TODO: Compare cross-validation scores\n    pass\n\n# TODO: Run the evaluation and rank strategies\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:SimpleImputer",
+      "must_include:KNNImputer",
+      "must_include:IterativeImputer",
+      "must_include:RandomForestClassifier",
+      "must_include:cross_val_score",
+      "must_include:Pipeline",
+      "must_include:drop"
+    ]
+  }
+}

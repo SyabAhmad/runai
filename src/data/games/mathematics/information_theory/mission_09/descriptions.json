@@ -1,0 +1,3 @@
+{
+  "mission_09": "Implement Fisher information, a measure of the amount of information that an observable random variable carries about an unknown parameter. Fisher information I(theta) = E[(d/d_theta log p(X;theta))^2] quantifies how much the likelihood function changes with respect to the parameter. High Fisher information means the parameter can be estimated precisely. The Cramer-Rao bound states that the variance of any unbiased estimator is at least 1/(n*I(theta)), establishing a fundamental limit on estimation accuracy. Fisher information is central to natural gradient descent, where the Fisher information matrix defines the geometry of the parameter space, and to Jeffreys prior in Bayesian statistics."
+}

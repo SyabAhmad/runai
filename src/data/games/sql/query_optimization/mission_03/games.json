@@ -1,0 +1,19 @@
+{
+  "title": "Identifying Sequential Scans",
+  "id": "mission_03",
+  "type": "ai_code",
+  "xpReward": 70,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "-- Identify Sequential Scans: Find queries doing full table scans\n-- The products table has columns: id, name, category, price, created_at\n-- TODO: Write a query that will likely trigger a sequential scan\n-- Then write an EXPLAIN to confirm it uses Seq Scan\n\n-- Write a query filtering on a non-indexed column and EXPLAIN it:\n\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:EXPLAIN",
+      "must_include:SELECT",
+      "must_include:products",
+      "must_include:WHERE"
+    ]
+  }
+}

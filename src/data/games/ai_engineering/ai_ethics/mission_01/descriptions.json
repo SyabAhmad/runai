@@ -1,0 +1,3 @@
+{
+  "mission_01": "**Bias in AI** can cause real harm: discriminatory hiring, unfair lending, unequal healthcare.\n\n**Types of bias**:\n- **Representation**: Dataset doesn't reflect real-world demographics\n- **Measurement**: Proxy variables correlate with protected attributes\n- **Aggregation**: Model works well on average but poorly for subgroups\n- **Evaluation**: Test data doesn't represent deployment population\n\n**Detection**:\n- Compare group representation to population statistics\n- Measure outcome rates across groups\n- Check model performance (accuracy, F1) per group\n\n**Four-fifths rule**: If selection rate for any group is <80% of the highest group, there's adverse impact."
+}

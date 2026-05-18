@@ -1,0 +1,3 @@
+{
+  "mission_01": "Great start! You have implemented the IQR method, the most robust and distribution-free approach to outlier detection. By using quartiles instead of mean and standard deviation, the IQR method is resistant to the very outliers it seeks to detect, making it a self-consistent approach. The 1.5*IQR rule, established by statistician John Tukey, provides a principled threshold that works well across many distributions. This method is the foundation of box plots and is widely used in exploratory data analysis. While it works best for univariate detection, the IQR concept extends to multivariate settings through methods like the modified Z-score and Mahalanobis distance. You will explore these advanced techniques in upcoming missions."
+}

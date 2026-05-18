@@ -1,0 +1,20 @@
+{
+  "title": "Tool Calling Protocol",
+  "id": "mission_05",
+  "type": "ai_code",
+  "xpReward": 100,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "# Agent Frameworks Mission 05: Tool Calling Protocol\n#\n# Modern LLMs support structured tool calling (function calling).\n# The model returns JSON specifying which tool to call and with\n# what arguments.\n#\n# Your goal: Implement tool_call_parser(llm_response, tool_schemas)\n#   1. Parse the LLM response for tool call JSON\n#   2. Validate arguments against tool schemas\n#   3. Execute the tool with validated arguments\n#   4. Format the result back for the LLM\n#\n# Tool schema example:\n#   {\"name\": \"calculator\", \"params\": {\"expression\": \"string\"}}\n\nimport json\nimport re\n\ndef tool_call_parser(llm_response, tool_schemas):\n    # TODO: Extract JSON from LLM response (may be in code blocks)\n    # TODO: Validate tool name exists in schemas\n    # TODO: Validate required parameters are present\n    # TODO: Return parsed tool call or error\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def tool_call_parser",
+      "must_include:tool_schemas",
+      "must_include:json",
+      "must_include:validate",
+      "must_include:return"
+    ]
+  }
+}

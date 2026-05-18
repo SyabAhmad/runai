@@ -1,3 +1,3 @@
-﻿{
-    "mission_01":  "Write clean_missing_values(df) to impute missing values. Fill numeric columns with their median and categorical/object columns with their mode. Return the transformed DataFrame."
+{
+  "mission_01": "Deduplication is a fundamental data cleaning technique that removes redundant records from datasets. In pandas, the drop_duplicates() method identifies rows where all column values are identical and removes them, keeping only the first occurrence by default. You can customize this behavior using the 'keep' parameter: 'first' keeps the initial occurrence, 'last' keeps the final one, and False removes all duplicates entirely. When working with large datasets, deduplication significantly reduces storage requirements and prevents skewed analytical results. Understanding how to identify and handle duplicates is essential for maintaining data integrity in any data pipeline."
 }

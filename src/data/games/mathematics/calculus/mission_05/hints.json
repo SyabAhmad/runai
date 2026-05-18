@@ -1,0 +1,10 @@
+{
+  "mission_05": [
+    "Use scipy.integrate.quad(f, a, b) for definite integrals.",
+    "The trapezoidal rule: np.trapz(y_vals, x_vals).",
+    "Simpson's rule: scipy.integrate.simpson(y_vals, x_vals).",
+    "For infinite limits, use np.inf as the bound.",
+    "The Gaussian integral of e^(-x^2) from -inf to inf = sqrt(pi).",
+    "Double integrals use scipy.integrate.dblquad()."
+  ]
+}

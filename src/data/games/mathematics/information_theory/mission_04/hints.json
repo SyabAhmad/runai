@@ -1,0 +1,7 @@
+{
+  "mission_04": [
+    "MI = sum(p(x,y) * log(p(x,y) / (p(x) * p(y)))) over all x,y where p(x,y) > 0",
+    "Marginals: p(x) = sum_y p(x,y), p(y) = sum_x p(x,y)",
+    "Normalized MI = I(X;Y) / sqrt(H(X) * H(Y)) gives a value between 0 and 1"
+  ]
+}

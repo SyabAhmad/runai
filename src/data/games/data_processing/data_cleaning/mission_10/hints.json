@@ -1,7 +1,8 @@
-﻿{
-    "mission_10":  [
-                       "Handle missing numeric/categorical values first.",
-                       "Then apply get_dummies with drop_first=True.",
-                       "Split using train_test_split and return all 4 outputs."
-                   ]
+{
+  "mission_10": [
+    "Chain operations: drop_duplicates first, then text cleaning, then type conversion",
+    "Use pd.to_numeric with errors='coerce' for safe numeric conversion",
+    "Use pd.to_datetime with multiple format attempts in a try/except loop",
+    "Remove currency symbols with str.replace('$', '').str.replace(',', '')"
+  ]
 }

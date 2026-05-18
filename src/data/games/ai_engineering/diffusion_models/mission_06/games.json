@@ -1,0 +1,20 @@
+{
+  "title": "Classifier-Free Guidance",
+  "id": "mission_06",
+  "type": "ai_code",
+  "xpReward": 90,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "# Diffusion Models Mission 06: Classifier-Free Guidance\n#\n# Classifier-Free Guidance (CFG) steers generation using text prompts.\n# It combines conditional and unconditional predictions:\n# epsilon_guided = epsilon_uncond + guidance_scale * (epsilon_cond - epsilon_uncond)\n#\n# Higher guidance_scale = more faithful to prompt, but less diverse.\n# Typical values: 5-15 for Stable Diffusion.\n#\n# Your goal: Implement classifier_free_guidance(x_t, t, model, prompt_embed, scale)\n#   1. Predict noise with prompt (conditional)\n#   2. Predict noise without prompt (unconditional, empty prompt)\n#   3. Combine using guidance scale formula\n\nimport numpy as np\n\ndef classifier_free_guidance(x_t, t, model, prompt_embed, scale=7.5):\n    # TODO: Conditional prediction with prompt\n    # TODO: Unconditional prediction (null prompt)\n    # TODO: Apply guidance formula\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def classifier_free_guidance",
+      "must_include:conditional",
+      "must_include:unconditional",
+      "must_include:scale",
+      "must_include:return"
+    ]
+  }
+}

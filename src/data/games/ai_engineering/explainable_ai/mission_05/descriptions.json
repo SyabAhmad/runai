@@ -1,0 +1,3 @@
+{
+  "mission_05": "Partial Dependence Plots (PDPs) show the marginal effect of one or two features on the predicted outcome, averaging over all other features. They reveal whether the relationship between a feature and the target is linear, monotonic, or more complex. ICE (Individual Conditional Expectation) curves extend PDPs by showing the effect for each individual sample rather than the average. In this mission, you implement 1D PDP by creating a grid of values for the target feature, replacing that feature in all samples with each grid value, and averaging predictions. You also implement 2D PDP for feature interactions and ICE curves that show per-sample heterogeneity."
+}

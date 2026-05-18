@@ -1,0 +1,3 @@
+{
+  "mission_10": "Linear algebra is the computational engine of machine learning. The normal equation w = (X^T X)^(-1) X^T y gives the closed-form solution for linear regression, derived from setting the gradient of the loss to zero. PCA uses eigendecomposition of the covariance matrix to find directions of maximum variance, enabling dimensionality reduction. The R-squared metric measures how well the model explains variance in the data. These techniques — least squares, PCA, and variance analysis — are foundational to supervised and unsupervised learning, and understanding the linear algebra behind them makes you a more effective ML practitioner."
+}

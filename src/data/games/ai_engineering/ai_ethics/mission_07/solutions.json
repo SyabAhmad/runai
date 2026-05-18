@@ -1,0 +1,3 @@
+{
+  "mission_07": "import numpy as np\n\ndef rlhf_reward(output, reference, reward_model, beta=0.1):\n    r = reward_model(output)\n    output_probs = np.exp(output) / np.sum(np.exp(output))\n    reference_probs = np.exp(reference) / np.sum(np.exp(reference))\n    kl = np.sum(output_probs * np.log(output_probs / (reference_probs + 1e-10) + 1e-10))\n    final_reward = r - beta * kl\n    return final_reward"
+}

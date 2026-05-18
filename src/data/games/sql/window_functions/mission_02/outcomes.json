@@ -1,0 +1,3 @@
+{
+  "mission_02": "Well done! You've learned how RANK() handles tied values by assigning the same rank and skipping subsequent numbers. Understanding the difference between ROW_NUMBER, RANK, and DENSE_RANK is crucial for choosing the right ranking function for your analytical needs."
+}

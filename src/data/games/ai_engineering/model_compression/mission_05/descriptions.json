@@ -1,0 +1,3 @@
+{
+  "mission_05": "**LoRA** (Low-Rank Adaptation) is the standard for efficient fine-tuning.\n\n**Key insight**: The change in weights during adaptation has a low intrinsic rank. So instead of updating all parameters, update a low-rank decomposition.\n\n**How it works**:\n- Freeze pretrained weights W\n- Train A (d×r) and B (r×d) where r << d\n- Forward: h = Wx + (α/r) · BAx\n- At inference, merge: W' = W + (α/r) · BA (zero overhead)\n\n**Benefits**:\n- 10,000x fewer trainable parameters\n- Same quality as full fine-tuning\n- Swap adapters for different tasks\n- No inference latency (merge weights)\n\n**Used by**: All major LLM fine-tuning frameworks (PEFT, Axolotl, Unsloth)."
+}

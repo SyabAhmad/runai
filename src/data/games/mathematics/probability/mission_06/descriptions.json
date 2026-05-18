@@ -1,0 +1,3 @@
+{
+  "mission_06": "Covariance measures how two random variables vary together: Cov(X,Y) = E[(X-EX)(Y-EY)]. Positive covariance means they tend to move together, negative means they move in opposite directions. However, covariance depends on the scale of the variables. The correlation coefficient normalizes covariance: corr(X,Y) = Cov(X,Y) / (std(X)*std(Y)), giving a value between -1 and 1. Correlation of 1 means perfect positive linear relationship, -1 means perfect negative, 0 means no linear relationship. Covariance matrices are central to PCA, Gaussian processes, and multivariate analysis. Correlation is used in feature selection and understanding relationships in data."
+}

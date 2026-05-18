@@ -1,0 +1,3 @@
+{
+  "mission_10": "**Edge deployment** brings AI to devices without cloud connectivity.\n\n**Pipeline**:\n1. **Pruning**: Remove 50-90% of weights\n2. **Fine-tuning**: Recover accuracy after pruning\n3. **Quantization**: FP32 → INT8 with calibration data\n4. **Export**: TFLite (mobile), ONNX (cross-platform), CoreML (iOS)\n5. **Benchmark**: Measure latency and memory on target device\n\n**Edge frameworks**:\n- **TensorFlow Lite**: Android, embedded Linux\n- **CoreML**: iOS, macOS\n- **ONNX Runtime**: Windows, Linux, cross-platform\n- **TensorRT**: NVIDIA GPUs\n\n**Real-world**: MobileNetV3 + INT8 runs ImageNet classification in 15ms on Pixel 6, 3MB model size."
+}

@@ -1,0 +1,3 @@
+{
+  "mission_04": "The PARTITION BY clause divides the result set into groups, and the window function operates independently within each partition. This is like running multiple separate queries in one pass. PARTITION BY is essential for within-group rankings, running totals per category, and any analysis that needs subgroup-level calculations."
+}

@@ -1,0 +1,9 @@
+{
+  "mission_03": [
+    "Leak and integrate: self.membrane_potential = self.leak * self.membrane_potential + input_current.",
+    "Compute hidden input: hidden_input = current_input @ self.W_input_hidden.",
+    "Step hidden neuron: spike = neuron.step(hidden_input[i], self.dt).",
+    "Compute output input: output_input = hidden_spikes[t] @ self.W_hidden_output.",
+    "Decode: spike_counts = np.sum(output_spikes, axis=0); return np.argmax(spike_counts)."
+  ]
+}

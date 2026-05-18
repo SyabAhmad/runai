@@ -1,0 +1,3 @@
+{
+  "mission_04": "import numpy as np\n\ndef compute_meteor(generated, reference):\n    gen_tokens = generated.lower().split()\n    ref_tokens = reference.lower().split()\n    matches = sum(1 for t in gen_tokens if t in ref_tokens)\n    precision = matches / max(len(gen_tokens), 1)\n    recall = matches / max(len(ref_tokens), 1)\n    f_mean = (10 * precision * recall) / (recall + 9 * precision + 1e-10)\n    chunks = 1  # simplified: assume single chunk\n    penalty = 0.5 * (chunks / max(matches, 1)) ** 3\n    meteor = f_mean * (1 - penalty)\n    return meteor"
+}

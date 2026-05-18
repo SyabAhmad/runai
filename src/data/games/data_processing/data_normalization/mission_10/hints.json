@@ -1,0 +1,1 @@
+{"mission_10": ["Check skewness with scipy.stats.skew to decide which transformation each column needs.", "Use PowerTransformer for highly skewed columns (|skew| > 1), StandardScaler for moderate skew.", "Combine results with pd.concat([col1_scaled, col2_scaled, ...], axis=1)."]}

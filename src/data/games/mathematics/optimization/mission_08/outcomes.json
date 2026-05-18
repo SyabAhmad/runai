@@ -1,0 +1,3 @@
+{
+  "mission_08": "Excellent work! You have implemented a quadratic programming solver capable of handling both inequality and equality constraints. QP is fundamental in machine learning, particularly in Support Vector Machines where the dual problem is a QP. It is also used in model predictive control, portfolio optimization, and many engineering applications."
+}

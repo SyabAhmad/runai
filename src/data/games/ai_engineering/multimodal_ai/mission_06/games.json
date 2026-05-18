@@ -1,0 +1,20 @@
+{
+  "title": "BLIP-2: Bootstrapped Language-Image Pretraining",
+  "id": "mission_06",
+  "type": "ai_code",
+  "xpReward": 90,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "# Multimodal AI Mission 06: BLIP-2\n#\n# BLIP-2 connects frozen image encoders to frozen LLMs using a Q-Former.\n# The Q-Former learns to extract visual features the LLM can understand.\n#\n# Architecture:\n# 1. Frozen image encoder (ViT/CLIP)\n# 2. Q-Former: learns queries that extract relevant visual info\n# 3. Frozen LLM: receives visual tokens + text, generates response\n#\n# Your goal: Implement blip2_inference(image, question, q_former, llm)\n#   1. Encode image with frozen encoder\n#   2. Q-Former extracts visual tokens\n#   3. Concatenate visual tokens with text prompt\n#   4. LLM generates answer\n\nimport numpy as np\n\ndef blip2_inference(image, question, q_former, llm):\n    # TODO: Encode image\n    # TODO: Q-Former extracts visual tokens\n    # TODO: Create prompt with visual tokens\n    # TODO: LLM generates answer\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def blip2_inference",
+      "must_include:q_former",
+      "must_include:visual_tokens",
+      "must_include:llm",
+      "must_include:return"
+    ]
+  }
+}

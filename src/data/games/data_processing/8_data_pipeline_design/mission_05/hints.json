@@ -1,0 +1,7 @@
+{
+  "mission_05": [
+    "FeatureUnion takes a list of (name, transformer) tuples that run in parallel.",
+    "Each transformer receives the same input and outputs are concatenated horizontally.",
+    "Wrap FeatureUnion in a Pipeline with a final estimator for end-to-end processing."
+  ]
+}

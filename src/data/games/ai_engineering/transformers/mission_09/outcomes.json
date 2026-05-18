@@ -1,0 +1,3 @@
+{
+  "mission_09": "You implemented autoregressive generation with temperature and top-k sampling! This is exactly how ChatGPT, Claude, and Gemini produce text. The temperature knob controls creativity vs. determinism, and top-k filtering prevents the model from generating nonsense by cutting off the long tail of unlikely tokens."
+}

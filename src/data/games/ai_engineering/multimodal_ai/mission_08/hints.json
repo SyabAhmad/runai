@@ -1,0 +1,7 @@
+{
+  "mission_08": [
+    "Audio: `audio_feat = audio_encoder(audio)`.",
+    "Video: `visual_feat = visual_encoder(video)`.",
+    "Fusion: `fused = np.concatenate([audio_feat, visual_feat], axis=-1)`, `transcription = decoder(fused)`."
+  ]
+}

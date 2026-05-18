@@ -1,0 +1,3 @@
+{
+  "mission_01": "Graph Neural Networks extend deep learning to graph-structured data. In this mission, you will implement the core building block of Graph Convolutional Networks (GCNs): the normalized adjacency matrix computation. The key insight is that graph convolutions aggregate information from neighboring nodes, weighted by the graph structure. You will learn how to convert edge lists to adjacency matrices, add self-loops so each node includes its own features during aggregation, and apply symmetric normalization using the degree matrix. This normalization prevents nodes with many neighbors from dominating the aggregation process."
+}

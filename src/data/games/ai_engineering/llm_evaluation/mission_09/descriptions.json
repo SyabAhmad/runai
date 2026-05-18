@@ -1,0 +1,3 @@
+{
+  "mission_09": "**Benchmark datasets** are the standard way to compare LLMs.\n\n**Major benchmarks**:\n- **MMLU** (Massive Multitask Language Understanding): 57 subjects, 15K questions. Tests knowledge.\n- **GSM8K**: 8.5K grade school math problems. Tests reasoning.\n- **HumanEval**: 164 Python coding problems. Tests code generation.\n- **BIG-bench**: 200+ tasks across diverse capabilities.\n- **HELM**: Holistic evaluation across 6 scenarios.\n\n**Evaluation process**:\n1. Few-shot prompting (provide examples)\n2. Generate answer\n3. Exact match or regex extraction\n4. Aggregate accuracy\n\n**Leaderboards**: Hugging Face Open LLM Leaderboard, LMSYS Chatbot Arena rank models by benchmark performance."
+}

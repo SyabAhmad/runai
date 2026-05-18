@@ -1,0 +1,16 @@
+{
+  "mission_06": {
+    "title": "Model-Agnostic Meta-Learning for Classification",
+    "id": "mission_06",
+    "type": "ai_code",
+    "xpReward": 85,
+    "difficulty": "medium",
+    "initialState": {
+      "content": "import numpy as np\n\n# TODO: Implement MAML with cross-entropy loss for classification\ndef maml_classification_inner_loop(params, support_x, support_y, n_classes, inner_lr, n_steps=1):\n    \"\"\"Inner loop adaptation for few-shot classification.\n    \n    Uses cross-entropy loss instead of MSE.\n    \"\"\"\n    # TODO: Implement forward pass with softmax\n    # TODO: Compute cross-entropy loss\n    # TODO: Compute gradients and update\n    pass\n\n# TODO: Implement one-hot encoding\ndef one_hot_encode(labels, n_classes):\n    \"\"\"Convert integer labels to one-hot encoding.\"\"\"\n    # TODO: Create one-hot matrix\n    pass\n\n# TODO: Implement softmax cross-entropy loss and gradients\ndef softmax_cross_entropy_loss(logits, labels_onehot):\n    \"\"\"Compute softmax cross-entropy loss and gradients.\"\"\"\n    # TODO: Compute softmax probabilities\n    # TODO: Compute loss: -sum(y * log(p))\n    # TODO: Compute gradient: p - y\n    pass\n\n# TODO: Implement few-shot classification evaluation\ndef evaluate_maml_classification(params, tasks, inner_lr, n_steps=1):\n    \"\"\"Evaluate MAML on a batch of few-shot classification tasks.\"\"\"\n    # TODO: For each task: adapt and predict\n    # TODO: Compute average accuracy\n    pass\n\n# TODO: Implement Omniglot-style task sampling\ndef sample_classification_task(X, y, n_way=5, k_shot=1, n_query=5):\n    \"\"\"Sample an N-way K-shot classification task.\"\"\"\n    # TODO: Select N random classes\n    # TODO: Sample K support and Q query per class\n    pass\n"
+    },
+    "validation": {
+      "type": "ai_code",
+      "rules": ["must_include:softmax", "must_include:cross_entropy", "must_include:one_hot", "must_include:classification", "must_include:logits"]
+    }
+  }
+}

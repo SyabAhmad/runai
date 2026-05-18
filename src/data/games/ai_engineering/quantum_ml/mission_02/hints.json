@@ -1,0 +1,9 @@
+{
+  "mission_02": [
+    "Initialize state: state = np.zeros(self.dim, dtype=complex); state[0] = 1.0.",
+    "Apply RY: ry_gate = self._ry(theta); full_op = self._single_qubit_gate(ry_gate, q); state = full_op @ state.",
+    "Apply CNOT: state = self._apply_cnot(state, q, target).",
+    "Expectation value: return np.real(state.conj() @ (observable @ state)).",
+    "Parameter-shift gradient: grads[i] = (f_plus - f_minus) / 2."
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "mission_03": {
+    "title": "GraphSAGE Neighborhood Sampling",
+    "id": "mission_03",
+    "type": "ai_code",
+    "xpReward": 70,
+    "difficulty": "easy",
+    "initialState": {
+      "content": "import numpy as np\n\n\ndef sample_neighbors(adj_list, node, sample_size):\n    \"\"\"Sample a fixed number of neighbors for a node.\n    \n    TODO: Get neighbors from adjacency list\n    TODO: If fewer neighbors than sample_size, pad with self\n    TODO: Randomly sample sample_size neighbors\n    TODO: Return sampled neighbor indices\n    \"\"\"\n    neighbors = adj_list[node]\n    \n    # TODO: Handle case where len(neighbors) < sample_size\n    \n    # TODO: Random sampling without replacement\n    sampled = None\n    \n    return sampled\n\n\ndef graphsage_aggregate(H, adj_list, sample_sizes, W_pool, W_self):\n    \"\"\"GraphSAGE aggregation with neighborhood sampling.\n    \n    TODO: For each layer, sample neighbors and aggregate\n    TODO: Use mean pooling: h_N(v) = mean(h_u for u in neighbors)\n    TODO: Concatenate: h_v' = ReLU(W * concat(h_v, h_N(v)))\n    TODO: Normalize output vectors\n    \"\"\"\n    num_nodes = H.shape[0]\n    H_curr = H.copy()\n    \n    for sample_size in sample_sizes:\n        H_next = np.zeros_like(H_curr)\n        \n        for v in range(num_nodes):\n            # TODO: Sample neighbors\n            sampled = sample_neighbors(adj_list, v, sample_size)\n            \n            # TODO: Mean pooling of neighbor features\n            h_neigh = None\n            \n            # TODO: Concatenate self and neighbor features\n            concat = np.concatenate([H_curr[v], h_neigh])\n            \n            # TODO: Apply weight matrix and ReLU\n            H_next[v] = np.maximum(0, W_pool @ concat)\n        \n        # TODO: L2 normalize\n        H_curr = H_next / (np.linalg.norm(H_next, axis=1, keepdims=True) + 1e-8)\n    \n    return H_curr\n"
+    },
+    "validation": {
+      "type": "ai_code",
+      "rules": [
+        "must_include:sample_neighbors",
+        "must_include:mean pooling",
+        "must_include:concatenate",
+        "must_include:ReLU",
+        "must_include:L2 normalize"
+      ]
+    }
+  }
+}

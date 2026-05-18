@@ -1,0 +1,18 @@
+{
+  "title": "Solving Linear Systems",
+  "id": "mission_07",
+  "type": "ai_code",
+  "xpReward": 90,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import numpy as np\n\ndef gaussian_elimination(A, b):\n    \"\"\"\n    Solve Ax = b using Gaussian elimination with partial pivoting\n    \"\"\"\n    n = len(b)\n    # TODO: Create augmented matrix\n    aug = ...\n    \n    # TODO: Forward elimination with partial pivoting\n    for k in range(n):\n        # Find pivot\n        pivot_row = np.argmax(np.abs(aug[k:, k])) + k\n        aug[[k, pivot_row]] = aug[[pivot_row, k]]\n        \n        # Eliminate below\n        for i in range(k + 1, n):\n            factor = ...\n            aug[i, k:] -= factor * aug[k, k:]\n    \n    # TODO: Back substitution\n    x = np.zeros(n)\n    for i in range(n - 1, -1, -1):\n        x[i] = (aug[i, -1] - np.dot(aug[i, i+1:n], x[i+1:n])) / ...\n    \n    return x\n\ndef lu_decomposition(A):\n    \"\"\"\n    LU decomposition: A = L * U\n    Returns L (lower triangular) and U (upper triangular)\n    \"\"\"\n    n = A.shape[0]\n    L = np.eye(n)\n    U = A.copy().astype(float)\n    \n    for k in range(n):\n        for i in range(k + 1, n):\n            factor = ...\n            L[i, k] = factor\n            U[i, k:] -= factor * U[k, k:]\n    \n    return L, U\n\ndef solve_with_lu(L, U, b):\n    \"\"\"\n    Solve Ax = b using LU decomposition\n    First solve Ly = b (forward substitution)\n    Then solve Ux = y (back substitution)\n    \"\"\"\n    n = len(b)\n    # TODO: Forward substitution for Ly = b\n    y = np.zeros(n)\n    for i in range(n):\n        y[i] = ...\n    \n    # TODO: Back substitution for Ux = y\n    x = np.zeros(n)\n    for i in range(n - 1, -1, -1):\n        x[i] = ...\n    \n    return x\n\ndef condition_number(A):\n    \"\"\"\n    Compute condition number of matrix A\n    \"\"\"\n    # TODO: Compute using singular values\n    cond = ...\n    return cond\n\n# Test\nA = np.array([[2, 1, -1], [-3, -1, 2], [-2, 1, 2]], dtype=float)\nb = np.array([8, -11, -3], dtype=float)\nx = gaussian_elimination(A, b)\nprint(f\"Solution: {x}\")\nprint(f\"Verification: Ax = {A @ x}\")"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:gaussian",
+      "must_include:lu_decomposition",
+      "must_include:numpy"
+    ]
+  }
+}

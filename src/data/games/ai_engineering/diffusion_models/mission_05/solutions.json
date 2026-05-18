@@ -1,0 +1,3 @@
+{
+  "mission_05": "import numpy as np\n\ndef diffusion_training_step(x_0, model, alpha_bar, num_steps):\n    t = np.random.randint(0, num_steps)\n    epsilon = np.random.randn(*x_0.shape)\n    x_t = np.sqrt(alpha_bar[t]) * x_0 + np.sqrt(1 - alpha_bar[t]) * epsilon\n    epsilon_pred = model(x_t, t)\n    mse_loss = np.mean((epsilon - epsilon_pred) ** 2)\n    return mse_loss, t, x_t, epsilon_pred"
+}

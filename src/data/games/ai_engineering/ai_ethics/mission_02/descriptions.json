@@ -1,0 +1,3 @@
+{
+  "mission_02": "**Fairness metrics** provide quantitative measures of model fairness.\n\n**Demographic parity**: Selection rates should be equal across groups. Ignores true labels — focuses on outcomes.\n\n**Equal opportunity**: True positive rates should be equal. Ensures qualified candidates from all groups are selected.\n\n**Equalized odds**: Both TPR and FPR should be equal. Strongest fairness guarantee.\n\n**Trade-offs**: It's mathematically impossible to satisfy all fairness metrics simultaneously (impossibility theorem). Choose based on context:\n- Hiring: Equal opportunity (qualified candidates get hired)\n- Lending: Demographic parity (equal access)\n- Criminal justice: Equalized odds (equal error rates)"
+}

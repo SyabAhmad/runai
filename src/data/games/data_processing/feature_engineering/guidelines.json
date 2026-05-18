@@ -1,0 +1,6 @@
+{
+  "title": "Feature Engineering",
+  "description": "Master feature engineering techniques including one-hot encoding, label encoding, binning, polynomial features, and target encoding. Learn to transform raw data into powerful features that improve machine learning model performance.",
+  "difficulty": "intermediate-advanced",
+  "order": 3
+}

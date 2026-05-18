@@ -1,0 +1,3 @@
+{
+  "mission_02": "Great job! You have successfully performed key matrix operations. You learned that matrix multiplication with @ is fundamentally different from element-wise multiplication with *. The transpose operation swaps rows and columns, and the inverse undoes a matrix transformation. The identity check confirms that A @ A_inverse equals the identity matrix (with minor floating-point differences). These operations are the workhorses of neural network forward and backward passes."
+}

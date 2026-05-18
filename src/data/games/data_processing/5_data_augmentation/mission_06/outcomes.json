@@ -1,0 +1,3 @@
+{
+  "mission_06": "Fantastic work! You have implemented mixup, an elegant augmentation technique that creates virtual training samples through linear interpolation. By blending pairs of examples and their labels, mixup encourages your model to learn smoother decision boundaries and behave linearly between training points. This regularization effect reduces overfitting, improves calibration, and makes models more robust to adversarial perturbations. The Beta distribution parameter alpha gives you fine control over the interpolation strength. Mixup is particularly effective in deep learning and has become a standard component in many state-of-the-art training pipelines across computer vision and NLP tasks."
+}

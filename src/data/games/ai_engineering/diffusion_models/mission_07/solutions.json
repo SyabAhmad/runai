@@ -1,0 +1,3 @@
+{
+  "mission_07": "import numpy as np\n\ndef ddim_sampling(model, num_steps, alpha_bar, img_shape):\n    T = len(alpha_bar)\n    steps = np.linspace(0, T - 1, num_steps, dtype=int)[::-1]\n    x = np.random.randn(*img_shape)\n    for i, t in enumerate(steps):\n        eps = model(x, t)\n        ab = alpha_bar[t]\n        ab_prev = alpha_bar[steps[i + 1]] if i + 1 < len(steps) else alpha_bar[0]\n        x = np.sqrt(ab_prev) * (x - np.sqrt(1 - ab) * eps) / np.sqrt(ab) + np.sqrt(1 - ab_prev) * eps\n    return x"
+}

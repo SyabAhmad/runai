@@ -1,0 +1,9 @@
+{
+  "mission_10": [
+    "Average word vectors: sentence_vec = np.mean(word_vecs, axis=0).",
+    "Neural similarity: neural_sim = np.dot(enc1, enc2) / (np.linalg.norm(enc1) * np.linalg.norm(enc2) + 1e-10).",
+    "Combined similarity: combined = 0.7 * neural_sim + 0.3 * symbolic_sim.",
+    "Similar pair loss: dist = np.sum((enc1 - enc2) ** 2).",
+    "Dissimilar pair loss: loss = max(0, 1.0 - dist)."
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "mission_06": [
+    "Per-token: `for each token: scale = max(abs(kv)) / 127`.",
+    "Quantize: `q = round(kv / scale)`, clip to [-128, 127].",
+    "Return: `quantized_cache, scales`."
+  ]
+}

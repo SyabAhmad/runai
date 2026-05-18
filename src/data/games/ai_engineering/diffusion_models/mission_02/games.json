@@ -1,0 +1,20 @@
+{
+  "title": "Reverse Diffusion (Denoising)",
+  "id": "mission_02",
+  "type": "ai_code",
+  "xpReward": 70,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "# Diffusion Models Mission 02: Reverse Diffusion (Denoising)\n#\n# The reverse process learns to denoise: given x_t, predict x_{t-1}.\n# The model predicts the noise epsilon that was added.\n#\n# Reverse step: x_{t-1} = 1/sqrt(alpha_t) * (x_t - (1-alpha_t)/sqrt(1-alpha_bar_t) * epsilon_pred)\n#\n# Your goal: Implement reverse_diffusion(x_t, t, model, alpha_bar, beta)\n#   1. Use model to predict noise: epsilon_pred = model(x_t, t)\n#   2. Compute coefficients for the reverse step\n#   3. Apply reverse formula to get x_{t-1}\n#   4. Add small noise if t > 0\n\nimport numpy as np\n\ndef reverse_diffusion(x_t, t, model, alpha_bar, beta):\n    # TODO: Predict noise using model\n    # TODO: Compute reverse coefficients\n    # TODO: Apply reverse diffusion formula\n    # TODO: Add noise if t > 0\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def reverse_diffusion",
+      "must_include:alpha_bar",
+      "must_include:noise",
+      "must_include:model",
+      "must_include:return"
+    ]
+  }
+}

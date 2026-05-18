@@ -1,0 +1,7 @@
+{
+  "mission_05": [
+    "Use RETURN numerator / denominator in the main block.",
+    "Add EXCEPTION WHEN division_by_zero THEN RETURN NULL.",
+    "You can also RAISE NOTICE with a custom message in the exception handler."
+  ]
+}

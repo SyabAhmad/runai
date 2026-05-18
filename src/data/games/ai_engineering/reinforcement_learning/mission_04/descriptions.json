@@ -1,0 +1,3 @@
+{
+  "mission_04": "**Policy Gradient** methods directly optimize the policy π(a|s; θ) instead of learning value functions. REINFORCE is the simplest policy gradient algorithm.\n\nThe key idea: if an action leads to high returns, increase its probability. If it leads to low returns, decrease it.\n\n```\nθ ← θ + α * G * ∇log(π(a|s; θ))\n```\n\nWhere:\n- **G** = total discounted return from that state onward\n- **∇log(π)** = gradient of log probability — points toward increasing the action's probability\n- **α** = learning rate\n\nUnlike Q-learning, policy gradients work with continuous action spaces and can learn stochastic policies. They're the foundation of PPO, A3C, and SAC."
+}

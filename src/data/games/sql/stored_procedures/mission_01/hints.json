@@ -1,0 +1,7 @@
+{
+  "mission_01": [
+    "Define parameters as (amount NUMERIC, tax_rate NUMERIC).",
+    "In the BEGIN block, use RETURN amount + (amount * tax_rate).",
+    "The function can be called as SELECT calculate_total_with_tax(100, 0.08)."
+  ]
+}

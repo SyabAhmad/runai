@@ -1,0 +1,19 @@
+{
+  "title": "EXPLAIN ANALYZE: Actual Execution Stats",
+  "id": "mission_02",
+  "type": "ai_code",
+  "xpReward": 60,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "-- EXPLAIN ANALYZE: Get actual execution timing\n-- The orders table has columns: id, customer_id, order_date, total\n-- TODO: Use EXPLAIN ANALYZE to see actual execution times for an order query\n-- Compare estimated vs actual rows and timing\n\n-- Write your EXPLAIN ANALYZE query below:\n\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:EXPLAIN ANALYZE",
+      "must_include:SELECT",
+      "must_include:orders",
+      "must_include:customer_id"
+    ]
+  }
+}

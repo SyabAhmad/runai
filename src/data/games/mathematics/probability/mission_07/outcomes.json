@@ -1,0 +1,3 @@
+{
+  "mission_07": "Fascinating results! The three-card problem gives P(other side Red | face up Red) = 2/3 — seeing a red face makes it twice as likely you have the red-red card. The Monty Hall simulation confirms that switching wins 2/3 of the time while staying wins only 1/3. Both problems illustrate the power and subtlety of conditional probability. Monty's action of opening a door provides information that changes the probabilities. These counterintuitive results show why careful probabilistic reasoning is essential — our intuition about probability is often wrong, but the math is reliable."
+}

@@ -1,0 +1,7 @@
+{
+  "mission_05": [
+    "The Lagrangian is L(x, λ) = f(x) + λ·g(x) where g(x) = 0 is the constraint",
+    "Use scipy.optimize.minimize with method='SLSQP' for constrained optimization",
+    "Include lambda as an additional variable: vars = [x1, x2, ..., xn, lambda]"
+  ]
+}

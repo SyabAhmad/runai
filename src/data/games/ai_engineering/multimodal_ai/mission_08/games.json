@@ -1,0 +1,21 @@
+{
+  "title": "Audio-Visual Speech Recognition",
+  "id": "mission_08",
+  "type": "ai_code",
+  "xpReward": 100,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "# Multimodal AI Mission 08: Audio-Visual Speech Recognition\n#\n# Combining audio and visual (lip reading) signals improves speech recognition\n# in noisy environments.\n#\n# Architecture:\n# 1. Audio encoder: extracts acoustic features from waveform\n# 2. Visual encoder: extracts lip movement features from video\n# 3. Fusion: combine both modalities\n# 4. CTC decoder: transcribes to text\n#\n# Your goal: implement avsr(audio, video, audio_encoder, visual_encoder, decoder)\n#   1. Encode audio and video streams\n#   2. Align temporal dimensions\n#   3. Fuse modalities\n#   4. Decode transcription\n\nimport numpy as np\n\ndef avsr(audio, video, audio_encoder, visual_encoder, decoder):\n    # TODO: Encode audio\n    # TODO: Encode video (lip regions)\n    # TODO: Fuse and decode\n    # TODO: Return transcription\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def avsr",
+      "must_include:audio_encoder",
+      "must_include:visual_encoder",
+      "must_include:fuse",
+      "must_include:decoder",
+      "must_include:return"
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+{"mission_10": ["Start with categorical encoding: pd.get_dummies for region, LabelEncoder for membership.", "Create interactions: df['income_per_age'] = df['income'] / df['age'], df['purchase_rate'] = df['purchases'] / df['age'].", "Chain all transformations sequentially, then separate X (features) and y (target) at the end."]}

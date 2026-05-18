@@ -1,4 +1,4 @@
-﻿{
+{
     "title":  "Feature Engineering Mission 2: Log Transform Skewed Feature",
     "initialState":  {
                          "content":  "# TODO: Apply log transform to skewed income feature\n\ndef log_transform_income(df):\n    # TODO: create log_income using np.log1p\n\n    return df"

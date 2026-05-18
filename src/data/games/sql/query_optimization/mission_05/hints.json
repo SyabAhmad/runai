@@ -1,0 +1,7 @@
+{
+  "mission_05": [
+    "Create index with CREATE INDEX idx_orders_customer_date ON orders(customer_id, order_date).",
+    "Test with EXPLAIN SELECT * FROM orders WHERE customer_id = 42 AND order_date > '2024-01-01'.",
+    "The index can also serve queries filtering only on customer_id (the leading column)."
+  ]
+}

@@ -1,0 +1,3 @@
+{
+  "mission_07": "Partial indexes cover only rows matching a WHERE condition, making them smaller and faster than full indexes. They're ideal for queries that frequently filter on specific values, like active users, pending orders, or recent data. A partial index on status = 'pending' is much smaller than a full index and provides better performance for that specific query pattern."
+}

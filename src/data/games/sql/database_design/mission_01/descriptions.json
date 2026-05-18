@@ -1,0 +1,3 @@
+{
+  "mission_01": "First Normal Form (1NF) requires that each column contains atomic (indivisible) values and each row is unique. Storing comma-separated values in a single column violates 1NF because it makes querying, indexing, and updating individual values difficult. The solution is to create a separate table for the repeating data with a foreign key back to the parent table."
+}

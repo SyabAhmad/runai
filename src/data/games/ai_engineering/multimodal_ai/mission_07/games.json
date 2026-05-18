@@ -1,0 +1,20 @@
+{
+  "title": "LLaVA: Large Language and Vision Assistant",
+  "id": "mission_07",
+  "type": "ai_code",
+  "xpReward": 100,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "# Multimodal AI Mission 07: LLaVA\n#\n# LLaVA connects a vision encoder to an LLM with a simple linear projector.\n# It's trained in two stages:\n# 1. Pretrain projector on image-caption pairs\n# 2. Fine-tune on visual instruction data (VQA, captioning, etc.)\n#\n# Architecture:\n# - Vision encoder: CLIP ViT-L/14\n# - Projector: Linear layer (1024 → 4096)\n# - LLM: Vicuna/Llama\n#\n# Your goal: Implement llava_inference(image, prompt, projector, llm)\n#   1. Encode image with CLIP\n#   2. Project visual features to LLM dimension\n#   3. Concatenate with text prompt\n#   4. LLM generates response\n\nimport numpy as np\n\ndef llava_inference(image, prompt, projector, llm):\n    # TODO: Encode image\n    # TODO: Project to LLM space\n    # TODO: Combine with text\n    # TODO: Generate response\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def llava_inference",
+      "must_include:projector",
+      "must_include:clip",
+      "must_include:llm",
+      "must_include:return"
+    ]
+  }
+}

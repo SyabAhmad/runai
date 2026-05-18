@@ -1,0 +1,7 @@
+{
+  "mission_04": [
+    "Use CROSS JOIN between products and colors tables without an ON clause.",
+    "The result will have products rows multiplied by colors rows.",
+    "Select product name and color name from the cross joined tables."
+  ]
+}

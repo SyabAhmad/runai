@@ -1,7 +1,7 @@
-﻿{
-    "mission_07":  [
-                       "Drop target_col from X and keep it in y.",
-                       "Use sklearn.model_selection.train_test_split.",
-                       "Set random_state=42 for deterministic behavior."
-                   ]
+{
+  "mission_07": [
+    "Use df.describe() for summary statistics of numeric columns",
+    "Use df.isnull().sum() to count missing values per column",
+    "Access column statistics with df[col].mean(), df[col].std(), df[col].min(), df[col].max()"
+  ]
 }

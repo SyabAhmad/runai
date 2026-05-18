@@ -1,0 +1,3 @@
+{
+  "mission_01": "A self join is a regular join where a table is joined with itself. This technique is essential for querying hierarchical data, such as employee-manager relationships, where both the employee and their manager exist in the same table. By using table aliases, you can treat the same table as two separate entities and establish relationships between rows within that table."
+}

@@ -1,0 +1,9 @@
+{
+  "mission_06": [
+    "Reshape state: state_tensor = state.reshape([2] * self.n_qubits).",
+    "Partial trace: rho_sub = matrix @ matrix.conj().T where matrix = permuted.reshape(subsys_dim, comp_dim).",
+    "Entropy: eigenvalues = np.linalg.eigvalsh(rho_sub); entropy = -np.sum(eigenvalues * np.log2(eigenvalues)).",
+    "Schmidt rank: matrix = state.reshape(half_dim, -1); schmidt_rank = np.sum(svd_values > 1e-6).",
+    "Advantage indicator: float(np.mean(entropies)) > 0.5."
+  ]
+}

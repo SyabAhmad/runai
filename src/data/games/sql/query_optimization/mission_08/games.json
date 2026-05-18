@@ -1,0 +1,19 @@
+{
+  "title": "Query Rewrite: Avoiding Functions on Indexed Columns",
+  "id": "mission_08",
+  "type": "ai_code",
+  "xpReward": 100,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "-- Query Rewrite: Avoid functions on indexed columns\n-- The users table has columns: id, name, email, created_at (indexed)\n-- The BAD query uses a function on created_at, preventing index usage\n-- TODO: Rewrite the query to avoid the function on the indexed column\n\n-- BAD query (cannot use index on created_at):\n-- EXPLAIN SELECT * FROM users WHERE DATE(created_at) = '2024-03-15';\n\n-- TODO: Rewrite this query to use the index:\n\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:SELECT",
+      "must_include:users",
+      "must_include:created_at",
+      "must_include:>="
+    ]
+  }
+}

@@ -1,0 +1,3 @@
+{
+  "mission_03": "**AutoGen** (by Microsoft) uses conversational agents that talk to each other to solve complex problems. Unlike single-agent systems, AutoGen creates a dialogue between specialized agents.\n\nThe pattern:\n1. **User Proxy** — represents the human, sends requests, evaluates responses\n2. **Assistant** — provides solutions, writes code, answers questions\n3. **Conversation** — back-and-forth until the problem is solved or max turns reached\n\nThe key insight: multi-agent conversation produces better results than a single agent because each agent can critique and improve upon the other's work. This is how AutoGen solves coding challenges, math problems, and research tasks."
+}

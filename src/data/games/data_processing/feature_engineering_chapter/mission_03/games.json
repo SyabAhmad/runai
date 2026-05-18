@@ -1,4 +1,4 @@
-﻿{
+{
     "title":  "Feature Engineering Mission 3: Frequency Encoding",
     "initialState":  {
                          "content":  "# TODO: Frequency-encode city values\n\ndef frequency_encode_city(df):\n    # TODO: compute normalized frequency map for city\n\n    # TODO: map frequencies into city_freq\n\n    return df"

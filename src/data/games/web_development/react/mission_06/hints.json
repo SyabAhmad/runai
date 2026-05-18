@@ -1,0 +1,7 @@
+{
+  "mission_06": [
+    "Custom hooks must start with \"use\" and can call other hooks. They return whatever values the consumer needs.",
+    "useDebounce: useState for the debounced value, useEffect with setTimeout to delay updates, cleanup with clearTimeout.",
+    "usePrevious: useRef stores the previous value. Update ref.current = value in useEffect after render so the ref always holds the prior value."
+  ]
+}

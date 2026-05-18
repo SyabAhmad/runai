@@ -1,0 +1,3 @@
+{
+  "mission_03": "Color augmentation manipulates the chromatic properties of images to make models invariant to lighting conditions, camera sensors, and color variations. HueSaturationValue adjusts the hue, saturation, and value channels, simulating different lighting environments. RGBShift independently modifies each color channel, useful for simulating sensor noise or white balance differences. CLAHE (Contrast Limited Adaptive Histogram Equalization) enhances local contrast while preventing over-amplification of noise. ChannelShuffle randomly permutes color channels, forcing the model to learn shape-based features rather than relying on specific color patterns."
+}

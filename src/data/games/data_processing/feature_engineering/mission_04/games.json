@@ -1,0 +1,18 @@
+{
+  "title": "Polynomial Features",
+  "id": "mission_04",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import pandas as pd\nimport numpy as np\nfrom sklearn.preprocessing import PolynomialFeatures\n\n# TODO: Create a simple dataset\nX = np.array([[2], [3], [4], [5]])\n\n# TODO: Generate polynomial features up to degree 2\npoly = ...\nX_poly = ...\n\nprint(\"Original features:\")\nprint(X)\nprint(\"\\nPolynomial features (degree 2):\")\nprint(X_poly)\nprint(\"\\nFeature names:\", poly.get_feature_names_out())\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:PolynomialFeatures",
+      "must_include:fit_transform",
+      "must_include:degree"
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "title": "NTILE: Quartile and Percentile Analysis",
+  "id": "mission_10",
+  "type": "ai_code",
+  "xpReward": 120,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "-- NTILE: Divide employees into salary quartiles\n-- The employees table has columns: id, name, department, salary\n-- TODO: Use NTILE(4) to divide employees into 4 salary quartiles\n-- Then calculate the average salary per quartile\n\nWITH quartiles AS (\n  -- TODO: Use NTILE(4) OVER (ORDER BY salary) to assign quartile numbers\n)\nSELECT \nFROM quartiles\n\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:NTILE",
+      "must_include:OVER",
+      "must_include:GROUP BY",
+      "must_include:AVG"
+    ]
+  }
+}

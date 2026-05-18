@@ -1,0 +1,3 @@
+{
+  "mission_09": "Superb work! You've combined LATERAL joins with LEFT joins to create a robust activity feed query. This pattern handles both active and inactive users gracefully, producing a complete user report with recent activity context. The technique is widely used in dashboard queries, user profile pages, and audit trail summaries."
+}

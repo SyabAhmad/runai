@@ -1,0 +1,20 @@
+{
+  "title": "Decoder Block",
+  "id": "mission_05",
+  "type": "ai_code",
+  "xpReward": 100,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "# Transformers Mission 05: Decoder Block\n#\n# The decoder block is more complex than the encoder.\n# It has THREE sub-layers instead of two:\n#   1. Masked self-attention (can't see future tokens)\n#   2. Cross-attention (attends to encoder output)\n#   3. Feed-forward network\n#\n# The causal mask prevents the decoder from \"cheating\"\n# by looking at tokens it hasn't generated yet.\n#\n# Your goal: Implement decoder_block(x, enc_output, W_q1, W_k1, W_v1, W_o1,\n#                                     W_q2, W_k2, W_v2, W_o2,\n#                                     W_ff1, W_ff2, num_heads)\n#   1. Create causal mask (upper triangle = -1e9)\n#   2. Masked self-attention: attn1 = multi_head_attention with mask\n#   3. Residual + norm: x1 = layer_norm(x + attn1)\n#   4. Cross-attention: attn2 = cross-attend x1 to enc_output\n#   5. Residual + norm: x2 = layer_norm(x1 + attn2)\n#   6. FFN + residual + norm\n\nimport numpy as np\n\ndef layer_norm(x, eps=1e-5):\n    mean = np.mean(x, axis=-1, keepdims=True)\n    std = np.std(x, axis=-1, keepdims=True)\n    return (x - mean) / (std + eps)\n\ndef decoder_block(x, enc_output, W_q1, W_k1, W_v1, W_o1,\n                  W_q2, W_k2, W_v2, W_o2,\n                  W_ff1, W_ff2, num_heads):\n    # TODO: Create causal mask\n    # TODO: Masked self-attention + residual + norm\n    # TODO: Cross-attention (Q from x1, K/V from enc_output) + residual + norm\n    # TODO: FFN + residual + norm\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def decoder_block",
+      "must_include:layer_norm",
+      "must_include:mask",
+      "must_include:cross",
+      "must_include:return"
+    ]
+  }
+}

@@ -1,0 +1,3 @@
+{
+  "mission_07": "Implement linear programming solvers using both the scipy linprog function and a basic simplex tableau method. Linear programming optimizes a linear objective function subject to linear equality and inequality constraints. The simplex method, developed by George Dantzig, traverses the vertices of the feasible polytope to find the optimal solution. Despite its exponential worst-case complexity, simplex is remarkably efficient in practice. Linear programming has applications in resource allocation, production planning, transportation, and many other fields."
+}

@@ -1,0 +1,23 @@
+{
+  "title": "Event Handling and Delegation",
+  "id": "mission_09",
+  "type": "ai_code",
+  "xpReward": 110,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "// TODO: Implement event delegation for efficient event handling\n// TODO: Create a custom event system (EventEmitter pattern)\n// TODO: Handle keyboard events for accessibility\n// TODO: Implement drag and drop functionality\n\n// TODO: Event delegation for a dynamic list\nfunction setupEventDelegation(container) {\n  // TODO: Add single click listener on container\n  // TODO: Use event.target and closest() to identify clicked element\n  // TODO: Handle add, edit, delete actions based on data attributes\n}\n\n// TODO: Custom EventEmitter\nclass EventEmitter {\n  constructor() {\n    this.events = {};\n  }\n\n  // TODO: Subscribe to an event\n  on(event, callback) {}\n\n  // TODO: Emit an event with data\n  emit(event, data) {}\n\n  // TODO: Unsubscribe from an event\n  off(event, callback) {}\n\n  // TODO: Subscribe once\n  once(event, callback) {}\n}\n\n// TODO: Keyboard navigation handler\nfunction setupKeyboardNavigation(element) {\n  // TODO: Handle Arrow keys, Enter, Escape for navigation\n  // TODO: Support Tab order management\n}\n\n// TODO: Simple drag and drop\nfunction setupDragAndDrop(draggable, dropzone) {\n  // TODO: Implement dragstart, dragover, drop events\n}"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:addEventListener",
+      "must_include:event.target",
+      "must_include:.closest(",
+      "must_include:CustomEvent",
+      "must_include:dispatchEvent",
+      "must_include:preventDefault",
+      "must_include:dragstart",
+      "must_include:keydown"
+    ]
+  }
+}

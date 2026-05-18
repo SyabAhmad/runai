@@ -1,0 +1,7 @@
+{
+  "mission_06": [
+    "Start with mobile styles as the default, then use @media (min-width: 768px) for tablet and @media (min-width: 1024px) for desktop.",
+    "At the tablet breakpoint, show the nav menu (display: block) and hide the hamburger (display: none).",
+    "Increase grid columns at each breakpoint: 1 column on mobile, 2 on tablet, 3 on desktop."
+  ]
+}

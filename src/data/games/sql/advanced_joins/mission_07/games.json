@@ -1,0 +1,19 @@
+{
+  "title": "Cross Join: Time Slot Scheduling",
+  "id": "mission_07",
+  "type": "ai_code",
+  "xpReward": 90,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "-- Cross Join: Create a weekly schedule template\n-- The days table has columns: id, day_name\n-- The time_slots table has columns: id, start_time, end_time\n-- The rooms table has columns: id, room_name\n-- TODO: Generate all day-time_slot-room combinations for scheduling\n-- Add a column showing the formatted time range\n\nSELECT \nFROM days\n\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:CROSS JOIN",
+      "must_include:days",
+      "must_include:time_slots",
+      "must_include:rooms"
+    ]
+  }
+}

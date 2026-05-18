@@ -1,0 +1,10 @@
+{
+  "mission_05": [
+    "E[X] = sum(x_i * p_i) for discrete random variables.",
+    "Var(X) = E[X^2] - (E[X])^2.",
+    "For continuous variables, use numerical integration with np.trapz().",
+    "Var(aX + b) = a^2 * Var(X) — adding a constant doesn't change variance.",
+    "For independent X, Y: Var(X + Y) = Var(X) + Var(Y).",
+    "Simulate with np.random.normal() to verify variance properties."
+  ]
+}

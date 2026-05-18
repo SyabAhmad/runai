@@ -1,0 +1,7 @@
+{
+  "mission_05": [
+    "Create causal mask: `mask = np.triu(np.ones((seq_len, seq_len)) * -1e9, k=1)`.",
+    "For cross-attention: `Q = x1 @ W_q2`, `K = enc_output @ W_k2`, `V = enc_output @ W_v2`, then attention.",
+    "Each sub-layer follows the pattern: `x = layer_norm(x + sublayer_output)`."
+  ]
+}

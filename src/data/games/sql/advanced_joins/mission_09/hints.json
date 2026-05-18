@@ -1,0 +1,7 @@
+{
+  "mission_09": [
+    "Use LEFT JOIN LATERAL to include users with no activities.",
+    "The lateral subquery should filter by user_id = u.id and order by created_at DESC.",
+    "Apply LIMIT 5 in the subquery to get only the 5 most recent activities."
+  ]
+}

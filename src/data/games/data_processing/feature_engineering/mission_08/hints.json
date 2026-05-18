@@ -1,0 +1,1 @@
+{"mission_08": ["Use df['category'].value_counts() for counts and df['category'].value_counts(normalize=True) for proportions.", "Map back with df['freq_count'] = df['category'].map(counts).", "Frequency encoding preserves no ordering information but captures category prevalence, useful for rare vs common category detection."]}

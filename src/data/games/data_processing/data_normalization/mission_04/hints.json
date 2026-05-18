@@ -1,0 +1,1 @@
+{"mission_04": ["Import skew from scipy.stats and use skew(df['column']) to measure skewness.", "Use np.log1p(df) which computes log(1+x) and safely handles zero values.", "Compare skewness values before and after: lower absolute skew means more symmetric distribution."]}

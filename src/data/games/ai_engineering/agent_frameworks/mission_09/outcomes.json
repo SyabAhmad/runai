@@ -1,0 +1,3 @@
+{
+  "mission_09": "You built a state machine agent orchestrator! This is the most reliable pattern for production agent workflows — explicit states and transitions guarantee deterministic behavior while still allowing LLM-powered actions at each step. This is how enterprise agents handle complex multi-step processes."
+}

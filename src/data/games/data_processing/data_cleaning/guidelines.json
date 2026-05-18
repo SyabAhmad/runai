@@ -1,0 +1,6 @@
+{
+  "title": "Data Cleaning",
+  "description": "Master the essential techniques of data cleaning including deduplication, validation, standardization, fuzzy matching, and data profiling. Learn to transform raw, messy datasets into clean, reliable data ready for analysis.",
+  "difficulty": "beginner-intermediate",
+  "order": 1
+}

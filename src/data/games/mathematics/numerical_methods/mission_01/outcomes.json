@@ -1,0 +1,3 @@
+{
+  "mission_01": "Congratulations! You have implemented the bisection method, a foundational root-finding algorithm. Its guaranteed convergence and simplicity make it invaluable as a fallback method and as a way to bracket roots before applying faster methods. The bisection method is often used in combination with other methods to ensure robustness."
+}

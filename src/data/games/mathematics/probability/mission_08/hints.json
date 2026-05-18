@@ -1,0 +1,10 @@
+{
+  "mission_08": [
+    "Use np.random.binomial(1, 0.5, n_flips) to simulate coin flips.",
+    "Running average: np.cumsum(flips) / np.arange(1, n_flips+1).",
+    "The error decreases as 1/sqrt(n) — this is the standard error.",
+    "Chebyshev: P(|X_bar - mu| >= k*sigma) <= 1/k^2.",
+    "For a coin: sigma = sqrt(p*(1-p)/n).",
+    "Simulate many experiments to estimate the empirical probability."
+  ]
+}

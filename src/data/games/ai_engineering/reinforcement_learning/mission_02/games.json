@@ -1,0 +1,20 @@
+{
+  "title": "Value Iteration",
+  "id": "mission_02",
+  "type": "ai_code",
+  "xpReward": 70,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "# RL Mission 02: Value Iteration\n#\n# Value Iteration finds the optimal policy by iteratively\n# improving value estimates until convergence.\n#\n# Bellman optimality equation:\n#   V*(s) = max_a sum_s' P(s'|s,a) * [R(s,a,s') + gamma * V*(s')]\n#\n# Your goal: Implement value_iteration(states, actions, transitions,\n#   rewards, gamma, threshold=1e-6, max_iter=1000)\n#   1. Initialize V(s) = 0 for all states\n#   2. For each iteration:\n#      a. For each state s, for each action a:\n#         Q(s,a) = sum_s' P(s'|s,a) * (R + gamma * V(s'))\n#      b. V_new(s) = max_a Q(s,a)\n#      c. If max|V_new - V| < threshold, stop\n#   3. Extract optimal policy: pi(s) = argmax_a Q(s,a)\n\nimport numpy as np\n\ndef value_iteration(states, actions, transitions, rewards, gamma, threshold=1e-6, max_iter=1000):\n    # TODO: Initialize V = zeros\n    # TODO: Loop max_iter: compute Q values, update V, check convergence\n    # TODO: Extract optimal policy from final V\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def value_iteration",
+      "must_include:gamma",
+      "must_include:threshold",
+      "must_include:max",
+      "must_include:return"
+    ]
+  }
+}

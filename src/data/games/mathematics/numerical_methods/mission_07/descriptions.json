@@ -1,0 +1,3 @@
+{
+  "mission_07": "Implement Gaussian elimination and LU decomposition for solving systems of linear equations Ax = b. Gaussian elimination transforms the augmented matrix [A|b] into upper triangular form through row operations, then solves by back substitution. LU decomposition factors A = LU where L is lower triangular and U is upper triangular, allowing efficient solution of multiple systems with the same A. The condition number of a matrix measures how sensitive the solution is to perturbations in the data - ill-conditioned matrices (large condition number) lead to unreliable solutions. Linear system solvers are the workhorses of numerical computing, used in virtually every scientific and engineering application."
+}

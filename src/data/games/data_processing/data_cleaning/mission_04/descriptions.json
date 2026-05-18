@@ -1,3 +1,3 @@
-﻿{
-    "mission_04":  "Implement scale_numeric_features(df, numeric_cols) using StandardScaler. Fit and transform only the provided numeric columns and return df."
+{
+  "mission_04": "Handling missing values is a critical step in data preprocessing that directly impacts model performance and analysis accuracy. Pandas provides multiple strategies: fillna() replaces NaN values with specified substitutes, while dropna() removes rows or columns containing missing data. For numerical columns, common imputation strategies include mean, median, or mode replacement. The median is robust to outliers, making it preferable for skewed distributions. For categorical data, mode (most frequent value) is typically used. Understanding when to impute versus when to drop is an important judgment call in data science workflows."
 }

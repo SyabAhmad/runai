@@ -1,0 +1,7 @@
+{
+  "mission_06": [
+    "Create a promise with new Promise((resolve, reject) => { ... }). Call resolve(data) on success, reject(error) on failure.",
+    "Chain promises: fetchUser(id).then(user => fetchOrders(user.id)).then(orders => ({ user, orders })).",
+    "Promise.all takes an array of promises and returns an array of results. Promise.race returns the first settled promise."
+  ]
+}

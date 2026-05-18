@@ -1,0 +1,3 @@
+{
+  "mission_07": "import numpy as np\n\ndef detect_hallucinations(generated, source, nli_model):\n    claims = [s.strip() for s in generated.split('.') if len(s.strip()) > 10]\n    hallucinations = 0\n    for claim in claims:\n        result = nli_model(premise=source, hypothesis=claim)\n        if result == 'contradiction':\n            hallucinations += 1\n    hallucination_rate = hallucinations / max(len(claims), 1)\n    return hallucination_rate"
+}

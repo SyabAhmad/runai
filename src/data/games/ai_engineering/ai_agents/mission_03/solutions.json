@@ -1,3 +1,3 @@
 {
-  "mission_03": "def solve_mission_3():\n    # TODO: Implement solution for ai_agents mission 3\n    return \"Mission 3 completed\""
+  "mission_03": "def get_weather(city):\n    return f\"The weather in {city} is sunny, 24C\"\n\ndef agent(task):\n    t = task.lower()\n    if \"weather\" in t or \"temperature\" in t:\n        for word in [\"in \", \"for \"]:\n            if word in t:\n                city = t.split(word)[-1].strip()\n                result = get_weather(city)\n                return {\"task\": task, \"result\": result}\n        result = get_weather(task)\n    else:\n        result = \"I can only check weather\"\n    return {\"task\": task, \"result\": result}"
 }

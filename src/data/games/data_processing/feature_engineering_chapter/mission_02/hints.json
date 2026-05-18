@@ -1,4 +1,4 @@
-﻿{
+{
     "mission_02":  [
                        "Use np.log1p for stability with zero values.",
                        "New feature name should be log_income.",

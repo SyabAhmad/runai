@@ -1,0 +1,3 @@
+{
+  "mission_02": "EXPLAIN ANALYZE goes beyond EXPLAIN by actually executing the query and reporting real timing and row count data. This reveals discrepancies between the planner's estimates and reality, which often point to outdated statistics or misconfigured planner parameters. It's the gold standard for query performance investigation."
+}

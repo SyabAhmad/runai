@@ -1,0 +1,18 @@
+{
+  "title": "Rate-Distortion Theory",
+  "id": "mission_08",
+  "type": "ai_code",
+  "xpReward": 100,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "import numpy as np\n\ndef rate_distortion_gaussian(variance, distortion):\n    \"\"\"\n    Compute rate-distortion function for Gaussian source\n    R(D) = 0.5 * log2(sigma^2 / D) for D <= sigma^2, else 0\n    variance: source variance (sigma^2)\n    distortion: target distortion level D\n    \"\"\"\n    # TODO: Compute rate-distortion function\n    if distortion >= variance:\n        return 0.0\n    r_d = ...\n    return r_d\n\ndef blahut_arimoto_rd(source_probs, distortion_matrix, max_iter=1000, tol=1e-8):\n    \"\"\"\n    Compute rate-distortion function using Blahut-Arimoto algorithm\n    source_probs: P(X) distribution\n    distortion_matrix: d(x,y) matrix\n    Returns: (rate, reproduction_distribution)\n    \"\"\"\n    n_source, n_repro = distortion_matrix.shape\n    s = -1.0  # slope parameter (negative)\n    \n    # TODO: Initialize reproduction distribution\n    r = np.ones(n_repro) / n_repro\n    \n    for iteration in range(max_iter):\n        # TODO: Compute conditional distribution P(y|x)\n        # P(y|x) = r(y) * exp(s * d(x,y)) / sum_y' r(y') * exp(s * d(x,y'))\n        exponent = ...\n        numerator = r[np.newaxis, :] * np.exp(s * exponent)\n        denominator = np.sum(numerator, axis=1, keepdims=True)\n        q_y_given_x = numerator / denominator\n        \n        # TODO: Update reproduction distribution\n        r_new = ...\n        r_new = r_new / np.sum(r_new)\n        \n        if np.max(np.abs(r_new - r)) < tol:\n            break\n        r = r_new\n    \n    # TODO: Compute rate and distortion\n    rate = ...\n    avg_distortion = np.sum(source_probs[:, np.newaxis] * q_y_given_x * distortion_matrix)\n    \n    return rate, avg_distortion, r\n\ndef plot_rd_curve(variance, n_points=50):\n    \"\"\"\n    Generate rate-distortion curve for Gaussian source\n    \"\"\"\n    distortions = np.linspace(0.01 * variance, variance, n_points)\n    rates = [rate_distortion_gaussian(variance, d) for d in distortions]\n    return distortions, rates\n\n# Test Gaussian RD\nvar = 1.0\nprint(f\"R(D=0.1) = {rate_distortion_gaussian(var, 0.1):.4f} bits\")\nprint(f\"R(D=0.5) = {rate_distortion_gaussian(var, 0.5):.4f} bits\")\nprint(f\"R(D=1.0) = {rate_distortion_gaussian(var, 1.0):.4f} bits\")"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:rate_distortion",
+      "must_include:gaussian",
+      "must_include:numpy"
+    ]
+  }
+}

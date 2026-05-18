@@ -1,0 +1,7 @@
+{
+  "mission_04": [
+    "useEffect runs after render. Return a cleanup function: useEffect(() => { setup(); return () => { cleanup(); }; }, [deps]).",
+    "For data fetching, create an AbortController and abort in cleanup: const controller = new AbortController(); ... return () => controller.abort();.",
+    "The dependency array [] means run once. [userId] means run when userId changes. No array means run after every render."
+  ]
+}

@@ -1,0 +1,3 @@
+{
+  "mission_09": "Impressive! You have explored multiple matrix decompositions — Cholesky, LU, and SVD. You solved a linear system using Cholesky decomposition via forward and backward substitution, which is more efficient than the general solver for SPD matrices. You verified the LU decomposition and computed the condition number. Each decomposition serves a different purpose: Cholesky for symmetric positive definite systems (common in optimization), LU for general systems, and SVD for understanding matrix structure. Knowing which decomposition to use is a hallmark of skilled numerical computing."
+}

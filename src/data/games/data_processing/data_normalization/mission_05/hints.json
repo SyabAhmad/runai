@@ -1,0 +1,1 @@
+{"mission_05": ["Box-Cox requires all positive values: use (df > 0).all() to verify.", "stats.boxcox(column) returns (transformed_data, optimal_lambda).", "Compare skewness before and after to see the improvement in normality."]}

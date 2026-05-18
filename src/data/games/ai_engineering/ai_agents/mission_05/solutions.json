@@ -1,3 +1,3 @@
 {
-  "mission_05": "def solve_mission_5():\n    # TODO: Implement solution for ai_agents mission 5\n    return \"Mission 5 completed\""
+  "mission_05": "def agent(task, memory):\n    if task.startswith(\"remember:\"):\n        rest = task.split(\":\", 1)[1].strip()\n        if \" is \" in rest:\n            key, value = rest.split(\" is \", 1)\n            memory[key.strip()] = value.strip()\n            result = f\"Stored: {key.strip()} = {value.strip()}\"\n        else:\n            result = \"Format: remember: X is Y\"\n    elif task.startswith(\"recall:\"):\n        key = task.split(\":\", 1)[1].strip()\n        result = memory.get(key, \"Not found\")\n    elif task == \"list\":\n        if memory:\n            result = \", \".join(f\"{k}={v}\" for k, v in memory.items())\n        else:\n            result = \"Memory is empty\"\n    else:\n        result = \"I don't understand\"\n    return {\"task\": task, \"result\": result}"
 }

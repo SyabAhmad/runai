@@ -1,4 +1,4 @@
-﻿{
+{
     "title":  "Feature Engineering Mission 5: Binning Continuous Variable",
     "initialState":  {
                          "content":  "# TODO: Bin age into categorical age groups\n\ndef age_buckets(df):\n    # TODO: use pd.cut to create age_group\n\n    return df"

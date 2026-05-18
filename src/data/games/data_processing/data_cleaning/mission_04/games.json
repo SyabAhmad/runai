@@ -1,42 +1,18 @@
-﻿{
-    "title":  "Data Preprocessing Mission 4: Scale Numeric Features",
-    "initialState":  {
-                         "content":  "# TODO: Scale selected numeric columns with StandardScaler\n\ndef scale_numeric_features(df, numeric_cols):\n    # TODO: initialize scaler\n\n    # TODO: fit_transform numeric columns\n\n    return df"
-                     },
-    "validation":  {
-                       "rules":  [
-                                     "must_include:def scale_numeric_features",
-                                     "must_include:StandardScaler",
-                                     "must_include:fit_transform",
-                                     "must_include:return df"
-                                 ],
-                       "tests":  [
-                                     {
-                                         "type":  "must_match",
-                                         "name":  "function signature",
-                                         "pattern":  "def\\s+scale_numeric_features\\s*\\(\\s*df\\s*,\\s*numeric_cols\\s*\\)",
-                                         "message":  "Define scale_numeric_features(df, numeric_cols)."
-                                     },
-                                     {
-                                         "type":  "must_include_all",
-                                         "name":  "scaler operations",
-                                         "values":  [
-                                                        "StandardScaler",
-                                                        "fit_transform",
-                                                        "numeric_cols"
-                                                    ],
-                                         "message":  "Use StandardScaler and fit_transform on numeric_cols."
-                                     },
-                                     {
-                                         "type":  "min_non_empty_lines",
-                                         "name":  "enough logic",
-                                         "value":  4,
-                                         "message":  "Add the core scaling logic."
-                                     }
-                                 ],
-                       "type":  "ai_code"
-                   },
-    "id":  "mission_04",
-    "type":  "ai_code",
-    "xpReward":  100
+{
+  "title": "Handle Missing Values",
+  "id": "mission_04",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import pandas as pd\nimport numpy as np\n\n# TODO: Create a DataFrame with missing values\ndata = {\n    'name': ['Alice', 'Bob', 'Charlie', 'Diana', 'Eve'],\n    'age': [25, np.nan, 35, 28, np.nan],\n    'salary': [50000, 60000, np.nan, 55000, 62000],\n    'department': ['HR', 'IT', np.nan, 'HR', 'IT']\n}\ndf = pd.DataFrame(data)\n\n# TODO: Fill numeric columns with their median\ndf['age'] = ...\ndf['salary'] = ...\n\n# TODO: Fill categorical column with mode\ndf['department'] = ...\n\n# TODO: Verify no missing values remain\nprint(df.isnull().sum())\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:fillna",
+      "must_include:median",
+      "must_include:mode"
+    ]
+  }
 }

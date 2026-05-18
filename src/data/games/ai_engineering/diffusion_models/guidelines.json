@@ -1,0 +1,6 @@
+{
+  "title": "Diffusion Models",
+  "description": "Learn how diffusion models generate images by gradually denoising random noise. Covers forward/reverse processes, U-Net architecture, noise schedules, classifier-free guidance, DDIM sampling, latent diffusion (Stable Diffusion), ControlNet, and inpainting.",
+  "difficulty": "hard",
+  "order": 5
+}

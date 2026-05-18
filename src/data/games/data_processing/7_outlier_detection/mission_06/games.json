@@ -1,0 +1,21 @@
+{
+  "title": "Local Outlier Factor (LOF)",
+  "id": "mission_06",
+  "type": "ai_code",
+  "xpReward": 85,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import numpy as np\nimport pandas as pd\nfrom sklearn.neighbors import LocalOutlierFactor\nfrom sklearn.datasets import make_blobs\n\n# TODO: Generate a dataset with varying density clusters\n# Include outliers in both sparse and dense regions\n\n# TODO: Apply Local Outlier Factor:\n# 1. Set n_neighbors for local density estimation\n# 2. Set contamination for expected outlier proportion\n# 3. Use novelty=False for outlier detection on training data\n\n# TODO: Analyze LOF scores:\n# - LOF score > 1 indicates outlier\n# - LOF score close to 1 indicates inlier\n# - LOF score < 1 indicates point is in a denser region\n\ndef lof_detection():\n    # TODO: Generate data with varying density\n    # TODO: Apply LOF\n    # TODO: Analyze scores and predictions\n    pass\n\n# TODO: Run the detection\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:LocalOutlierFactor",
+      "must_include:n_neighbors",
+      "must_include:contamination",
+      "must_include:novelty",
+      "must_include:fit_predict",
+      "must_include:negative_outlier_factor_"
+    ]
+  }
+}

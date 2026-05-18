@@ -1,0 +1,7 @@
+{
+  "mission_05": [
+    "Gradient: `grad = compute_gradient(loss(model(x), label), x)`.",
+    "Sign: `perturbation = epsilon * np.sign(grad)`.",
+    "Adversarial: `x_adv = np.clip(x + perturbation, 0, 1)`."
+  ]
+}

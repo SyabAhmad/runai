@@ -1,3 +1,3 @@
-﻿{
-    "mission_04":  "from sklearn.preprocessing import StandardScaler\\n\\ndef scale_numeric_features(df, numeric_cols):\\n    scaler = StandardScaler()\\n    df[numeric_cols] = scaler.fit_transform(df[numeric_cols])\\n    return df"
+{
+  "mission_04": "import pandas as pd\nimport numpy as np\n\n# Create a DataFrame with missing values\ndata = {\n    'name': ['Alice', 'Bob', 'Charlie', 'Diana', 'Eve'],\n    'age': [25, np.nan, 35, 28, np.nan],\n    'salary': [50000, 60000, np.nan, 55000, 62000],\n    'department': ['HR', 'IT', np.nan, 'HR', 'IT']\n}\ndf = pd.DataFrame(data)\n\n# Fill numeric columns with their median\ndf['age'] = df['age'].fillna(df['age'].median())\ndf['salary'] = df['salary'].fillna(df['salary'].median())\n\n# Fill categorical column with mode\ndf['department'] = df['department'].fillna(df['department'].mode()[0])\n\n# Verify no missing values remain\nprint(df.isnull().sum())"
 }

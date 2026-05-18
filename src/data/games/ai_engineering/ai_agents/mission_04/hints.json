@@ -1,7 +1,7 @@
 {
   "mission_04": [
-    "Think about the core concepts",
-    "Consider best practices",
-    "Use appropriate tools"
+    "Use `task.startswith(\"calc:\")`, `task.startswith(\"weather:\")`, `task.startswith(\"time:\")` to detect intent.",
+    "Extract the argument with `task.split(\":\", 1)[1].strip()` to get everything after the colon.",
+    "Chain if/elif/else to route to calculator(), get_weather(), or get_time() based on the prefix."
   ]
 }

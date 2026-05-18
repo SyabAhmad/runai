@@ -1,0 +1,3 @@
+{
+  "mission_05": "Excellent! You have simulated optical computing for matrix operations using Mach-Zehnder Interferometer meshes. Your implementation demonstrates how optical systems perform matrix multiplication: SVD decomposes the weight matrix into unitary transformations (implemented by MZI meshes) and singular value scaling (implemented by attenuators). The key advantage of optical computing is that matrix multiplication happens at the speed of light through passive optical components, with no energy consumed for the computation itself — only for the light source and phase shifters. While current optical AI accelerators face challenges in precision and programmability, they offer promising paths for ultra-low-latency inference in specialized applications."
+}

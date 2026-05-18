@@ -1,0 +1,7 @@
+{
+  "mission_09": [
+    "For each sample: `response = model(prompt + question)`.",
+    "Extract answer: regex or exact match.",
+    "Accuracy: `correct / total`."
+  ]
+}

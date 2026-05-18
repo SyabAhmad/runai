@@ -1,0 +1,3 @@
+{
+  "mission_05": "Outstanding! You have mastered SMOTE, one of the most important techniques for handling imbalanced datasets. By generating synthetic minority samples through interpolation between nearest neighbors, SMOTE creates realistic new data points that improve classifier performance on rare classes. You learned the critical rule of applying SMOTE only to training data to prevent data leakage. The resampled dataset now has balanced classes, giving your model equal opportunity to learn patterns from both majority and minority classes. This technique is indispensable in fraud detection, medical diagnosis, anomaly detection, and any domain where the most important events are the rarest."
+}

@@ -1,0 +1,3 @@
+{
+  "mission_04": "**SHAP values** explain why a model made a specific prediction.\n\n**Shapley values** from game theory: fairly distribute the \"payout\" (prediction) among \"players\" (features).\n\n**Properties**:\n- **Efficiency**: Sum of SHAP values = prediction - average prediction\n- **Symmetry**: Equal features get equal credit\n- **Dummy**: Irrelevant features get zero credit\n- **Additivity**: Works for ensemble models\n\n**Interpretation**:\n- Positive SHAP: Feature pushes prediction higher\n- Negative SHAP: Feature pushes prediction lower\n- Magnitude: How much the feature matters\n\n**Use cases**: Loan denial explanations, medical diagnosis transparency, regulatory compliance (GDPR right to explanation)."
+}

@@ -1,0 +1,20 @@
+{
+  "title": "Proximal Policy Optimization (PPO)",
+  "id": "mission_07",
+  "type": "ai_code",
+  "xpReward": 120,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "# RL Mission 07: Proximal Policy Optimization (PPO)\n#\n# PPO is the most widely used RL algorithm today.\n# It constrains policy updates to prevent catastrophic changes.\n#\n# Clipped surrogate objective:\n#   L = min(r_ratio * A, clip(r_ratio, 1-eps, 1+eps) * A)\n#\n# Where r_ratio = pi_new(a|s) / pi_old(a|s)\n#\n# Your goal: Implement ppo_update(old_probs, new_probs, advantages,\n#   clip_epsilon)\n#   1. Compute probability ratio: r = new_probs / old_probs\n#   2. Compute clipped ratio: clip(r, 1-eps, 1+eps)\n#   3. Take minimum of unclipped and clipped * advantage\n#   4. Return the PPO loss (negative for maximization)\n\nimport numpy as np\n\ndef ppo_update(old_probs, new_probs, advantages, clip_epsilon=0.2):\n    # TODO: Compute ratio r = new_probs / old_probs\n    # TODO: Clip ratio to [1-eps, 1+eps]\n    # TODO: Compute surrogate losses\n    # TODO: Return minimum (clipped objective)\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def ppo_update",
+      "must_include:clip",
+      "must_include:ratio",
+      "must_include:advantage",
+      "must_include:return"
+    ]
+  }
+}

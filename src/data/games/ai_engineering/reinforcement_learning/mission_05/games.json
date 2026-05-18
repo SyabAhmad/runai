@@ -1,0 +1,20 @@
+{
+  "title": "Deep Q-Network (DQN)",
+  "id": "mission_05",
+  "type": "ai_code",
+  "xpReward": 100,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "# RL Mission 05: Deep Q-Network (DQN)\n#\n# DQN replaces the Q-table with a neural network.\n# Key innovations: experience replay + target network.\n#\n# Your goal: Implement dqn_train(env, episodes, batch_size,\n#   gamma, epsilon, epsilon_min)\n#   1. Initialize Q-network and target network (same architecture)\n#   2. For each episode:\n#      a. Choose action (epsilon-greedy using Q-network)\n#      b. Store transition in replay buffer\n#      c. Sample batch from replay buffer\n#      d. Compute target: r + gamma * max Q_target(s',a')\n#      e. Train Q-network to predict target\n#      f. Periodically copy Q-network to target network\n#   3. Return trained Q-network and episode rewards\n\nimport numpy as np\n\ndef dqn_train(env, episodes, batch_size, gamma, epsilon, epsilon_min):\n    # TODO: Initialize Q-network and target network\n    # TODO: Create replay buffer\n    # TODO: Training loop with experience replay\n    # TODO: Soft update target network periodically\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def dqn_train",
+      "must_include:replay",
+      "must_include:target",
+      "must_include:epsilon",
+      "must_include:return"
+    ]
+  }
+}

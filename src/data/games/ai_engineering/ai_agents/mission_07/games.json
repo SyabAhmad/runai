@@ -1,16 +1,20 @@
 {
-  "title": "ai agents Mission 7",
+  "title": "Agent with Error Handling",
+  "id": "mission_07",
+  "type": "ai_code",
+  "xpReward": 120,
+  "difficulty": "medium",
   "initialState": {
-    "content": "def solve_mission_7():\n    # TODO: Implement solution for ai_agents mission 7\n    return \"Mission 7 completed\"\\n    # TODO: Complete the implementation"
+    "content": "# Agent Mission 07: Agent with Error Handling\n#\n# Production agents must handle errors gracefully.\n# Tools can fail — bad inputs, network errors, missing data.\n# Your agent should catch failures and retry or report.\n#\n# Tools:\n#   - risky_calculator(expr): may raise ValueError or ZeroDivisionError\n#   - fetch_user_data(user_id): may return None if user not found\n#\n# Your goal: Build a robust agent that:\n#   1. Tries to execute the tool\n#   2. Catches specific exceptions\n#   3. Returns a helpful error message (not crashes!)\n#   4. Always returns {\"task\": task, \"result\": result, \"status\": \"ok\" or \"error\"}\n#\n# Example:\n#   Input: \"calc: 10 / 0\"\n#   Result: {\"task\": \"calc: 10 / 0\", \"result\": \"Division by zero\", \"status\": \"error\"}\n#\n#   Input: \"user: 42\"\n#   Result: {\"task\": \"user: 42\", \"result\": \"Alice\", \"status\": \"ok\"}\n\ndef risky_calculator(expr):\n    result = eval(expr)\n    if result == float(\"inf\") or result == float(\"-inf\"):\n        raise ZeroDivisionError(\"Division resulted in infinity\")\n    return result\n\ndef fetch_user_data(user_id):\n    users = {\"42\": \"Alice\", \"7\": \"Bob\", \"99\": \"Charlie\"}\n    return users.get(str(user_id))\n\ndef robust_agent(task):\n    # TODO: Parse the task prefix (\"calc:\" or \"user:\")\n    #       Use try/except to catch errors\n    #       Return structured result with status\n    pass"
   },
   "validation": {
     "type": "ai_code",
     "rules": [
-      "must_include:def",
-      "must_include:return"
+      "must_include:def robust_agent",
+      "must_include:try",
+      "must_include:except",
+      "must_include:return",
+      "must_include:status"
     ]
-  },
-  "id": "mission_07",
-  "type": "ai_code",
-  "xpReward": 120
+  }
 }

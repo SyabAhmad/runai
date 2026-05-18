@@ -1,0 +1,3 @@
+{
+  "mission_06": "Excellent! Covering indexes are a powerful optimization technique that eliminates table lookups entirely. By including all needed columns in the index, you enable index-only scans, which are among the fastest operations a database can perform. Use INCLUDE for columns that are only needed in the SELECT clause, keeping the index key narrow for better performance."
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Lateral Join: Recent Activity Per User",
+  "id": "mission_09",
+  "type": "ai_code",
+  "xpReward": 110,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "-- Lateral Join: Get the 5 most recent activities per user\n-- The users table has columns: id, username, email\n-- The activities table has columns: id, user_id, activity_type, created_at, details\n-- TODO: Use LATERAL JOIN to fetch the 5 most recent activities for each user\n-- Include users who have no activities\n\nSELECT \nFROM users u\n\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:LATERAL",
+      "must_include:LEFT",
+      "must_include:users",
+      "must_include:activities"
+    ]
+  }
+}

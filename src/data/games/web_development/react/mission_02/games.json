@@ -1,0 +1,22 @@
+{
+  "title": "Props and Component Composition",
+  "id": "mission_02",
+  "type": "ai_code",
+  "xpReward": 60,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "// TODO: Pass props, use default props, and spread props\n// TODO: Create reusable UI components with composition patterns\n// TODO: Implement children prop for wrapper components\n// TODO: Use prop types for validation\n\n// TODO: Create a Button component with variants\nfunction Button({ variant = \"primary\", size = \"md\", children, ...props }) {\n  // TODO: Apply different classes based on variant (primary, secondary, danger)\n  // TODO: Apply size classes (sm, md, lg)\n  // TODO: Spread remaining props to the button element\n}\n\n// TODO: Create a Modal component using children\nfunction Modal({ isOpen, onClose, title, children }) {\n  // TODO: Render nothing if not open\n  // TODO: Render overlay, modal container, title, children, close button\n  // TODO: Call onClose when overlay or close button is clicked\n}\n\n// TODO: Create a FormGroup component\nfunction FormGroup({ label, error, children, required }) {\n  // TODO: Render label with required indicator\n  // TODO: Render children (input, select, etc.)\n  // TODO: Show error message if provided\n}\n\n// TODO: Create a DataTable with configurable columns\nfunction DataTable({ data, columns, onRowClick }) {\n  // TODO: Render table with dynamic columns from config\n  // TODO: Call onRowClick(row) when a row is clicked\n}"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:children",
+      "must_include:...",
+      "must_include:defaultProps",
+      "must_include:=",
+      "must_include:onClick",
+      "must_include:return (",
+      "must_include:className"
+    ]
+  }
+}

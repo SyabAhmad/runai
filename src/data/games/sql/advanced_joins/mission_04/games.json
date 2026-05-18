@@ -1,0 +1,19 @@
+{
+  "title": "Cross Join: Product-Color Combinations",
+  "id": "mission_04",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "-- Cross Join: Generate all product-color combinations\n-- The products table has columns: id, name\n-- The colors table has columns: id, color_name\n-- TODO: Write a query that generates every possible product-color combination\n-- Use a CROSS JOIN to create the Cartesian product\n\nSELECT \nFROM products\n\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:CROSS JOIN",
+      "must_include:products",
+      "must_include:colors",
+      "must_include:color_name"
+    ]
+  }
+}

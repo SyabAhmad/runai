@@ -1,0 +1,7 @@
+{
+  "mission_03": [
+    "Step size: h = (b - a) / n",
+    "Trapezoidal rule: integral = h/2 * (f(a) + 2*sum(f(x_i)) + f(b)) for i=1..n-1",
+    "Error bound: |E| <= (b-a)^3/(12*n^2) * max|f''(x)|"
+  ]
+}

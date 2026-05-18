@@ -1,0 +1,19 @@
+{
+  "title": "Probability in Machine Learning",
+  "id": "mission_10",
+  "type": "ai_code",
+  "xpReward": 120,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "import numpy as np\nfrom scipy import stats\n\n# TODO: Implement a Naive Bayes classifier from scratch\n# Two classes: spam (1) and not-spam (0)\nnp.random.seed(42)\n\n# Training data: 3 features (word counts), binary labels\nX_train = None\ny_train = None\n\n# TODO: Compute prior probabilities: P(Y=1) and P(Y=0)\nprior_spam = None\nprior_not_spam = None\n\n# TODO: For each class, compute mean and std of each feature\n# (assuming Gaussian likelihood)\nmean_spam = None\nstd_spam = None\nmean_not_spam = None\nstd_not_spam = None\n\n# TODO: Implement the predict function using Bayes' theorem\ndef predict(x):\n    # log P(Y=1|X) ~ log P(Y=1) + sum(log P(X_i|Y=1))\n    log_prior_spam = None\n    log_likelihood_spam = None\n    log_posterior_spam = None\n\n    log_prior_not_spam = None\n    log_likelihood_not_spam = None\n    log_posterior_not_spam = None\n\n    return 1 if log_posterior_spam > log_posterior_not_spam else 0\n\n# TODO: Test on new data\nX_test = None\npredictions = None\n\n# TODO: Compute accuracy\naccuracy = None\n\n# TODO: Compute the log-odds ratio for a test sample\nlog_odds = None\n\n# TODO: Implement Maximum Likelihood Estimation for a Bernoulli parameter\n# Given n trials and k successes, MLE of p = k/n\nn_trials = 100\nk_successes = 73\nmle_p = None\n\nprint(f\"Prior P(spam): {prior_spam:.4f}\")\nprint(f\"Predictions: {predictions}\")\nprint(f\"Accuracy: {accuracy:.4f}\")\nprint(f\"Log-odds for first test: {log_odds:.4f}\")\nprint(f\"MLE of p: {mle_p:.4f}\")\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:numpy",
+      "must_include:scipy",
+      "must_include:stats.norm",
+      "must_include:def predict"
+    ]
+  }
+}

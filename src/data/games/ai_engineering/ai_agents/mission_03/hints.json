@@ -1,7 +1,7 @@
 {
   "mission_03": [
-    "Think about the core concepts",
-    "Consider best practices",
-    "Use appropriate tools"
+    "Use `task.lower()` and check if `\"weather\" in task_lower` or `\"temperature\" in task_lower`.",
+    "Extract the city by splitting: `task.lower().split(\"in \")[-1]` or `split(\"for \")[-1]`.",
+    "Strip whitespace from the extracted city name with `.strip()` before passing to get_weather()."
   ]
 }

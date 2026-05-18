@@ -1,0 +1,3 @@
+{
+  "mission_09": "Excellent analytical work! You have built a comprehensive missing data pattern analysis system that identifies and classifies different missingness mechanisms. By computing per-column rates, identifying common missing patterns, and correlating missingness indicators, you can make informed decisions about which imputation strategy to use. Understanding whether data is MCAR, MAR, or MNAR is the most important step in the missing data handling process, as it determines which methods are statistically valid. This analysis should always precede imputation, as applying the wrong method to the wrong mechanism can introduce serious bias. Your ability to diagnose missing data patterns makes you a more effective and rigorous data scientist."
+}

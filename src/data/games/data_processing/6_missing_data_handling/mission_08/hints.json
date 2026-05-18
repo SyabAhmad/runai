@@ -1,0 +1,7 @@
+{
+  "mission_08": [
+    "Use ColumnTransformer to apply different imputation strategies to different column types.",
+    "Chain imputation and scaling in a Pipeline for end-to-end processing.",
+    "Always fit the pipeline on training data only, then transform both train and test."
+  ]
+}

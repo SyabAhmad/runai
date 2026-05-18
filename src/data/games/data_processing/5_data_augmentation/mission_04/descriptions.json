@@ -1,0 +1,3 @@
+{
+  "mission_04": "Text augmentation through synonym replacement is a fundamental NLP technique that increases dataset diversity by substituting words with their synonyms while preserving semantic meaning. Using WordNet, a comprehensive lexical database, you can access synonym sets (synsets) for English words. The key challenge is selecting appropriate replacements that maintain the original sentence meaning and grammatical correctness. This technique is particularly effective for sentiment analysis, text classification, and any task where lexical diversity improves model generalization. Combined with other augmentation methods, synonym replacement can significantly boost performance on small text datasets."
+}

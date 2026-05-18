@@ -1,0 +1,3 @@
+{
+  "mission_10": "You built a complete fine-tuning pipeline! This is the exact process used to adapt BERT, RoBERTa, and other pretrained transformers to downstream tasks. Add a classification head, use the [CLS] token, train with cross-entropy, and you have a state-of-the-art model for any classification task. This is transfer learning at its finest."
+}

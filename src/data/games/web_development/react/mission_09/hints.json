@@ -1,0 +1,7 @@
+{
+  "mission_09": [
+    "Use screen.getByText(), screen.getByRole(), or screen.getByLabelText() to find elements. Use fireEvent.click() to simulate clicks.",
+    "For async tests, wrap assertions in await waitFor(() => { expect(...).toBeInTheDocument(); }).",
+    "Mock fetch with jest.fn(() => Promise.resolve({ json: () => Promise.resolve(data), ok: true })). Use act() for state updates."
+  ]
+}

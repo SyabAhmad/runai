@@ -1,0 +1,7 @@
+{
+  "mission_07": [
+    "Routes wraps all Route elements. Each Route has a path and element: <Route path=\"/about\" element={<About />} />.",
+    "Dynamic routes: <Route path=\"/users/:id\" element={<UserDetail />} />. Inside UserDetail, const { id } = useParams().",
+    "Protected routes render <Navigate to=\"/login\" /> when not authenticated, otherwise render children."
+  ]
+}

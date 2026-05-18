@@ -1,0 +1,7 @@
+{
+  "mission_08": [
+    "Use document.createElement(tag) to create elements, element.setAttribute(key, value) for attributes, and parent.appendChild(child) to add to the DOM.",
+    "Store todos as an array of objects: { id: Date.now(), text, completed: false }. Use Array methods to manipulate the data.",
+    "In render(), clear the container first (container.innerHTML = ''), then rebuild the entire UI from the todos array."
+  ]
+}

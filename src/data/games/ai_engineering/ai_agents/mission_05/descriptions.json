@@ -1,3 +1,3 @@
 {
-  "mission_05": "Complete ai agents mission 5 to master this technology."
+  "mission_05": "Memory is what makes an agent **stateful** — it can remember past interactions and build knowledge over time. This is how chatbots remember your name and preferences.\n\nBuild an agent with three memory operations:\n1. **`remember: X is Y`** — stores the fact \"X = Y\" in the memory dict\n2. **`recall: X`** — retrieves the stored value for \"X\"\n3. **`list`** — returns all stored facts as a formatted string\n\nThe `memory` parameter is a dictionary that persists between calls. This is exactly how conversational agents maintain context — each interaction updates the agent's state."
 }

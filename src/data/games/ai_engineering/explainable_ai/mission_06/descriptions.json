@@ -1,0 +1,3 @@
+{
+  "mission_06": "Permutation feature importance measures how much a model's performance decreases when a feature's values are randomly shuffled, breaking the relationship between that feature and the target. Unlike impurity-based importance, it is model-agnostic and works with any fitted model. The key advantage is that it captures the actual impact on predictive performance rather than internal model statistics. In this mission, you implement permutation importance by computing a baseline score, shuffling each feature column independently across multiple repeats, measuring the performance drop, and aggregating results. You also implement grouped permutation importance for handling correlated features."
+}

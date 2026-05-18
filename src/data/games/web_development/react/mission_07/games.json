@@ -1,0 +1,23 @@
+{
+  "title": "React Router and Navigation",
+  "id": "mission_07",
+  "type": "ai_code",
+  "xpReward": 90,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "// TODO: Set up React Router with routes and navigation\n// TODO: Implement dynamic routing with URL parameters\n// TODO: Create protected routes for authenticated users\n// TODO: Handle 404 pages and redirects\n\nimport { BrowserRouter, Routes, Route, Link, useNavigate, useParams, useLocation, Navigate } from 'react-router-dom';\n\n// TODO: App router setup\nfunction AppRouter() {\n  // TODO: Set up BrowserRouter with Routes\n  // TODO: Define routes: Home, About, Users, UserDetail, NotFound\n  // TODO: Add a Layout component with navigation\n}\n\n// TODO: Navigation component\nfunction Navigation() {\n  // TODO: Use Link for client-side navigation\n  // TODO: Highlight active route using useLocation\n}\n\n// TODO: User detail page with dynamic params\nfunction UserDetail() {\n  // TODO: Extract userId from URL with useParams\n  // TODO: Fetch and display user data\n}\n\n// TODO: Protected route wrapper\nfunction ProtectedRoute({ children }) {\n  // TODO: Check authentication status\n  // TODO: Redirect to /login if not authenticated\n  // TODO: Render children if authenticated\n}\n\n// TODO: Not Found page\nfunction NotFound() {\n  // TODO: Display 404 message\n  // TODO: Provide link back to home\n  // TODO: Use useNavigate for programmatic redirect option\n}"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:Routes",
+      "must_include:Route",
+      "must_include:Link",
+      "must_include:useNavigate",
+      "must_include:useParams",
+      "must_include:useLocation",
+      "must_include:Navigate",
+      "must_include:path="
+    ]
+  }
+}

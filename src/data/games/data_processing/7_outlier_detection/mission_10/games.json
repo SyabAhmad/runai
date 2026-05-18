@@ -1,0 +1,22 @@
+{
+  "title": "Automated Outlier Detection Pipeline",
+  "id": "mission_10",
+  "type": "ai_code",
+  "xpReward": 120,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "import numpy as np\nimport pandas as pd\nfrom sklearn.ensemble import IsolationForest\nfrom sklearn.neighbors import LocalOutlierFactor\nfrom sklearn.preprocessing import RobustScaler\nfrom sklearn.pipeline import Pipeline\n\n# TODO: Build a production-ready outlier detection pipeline that:\n# 1. Automatically detects column types (numeric vs categorical)\n# 2. Applies robust scaling to numeric features\n# 3. Runs multiple detection algorithms in parallel\n# 4. Uses ensemble voting to combine results\n# 5. Provides outlier severity scores\n# 6. Generates a detailed outlier report\n\nclass OutlierDetectionPipeline:\n    def __init__(self, methods=['isolation_forest', 'lof', 'zscore']):\n        # TODO: Initialize detection methods\n        pass\n    \n    def fit(self, X):\n        # TODO: Fit all detection methods\n        pass\n    \n    def predict(self, X):\n        # TODO: Get predictions from all methods\n        # TODO: Combine using ensemble voting\n        # TODO: Return predictions and severity scores\n        pass\n    \n    def generate_report(self, X):\n        # TODO: Generate detailed outlier report\n        pass\n\n# TODO: Test the pipeline on a complex dataset\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:class OutlierDetectionPipeline",
+      "must_include:IsolationForest",
+      "must_include:LocalOutlierFactor",
+      "must_include:RobustScaler",
+      "must_include:fit",
+      "must_include:predict",
+      "must_include:generate_report"
+    ]
+  }
+}

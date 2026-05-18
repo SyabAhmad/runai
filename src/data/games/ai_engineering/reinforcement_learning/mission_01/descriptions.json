@@ -1,0 +1,3 @@
+{
+  "mission_01": "A **Markov Decision Process (MDP)** is the mathematical foundation of reinforcement learning. It formalizes how an agent interacts with an environment.\n\nComponents:\n- **States (S)**: All possible situations the agent can be in\n- **Actions (A)**: All possible moves the agent can make\n- **Transitions P(s'|s,a)**: Probability of reaching state s' from state s with action a\n- **Rewards R(s,a,s')**: Immediate reward for the transition\n- **Discount factor gamma**: How much future rewards are worth (0 = only now, 1 = equal weight)\n\nThe Markov property means the next state depends ONLY on the current state and action — not on the full history. This makes RL tractable."
+}

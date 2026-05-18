@@ -1,0 +1,23 @@
+{
+  "title": "React Design Patterns",
+  "id": "mission_10",
+  "type": "ai_code",
+  "xpReward": 120,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "// TODO: Implement common React design patterns\n// TODO: Compound components, render props, HOCs, and state reducers\n// TODO: Build a flexible, reusable component library\n\nimport { useState, createContext, useContext, useMemo } from 'react';\n\n// TODO: Compound Components Pattern - Select\nconst SelectContext = createContext(null);\n\nfunction Select({ children, value, onChange }) {\n  // TODO: Provide value and onChange via context\n  // TODO: Children (Option, Label) access context\n}\n\nfunction Option({ value, children }) {\n  // TODO: Use context to determine if selected\n  // TODO: Call onChange when clicked\n}\n\n// TODO: Render Props Pattern - MouseTracker\nfunction MouseTracker({ render }) {\n  // TODO: Track mouse position with useState\n  // TODO: Call render({ x, y }) with current position\n}\n\n// TODO: Higher-Order Component Pattern - withLoading\nfunction withLoading(WrappedComponent) {\n  // TODO: Return component that shows loading spinner\n  // TODO: Pass isLoading prop to control visibility\n}\n\n// TODO: State Reducer Pattern - useReducer for complex state\nfunction useToggle(initialState = false) {\n  // TODO: Use useReducer with TOGGLE, SET, RESET actions\n  // TODO: Return state and dispatch actions\n}\n\n// TODO: Control Props Pattern - controlled/uncontrolled\nfunction ControlledInput({ value, onChange, defaultValue }) {\n  // TODO: Support both controlled (value/onChange) and uncontrolled (defaultValue) modes\n  // TODO: Use internal state for uncontrolled mode\n}"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:useReducer",
+      "must_include:useContext",
+      "must_include:useMemo",
+      "must_include:Provider",
+      "must_include:children",
+      "must_include:render(",
+      "must_include:higher-order",
+      "must_import:react"
+    ]
+  }
+}

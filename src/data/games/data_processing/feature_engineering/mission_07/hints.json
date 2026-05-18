@@ -1,0 +1,1 @@
+{"mission_07": ["Use df['timestamp'].dt.hour, .dt.month, .dt.dayofweek to extract components.", "is_weekend: df['dayofweek'] >= 5. is_business_hours: (hour >= 9) & (hour < 17) & ~is_weekend.", "Cyclical: hour_sin = np.sin(2 * np.pi * hour / 24), hour_cos = np.cos(2 * np.pi * hour / 24)."]}

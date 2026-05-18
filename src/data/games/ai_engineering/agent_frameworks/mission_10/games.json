@@ -1,0 +1,21 @@
+{
+  "title": "Production Agent Pipeline",
+  "id": "mission_10",
+  "type": "ai_code",
+  "xpReward": 200,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "# Agent Frameworks Mission 10: Production Agent Pipeline\n#\n# Capstone: Build a production-ready agent pipeline combining\n# all patterns — tools, memory, safety, evaluation, orchestration.\n#\n# Your goal: implement production_pipeline(config, input)\n#   1. Initialize agent with tools, memory, guardrails\n#   2. Process input through the pipeline:\n#      a. Input validation (guardrails)\n#      b. Memory retrieval (relevant context)\n#      c. Agent execution (ReAct loop)\n#      d. Output validation (guardrails)\n#      e. Memory storage (archive interaction)\n#   3. Return response with metadata (latency, tokens, safety)\n\nimport re\nimport time\n\ndef production_pipeline(config, input):\n    # TODO: Initialize all components from config\n    # TODO: Run input through full pipeline\n    # TODO: Track metrics (latency, tool calls, safety)\n    # TODO: Return response with metadata\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def production_pipeline",
+      "must_include:config",
+      "must_include:guardrails",
+      "must_include:memory",
+      "must_include:metadata",
+      "must_include:return"
+    ]
+  }
+}

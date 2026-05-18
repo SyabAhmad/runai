@@ -1,0 +1,3 @@
+{
+  "mission_08": "**Neural Architecture Search** automates model design.\n\n**Search space**:\n- Number of layers (depth)\n- Hidden dimensions (width)\n- Kernel sizes\n- Attention heads\n- Activation functions\n\n**Search strategies**:\n- **Random search**: Simple baseline\n- **Evolutionary**: Mutate best architectures\n- **RL**: Train a controller to propose architectures\n- **Differentiable**: Relax discrete choices to continuous\n\n**Evaluation**: Train each candidate (expensive!) or use a proxy (fewer epochs, smaller dataset).\n\n**Results**: NAS finds architectures like EfficientNet, MNASNet that outperform hand-designed models at every FLOP budget."
+}

@@ -1,0 +1,22 @@
+{
+  "title": "SMOTE for Imbalanced Classification",
+  "id": "mission_05",
+  "type": "ai_code",
+  "xpReward": 85,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import numpy as np\nimport pandas as pd\nfrom imblearn.over_sampling import SMOTE\nfrom sklearn.datasets import make_classification\nfrom sklearn.model_selection import train_test_split\n\n# TODO: Generate an imbalanced dataset using make_classification\n# Use weights=[0.9, 0.1] to create a 90/10 class split\n# Create 1000 samples with 20 features\n\n# TODO: Apply SMOTE to the training data\n# Set k_neighbors=5 for standard SMOTE\n# Target a 50/50 class distribution\n\n# TODO: Compare class distributions before and after SMOTE\n# Print value_counts for both original and resampled data\n\ndef apply_smote():\n    # TODO: Generate imbalanced data\n    # TODO: Split into train/test\n    # TODO: Apply SMOTE to training data\n    # TODO: Return original and resampled datasets\n    pass\n\n# TODO: Run the function and display results\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:SMOTE",
+      "must_include:make_classification",
+      "must_include:weights",
+      "must_include:k_neighbors",
+      "must_include:fit_resample",
+      "must_include:train_test_split",
+      "must_include:value_counts"
+    ]
+  }
+}

@@ -1,0 +1,3 @@
+{
+  "mission_05": "**Adversarial robustness** tests whether models can be fooled.\n\n**FGSM**: One-step attack using the gradient of the loss w.r.t. the input.\n```\nx_adv = x + ε · sign(∇_x L(model(x), y))\n```\n\n**Why it matters**:\n- Stop signs with stickers → classified as speed limit signs\n- Medical images with noise → wrong diagnosis\n- Spam emails with perturbations → bypass filters\n\n**Defenses**:\n- **Adversarial training**: Train on adversarial examples\n- **Randomized smoothing**: Add noise at inference\n- **Certified robustness**: Mathematically guarantee robustness within ε-ball\n\n**Robustness-accuracy trade-off**: More robust models are typically less accurate on clean data."
+}

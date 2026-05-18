@@ -1,0 +1,10 @@
+{
+  "mission_08": [
+    "The projection of b onto a is: proj_a(b) = (a.dot(b) / a.dot(a)) * a.",
+    "Gram-Schmidt: subtract projections onto all previous orthogonal vectors.",
+    "Normalize each orthogonal vector by dividing by its norm.",
+    "For orthonormal vectors, the projection matrix simplifies to P = E @ E.T.",
+    "Verify orthogonality by checking that all pairwise dot products are near zero.",
+    "The projection of v onto the subspace is P @ v."
+  ]
+}

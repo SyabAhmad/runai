@@ -1,0 +1,7 @@
+{
+  "mission_10": [
+    "Add a skip link as the first element: <a href=\"#main\" class=\"skip-link\">Skip to main content</a>, and style it to appear on focus.",
+    "Use aria-label on nav, aria-expanded and aria-controls on the dropdown toggle, and aria-live=\"polite\" on the status message.",
+    "Connect the error message to the input with aria-describedby, and add :focus-visible outlines for keyboard navigation."
+  ]
+}

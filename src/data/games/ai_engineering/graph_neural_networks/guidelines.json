@@ -1,0 +1,6 @@
+{
+  "title": "Graph Neural Networks",
+  "description": "Master the fundamentals of Graph Neural Networks (GNNs), including GCN, GAT, GraphSAGE, node classification, link prediction, graph pooling, heterogeneous graphs, dynamic graphs, graph generation, and molecular property prediction. Build intuition for message passing and graph representation learning.",
+  "difficulty": "advanced",
+  "order": 1
+}

@@ -1,0 +1,7 @@
+{
+  "mission_05": [
+    "Use LAG(revenue) OVER (ORDER BY month) to get the previous month's revenue.",
+    "Calculate the difference as revenue - LAG(revenue) OVER (ORDER BY month).",
+    "Handle the first row where LAG returns NULL by using a default value."
+  ]
+}

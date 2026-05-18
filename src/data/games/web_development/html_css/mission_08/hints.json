@@ -1,0 +1,7 @@
+{
+  "mission_08": [
+    "For the button, use transition: all 0.3s ease and change transform: translateY(-2px) on hover for a lift effect.",
+    "Define @keyframes spin that rotates from 0deg to 360deg, then apply animation: spin 1s linear infinite to the spinner.",
+    "Create @keyframes fadeIn from opacity: 0 to opacity: 1, and @keyframes pulse that scales up and down with opacity changes."
+  ]
+}

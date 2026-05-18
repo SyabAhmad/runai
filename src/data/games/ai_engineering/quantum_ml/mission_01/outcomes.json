@@ -1,0 +1,3 @@
+{
+  "mission_01": "Well done! You have built a quantum circuit simulator that captures the essential mechanics of quantum computation. Your implementation represents quantum states as complex vectors, applies unitary gates through matrix-vector multiplication, creates entanglement via CNOT gates, and performs measurement with proper state collapse. The Bell state (|00⟩ + |11⟩)/√2 demonstrates two-qubit entanglement: measuring one qubit instantly determines the other. The GHZ state generalizes this to n qubits. These entangled states are the foundation of quantum advantage in machine learning: they enable quantum circuits to represent correlations that would require exponentially many classical parameters."
+}

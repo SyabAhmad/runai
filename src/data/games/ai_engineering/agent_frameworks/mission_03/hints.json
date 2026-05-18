@@ -1,0 +1,7 @@
+{
+  "mission_03": [
+    "Initialize: `history = []`, start with `user_proxy.send(initial_message)`.",
+    "Loop: `response = assistant.reply(history[-1])`, append to history.",
+    "Terminate: check if `\"TERMINATE\" in response` or `turn_count >= max_turns`."
+  ]
+}

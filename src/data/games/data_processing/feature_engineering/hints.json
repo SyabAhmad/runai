@@ -1,0 +1,52 @@
+{
+  "mission_01": [
+    "Use pd.get_dummies(df, columns=['color', 'size']) to one-hot encode specific columns",
+    "get_dummies() automatically creates binary columns for each unique category",
+    "Use drop_first=True to avoid the dummy variable trap in linear models"
+  ],
+  "mission_02": [
+    "Create LabelEncoder with le = LabelEncoder()",
+    "Encode with le.fit_transform(df['grade'])",
+    "Check encoding order with le.classes_ to see which label maps to which integer"
+  ],
+  "mission_03": [
+    "Use pd.cut(df['age'], bins=bins, labels=labels) to create labeled bins",
+    "Bins define the edges: [0, 18, 35, 55, 75, 100] creates 5 bins",
+    "Use pd.qcut() for quantile-based bins with equal frequencies"
+  ],
+  "mission_04": [
+    "Create PolynomialFeatures with PolynomialFeatures(degree=2)",
+    "Transform with poly.fit_transform(X)",
+    "Get feature names with poly.get_feature_names_out()"
+  ],
+  "mission_05": [
+    "Compute target means with df.groupby('city')['target'].mean()",
+    "Map back with df['city'].map(target_means)",
+    "Add smoothing to handle categories with few samples"
+  ],
+  "mission_06": [
+    "Create area as df['length'] * df['width']",
+    "Create volume as df['length'] * df['width'] * df['height']",
+    "Create ratio as df['length'] / df['width']"
+  ],
+  "mission_07": [
+    "Convert with pd.to_datetime(df['timestamp'])",
+    "Extract with df['timestamp'].dt.year, .dt.month, .dt.day, .dt.hour",
+    "Day of week with df['timestamp'].dt.dayofweek (0=Monday)"
+  ],
+  "mission_08": [
+    "Compute frequencies with df['category'].value_counts()",
+    "Map with df['category'].map(freq_map)",
+    "Use normalize=True for proportions instead of counts"
+  ],
+  "mission_09": [
+    "Use df.groupby('user')['purchase'].transform('mean') for group means",
+    "Transform keeps the original DataFrame shape unlike agg()",
+    "Combine multiple aggregations with df.groupby('user')['purchase'].agg(['mean', 'std', 'max', 'min'])"
+  ],
+  "mission_10": [
+    "Chain encoding: LabelEncoder for city, pd.to_datetime for dates",
+    "Create interactions: df['age_income'] = df['age'] * df['income']",
+    "Apply PolynomialFeatures to numeric columns only, then merge back"
+  ]
+}

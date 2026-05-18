@@ -1,0 +1,19 @@
+{
+  "title": "Stored Procedure with Transaction Control",
+  "id": "mission_07",
+  "type": "ai_code",
+  "xpReward": 90,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "-- Stored Procedure: Place an order with inventory check\n-- The orders table has columns: id, customer_id, product_id, quantity, total, status\n-- The inventory table has columns: id, product_id, stock_quantity\n-- TODO: Create a procedure that checks stock, creates an order, and updates inventory\n-- Use transaction control to ensure atomicity\n\nCREATE OR REPLACE PROCEDURE place_order(\n    p_customer_id INTEGER,\n    p_product_id INTEGER,\n    p_quantity INTEGER\n)\nLANGUAGE plpgsql\nAS $$\nBEGIN\n    -- TODO: Check if stock is sufficient\n    -- TODO: Insert the order\n    -- TODO: Update inventory\n    -- TODO: COMMIT or handle errors\nEND;\n$$;\n\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:CREATE PROCEDURE",
+      "must_include:COMMIT",
+      "must_include:inventory",
+      "must_include:orders"
+    ]
+  }
+}

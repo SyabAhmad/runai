@@ -1,0 +1,20 @@
+{
+  "title": "Neural Architecture Search (NAS)",
+  "id": "mission_08",
+  "type": "ai_code",
+  "xpReward": 100,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "# Model Compression Mission 08: Neural Architecture Search\n#\n# NAS automatically finds efficient model architectures for a given budget.\n# Search space: layer types, widths, depths, kernel sizes.\n# Search strategy: random search, evolutionary, reinforcement learning.\n# Evaluation: train and measure accuracy + latency.\n#\n# Your goal: implement nas_search(search_space, budget, evaluator, num_trials=100)\n#   1. Sample architectures from search space\n#   2. Evaluate each (accuracy + latency)\n#   3. Keep best within budget\n#   4. Return best architecture\n\nimport numpy as np\n\ndef nas_search(search_space, budget, evaluator, num_trials=100):\n    # TODO: Sample architectures\n    # TODO: Evaluate each\n    # TODO: Track best within budget\n    # TODO: Return best\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def nas_search",
+      "must_include:search_space",
+      "must_include:budget",
+      "must_include:evaluate",
+      "must_include:return"
+    ]
+  }
+}

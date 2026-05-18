@@ -1,0 +1,1 @@
+{"mission_04": ["Create poly = PolynomialFeatures(degree=2, include_bias=False).", "Use poly.fit_transform(df) to generate features and poly.get_feature_names_out() for names.", "With 2 features and degree 2, you get 5 features: x1, x2, x1^2, x1 x2, x2^2."]}

@@ -1,0 +1,7 @@
+{
+  "mission_03": [
+    "For the counter, use functional updates: setCount(prev => prev + 1) to ensure you always work with the latest state.",
+    "For arrays in state, create new arrays: setTodos([...todos, newTodo]) for add, setTodos(todos.filter(...)) for delete.",
+    "For form objects, spread the previous state: setFormData(prev => ({ ...prev, [name]: value })) to update a single field."
+  ]
+}

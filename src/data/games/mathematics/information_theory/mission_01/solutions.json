@@ -1,0 +1,3 @@
+{
+  "mission_01": "import numpy as np\n\ndef shannon_entropy(probabilities):\n    p = probabilities[probabilities > 0]\n    entropy = -np.sum(p * np.log2(p))\n    return entropy\n\ndef joint_entropy(joint_probs):\n    p = joint_probs.flatten()\n    p = p[p > 0]\n    return -np.sum(p * np.log2(p))\n\ndef conditional_entropy(joint_probs):\n    p_x = joint_probs.sum(axis=1)\n    p_x = p_x[p_x > 0]\n    h_x = -np.sum(p_x * np.log2(p_x))\n    h_xy = joint_entropy(joint_probs)\n    return h_xy - h_x\n\nfair_coin = np.array([0.5, 0.5])\nprint(f\"Fair coin entropy: {shannon_entropy(fair_coin)} bits\")\n\nbiased_coin = np.array([0.9, 0.1])\nprint(f\"Biased coin entropy: {shannon_entropy(biased_coin):.4f} bits\")"
+}

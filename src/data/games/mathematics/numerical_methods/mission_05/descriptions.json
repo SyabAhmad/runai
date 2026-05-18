@@ -1,0 +1,3 @@
+{
+  "mission_05": "Implement Lagrange interpolation and Newton's divided difference method for polynomial interpolation. Given n+1 data points, there exists a unique polynomial of degree at most n that passes through all points. The Lagrange form expresses this polynomial as P(x) = sum(y_j * L_j(x)) where L_j(x) are basis polynomials that equal 1 at x_j and 0 at all other nodes. Newton's form uses divided differences and is more efficient for adding new data points. Polynomial interpolation is fundamental in numerical analysis, used in numerical integration, solving differential equations, and function approximation."
+}

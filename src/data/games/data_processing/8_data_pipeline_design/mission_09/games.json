@@ -1,0 +1,21 @@
+{
+  "title": "Advanced Pipeline with Nested Cross-Validation",
+  "id": "mission_09",
+  "type": "ai_code",
+  "xpReward": 110,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "import numpy as np\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.model_selection import GridSearchCV, cross_val_score\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.datasets import make_classification\n\n# TODO: Implement nested cross-validation:\n# - Outer CV loop for performance estimation\n# - Inner CV loop (GridSearchCV) for hyperparameter tuning\n# This provides an unbiased estimate of model performance\n\n# TODO: Compare nested CV results with:\n# 1. Single CV (no hyperparameter tuning)\n# 2. Non-nested CV (tuning and evaluation on same folds)\n\n# TODO: Analyze the difference between nested and non-nested estimates\n\ndef nested_cross_validation():\n    # TODO: Generate data\n    # TODO: Define pipeline and parameter grid\n    # TODO: Run nested CV\n    # TODO: Run non-nested CV for comparison\n    # TODO: Analyze and report differences\n    pass\n\n# TODO: Run the comparison\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:GridSearchCV",
+      "must_include:cross_val_score",
+      "must_include:Pipeline",
+      "must_include:nested",
+      "must_include:cv",
+      "must_include:param_grid"
+    ]
+  }
+}

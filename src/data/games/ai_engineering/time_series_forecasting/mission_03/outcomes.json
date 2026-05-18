@@ -1,0 +1,3 @@
+{
+  "mission_03": "Congratulations on implementing an LSTM cell from scratch! You now understand the gating mechanisms that make LSTMs so effective at capturing long-range temporal dependencies. The forget gate, input gate, and output gate work together to selectively remember and forget information across many time steps, solving the vanishing gradient problem that plagues standard RNNs. By creating sliding window sequences and generating multi-step predictions, you have built a complete forecasting pipeline. This foundational understanding of LSTM internals will help you debug, tune, and extend these models when using high-level frameworks like PyTorch or TensorFlow for real-world time series forecasting tasks."
+}

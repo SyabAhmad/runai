@@ -1,0 +1,3 @@
+{
+  "mission_09": "SELECT product_name, category, sale_date, amount, SUM(amount) OVER (PARTITION BY category ORDER BY sale_date ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS category_running_total\nFROM sales\nORDER BY category, sale_date;"
+}

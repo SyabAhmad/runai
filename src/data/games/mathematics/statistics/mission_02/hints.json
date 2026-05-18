@@ -1,0 +1,10 @@
+{
+  "mission_02": [
+    "Under H0, both groups come from the same distribution: np.random.randn(n).",
+    "The false positive rate should be approximately 0.05 (the alpha level).",
+    "Under H1, groups differ: np.random.randn(n) vs np.random.randn(n) + effect_size.",
+    "Power = fraction of p-values below alpha when H1 is true.",
+    "P(at least 1 FP) = 1 - (1 - alpha)^n_tests.",
+    "Bonferroni: corrected_alpha = alpha / n_tests."
+  ]
+}

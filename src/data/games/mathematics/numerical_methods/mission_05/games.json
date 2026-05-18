@@ -1,0 +1,18 @@
+{
+  "title": "Lagrange Interpolation",
+  "id": "mission_05",
+  "type": "ai_code",
+  "xpReward": 85,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import numpy as np\n\ndef lagrange_basis(x, x_nodes, j):\n    \"\"\"\n    Compute j-th Lagrange basis polynomial at point x\n    L_j(x) = product_{k!=j} (x - x_k) / (x_j - x_k)\n    \"\"\"\n    n = len(x_nodes)\n    # TODO: Compute basis polynomial\n    basis = 1.0\n    for k in range(n):\n        if k != j:\n            basis *= ...\n    return basis\n\ndef lagrange_interpolation(x_nodes, y_nodes, x_eval):\n    \"\"\"\n    Interpolate using Lagrange polynomials\n    P(x) = sum_{j=0}^{n} y_j * L_j(x)\n    \"\"\"\n    n = len(x_nodes)\n    result = np.zeros_like(x_eval, dtype=float)\n    \n    # TODO: Compute interpolated values\n    for j in range(n):\n        basis_vals = lagrange_basis(x_eval, x_nodes, j)\n        result += ...\n    \n    return result\n\ndef divided_difference(x_nodes, y_nodes):\n    \"\"\"\n    Compute divided difference table for Newton's form\n    Returns coefficients for Newton's interpolating polynomial\n    \"\"\"\n    n = len(x_nodes)\n    # TODO: Initialize divided difference table\n    dd = np.zeros((n, n))\n    dd[:, 0] = y_nodes\n    \n    # TODO: Fill table\n    for j in range(1, n):\n        for i in range(n - j):\n            dd[i, j] = ...\n    \n    return dd[0, :]  # Top row gives coefficients\n\ndef newton_interpolation(x_nodes, y_nodes, x_eval):\n    \"\"\"\n    Newton's form of interpolating polynomial\n    P(x) = c[0] + c[1]*(x-x[0]) + c[2]*(x-x[0])*(x-x[1]) + ...\n    \"\"\"\n    coeffs = divided_difference(x_nodes, y_nodes)\n    n = len(coeffs)\n    result = np.full_like(x_eval, coeffs[0], dtype=float)\n    \n    for i in range(1, n):\n        term = coeffs[i]\n        for j in range(i):\n            term *= (x_eval - x_nodes[j])\n        result += term\n    \n    return result\n\n# Test interpolation\nx_nodes = np.array([0, 1, 2, 3])\ny_nodes = np.array([1, 2, 5, 10])  # y = x^2 + 1\nx_eval = np.linspace(0, 3, 100)\ny_interp = lagrange_interpolation(x_nodes, y_nodes, x_eval)\nprint(f\"Interpolation at x=1.5: {lagrange_interpolation(x_nodes, y_nodes, np.array([1.5]))[0]:.4f}\")"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:lagrange",
+      "must_include:divided_difference",
+      "must_include:numpy"
+    ]
+  }
+}

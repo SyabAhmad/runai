@@ -1,0 +1,7 @@
+{
+  "mission_01": [
+    "Initialize `state = 0`, `total_reward = 0.0`, `trajectory = []`.",
+    "Pick action: `action = policy[state]`, then sample next state using `np.random.choice` with transition probabilities.",
+    "Apply discount: `total_reward += (gamma ** step) * reward`."
+  ]
+}

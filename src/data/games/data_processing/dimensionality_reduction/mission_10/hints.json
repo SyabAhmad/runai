@@ -1,0 +1,1 @@
+{"mission_10": ["Standardize first: X_scaled = StandardScaler().fit_transform(X).", "For PCA: find n_components where np.cumsum(pca.explained_variance_ratio_) >= 0.90.", "Apply each method independently and compare output shapes, feature counts, and what each method preserves."]}

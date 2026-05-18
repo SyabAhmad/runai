@@ -1,3 +1,3 @@
-﻿{
-    "mission_09":  "Great. You built a reproducible baseline with CV scoring."
+{
+  "mission_09": "Congratulations! You've mastered email validation and cleaning using regex patterns. By combining string normalization (strip, lower), regex validation with re.match(), and custom extraction functions, you can handle virtually any email data quality issue. These techniques extend to other structured text formats like phone numbers, URLs, and postal codes. Email validation is particularly important for marketing systems, user registration pipelines, and any application where email deliverability matters."
 }

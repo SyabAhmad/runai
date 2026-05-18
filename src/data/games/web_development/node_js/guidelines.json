@@ -1,0 +1,6 @@
+{
+  "title": "Node.js",
+  "description": "Master Node.js backend development with Express, routing, middleware, error handling, REST API design, authentication, file uploads, database integration, logging, and deployment.",
+  "difficulty": "medium",
+  "order": 4
+}

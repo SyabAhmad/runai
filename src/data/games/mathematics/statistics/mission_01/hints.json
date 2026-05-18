@@ -1,0 +1,10 @@
+{
+  "mission_01": [
+    "Use np.random.normal(mean, std, n) to generate sample data.",
+    "scipy.stats.ttest_ind(a, b) performs a two-sample t-test.",
+    "If p-value < alpha, reject the null hypothesis.",
+    "Cohen's d = (mean_A - mean_B) / pooled_std.",
+    "Pooled std = sqrt(((n1-1)*s1^2 + (n2-1)*s2^2) / (n1+n2-2)).",
+    "Use scipy.stats.ttest_1samp(a, popmean) for one-sample test."
+  ]
+}

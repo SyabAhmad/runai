@@ -1,0 +1,7 @@
+{
+  "mission_05": [
+    "Use make_classification with weights=[0.9, 0.1] to create an imbalanced dataset.",
+    "SMOTE is applied only to training data, never to test data, to avoid data leakage.",
+    "Call smote.fit_resample(X_train, y_train) to generate synthetic minority samples."
+  ]
+}

@@ -1,0 +1,3 @@
+{
+  "mission_03": "import numpy as np\n\ndef create_noise_schedule(num_steps, schedule_type='linear'):\n    if schedule_type == 'linear':\n        beta = np.linspace(0.0001, 0.02, num_steps)\n    elif schedule_type == 'cosine':\n        t = np.arange(num_steps) / num_steps\n        s = 0.008\n        f_t = np.cos((t + s) / (1 + s) * np.pi / 2) ** 2\n        f_t_minus1 = np.cos((t - 1/num_steps + s) / (1 + s) * np.pi / 2) ** 2\n        beta = np.clip(1 - f_t / f_t_minus1, 0, 0.999)\n    alpha = 1 - beta\n    alpha_bar = np.cumprod(alpha)\n    return beta, alpha, alpha_bar"
+}

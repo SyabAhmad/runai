@@ -1,0 +1,7 @@
+{
+  "mission_05": [
+    "X-vector embeddings are extracted by computing mean and standard deviation statistics over frame-level features, then projecting through a learned weight matrix.",
+    "Spectral clustering uses the eigenvectors of the graph Laplacian L = D - W, where D is the degree matrix and W is the similarity matrix.",
+    "The DER finds the best permutation mapping between hypothesis and reference speaker labels to minimize the total assignment error."
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "title": "Text Data Augmentation",
+  "id": "mission_02",
+  "type": "ai_code",
+  "xpReward": 60,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "import pandas as pd\nimport numpy as np\nimport random\n\n# Dataset with short text samples\ndata = {\n    'text': [\n        'The quick brown fox jumps over the lazy dog',\n        'Machine learning models require large datasets',\n        'Data augmentation improves model generalization',\n        'Natural language processing is a fascinating field',\n        'Deep learning has revolutionized computer vision'\n    ],\n    'label': [0, 1, 1, 0, 1]\n}\ndf = pd.DataFrame(data)\n\n# TODO: Implement synonym replacement: replace random words with synonyms\n# TODO: Implement random insertion: insert random synonyms into sentences\n# TODO: Implement random swap: swap two random words in a sentence\n# TODO: Apply augmentation to generate 3 variants of each text\n# TODO: Print original and augmented texts\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:random",
+      "must_include:split",
+      "must_include:augment"
+    ]
+  }
+}

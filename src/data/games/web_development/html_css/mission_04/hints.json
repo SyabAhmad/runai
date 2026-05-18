@@ -1,0 +1,7 @@
+{
+  "mission_04": [
+    "For the navbar, set display: flex, justify-content: space-between, and align-items: center on the container.",
+    "For the card container, use display: flex with flex-wrap: wrap and gap: 1rem to create a responsive grid.",
+    "For the sticky footer, set the page to display: flex with flex-direction: column and min-height: 100vh, then give content flex-grow: 1."
+  ]
+}

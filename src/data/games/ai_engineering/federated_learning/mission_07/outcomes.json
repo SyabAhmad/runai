@@ -1,0 +1,3 @@
+{
+  "mission_07": "Great work on handling non-IID data! You have implemented three complementary strategies for dealing with the most challenging aspect of federated learning. The Dirichlet partitioning gives you a realistic simulation of how data is distributed across clients in practice. Class-balanced loss prevents the model from being biased toward majority classes on each client. The shared representation architecture elegantly separates general feature learning from task-specific adaptation. In real-world FL systems, these techniques are often combined: data partitioning for simulation, reweighted loss for training, and split architectures for deployment. Understanding non-IID handling is essential for anyone working with federated systems."
+}

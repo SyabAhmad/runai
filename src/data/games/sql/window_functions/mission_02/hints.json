@@ -1,0 +1,7 @@
+{
+  "mission_02": [
+    "Use RANK() OVER (ORDER BY test_score DESC) to rank students.",
+    "Students with the same test_score will receive the same rank.",
+    "Include name and test_score in your output alongside the rank."
+  ]
+}

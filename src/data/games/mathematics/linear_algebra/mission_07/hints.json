@@ -1,0 +1,10 @@
+{
+  "mission_07": [
+    "A 2D rotation matrix is [[cos(theta), -sin(theta)], [sin(theta), cos(theta)]].",
+    "A scaling matrix is diagonal: [[sx, 0], [0, sy]].",
+    "A shear matrix (shear x by y) is [[1, k], [0, 1]].",
+    "Combined transformation: shear @ scaling @ rotation (right-to-left order).",
+    "To transform points stored as rows: (combined @ points.T).T.",
+    "The determinant of a rotation is always 1 (preserves area)."
+  ]
+}

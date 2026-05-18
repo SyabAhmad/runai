@@ -1,0 +1,3 @@
+{
+  "mission_01": "Federated Averaging (FedAvg) is the foundational algorithm for federated learning, introduced by McMahan et al. in 2017. Instead of centralizing data, FedAvg sends the global model to participating clients, each of which trains locally on their own data for several epochs. The server then aggregates the updated models using a weighted average, where each client's contribution is proportional to its dataset size. This approach dramatically reduces communication compared to federated SGD (which averages after every local step) while maintaining convergence guarantees. FedAvg enables collaborative model training across thousands of devices while keeping raw data on-device, addressing both privacy and communication efficiency concerns."
+}

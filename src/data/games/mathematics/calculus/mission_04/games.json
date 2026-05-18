@@ -1,0 +1,18 @@
+{
+  "title": "Gradients and the Jacobian",
+  "id": "mission_04",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import numpy as np\n\n# TODO: Define a vector-valued function F: R^3 -> R^2\n# F(x, y, z) = [x*y + z^2, x^2 - y*z]\ndef F(x, y, z):\n    return None\n\n# TODO: Compute the Jacobian matrix (2x3 matrix of partial derivatives)\n# Row 1: [df1/dx, df1/dy, df1/dz] = [y, x, 2z]\n# Row 2: [df2/dx, df2/dy, df2/dz] = [2x, -z, -y]\ndef jacobian(x, y, z):\n    return None\n\n# TODO: Evaluate F and Jacobian at point (1, 2, 3)\npoint = None\nF_val = None\nJ_val = None\n\n# TODO: Compute the gradient of the scalar function g(x,y,z) = x^2 + y^2 + z^2\ndef g(x, y, z):\n    return None\n\ndef grad_g(x, y, z):\n    return None\n\n# TODO: Evaluate gradient at (1, 2, 3)\ng_val = None\ngrad_g_val = None\n\n# TODO: Verify the Jacobian numerically using finite differences\nh = 1e-7\nJ_numerical = None\n\nprint(f\"F(1, 2, 3) = {F_val}\")\nprint(f\"Jacobian at (1, 2, 3):\\n{J_val}\")\nprint(f\"g(1, 2, 3) = {g_val}\")\nprint(f\"Gradient of g: {grad_g_val}\")\nprint(f\"Jacobian error: {np.max(np.abs(J_val - J_numerical)):.2e}\")\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:numpy",
+      "must_include:np.array",
+      "must_include:def F"
+    ]
+  }
+}

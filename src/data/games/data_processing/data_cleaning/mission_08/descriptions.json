@@ -1,3 +1,3 @@
-﻿{
-    "mission_08":  "Write build_preprocessor(numeric_cols, categorical_cols) that creates a ColumnTransformer using StandardScaler for numeric and OneHotEncoder(handle_unknown=\"ignore\") for categorical columns."
+{
+  "mission_08": "Deduplication with multiple keys addresses the common scenario where records may be duplicates based on a combination of fields rather than exact row matches. This requires normalizing text fields (lowercasing, stripping whitespace) before comparison, then using sort_values() to order records by a priority column (like score or timestamp) before dropping duplicates. The key insight is that when duplicate records have different values in other columns, you need a strategy for which record to keep. Sorting by a quality metric and keeping the first occurrence ensures you retain the best version of each unique entity."
 }

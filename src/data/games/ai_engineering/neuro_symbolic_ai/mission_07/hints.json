@@ -1,0 +1,9 @@
+{
+  "mission_07": [
+    "Score triplet: return np.linalg.norm(h_emb + r_emb - t_emb).",
+    "Generate negative: neg_h, neg_r, neg_t = self._generate_negative(h, r, t).",
+    "Margin loss: loss = max(0, pos_score - neg_score + self.margin).",
+    "Sort predictions: scores.sort(key=lambda x: x[1]).",
+    "Evaluate: mean_rank = np.mean(ranks); hits_at_10 = np.mean([r < 10 for r in ranks])."
+  ]
+}

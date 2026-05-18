@@ -1,0 +1,3 @@
+{
+  "mission_05": "Outstanding! You have performed SVD on a non-square matrix and verified the decomposition. You computed the matrix rank from singular values and the condition number, which measures numerical stability. The rank-2 approximation demonstrates how SVD enables lossy compression — keeping only the most important components. This technique compresses images, reduces noise in data, and powers recommendation engines. The Eckart-Young theorem guarantees that SVD gives the best low-rank approximation in the Frobenius norm."
+}

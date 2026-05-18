@@ -1,0 +1,6 @@
+{
+  "title": "AI Ethics & Safety",
+  "description": "Learn how to build responsible AI systems. Covers bias detection, fairness metrics, differential privacy, SHAP interpretability, adversarial robustness, toxicity filtering, RLHF alignment, data provenance, red teaming, and impact assessments.",
+  "difficulty": "medium",
+  "order": 9
+}

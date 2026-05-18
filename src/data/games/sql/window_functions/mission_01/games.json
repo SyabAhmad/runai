@@ -1,0 +1,19 @@
+{
+  "title": "ROW_NUMBER: Unique Row Identification",
+  "id": "mission_01",
+  "type": "ai_code",
+  "xpReward": 60,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "-- ROW_NUMBER: Assign unique sequential numbers to employees\n-- The employees table has columns: id, name, department, salary\n-- TODO: Use ROW_NUMBER() to assign a unique number to each employee ordered by salary DESC\n\nSELECT \nFROM employees\n\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:ROW_NUMBER",
+      "must_include:OVER",
+      "must_include:ORDER BY",
+      "must_include:salary"
+    ]
+  }
+}

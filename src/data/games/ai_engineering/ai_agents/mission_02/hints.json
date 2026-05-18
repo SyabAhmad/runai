@@ -1,7 +1,7 @@
 {
   "mission_02": [
-    "Think about the core concepts",
-    "Consider best practices",
-    "Use appropriate tools"
+    "Use `task.startswith(\"calc:\")` to check if this is a calculator request.",
+    "Extract the expression with `expr = task[5:]` or `task.split(\"calc:\", 1)[1]`.",
+    "Call `calculator(expr)` to get the numeric result, then return it in the dict."
   ]
 }

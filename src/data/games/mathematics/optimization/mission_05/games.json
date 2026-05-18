@@ -1,0 +1,18 @@
+{
+  "title": "Lagrange Multipliers",
+  "id": "mission_05",
+  "type": "ai_code",
+  "xpReward": 85,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import numpy as np\nfrom scipy.optimize import minimize\n\ndef lagrange_multipliers(f, g, x0, constraint_value=0):\n    \"\"\"\n    Solve constrained optimization using Lagrange multipliers\n    f: objective function to minimize\n    g: constraint function g(x) = 0\n    x0: initial guess\n    \"\"\"\n    # TODO: Define the Lagrangian L(x, lambda) = f(x) + lambda * g(x)\n    def lagrangian(vars):\n        x = vars[:-1]\n        lam = vars[-1]\n        return ...\n    \n    # TODO: Define constraint for the optimizer\n    def constraint_eq(vars):\n        x = vars[:-1]\n        return ...\n    \n    # TODO: Set up initial guess including lambda\n    vars0 = ...\n    \n    # TODO: Solve using scipy minimize with SLSQP method\n    cons = {'type': 'eq', 'fun': constraint_eq}\n    result = ...\n    \n    return result\n\n# Example: Minimize f(x,y) = x^2 + y^2 subject to x + y = 1\ndef f(xy):\n    return xy[0]**2 + xy[1]**2\n\ndef g(xy):\n    return xy[0] + xy[1] - 1\n\nx0 = np.array([0.5, 0.5])\nresult = lagrange_multipliers(f, g, x0)\nprint(f\"Optimal point: {result.x}\")\nprint(f\"Minimum value: {f(result.x)}\")"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:lagrangian",
+      "must_include:constraint",
+      "must_include:minimize"
+    ]
+  }
+}

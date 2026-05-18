@@ -1,0 +1,3 @@
+{
+  "mission_02": "The chain rule is the most important differentiation rule for deep learning. It states that d/dx[f(g(x))] = f'(g(x)) * g'(x). In neural networks, the output is a composition of many functions (layers), and backpropagation applies the chain rule repeatedly to compute gradients. Each layer's gradient depends on the gradients of all subsequent layers. Understanding the chain rule means understanding how neural networks learn. The rule extends to multiple variables: if z depends on y which depends on x, then dz/dx = dz/dy * dy/dx. This is the mathematical mechanism behind automatic differentiation engines like PyTorch and TensorFlow."
+}

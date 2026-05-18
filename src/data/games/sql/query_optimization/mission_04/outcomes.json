@@ -1,0 +1,3 @@
+{
+  "mission_04": "Excellent! You've created a B-tree index and verified its usage. Indexes are the most impactful optimization tool available, but they require careful planning. Each index speeds up reads but slows down writes, so you should index columns that are frequently queried but not excessively updated."
+}

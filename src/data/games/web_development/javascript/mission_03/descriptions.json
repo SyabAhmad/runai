@@ -1,0 +1,3 @@
+{
+  "mission_03": "Array methods are the workhorses of JavaScript data processing. map transforms each element and returns a new array, filter creates a subset based on a condition, reduce aggregates values into a single result, find returns the first matching element, and every/some test whether all or any elements pass a condition. Chaining these methods lets you express complex data transformations in readable, declarative code without manual loops."
+}

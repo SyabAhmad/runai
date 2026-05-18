@@ -1,0 +1,22 @@
+{
+  "mission_09": {
+    "title": "Graph Generation with GraphRNN",
+    "id": "mission_09",
+    "type": "ai_code",
+    "xpReward": 110,
+    "difficulty": "hard",
+    "initialState": {
+      "content": "import numpy as np\n\n\nclass GraphRNN:\n    \"\"\"Autoregressive graph generation using RNN.\n    \n    TODO: Implement BFS ordering of nodes\n    TODO: Generate adjacency sequence with RNN\n    TODO: Implement node-level RNN for edge generation\n    TODO: Sample new graphs from trained model\n    \"\"\"\n    \n    def __init__(self, max_nodes, hidden_dim):\n        self.max_nodes = max_nodes\n        self.hidden_dim = hidden_dim\n        self.W_graph = np.random.randn(hidden_dim, hidden_dim) * 0.01\n        self.U_graph = np.random.randn(hidden_dim, hidden_dim) * 0.01\n        self.W_node = np.random.randn(2, hidden_dim) * 0.01\n        self.U_node = np.random.randn(hidden_dim, hidden_dim) * 0.01\n        self.W_out = np.random.randn(hidden_dim, 1) * 0.01\n    \n    def bfs_ordering(self, adj):\n        \"\"\"Order nodes using BFS traversal.\"\"\"\n        # TODO: Start from node 0, traverse in BFS order\n        order = []\n        visited = set()\n        # TODO: Implement BFS queue-based traversal\n        return order\n    \n    def graph_rnn_step(self, h_prev, x):\n        \"\"\"Graph-level RNN step.\"\"\"\n        # TODO: h_new = tanh(W_graph @ x + U_graph @ h_prev)\n        h_new = None\n        return h_new\n    \n    def node_rnn_step(self, h_prev, edge_bit):\n        \"\"\"Node-level RNN step for edge generation.\"\"\"\n        # TODO: h_new = tanh(W_node @ [edge_bit] + U_node @ h_prev)\n        h_new = None\n        return h_new\n    \n    def generate_adj_row(self, h_graph):\n        \"\"\"Generate one row of adjacency matrix.\"\"\"\n        # TODO: Use node-level RNN to generate edge bits\n        adj_row = []\n        h_node = np.zeros(self.hidden_dim)\n        # TODO: For each potential edge, predict 0 or 1\n        return np.array(adj_row)\n    \n    def generate_graph(self):\n        \"\"\"Generate a complete graph.\"\"\"\n        # TODO: Initialize graph-level hidden state\n        # TODO: For each node, generate adjacency row\n        adj = np.zeros((self.max_nodes, self.max_nodes))\n        return adj\n"
+    },
+    "validation": {
+      "type": "ai_code",
+      "rules": [
+        "must_include:BFS",
+        "must_include:RNN",
+        "must_include:autoregressive",
+        "must_include:adjacency",
+        "must_include:generate"
+      ]
+    }
+  }
+}

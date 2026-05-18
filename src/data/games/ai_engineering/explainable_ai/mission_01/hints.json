@@ -1,0 +1,9 @@
+{
+  "mission_01": [
+    "Use ' '.join([w for w, m in zip(words, mask) if m == 1]) to create perturbed text from the binary mask.",
+    "Get the original prediction with self.model.predict(original_vec).",
+    "Compute distances using cosine similarity: 1 - dot_product / (norm1 * norm2).",
+    "Apply exponential kernel: weights = np.exp(-(distances ** 2) / (kernel_width ** 2)) with kernel_width=0.25.",
+    "Fit Ridge regression: explainer.fit(masks, perturbed_preds, sample_weight=weights)."
+  ]
+}

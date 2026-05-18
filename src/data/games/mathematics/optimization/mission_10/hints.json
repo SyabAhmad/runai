@@ -1,0 +1,7 @@
+{
+  "mission_10": [
+    "ADMM alternates between x-update, z-update, and dual variable update",
+    "The soft thresholding operator is: sign(v) * max(|v| - threshold, 0)",
+    "Convergence is checked using both primal residual ||x-z|| and dual residual ||rho*(z-z_old)||"
+  ]
+}

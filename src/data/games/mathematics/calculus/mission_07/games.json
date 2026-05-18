@@ -1,0 +1,19 @@
+{
+  "title": "Optimization with Calculus",
+  "id": "mission_07",
+  "type": "ai_code",
+  "xpReward": 90,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import numpy as np\nfrom scipy.optimize import minimize_scalar, minimize\n\n# TODO: Define f(x) = x^4 - 4x^3 + 2x^2 + 4x\ndef f(x):\n    return None\n\n# TODO: Define f'(x) = 4x^3 - 12x^2 + 4x + 4\ndef f_prime(x):\n    return None\n\n# TODO: Define f''(x) = 12x^2 - 24x + 4\ndef f_double_prime(x):\n    return None\n\n# TODO: Find critical points by finding roots of f'(x)\ncritical_points = None\n\n# TODO: Classify each critical point using the second derivative test\n# f''(x) > 0 => local min, f''(x) < 0 => local max\nclassifications = None\n\n# TODO: Find the global minimum using scipy\nresult = None\n\n# TODO: Define a 2D function: Rosenbrock function\ndef rosenbrock(x):\n    return None\n\n# TODO: Minimize the Rosenbrock function\nx0 = np.array([0.0, 0.0])\nresult_2d = None\n\nprint(f\"Critical points: {critical_points}\")\nprint(f\"Classifications: {classifications}\")\nprint(f\"Global minimum: x = {result.x:.6f}, f(x) = {result.fun:.6f}\")\nprint(f\"Rosenbrock minimum: {result_2d.x}, f = {result_2d.fun:.2e}\")\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:numpy",
+      "must_include:scipy",
+      "must_include:np.roots",
+      "must_include:minimize"
+    ]
+  }
+}

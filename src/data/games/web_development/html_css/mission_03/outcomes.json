@@ -1,0 +1,3 @@
+{
+  "mission_03": "Perfect! You have built a properly structured HTML table with semantic sections and accessible headers. The caption describes the table content, thead/tbody/tfoot separate concerns, and scope attributes link headers to data cells. Screen readers can now announce column headers when users navigate through cells, making the data comprehensible to everyone."
+}

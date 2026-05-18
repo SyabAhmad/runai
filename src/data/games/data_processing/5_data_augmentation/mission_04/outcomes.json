@@ -1,0 +1,3 @@
+{
+  "mission_04": "Excellent progress! You have implemented synonym replacement, a core text augmentation technique. By leveraging WordNet's synsets and lemmas, you can systematically find and substitute synonyms while preserving sentence structure. This approach increases lexical diversity in your training data, helping NLP models generalize beyond the exact word choices in the original dataset. The technique works especially well when combined with other text augmentations like random insertion, deletion, and swap. Remember that synonym replacement is most effective for content words (nouns, verbs, adjectives) and should be applied carefully to avoid changing the intended meaning of the text."
+}

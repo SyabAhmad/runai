@@ -1,0 +1,18 @@
+{
+  "title": "Mixup Augmentation",
+  "id": "mission_04",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import numpy as np\nimport pandas as pd\n\n# Simulated feature data and labels\nnp.random.seed(42)\nX = np.random.randn(100, 5)\ny = np.random.randint(0, 2, 100)\n\n# TODO: Implement mixup: create convex combinations of random sample pairs\n# TODO: Generate mixing coefficient lambda from Beta distribution\n# TODO: Create mixed samples: x_mix = lambda * x1 + (1-lambda) * x2\n# TODO: Create mixed labels: y_mix = lambda * y1 + (1-lambda) * y2\n# TODO: Print original and mixed data shapes\n# TODO: Verify the mixed labels are soft (continuous values between 0 and 1)\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:np.random.beta",
+      "must_include:lambda",
+      "must_include:mixup"
+    ]
+  }
+}

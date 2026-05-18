@@ -1,0 +1,3 @@
+{
+  "mission_10": "You completed the Diffusion Models chapter! You now understand the full pipeline: forward/reverse diffusion, U-Net architecture, noise schedules, CFG, DDIM, latent diffusion, ControlNet, and inpainting. This is the foundation of DALL-E, Stable Diffusion, and Midjourney."
+}

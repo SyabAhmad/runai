@@ -1,0 +1,7 @@
+{
+  "mission_07": [
+    "Cross-correlation at negative lags measures how Y leads X, while positive lags measure how X leads Y.",
+    "The VAR design matrix stacks lagged values of all variables as columns, with each row corresponding to one time point's observation.",
+    "The Granger causality F-statistic compares the reduction in residual sum of squares when adding the potential causal variable's lags, normalized by degrees of freedom."
+  ]
+}

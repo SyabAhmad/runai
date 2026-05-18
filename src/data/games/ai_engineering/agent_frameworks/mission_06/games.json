@@ -1,0 +1,20 @@
+{
+  "title": "Memory Management for Agents",
+  "id": "mission_06",
+  "type": "ai_code",
+  "xpReward": 110,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "# Agent Frameworks Mission 06: Memory Management for Agents\n#\n# Agents need different types of memory:\n#   - Short-term: conversation history (context window)\n#   - Long-term: vector database of past interactions\n#   - Working memory: current task state\n#\n# Your goal: Implement agent_memory(max_context, vector_store)\n#   1. Add messages to conversation history\n#   2. When context exceeds max_context, summarize and store\n#   3. Retrieve relevant past interactions from vector store\n#   4. Return combined context for the next LLM call\n\ndef agent_memory(max_context, vector_store):\n    # TODO: Implement add_message(text)\n    # TODO: Implement get_context(query) with retrieval\n    # TODO: Implement summarize_and_archive() when full\n    # TODO: Return combined short-term + retrieved memory\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def agent_memory",
+      "must_include:max_context",
+      "must_include:vector_store",
+      "must_include:summarize",
+      "must_include:return"
+    ]
+  }
+}

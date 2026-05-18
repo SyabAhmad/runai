@@ -1,0 +1,3 @@
+{
+  "mission_10": "Implement the Alternating Direction Method of Multipliers (ADMM), a powerful algorithm for solving convex optimization problems with separable structure and linear constraints. ADMM decomposes a large problem into smaller subproblems that are easier to solve, alternating between updates of primal variables and dual variables. The algorithm combines the decomposability of dual ascent with the superior convergence properties of the method of multipliers. ADMM is particularly effective for distributed optimization, sparse learning problems like Lasso, and large-scale machine learning. The soft thresholding operator appears naturally in the z-update when the second objective is an L1 norm, making ADMM ideal for sparse recovery problems."
+}

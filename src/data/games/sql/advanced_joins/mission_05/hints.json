@@ -1,0 +1,7 @@
+{
+  "mission_05": [
+    "Start with a CROSS JOIN between dates and stores to create all combinations.",
+    "LEFT JOIN the sales table on both store_id and sale_date.",
+    "Use COALESCE to replace NULL sales amounts with 0."
+  ]
+}

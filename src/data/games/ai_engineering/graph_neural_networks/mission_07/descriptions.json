@@ -1,0 +1,3 @@
+{
+  "mission_07": "Real-world graphs are often heterogeneous, containing multiple types of nodes and edges. For example, an academic graph has authors, papers, and venues as node types, with edges for writes, cites, and publishes. Heterogeneous GNNs handle this complexity by learning type-specific transformations and relation-specific message passing. Each node type gets its own feature transformation matrix, and each edge type gets its own relation weight. Messages from different edge types are aggregated separately before being combined. This approach, known as RGCN (Relational GCN) or HAN (Heterogeneous Attention Network), enables rich modeling of complex relational data where different relationships carry different semantic meaning."
+}

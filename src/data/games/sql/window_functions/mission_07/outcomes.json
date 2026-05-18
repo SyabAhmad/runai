@@ -1,0 +1,3 @@
+{
+  "mission_07": "Fantastic! You've created running totals using SUM() OVER with a window frame. This is one of the most common analytical patterns in SQL, used for cumulative revenue tracking, budget monitoring, and progressive calculations. Understanding window frames is key to mastering advanced window functions."
+}

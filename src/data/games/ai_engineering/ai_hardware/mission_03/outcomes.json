@@ -1,0 +1,3 @@
+{
+  "mission_03": "Great work! You have implemented neuromorphic computing using spiking neurons. Your LIF neuron model captures the essential dynamics of biological neurons: leaky integration of inputs, threshold-based spike generation, reset after firing, and refractory periods. The spiking neural network processes information through discrete events (spikes) rather than continuous values, making it inherently sparse and energy-efficient. Rate coding decodes the output by counting spikes per neuron, converting the temporal spike pattern into a classification decision. Neuromorphic chips like Intel's Loihi and IBM's TrueNorth implement these principles in hardware, achieving orders of magnitude better energy efficiency than traditional GPUs for event-driven tasks."
+}

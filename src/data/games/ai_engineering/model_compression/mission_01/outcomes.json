@@ -1,0 +1,3 @@
+{
+  "mission_01": "You implemented weight pruning! This is the simplest compression technique. Pruned models are smaller and can be faster on sparse hardware. Fine-tuning after pruning is essential to recover accuracy."
+}

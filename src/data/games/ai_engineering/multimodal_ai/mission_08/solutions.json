@@ -1,0 +1,3 @@
+{
+  "mission_08": "import numpy as np\n\ndef avsr(audio, video, audio_encoder, visual_encoder, decoder):\n    audio_feat = audio_encoder(audio)\n    visual_feat = visual_encoder(video)\n    # Align temporal dimensions\n    min_len = min(audio_feat.shape[0], visual_feat.shape[0])\n    audio_feat = audio_feat[:min_len]\n    visual_feat = visual_feat[:min_len]\n    # Fuse\n    fused = np.concatenate([audio_feat, visual_feat], axis=-1)\n    # CTC decoding\n    transcription = decoder(fused)\n    return transcription"
+}

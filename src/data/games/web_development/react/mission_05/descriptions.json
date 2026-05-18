@@ -1,0 +1,3 @@
+{
+  "mission_05": "React Context provides a way to share values between components without passing props through every level (prop drilling). createContext() creates a context object, the Provider component makes the value available to descendants, and useContext() consumes the value. Context is ideal for global state like themes, authentication, notifications, and localization. In this mission, you will build three context providers — Theme, Auth, and Notification — along with custom hooks for clean consumption. This pattern scales from small apps to enterprise applications."
+}

@@ -1,0 +1,3 @@
+{
+  "mission_01": "Great work on hypothesis testing! The two-sample t-test reveals whether Drug A and Drug B have statistically different effects. With p < 0.05, you reject the null hypothesis and conclude there is a significant difference. Cohen's d quantifies the effect size — values around 0.2 are small, 0.5 medium, and 0.8 large. The one-sample t-test checks if Drug A's mean differs from 10. The 95% confidence interval gives a range of plausible values for the true mean. Hypothesis testing is essential for making data-driven decisions and validating ML model improvements."
+}

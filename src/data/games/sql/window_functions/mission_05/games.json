@@ -1,0 +1,19 @@
+{
+  "title": "LAG: Access Previous Row Values",
+  "id": "mission_05",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "-- LAG: Compare each month's revenue with the previous month\n-- The monthly_revenue table has columns: month, revenue\n-- TODO: Use LAG() to get the previous month's revenue alongside current revenue\n-- Calculate the month-over-month change\n\nSELECT \nFROM monthly_revenue\n\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:LAG",
+      "must_include:OVER",
+      "must_include:ORDER BY",
+      "must_include:revenue"
+    ]
+  }
+}

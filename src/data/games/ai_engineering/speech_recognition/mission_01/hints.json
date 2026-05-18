@@ -1,0 +1,7 @@
+{
+  "mission_01": [
+    "Pre-emphasis uses the formula y[t] = x[t] - coeff * x[t-1] with coeff typically set to 0.97 to amplify high frequencies.",
+    "The mel scale conversion uses mel = 2595 * log10(1 + hz/700) and its inverse hz = 700 * (10^(mel/2595) - 1).",
+    "The DCT for MFCCs uses cosine basis functions: MFCC[k] = sum(log_mel[m] * cos(pi * k * (m + 0.5) / n_filters))."
+  ]
+}

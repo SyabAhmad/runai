@@ -1,0 +1,3 @@
+{
+  "mission_09": "Excellent! You've implemented a denormalized counter maintained by triggers, a powerful pattern for optimizing read-heavy workloads. By keeping aggregates up-to-date automatically, you eliminate the need for expensive COUNT queries while ensuring data consistency. This is a classic write-to-optimize-reads strategy."
+}

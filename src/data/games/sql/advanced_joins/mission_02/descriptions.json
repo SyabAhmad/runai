@@ -1,0 +1,3 @@
+{
+  "mission_02": "Self joins are powerful for finding relationships within the same table. In this mission, you'll identify colleague pairs by matching department IDs across two aliases of the same table. The key challenge is avoiding duplicate pairs and self-matches, which requires careful join conditions and inequality checks."
+}

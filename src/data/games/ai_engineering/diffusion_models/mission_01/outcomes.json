@@ -1,0 +1,3 @@
+{
+  "mission_01": "You implemented the forward diffusion process! This is the first half of how diffusion models work — gradually adding noise until the image is destroyed. The magic is in the reverse process: learning to undo this noise step by step to create new images from scratch."
+}

@@ -1,0 +1,3 @@
+{
+  "mission_04": "SELECT name, department, salary, ROW_NUMBER() OVER (PARTITION BY department ORDER BY salary DESC) AS dept_rank\nFROM employees\nORDER BY department, dept_rank;"
+}

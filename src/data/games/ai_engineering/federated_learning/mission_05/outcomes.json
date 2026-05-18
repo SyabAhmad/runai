@@ -1,0 +1,3 @@
+{
+  "mission_05": "Well done! You have implemented FedProx, a robust variant of federated averaging that handles both statistical and system heterogeneity. The proximal term is an elegant solution that stabilizes training without requiring changes to the aggregation protocol. By allowing clients to perform different amounts of local computation while keeping them anchored to the global model, FedProx converges reliably even when data distributions vary dramatically across clients. This is crucial for real-world deployments where devices have varying compute capabilities and users have vastly different usage patterns. The proximal coefficient mu is a tunable hyperparameter that balances stability against local adaptability."
+}

@@ -1,0 +1,3 @@
+{
+  "mission_07": "Well done! You have built and composed linear transformations — rotation, scaling, and shear. You discovered that the order of transformations matters (matrix multiplication is non-commutative). The determinant of the combined transformation equals the product of individual determinants (1 * 2 * 0.5 * 1 = 1), confirming that the overall area is preserved. The inverse transformation undoes the combined effect. These concepts are fundamental to 3D graphics pipelines, robot kinematics, and understanding how neural network layers transform data through space."
+}

@@ -1,0 +1,1 @@
+{"mission_07": ["Create rfe = RFE(estimator=LogisticRegression(), n_features_to_select=5).", "Use rfe.fit(X, y) and access rfe.ranking_ (1 = selected, higher = eliminated earlier).", "RFE is computationally expensive but often produces better feature subsets than univariate methods."]}

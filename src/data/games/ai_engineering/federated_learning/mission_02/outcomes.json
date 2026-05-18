@@ -1,0 +1,3 @@
+{
+  "mission_02": "Well done! You have implemented secure aggregation, a critical privacy-preserving protocol for federated learning. The pairwise masking scheme ensures that the server can only see the aggregate model update, never any individual client's contribution. Even if the server is curious or malicious, it cannot reverse-engineer individual updates from the masked sum. This protocol is the foundation for production FL systems like Google's Gboard, where secure aggregation protects user privacy while enabling collaborative model improvement. Combined with differential privacy, secure aggregation provides strong guarantees against both server-side and network-side attacks."
+}

@@ -1,0 +1,3 @@
+{
+  "mission_06": "**Classifier-Free Guidance** is what makes text-to-image possible.\n\n**The idea**: During training, randomly drop the text condition (replace with empty). The model learns both conditional and unconditional generation.\n\n**At inference**:\n- Run the model WITH the text prompt → ε_cond\n- Run the model WITHOUT the prompt → ε_uncond\n- Combine: ε_guided = ε_uncond + w · (ε_cond - ε_uncond)\n\n**Guidance scale w**:\n- w = 1: No guidance (unconditional)\n- w = 7.5: Standard for Stable Diffusion\n- w = 15: Very strict to prompt, less creative\n- w > 20: Artifacts and oversaturation\n\n**Classifier guidance** (older): Uses a separate classifier gradient. CFG is simpler and works better."
+}

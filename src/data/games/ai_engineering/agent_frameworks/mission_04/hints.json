@@ -1,0 +1,7 @@
+{
+  "mission_04": [
+    "Parse action: `match = re.search(r\"Action:\\s*(\\w+)\", thought)` to extract tool name.",
+    "Execute: `observation = tools[action_name](action_input)`.",
+    "Check for answer: `if \"Final Answer:\" in thought: return thought`."
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "mission_03": [
+    "Initialize rule weights: self.rule_weights = np.random.randn(n_rules, n_predicates, n_predicates) * 0.1.",
+    "Apply rule: rule_output = self._sigmoid(current_facts @ self.rule_weights[r] + self.rule_bias[r]).",
+    "Create fact vector: facts = np.zeros(self.n_predicates); for p in premises: facts[p] = 1.0.",
+    "Get proof strength: proof_strength = final_facts[conclusion].",
+    "Gradient update: self.rule_bias[:, c] += lr * (1 - pred)."
+  ]
+}

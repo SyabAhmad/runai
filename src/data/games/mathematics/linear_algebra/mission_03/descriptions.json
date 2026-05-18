@@ -1,0 +1,3 @@
+{
+  "mission_03": "The determinant is a scalar value that encodes important properties of a square matrix. It represents the scaling factor of the linear transformation described by the matrix — geometrically, it gives the factor by which volumes are scaled. A determinant of zero means the matrix is singular (non-invertible) and collapses space into a lower dimension. Key properties include det(AB) = det(A)det(B) and det(A^T) = det(A). Determinants are used in solving linear systems, computing eigenvalues, and in change-of-variables for multivariate integration."
+}

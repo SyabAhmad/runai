@@ -1,3 +1,3 @@
 {
-  "mission_07": "Mission 7 in ai agents completed successfully!"
+  "mission_07": "Your agent is now production-ready! Error handling is what separates demo agents from deployed ones. By catching specific exceptions and returning structured status responses, your agent can participate in larger systems where upstream code needs to know if a step succeeded or failed."
 }

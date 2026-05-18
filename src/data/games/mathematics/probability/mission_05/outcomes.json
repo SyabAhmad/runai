@@ -1,0 +1,3 @@
+{
+  "mission_05": "Great work on expectation and variance! You computed E[X] = 3.05 and Var(X) = 1.6475 for a custom discrete distribution. You verified that the standard normal has E[X] ≈ 0 and Var(X) ≈ 1 using numerical integration. The variance transformation rule Var(3X+5) = 9*Var(X) was confirmed. The simulation of independent variables verified that Var(X+Y) = Var(X) + Var(Y). These properties are essential for understanding how uncertainty propagates through computations — a key concern in probabilistic machine learning and uncertainty quantification."
+}

@@ -1,16 +1,20 @@
 {
-  "title": "ai agents Mission 1",
+  "title": "Define an Agent Function",
+  "id": "mission_01",
+  "type": "ai_code",
+  "xpReward": 60,
+  "difficulty": "easy",
   "initialState": {
-    "content": "def solve_mission_1():\n    # TODO: Implement solution for ai_agents mission 1\n    return \"Mission 1 completed\"\\n    # TODO: Complete the implementation"
+    "content": "# Agent Mission 01: Define an Agent Function\n#\n# An AI agent is simply a function that receives a task\n# and returns a structured result. This is the foundation\n# of every agent system.\n#\n# Your goal: Complete the agent(task) function so it:\n#   1. Prints \"Processing: {task}\"\n#   2. Returns a dict with keys \"task\" and \"result\"\n#\n# Example: agent(\"calculate sum\") ->\n#   prints: Processing: calculate sum\n#   returns: {\"task\": \"calculate sum\", \"result\": \"done\"}\n\ndef agent(task):\n    # TODO: print a message showing which task is being processed\n\n    # TODO: return a dictionary with task and result=\"done\"\n    pass"
   },
   "validation": {
     "type": "ai_code",
     "rules": [
-      "must_include:def",
-      "must_include:return"
+      "must_include:def agent",
+      "must_include:print",
+      "must_include:return",
+      "must_include:task",
+      "must_include:result"
     ]
-  },
-  "id": "mission_01",
-  "type": "ai_code",
-  "xpReward": 60
+  }
 }

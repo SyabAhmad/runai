@@ -1,0 +1,3 @@
+{
+  "mission_03": "**Knowledge distillation** transfers knowledge from a large teacher to a small student.\n\n**Why soft targets?** The teacher's probability distribution contains rich information:\n- \"cat: 0.7, dog: 0.2, bird: 0.1\" tells the student that cat is most likely but dog is more similar than bird\n- Hard labels (\"cat: 1, others: 0\") lose this information\n\n**Temperature T**: Higher T = softer distribution = more information transferred.\n\n**Loss**:\n```\nL = α * CE(student, hard_labels) + (1-α) * T² * KL(softmax(teacher/T) || softmax(student/T))\n```\n\n**Results**: A 10x smaller student can achieve 90%+ of teacher accuracy. Distilled BERT models (DistilBERT, TinyBERT) are widely used in production."
+}

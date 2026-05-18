@@ -1,0 +1,3 @@
+{
+  "mission_04": "You implemented a U-Net! This architecture is used in every major diffusion model. The skip connections are crucial — they let the decoder access fine-grained features from the encoder, enabling photorealistic output."
+}

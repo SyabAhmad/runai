@@ -1,0 +1,6 @@
+{
+  "title": "Advanced Aggregations",
+  "description": "Master advanced SQL aggregation techniques including GROUPING SETS, CUBE, ROLLUP, FILTER clauses, and complex HAVING conditions.",
+  "difficulty": "hard",
+  "order": 6
+}

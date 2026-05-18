@@ -1,0 +1,6 @@
+{
+  "title": "Multimodal AI",
+  "description": "Learn how AI systems combine vision, language, and audio. Covers CLIP, image captioning, VQA, visual grounding, multimodal fusion, BLIP-2, LLaVA, audio-visual speech recognition, text-to-image generation, and multimodal RAG.",
+  "difficulty": "hard",
+  "order": 7
+}

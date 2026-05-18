@@ -1,0 +1,9 @@
+{
+  "mission_09": [
+    "Initialize superposition: state = np.ones(self.dim, dtype=complex) / np.sqrt(self.dim).",
+    "Apply cost unitary: state = self._apply_unitary(state, self.cost_hamiltonian, gamma[layer]).",
+    "Apply mixer: state = self._apply_unitary(state, H_m, beta[layer]).",
+    "Unitary evolution: U = eigenvectors @ diag(exp(-1j * gamma * eigenvalues)) @ eigenvectors.conj().T.",
+    "Gradient update: gamma -= lr * grad_gamma; beta -= lr * grad_beta."
+  ]
+}

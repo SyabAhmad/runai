@@ -1,0 +1,1 @@
+{"mission_07": ["Import all three scalers from sklearn.preprocessing and apply .fit_transform() to each.", "Compare using df_scaled.min(), df_scaled.max(), df_scaled.mean(), df_scaled.std().", "Focus on feature_a which has outliers: observe how each scaler treats the extreme values differently."]}

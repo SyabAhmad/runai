@@ -1,0 +1,16 @@
+{
+  "mission_06": {
+    "title": "Difference-in-Differences Estimation",
+    "id": "mission_06",
+    "type": "ai_code",
+    "xpReward": 85,
+    "difficulty": "medium",
+    "initialState": {
+      "content": "import numpy as np\nfrom sklearn.linear_model import LinearRegression\n\n# TODO: Implement the classic 2x2 DiD estimator\ndef did_estimator(pre_treatment, post_treatment, pre_control, post_control):\n    \"\"\"Calculate the Difference-in-Differences estimator.\n    \n    DiD = (E[Y_post|treated] - E[Y_pre|treated]) - (E[Y_post|control] - E[Y_pre|control])\n    \"\"\"\n    # TODO: Calculate before-after difference for treated\n    # TODO: Calculate before-after difference for control\n    # TODO: Compute DiD\n    pass\n\n# TODO: Implement two-way fixed effects regression\ndef twfe_regression(data, treatment_group, post_period, outcome):\n    \"\"\"Estimate DiD using two-way fixed effects model.\n    \n    Y = α + β(Treat × Post) + γ_i + δ_t + ε\n    \"\"\"\n    # TODO: Create interaction term\n    # TODO: Add unit and time fixed effects\n    # TODO: Estimate coefficient on interaction\n    pass\n\n# TODO: Implement parallel trends test\ndef parallel_trends_test(pre_periods_outcome_treated, pre_periods_outcome_control):\n    \"\"\"Test the parallel trends assumption using pre-treatment periods.\"\"\"\n    # TODO: Regress outcome differences on time trend\n    # TODO: Test if trend coefficients are zero\n    pass\n\n# TODO: Implement event study specification\ndef event_study(data, treatment_group, time_periods, outcome, treatment_time):\n    \"\"\"Estimate dynamic treatment effects using event study.\"\"\"\n    # TODO: Create leads and lags of treatment\n    # TODO: Estimate coefficients for each period relative to treatment\n    pass\n"
+    },
+    "validation": {
+      "type": "ai_code",
+      "rules": ["must_include:LinearRegression", "must_include:interaction", "must_include:fixed_effects", "must_include:parallel_trends", "must_include:event_study"]
+    }
+  }
+}

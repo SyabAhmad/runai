@@ -1,0 +1,7 @@
+{
+  "mission_06": [
+    "Store messages: `self.history.append({\"role\": role, \"content\": text})`.",
+    "Check overflow: `if len(self.history) > max_context: self.summarize_and_archive()`.",
+    "Retrieve: `relevant = vector_store.search(query, top_k=3)` and combine with recent history."
+  ]
+}

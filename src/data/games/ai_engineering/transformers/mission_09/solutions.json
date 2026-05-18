@@ -1,0 +1,3 @@
+{
+  "mission_09": "import numpy as np\n\ndef softmax(x):\n    e_x = np.exp(x - np.max(x))\n    return e_x / np.sum(e_x)\n\ndef generate(model_forward, prompt_ids, max_length,\n             temperature=1.0, top_k=50):\n    generated = prompt_ids.copy()\n    vocab_size = model_forward(generated).shape[-1]\n    while len(generated) < max_length:\n        logits = model_forward(generated)[-1]\n        logits = logits / temperature\n        indices = np.argsort(logits)[-top_k:]\n        filtered = np.full_like(logits, -1e9)\n        filtered[indices] = logits[indices]\n        probs = softmax(filtered)\n        next_token = np.random.choice(vocab_size, p=probs)\n        generated = np.append(generated, next_token)\n    return generated"
+}

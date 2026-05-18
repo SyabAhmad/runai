@@ -1,0 +1,18 @@
+{
+  "title": "Monte Carlo Methods",
+  "id": "mission_10",
+  "type": "ai_code",
+  "xpReward": 120,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "import numpy as np\n\ndef monte_carlo_integration(f, bounds, n_samples=100000):\n    \"\"\"\n    Monte Carlo integration: estimate integral by random sampling\n    Integral ≈ Volume * mean(f(x_i)) for x_i uniformly sampled\n    bounds: list of (low, high) tuples for each dimension\n    \"\"\"\n    dim = len(bounds)\n    # TODO: Compute volume of integration region\n    volume = ...\n    \n    # TODO: Generate random samples\n    samples = np.random.uniform(\n        low=[b[0] for b in bounds],\n        high=[b[1] for b in bounds],\n        size=(n_samples, dim)\n    )\n    \n    # TODO: Evaluate function and compute estimate\n    f_values = ...\n    integral = ...\n    \n    # TODO: Estimate error (standard error)\n    error = ...\n    \n    return integral, error\n\ndef monte_carlo_pi(n_samples=100000):\n    \"\"\"\n    Estimate pi using Monte Carlo: ratio of points inside unit circle\n    \"\"\"\n    # TODO: Generate random points in [0,1] x [0,1]\n    x = np.random.uniform(0, 1, n_samples)\n    y = np.random.uniform(0, 1, n_samples)\n    \n    # TODO: Count points inside quarter circle\n    inside = ...\n    \n    # TODO: Estimate pi\n    pi_est = ...\n    \n    return pi_est\n\ndef importance_sampling(f, p_sample, rvs_sample, n_samples=10000):\n    \"\"\"\n    Importance sampling: sample from proposal distribution p\n    Integral ≈ mean(f(x_i) / p(x_i))\n    \"\"\"\n    # TODO: Generate samples from proposal\n    samples = rvs_sample(n_samples)\n    \n    # TODO: Compute importance weights\n    weights = ...\n    \n    # TODO: Weighted estimate\n    estimate = ...\n    \n    return estimate\n\ndef metropolis_hastings(log_target, x0, n_samples=10000, proposal_std=1.0):\n    \"\"\"\n    Metropolis-Hastings MCMC sampler\n    \"\"\"\n    dim = len(x0)\n    samples = np.zeros((n_samples, dim))\n    samples[0] = x0\n    current_log_p = log_target(x0)\n    accepted = 0\n    \n    for i in range(1, n_samples):\n        # TODO: Propose new state\n        proposal = samples[i-1] + np.random.randn(dim) * proposal_std\n        proposal_log_p = log_target(proposal)\n        \n        # TODO: Acceptance probability\n        log_alpha = ...\n        \n        # TODO: Accept or reject\n        if np.log(np.random.uniform()) < log_alpha:\n            samples[i] = proposal\n            current_log_p = proposal_log_p\n            accepted += 1\n        else:\n            samples[i] = samples[i-1]\n    \n    return samples, accepted / n_samples\n\n# Test Monte Carlo pi\npi_est = monte_carlo_pi(1000000)\nprint(f\"Monte Carlo pi: {pi_est:.6f}\")\nprint(f\"Error: {abs(pi_est - np.pi):.2e}\")"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:monte_carlo",
+      "must_include:metropolis",
+      "must_include:numpy"
+    ]
+  }
+}

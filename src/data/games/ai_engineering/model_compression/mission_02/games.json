@@ -1,0 +1,20 @@
+{
+  "title": "Quantization (INT8)",
+  "id": "mission_02",
+  "type": "ai_code",
+  "xpReward": 70,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "# Model Compression Mission 02: Quantization\n#\n# Quantization reduces precision from FP32 to INT8 (or lower).\n# Linear quantization: x_int8 = round(x_fp32 / scale) + zero_point\n# Dequantization: x_fp32 = (x_int8 - zero_point) * scale\n#\n# Scale = (max - min) / (2^bits - 1)\n# Zero point = round(-min / scale)\n#\n# Your goal: implement quantize_dequantize(weights, bits=8)\n#   1. Compute scale and zero point\n#   2. Quantize to integer\n#   3. Dequantize back to float\n#   4. Return quantized weights and error\n\nimport numpy as np\n\ndef quantize_dequantize(weights, bits=8):\n    # TODO: Compute scale and zero point\n    # TODO: Quantize\n    # TODO: Dequantize\n    # TODO: Return results\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def quantize_dequantize",
+      "must_include:scale",
+      "must_include:zero_point",
+      "must_include:quantize",
+      "must_include:return"
+    ]
+  }
+}

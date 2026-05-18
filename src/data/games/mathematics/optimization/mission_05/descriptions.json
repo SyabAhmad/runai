@@ -1,0 +1,3 @@
+{
+  "mission_05": "Implement constrained optimization using Lagrange multipliers, a fundamental technique for finding extrema of functions subject to equality constraints. The method introduces auxiliary variables (Lagrange multipliers) that transform a constrained problem into an unconstrained one by forming the Lagrangian. At the optimum, the gradient of the objective function is parallel to the gradient of the constraint, meaning they are linearly dependent. This technique is widely used in economics, physics, and machine learning for constrained optimization problems."
+}

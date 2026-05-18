@@ -1,0 +1,18 @@
+{
+  "title": "Newton-Raphson Method",
+  "id": "mission_02",
+  "type": "ai_code",
+  "xpReward": 65,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "import numpy as np\n\ndef newton_raphson(f, f_prime, x0, tol=1e-10, max_iter=100):\n    \"\"\"\n    Find root of f(x) = 0 using Newton-Raphson method\n    x_{n+1} = x_n - f(x_n) / f'(x_n)\n    f: function\n    f_prime: derivative of f\n    x0: initial guess\n    \"\"\"\n    x = x0\n    history = [x]\n    \n    for i in range(max_iter):\n        # TODO: Compute function value and derivative\n        fx = ...\n        fpx = ...\n        \n        # TODO: Check for zero derivative\n        if abs(fpx) < 1e-15:\n            print(\"Warning: derivative near zero\")\n            break\n        \n        # TODO: Newton-Raphson update\n        x_new = ...\n        \n        history.append(x_new)\n        \n        # TODO: Check convergence\n        if abs(x_new - x) < tol or abs(fx) < tol:\n            return x_new, history\n        \n        x = x_new\n    \n    return x, history\n\ndef newton_raphson_system(F, J, x0, tol=1e-10, max_iter=100):\n    \"\"\"\n    Newton-Raphson for systems of equations\n    F: vector function\n    J: Jacobian matrix function\n    \"\"\"\n    x = x0.copy().astype(float)\n    history = [x.copy()]\n    \n    for i in range(max_iter):\n        # TODO: Compute F(x) and J(x)\n        fx = F(x)\n        jx = J(x)\n        \n        # TODO: Solve J * delta = -F for delta\n        delta = ...\n        \n        x = x + delta\n        history.append(x.copy())\n        \n        if np.linalg.norm(delta) < tol:\n            break\n    \n    return x, history\n\n# Test: find root of x^3 - 2x - 5 = 0 (has root near 2.0946)\ndef f(x):\n    return x**3 - 2*x - 5\n\ndef f_prime(x):\n    return 3*x**2 - 2\n\nroot, history = newton_raphson(f, f_prime, x0=2.0)\nprint(f\"Root: {root:.10f}\")\nprint(f\"Iterations: {len(history)}\")"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:newton",
+      "must_include:derivative",
+      "must_include:numpy"
+    ]
+  }
+}

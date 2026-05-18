@@ -1,0 +1,3 @@
+{
+  "mission_03": "Well done! You've applied self joins to temporal data analysis, a crucial skill for tracking changes over time. By correlating rows within the same table based on date ordering, you can compute deltas, identify trends, and build audit trails. This pattern extends to many business scenarios like inventory tracking, salary history, and status change logs."
+}

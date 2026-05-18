@@ -1,0 +1,10 @@
+{
+  "mission_04": [
+    "Use np.linalg.eig(A) to compute eigenvalues and eigenvectors.",
+    "The eigenvalue equation is A @ v = lambda * v.",
+    "For symmetric matrices, eigenvectors are orthonormal: v_i . v_j = 0 for i != j.",
+    "Reconstruct A using V @ np.diag(eigenvalues) @ V.T.",
+    "The spectral radius is np.max(np.abs(eigenvalues)).",
+    "Eigenvectors are returned as columns of the eigenvectors matrix."
+  ]
+}

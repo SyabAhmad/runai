@@ -1,0 +1,3 @@
+{
+  "mission_06": "Excellent! You have implemented permutation feature importance, one of the most reliable methods for understanding which features drive model predictions. By shuffling feature values and measuring the resulting performance degradation, you capture the true predictive contribution of each feature. The grouped variant handles correlated features by shuffling them together, avoiding the underestimation that occurs when correlated features are shuffled independently. The standard deviation across repeats provides uncertainty estimates, making this a robust tool for feature selection and model debugging."
+}

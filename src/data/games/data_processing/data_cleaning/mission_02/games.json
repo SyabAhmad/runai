@@ -1,43 +1,18 @@
-﻿{
-    "title":  "Data Preprocessing Mission 2: Remove Duplicates + Normalize Text",
-    "initialState":  {
-                         "content":  "# TODO: Remove duplicate rows\n# TODO: Normalize text fields (trim + lowercase where needed)\n\ndef dedupe_and_normalize(df):\n    # TODO: drop duplicates\n\n    # TODO: normalize \"name\" column (strip)\n\n    # TODO: normalize \"city\" column (strip + lower)\n\n    return df"
-                     },
-    "validation":  {
-                       "rules":  [
-                                     "must_include:def dedupe_and_normalize",
-                                     "must_include:drop_duplicates",
-                                     "must_include:str.strip",
-                                     "must_include:str.lower",
-                                     "must_include:return df"
-                                 ],
-                       "tests":  [
-                                     {
-                                         "type":  "must_match",
-                                         "name":  "function signature",
-                                         "pattern":  "def\\s+dedupe_and_normalize\\s*\\(\\s*df\\s*\\)",
-                                         "message":  "Define dedupe_and_normalize(df)."
-                                     },
-                                     {
-                                         "type":  "must_include_all",
-                                         "name":  "normalization operations",
-                                         "values":  [
-                                                        "drop_duplicates",
-                                                        "strip",
-                                                        "lower"
-                                                    ],
-                                         "message":  "Use drop_duplicates, strip, and lower."
-                                     },
-                                     {
-                                         "type":  "must_not_match",
-                                         "name":  "do not print",
-                                         "pattern":  "\\bprint\\s*\\(",
-                                         "message":  "Avoid debug print statements in final solution."
-                                     }
-                                 ],
-                       "type":  "ai_code"
-                   },
-    "id":  "mission_02",
-    "type":  "ai_code",
-    "xpReward":  100
+{
+  "title": "Validate Data Types",
+  "id": "mission_02",
+  "type": "ai_code",
+  "xpReward": 60,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "import pandas as pd\n\n# TODO: Create a DataFrame with mixed data types\ndata = {\n    'id': ['1', '2', '3', '4', '5'],\n    'name': ['Alice', 'Bob', 'Charlie', 'Diana', 'Eve'],\n    'score': ['85.5', '92.0', 'invalid', '78.3', '88.1'],\n    'active': ['True', 'False', 'yes', 'True', 'no']\n}\ndf = pd.DataFrame(data)\n\n# TODO: Convert 'id' column to integer type\ndf['id'] = ...\n\n# TODO: Convert 'score' to numeric, coercing errors to NaN\ndf['score'] = ...\n\n# TODO: Standardize 'active' to boolean\ndef parse_bool(val):\n    return val.lower() in ('true', 'yes', '1')\n\ndf['active'] = ...\n\nprint(df.dtypes)\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:pd.to_numeric",
+      "must_include:astype",
+      "must_include:errors='coerce'"
+    ]
+  }
 }

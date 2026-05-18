@@ -1,0 +1,1 @@
+{"mission_07": ["Create bs = BorderlineSMOTE(kind='borderline1', random_state=42) and use bs.fit_resample(X, y).", "kind='borderline1' uses k-NN from majority class to identify borderline samples, kind='borderline2' also considers minority neighbors.", "Borderline-SMOTE is more efficient than SMOTE when classes overlap, as it focuses synthesis where it matters most."]}

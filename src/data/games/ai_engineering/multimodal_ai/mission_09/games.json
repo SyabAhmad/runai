@@ -1,0 +1,20 @@
+{
+  "title": "Image Generation from Text (DALL-E Style)",
+  "id": "mission_09",
+  "type": "ai_code",
+  "xpReward": 110,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "# Multimodal AI Mission 09: Text-to-Image Generation\n#\n# DALL-E generates images from text descriptions using a two-stage process:\n# 1. Text encoder (CLIP) converts prompt to embedding\n# 2. Diffusion model generates image conditioned on text embedding\n#\n# The diffusion model uses classifier-free guidance:\n# - Conditional: predict noise with text embedding\n# - Unconditional: predict noise with null embedding\n# - Guided: eps = eps_uncond + scale * (eps_cond - eps_uncond)\n#\n# Your goal: implement text_to_image(prompt, clip_encoder, diffusion_model, steps=50)\n#   1. Encode text prompt\n#   2. Initialize random noise\n#   3. Run guided diffusion sampling\n#   4. Return generated image\n\nimport numpy as np\n\ndef text_to_image(prompt, clip_encoder, diffusion_model, steps=50):\n    # TODO: Encode prompt\n    # TODO: Initialize noise\n    # TODO: Guided diffusion loop\n    # TODO: Return image\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def text_to_image",
+      "must_include:clip_encoder",
+      "must_include:diffusion",
+      "must_include:guidance",
+      "must_include:return"
+    ]
+  }
+}

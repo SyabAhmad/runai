@@ -1,0 +1,7 @@
+{
+  "mission_08": [
+    "Use AVG(temperature) OVER (ORDER BY reading_date ROWS BETWEEN 6 PRECEDING AND CURRENT ROW).",
+    "This creates a 7-row sliding window (6 previous + current row).",
+    "Round the moving average to 2 decimal places for readability."
+  ]
+}

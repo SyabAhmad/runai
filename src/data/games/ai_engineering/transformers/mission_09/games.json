@@ -1,0 +1,21 @@
+{
+  "title": "Autoregressive Text Generation",
+  "id": "mission_09",
+  "type": "ai_code",
+  "xpReward": 160,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "# Transformers Mission 09: Autoregressive Text Generation\n#\n# GPT models generate text autoregressively: predict next token,\n# append it, predict again, repeat. Temperature controls\n# randomness in the sampling.\n#\n# Your goal: Implement generate(model_forward, prompt_ids,\n#   max_length, temperature=1.0, top_k=50)\n#   1. Start with prompt_ids as the generated sequence\n#   2. Loop until max_length:\n#      a. Get logits from model_forward(generated)\n#      b. Take only the LAST token's logits\n#      c. Apply temperature: logits = logits / temperature\n#      d. Apply top-k filtering (keep only top k logits)\n#      e. Softmax to get probabilities\n#      f. Sample next token from the distribution\n#      g. Append to generated sequence\n#   3. Return the generated token sequence\n\nimport numpy as np\n\ndef generate(model_forward, prompt_ids, max_length,\n             temperature=1.0, top_k=50):\n    # TODO: Initialize generated = prompt_ids.copy()\n    # TODO: Loop until max_length reached\n    # TODO: Get logits, apply temperature, top-k, softmax\n    # TODO: Sample and append next token\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def generate",
+      "must_include:temperature",
+      "must_include:top_k",
+      "must_include:softmax",
+      "must_include:sample",
+      "must_include:return"
+    ]
+  }
+}

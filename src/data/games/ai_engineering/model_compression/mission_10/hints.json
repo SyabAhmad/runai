@@ -1,0 +1,7 @@
+{
+  "mission_10": [
+    "Prune: `pruned = magnitude_pruning(model.weights, sparsity=0.7)`.",
+    "Quantize: `quantized = int8_quantize(pruned, calibration_data)`.",
+    "Export: `tflite_model = convert_to_tflite(quantized)`, `benchmark(tflite_model)`."
+  ]
+}

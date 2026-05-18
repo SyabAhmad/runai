@@ -1,7 +1,7 @@
-﻿{
-    "mission_08":  [
-                       "Use ColumnTransformer from sklearn.compose.",
-                       "Use StandardScaler and OneHotEncoder in separate tuples.",
-                       "Return the configured preprocessor object."
-                   ]
+{
+  "mission_08": [
+    "Create normalized columns with df['col'].str.lower() for case-insensitive comparison",
+    "Sort by the priority column with df.sort_values('score', ascending=False)",
+    "Drop duplicates on normalized columns with keep='first' to keep the highest score"
+  ]
 }

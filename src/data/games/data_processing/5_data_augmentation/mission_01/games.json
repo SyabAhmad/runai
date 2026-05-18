@@ -1,0 +1,24 @@
+{
+  "title": "Basic Image Augmentation with Albumentations",
+  "id": "mission_01",
+  "type": "ai_code",
+  "xpReward": 60,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "import numpy as np\nimport albumentations as A\n\n# TODO: Create an augmentation pipeline with horizontal flip, rotation, and brightness/contrast adjustment\n# Use albumentations.Compose to combine multiple transforms\n# Apply HorizontalFlip with probability 0.5\n# Apply RandomRotate90 with probability 0.3\n# Apply RandomBrightnessContrast with brightness_limit=0.2 and contrast_limit=0.2\n\ndef create_augmentation_pipeline():\n    # TODO: Define and return the augmentation pipeline\n    pass\n\n# TODO: Create a sample 100x100 RGB image using numpy\n# Apply the pipeline to the image\n# Verify the output shape matches the input shape\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:albumentations",
+      "must_include:Compose",
+      "must_include:HorizontalFlip",
+      "must_include:RandomRotate90",
+      "must_include:RandomBrightnessContrast",
+      "must_include:p=0.5",
+      "must_include:p=0.3",
+      "must_include:brightness_limit",
+      "must_include:contrast_limit"
+    ]
+  }
+}

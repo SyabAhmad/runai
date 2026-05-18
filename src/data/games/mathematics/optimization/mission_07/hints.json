@@ -1,0 +1,7 @@
+{
+  "mission_07": [
+    "scipy.optimize.linprog solves min c^T x subject to A_ub @ x <= b_ub",
+    "The simplex tableau includes slack variables to convert inequalities to equalities",
+    "The entering variable is the column with the most negative coefficient in the objective row"
+  ]
+}

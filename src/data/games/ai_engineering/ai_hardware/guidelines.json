@@ -1,0 +1,6 @@
+{
+  "title": "AI Hardware",
+  "description": "Understand the hardware foundations of modern AI. Study TPU architecture, GPU memory optimization, neuromorphic computing, spiking neural networks, in-memory computing, optical computing, FPGA for AI, custom AI accelerators, energy-efficient AI, and hardware-aware neural architecture search.",
+  "difficulty": "advanced",
+  "order": 3
+}

@@ -1,0 +1,7 @@
+{
+  "mission_06": [
+    "The autocorrelation at lag k is the covariance between the series and its k-lagged version, normalized by the variance.",
+    "The Durbin-Levinson algorithm recursively computes PACF by updating phi coefficients at each lag using previously computed values.",
+    "The KPSS statistic is the sum of squared partial sums of residuals divided by n squared times the long-run variance estimate."
+  ]
+}

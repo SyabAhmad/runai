@@ -1,0 +1,1 @@
+{"mission_02": ["Create a simple synonym dictionary: synonyms = {'quick': 'fast', 'large': 'big', 'improves': 'enhances'}.", "For synonym replacement: split text into words, randomly select a word, replace if synonym exists.", "For random swap: split into words, randomly pick two indices, swap the words, rejoin with spaces."]}

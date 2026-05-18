@@ -1,0 +1,3 @@
+{
+  "mission_01": "import numpy as np\n\ndef gradient_descent(f, grad_f, x0, learning_rate=0.01, max_iter=1000, tol=1e-6):\n    x = x0.copy()\n    history = [x.copy()]\n    \n    for i in range(max_iter):\n        grad = grad_f(x)\n        x = x - learning_rate * grad\n        history.append(x.copy())\n        \n        if np.linalg.norm(grad) < tol:\n            break\n    \n    return x, history\n\ndef f(x):\n    return x ** 2\n\ndef grad_f(x):\n    return 2 * x\n\nx0 = np.array([5.0])\nx_opt, history = gradient_descent(f, grad_f, x0, learning_rate=0.1)\nprint(f\"Optimal x: {x_opt}\")\nprint(f\"Optimal f(x): {f(x_opt)}\")"
+}

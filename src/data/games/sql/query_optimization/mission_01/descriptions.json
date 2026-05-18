@@ -1,0 +1,3 @@
+{
+  "mission_01": "EXPLAIN shows the execution plan the database optimizer chooses for a query. It reveals whether the database uses index scans, sequential scans, hash joins, or other operations. Understanding query plans is the first step in optimization, as it tells you exactly how the database processes your query and where bottlenecks exist."
+}

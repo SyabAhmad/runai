@@ -1,0 +1,7 @@
+{
+  "mission_03": [
+    "The expanded target sequence interleaves blanks: for target [a, b], expanded becomes [blank, a, blank, b, blank].",
+    "Use np.logaddexp for numerically stable addition in log space: log(exp(a) + exp(b)) = logaddexp(a, b).",
+    "The CTC repeat rule allows skipping from s-2 to s only when expanded[s] is not blank and expanded[s] != expanded[s-2]."
+  ]
+}

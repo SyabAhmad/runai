@@ -1,0 +1,6 @@
+{
+  "title": "JavaScript Fundamentals",
+  "description": "Master core JavaScript programming. Learn variables, functions, arrays, objects, ES6+ features, async/await, promises, DOM manipulation, event handling, and module patterns.",
+  "difficulty": "medium",
+  "order": 2
+}

@@ -1,0 +1,7 @@
+{
+  "mission_06": [
+    "For one-hot encoding: create a zeros matrix of shape (n_samples, n_classes), then set one_hot[range(n), labels] = 1.",
+    "For softmax cross-entropy: probs = exp(logits) / sum(exp(logits)), loss = -mean(sum(onehot * log(probs + eps), axis=1)). The gradient w.r.t. logits is: grad = (probs - onehot) / n_samples.",
+    "For the inner loop, compute logits = X @ W + b (for a linear model), apply softmax cross-entropy, compute gradients for W and b, and update. For task sampling, select n_way classes, then for each class sample k_shot support and n_query query examples."
+  ]
+}

@@ -1,0 +1,3 @@
+{
+  "mission_09": "Multivariate calculus extends derivatives to functions of many variables. The gradient is a vector of all first partial derivatives. The Hessian is a matrix of all second partial derivatives — it describes the local curvature of the function. Clairaut's theorem guarantees that mixed partial derivatives are equal (Hessian is symmetric). The eigenvalues of the Hessian determine convexity: all positive means strictly convex (unique minimum), all negative means strictly concave (unique maximum), mixed signs mean a saddle point. The directional second derivative v^T @ H @ v measures curvature in direction v. The Hessian is used in Newton's method for optimization and in understanding the geometry of loss landscapes in deep learning."
+}

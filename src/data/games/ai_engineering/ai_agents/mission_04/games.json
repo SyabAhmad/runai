@@ -1,16 +1,20 @@
 {
-  "title": "ai agents Mission 4",
+  "title": "Agent with Multiple Tools",
+  "id": "mission_04",
+  "type": "ai_code",
+  "xpReward": 90,
+  "difficulty": "medium",
   "initialState": {
-    "content": "def solve_mission_4():\n    # TODO: Implement solution for ai_agents mission 4\n    return \"Mission 4 completed\"\\n    # TODO: Complete the implementation"
+    "content": "# Agent Mission 04: Agent with Multiple Tools\n#\n# Real agents have multiple tools and must choose\n# the right one based on the task.\n#\n# Tools:\n#   - calculator(expr): evaluates math expressions\n#   - get_weather(city): returns weather for a city\n#   - get_time(city): returns current time for a city\n#\n# Your goal: Complete the agent(task) function to route\n# tasks to the right tool:\n#   - \"calc:...\"   -> calculator\n#   - \"weather:...\" -> get_weather\n#   - \"time:...\"   -> get_time\n#   - anything else -> \"Unknown command\"\n#\n# Always return {\"task\": task, \"result\": result}\n\ndef calculator(expr):\n    return eval(expr)\n\ndef get_weather(city):\n    return f\"{city}: 22C, partly cloudy\"\n\ndef get_time(city):\n    return f\"{city}: 14:30 UTC\"\n\ndef agent(task):\n    # TODO: Check if task starts with \"calc:\", \"weather:\", or \"time:\"\n    #       Extract the argument after the prefix\n    #       Call the appropriate tool\n    #       Return the structured result\n    #\n    # TODO: If no prefix matches, result = \"Unknown command\"\n    pass"
   },
   "validation": {
     "type": "ai_code",
     "rules": [
-      "must_include:def",
-      "must_include:return"
+      "must_include:def agent",
+      "must_include:calculator",
+      "must_include:get_weather",
+      "must_include:get_time",
+      "must_include:startswith"
     ]
-  },
-  "id": "mission_04",
-  "type": "ai_code",
-  "xpReward": 90
+  }
 }

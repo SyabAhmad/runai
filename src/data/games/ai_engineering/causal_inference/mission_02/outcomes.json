@@ -1,0 +1,3 @@
+{
+  "mission_02": "Excellent work! You have implemented the three rules of do-calculus, giving you the power to determine when causal effects can be identified from purely observational data. Do-calculus is complete — if a causal effect is identifiable, these three rules can find it. You learned how to modify graphs by removing edges (simulating interventions) and test d-separation conditions. This theoretical foundation underpins all modern causal identification algorithms, including the ID algorithm and its extensions. With this tool, you can now systematically determine whether P(Y | do(X)) can be expressed in terms of observed probabilities."
+}

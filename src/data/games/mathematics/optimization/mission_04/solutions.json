@@ -1,0 +1,3 @@
+{
+  "mission_04": "import numpy as np\n\ndef is_convex_function(f, x_range, n_points=100):\n    x_values = np.linspace(x_range[0], x_range[1], n_points)\n    hessian_values = []\n    for x in x_values:\n        h = 1e-5\n        f_xx = (f(x + h) - 2*f(x) + f(x - h)) / (h**2)\n        hessian_values.append(f_xx)\n    \n    is_convex = all(h >= -1e-10 for h in hessian_values)\n    return is_convex, np.array(hessian_values)\n\ndef check_convexity_multivariable(H):\n    eigenvalues = np.linalg.eigvalsh(H)\n    return np.all(eigenvalues >= -1e-10)\n\ndef f1(x):\n    return x**2\n\ndef f2(x):\n    return -x**2\n\nprint(f\"f1(x)=x^2 convex: {is_convex_function(f1, (-5, 5))[0]}\")\nprint(f\"f2(x)=-x^2 convex: {is_convex_function(f2, (-5, 5))[0]}\")"
+}

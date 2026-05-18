@@ -1,0 +1,3 @@
+{
+  "mission_08": "Brilliant work! You have created four essential CSS animation patterns. The button hover uses transform for GPU-accelerated smoothness, the spinner demonstrates infinite rotation, the fade-in combines opacity and translate for polished entrances, and the pulse animation draws attention to notifications. These pure-CSS animations perform better than JavaScript alternatives and work even when scripts are disabled."
+}

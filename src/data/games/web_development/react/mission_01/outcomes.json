@@ -1,0 +1,3 @@
+{
+  "mission_01": "Great start with React! You have created functional components that accept props, render JSX, handle conditional logic, and compose together into a larger UI. The UserCard component demonstrates React's compositional model — small, focused components that combine to build complex interfaces. This component-first approach is the foundation of all React development."
+}

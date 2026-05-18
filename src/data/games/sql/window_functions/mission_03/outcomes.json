@@ -1,0 +1,3 @@
+{
+  "mission_03": "Excellent! You now understand all three ranking functions: ROW_NUMBER (unique sequential), RANK (gaps after ties), and DENSE_RANK (no gaps). Choosing the right one depends on whether you need unique identifiers, Olympic-style rankings, or continuous position numbering."
+}

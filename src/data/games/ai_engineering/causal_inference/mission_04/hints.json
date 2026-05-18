@@ -1,0 +1,7 @@
+{
+  "mission_04": [
+    "In Stage 1, fit LinearRegression with Z as features and X as target. Use model.predict(Z) to get predicted X_hat.",
+    "In Stage 2, fit LinearRegression with X_hat.reshape(-1, 1) as features and Y as target. The coefficient is the causal effect.",
+    "The Wald estimator for binary Z is: (mean(Y[Z==1]) - mean(Y[Z==0])) / (mean(X[Z==1]) - mean(X[Z==0])). For F-statistic: F = (R² / (1-R²)) × ((n-k-1) / k) where k is number of instruments."
+  ]
+}

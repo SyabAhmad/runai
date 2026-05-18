@@ -1,0 +1,3 @@
+{
+  "mission_08": "**LLM-as-a-Judge** uses a strong model to evaluate weaker models.\n\n**Why it works**: GPT-4, Claude, etc. can follow evaluation rubrics better than most humans and are much faster/cheaper.\n\n**Prompt structure**:\n```\nGiven the user prompt and two responses, score each on:\n- Helpfulness (1-5)\n- Accuracy (1-5)\n- Safety (1-5)\n\nRubric:\n5: Excellent, fully addresses prompt\n3: Adequate, minor issues\n1: Poor, fails to address prompt\n```\n\n**Biases to check**:\n- **Position bias**: Judge prefers first output. Fix: swap order and re-evaluate.\n- **Verbosity bias**: Judge prefers longer outputs. Fix: normalize by length.\n- **Self-bias**: Judge prefers its own outputs. Fix: use different model as judge."
+}

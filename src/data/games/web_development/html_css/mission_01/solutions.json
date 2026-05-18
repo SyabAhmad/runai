@@ -1,0 +1,3 @@
+{
+  "mission_01": "<div class=\"container\">\n  <header class=\"top\">\n    <h1 class=\"logo\">My Website</h1>\n    <nav class=\"links\">\n      <a href=\"/\">Home</a>\n      <a href=\"/about\">About</a>\n      <a href=\"/contact\">Contact</a>\n    </nav>\n  </header>\n  <main class=\"content\">\n    <article class=\"post\">\n      <h2>Understanding Semantic HTML</h2>\n      <p>Semantic HTML introduces meaning to web pages...</p>\n    </article>\n    <aside class=\"sidebar\">\n      <h2>Related Articles</h2>\n      <a href=\"/css\">CSS Guide</a>\n    </aside>\n  </main>\n  <footer class=\"bottom\">\n    <p>Copyright 2026</p>\n  </footer>\n</div>"
+}

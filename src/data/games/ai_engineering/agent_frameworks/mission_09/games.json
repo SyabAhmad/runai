@@ -1,0 +1,20 @@
+{
+  "title": "Agent Orchestration with State Machines",
+  "id": "mission_09",
+  "type": "ai_code",
+  "xpReward": 160,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "# Agent Frameworks Mission 09: Agent Orchestration with State Machines\n#\n# Complex agent workflows are best modeled as state machines.\n# Each state defines what the agent does and where to go next.\n#\n# Your goal: implement state_machine_agent(states, initial_state, input)\n#   1. Start at initial_state\n#   2. Execute the state's action\n#   3. Transition to next state based on result\n#   4. Repeat until terminal state (no next state)\n#   5. Return final output and state trace\n#\n# State definition:\n#   {\"name\": \"research\", \"action\": fn, \"transitions\": {\"success\": \"write\", \"fail\": \"retry\"}}\n\ndef state_machine_agent(states, initial_state, input):\n    # TODO: Initialize current_state and trace\n    # TODO: Loop until terminal state\n    # TODO: Execute action, get result\n    # TODO: Transition to next state based on result\n    # TODO: Return final output and trace\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def state_machine_agent",
+      "must_include:initial_state",
+      "must_include:transitions",
+      "must_include:trace",
+      "must_include:return"
+    ]
+  }
+}

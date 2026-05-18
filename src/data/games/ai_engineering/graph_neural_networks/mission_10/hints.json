@@ -1,0 +1,7 @@
+{
+  "mission_10": [
+    "Atom features can be one-hot encoded: element type (C, N, O, F, etc.), degree (0-5), formal charge (-2 to +2). Concatenate these into a single feature vector",
+    "For bond-aware message passing: msg_uv = W_msg @ H[u] + W_bond @ bond_features[uv]. The bond features act as edge-specific biases that modulate the message",
+    "Multi-scale readout: concatenate sum pooling (captures total properties), mean pooling (captures average properties), and max pooling (captures extreme properties) before the prediction layer"
+  ]
+}

@@ -1,7 +1,7 @@
-﻿{
-    "mission_05":  [
-                       "Use pd.to_datetime with errors=\"coerce\".",
-                       "Use .dt.year and .dt.month for derived features.",
-                       "Return the same DataFrame object after adding columns."
-                   ]
+{
+  "mission_05": [
+    "Calculate Q1 with df['column'].quantile(0.25) and Q3 with df['column'].quantile(0.75)",
+    "IQR = Q3 - Q1, then lower_bound = Q1 - 1.5*IQR, upper_bound = Q3 + 1.5*IQR",
+    "Filter with df[(df['column'] >= lower_bound) & (df['column'] <= upper_bound)]"
+  ]
 }

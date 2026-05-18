@@ -1,0 +1,7 @@
+{
+  "mission_09": [
+    "Get last token logits: `logits = model_forward(generated)[-1]`.",
+    "Apply temperature: `logits = logits / temperature`, then sort and keep top_k.",
+    "Sample with `np.random.choice(vocab_size, p=probs)` where probs = softmax(filtered_logits)."
+  ]
+}

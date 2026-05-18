@@ -1,0 +1,19 @@
+{
+  "title": "Moving Averages with Window Frames",
+  "id": "mission_08",
+  "type": "ai_code",
+  "xpReward": 100,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "-- Moving Averages: Calculate 7-day moving average of temperature\n-- The temperature_readings table has columns: reading_date, temperature\n-- TODO: Use AVG() OVER with a 7-row window frame to calculate moving average\n-- Include the daily temperature and the 7-day moving average\n\nSELECT \nFROM temperature_readings\n\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:AVG",
+      "must_include:OVER",
+      "must_include:ROWS BETWEEN",
+      "must_include:PRECEDING"
+    ]
+  }
+}

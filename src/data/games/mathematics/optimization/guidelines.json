@@ -1,0 +1,6 @@
+{
+  "title": "Optimization",
+  "description": "Master gradient descent variants, convex optimization, Lagrange multipliers, KKT conditions, linear and quadratic programming, Newton's method, conjugate gradient, ADAM optimizer math, and constrained optimization techniques.",
+  "difficulty": "hard",
+  "order": 6
+}

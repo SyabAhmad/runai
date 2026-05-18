@@ -1,0 +1,7 @@
+{
+  "mission_01": [
+    "Sample noise: `epsilon = np.random.randn(*x_0.shape)`.",
+    "Get alpha: `sqrt_alpha = np.sqrt(alpha_bar[t])`, `sqrt_one = np.sqrt(1 - alpha_bar[t])`.",
+    "Return: `sqrt_alpha * x_0 + sqrt_one * epsilon`."
+  ]
+}

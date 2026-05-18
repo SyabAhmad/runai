@@ -1,0 +1,7 @@
+{
+  "mission_08": [
+    "Set random_state consistently across all sklearn components for reproducibility.",
+    "Use StratifiedKFold with a fixed random_state for consistent cross-validation splits.",
+    "Record all configuration details alongside results for full experiment traceability."
+  ]
+}

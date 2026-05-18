@@ -1,0 +1,3 @@
+{
+  "mission_05": "Composite indexes cover multiple columns and can satisfy queries that filter on the leading columns of the index. The column order is critical: the first column should be the most selective or most frequently filtered. A composite index on (A, B) can serve queries on A alone or A and B together, but not B alone efficiently."
+}

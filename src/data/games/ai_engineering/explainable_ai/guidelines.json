@@ -1,0 +1,6 @@
+{
+  "title": "Explainable AI",
+  "description": "Master the techniques that make AI models transparent and interpretable. Learn LIME, SHAP, saliency maps, counterfactual explanations, partial dependence plots, feature importance, concept activation vectors, attention visualization, rule extraction, and model distillation for interpretability.",
+  "difficulty": "advanced",
+  "order": 1
+}

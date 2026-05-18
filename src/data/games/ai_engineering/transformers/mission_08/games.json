@@ -1,0 +1,20 @@
+{
+  "title": "Masked Language Modeling (BERT Pretraining)",
+  "id": "mission_08",
+  "type": "ai_code",
+  "xpReward": 140,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "# Transformers Mission 08: Masked Language Modeling\n#\n# BERT is pretrained using Masked Language Modeling (MLM).\n# Random tokens are masked, and the model predicts them.\n# This teaches the model deep bidirectional understanding.\n#\n# Your goal: Implement masked_lm_forward(token_ids, mask_token_id,\n#   vocab_size, model_forward, mask_prob=0.15)\n#   1. Randomly mask 15% of tokens (replace with mask_token_id)\n#   2. Run model_forward on masked inputs to get logits\n#   3. Compute cross-entropy loss only on masked positions\n#   4. Return loss and predictions\n#\n# The 80-10-10 rule:\n#   - 80% of masked tokens -> [MASK]\n#   - 10% of masked tokens -> random token\n#   - 10% of masked tokens -> keep original (no change)\n\nimport numpy as np\n\ndef masked_lm_forward(token_ids, mask_token_id, vocab_size,\n                       model_forward, mask_prob=0.15):\n    # TODO: Create mask positions (15% of tokens)\n    # TODO: Apply 80-10-10 rule to masked positions\n    # TODO: Run model_forward(masked_ids) to get logits\n    # TODO: Compute cross-entropy loss on masked positions only\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def masked_lm_forward",
+      "must_include:mask_prob",
+      "must_include:cross_entropy",
+      "must_include:softmax",
+      "must_include:return"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "title": "Multimodal RAG (Retrieval-Augmented Generation)",
+  "id": "mission_10",
+  "type": "ai_code",
+  "xpReward": 120,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "# Multimodal AI Mission 10: Multimodal RAG\n#\n# Multimodal RAG retrieves relevant images, text, or both to augment generation.\n# Given a query, retrieve from a multimodal knowledge base, then generate.\n#\n# Pipeline:\n# 1. Encode query (text or image)\n# 2. Retrieve top-K from multimodal index (CLIP embeddings)\n# 3. Format retrieved content as context\n# 4. LLM generates response using context\n#\n# Your goal: implement multimodal_rag(query, index, llm, top_k=3)\n#   1. Encode query\n#   2. Search multimodal index\n#   3. Format context\n#   4. Generate response\n\nimport numpy as np\n\ndef multimodal_rag(query, index, llm, top_k=3):\n    # TODO: Encode query\n    # TODO: Search index\n    # TODO: Format context\n    # TODO: Generate response\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def multimodal_rag",
+      "must_include:encode",
+      "must_include:retrieve",
+      "must_include:context",
+      "must_include:generate",
+      "must_include:return"
+    ]
+  }
+}

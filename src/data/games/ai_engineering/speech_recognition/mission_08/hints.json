@@ -1,0 +1,7 @@
+{
+  "mission_08": [
+    "Depthwise separable convolution first applies a spatial filter independently to each input channel (depthwise), then mixes channels with a 1x1 pointwise convolution.",
+    "Batch normalization normalizes activations across the batch and spatial dimensions: (x - mean) / sqrt(var + epsilon), followed by ReLU.",
+    "The sliding window approach classifies each window independently and collects detections where the maximum class probability exceeds the confidence threshold."
+  ]
+}

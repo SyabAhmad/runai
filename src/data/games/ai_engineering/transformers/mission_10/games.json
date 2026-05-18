@@ -1,0 +1,21 @@
+{
+  "title": "Fine-Tuning Pipeline",
+  "id": "mission_10",
+  "type": "ai_code",
+  "xpReward": 200,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "# Transformers Mission 10: Fine-Tuning Pipeline\n#\n# Pretrained transformers are fine-tuned on downstream tasks\n# by adding a classification head and training with task data.\n#\n# Your goal: Implement fine_tune(model, train_data, labels,\n#   class_head, num_classes, epochs, learning_rate)\n#   1. For each epoch:\n#      a. Forward pass: embeddings = model(input_ids)\n#      b. Take [CLS] token embedding (first token)\n#      c. Classification: logits = cls_embedding @ class_head\n#      d. Compute cross-entropy loss\n#      e. Simulated gradient update (adjust class_head)\n#   2. Track loss per epoch\n#   3. Return trained head and loss history\n#\n# The [CLS] token is a special token whose final embedding\n# represents the entire sequence for classification tasks.\n\nimport numpy as np\n\ndef fine_tune(model, train_data, labels, class_head,\n              num_classes, epochs, learning_rate):\n    # TODO: For each epoch, iterate over training data\n    # TODO: Get [CLS] embedding: cls = model(ids)[0]\n    # TODO: Compute logits: logits = cls @ class_head\n    # TODO: Compute cross-entropy loss\n    # TODO: Simulate gradient update on class_head\n    # TODO: Track and return loss history\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def fine_tune",
+      "must_include:class_head",
+      "must_include:cross_entropy",
+      "must_include:learning_rate",
+      "must_include:epochs",
+      "must_include:return"
+    ]
+  }
+}

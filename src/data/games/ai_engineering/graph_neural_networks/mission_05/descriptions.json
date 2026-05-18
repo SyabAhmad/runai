@@ -1,0 +1,3 @@
+{
+  "mission_05": "Link prediction asks whether an edge exists between two nodes in a graph. This task is crucial for recommendation systems, knowledge graph completion, and protein-protein interaction prediction. The standard approach uses a GCN encoder to learn node embeddings, then an inner product decoder to predict edge probabilities. The sigmoid of the dot product between two node embeddings gives the probability of a link. Training requires negative sampling since real graphs are sparse - for every positive edge, you sample several non-existent edges as negative examples. The binary cross-entropy loss encourages high scores for existing edges and low scores for non-existent ones."
+}

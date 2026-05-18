@@ -1,0 +1,22 @@
+{
+  "mission_08": {
+    "title": "Cross-Silo Federated Learning",
+    "id": "mission_08",
+    "type": "ai_code",
+    "xpReward": 100,
+    "difficulty": "hard",
+    "initialState": {
+      "content": "import numpy as np\n\n\nclass CrossSiloFL:\n    \"\"\"Cross-silo FL for organizational-scale federated learning.\n    \n    TODO: Implement silo-level aggregation with reliability tracking\n    TODO: Handle straggler silos with timeout mechanism\n    TODO: Implement silo reputation scoring\n    \"\"\"\n    \n    def __init__(self, num_silos, min_silos_ratio=0.8):\n        self.num_silos = num_silos\n        self.min_silos = max(1, int(num_silos * min_silos_ratio))\n        self.silo_reputation = np.ones(num_silos)\n        self.silo_history = [[] for _ in range(num_silos)]\n    \n    def select_silos(self, round_num):\n        \"\"\"Select silos for this round based on reputation.\n        \n        TODO: Weight selection by reputation scores\n        TODO: Ensure minimum number of silos selected\n        TODO: Avoid selecting silos that consistently fail\n        \"\"\"\n        # TODO: Compute selection probabilities from reputation\n        probs = None\n        \n        # TODO: Sample silos\n        selected = None\n        \n        return selected\n    \n    def check_stragglers(self, responses, timeout_rounds):\n        \"\"\"Identify straggler silos that exceeded timeout.\n        \n        TODO: Mark silos that did not respond within timeout\n        TODO: Update reputation for stragglers\n        TODO: Return list of responsive silos\n        \"\"\"\n        responsive = []\n        for silo_id, response in enumerate(responses):\n            # TODO: Check if response is valid and timely\n            if response is not None:\n                responsive.append(silo_id)\n        return responsive\n    \n    def update_reputation(self, silo_id, loss_improvement):\n        \"\"\"Update silo reputation based on contribution quality.\n        \n        TODO: Increase reputation for positive loss improvement\n        TODO: Decrease reputation for negative or suspicious updates\n        TODO: Apply exponential moving average\n        \"\"\"\n        # TODO: EMA update\n        alpha = 0.1\n        self.silo_reputation[silo_id] = None\n    \n    def reputation_weighted_aggregate(self, silo_weights, silo_ids, sample_sizes):\n        \"\"\"Aggregate with reputation-based weighting.\n        \n        TODO: Combine sample size and reputation for weights\n        TODO: effective_weight[k] = n_k * reputation[k]\n        TODO: Weighted average using effective weights\n        \"\"\"\n        global_w = {}\n        # TODO: Compute effective weights\n        # TODO: Weighted aggregation\n        return global_w\n"
+    },
+    "validation": {
+      "type": "ai_code",
+      "rules": [
+        "must_include:reputation",
+        "must_include:straggler",
+        "must_include:cross-silo",
+        "must_include:timeout",
+        "must_include:weighted aggregate"
+      ]
+    }
+  }
+}

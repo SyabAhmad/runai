@@ -1,0 +1,7 @@
+{
+  "mission_03": [
+    "Compute the update delta as client_update - global_weights, then compute its L2 norm using np.linalg.norm(delta)",
+    "If norm > clip_norm, scale the delta: clipped_delta = delta * (clip_norm / norm). Otherwise, clipped_delta = delta",
+    "Add Gaussian noise with standard deviation sigma * clip_norm to the averaged update: noise = np.random.normal(0, sigma * clip_norm, shape)"
+  ]
+}

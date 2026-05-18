@@ -1,0 +1,7 @@
+{
+  "mission_07": [
+    "Reward: `r = reward_model(output)`.",
+    "KL: `kl = sum(output_probs * log(output_probs / reference_probs))`.",
+    "Final: `reward = r - beta * kl`."
+  ]
+}

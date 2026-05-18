@@ -1,0 +1,3 @@
+{
+  "mission_02": "Well done! You have implemented Newton-Raphson method for both scalar and system root-finding. Newton's method is one of the most important numerical algorithms, used everywhere from solving nonlinear equations to optimization (where we find roots of the gradient). Its quadratic convergence makes it extremely efficient when close to the solution."
+}

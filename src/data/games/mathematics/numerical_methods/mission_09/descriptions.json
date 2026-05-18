@@ -1,0 +1,3 @@
+{
+  "mission_09": "Implement ODE solvers including Euler's method, the classical 4th-order Runge-Kutta method (RK4), and the adaptive Runge-Kutta-Fehlberg method (RK45). Euler's method is the simplest ODE solver with O(h) error per step. RK4 achieves O(h^4) accuracy by evaluating the derivative at four strategically chosen points within each step, making it the most widely used ODE solver. The adaptive RK45 method estimates the local error by comparing 4th and 5th order solutions, automatically adjusting the step size to maintain accuracy while minimizing computational cost. ODE solvers are essential for simulating dynamical systems, from planetary motion to chemical reactions to neural network training dynamics."
+}

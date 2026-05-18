@@ -1,0 +1,9 @@
+{
+  "mission_06": [
+    "Quantize: quantized = np.round(x * scale) / scale.",
+    "Pad input: padded = np.pad(input_tensor, ((padding, padding), (padding, padding), (0, 0)), mode='constant').",
+    "Compute MAC: output[oh, ow, c] = np.sum(patch * kernel[:, :, :, c]).",
+    "Throughput: throughput = (total_ops / (cycles / (self.clock_freq_mhz * 1e6))) / 1e9.",
+    "Efficiency: return throughput_gops / power_watts."
+  ]
+}

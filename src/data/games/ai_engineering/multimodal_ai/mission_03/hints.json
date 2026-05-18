@@ -1,0 +1,7 @@
+{
+  "mission_03": [
+    "Encode: `V = image_encoder(image)`, `Q = text_encoder(question)`.",
+    "Fusion: `F = cross_attention(Q, V)`.",
+    "Classify: `answer = argmax(softmax(F @ classifier_weights))`."
+  ]
+}

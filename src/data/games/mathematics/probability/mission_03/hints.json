@@ -1,0 +1,10 @@
+{
+  "mission_03": [
+    "Use np.random.randint(1, 7, size=10000) to simulate dice rolls.",
+    "The PMF can be computed using np.bincount() or manual counting.",
+    "E[X] for a fair die = (1+2+3+4+5+6)/6 = 3.5.",
+    "Var(X) = E[X^2] - (E[X])^2 = 91/6 - (3.5)^2 = 2.917.",
+    "E[aX + b] = a*E[X] + b and Var(aX + b) = a^2 * Var(X).",
+    "For Y = 2X + 1: E[Y] = 8, Var(Y) = 4 * 2.917 = 11.667."
+  ]
+}

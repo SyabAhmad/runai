@@ -1,0 +1,7 @@
+{
+  "mission_01": [
+    "Pipeline takes a list of (name, transformer) tuples ending with an estimator.",
+    "Call pipeline.fit(X_train, y_train) to fit all steps sequentially.",
+    "Call pipeline.predict(X_test) to transform and predict in one step."
+  ]
+}

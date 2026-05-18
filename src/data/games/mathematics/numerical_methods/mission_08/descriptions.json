@@ -1,0 +1,3 @@
+{
+  "mission_08": "Implement eigenvalue computation algorithms including power iteration, inverse iteration, and the QR algorithm. Power iteration finds the dominant (largest magnitude) eigenvalue by repeatedly multiplying a vector by the matrix and normalizing. The convergence rate depends on the ratio |lambda_2/lambda_1|. Inverse iteration finds the eigenvalue closest to a given shift by applying power iteration to (A - mu*I)^{-1}. The QR algorithm computes all eigenvalues by iteratively computing QR decomposition and forming RQ, which converges to an upper triangular (Schur) form with eigenvalues on the diagonal. Eigenvalue problems are central to principal component analysis, stability analysis, quantum mechanics, and many other fields."
+}

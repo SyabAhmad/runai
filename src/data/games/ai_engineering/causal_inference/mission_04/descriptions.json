@@ -1,0 +1,3 @@
+{
+  "mission_04": "Instrumental variables (IV) estimation is a powerful technique for causal inference when unmeasured confounding is present. An instrument Z must satisfy three conditions: (1) Relevance — Z is correlated with the treatment X; (2) Exogeneity — Z is independent of unmeasured confounders; (3) Exclusion restriction — Z affects the outcome Y only through X. The Two-Stage Least Squares (2SLS) estimator is the most common IV method: in stage 1, regress X on Z to obtain predicted values; in stage 2, regress Y on the predicted X. The Wald estimator provides a simple estimate when the instrument is binary. You will also learn to diagnose weak instruments using the first-stage F-statistic, where values below 10 indicate potentially biased estimates."
+}

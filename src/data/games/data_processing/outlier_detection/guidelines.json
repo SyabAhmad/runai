@@ -1,0 +1,6 @@
+{
+  "title": "Outlier Detection",
+  "description": "Learn outlier detection methods including IQR, Z-score, isolation forest, DBSCAN, and local outlier factor.",
+  "difficulty": "medium",
+  "order": 7
+}

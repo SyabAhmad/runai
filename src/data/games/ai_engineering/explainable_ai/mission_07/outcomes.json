@@ -1,0 +1,3 @@
+{
+  "mission_07": "Outstanding! You have implemented TCAV, a powerful technique for concept-based model interpretation. Your implementation learns Concept Activation Vectors by training a linear separator between concept and random examples in activation space, then measures how much the concept direction aligns with class predictions through directional derivatives. The statistical test against random vectors provides rigor, ensuring that reported concept influences are not due to chance. TCAV bridges the gap between low-level feature attributions and high-level human concepts, making it invaluable for domain experts who think in terms of concepts rather than pixels or features."
+}

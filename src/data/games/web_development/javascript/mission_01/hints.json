@@ -1,0 +1,7 @@
+{
+  "mission_01": [
+    "Use const for the user profile object itself since you will not reassign it, but use let inside if you need to modify properties.",
+    "typeof returns 'string', 'number', 'boolean', 'object', 'undefined', 'function', or 'symbol'. Note that typeof null returns 'object'.",
+    "Return an object literal from createUserProfile with properties: name, age, email, and isActive."
+  ]
+}

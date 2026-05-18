@@ -1,0 +1,3 @@
+{
+  "mission_03": "You implemented VQA! This task tests true multimodal understanding — the model must see the image AND understand the question. Modern LLM-based VQA systems achieve near-human performance."
+}

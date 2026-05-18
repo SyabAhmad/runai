@@ -1,0 +1,3 @@
+{
+  "mission_03": "Implement numerical integration using the trapezoidal rule, which approximates the integral by dividing the area under the curve into trapezoids. The composite trapezoidal rule uses the formula: integral ≈ h/2 * [f(a) + 2*sum(f(x_i)) + f(b)] where h = (b-a)/n. The error of the trapezoidal rule is O(h^2), meaning it converges quadratically as the number of subintervals increases. The adaptive version recursively subdivides intervals where the function changes rapidly, providing efficient integration with guaranteed accuracy. The trapezoidal rule is particularly effective for periodic functions integrated over full periods."
+}

@@ -1,0 +1,7 @@
+{
+  "mission_08": [
+    "Selection probabilities: probs = reputation / sum(reputation). Use np.random.choice with these probabilities to select min_silos silos",
+    "Reputation update: new_rep = (1 - alpha) * old_rep + alpha * improvement. Clip to [0.1, 2.0] to prevent extreme values",
+    "Effective weight for silo k: w_k = sample_size[k] * reputation[k]. Then global_w = sum(w_k * model_k) / sum(w_k)"
+  ]
+}

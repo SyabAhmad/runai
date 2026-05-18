@@ -1,0 +1,7 @@
+{
+  "mission_05": [
+    "Filter data to |running_variable - cutoff| <= bandwidth. Create treatment = (running_variable >= cutoff).astype(int).",
+    "For triangular kernel: weights = np.maximum(0, 1 - np.abs(running_variable - cutoff) / bandwidth). Use these as sample_weight in LinearRegression.",
+    "Fit separate regressions on each side of the cutoff: Y = α + β(X - cutoff) + τ·Treatment + ε. The coefficient τ is the treatment effect. For placebo tests, repeat estimation at cutoffs where no true discontinuity exists."
+  ]
+}

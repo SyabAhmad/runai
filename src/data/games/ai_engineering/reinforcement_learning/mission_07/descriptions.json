@@ -1,0 +1,3 @@
+{
+  "mission_07": "**PPO** is the workhorse of modern RL. It's used to train ChatGPT (via RLHF), Dota 2 bots, and countless robotics applications.\n\nThe key insight: don't let the policy change too much in one update. If the new policy is too different from the old one, the update might be harmful.\n\nThe **clipped surrogate objective**:\n```\nL = min(r * A, clip(r, 1-ε, 1+ε) * A)\n```\n\nWhere:\n- **r** = π_new(a|s) / π_old(a|s) (probability ratio)\n- **A** = advantage estimate\n- **ε** = clipping parameter (usually 0.2)\n\nIf the action was good (A > 0): encourage it, but only up to 20% more likely.\nIf the action was bad (A < 0): discourage it, but only up to 20% less likely.\n\nThis simple clipping mechanism makes PPO stable, sample-efficient, and easy to tune."
+}

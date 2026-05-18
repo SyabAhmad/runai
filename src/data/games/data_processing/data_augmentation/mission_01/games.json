@@ -1,0 +1,18 @@
+{
+  "title": "SMOTE for Imbalanced Data",
+  "id": "mission_01",
+  "type": "ai_code",
+  "xpReward": 60,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "import pandas as pd\nimport numpy as np\nfrom imblearn.over_sampling import SMOTE\nfrom sklearn.datasets import make_classification\n\n# Create imbalanced dataset\nX, y = make_classification(n_samples=500, n_features=5, n_informative=3,\n                           weights=[0.9, 0.1], random_state=42)\n\n# TODO: Check the class distribution before SMOTE\n# TODO: Apply SMOTE to balance the classes\n# TODO: Check the class distribution after SMOTE\n# TODO: Print the original and resampled shapes\n# TODO: Print the new class counts\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:SMOTE",
+      "must_include:fit_resample",
+      "must_include:Counter"
+    ]
+  }
+}

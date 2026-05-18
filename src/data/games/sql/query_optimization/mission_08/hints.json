@@ -1,0 +1,7 @@
+{
+  "mission_08": [
+    "Replace DATE(created_at) = '2024-03-15' with a range condition.",
+    "Use created_at >= '2024-03-15' AND created_at < '2024-03-16'.",
+    "This allows the index on created_at to be used for an efficient range scan."
+  ]
+}

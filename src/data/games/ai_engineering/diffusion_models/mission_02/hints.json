@@ -1,0 +1,7 @@
+{
+  "mission_02": [
+    "Predict noise: `epsilon_pred = model(x_t, t)`.",
+    "Coefficients: `coef1 = 1/np.sqrt(alpha[t])`, `coef2 = (1-alpha[t])/np.sqrt(1-alpha_bar[t])`.",
+    "Reverse: `x_prev = coef1 * (x_t - coef2 * epsilon_pred)`, add noise if `t > 0`."
+  ]
+}

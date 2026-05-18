@@ -1,0 +1,6 @@
+{
+  "title": "Data Normalization",
+  "description": "Learn essential data scaling techniques including min-max normalization, z-score standardization, robust scaling, log transforms, and power transforms. Master when and how to apply each technique for optimal machine learning model performance.",
+  "difficulty": "intermediate",
+  "order": 2
+}

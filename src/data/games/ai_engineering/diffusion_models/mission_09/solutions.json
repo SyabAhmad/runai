@@ -1,0 +1,3 @@
+{
+  "mission_09": "import numpy as np\n\ndef controlnet_forward(x, t, text, condition, unet, controlnet, zero_convs):\n    # Frozen U-Net features\n    unet_features = unet.encoder(x, t, text)\n    # ControlNet features from condition\n    ctrl_features = controlnet.encoder(condition, t)\n    # Add zero convolution outputs\n    combined_features = []\n    for uf, cf, zc in zip(unet_features, ctrl_features, zero_convs):\n        combined_features.append(uf + zc(cf))\n    # Run U-Net decoder with combined features\n    output = unet.decoder(combined_features, t, text)\n    return output"
+}

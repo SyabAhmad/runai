@@ -1,0 +1,7 @@
+{
+  "mission_02": [
+    "Tokenize: `ref_tokens = reference.split()`, `gen_tokens = generated.split()`.",
+    "N-grams: `[tuple(tokens[i:i+n]) for i in range(len(tokens)-n+1)]`.",
+    "Overlap: `sum((Counter(gen_ngrams) & Counter(ref_ngrams)).values())`."
+  ]
+}

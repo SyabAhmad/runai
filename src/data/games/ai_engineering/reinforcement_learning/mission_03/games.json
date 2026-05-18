@@ -1,0 +1,20 @@
+{
+  "title": "Q-Learning",
+  "id": "mission_03",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "# RL Mission 03: Q-Learning\n#\n# Q-Learning learns the optimal Q-value function without knowing\n# the environment dynamics (model-free RL).\n#\n# Update rule:\n#   Q(s,a) = Q(s,a) + alpha * [r + gamma * max_a' Q(s',a') - Q(s,a)]\n#\n# Your goal: Implement q_learning(env, episodes, alpha, gamma, epsilon)\n#   1. Initialize Q table to zeros\n#   2. For each episode:\n#      a. Reset to initial state\n#      b. Choose action (epsilon-greedy)\n#      c. Take action, observe reward and next state\n#      d. Update Q table using the update rule\n#      e. Repeat until terminal state\n#   3. Return Q table and episode rewards\n\nimport numpy as np\n\ndef q_learning(env, episodes, alpha, gamma, epsilon):\n    # TODO: Initialize Q table: Q = np.zeros((n_states, n_actions))\n    # TODO: For each episode, run epsilon-greedy exploration\n    # TODO: Update Q values using TD error\n    # TODO: Track and return rewards per episode\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def q_learning",
+      "must_include:epsilon",
+      "must_include:alpha",
+      "must_include:gamma",
+      "must_include:return"
+    ]
+  }
+}

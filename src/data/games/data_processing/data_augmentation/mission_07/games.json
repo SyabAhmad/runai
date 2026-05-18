@@ -1,0 +1,18 @@
+{
+  "title": "Borderline-SMOTE",
+  "id": "mission_07",
+  "type": "ai_code",
+  "xpReward": 90,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import pandas as pd\nimport numpy as np\nfrom imblearn.over_sampling import BorderlineSMOTE\nfrom sklearn.datasets import make_classification\n\n# Create imbalanced dataset with overlapping classes\nX, y = make_classification(n_samples=500, n_features=4, n_informative=3,\n                           n_redundant=1, weights=[0.8, 0.2],\n                           flip_y=0.1, random_state=42)\n\n# TODO: Check class distribution before Borderline-SMOTE\n# TODO: Apply Borderline-SMOTE (kind='borderline1') to focus on borderline samples\n# TODO: Check class distribution after Borderline-SMOTE\n# TODO: Compare with regular SMOTE: Borderline-SMOTE only synthesizes near decision boundary\n# TODO: Print the results\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:BorderlineSMOTE",
+      "must_include:kind=",
+      "must_include:fit_resample"
+    ]
+  }
+}

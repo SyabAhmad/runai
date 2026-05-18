@@ -1,0 +1,22 @@
+{
+  "title": "Custom Hooks",
+  "id": "mission_06",
+  "type": "ai_code",
+  "xpReward": 90,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "// TODO: Extract reusable logic into custom hooks\n// TODO: Follow the \"use\" naming convention\n// TODO: Compose custom hooks from other hooks\n// TODO: Build hooks for common patterns\n\nimport { useState, useEffect, useCallback, useRef } from 'react';\n\n// TODO: useLocalStorage - sync state with localStorage\nfunction useLocalStorage(key, initialValue) {\n  // TODO: Read initial value from localStorage\n  // TODO: Return [value, setValue] like useState\n  // TODO: Update localStorage when value changes\n}\n\n// TODO: useDebounce - debounce a value\nfunction useDebounce(value, delay) {\n  // TODO: Return debounced value that updates after delay\n  // TODO: Clean up timeout on value change or unmount\n}\n\n// TODO: useFetch - data fetching hook\nfunction useFetch(url) {\n  // TODO: Return { data, loading, error }\n  // TODO: Handle loading, success, and error states\n  // TODO: Support refetch function\n}\n\n// TODO: usePrevious - track previous value of a prop/state\nfunction usePrevious(value) {\n  // TODO: Use useRef to store previous value\n  // TODO: Update ref after each render\n}\n\n// TODO: useClickOutside - detect clicks outside an element\nfunction useClickOutside(ref, handler) {\n  // TODO: Add mousedown listener\n  // TODO: Check if click target is outside the ref element\n  // TODO: Clean up listener\n}"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:useRef",
+      "must_include:useState",
+      "must_include:useEffect",
+      "must_include:useCallback",
+      "must_include:localStorage",
+      "must_include:return [",
+      "must_import:react"
+    ]
+  }
+}

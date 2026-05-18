@@ -1,0 +1,9 @@
+{
+  "mission_04": [
+    "Select random direction: direction = np.random.choice([-1, 1]).",
+    "Perturb feature: x_cf[feat_idx] += direction * step_size * (max_val - min_val).",
+    "Clip to range: x_cf[feat_idx] = np.clip(x_cf[feat_idx], min_val, max_val).",
+    "Compute normalized distance: dist += np.abs(x_cf[i] - x_original[i]) / (max_val - min_val).",
+    "Generate candidate with annealing: candidate = self._generate_candidate(x_original, step=0.1*(1-_/max_iter))."
+  ]
+}

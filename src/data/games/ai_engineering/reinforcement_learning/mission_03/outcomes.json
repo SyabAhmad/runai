@@ -1,0 +1,3 @@
+{
+  "mission_03": "You implemented Q-Learning! This is the foundation of modern RL. The TD error drives learning — it measures how surprised the agent is by the outcome. Over time, Q-values converge to the true expected returns, and the greedy policy becomes optimal."
+}

@@ -1,0 +1,3 @@
+{
+  "mission_05": "You built DQN! Experience replay and target networks are the two pillars that make deep RL stable. This is the exact architecture DeepMind used to beat human champions at Atari — learning purely from pixel inputs and game scores."
+}

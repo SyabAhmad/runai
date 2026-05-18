@@ -1,0 +1,21 @@
+{
+  "title": "Compute Partial Dependence Plots",
+  "id": "mission_05",
+  "type": "ai_code",
+  "xpReward": 85,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import numpy as np\nfrom sklearn.ensemble import GradientBoostingRegressor\n\n\ndef partial_dependence(model, X, feature_idx, grid_resolution=50):\n    \"\"\"Compute Partial Dependence Plot (PDP) for a single feature.\"\"\"\n    # TODO: Get the range of the target feature\n    feature_values = X[:, feature_idx]\n    grid = np.linspace(???, ???, grid_resolution)\n\n    # TODO: Initialize array to store predictions for each grid point\n    pd_values = np.zeros(grid_resolution)\n\n    for i, val in enumerate(grid):\n        # TODO: Create a copy of X where the target feature is set to val\n        X_modified = ???\n        X_modified[:, feature_idx] = val\n\n        # TODO: Get predictions and average them\n        predictions = ???\n        pd_values[i] = ???\n\n    return grid, pd_values\n\n\ndef partial_dependence_2d(model, X, feature_idx_1, feature_idx_2, grid_resolution=20):\n    \"\"\"Compute 2D Partial Dependence for a pair of features.\"\"\"\n    grid_1 = np.linspace(X[:, feature_idx_1].min(), X[:, feature_idx_1].max(), grid_resolution)\n    grid_2 = np.linspace(X[:, feature_idx_2].min(), X[:, feature_idx_2].max(), grid_resolution)\n\n    # TODO: Initialize 2D grid of predictions\n    pd_matrix = np.zeros((grid_resolution, grid_resolution))\n\n    for i, v1 in enumerate(grid_1):\n        for j, v2 in enumerate(grid_2):\n            # TODO: Create modified X with both features set\n            X_modified = X.copy()\n            X_modified[:, feature_idx_1] = ???\n            X_modified[:, feature_idx_2] = ???\n\n            # TODO: Average predictions\n            pd_matrix[i, j] = ???\n\n    return grid_1, grid_2, pd_matrix\n\n\ndef compute_ice_curves(model, X, feature_idx, grid_resolution=50):\n    \"\"\"Compute Individual Conditional Expectation curves.\"\"\"\n    n_samples = X.shape[0]\n    grid = np.linspace(X[:, feature_idx].min(), X[:, feature_idx].max(), grid_resolution)\n\n    # TODO: Initialize ICE curves (one per sample)\n    ice_curves = np.zeros((n_samples, grid_resolution))\n\n    for s in range(n_samples):\n        original_val = X[s, feature_idx]\n        for i, val in enumerate(grid):\n            X_modified = X.copy()\n            # TODO: Only modify the feature for sample s\n            X_modified[s, feature_idx] = ???\n            ice_curves[s, i] = ???\n\n    return grid, ice_curves\n\n\nif __name__ == \"__main__\":\n    np.random.seed(42)\n    X = np.random.randn(200, 3)\n    y = 2.0 * X[:, 0] + np.sin(X[:, 1]) + 0.5 * X[:, 2] + np.random.randn(200) * 0.1\n\n    model = GradientBoostingRegressor(n_estimators=50, max_depth=3)\n    model.fit(X, y)\n\n    grid, pd = partial_dependence(model, X, feature_idx=0)\n    print(f\"PDP range: [{pd.min():.3f}, {pd.max():.3f}]\")\n\n    grid, ice = compute_ice_curves(model, X, feature_idx=0)\n    print(f\"ICE curves shape: {ice.shape}\")\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:np.linspace",
+      "must_include:X.copy",
+      "must_include:np.mean",
+      "must_include:partial_dependence",
+      "must_include:ice_curves",
+      "must_include:grid_resolution"
+    ]
+  }
+}

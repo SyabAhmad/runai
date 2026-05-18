@@ -1,0 +1,3 @@
+{
+  "mission_03": "The **noise schedule** is critical — it determines how quickly the image degrades to noise.\n\n**Linear schedule**: β increases linearly from β_min to β_max. Simple but not optimal.\n\n**Cosine schedule**: Starts and ends gently, with rapid noise in the middle. Better for image quality.\n\n**Quadratic schedule**: β increases quadratically. Good for high-resolution images.\n\nThe schedule affects:\n- **Training stability**: Too much noise early = hard to learn\n- **Sample quality**: Too little noise late = artifacts\n- **Generation speed**: Fewer steps needed with better schedules\n\nModern models use cosine or learned schedules for best results."
+}

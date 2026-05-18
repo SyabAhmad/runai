@@ -1,0 +1,18 @@
+{
+  "title": "Law of Large Numbers",
+  "id": "mission_08",
+  "type": "ai_code",
+  "xpReward": 100,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "import numpy as np\n\n# TODO: Simulate coin flips and track the running average\nnp.random.seed(42)\nn_flips = 100000\nflips = None  # 1 for heads, 0 for tails\n\n# TODO: Compute the running average (cumulative mean)\nrunning_avg = None\n\n# TODO: Define the true probability (fair coin)\ntrue_p = 0.5\n\n# TODO: Compute the absolute error at each step\nerror = None\n\n# TODO: Find when the running average first enters and stays within 0.01 of true_p\n# (within 1% of 0.5 for the remaining flips)\ntolerance = 0.01\nconvergence_point = None\n\n# TODO: Repeat with different sample sizes and compute the error\nsample_sizes = [10, 100, 1000, 10000, 100000]\nerrors_at_sizes = {}\nfor size in sample_sizes:\n    sample = None\n    errors_at_sizes[size] = None\n\n# TODO: Verify Chebyshev's inequality: P(|X_bar - mu| >= k*sigma) <= 1/k^2\n# For coin flips: sigma = sqrt(p*(1-p)/n)\nn = 10000\nk = 2\nsigma = None\nchebyshev_bound = None\n\n# TODO: Estimate P(|X_bar - 0.5| >= k*sigma) by simulation\nn_simulations = 10000\nsample_means = None\nempirical_prob = None\n\nprint(f\"Final running average: {running_avg[-1]:.4f}\")\nprint(f\"Convergence point (within {tolerance}): {convergence_point}\")\nfor size, err in errors_at_sizes.items():\n    print(f\"Error at n={size}: {err:.4f}\")\nprint(f\"Chebyshev bound: {chebyshev_bound:.4f}\")\nprint(f\"Empirical probability: {empirical_prob:.4f}\")\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:numpy",
+      "must_include:np.cumsum",
+      "must_include:np.random"
+    ]
+  }
+}

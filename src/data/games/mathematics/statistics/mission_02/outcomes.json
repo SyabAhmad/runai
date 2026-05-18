@@ -1,0 +1,3 @@
+{
+  "mission_02": "Excellent! You have explored the behavior of p-values through simulation. Under the null hypothesis, the false positive rate is approximately 0.05 — exactly as expected. Under the alternative, the power depends on the effect size and sample size. The multiple testing problem is severe: with 20 tests, there is a 64% chance of at least one false positive. The Bonferroni correction (alpha/20 = 0.0025) controls this but is conservative. In ML, this matters when comparing many models or features — you need to account for multiple comparisons to avoid false discoveries."
+}

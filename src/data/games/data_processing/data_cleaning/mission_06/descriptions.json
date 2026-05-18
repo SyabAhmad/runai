@@ -1,3 +1,3 @@
-﻿{
-    "mission_06":  "Create cap_outliers_iqr(df, col) that computes Q1, Q3, and IQR, then clips values in col to [Q1-1.5*IQR, Q3+1.5*IQR]. Return df."
+{
+  "mission_06": "Fuzzy matching enables record linkage between datasets that contain similar but not identical text entries. This technique is essential when merging data from different sources where naming conventions, abbreviations, or typos create discrepancies. Simple word-overlap similarity measures the proportion of shared words between two strings. More sophisticated approaches include Levenshtein distance, Jaro-Winkler similarity, and token set ratio. The key insight is that exact matching fails in real-world scenarios, and fuzzy matching provides a practical solution for entity resolution, customer deduplication, and data integration tasks."
 }

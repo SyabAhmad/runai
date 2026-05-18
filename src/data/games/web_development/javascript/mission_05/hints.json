@@ -1,0 +1,7 @@
+{
+  "mission_05": [
+    "Nested destructuring: const { database: { host, port, credentials: { username } } } = config extracts deeply nested values.",
+    "Spread merges objects: { ...defaults, ...overrides } — later properties override earlier ones.",
+    "Optional chaining: user?.profile?.name safely returns undefined if any part is null/undefined. Combine with ??: user?.profile?.name ?? \"Anonymous\"."
+  ]
+}

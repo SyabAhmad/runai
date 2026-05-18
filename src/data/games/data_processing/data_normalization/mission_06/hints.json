@@ -1,0 +1,1 @@
+{"mission_06": ["Import PowerTransformer from sklearn.preprocessing and set method='yeo-johnson'.", "Use pt.fit_transform(df) to apply the transformation and pt.lambdas_ to get lambda values.", "Compare skewness with scipy.stats.skew before and after to measure improvement."]}

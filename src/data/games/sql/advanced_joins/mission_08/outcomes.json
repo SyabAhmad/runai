@@ -1,0 +1,3 @@
+{
+  "mission_08": "Impressive! You've mastered LATERAL joins, one of SQL's most powerful features for correlated subqueries. The ability to reference outer table columns within a FROM-clause subquery opens up sophisticated query patterns. LATERAL joins excel at top-N-per-group problems, JSON processing, and any scenario requiring row-by-row subquery evaluation."
+}

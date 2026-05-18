@@ -1,0 +1,7 @@
+{
+  "mission_01": [
+    "Threshold: `threshold = np.percentile(np.abs(weights), sparsity * 100)`.",
+    "Mask: `mask = np.abs(weights) > threshold`.",
+    "Pruned: `pruned = weights * mask`."
+  ]
+}

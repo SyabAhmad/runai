@@ -1,0 +1,22 @@
+{
+  "mission_06": {
+    "title": "Communication-Efficient FL",
+    "id": "mission_06",
+    "type": "ai_code",
+    "xpReward": 90,
+    "difficulty": "medium",
+    "initialState": {
+      "content": "import numpy as np\n\n\nclass CommEfficientFL:\n    \"\"\"Communication-efficient federated learning.\n    \n    TODO: Implement gradient compression (top-k sparsification)\n    TODO: Implement quantization (8-bit quantization)\n    TODO: Implement lazy aggregation (FedAvg with delayed updates)\n    \"\"\"\n    \n    def __init__(self, compression_ratio=0.1, num_bits=8):\n        self.compression_ratio = compression_ratio\n        self.num_bits = num_bits\n    \n    def topk_sparse(self, update):\n        \"\"\"Keep only top-k largest magnitude elements.\n        \n        TODO: Flatten update and find top-k indices\n        TODO: Create sparse update with only top-k values\n        TODO: Return sparse update and indices for reconstruction\n        \"\"\"\n        flat = update.flatten()\n        # TODO: Find top-k indices by absolute value\n        k = int(len(flat) * self.compression_ratio)\n        # TODO: Create sparse mask\n        sparse_update = None\n        indices = None\n        return sparse_update, indices\n    \n    def quantize(self, update):\n        \"\"\"Quantize update to num_bits precision.\n        \n        TODO: Find min and max of update\n        TODO: Map values to discrete levels\n        TODO: Dequantize back to float\n        \"\"\"\n        # TODO: Compute quantization levels\n        min_val, max_val = np.min(update), np.max(update)\n        # TODO: Quantize to num_bits levels\n        quantized = None\n        return quantized\n    \n    def compress_update(self, update):\n        \"\"\"Apply both sparsification and quantization.\"\"\"\n        # TODO: First sparsify, then quantize\n        sparse, indices = self.topk_sparse(update)\n        quantized = self.quantize(sparse)\n        return quantized, indices\n    \n    def decompress_update(self, quantized, indices, shape):\n        \"\"\"Reconstruct full update from compressed form.\"\"\"\n        # TODO: Create zeros array of original shape\n        # TODO: Place quantized values at indices\n        full_update = np.zeros(shape)\n        return full_update\n"
+    },
+    "validation": {
+      "type": "ai_code",
+      "rules": [
+        "must_include:top-k",
+        "must_include:quantization",
+        "must_include:compression",
+        "must_include:sparsification",
+        "must_include:decompress"
+      ]
+    }
+  }
+}

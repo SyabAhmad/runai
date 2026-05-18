@@ -1,0 +1,7 @@
+{
+  "mission_01": [
+    "Import albumentations as 'A' to access all transforms with shorthand notation.",
+    "Use A.Compose() to wrap multiple transforms into a single callable pipeline.",
+    "Each transform accepts a 'p' parameter controlling the probability of application (0.0 to 1.0)."
+  ]
+}

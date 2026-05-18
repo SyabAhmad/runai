@@ -1,0 +1,10 @@
+{
+  "mission_01": [
+    "Use itertools.product(range(1,7), range(1,7)) for two dice.",
+    "The sample space has 36 outcomes (6 * 6).",
+    "Event A (sum=7): {(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)} — 6 outcomes.",
+    "Event B (doubles): {(1,1), (2,2), ..., (6,6)} — 6 outcomes.",
+    "P(A or B) = P(A) + P(B) - P(A and B).",
+    "A and B are mutually exclusive (no outcome is both sum=7 and doubles)."
+  ]
+}

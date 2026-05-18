@@ -1,0 +1,6 @@
+{
+  "title": "GraphQL",
+  "description": "Learn GraphQL fundamentals including schema design, types, queries, mutations, subscriptions, resolvers, DataLoader, authentication, error handling, and federation.",
+  "difficulty": "medium",
+  "order": 6
+}

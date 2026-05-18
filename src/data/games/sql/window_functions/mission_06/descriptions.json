@@ -1,0 +1,3 @@
+{
+  "mission_06": "LEAD() is the counterpart to LAG(), accessing data from a subsequent row. Together, LAG and LEAD enable comprehensive time-series analysis by looking both backward and forward. Common applications include forecasting, trend detection, and calculating forward-looking metrics like next-period growth rates."
+}

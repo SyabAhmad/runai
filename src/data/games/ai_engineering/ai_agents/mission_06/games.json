@@ -1,16 +1,19 @@
 {
-  "title": "ai agents Mission 6",
+  "title": "Agent with Planning",
+  "id": "mission_06",
+  "type": "ai_code",
+  "xpReward": 110,
+  "difficulty": "medium",
   "initialState": {
-    "content": "def solve_mission_6():\n    # TODO: Implement solution for ai_agents mission 6\n    return \"Mission 6 completed\"\\n    # TODO: Complete the implementation"
+    "content": "# Agent Mission 06: Agent with Planning\n#\n# Advanced agents plan before acting. They break\n# complex tasks into steps and execute them.\n#\n# Your goal: Complete the plan_and_execute(task) function.\n# It should:\n#   1. Generate a step-by-step plan from the task\n#   2. Execute each step (simulated via print)\n#   3. Return the plan and result\n#\n# Tools: calculator(expr) for math expressions\n#\n# Example:\n#   Input: \"calc: (2 + 3) * 4\"\n#   Plan:  [\"Parse expression: (2 + 3) * 4\",\n#           \"Evaluate parentheses: 5 * 4\",\n#           \"Multiply: 20\"]\n#   Result: 20\n#   Return: {\"task\": task, \"plan\": [...], \"result\": 20}\n\ndef calculator(expr):\n    return eval(expr)\n\ndef plan_and_execute(task):\n    # TODO: Create a plan (list of step descriptions)\n    #       Execute each step\n    #       Return {\"task\": task, \"plan\": [...], \"result\": result}\n    #\n    # Hints:\n    # - For \"calc:...\" tasks, break the math into logical steps\n    # - For other tasks, create generic steps\n    # - Use calculator() for the final evaluation\n    pass"
   },
   "validation": {
     "type": "ai_code",
     "rules": [
-      "must_include:def",
-      "must_include:return"
+      "must_include:plan",
+      "must_include:return",
+      "must_include:calculator",
+      "must_include:step"
     ]
-  },
-  "id": "mission_06",
-  "type": "ai_code",
-  "xpReward": 110
+  }
 }

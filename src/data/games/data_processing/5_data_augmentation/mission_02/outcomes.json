@@ -1,0 +1,3 @@
+{
+  "mission_02": "Great job! You have mastered geometric augmentation transforms that modify the spatial properties of images. ShiftScaleRotate handles position, size, and orientation changes in a single efficient transform. ElasticTransform creates smooth, organic deformations ideal for medical and biological images. GridDistortion produces realistic warping by displacing grid control points. These geometric augmentations are particularly powerful because they simulate the natural variations that occur when objects are viewed from different angles, distances, and under different conditions. Your models will now be much more robust to spatial variations!"
+}

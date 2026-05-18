@@ -1,0 +1,6 @@
+{
+  "title": "SQL Performance",
+  "description": "Learn SQL performance optimization including table partitioning, materialized views, query caching, and query rewriting techniques.",
+  "difficulty": "hard",
+  "order": 7
+}

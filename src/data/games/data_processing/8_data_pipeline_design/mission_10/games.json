@@ -1,0 +1,21 @@
+{
+  "title": "End-to-End Production Pipeline",
+  "id": "mission_10",
+  "type": "ai_code",
+  "xpReward": 120,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "import numpy as np\nimport pandas as pd\nimport json\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.compose import ColumnTransformer\nfrom sklearn.preprocessing import StandardScaler, OneHotEncoder\nfrom sklearn.impute import SimpleImputer\nfrom sklearn.ensemble import GradientBoostingClassifier\nfrom sklearn.model_selection import train_test_split, cross_val_score\nfrom sklearn.metrics import classification_report\n\n# TODO: Build a complete production-ready ML pipeline that:\n# 1. Handles mixed data types with ColumnTransformer\n# 2. Includes imputation, encoding, and scaling\n# 3. Trains an ensemble classifier\n# 4. Evaluates with cross-validation and test metrics\n# 5. Serializes the pipeline for deployment\n# 6. Generates a comprehensive model report\n# 7. Includes input validation for inference\n\nclass ProductionPipeline:\n    def __init__(self):\n        # TODO: Initialize pipeline components\n        pass\n    \n    def build(self, numeric_cols, categorical_cols):\n        # TODO: Build the full preprocessing + model pipeline\n        pass\n    \n    def train(self, X, y):\n        # TODO: Split data, train, evaluate\n        pass\n    \n    def predict(self, X):\n        # TODO: Validate input and make predictions\n        pass\n    \n    def generate_report(self):\n        # TODO: Generate comprehensive model report\n        pass\n    \n    def save(self, path):\n        # TODO: Serialize the pipeline\n        pass\n\n# TODO: Test the production pipeline end-to-end\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:class ProductionPipeline",
+      "must_include:ColumnTransformer",
+      "must_include:Pipeline",
+      "must_include:cross_val_score",
+      "must_include:classification_report",
+      "must_include:joblib"
+    ]
+  }
+}

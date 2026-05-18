@@ -1,0 +1,3 @@
+{
+  "mission_04": "Counterfactual explanations answer the question: what minimal changes to the input would produce a different model output? They are highly actionable — telling a loan applicant exactly what to change to get approved. In this mission, you implement a search-based counterfactual explainer that perturbs input features with decreasing step sizes, checks if the prediction crosses the decision threshold, and tracks the closest valid counterfactual using a normalized L1 distance metric. The algorithm uses random search with annealing step sizes, ensuring it finds counterfactuals that are both valid (change the prediction) and proximate (minimally different from the original input)."
+}

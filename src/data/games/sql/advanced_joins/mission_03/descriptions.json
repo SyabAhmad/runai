@@ -1,0 +1,3 @@
+{
+  "mission_03": "Self joins are invaluable for tracking changes over time when data is stored in a single table. By joining a table to itself on sequential records, you can compare current values with previous ones. This pattern is commonly used for version tracking, audit trails, and temporal analysis in database systems."
+}

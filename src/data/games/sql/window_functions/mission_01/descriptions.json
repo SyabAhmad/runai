@@ -1,0 +1,3 @@
+{
+  "mission_01": "ROW_NUMBER() is the simplest window function, assigning a unique sequential integer to each row within a partition. Unlike RANK or DENSE_RANK, ROW_NUMBER never produces ties. It's commonly used for pagination, deduplication, and assigning sequential identifiers to ordered result sets."
+}

@@ -1,0 +1,16 @@
+{
+  "mission_01": {
+    "title": "Building Your First DAG",
+    "id": "mission_01",
+    "type": "ai_code",
+    "xpReward": 60,
+    "difficulty": "easy",
+    "initialState": {
+      "content": "import numpy as np\nimport networkx as nx\n\n# TODO: Create a function that builds a directed acyclic graph (DAG)\n# representing causal relationships between variables:\n# X -> Y, X -> Z, Z -> Y\n# The function should return a networkx DiGraph object\n\ndef build_simple_dag():\n    \"\"\"Build a DAG with edges: X->Y, X->Z, Z->Y\"\"\"\n    G = nx.DiGraph()\n    # TODO: Add nodes X, Y, Z\n    # TODO: Add edges X->Y, X->Z, Z->Y\n    # TODO: Verify the graph is acyclic\n    return G\n\n# TODO: Implement a function to check if a given graph is a valid DAG\ndef is_valid_dag(graph):\n    \"\"\"Return True if graph is a DAG (no cycles), False otherwise\"\"\"\n    # TODO: Use networkx to check for cycles\n    pass\n\n# TODO: Implement a function to find all parents of a node\ndef find_parents(graph, node):\n    \"\"\"Return list of parent nodes for the given node\"\"\"\n    # TODO: Use graph.predecessors()\n    pass\n\n# TODO: Implement a function to find all children of a node\ndef find_children(graph, node):\n    \"\"\"Return list of child nodes for the given node\"\"\"\n    # TODO: Use graph.successors()\n    pass\n"
+    },
+    "validation": {
+      "type": "ai_code",
+      "rules": ["must_include:nx.DiGraph", "must_include:add_node", "must_include:add_edge", "must_include:is_directed_acyclic_graph", "must_include:predecessors", "must_include:successors"]
+    }
+  }
+}

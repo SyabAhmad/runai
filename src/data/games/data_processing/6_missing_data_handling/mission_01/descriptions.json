@@ -1,0 +1,3 @@
+{
+  "mission_01": "Mean and median imputation are the simplest and most widely used strategies for handling missing numerical data. Mean imputation replaces missing values with the arithmetic average of observed values, preserving the overall mean of the dataset but potentially underestimating variance. Median imputation uses the middle value, making it robust to outliers and skewed distributions. Both methods are fast, easy to understand, and work well when data is Missing Completely at Random (MCAR). The sklearn SimpleImputer class provides a clean interface for both strategies. While these methods can introduce bias in some scenarios, they remain excellent baselines and are often sufficient when missingness rates are low."
+}

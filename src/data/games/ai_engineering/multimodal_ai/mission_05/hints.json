@@ -1,0 +1,7 @@
+{
+  "mission_05": [
+    "Encode: `embeddings = [encoder(m) for m in modalities]`.",
+    "Cross-attention: `fused = attention(Q=emb1, K=emb2, V=emb2)`.",
+    "Concatenate: `fused = np.concatenate(embeddings, axis=-1)`."
+  ]
+}

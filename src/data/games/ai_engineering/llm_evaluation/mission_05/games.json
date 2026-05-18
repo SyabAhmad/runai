@@ -1,0 +1,20 @@
+{
+  "title": "BERTScore (Embedding-Based Evaluation)",
+  "id": "mission_05",
+  "type": "ai_code",
+  "xpReward": 90,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "# LLM Evaluation Mission 05: BERTScore\n#\n# BERTScore uses contextual embeddings to measure semantic similarity.\n# Unlike n-gram metrics, it captures meaning even with different wording.\n#\n# For each token in generated text, find the most similar token in reference\n# using cosine similarity of BERT embeddings.\n#\n# Your goal: Implement compute_bertscore(generated, reference, embeddings)\n#   1. Get BERT embeddings for both texts\n#   2. Compute cosine similarity matrix\n#   3. Find max similarity for each token (greedy matching)\n#   4. Compute precision, recall, F1\n\nimport numpy as np\n\ndef compute_bertscore(generated, reference, embeddings):\n    # TODO: Get embeddings for both texts\n    # TODO: Compute cosine similarity matrix\n    # TODO: Greedy matching (max sim per token)\n    # TODO: Return P, R, F1\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def compute_bertscore",
+      "must_include:cosine",
+      "must_include:similarity",
+      "must_include:f1",
+      "must_include:return"
+    ]
+  }
+}

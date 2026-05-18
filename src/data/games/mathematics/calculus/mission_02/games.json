@@ -1,0 +1,18 @@
+{
+  "title": "The Chain Rule",
+  "id": "mission_02",
+  "type": "ai_code",
+  "xpReward": 60,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "import numpy as np\n\n# TODO: Define the outer function f(u) = sin(u)\ndef f(u):\n    return None\n\n# TODO: Define the derivative of f: f'(u) = cos(u)\ndef f_prime(u):\n    return None\n\n# TODO: Define the inner function g(x) = x^2 + 1\ndef g(x):\n    return None\n\n# TODO: Define the derivative of g: g'(x) = 2x\ndef g_prime(x):\n    return None\n\n# TODO: The composite function h(x) = f(g(x)) = sin(x^2 + 1)\ndef h(x):\n    return None\n\n# TODO: The derivative h'(x) = f'(g(x)) * g'(x) = cos(x^2 + 1) * 2x\ndef h_prime(x):\n    return None\n\n# TODO: Evaluate everything at x = 1.5\nx0 = 1.5\nu_val = None\nf_of_u = None\ng_val = None\nh_val = None\nh_prime_val = None\n\n# TODO: Verify with numerical differentiation\nh_prime_numerical = None\n\nprint(f\"g({x0}) = {g_val}\")\nprint(f\"f(g({x0})) = {h_val}\")\nprint(f\"h'({x0}) = {h_prime_val}\")\nprint(f\"h'({x0}) numerical = {h_prime_numerical}\")\nprint(f\"Error: {abs(h_prime_val - h_prime_numerical):.2e}\")\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:numpy",
+      "must_include:np.sin",
+      "must_include:np.cos"
+    ]
+  }
+}

@@ -1,0 +1,3 @@
+{
+  "mission_02": "RANK() assigns the same rank to tied values and skips subsequent rank numbers. If two students tie for 1st place, the next student receives rank 3 (not 2). This behavior mirrors Olympic medal rankings and is useful when you need to preserve the ordinal position of tied groups."
+}

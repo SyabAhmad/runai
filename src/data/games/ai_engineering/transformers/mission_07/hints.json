@@ -1,0 +1,7 @@
+{
+  "mission_07": [
+    "Initialize words as character lists: `words = [list(w + \"</w>\") for w in text.split()]`.",
+    "For each merge in merges: find all occurrences of the pair and merge them.",
+    "Use `\" \".join(word)` to convert a character list back to a token string."
+  ]
+}

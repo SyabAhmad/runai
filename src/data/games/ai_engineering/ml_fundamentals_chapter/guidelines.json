@@ -1,0 +1,6 @@
+{
+  "title": "ML Fundamentals",
+  "description": "Master machine learning fundamentals with pandas and scikit-learn. Covers data cleaning, feature engineering, train/test split, model training, evaluation metrics, cross-validation, and pipelines.",
+  "difficulty": "easy",
+  "order": 11
+}

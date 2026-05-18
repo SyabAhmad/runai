@@ -1,0 +1,3 @@
+{
+  "mission_06": "Excellent custom hook skills! You have built five production-quality hooks that encapsulate complex logic into simple APIs. useLocalStorage syncs state with storage, useDebounce prevents excessive API calls, useFetch handles the full data fetching lifecycle, usePrevious enables comparison patterns, and useClickOutside powers dropdown and modal dismissal. Custom hooks are what separate React beginners from professionals — they turn component complexity into reusable, testable logic."
+}

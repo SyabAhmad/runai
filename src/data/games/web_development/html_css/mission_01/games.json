@@ -1,0 +1,24 @@
+{
+  "title": "Semantic HTML Structure",
+  "id": "mission_01",
+  "type": "ai_code",
+  "xpReward": 60,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "<!-- TODO: Replace generic divs with semantic HTML elements -->\n<!-- TODO: Add proper header, nav, main, article, section, aside, footer -->\n<!-- TODO: Use heading hierarchy correctly (h1 through h6) -->\n\n<div class=\"container\">\n  <div class=\"top\">\n    <div class=\"logo\">My Website</div>\n    <div class=\"links\">\n      <div><a href=\"/\">Home</a></div>\n      <div><a href=\"/about\">About</a></div>\n      <div><a href=\"/contact\">Contact</a></div>\n    </div>\n  </div>\n  <div class=\"content\">\n    <div class=\"post\">\n      <div>Understanding Semantic HTML</div>\n      <div>Semantic HTML introduces meaning to web pages...</div>\n    </div>\n    <div class=\"sidebar\">\n      <div>Related Articles</div>\n      <div><a href=\"/css\">CSS Guide</a></div>\n    </div>\n  </div>\n  <div class=\"bottom\">\n    <div>Copyright 2026</div>\n  </div>\n</div>"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:<header>",
+      "must_include:<nav>",
+      "must_include:<main>",
+      "must_include:<article>",
+      "must_include:<section>",
+      "must_include:<aside>",
+      "must_include:<footer>",
+      "must_include:<h1>",
+      "must_include:<h2>"
+    ]
+  }
+}

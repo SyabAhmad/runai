@@ -1,0 +1,1 @@
+{"mission_09": ["Use mi_scores = mutual_info_classif(X, y, random_state=42) to compute MI for all features.", "Rank features with np.argsort(mi_scores)[::-1] for descending order.", "MI captures non-linear relationships that f_classif misses. Compare the two rankings to see the difference."]}

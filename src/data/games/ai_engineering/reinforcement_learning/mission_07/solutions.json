@@ -1,0 +1,3 @@
+{
+  "mission_07": "import numpy as np\n\ndef ppo_update(old_probs, new_probs, advantages, clip_epsilon=0.2):\n    r = new_probs / (old_probs + 1e-8)\n    r_clipped = np.clip(r, 1 - clip_epsilon, 1 + clip_epsilon)\n    surrogate1 = r * advantages\n    surrogate2 = r_clipped * advantages\n    return np.minimum(surrogate1, surrogate2)"
+}

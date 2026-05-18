@@ -1,0 +1,22 @@
+{
+  "mission_01": {
+    "title": "FedAvg: Federated Averaging",
+    "id": "mission_01",
+    "type": "ai_code",
+    "xpReward": 60,
+    "difficulty": "easy",
+    "initialState": {
+      "content": "import numpy as np\n\n\ndef local_training(model, local_data, epochs, lr):\n    \"\"\"Perform local training on a client.\n    \n    TODO: Initialize model with global weights\n    TODO: Run SGD for specified epochs on local data\n    TODO: Return updated model weights\n    \"\"\"\n    # TODO: Copy global weights\n    local_weights = None\n    \n    # TODO: For each epoch, compute gradients and update\n    for epoch in range(epochs):\n        # TODO: Forward pass\n        # TODO: Compute loss\n        # TODO: Backward pass\n        # TODO: Update weights\n        pass\n    \n    return local_weights\n\n\ndef federated_averaging(client_weights, client_sample_sizes):\n    \"\"\"Aggregate client weights using FedAvg.\n    \n    TODO: Compute weighted average of client weights\n    TODO: Weight each client by its sample size\n    TODO: Return aggregated global weights\n    \"\"\"\n    # TODO: Compute total samples\n    total_samples = None\n    \n    # TODO: Weighted average\n    global_weights = {}\n    for key in client_weights[0].keys():\n        # TODO: global_weights[key] = sum(n_k * w_k) / N\n        pass\n    \n    return global_weights\n\n\ndef federated_learning_round(global_weights, clients, data, epochs, lr):\n    \"\"\"One round of federated learning.\n    \n    TODO: Send global weights to all clients\n    TODO: Each client trains locally\n    TODO: Server aggregates using FedAvg\n    \"\"\"\n    client_weights = []\n    sample_sizes = []\n    \n    for client_id, client_data in zip(clients, data):\n        # TODO: Train locally\n        weights = None\n        client_weights.append(weights)\n        sample_sizes.append(len(client_data))\n    \n    # TODO: Aggregate\n    new_global = None\n    return new_global\n"
+    },
+    "validation": {
+      "type": "ai_code",
+      "rules": [
+        "must_include:weighted average",
+        "must_include:local training",
+        "must_include:sample size",
+        "must_include:aggregate",
+        "must_include:SGD"
+      ]
+    }
+  }
+}

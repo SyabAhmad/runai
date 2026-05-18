@@ -1,0 +1,7 @@
+{
+  "mission_04": [
+    "Start with BEGIN to open a transaction block.",
+    "UPDATE the source account to subtract the amount, then UPDATE the destination to add it.",
+    "Use a subquery or check to ensure the source balance is sufficient before committing."
+  ]
+}

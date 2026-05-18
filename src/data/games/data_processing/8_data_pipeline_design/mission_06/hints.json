@@ -1,0 +1,7 @@
+{
+  "mission_06": [
+    "Use joblib.dump(pipeline, 'model.joblib') for efficient sklearn serialization.",
+    "Use pickle.dump(pipeline, file) for standard Python serialization.",
+    "Verify loaded models produce identical predictions using np.array_equal()."
+  ]
+}

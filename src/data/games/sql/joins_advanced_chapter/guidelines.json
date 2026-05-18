@@ -1,0 +1,6 @@
+{
+  "title": "Advanced Joins",
+  "description": "Master advanced SQL join techniques including self joins, cross joins, lateral joins, and complex multi-table joins.",
+  "difficulty": "medium",
+  "order": 2
+}

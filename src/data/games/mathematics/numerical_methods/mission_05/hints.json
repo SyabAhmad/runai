@@ -1,0 +1,7 @@
+{
+  "mission_05": [
+    "Lagrange basis: L_j(x) = product over k!=j of (x - x_k)/(x_j - x_k)",
+    "Divided difference: f[x_i,...,x_{i+j}] = (f[x_{i+1},...,x_{i+j}] - f[x_i,...,x_{i+j-1}]) / (x_{i+j} - x_i)",
+    "Newton's form: P(x) = c[0] + c[1](x-x[0]) + c[2](x-x[0])(x-x[1]) + ..."
+  ]
+}

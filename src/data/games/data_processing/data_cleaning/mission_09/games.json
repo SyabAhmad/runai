@@ -1,47 +1,18 @@
-﻿{
-    "title":  "Data Preprocessing Mission 9: Cross-Validation Baseline",
-    "initialState":  {
-                         "content":  "# TODO: Build and evaluate a baseline model with cross-validation\n\ndef evaluate_baseline_model(X, y):\n    # TODO: create Pipeline with StandardScaler + LogisticRegression(max_iter=1000)\n\n    # TODO: compute cross_val_score with cv=5\n\n    # TODO: return mean score"
-                     },
-    "validation":  {
-                       "rules":  [
-                                     "must_include:def evaluate_baseline_model",
-                                     "must_include:Pipeline",
-                                     "must_include:cross_val_score",
-                                     "must_include:cv=5",
-                                     "must_include:return"
-                                 ],
-                       "tests":  [
-                                     {
-                                         "type":  "must_match",
-                                         "name":  "function signature",
-                                         "pattern":  "def\\s+evaluate_baseline_model\\s*\\(\\s*X\\s*,\\s*y\\s*\\)",
-                                         "message":  "Define evaluate_baseline_model(X, y)."
-                                     },
-                                     {
-                                         "type":  "must_include_all",
-                                         "name":  "model stack",
-                                         "values":  [
-                                                        "Pipeline",
-                                                        "StandardScaler",
-                                                        "LogisticRegression",
-                                                        "cross_val_score"
-                                                    ],
-                                         "message":  "Use Pipeline, StandardScaler, LogisticRegression, and cross_val_score."
-                                     },
-                                     {
-                                         "type":  "must_include_any",
-                                         "name":  "mean score",
-                                         "values":  [
-                                                        "np.mean",
-                                                        "scores.mean()"
-                                                    ],
-                                         "message":  "Return the mean cross-validation score."
-                                     }
-                                 ],
-                       "type":  "ai_code"
-                   },
-    "id":  "mission_09",
-    "type":  "ai_code",
-    "xpReward":  100
+{
+  "title": "Clean and Validate Email Addresses",
+  "id": "mission_09",
+  "type": "ai_code",
+  "xpReward": 110,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "import pandas as pd\nimport re\n\n# TODO: Create a DataFrame with messy email data\ndata = {\n    'user': ['Alice', 'Bob', 'Charlie', 'Diana', 'Eve', 'Frank', 'Grace'],\n    'email': [\n        'alice@email.com',\n        '  BOB@EMAIL.COM  ',\n        'charlie@email',\n        'diana@@email.com',\n        'eve@email.com; frank@email.com',\n        'not-an-email',\n        'grace@email.co.uk'\n    ]\n}\ndf = pd.DataFrame(data)\n\n# TODO: Strip whitespace and lowercase\ndf['email'] = ...\n\n# TODO: Define email validation regex\nemail_pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$'\n\n# TODO: Validate and flag invalid emails\ndf['is_valid'] = ...\n\n# TODO: Split multiple emails and keep only valid ones\ndef extract_valid_email(email):\n    emails = email.split(';')\n    for e in emails:\n        e = e.strip()\n        if re.match(email_pattern, e):\n            return e\n    return None\n\ndf['clean_email'] = ...\n\nprint(df[['user', 'email', 'is_valid', 'clean_email']])\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:re.match",
+      "must_include:email_pattern",
+      "must_include:str.strip"
+    ]
+  }
 }

@@ -1,0 +1,16 @@
+{
+  "mission_02": {
+    "title": "Implementing Do-Calculus Rules",
+    "id": "mission_02",
+    "type": "ai_code",
+    "xpReward": 65,
+    "difficulty": "easy",
+    "initialState": {
+      "content": "import numpy as np\nimport networkx as nx\n\n# TODO: Implement the three rules of do-calculus\n# Rule 1: Insertion/deletion of observations\n# P(y | do(x), z, w) = P(y | do(x), w) if Y ⊥ Z | X, W in G_do(x)\n\ndef rule1_independence_check(graph, Y, X, Z, W):\n    \"\"\"Check if Rule 1 of do-calculus applies: Y ⊥ Z | X, W in G_{do(X)}\"\"\"\n    # TODO: Create G_do(X) by removing incoming edges to X\n    # TODO: Check d-separation between Y and Z given {X} ∪ W\n    pass\n\n# TODO: Rule 2: Action/observation exchange\n# P(y | do(x), do(z), w) = P(y | do(x), z, w) if Y ⊥ Z | X, W in G_do(x,z)\n\ndef rule2_independence_check(graph, Y, X, Z, W):\n    \"\"\"Check if Rule 2 of do-calculus applies\"\"\"\n    # TODO: Create G_do(X,Z) by removing incoming edges to X and Z\n    # TODO: Check d-separation\n    pass\n\n# TODO: Rule 3: Insertion/deletion of actions\n# P(y | do(x), do(z), w) = P(y | do(x), w) if Y ⊥ Z | X, W in G_do(x), Z(W)\n\ndef rule3_independence_check(graph, Y, X, Z, W):\n    \"\"\"Check if Rule 3 of do-calculus applies\"\"\"\n    # TODO: Create G_do(X) and check d-separation with appropriate modifications\n    pass\n\n# TODO: Implement d-separation check\ndef is_d_separated(graph, X, Y, Z):\n    \"\"\"Check if X and Y are d-separated given Z in the graph\"\"\"\n    # TODO: Use networkx d-separation or implement manually\n    pass\n"
+    },
+    "validation": {
+      "type": "ai_code",
+      "rules": ["must_include:d_separated", "must_include:do-calculus", "must_include:DiGraph", "must_include:copy"]
+    }
+  }
+}

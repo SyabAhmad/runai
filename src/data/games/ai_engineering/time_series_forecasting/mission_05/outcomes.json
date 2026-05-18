@@ -1,0 +1,3 @@
+{
+  "mission_05": "Great work on implementing seasonal decomposition! You now have the tools to dissect any time series into its fundamental building blocks. The moving average provides a smooth estimate of the underlying trend by filtering out high-frequency noise and seasonal fluctuations. By averaging detrended values at each seasonal position, you extract the repeating pattern that characterizes the seasonal component. The residual reveals what remains after accounting for systematic patterns, which is valuable for identifying anomalies or assessing model fit. Understanding whether your series follows an additive or multiplicative structure is crucial for choosing appropriate forecasting methods, as many models assume one decomposition form or the other."
+}

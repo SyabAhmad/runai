@@ -1,7 +1,7 @@
 {
   "mission_10": [
-    "Think about the core concepts",
-    "Consider best practices",
-    "Use appropriate tools"
+    "Increment call_count at the start: `call_count[0] += 1`, then append to log with `log.append({\"time\": \"now\", \"task\": task})`.",
+    "Wrap the command routing in a single large try/except Exception block to catch everything.",
+    "Build helpers: handle_calc(task), handle_weather(task), handle_memory(task, memory) to keep the main function clean."
   ]
 }

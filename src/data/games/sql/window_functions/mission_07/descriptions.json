@@ -1,0 +1,3 @@
+{
+  "mission_07": "Running totals use SUM() with an ORDER BY in the OVER clause, which creates a cumulative sum from the first row to the current row. The default frame is RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW. Adding explicit ROWS BETWEEN clauses gives you precise control over the window frame for moving averages and other calculations."
+}

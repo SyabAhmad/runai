@@ -1,0 +1,3 @@
+{
+  "mission_05": "import numpy as np\n\nA = np.array([[1, 2, 3],\n              [4, 5, 6],\n              [7, 8, 9],\n              [10, 11, 12]])\n\nU, s, Vt = np.linalg.svd(A, full_matrices=False)\n\nS_matrix = np.diag(s)\nA_reconstructed = U @ S_matrix @ Vt\n\nrank = np.sum(s > 1e-10)\n\nnon_zero_s = s[s > 1e-10]\ncondition_number = non_zero_s[0] / non_zero_s[-1]\n\nk = 2\nU_k = U[:, :k]\nS_k = np.diag(s[:k])\nVt_k = Vt[:k, :]\nA_approx = U_k @ S_k @ Vt_k\n\nerror = np.linalg.norm(A - A_approx, 'fro')\n\nprint(f\"Singular values: {s}\")\nprint(f\"Rank: {rank}\")\nprint(f\"Condition number: {condition_number:.4f}\")\nprint(f\"Reconstruction error: {np.max(np.abs(A - A_reconstructed)):.2e}\")\nprint(f\"Rank-{k} approximation error: {error:.4f}\")\n"
+}

@@ -1,0 +1,18 @@
+{
+  "title": "Covariance and Correlation",
+  "id": "mission_06",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import numpy as np\n\n# TODO: Generate correlated data\nnp.random.seed(42)\nn = 1000\n\n# X ~ Normal(0, 1)\nX = None\n\n# Y = 0.7*X + 0.71*Z where Z ~ Normal(0, 1) independent\n# This gives correlation approximately 0.7\nZ = None\nY = None\n\n# TODO: Compute the covariance matrix\ncov_matrix = None\n\n# TODO: Extract Cov(X, Y)\ncov_XY = None\n\n# TODO: Compute the correlation matrix\ncorr_matrix = None\n\n# TODO: Extract correlation coefficient\ncorr_XY = None\n\n# TODO: Verify: corr(X,Y) = Cov(X,Y) / (std(X) * std(Y))\nmanual_corr = None\n\n# TODO: Create a third variable W = -2*X + 3\nW = None\n\n# TODO: Compute Cov(X, W) and corr(X, W)\ncov_XW = None\ncorr_XW = None\n\n# TODO: Verify that corr(X, Y+Z) where Z is independent\ncov_X_YplusZ = None\ncorr_X_YplusZ = None\n\nprint(f\"Covariance matrix:\\n{cov_matrix}\")\nprint(f\"Cov(X, Y) = {cov_XY:.4f}\")\nprint(f\"Corr(X, Y) = {corr_XY:.4f}\")\nprint(f\"Manual correlation: {manual_corr:.4f}\")\nprint(f\"Cov(X, W) = {cov_XW:.4f}, Corr(X, W) = {corr_XW:.4f}\")\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:numpy",
+      "must_include:np.cov",
+      "must_include:np.corrcoef"
+    ]
+  }
+}

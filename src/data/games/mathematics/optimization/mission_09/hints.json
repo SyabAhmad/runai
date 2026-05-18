@@ -1,0 +1,7 @@
+{
+  "mission_09": [
+    "The Newton step solves: H @ delta = -grad, so delta = np.linalg.solve(H, -grad)",
+    "If the Hessian has negative eigenvalues, add regularization: H_reg = H + (|min_eig| + epsilon) * I",
+    "Newton's method converges quadratically near the optimum but may diverge far from it"
+  ]
+}

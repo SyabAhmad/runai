@@ -1,0 +1,7 @@
+{
+  "mission_09": [
+    "Check unexplored: `if len(node.explored_actions) < len(node.available_actions): return None`.",
+    "UCB1: `ucb = q + exploration_c * np.sqrt(np.log(total_visits) / action_visits)`.",
+    "Return `max(ucb_scores, key=lambda x: x[1])[0]`."
+  ]
+}

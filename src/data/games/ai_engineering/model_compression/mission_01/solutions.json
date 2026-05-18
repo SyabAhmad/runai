@@ -1,0 +1,3 @@
+{
+  "mission_01": "import numpy as np\n\ndef magnitude_pruning(weights, sparsity=0.5):\n    flat = np.abs(weights.flatten())\n    threshold = np.percentile(flat, sparsity * 100)\n    mask = np.abs(weights) > threshold\n    pruned = weights * mask\n    actual_sparsity = 1 - np.count_nonzero(pruned) / pruned.size\n    return pruned, mask, actual_sparsity"
+}

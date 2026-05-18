@@ -1,0 +1,7 @@
+{
+  "mission_07": [
+    "Sample lambda from Beta(alpha, alpha) to determine the patch size ratio.",
+    "Use np.random.randint to generate random bounding box coordinates for the cut region.",
+    "The mixed label is lambda * label1 + (1 - lambda) * label2 based on area proportion."
+  ]
+}

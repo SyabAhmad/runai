@@ -1,0 +1,9 @@
+{
+  "mission_08": [
+    "Basis encoding: state[x_int] = 1.0 where x_int = int(np.clip(x[0], 0, dim-1)).",
+    "Dense angle: apply RY(x[2*q]*pi) then RZ(x[2*q+1]*pi) for each qubit.",
+    "Tree tensor: apply CNOT(q, q+stride) with doubling stride at each level.",
+    "Hamiltonian: build H with Z and ZZ terms, then U = V @ diag(exp(-i*lambda*t)) @ V^dagger.",
+    "Apply evolution: state = U @ state where U = eigenvectors @ diag(exp(-1j*eigenvalues*t)) @ eigenvectors.conj().T."
+  ]
+}

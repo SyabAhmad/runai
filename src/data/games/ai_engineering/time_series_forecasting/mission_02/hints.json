@@ -1,0 +1,7 @@
+{
+  "mission_02": [
+    "The yearly seasonality component uses sin(2*pi*t/365.25) to capture annual cycles in the data.",
+    "Changepoints are locations where the trend slope can change; use np.linspace to place them evenly across the time range.",
+    "Build the design matrix by stacking the base trend, time, and changepoint adjustment columns using np.column_stack, then solve with np.linalg.lstsq."
+  ]
+}

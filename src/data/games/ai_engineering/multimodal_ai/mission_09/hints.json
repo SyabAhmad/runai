@@ -1,0 +1,7 @@
+{
+  "mission_09": [
+    "Text: `text_embed = clip_encoder(prompt)`.",
+    "Noise: `z = np.random.randn(1, 4, 64, 64)`.",
+    "Guided diffusion: `eps = eps_uncond + 7.5 * (eps_cond - eps_uncond)`, apply DDIM step."
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "mission_02": {
+    "title": "Prototypical Networks for Few-Shot Classification",
+    "id": "mission_02",
+    "type": "ai_code",
+    "xpReward": 65,
+    "difficulty": "easy",
+    "initialState": {
+      "content": "import numpy as np\nfrom scipy.spatial.distance import cdist\n\n# TODO: Implement prototype computation\ndef compute_prototypes(embeddings, labels, n_classes):\n    \"\"\"Compute class prototypes as mean of embedded support examples.\n    \n    c_k = (1/|S_k|) * Σ_{(x_i, y_i) ∈ S_k} f_θ(x_i)\n    \"\"\"\n    # TODO: For each class, compute mean embedding\n    # TODO: Return prototype matrix (n_classes, embedding_dim)\n    pass\n\n# TODO: Implement prototype-based classification\ndef classify_with_prototypes(query_embeddings, prototypes):\n    \"\"\"Classify query points by distance to prototypes.\n    \n    p(y=k|x) = exp(-d(f_θ(x), c_k)) / Σ_{k'} exp(-d(f_θ(x), c_{k'}))\n    \"\"\"\n    # TODO: Compute distances from queries to each prototype\n    # TODO: Apply softmax over negative distances\n    # TODO: Return predicted classes and probabilities\n    pass\n\n# TODO: Implement N-way K-shot episode sampling\ndef sample_episode(X, y, n_way=5, k_shot=5, n_query=15):\n    \"\"\"Sample an N-way K-shot classification episode.\n    \n    Returns support and query sets with N classes, K support and Q query per class.\n    \"\"\"\n    # TODO: Randomly select N classes\n    # TODO: For each class, sample K support and Q query examples\n    # TODO: Return support_x, support_y, query_x, query_y\n    pass\n\n# TODO: Implement the training loss for prototypical networks\ndef proto_loss(query_embeddings, query_labels, prototypes, n_classes):\n    \"\"\"Compute cross-entropy loss over prototype distances.\"\"\"\n    # TODO: Compute distances and softmax probabilities\n    # TODO: Compute cross-entropy loss\n    pass\n"
+    },
+    "validation": {
+      "type": "ai_code",
+      "rules": ["must_include:prototype", "must_include:cdist", "must_include:softmax", "must_include:N-way", "must_include:K-shot"]
+    }
+  }
+}

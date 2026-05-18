@@ -1,3 +1,3 @@
-﻿{
-    "mission_04":  "Good work. Numerical features are now standardized."
+{
+  "mission_04": "Congratulations! You've learned essential missing value handling techniques in pandas. By using fillna() with median for numerical columns and mode for categorical columns, you can intelligently impute missing data while preserving the statistical properties of your dataset. These imputation strategies are fundamental to preparing data for machine learning models, which typically cannot handle NaN values. You now understand the trade-offs between different imputation methods and when to apply each one."
 }

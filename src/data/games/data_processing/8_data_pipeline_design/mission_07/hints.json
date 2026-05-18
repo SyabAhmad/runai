@@ -1,0 +1,7 @@
+{
+  "mission_07": [
+    "Store fitted pipelines in a dictionary keyed by feature name.",
+    "Track metadata (description, version, creation date) for each feature.",
+    "Use json.dumps() to export the feature store specification."
+  ]
+}

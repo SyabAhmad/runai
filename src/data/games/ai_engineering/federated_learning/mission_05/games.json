@@ -1,0 +1,22 @@
+{
+  "mission_05": {
+    "title": "FedProx: Proximal Federated Optimization",
+    "id": "mission_05",
+    "type": "ai_code",
+    "xpReward": 80,
+    "difficulty": "medium",
+    "initialState": {
+      "content": "import numpy as np\n\n\nclass FedProx:\n    \"\"\"FedProx: Federated Optimization with Proximal Term.\n    \n    TODO: Implement proximal term in local objective\n    TODO: Handle system heterogeneity with variable local epochs\n    TODO: Implement adaptive proximal coefficient\n    \"\"\"\n    \n    def __init__(self, mu=0.01):\n        self.mu = mu  # Proximal coefficient\n    \n    def local_train_prox(self, global_w, local_data, epochs, lr):\n        \"\"\"Local training with proximal term.\n        \n        TODO: Initialize local weights from global\n        TODO: For each epoch, compute proximal loss\n        TODO: Proximal term: mu/2 * ||w - w_global||^2\n        TODO: Update with combined gradient\n        \"\"\"\n        local_w = {k: v.copy() for k, v in global_w.items()}\n        \n        for epoch in range(epochs):\n            X, y = local_data\n            # TODO: Forward pass and data loss\n            # TODO: Proximal gradient: mu * (local_w - global_w)\n            # TODO: Update weights\n            pass\n        \n        return local_w\n    \n    def heterogeneous_train(self, global_w, client_data_list, lr):\n        \"\"\"Handle system heterogeneity with variable epochs.\n        \n        TODO: Each client trains for different number of epochs\n        TODO: Faster clients do more local work\n        TODO: Proximal term prevents divergence\n        \"\"\"\n        client_weights = []\n        for i, data in enumerate(client_data_list):\n            # TODO: Variable epochs based on client speed\n            epochs = np.random.randint(1, 5)\n            w = self.local_train_prox(global_w, data, epochs, lr)\n            client_weights.append(w)\n        return client_weights\n    \n    def aggregate(self, client_weights, sample_sizes):\n        \"\"\"FedProx aggregation (same as FedAvg).\"\"\"\n        total = sum(sample_sizes)\n        global_w = {}\n        for key in client_weights[0].keys():\n            global_w[key] = sum(\n                n * w[key] for n, w in zip(sample_sizes, client_weights)\n            ) / total\n        return global_w\n"
+    },
+    "validation": {
+      "type": "ai_code",
+      "rules": [
+        "must_include:proximal",
+        "must_include:heterogeneity",
+        "must_include:mu",
+        "must_include:local epochs",
+        "must_include:divergence"
+      ]
+    }
+  }
+}

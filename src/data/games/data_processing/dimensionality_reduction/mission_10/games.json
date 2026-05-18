@@ -1,0 +1,19 @@
+{
+  "title": "Complete Dimensionality Reduction Pipeline",
+  "id": "mission_10",
+  "type": "ai_code",
+  "xpReward": 120,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "import pandas as pd\nimport numpy as np\nfrom sklearn.decomposition import PCA\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.feature_selection import SelectKBest, f_classif\nfrom sklearn.datasets import load_wine\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.ensemble import RandomForestClassifier\n\n# TODO: Load dataset\nwine = load_wine()\nX = wine.data\ny = wine.target\n\n# TODO: Split data\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)\n\n# TODO: Step 1 - Standardize\nscaler = StandardScaler()\nX_train_scaled = scaler.fit_transform(X_train)\nX_test_scaled = scaler.transform(X_test)\n\n# TODO: Step 2 - Feature selection\nselector = SelectKBest(score_func=f_classif, k=8)\nX_train_selected = selector.fit_transform(X_train_scaled, y_train)\nX_test_selected = selector.transform(X_test_scaled)\n\n# TODO: Step 3 - PCA\npca = PCA(n_components=3)\nX_train_pca = pca.fit_transform(X_train_selected)\nX_test_pca = pca.transform(X_test_selected)\n\n# TODO: Train model and compare\nmodel = RandomForestClassifier(random_state=42)\nmodel.fit(X_train_pca, y_train)\naccuracy = model.score(X_test_pca, y_test)\n\nprint(f\"Original features: {X.shape[1]}\")\nprint(f\"After selection: {X_train_selected.shape[1]}\")\nprint(f\"After PCA: {X_train_pca.shape[1]}\")\nprint(f\"Accuracy: {accuracy:.4f}\")\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:StandardScaler",
+      "must_include:SelectKBest",
+      "must_include:PCA",
+      "must_include:train_test_split"
+    ]
+  }
+}

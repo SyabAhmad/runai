@@ -1,0 +1,18 @@
+{
+  "title": "Source Coding Theorem",
+  "id": "mission_07",
+  "type": "ai_code",
+  "xpReward": 90,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import numpy as np\n\ndef shannon_fano_encoding(symbols, probabilities):\n    \"\"\"\n    Implement Shannon-Fano encoding (precursor to Huffman coding)\n    symbols: list of symbols\n    probabilities: list of probabilities\n    Returns: dict mapping symbols to binary codewords\n    \"\"\"\n    # TODO: Sort symbols by probability (descending)\n    sorted_items = sorted(zip(symbols, probabilities), key=lambda x: -x[1])\n    \n    def split(items):\n        if len(items) == 1:\n            return {items[0][0]: ''}\n        \n        # TODO: Find split point that minimizes probability difference\n        total = sum(p for _, p in items)\n        best_split = 1\n        best_diff = float('inf')\n        for i in range(1, len(items)):\n            left_sum = sum(p for _, p in items[:i])\n            diff = abs(2 * left_sum - total)\n            if diff < best_diff:\n                best_diff = diff\n                best_split = i\n        \n        # TODO: Recursively split and prepend '0'/'1'\n        codes = {}\n        left_codes = split(items[:best_split])\n        right_codes = split(items[best_split:])\n        for sym, code in left_codes.items():\n            codes[sym] = '0' + code\n        for sym, code in right_codes.items():\n            codes[sym] = '1' + code\n        return codes\n    \n    return split(sorted_items)\n\ndef kraft_inequality(code_lengths):\n    \"\"\"\n    Verify Kraft's inequality: sum(2^(-l_i)) <= 1 for prefix-free codes\n    code_lengths: list of codeword lengths\n    \"\"\"\n    # TODO: Compute Kraft sum\n    kraft_sum = ...\n    \n    return kraft_sum <= 1.0 + 1e-10, kraft_sum\n\ndef source_coding_bound(probabilities):\n    \"\"\"\n    Compute bounds from source coding theorem\n    H(X) <= L < H(X) + 1\n    \"\"\"\n    p = np.array(probabilities)\n    p = p[p > 0]\n    entropy = -np.sum(p * np.log2(p))\n    \n    # TODO: Compute optimal code lengths l_i = ceil(-log2(p_i))\n    optimal_lengths = ...\n    avg_length = ...\n    \n    return {'entropy': entropy, 'lower_bound': entropy, 'upper_bound': entropy + 1, 'avg_length': avg_length}\n\n# Test Shannon-Fano\nsymbols = ['A', 'B', 'C', 'D', 'E']\nprobs = [0.35, 0.25, 0.20, 0.15, 0.05]\ncodes = shannon_fano_encoding(symbols, probs)\nprint(f\"Shannon-Fano codes: {codes}\")\n\n# Test Kraft inequality\nlengths = [len(c) for c in codes.values()]\nis_valid, k_sum = kraft_inequality(lengths)\nprint(f\"Kraft inequality satisfied: {is_valid} (sum = {k_sum:.4f})\")"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:shannon_fano",
+      "must_include:kraft",
+      "must_include:numpy"
+    ]
+  }
+}

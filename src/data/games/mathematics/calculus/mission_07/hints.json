@@ -1,0 +1,10 @@
+{
+  "mission_07": [
+    "Find critical points by solving f'(x) = 0 using np.roots().",
+    "The second derivative test: f'' > 0 means min, f'' < 0 means max.",
+    "Use scipy.optimize.minimize() with method='BFGS' for multivariate optimization.",
+    "The Rosenbrock function: (1-x[0])^2 + 100*(x[1]-x[0]^2)^2.",
+    "The global minimum of Rosenbrock is at (1, 1) with value 0.",
+    "Provide the gradient (jac) to scipy.optimize.minimize for faster convergence."
+  ]
+}

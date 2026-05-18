@@ -1,0 +1,7 @@
+{
+  "mission_05": [
+    "For the inner loop, copy params and run standard SGD: for each step, compute loss, compute gradients, update: W = W - inner_lr * dL/dW. Return the final adapted params.",
+    "For the meta-update, compute the difference: delta = adapted_params - initial_params. Then update: new_params = initial_params + meta_lr * delta. This is much simpler than MAML's gradient-of-gradients.",
+    "For the full training loop, sample a task, run inner loop SGD, compute the direction (adapted - initial), and accumulate directions across tasks. Average the directions and apply the meta-update. Reptile approximates MAML when inner_lr is small."
+  ]
+}

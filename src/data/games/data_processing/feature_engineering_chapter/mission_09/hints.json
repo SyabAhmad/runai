@@ -1,4 +1,4 @@
-﻿{
+{
     "mission_09":  [
                        "Use Pipeline from sklearn.pipeline.",
                        "Use SimpleImputer then StandardScaler.",

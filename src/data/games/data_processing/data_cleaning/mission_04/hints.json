@@ -1,7 +1,7 @@
-﻿{
-    "mission_04":  [
-                       "Import StandardScaler from sklearn.preprocessing.",
-                       "Assign scaled values back to df[numeric_cols].",
-                       "Return the DataFrame after scaling."
-                   ]
+{
+  "mission_04": [
+    "Use df['column'].fillna(df['column'].median()) for numeric imputation",
+    "Use df['column'].fillna(df['column'].mode()[0]) for categorical imputation",
+    "Check missing values with df.isnull().sum() before and after filling"
+  ]
 }

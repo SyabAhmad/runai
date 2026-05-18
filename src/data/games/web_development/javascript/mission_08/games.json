@@ -1,0 +1,22 @@
+{
+  "title": "DOM Manipulation",
+  "id": "mission_08",
+  "type": "ai_code",
+  "xpReward": 100,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "// TODO: Select, create, modify, and remove DOM elements\n// TODO: Build a dynamic todo list application\n// TODO: Implement DOM traversal and manipulation\n\n// TODO: Create a TodoList class\nclass TodoList {\n  constructor(containerId) {\n    // TODO: Store reference to container element\n    // TODO: Initialize todos array\n    // TODO: Render initial state\n  }\n\n  // TODO: Add a new todo item\n  addTodo(text) {\n    // TODO: Create todo object with id, text, completed\n    // TODO: Add to array and re-render\n  }\n\n  // TODO: Toggle todo completion\n  toggleTodo(id) {\n    // TODO: Find todo by id and toggle completed\n    // TODO: Update DOM to reflect change\n  }\n\n  // TODO: Delete a todo\n  deleteTodo(id) {\n    // TODO: Remove from array and update DOM\n  }\n\n  // TODO: Render the todo list\n  render() {\n    // TODO: Clear container\n    // TODO: Create input field and add button\n    // TODO: Create list items for each todo\n    // TODO: Add event listeners to toggle and delete buttons\n  }\n\n  // TODO: Create a DOM element with attributes\n  createElement(tag, attributes = {}, children = []) {\n    // TODO: Create element, set attributes, append children\n    // TODO: Return the element\n  }\n}"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:document.createElement",
+      "must_include:document.querySelector",
+      "must_include:.appendChild",
+      "must_include:.addEventListener",
+      "must_include:.innerHTML",
+      "must_include:.classList",
+      "must_include:class"
+    ]
+  }
+}

@@ -1,0 +1,3 @@
+{
+  "mission_02": "Matrices are rectangular arrays of numbers that represent linear transformations. In this mission, you will create matrices, perform addition, matrix multiplication (which is NOT element-wise), transposition, and inversion. Matrix multiplication combines rows of the first matrix with columns of the second. The transpose flips a matrix over its diagonal. The inverse of a matrix A satisfies A @ A_inv = I (identity). These operations are fundamental to solving systems of linear equations and transforming data in machine learning."
+}

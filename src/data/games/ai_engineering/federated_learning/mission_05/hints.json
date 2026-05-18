@@ -1,0 +1,7 @@
+{
+  "mission_05": [
+    "The proximal loss adds mu/2 * sum(||local_w[k] - global_w[k]||^2) to the data loss for each weight matrix k",
+    "The proximal gradient is mu * (local_w[k] - global_w[k]). Add this to the data gradient: w -= lr * (data_grad + prox_grad)",
+    "For heterogeneous training, assign different epoch counts to different clients (e.g., random 1-5 epochs). The proximal term prevents divergence despite different amounts of local work"
+  ]
+}

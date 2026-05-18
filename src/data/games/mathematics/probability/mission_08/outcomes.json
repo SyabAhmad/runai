@@ -1,0 +1,3 @@
+{
+  "mission_08": "Impressive! You have demonstrated the Law of Large Numbers by simulating 100,000 coin flips. The running average converges toward 0.5, and the error decreases as sample size increases. Chebyshev's inequality gives a conservative bound (0.25) on the probability of deviation, while the empirical probability is much smaller. The LLN is the mathematical justification for using sample statistics to estimate population parameters. In machine learning, it justifies minimizing empirical risk (training loss) as a proxy for minimizing expected risk (true generalization error)."
+}

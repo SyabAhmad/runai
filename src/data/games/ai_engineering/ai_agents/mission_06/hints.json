@@ -1,7 +1,7 @@
 {
   "mission_06": [
-    "Think about the core concepts",
-    "Consider best practices",
-    "Use appropriate tools"
+    "Start by creating an empty list for the plan, then append step descriptions as strings.",
+    "For calc tasks: step 1 = \"Parse expression\", step 2 = \"Evaluate\", step 3 = \"Return result\".",
+    "Use `print(f\"[Plan] {step}\")` for each step, then call calculator() and return the structured result."
   ]
 }

@@ -1,0 +1,3 @@
+{
+  "mission_07": "React Router enables client-side navigation in single-page applications. BrowserRouter wraps your app, Routes defines the route tree, and Route maps paths to components. Dynamic routes use :param syntax (e.g., /users/:id) and useParams extracts the values. useNavigate enables programmatic navigation, useLocation provides the current URL, and Link creates navigation links without full page reloads. Protected routes check authentication and redirect unauthenticated users. This mission covers the complete routing patterns used in production React applications."
+}

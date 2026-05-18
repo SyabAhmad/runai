@@ -1,0 +1,6 @@
+{
+  "title": "Feature Engineering",
+  "description": "Master feature engineering techniques including encoding, binning, polynomial features, target encoding, and feature interactions.",
+  "difficulty": "medium",
+  "order": 3
+}

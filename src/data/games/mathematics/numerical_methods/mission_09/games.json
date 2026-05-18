@@ -1,0 +1,18 @@
+{
+  "title": "ODE Solvers",
+  "id": "mission_09",
+  "type": "ai_code",
+  "xpReward": 110,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "import numpy as np\n\ndef euler_method(f, y0, t_span, n_steps):\n    \"\"\"\n    Solve ODE dy/dt = f(t, y) using Euler's method\n    y_{n+1} = y_n + h * f(t_n, y_n)\n    \"\"\"\n    t = np.linspace(t_span[0], t_span[1], n_steps + 1)\n    h = t[1] - t[0]\n    y = np.zeros((n_steps + 1, len(y0)))\n    y[0] = y0\n    \n    for i in range(n_steps):\n        # TODO: Euler update\n        y[i+1] = ...\n    \n    return t, y\n\n\ndef runge_kutta_4(f, y0, t_span, n_steps):\n    \"\"\"\n    Solve ODE using classical 4th-order Runge-Kutta method\n    k1 = h*f(t_n, y_n)\n    k2 = h*f(t_n + h/2, y_n + k1/2)\n    k3 = h*f(t_n + h/2, y_n + k2/2)\n    k4 = h*f(t_n + h, y_n + k3)\n    y_{n+1} = y_n + (k1 + 2*k2 + 2*k3 + k4) / 6\n    \"\"\"\n    t = np.linspace(t_span[0], t_span[1], n_steps + 1)\n    h = t[1] - t[0]\n    y = np.zeros((n_steps + 1, len(y0)))\n    y[0] = y0\n    \n    for i in range(n_steps):\n        # TODO: Compute RK4 stages\n        k1 = ...\n        k2 = ...\n        k3 = ...\n        k4 = ...\n        \n        # TODO: Update\n        y[i+1] = ...\n    \n    return t, y\n\ndef runge_kutta_fehlberg(f, y0, t_span, tol=1e-6, h_init=0.1):\n    \"\"\"\n    Adaptive RK45 (Runge-Kutta-Fehlberg) with step size control\n    \"\"\"\n    t = [t_span[0]]\n    y = [y0.copy()]\n    h = h_init\n    \n    while t[-1] < t_span[1]:\n        if t[-1] + h > t_span[1]:\n            h = t_span[1] - t[-1]\n        \n        # TODO: Compute RK45 coefficients\n        tn, yn = t[-1], y[-1]\n        k1 = h * f(tn, yn)\n        k2 = h * f(tn + h/4, yn + k1/4)\n        k3 = h * f(tn + 3*h/8, yn + 3*k1/32 + 9*k2/32)\n        k4 = h * f(tn + 12*h/13, yn + 1932*k1/2197 - 7200*k2/2197 + 7296*k3/2197)\n        k5 = h * f(tn + h, yn + 439*k1/216 - 8*k2 + 3680*k3/513 - 845*k4/4104)\n        k6 = h * f(tn + h/2, yn - 8*k1/27 + 2*k2 - 3544*k3/2565 + 1859*k4/4104 - 11*k5/40)\n        \n        # TODO: 4th and 5th order solutions\n        y4 = yn + 25*k1/216 + 1408*k3/2565 + 2197*k4/4104 - k5/5\n        y5 = yn + 16*k1/135 + 6656*k3/12825 + 28561*k4/56430 - 9*k5/50 + 2*k6/55\n        \n        # TODO: Error estimate and step size control\n        error = np.linalg.norm(y5 - y4)\n        if error < tol:\n            t.append(tn + h)\n            y.append(y5)\n        \n        # Adjust step size\n        h = h * min(2.0, max(0.1, 0.9 * (tol / error)**0.2))\n    \n    return np.array(t), np.array(y)\n\n# Test: dy/dt = -2y, y(0) = 1, exact: y = e^(-2t)\ndef f(t, y):\n    return np.array([-2 * y[0]])\n\ny0 = np.array([1.0])\nt, y = runge_kutta_4(f, y0, (0, 1), 10)\nprint(f\"RK4 at t=1: {y[-1,0]:.6f}\")\nprint(f\"Exact: {np.exp(-2):.6f}\")"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:runge_kutta",
+      "must_include:euler",
+      "must_include:numpy"
+    ]
+  }
+}

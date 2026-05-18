@@ -1,0 +1,18 @@
+{
+  "title": "Random Variables",
+  "id": "mission_03",
+  "type": "ai_code",
+  "xpReward": 70,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "import numpy as np\n\n# TODO: Simulate rolling a fair die 10000 times\nnp.random.seed(42)\nrolls = None\n\n# TODO: Compute the empirical PMF (probability mass function)\n# Count frequency of each outcome (1-6)\npmf = None\n\n# TODO: Compute the expected value E[X] = sum(x * P(X=x))\nexpected_value = None\n\n# TODO: Compute the theoretical expected value: (1+2+3+4+5+6)/6\ntheoretical_expected = None\n\n# TODO: Compute the variance: Var(X) = E[X^2] - (E[X])^2\nexpected_x_squared = None\nvariance = None\ntheoretical_variance = None\n\n# TODO: Define a transformed random variable Y = 2*X + 1\n# Compute E[Y] and Var(Y)\n# E[Y] = 2*E[X] + 1, Var(Y) = 4*Var(X)\nexpected_y = None\nvariance_y = None\n\n# TODO: Verify with simulation\nsimulated_y = None\nsimulated_E_y = None\nsimulated_Var_y = None\n\nprint(f\"Empirical PMF: {pmf}\")\nprint(f\"E[X] empirical: {expected_value:.4f}, theoretical: {theoretical_expected:.4f}\")\nprint(f\"Var(X) empirical: {variance:.4f}, theoretical: {theoretical_variance:.4f}\")\nprint(f\"E[Y] = {expected_y:.4f}, simulated: {simulated_E_y:.4f}\")\nprint(f\"Var(Y) = {variance_y:.4f}, simulated: {simulated_Var_y:.4f}\")\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:numpy",
+      "must_include:np.random",
+      "must_include:np.mean"
+    ]
+  }
+}

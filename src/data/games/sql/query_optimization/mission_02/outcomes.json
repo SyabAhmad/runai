@@ -1,0 +1,3 @@
+{
+  "mission_02": "Well done! EXPLAIN ANALYZE gives you the complete picture of query performance with real execution data. By comparing estimated and actual values, you can identify when the query planner has stale statistics or when your query structure leads to suboptimal plans."
+}

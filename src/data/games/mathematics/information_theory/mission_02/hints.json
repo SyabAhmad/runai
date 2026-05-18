@@ -1,0 +1,7 @@
+{
+  "mission_02": [
+    "Cross-entropy: H(P,Q) = -sum(p_i * log(q_i)) where p is true and q is predicted",
+    "Always clip predictions to avoid log(0), typically to [1e-15, 1-1e-15]",
+    "Binary cross-entropy: -[y*log(p) + (1-y)*log(1-p)] for each sample"
+  ]
+}

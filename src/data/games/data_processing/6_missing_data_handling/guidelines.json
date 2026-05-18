@@ -1,0 +1,6 @@
+{
+  "title": "Missing Data Handling",
+  "description": "Master the art of handling missing values in datasets. Learn simple imputation with mean and median, KNN imputation using nearest neighbors, MICE (Multiple Imputation by Chained Equations) for sophisticated multivariate imputation, interpolation for time series data, and indicator variable approaches that preserve missingness information. Proper missing data handling is critical for building reliable machine learning models.",
+  "difficulty": "intermediate",
+  "order": 6
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Probability Distributions",
+  "id": "mission_04",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import numpy as np\nfrom scipy import stats\n\n# TODO: Normal distribution with mean=50, std=10\nmu, sigma = 50, 10\n\n# TODO: Compute PDF at x = 55\npdf_55 = None\n\n# TODO: Compute CDF at x = 55 (P(X <= 55))\ncdf_55 = None\n\n# TODO: Compute P(40 < X < 60) — within 1 standard deviation\nprob_1std = None\n\n# TODO: Compute the 95th percentile (inverse CDF)\npercentile_95 = None\n\n# TODO: Binomial distribution: n=100, p=0.3\nn_bin, p_bin = 100, 0.3\n\n# TODO: Compute P(X = 30) — exactly 30 successes\nprob_exact_30 = None\n\n# TODO: Compute P(X <= 30) — at most 30 successes\ncdf_30 = None\n\n# TODO: Poisson distribution with lambda=5\nlambda_poisson = 5\n\n# TODO: Compute P(X = 3)\npoisson_prob_3 = None\n\n# TODO: Compute P(X >= 8)\npoisson_prob_ge_8 = None\n\nprint(f\"Normal PDF at 55: {pdf_55:.4f}\")\nprint(f\"Normal CDF at 55: {cdf_55:.4f}\")\nprint(f\"P(40 < X < 60): {prob_1std:.4f}\")\nprint(f\"95th percentile: {percentile_95:.4f}\")\nprint(f\"Binomial P(X=30): {prob_exact_30:.4f}\")\nprint(f\"Binomial P(X<=30): {cdf_30:.4f}\")\nprint(f\"Poisson P(X=3): {poisson_prob_3:.4f}\")\nprint(f\"Poisson P(X>=8): {poisson_prob_ge_8:.4f}\")\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:numpy",
+      "must_include:scipy",
+      "must_include:stats.norm",
+      "must_include:stats.binom"
+    ]
+  }
+}

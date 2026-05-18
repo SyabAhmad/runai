@@ -1,0 +1,6 @@
+{
+  "title": "Graph Theory",
+  "description": "Discover paths and cycles, connectivity, trees, spanning trees, shortest path algorithms, max flow min cut theorem, graph coloring, planar graphs, centrality measures, and network flow algorithms.",
+  "difficulty": "hard",
+  "order": 10
+}

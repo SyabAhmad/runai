@@ -1,0 +1,3 @@
+{
+  "mission_01": "import numpy as np\n\ndef detect_bias(data, protected_attribute, outcome):\n    groups = np.unique(protected_attribute)\n    total = len(protected_attribute)\n    representation = {}\n    outcome_rates = {}\n    for g in groups:\n        mask = protected_attribute == g\n        representation[g] = np.sum(mask) / total\n        outcome_rates[g] = np.mean(outcome[mask])\n    max_rate = max(outcome_rates.values())\n    disparity = {g: rate / max_rate for g, rate in outcome_rates.items()}\n    return representation, outcome_rates, disparity"
+}

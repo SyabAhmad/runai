@@ -1,0 +1,7 @@
+{
+  "mission_06": [
+    "Score: `scores = classifier.predict(text)` returns dict of category scores.",
+    "Block: `any(score > threshold for score in scores.values())`.",
+    "Return: `scores, should_block`."
+  ]
+}

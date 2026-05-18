@@ -1,0 +1,7 @@
+{
+  "mission_06": [
+    "Create index on the filter column and INCLUDE the SELECT columns.",
+    "Use CREATE INDEX idx_users_dept ON users(department) INCLUDE (name, email).",
+    "Verify with EXPLAIN ANALYZE that it shows 'Index Only Scan'."
+  ]
+}

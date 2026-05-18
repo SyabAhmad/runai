@@ -1,0 +1,3 @@
+{
+  "mission_01": "Excellent work! You have successfully built your first image augmentation pipeline using albumentations. You learned how to compose multiple transforms with individual probabilities, apply them to images, and verify that the output maintains the correct shape. This foundational skill is essential for any computer vision practitioner. The pipeline you created applies horizontal flips, 90-degree rotations, and brightness/contrast adjustments, which are among the most commonly used augmentations in practice. Keep building on this knowledge as you tackle more advanced augmentation techniques!"
+}

@@ -1,0 +1,1 @@
+{"mission_01": ["Use pd.get_dummies(df['color'], prefix='color') to create one-hot columns.", "Set drop_first=True to avoid the dummy variable trap (multicollinearity).", "Use pd.concat([df_numeric, df_encoded], axis=1) to combine encoded and numeric columns."]}

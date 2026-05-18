@@ -1,0 +1,7 @@
+{
+  "mission_10": [
+    "Language embeddings are learned vector representations for each language that are added to audio features, allowing the shared encoder to condition its processing on the target language.",
+    "Code-switching detection compares the dominant language predicted in adjacent windows by computing cosine similarity between window-mean features and language centroid vectors.",
+    "Per-language WER groups transcription-reference pairs by language and computes word error rate separately for each language, revealing performance disparities."
+  ]
+}

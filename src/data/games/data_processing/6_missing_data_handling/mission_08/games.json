@@ -1,0 +1,21 @@
+{
+  "title": "Multivariate Feature Imputation Pipeline",
+  "id": "mission_08",
+  "type": "ai_code",
+  "xpReward": 100,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "import pandas as pd\nimport numpy as np\nfrom sklearn.impute import KNNImputer, IterativeImputer\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.compose import ColumnTransformer\n\n# TODO: Build a comprehensive imputation pipeline that:\n# 1. Handles numeric columns with IterativeImputer (MICE)\n# 2. Handles categorical columns with most_frequent imputation\n# 3. Scales numeric features after imputation\n# 4. Chains everything together in a sklearn Pipeline\n\ndef build_imputation_pipeline():\n    # TODO: Create a mixed-type dataset with missing values\n    # TODO: Define numeric and categorical column transformers\n    # TODO: Build the full pipeline\n    # TODO: Demonstrate end-to-end imputation and preprocessing\n    pass\n\n# TODO: Run the pipeline demonstration\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:Pipeline",
+      "must_include:ColumnTransformer",
+      "must_include:IterativeImputer",
+      "must_include:KNNImputer",
+      "must_include:StandardScaler",
+      "must_include:SimpleImputer"
+    ]
+  }
+}

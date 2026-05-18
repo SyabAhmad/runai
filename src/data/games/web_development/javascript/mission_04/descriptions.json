@@ -1,0 +1,3 @@
+{
+  "mission_04": "JavaScript objects are collections of key-value pairs that can hold data and behavior. You can create objects with constructors, object literals, or classes. Getters and setters (get/set) provide computed properties that behave like regular properties but execute code on access or assignment. Object.keys(), Object.values(), and Object.entries() let you iterate over objects programmatically. Understanding these patterns is essential for working with JavaScript data structures."
+}

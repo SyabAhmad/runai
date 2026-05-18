@@ -1,0 +1,20 @@
+{
+  "title": "Positional Encoding",
+  "id": "mission_03",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "# Transformers Mission 03: Positional Encoding\n#\n# Transformers process all tokens in parallel — they have no\n# inherent notion of position or order. Positional encoding\n# adds this information so the model knows word order.\n#\n# The original paper uses sine and cosine waves:\n#   PE(pos, 2i)   = sin(pos / 10000^(2i/d_model))\n#   PE(pos, 2i+1) = cos(pos / 10000^(2i/d_model))\n#\n# Your goal: Implement positional_encoding(seq_len, d_model)\n#   1. Create a zero matrix of shape (seq_len, d_model)\n#   2. For each position pos and dimension i:\n#      - Even dims: sin(pos / 10000^(2i/d_model))\n#      - Odd dims:  cos(pos / 10000^(2i/d_model))\n#   3. Return the encoding matrix\n\nimport numpy as np\n\ndef positional_encoding(seq_len, d_model):\n    # TODO: Create a zero matrix of shape (seq_len, d_model)\n    # TODO: Compute position array: positions = np.arange(seq_len)\n    # TODO: Compute dimension array: dims = np.arange(d_model)\n    # TODO: Apply sin to even indices, cos to odd indices\n    # TODO: Return the encoding matrix\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def positional_encoding",
+      "must_include:sin",
+      "must_include:cos",
+      "must_include:arange",
+      "must_include:return"
+    ]
+  }
+}

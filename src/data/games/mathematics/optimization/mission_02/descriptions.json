@@ -1,0 +1,3 @@
+{
+  "mission_02": "Implement gradient descent with momentum, which accelerates convergence by accumulating a velocity vector in directions of persistent reduction. Momentum helps overcome local minima and reduces oscillations in narrow valleys of the loss landscape. The velocity term accumulates exponentially weighted averages of past gradients, allowing the optimizer to build up speed in consistent directions while dampening oscillations."
+}

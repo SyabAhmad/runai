@@ -1,0 +1,22 @@
+{
+  "title": "useEffect and Side Effects",
+  "id": "mission_04",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "// TODO: Use useEffect for data fetching, subscriptions, and DOM manipulation\n// TODO: Implement cleanup functions to prevent memory leaks\n// TODO: Control effect execution with dependency arrays\n// TODO: Build components that respond to lifecycle events\n\nimport { useState, useEffect } from 'react';\n\n// TODO: Data fetching component\nfunction UserProfile({ userId }) {\n  // TODO: Fetch user data when userId changes\n  // TODO: Handle loading and error states\n  // TODO: Implement cleanup (abort controller)\n}\n\n// TODO: Window resize listener\nfunction useWindowSize() {\n  // TODO: Track window dimensions with useState\n  // TODO: Add resize event listener in useEffect\n  // TODO: Clean up listener on unmount\n  // TODO: Return { width, height }\n}\n\n// TODO: Auto-save form data to localStorage\nfunction AutoSaveForm() {\n  // TODO: Track form data with useState\n  // TODO: Save to localStorage whenever data changes\n  // TODO: Load from localStorage on mount\n}\n\n// TODO: Document title updater\nfunction DocumentTitle({ title }) {\n  // TODO: Update document.title when title prop changes\n  // TODO: Restore original title on unmount\n}\n\n// TODO: Online status detector\nfunction useOnlineStatus() {\n  // TODO: Track navigator.onLine with useState\n  // TODO: Listen for online/offline events\n  // TODO: Clean up event listeners\n}"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:useEffect",
+      "must_include:useState",
+      "must_include:[]",
+      "must_include:return () =>",
+      "must_include:addEventListener",
+      "must_include:removeEventListener",
+      "must_import:react"
+    ]
+  }
+}

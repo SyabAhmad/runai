@@ -1,0 +1,18 @@
+{
+  "title": "Conditional Probability",
+  "id": "mission_07",
+  "type": "ai_code",
+  "xpReward": 90,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import numpy as np\n\n# TODO: Three-card problem\n# Card 1: Red/Red, Card 2: Black/Black, Card 3: Red/Black\n# You pick a card at random and see a Red face. What's the probability the other side is Red?\n\n# Define the sample space: (card, face_up, face_down)\n# Card 0: RR, Card 1: BB, Card 2: RB\nsample_space = [\n    (0, 'R', 'R'),  # Card RR, face up R\n    (0, 'R', 'R'),  # Card RR, other side also R\n    (1, 'B', 'B'),  # Card BB, face up B\n    (1, 'B', 'B'),  # Card BB, other side also B\n    (2, 'R', 'B'),  # Card RB, face up R\n    (2, 'B', 'R'),  # Card RB, face up B\n]\n\n# TODO: Compute P(other side is Red | face up is Red)\n# Count outcomes where face_up is Red\nred_face_up = None\n# Among those, count where face_down is also Red\nred_both_sides = None\nprob_other_red = None\n\n# TODO: Monty Hall problem simulation\nnp.random.seed(42)\nn_trials = 100000\n\n# Simulate: always switch strategy\nwins_switch = 0\n# Simulate: never switch strategy\nwins_stay = 0\n\nfor _ in range(n_trials):\n    # Car is behind a random door (0, 1, 2)\n    car_door = None\n    # Contestant picks a random door\n    contestant_pick = None\n    # Monty opens a door that is not the car and not the contestant's pick\n    remaining = None\n    monty_opens = None\n    # Switch: pick the remaining unopened door\n    switch_pick = None\n    if switch_pick == car_door:\n        wins_switch += 1\n    if contestant_pick == car_door:\n        wins_stay += 1\n\nprob_switch = None\nprob_stay = None\n\nprint(f\"P(other side Red | face up Red) = {prob_other_red:.4f}\")\nprint(f\"P(win | switch) = {prob_switch:.4f}\")\nprint(f\"P(win | stay) = {prob_stay:.4f}\")\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:numpy",
+      "must_include:conditional",
+      "must_include:np.random"
+    ]
+  }
+}

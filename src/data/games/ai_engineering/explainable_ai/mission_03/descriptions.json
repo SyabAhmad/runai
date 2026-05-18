@@ -1,0 +1,3 @@
+{
+  "mission_03": "Saliency maps visualize which pixels in an input image most influence a neural network's prediction for a specific class. They are computed by backpropagating the gradient of the target class score with respect to the input image. The key insight is that pixels with large gradient magnitudes are those that, if changed slightly, would most affect the prediction. In this mission, you implement a simple 2-layer CNN with convolution and fully connected layers, then compute saliency maps by performing a forward pass, creating a one-hot gradient for the target class, and backpropagating through ReLU (using its derivative) and the convolution layer. The absolute value of the input gradient gives the saliency map."
+}

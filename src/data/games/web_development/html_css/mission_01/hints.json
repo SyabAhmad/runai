@@ -1,0 +1,7 @@
+{
+  "mission_01": [
+    "Look at the class names for clues: 'top' becomes <header>, 'links' becomes <nav>, 'content' becomes <main>, 'post' becomes <article>, 'sidebar' becomes <aside>, 'bottom' becomes <footer>.",
+    "Use <h1> for the main page title and <h2> for section and article titles to maintain proper heading hierarchy.",
+    "Keep the <a> tags and text content the same — only replace the wrapping <div> elements with semantic equivalents."
+  ]
+}

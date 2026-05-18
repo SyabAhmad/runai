@@ -1,0 +1,3 @@
+{
+  "mission_05": "Cross joins combined with left joins create powerful reporting matrices. By first generating all possible combinations of dimensions (like dates and stores), then left joining with actual data, you ensure every cell in your report exists even when no data is present. This technique is fundamental for building complete dashboards and avoiding gaps in time-series reporting."
+}

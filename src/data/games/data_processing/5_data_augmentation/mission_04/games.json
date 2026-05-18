@@ -1,0 +1,22 @@
+{
+  "title": "Text Augmentation with Synonym Replacement",
+  "id": "mission_04",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import random\nimport nltk\nfrom nltk.corpus import wordnet\n\n# TODO: Ensure NLTK data is downloaded\n# nltk.download('wordnet')\n# nltk.download('averaged_perceptron_tagger')\n\n# TODO: Implement a synonym replacement function\n# Use wordnet.synsets() to find synonyms for each word\n# Replace words with their synonyms with a given probability\n# Only replace nouns, verbs, adjectives, and adverbs\n# Return the augmented text\n\ndef synonym_replacement(text: str, n_replace: int = 2) -> str:\n    # TODO: Tokenize the text\n    # TODO: For each word, find synonyms using WordNet\n    # TODO: Replace up to n_replace words with random synonyms\n    # TODO: Return the augmented sentence\n    pass\n\n# TODO: Test with sample sentences\n# Print original and augmented versions\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:wordnet",
+      "must_include:synsets",
+      "must_include:lemmas",
+      "must_include:random",
+      "must_include:n_replace",
+      "must_include:split",
+      "must_include:join"
+    ]
+  }
+}

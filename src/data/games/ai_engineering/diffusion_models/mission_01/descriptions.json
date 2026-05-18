@@ -1,0 +1,3 @@
+{
+  "mission_01": "**Diffusion models** generate images by learning to reverse a noise-adding process. The **forward process** gradually corrupts data with Gaussian noise until it becomes pure noise.\n\nThe formula:\n```\nx_t = √(ᾱ_t) * x_0 + √(1 - ᾱ_t) * ε\n```\n\nWhere:\n- **x_0** = original image\n- **ε** = random noise from N(0, I)\n- **ᾱ_t** = cumulative product of noise schedule at step t\n- **x_t** = noisy image at step t\n\nAt t=0, the image is clean. At t=T (usually 1000), it's pure noise. The model learns to reverse this process — starting from noise and gradually denoising to create a new image."
+}

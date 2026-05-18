@@ -1,0 +1,18 @@
+{
+  "title": "Feature Interaction",
+  "id": "mission_06",
+  "type": "ai_code",
+  "xpReward": 85,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import pandas as pd\nimport numpy as np\n\n# TODO: Create a dataset\ndata = {\n    'length': [10, 20, 30, 40, 50],\n    'width': [5, 10, 15, 20, 25],\n    'height': [2, 4, 6, 8, 10]\n}\ndf = pd.DataFrame(data)\n\n# TODO: Create interaction features\ndf['area'] = ...\ndf['volume'] = ...\ndf['length_width_ratio'] = ...\n\nprint(\"Original features:\")\nprint(df[['length', 'width', 'height']])\nprint(\"\\nWith interaction features:\")\nprint(df)\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:df\\['area'\\]",
+      "must_include:df\\['volume'\\]",
+      "must_include:ratio"
+    ]
+  }
+}

@@ -1,3 +1,3 @@
 {
-  "mission_02": "def solve_mission_2():\n    # TODO: Implement solution for ai_agents mission 2\n    return \"Mission 2 completed\""
+  "mission_02": "def calculator(expression):\n    return eval(expression)\n\ndef agent(task):\n    if task.startswith(\"calc:\"):\n        expr = task[5:]\n        result = calculator(expr)\n    else:\n        result = \"I cannot do that yet\"\n    return {\"task\": task, \"result\": result}"
 }

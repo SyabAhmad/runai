@@ -1,0 +1,3 @@
+{
+  "mission_08": "Outstanding! You have implemented rate-distortion theory, which establishes the fundamental limits of lossy compression. The rate-distortion function R(D) tells us the minimum bitrate needed to achieve a given quality level. This theory is the mathematical foundation of all lossy compression systems, from JPEG images to streaming video."
+}

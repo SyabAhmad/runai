@@ -1,0 +1,52 @@
+{
+  "mission_01": [
+    "Standardize with StandardScaler().fit_transform(X) before applying PCA",
+    "Create PCA with PCA(n_components=2) to reduce to 2 dimensions",
+    "Transform with pca.fit_transform(X_scaled) and check explained_variance_ratio_"
+  ],
+  "mission_02": [
+    "Create TSNE with TSNE(n_components=2, random_state=42)",
+    "Transform with tsne.fit_transform(X)",
+    "t-SNE is stochastic - set random_state for reproducibility"
+  ],
+  "mission_03": [
+    "Import umap and create reducer = umap.UMAP(n_components=2, random_state=42)",
+    "Transform with reducer.fit_transform(X)",
+    "UMAP may need installation: pip install umap-learn"
+  ],
+  "mission_04": [
+    "Create VarianceThreshold(threshold=0.1) to remove features with variance < 0.1",
+    "Transform with selector.fit_transform(X)",
+    "Check variances with selector.variances_"
+  ],
+  "mission_05": [
+    "Create LinearDiscriminantAnalysis(n_components=2)",
+    "Transform with lda.fit_transform(X, y) - LDA needs labels",
+    "LDA produces at most n_classes - 1 components"
+  ],
+  "mission_06": [
+    "Fit PCA without specifying n_components to get all components",
+    "Use np.cumsum(pca.explained_variance_ratio_) for cumulative variance",
+    "Find n_components_95 with np.argmax(np.cumsum(pca.explained_variance_ratio_) >= 0.95) + 1"
+  ],
+  "mission_07": [
+    "Create RFE with RFE(estimator=model, n_features_to_select=5)",
+    "Transform with rfe.fit_transform(X, y)",
+    "Check selected features with rfe.support_ and rankings with rfe.ranking_"
+  ],
+  "mission_08": [
+    "Apply PCA, t-SNE, and UMAP to the same standardized data",
+    "Compare shapes and visual quality of each embedding",
+    "PCA is fast and deterministic, t-SNE reveals clusters, UMAP balances both"
+  ],
+  "mission_09": [
+    "Create SelectKBest(score_func=mutual_info_classif, k=10)",
+    "Transform with selector.fit_transform(X, y)",
+    "Get selected features with selector.get_support() and selector.scores_"
+  ],
+  "mission_10": [
+    "Chain: StandardScaler -> SelectKBest -> PCA",
+    "Use fit_transform on training data, transform on test data",
+    "Train RandomForestClassifier on reduced features and evaluate accuracy"
+  ]
+}

@@ -1,0 +1,3 @@
+{
+  "mission_03": "Excellent! You've created an audit trigger that automatically logs all changes to the employees table. Triggers are powerful for maintaining data integrity and compliance. They run automatically and transparently, ensuring that no data modification goes unrecorded regardless of which application or user makes the change."
+}

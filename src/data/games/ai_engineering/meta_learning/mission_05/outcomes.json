@@ -1,0 +1,3 @@
+{
+  "mission_05": "You have implemented Reptile, a remarkably simple yet effective meta-learning algorithm. The update rule theta <- theta + eps(theta' - theta) is essentially moving the initialization toward where SGD takes it on individual tasks. The elegance of Reptile lies in its simplicity: no second-order gradients, no computational graph through the inner loop, just standard SGD followed by a moving average. The theoretical connection to MAML (Reptile approximates MAML for small learning rates) explains why it works well despite its simplicity. Reptile has been shown to work with any optimization algorithm in the inner loop and scales well to large models."
+}

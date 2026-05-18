@@ -1,0 +1,7 @@
+{
+  "mission_02": [
+    "The velocity update is: v = momentum * v + learning_rate * grad",
+    "The position update uses the velocity: x = x - v",
+    "Momentum typically uses values between 0.9 and 0.99 for best results"
+  ]
+}

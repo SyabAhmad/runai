@@ -1,0 +1,19 @@
+{
+  "title": "Self Join: Price Change Tracking",
+  "id": "mission_03",
+  "type": "ai_code",
+  "xpReward": 70,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "-- Self Join: Track product price changes over time\n-- The price_history table has columns: product_id, price, change_date\n-- TODO: Write a query that shows each price change alongside the previous price\n-- Calculate the price difference between consecutive entries\n\nSELECT \nFROM price_history p1\n\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:JOIN",
+      "must_include:price_history",
+      "must_include:change_date",
+      "must_include:product_id"
+    ]
+  }
+}

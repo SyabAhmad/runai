@@ -1,0 +1,18 @@
+{
+  "title": "Robust Scaling",
+  "id": "mission_03",
+  "type": "ai_code",
+  "xpReward": 70,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "import pandas as pd\nimport numpy as np\n\n# TODO: Create a DataFrame with outliers\ndata = {\n    'value': [10, 12, 11, 13, 12, 100, 11, 12, 13, 11]\n}\ndf = pd.DataFrame(data)\n\n# TODO: Implement robust scaling: (x - median) / IQR\nmedian = ...\niqr = ...\ndf_robust = (df - median) / ...\n\nprint(\"Original:\")\nprint(df)\nprint(\"\\nRobust scaled:\")\nprint(df_robust)\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:median",
+      "must_include:quantile",
+      "must_include:IQR"
+    ]
+  }
+}

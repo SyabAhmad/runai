@@ -1,0 +1,3 @@
+{
+  "mission_01": "function createUserProfile(name, age, email, isActive) {\n  const profile = {\n    name,\n    age,\n    email,\n    isActive,\n    createdAt: new Date().toISOString()\n  };\n  return profile;\n}\n\nfunction reportTypes(value) {\n  const type = typeof value;\n  return `The value \"${value}\" is of type: ${type}`;\n}\n\nconst user = createUserProfile(\"Alice\", 30, \"alice@example.com\", true);\nconsole.log(reportTypes(user.name));\nconsole.log(reportTypes(user.age));\nconsole.log(reportTypes(user.isActive));\nconsole.log(reportTypes(user));"
+}

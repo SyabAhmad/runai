@@ -1,0 +1,3 @@
+{
+  "mission_09": "Testing React components ensures they work correctly and stay working as you refactor. React Testing Library encourages testing components the way users interact with them — by querying for text, labels, and roles rather than implementation details. fireEvent simulates user actions, waitFor handles async updates, and jest.fn() creates mocks for APIs and dependencies. Testing custom hooks requires wrapping them in a test component. This mission covers testing counters, form validation, async data fetching, and custom hooks — the most common testing scenarios in React applications."
+}

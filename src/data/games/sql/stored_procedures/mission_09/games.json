@@ -1,0 +1,19 @@
+{
+  "title": "Trigger for Maintaining Denormalized Data",
+  "id": "mission_09",
+  "type": "ai_code",
+  "xpReward": 110,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "-- Trigger for Denormalized Data: Maintain order count per customer\n-- The customers table has columns: id, name, email, order_count\n-- The orders table has columns: id, customer_id, order_date, total\n-- TODO: Create triggers that update order_count when orders are inserted or deleted\n\nCREATE OR REPLACE FUNCTION update_customer_order_count()\nRETURNS TRIGGER\nLANGUAGE plpgsql\nAS $$\nBEGIN\n    -- TODO: Handle INSERT (increment), DELETE (decrement)\n    -- Use NEW.customer_id for INSERT, OLD.customer_id for DELETE\n    RETURN NULL;\nEND;\n$$;\n\n-- TODO: Create AFTER INSERT and AFTER DELETE triggers\n\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:CREATE TRIGGER",
+      "must_include:order_count",
+      "must_include:customers",
+      "must_include:AFTER"
+    ]
+  }
+}

@@ -1,0 +1,3 @@
+{
+  "mission_04": "BEGIN;\nUPDATE accounts SET balance = balance - 500 WHERE id = 1 AND balance >= 500;\nUPDATE accounts SET balance = balance + 500 WHERE id = 2;\nCOMMIT;"
+}

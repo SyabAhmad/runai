@@ -1,0 +1,3 @@
+{
+  "mission_09": "import numpy as np\n\ndef red_team_test(model, attack_prompts, safety_classifier):\n    results = []\n    for prompt in attack_prompts:\n        output = model(prompt)\n        violation = safety_classifier.check(output)\n        results.append({'prompt': prompt, 'output': output, 'violated': violation})\n    jailbreaks = sum(1 for r in results if r['violated'])\n    report = {\n        'total_attacks': len(results),\n        'successful_jailbreaks': jailbreaks,\n        'jailbreak_rate': jailbreaks / len(results),\n        'vulnerable_patterns': [r['prompt'][:50] for r in results if r['violated']]\n    }\n    return report"
+}

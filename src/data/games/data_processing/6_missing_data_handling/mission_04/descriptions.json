@@ -1,0 +1,3 @@
+{
+  "mission_04": "KNN imputation is a sophisticated technique that leverages the similarity between observations to fill missing values. For each sample with missing data, the algorithm finds its k nearest neighbors based on the available features, then imputes the missing value using a weighted average of the neighbors values. This approach captures relationships between features and samples, producing more accurate imputations than simple mean or median methods. The choice of k is critical: small k values may be sensitive to noise, while large k values may smooth away important local patterns. KNN imputation works well when the dataset has meaningful structure and correlated features, making it a popular choice for tabular data in machine learning pipelines."
+}

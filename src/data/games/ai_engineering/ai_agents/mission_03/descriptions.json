@@ -1,3 +1,3 @@
 {
-  "mission_03": "Complete ai agents mission 3 to master this technology."
+  "mission_03": "Real agents follow **system instructions** that define their behavior boundaries. Like ChatGPT's system prompt, your agent needs rules about what it can and cannot do.\n\nYour agent follows these instructions:\n- Be a polite assistant\n- If asked about weather/temperature, call `get_weather(city)`\n- For anything else, politely refuse\n\nBuild an agent that:\n1. Checks if the task mentions weather (case-insensitive)\n2. Extracts the city name\n3. Calls `get_weather()` and returns the result\n4. Falls back to the refusal message for anything else\n\nThis is how bounded agents work in production — they have clear scope and refuse out-of-scope requests."
 }

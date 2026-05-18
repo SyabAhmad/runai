@@ -1,0 +1,7 @@
+{
+  "mission_05": [
+    "Extract JSON: `match = re.search(r\"```json\\s*(.*?)\\s*```\", response, re.DOTALL)`.",
+    "Validate: `assert tool_name in {s['name'] for s in tool_schemas}`.",
+    "Check params: `for param in schema['params']: assert param in call_data['arguments']`."
+  ]
+}

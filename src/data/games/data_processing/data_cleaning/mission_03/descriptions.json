@@ -1,3 +1,3 @@
-﻿{
-    "mission_03":  "Create encode_categoricals(df) that one-hot encodes categorical columns using pandas get_dummies with drop_first=True. Return the transformed DataFrame."
+{
+  "mission_03": "Text standardization transforms inconsistent string data into a uniform format suitable for analysis and comparison. Common techniques include stripping leading/trailing whitespace with str.strip(), converting case with str.lower() or str.title(), and applying regular expressions for pattern-based transformations. Phone number formatting, email normalization, and address standardization are frequent use cases. The pandas str accessor provides vectorized string operations that are both efficient and readable. Proper text standardization enables accurate grouping, sorting, and matching of categorical data."
 }

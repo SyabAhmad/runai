@@ -1,0 +1,7 @@
+{
+  "mission_09": [
+    "For online meta-update: adapt params on current task (inner loop), compute query loss gradient, update meta-params: params = params - meta_lr * meta_gradient. This happens after each task, not after a batch.",
+    "Regret = cumulative_loss - best_fixed_model_loss. Average regret = regret / t. Sublinear regret means regret grows slower than O(t).",
+    "For adaptive LR: track recent losses over a window. If recent loss > historical average, increase LR (need to learn faster). If recent loss < average, decrease LR. For experience replay, maintain a buffer of past tasks. When a new task arrives, add it to the buffer (evict oldest if full), then sample a subset for replay training."
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "title": "CutMix Augmentation",
+  "id": "mission_05",
+  "type": "ai_code",
+  "xpReward": 85,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import numpy as np\nimport pandas as pd\n\n# Simulated image-like data: 10 samples of 8x8 \"images\"\nnp.random.seed(42)\nX = np.random.randint(0, 256, (10, 8, 8), dtype=np.uint8)\ny = np.random.randint(0, 3, 10)\n\n# TODO: Implement CutMix: cut a patch from one image and paste it onto another\n# TODO: Calculate the bounding box for the cut region based on lambda\n# TODO: Replace the patch in the source image with the patch from target image\n# TODO: Adjust labels proportionally based on the area ratio\n# TODO: Print the original and CutMix-augmented data\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:CutMix",
+      "must_include:rand_bbox",
+      "must_include:area_ratio"
+    ]
+  }
+}

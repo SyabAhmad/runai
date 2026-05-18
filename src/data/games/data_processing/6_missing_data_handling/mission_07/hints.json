@@ -1,0 +1,7 @@
+{
+  "mission_07": [
+    "Use df.isnull().astype(int) to create binary indicator columns manually.",
+    "SimpleImputer(add_indicator=True) automatically appends indicator columns.",
+    "The indicator columns can reveal patterns about why data is missing."
+  ]
+}

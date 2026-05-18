@@ -1,0 +1,7 @@
+{
+  "mission_02": [
+    "Validate: `assert task.agent in agents` for each task.",
+    "Sequential execution: `context = None; for task in tasks: context = agent.execute(task, context)`.",
+    "Agent processes: `f\"As a {role}, {task.description}\\nContext: {context}\"`."
+  ]
+}

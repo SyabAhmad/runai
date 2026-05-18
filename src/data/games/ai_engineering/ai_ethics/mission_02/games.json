@@ -1,0 +1,20 @@
+{
+  "title": "Fairness Metrics (Demographic Parity, Equal Opportunity)",
+  "id": "mission_02",
+  "type": "ai_code",
+  "xpReward": 70,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "# AI Ethics Mission 02: Fairness Metrics\n#\n# Fairness metrics quantify whether a model treats groups equally.\n#\n# Demographic parity: P(y_hat=1 | A=0) = P(y_hat=1 | A=1)\n# Equal opportunity: P(y_hat=1 | y=1, A=0) = P(y_hat=1 | y=1, A=1)\n# Equalized odds: Both equal opportunity and false positive rates match\n#\n# Your goal: implement fairness_metrics(predictions, labels, protected)\n#   1. Compute demographic parity difference\n#   2. Compute equal opportunity difference\n#   3. Compute equalized odds difference\n#   4. Return all metrics\n\nimport numpy as np\n\ndef fairness_metrics(predictions, labels, protected):\n    # TODO: Demographic parity\n    # TODO: Equal opportunity\n    # TODO: Equalized odds\n    # TODO: Return metrics\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def fairness_metrics",
+      "must_include:demographic_parity",
+      "must_include:equal_opportunity",
+      "must_include:equalized_odds",
+      "must_include:return"
+    ]
+  }
+}

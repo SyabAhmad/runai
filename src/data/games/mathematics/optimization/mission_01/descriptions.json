@@ -1,0 +1,3 @@
+{
+  "mission_01": "Implement the fundamental gradient descent algorithm that iteratively moves in the direction of steepest descent to find the minimum of a function. This is the cornerstone of optimization in machine learning, where we minimize loss functions by computing gradients and updating parameters. Understanding vanilla gradient descent is essential before exploring more sophisticated variants like momentum or adaptive methods."
+}

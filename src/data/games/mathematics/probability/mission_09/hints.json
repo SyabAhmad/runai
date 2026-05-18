@@ -1,0 +1,10 @@
+{
+  "mission_09": [
+    "Use np.random.exponential(1, size=100000) for the population.",
+    "Draw samples with np.random.choice or by reshaping a large array.",
+    "The standard error = population_std / sqrt(n).",
+    "Use scipy.stats.kstest() to test if sample means are normally distributed.",
+    "The KS test p-value > 0.05 suggests the data could be normal.",
+    "Larger sample sizes give better Normal approximation."
+  ]
+}

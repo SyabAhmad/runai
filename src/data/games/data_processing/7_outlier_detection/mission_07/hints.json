@@ -1,0 +1,7 @@
+{
+  "mission_07": [
+    "Create a dataset with known outlier labels to enable supervised evaluation.",
+    "Convert each method output to binary predictions (1 for outlier, 0 for inlier).",
+    "Use sklearn precision_score, recall_score, and f1_score for fair comparison."
+  ]
+}

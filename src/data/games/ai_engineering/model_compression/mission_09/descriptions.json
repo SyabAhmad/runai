@@ -1,0 +1,3 @@
+{
+  "mission_09": "**ONNX** is the universal format for ML model deployment.\n\n**Why ONNX?**\n- Framework-agnostic: PyTorch, TensorFlow, JAX → ONNX\n- Optimized runtimes: ONNX Runtime, TensorRT, OpenVINO\n- Hardware acceleration: CPU, GPU, NPU, edge devices\n\n**Optimizations**:\n- **Constant folding**: Precompute constant expressions\n- **Operator fusion**: Conv+BN+ReLU → single operator\n- **Dead code elimination**: Remove unused nodes\n- **NCHW layout**: Optimize memory layout for GPUs\n\n**Workflow**:\n1. Export: `torch.onnx.export(model, input, path)`\n2. Optimize: `onnxoptimizer.optimize(onnx_model)`\n3. Verify: Compare outputs of original and ONNX model\n4. Deploy: Load with ONNX Runtime for inference"
+}

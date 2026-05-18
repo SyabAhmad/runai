@@ -1,0 +1,1 @@
+{"mission_06": ["Create lda = LinearDiscriminantAnalysis(n_components=3) and use X_lda = lda.fit_transform(X, y).", "Access lda.explained_variance_ratio_ to see how much class separation each component captures.", "LDA is supervised (uses y), PCA is unsupervised. LDA maximizes class separability, PCA maximizes variance."]}

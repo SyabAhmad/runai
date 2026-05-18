@@ -1,0 +1,7 @@
+{
+  "mission_04": [
+    "Match: Count exact matches between generated and reference tokens.",
+    "P = matches / len(gen), R = matches / len(ref).",
+    "F_mean = (10*P*R)/(R+9*P), penalty = 0.5*(chunks/matches)^3."
+  ]
+}

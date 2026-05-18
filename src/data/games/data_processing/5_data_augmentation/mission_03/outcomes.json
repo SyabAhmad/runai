@@ -1,0 +1,3 @@
+{
+  "mission_03": "Well done! You have learned color augmentation techniques that make your models robust to lighting and color variations. HueSaturationValue provides perceptually meaningful color adjustments in HSV space. RGBShift simulates camera sensor differences and white balance variations. CLAHE enhances local contrast without amplifying noise, making it invaluable for medical and scientific imaging. ChannelShuffle prevents models from over-relying on color cues. These techniques are essential when your deployment environment has unpredictable lighting conditions or when training data comes from multiple camera sources with different color profiles."
+}

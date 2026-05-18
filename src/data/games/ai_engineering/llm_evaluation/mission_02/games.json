@@ -1,0 +1,20 @@
+{
+  "title": "ROUGE Score (Recall-Oriented Understudy)",
+  "id": "mission_02",
+  "type": "ai_code",
+  "xpReward": 60,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "# LLM Evaluation Mission 02: ROUGE Score\n#\n# ROUGE measures overlap between generated and reference text.\n# Common variants: ROUGE-N (n-gram), ROUGE-L (longest common subsequence).\n#\n# ROUGE-N = count(overlapping n-grams) / count(reference n-grams)\n#\n# Your goal: Implement compute_rouge_n(generated, reference, n=1)\n#   1. Extract n-grams from both texts\n#   2. Count overlapping n-grams\n#   3. Compute recall (overlap / reference count)\n\nimport numpy as np\nfrom collections import Counter\n\ndef compute_rouge_n(generated, reference, n=1):\n    # TODO: Tokenize both texts\n    # TODO: Extract n-grams\n    # TODO: Count overlap\n    # TODO: Return recall score\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def compute_rouge_n",
+      "must_include:n-gram",
+      "must_include:overlap",
+      "must_include:Counter",
+      "must_include:return"
+    ]
+  }
+}

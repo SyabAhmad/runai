@@ -1,0 +1,10 @@
+{
+  "mission_02": [
+    "Create matrices using np.array() with nested lists.",
+    "Matrix addition uses the + operator (element-wise).",
+    "Matrix multiplication uses @ operator or np.matmul(), NOT *.",
+    "Transpose a matrix with the .T attribute.",
+    "Compute the inverse with np.linalg.inv(A) — the matrix must be non-singular.",
+    "A @ A_inverse should approximately equal the identity matrix."
+  ]
+}

@@ -1,7 +1,7 @@
-﻿{
-    "mission_03":  [
-                       "Use select_dtypes to detect object/category columns.",
-                       "pd.get_dummies can encode multiple columns at once.",
-                       "drop_first=True reduces multicollinearity."
-                   ]
+{
+  "mission_03": [
+    "Use df['column'].str.strip() to remove leading and trailing whitespace",
+    "Use df['column'].str.lower() for lowercase and str.title() for title case",
+    "Use re.sub(r'\\D', '', phone) to extract only digits from phone numbers"
+  ]
 }

@@ -1,0 +1,6 @@
+{
+  "title": "Data Augmentation",
+  "description": "Learn data augmentation techniques including image augmentation, text augmentation, SMOTE for imbalanced data, mixup, and cutmix. These methods artificially expand your dataset to improve model generalization.",
+  "difficulty": "advanced",
+  "order": 5
+}

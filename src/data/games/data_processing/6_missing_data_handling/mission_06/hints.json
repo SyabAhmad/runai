@@ -1,0 +1,7 @@
+{
+  "mission_06": [
+    "Use df.interpolate(method='linear') for straight-line interpolation between points.",
+    "Use df.interpolate(method='polynomial', order=2) for quadratic curve fitting.",
+    "Use df.interpolate(method='spline', order=3) for smooth piecewise polynomial interpolation."
+  ]
+}

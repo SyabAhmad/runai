@@ -1,0 +1,3 @@
+{
+  "mission_09": "You implemented MCTS selection with UCB1! This is the algorithm that made AlphaGo beat Lee Sedol. The UCB1 formula elegantly balances trying new moves (exploration) with playing proven good moves (exploitation). Combined with neural networks, MCTS achieves superhuman performance in Go, chess, and shogi."
+}

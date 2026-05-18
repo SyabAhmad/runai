@@ -1,0 +1,3 @@
+{
+  "mission_05": "You have implemented Regression Discontinuity Design, a quasi-experimental method that provides credible causal estimates when treatment assignment follows a clear cutoff rule. By focusing on observations near the threshold and using kernel-weighted local regression, you estimated the treatment effect while minimizing bias. The placebo tests you implemented are crucial for validating the design — if discontinuities appear at fake cutoffs, it suggests the results may be driven by manipulation or other artifacts. RDD is widely used in education (test score cutoffs), policy (age thresholds), and economics. Remember that RDD estimates the treatment effect at the cutoff, which may not generalize to units far from the threshold."
+}

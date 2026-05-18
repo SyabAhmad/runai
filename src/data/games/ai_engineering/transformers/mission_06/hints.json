@@ -1,0 +1,7 @@
+{
+  "mission_06": [
+    "Embed: `src = src_tokens @ src_embed`, then `src += pos_encoding[:src.shape[0]]`.",
+    "Loop through num_layers: `src = encoder_block(src, ...params...)` for each layer.",
+    "Final projection: `logits = decoder_output @ output_linear` — return raw logits for training."
+  ]
+}

@@ -1,0 +1,3 @@
+{
+  "mission_09": "Combining LATERAL joins with LEFT joins allows you to fetch limited related data while preserving rows that have no matches. This pattern is essential for user activity feeds, where you want recent actions but must also show inactive users. The LATERAL keyword enables the subquery to reference the outer user row, creating a correlated limited result set."
+}

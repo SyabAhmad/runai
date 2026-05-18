@@ -1,0 +1,23 @@
+{
+  "title": "GAN-Based Data Augmentation",
+  "id": "mission_10",
+  "type": "ai_code",
+  "xpReward": 120,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "import numpy as np\nimport torch\nimport torch.nn as nn\nimport torch.optim as optim\n\n# TODO: Implement a simple GAN for data augmentation\n# A GAN consists of:\n# 1. Generator: maps random noise to synthetic data samples\n# 2. Discriminator: distinguishes real from fake samples\n# Training alternates between:\n# - Training discriminator to classify real vs fake\n# - Training generator to fool the discriminator\n\nclass Generator(nn.Module):\n    def __init__(self, noise_dim=100, output_dim=784):\n        super().__init__()\n        # TODO: Build generator network with linear layers and activations\n        pass\n    \n    def forward(self, x):\n        # TODO: Forward pass through generator\n        pass\n\nclass Discriminator(nn.Module):\n    def __init__(self, input_dim=784):\n        super().__init__()\n        # TODO: Build discriminator network\n        pass\n    \n    def forward(self, x):\n        # TODO: Forward pass through discriminator\n        pass\n\ndef train_gan(generator, discriminator, real_data, epochs=100, batch_size=32):\n    # TODO: Implement GAN training loop\n    # Alternate between discriminator and generator updates\n    pass\n\ndef generate_samples(generator, n_samples=100, noise_dim=100):\n    # TODO: Generate synthetic samples from trained generator\n    pass\n\n# TODO: Train GAN on sample data and generate augmented samples\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:class Generator",
+      "must_include:class Discriminator",
+      "must_include:nn.Linear",
+      "must_include:nn.ReLU",
+      "must_include:nn.Sigmoid",
+      "must_include:BCELoss",
+      "must_include:backward",
+      "must_include:step"
+    ]
+  }
+}

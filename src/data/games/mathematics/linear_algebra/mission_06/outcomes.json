@@ -1,0 +1,3 @@
+{
+  "mission_06": "Great progress! You have explored vector spaces by finding the rank, computing a basis via QR decomposition, and projecting a vector onto the column space. The least-squares solution gives the best approximation when an exact solution does not exist. The residual vector is orthogonal to the column space — this is the fundamental theorem of linear algebra. Understanding projections and subspaces is essential for regression analysis, dimensionality reduction, and understanding the geometry of neural network representations."
+}

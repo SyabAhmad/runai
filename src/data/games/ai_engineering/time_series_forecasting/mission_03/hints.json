@@ -1,0 +1,7 @@
+{
+  "mission_03": [
+    "Each gate in the LSTM computes a weighted sum of the current input and previous hidden state, then applies an activation function (sigmoid for gates, tanh for cell candidate).",
+    "The cell state update combines the forget gate times the previous cell state with the input gate times the cell candidate: c = f * c_prev + i * c_tilde.",
+    "For multi-step prediction, feed the output back as input by using the hidden state to construct the next input vector."
+  ]
+}

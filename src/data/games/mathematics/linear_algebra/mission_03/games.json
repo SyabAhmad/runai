@@ -1,0 +1,18 @@
+{
+  "title": "Determinants",
+  "id": "mission_03",
+  "type": "ai_code",
+  "xpReward": 70,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "import numpy as np\n\n# TODO: Create a 3x3 matrix A\nA = None\n\n# TODO: Compute the determinant of A\ndet_A = None\n\n# TODO: Create a 4x4 matrix B\nB = None\n\n# TODO: Compute the determinant of B\ndet_B = None\n\n# TODO: Check if A is invertible (determinant non-zero)\nis_invertible = None\n\n# TODO: Compute the determinant of the product A @ A.T\ndet_product = None\n\n# TODO: Verify det(A @ B) = det(A) * det(B) for 3x3 matrices\n# Create another 3x3 matrix C and verify the property\nC = None\ndet_AC = None\ndet_A_times_det_C = None\n\nprint(f\"det(A) = {det_A}\")\nprint(f\"det(B) = {det_B}\")\nprint(f\"A is invertible: {is_invertible}\")\nprint(f\"det(A @ A.T) = {det_product}\")\nprint(f\"det(A @ C) = {det_AC}\")\nprint(f\"det(A) * det(C) = {det_A_times_det_C}\")\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:numpy",
+      "must_include:np.linalg.det",
+      "must_include:np.array"
+    ]
+  }
+}

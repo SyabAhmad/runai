@@ -1,0 +1,18 @@
+{
+  "title": "Numerical Differentiation",
+  "id": "mission_06",
+  "type": "ai_code",
+  "xpReward": 85,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "import numpy as np\n\ndef forward_difference(f, x, h=1e-5):\n    \"\"\"\n    Forward difference approximation: f'(x) ≈ (f(x+h) - f(x)) / h\n    Error: O(h)\n    \"\"\"\n    return ...\n\ndef central_difference(f, x, h=1e-5):\n    \"\"\"\n    Central difference approximation: f'(x) ≈ (f(x+h) - f(x-h)) / (2h)\n    Error: O(h^2) - more accurate than forward difference\n    \"\"\"\n    return ...\n\ndef five_point_stencil(f, x, h=1e-5):\n    \"\"\"\n    Five-point stencil for first derivative\n    f'(x) ≈ (-f(x+2h) + 8f(x+h) - 8f(x-h) + f(x-2h)) / (12h)\n    Error: O(h^4)\n    \"\"\"\n    return ...\n\ndef richardson_extrapolation(f, x, h=0.1, order=4):\n    \"\"\"\n    Richardson extrapolation for derivative computation\n    Combines central differences with different step sizes\n    \"\"\"\n    # TODO: Build table of central difference approximations\n    D = np.zeros((order, order))\n    for i in range(order):\n        h_i = h / (2**i)\n        D[i, 0] = central_difference(f, x, h_i)\n    \n    # TODO: Apply Richardson extrapolation\n    for j in range(1, order):\n        for i in range(j, order):\n            D[i, j] = ...\n    \n    return D[order-1, order-1]\n\ndef numerical_gradient(f, x, h=1e-5):\n    \"\"\"\n    Compute gradient of multivariable function using central differences\n    \"\"\"\n    n = len(x)\n    grad = np.zeros(n)\n    for i in range(n):\n        # TODO: Perturb i-th coordinate\n        x_plus = x.copy()\n        x_plus[i] += h\n        x_minus = x.copy()\n        x_minus[i] -= h\n        grad[i] = ...\n    return grad\n\n# Test: derivative of sin(x) at x=pi/4 (exact = cos(pi/4) = sqrt(2)/2)\nx = np.pi / 4\nexact = np.cos(x)\nprint(f\"Forward: {forward_difference(np.sin, x):.10f}, error: {abs(forward_difference(np.sin, x) - exact):.2e}\")\nprint(f\"Central: {central_difference(np.sin, x):.10f}, error: {abs(central_difference(np.sin, x) - exact):.2e}\")\nprint(f\"Five-point: {five_point_stencil(np.sin, x):.10f}, error: {abs(five_point_stencil(np.sin, x) - exact):.2e}\")"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:difference",
+      "must_include:richardson",
+      "must_include:numpy"
+    ]
+  }
+}

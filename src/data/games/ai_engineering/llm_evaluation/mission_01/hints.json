@@ -1,0 +1,7 @@
+{
+  "mission_01": [
+    "Tokenize: `tokens = tokenizer.encode(text)`.",
+    "Log probs: `log_probs = model.get_log_probs(tokens)`.",
+    "Perplexity: `np.exp(-np.mean(log_probs))`."
+  ]
+}

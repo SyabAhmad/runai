@@ -1,0 +1,7 @@
+{
+  "mission_06": [
+    "LocalOutlierFactor(n_neighbors=20) considers the 20 nearest neighbors for density estimation.",
+    "negative_outlier_factor_ attribute contains the LOF scores (more negative = more anomalous).",
+    "LOF scores above 1 indicate outliers; scores near 1 indicate normal points."
+  ]
+}

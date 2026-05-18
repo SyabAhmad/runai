@@ -1,0 +1,6 @@
+{
+  "title": "REST APIs",
+  "description": "Learn REST API design including HTTP methods, status codes, resource design, versioning, pagination, filtering, sorting, error responses, API documentation, and rate limiting.",
+  "difficulty": "medium",
+  "order": 5
+}

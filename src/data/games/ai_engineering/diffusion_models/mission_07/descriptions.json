@@ -1,0 +1,3 @@
+{
+  "mission_07": "**DDIM** accelerates diffusion sampling from 1000 steps to 20-50.\n\n**Key insight**: The forward process is Markovian (each step depends only on the previous), but the reverse doesn't have to be. DDIM uses a non-Markovian reverse process that's deterministic.\n\n**DDIM vs DDPM**:\n- DDPM: Stochastic, 1000 steps, high quality\n- DDIM: Deterministic, 20-50 steps, slightly lower quality but much faster\n- DDIM enables real-time generation\n\n**The formula** (with σ = 0 for deterministic):\n```\nx_{t-1} = √(ᾱ_{t-1}) · (x_t - √(1-ᾱ_t)·ε) / √(ᾱ_t) + √(1-ᾱ_{t-1}) · ε\n```\n\n**Subsampling**: Use evenly spaced timesteps from the original schedule (e.g., every 20th step for 50-step DDIM)."
+}

@@ -1,0 +1,7 @@
+{
+  "mission_07": [
+    "Initialize: `x = np.random.randn(*img_shape)`.",
+    "Subsample timesteps: `steps = np.linspace(0, T-1, num_steps, dtype=int)[::-1]`.",
+    "DDIM step: `x_prev = sqrt(ab_prev) * (x - sqrt(1-ab)*eps)/sqrt(ab) + sqrt(1-ab_prev)*eps`."
+  ]
+}

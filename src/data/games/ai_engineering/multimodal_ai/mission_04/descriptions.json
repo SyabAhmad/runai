@@ -1,0 +1,3 @@
+{
+  "mission_04": "**Visual grounding** connects language to specific image regions.\n\n**Task**: Given image + text (\"the dog wearing a hat\"), find the bounding box.\n\n**Methods**:\n- **Two-stage**: Detect objects first, then match text to proposals\n- **One-stage**: Directly predict box from image + text (DETR-style)\n\n**Encoding**:\n- Text: CLIP text encoder or BERT\n- Regions: RoI Align + CNN/ViT features\n- Similarity: Cosine or learned metric\n\n**Applications**:\n- Robotics: \"Pick up the red cup\"\n- Image editing: \"Make the sky bluer\"\n- Search: Find objects by description\n- Accessibility: Navigate images by language"
+}

@@ -1,0 +1,18 @@
+{
+  "title": "t-SNE Visualization",
+  "id": "mission_02",
+  "type": "ai_code",
+  "xpReward": 60,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "import pandas as pd\nimport numpy as np\nfrom sklearn.manifold import TSNE\nfrom sklearn.datasets import load_iris\n\n# TODO: Load the iris dataset\niris = load_iris()\nX = iris.data\ny = iris.target\n\n# TODO: Apply t-SNE to reduce to 2 dimensions\ntsne = TSNE(n_components=2, random_state=42)\nX_tsne = ...\n\nprint(f\"Original shape: {X.shape}\")\nprint(f\"t-SNE shape: {X_tsne.shape}\")\nprint(f\"First 5 points:\\n{X_tsne[:5]}\")\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:TSNE",
+      "must_include:n_components",
+      "must_include:fit_transform"
+    ]
+  }
+}

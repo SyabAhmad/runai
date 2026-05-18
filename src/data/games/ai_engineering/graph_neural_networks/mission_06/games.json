@@ -1,0 +1,22 @@
+{
+  "mission_06": {
+    "title": "Graph Pooling with DiffPool",
+    "id": "mission_06",
+    "type": "ai_code",
+    "xpReward": 80,
+    "difficulty": "medium",
+    "initialState": {
+      "content": "import numpy as np\n\n\nclass DiffPool:\n    \"\"\"Differentiable graph pooling for hierarchical graph representation.\n    \n    TODO: Compute soft cluster assignment matrix S\n    TODO: Pool node features: X_pooled = S^T @ X\n    TODO: Coarsen adjacency: A_pooled = S^T @ A @ S\n    TODO: Implement link prediction loss for cluster quality\n    TODO: Implement entropy regularization for cluster assignments\n    \"\"\"\n    \n    def __init__(self, input_dim, num_clusters):\n        # TODO: Initialize assignment network weights\n        self.W_assign = np.random.randn(input_dim, num_clusters) * 0.01\n        self.W_embed = np.random.randn(input_dim, input_dim) * 0.01\n    \n    def compute_assignment(self, X):\n        \"\"\"Compute soft cluster assignment matrix S.\"\"\"\n        # TODO: S = softmax(X @ W_assign)\n        S = None\n        return S\n    \n    def pool_features(self, S, X):\n        \"\"\"Pool node features using assignment matrix.\"\"\"\n        # TODO: X_pooled = S^T @ X\n        X_pooled = None\n        return X_pooled\n    \n    def pool_adjacency(self, S, A):\n        \"\"\"Coarsen adjacency matrix.\"\"\"\n        # TODO: A_pooled = S^T @ A @ S\n        A_pooled = None\n        return A_pooled\n    \n    def link_pred_loss(self, S, A):\n        \"\"\"Link prediction loss for cluster quality.\"\"\"\n        # TODO: Reconstruct A from S: A_rec = S @ S^T\n        # TODO: BCE loss between A and A_rec\n        A_rec = None\n        loss = None\n        return loss\n    \n    def entropy_loss(self, S):\n        \"\"\"Entropy regularization to encourage crisp assignments.\"\"\"\n        # TODO: H(S) = -sum(S * log(S)) / (N * K)\n        loss = None\n        return loss\n"
+    },
+    "validation": {
+      "type": "ai_code",
+      "rules": [
+        "must_include:softmax",
+        "must_include:S^T @ X",
+        "must_include:S^T @ A @ S",
+        "must_include:entropy",
+        "must_include:link prediction"
+      ]
+    }
+  }
+}

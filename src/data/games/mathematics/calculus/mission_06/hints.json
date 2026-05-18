@@ -1,0 +1,10 @@
+{
+  "mission_06": [
+    "The antiderivative of 3x^2 + 2x - 1 is x^3 + x^2 - x + C.",
+    "The FTC says integral_a^b f(x)dx = F(b) - F(a).",
+    "Use scipy.integrate.quad() for numerical integration.",
+    "G'(x) ≈ (G(x+h) - G(x-h)) / (2h) should equal f(x).",
+    "For total area, integrate |f(x)| or split at roots.",
+    "The roots of 3x^2 + 2x - 1 are x = -1 and x = 1/3."
+  ]
+}

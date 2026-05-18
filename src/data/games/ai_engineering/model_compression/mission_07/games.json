@@ -1,0 +1,20 @@
+{
+  "title": "Speculative Decoding",
+  "id": "mission_07",
+  "type": "ai_code",
+  "xpReward": 100,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "# Model Compression Mission 07: Speculative Decoding\n#\n# Speculative decoding uses a small draft model to generate tokens quickly,\n# then a large target model verifies them in parallel.\n#\n# Algorithm:\n# 1. Draft model generates k tokens autoregressively\n# 2. Target model evaluates all k tokens in one forward pass\n# 3. Accept tokens where draft matches target distribution\n# 4. On rejection, resample from target distribution\n#\n# Speedup: ~2-3x with minimal quality loss.\n#\n# Your goal: implement speculative_decode(draft_model, target_model, prompt, k=5)\n#   1. Draft generates k tokens\n#   2. Target verifies all k tokens\n#   3. Accept/reject based on probabilities\n#   4. Return accepted tokens\n\nimport numpy as np\n\ndef speculative_decode(draft_model, target_model, prompt, k=5):\n    # TODO: Draft generates k tokens\n    # TODO: Target verifies\n    # TODO: Accept/reject\n    # TODO: Return tokens\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def speculative_decode",
+      "must_include:draft",
+      "must_include:target",
+      "must_include:accept",
+      "must_include:return"
+    ]
+  }
+}

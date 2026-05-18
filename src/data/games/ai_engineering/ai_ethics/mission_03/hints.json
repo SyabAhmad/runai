@@ -1,0 +1,7 @@
+{
+  "mission_03": [
+    "Clip: `grad_norm = np.linalg.norm(gradient)`, `gradient = gradient * min(1, clipping_norm / grad_norm)`.",
+    "Noise: `noise = np.random.normal(0, noise_scale, gradient.shape)`.",
+    "Return: `gradient + noise`."
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "title": "Advanced Joins",
+  "description": "Master complex SQL join operations including self joins, cross joins, lateral joins, Common Table Expressions (CTEs), and recursive CTEs. This chapter builds on basic join knowledge to tackle real-world scenarios involving hierarchical data, Cartesian products, and correlated subqueries.",
+  "difficulty": "advanced",
+  "order": 1
+}

@@ -1,0 +1,3 @@
+{
+  "mission_02": "Secure aggregation protects individual client updates from being inspected by the server or other parties. The protocol uses pairwise random masks: each pair of clients shares a secret random vector, and each client adds the sum of their pairwise secrets to their model update before sending it to the server. When the server sums all masked updates, the pairwise masks cancel out because s_ij = -s_ji, revealing only the aggregate sum. This means the server learns the average model update but cannot see any individual client's contribution. This protocol, introduced by Bonawitz et al., is used in production federated learning systems to provide cryptographic privacy guarantees beyond what differential privacy offers."
+}

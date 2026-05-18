@@ -1,0 +1,7 @@
+{
+  "mission_04": [
+    "The second derivative can be approximated as: f''(x) ≈ (f(x+h) - 2f(x) + f(x-h)) / h²",
+    "A matrix is positive semi-definite if all its eigenvalues are non-negative",
+    "Use np.linalg.eigvalsh(H) to compute eigenvalues of a symmetric matrix"
+  ]
+}

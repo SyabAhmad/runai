@@ -1,0 +1,7 @@
+{
+  "mission_07": [
+    "Check stock with a SELECT INTO variable from inventory WHERE product_id = p_product_id.",
+    "RAISE EXCEPTION if stock is insufficient.",
+    "INSERT into orders, UPDATE inventory, then COMMIT."
+  ]
+}

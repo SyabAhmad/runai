@@ -1,0 +1,7 @@
+{
+  "mission_04": [
+    "Add PARTITION BY department inside the OVER clause before ORDER BY.",
+    "The syntax is ROW_NUMBER() OVER (PARTITION BY department ORDER BY salary DESC).",
+    "Each department will have its own independent ranking starting from 1."
+  ]
+}

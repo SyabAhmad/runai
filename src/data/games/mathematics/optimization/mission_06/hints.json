@@ -1,0 +1,7 @@
+{
+  "mission_06": [
+    "Stationarity: grad_f + Σ(λ_i · grad_g_i) + Σ(μ_j · grad_h_j) = 0",
+    "Complementary slackness means λ_i · g_i(x) = 0 for each inequality constraint",
+    "Use np.allclose() or compare norms with a tolerance to check conditions"
+  ]
+}

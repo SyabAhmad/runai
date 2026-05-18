@@ -1,0 +1,20 @@
+{
+  "title": "LLM-as-a-Judge Evaluation",
+  "id": "mission_08",
+  "type": "ai_code",
+  "xpReward": 100,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "# LLM Evaluation Mission 08: LLM-as-a-Judge\n#\n# Use a strong LLM to evaluate outputs of weaker models.\n# Prompt the judge LLM to score on dimensions like helpfulness, accuracy, safety.\n#\n# Best practices:\n# - Use rubric-based scoring (1-5 scale with clear criteria)\n# - Provide examples of each score level\n# - Run multiple times and average (reduce variance)\n# - Check for position bias (swap order of outputs)\n#\n# Your goal: Implement llm_judge_eval(prompt, outputs, judge_model, rubric)\n#   1. Format evaluation prompt with rubric\n#   2. Call judge model for each output\n#   3. Parse scores and compute averages\n#   4. Check for position bias\n\nimport numpy as np\n\ndef llm_judge_eval(prompt, outputs, judge_model, rubric):\n    # TODO: Format evaluation prompt\n    # TODO: Get scores from judge\n    # TODO: Compute averages\n    # TODO: Check position bias\n    pass"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:def llm_judge_eval",
+      "must_include:rubric",
+      "must_include:score",
+      "must_include:bias",
+      "must_include:return"
+    ]
+  }
+}

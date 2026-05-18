@@ -1,0 +1,3 @@
+{
+  "mission_08": "Outstanding! You have implemented cross-silo federated learning with reputation management. Unlike cross-device FL where clients are transient, cross-silo silos are persistent organizations with varying reliability. The reputation system you built incentivizes honest participation and naturally downweights unreliable contributors. Straggler detection ensures training is not blocked by slow participants, while reputation-weighted aggregation ensures that high-quality contributions have proportionally more influence. This architecture is used in real-world healthcare collaborations like the NVIDIA Clara Federated Learning framework, where hospitals across the globe train shared medical imaging models while keeping patient data on-premise."
+}

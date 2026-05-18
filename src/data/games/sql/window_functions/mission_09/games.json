@@ -1,0 +1,19 @@
+{
+  "title": "Partitioned Running Totals",
+  "id": "mission_09",
+  "type": "ai_code",
+  "xpReward": 110,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "-- Partitioned Running Totals: Cumulative sales per product category\n-- The sales table has columns: id, product_name, category, sale_date, amount\n-- TODO: Calculate running totals of sales amount partitioned by category\n-- Each category should have its own independent running total\n\nSELECT \nFROM sales\n\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:SUM",
+      "must_include:PARTITION BY",
+      "must_include:OVER",
+      "must_include:category"
+    ]
+  }
+}

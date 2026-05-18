@@ -1,0 +1,7 @@
+{
+  "mission_09": [
+    "Use df.isnull().mean() to get the missingness rate per column.",
+    "Create a pattern column by concatenating missing indicators to find common patterns.",
+    "Correlate missing indicator columns to detect relationships between missingness patterns."
+  ]
+}

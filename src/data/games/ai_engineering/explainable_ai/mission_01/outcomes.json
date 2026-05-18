@@ -1,0 +1,3 @@
+{
+  "mission_01": "Congratulations! You have successfully implemented LIME for text classification. Your implementation generates perturbed samples by randomly masking words, computes similarity-weighted explanations using an exponential kernel, and fits a local Ridge regression to identify the most influential words. This is the foundation of model-agnostic interpretability — you can now explain any text classifier's individual predictions. The key insight is that complex models can be approximated locally with simple linear models, making their decisions transparent to humans."
+}

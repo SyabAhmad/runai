@@ -1,0 +1,19 @@
+{
+  "title": "Central Limit Theorem",
+  "id": "mission_09",
+  "type": "ai_code",
+  "xpReward": 110,
+  "difficulty": "hard",
+  "initialState": {
+    "content": "import numpy as np\nfrom scipy import stats\n\n# TODO: Define a non-normal distribution (e.g., exponential with lambda=1)\nnp.random.seed(42)\npopulation = None  # Exponential distribution\n\n# TODO: Compute population mean and std\npop_mean = None\npop_std = None\n\n# TODO: Draw many samples of size n and compute their means\nn = 30  # Sample size\nn_samples = 10000  # Number of samples\nsample_means = None\n\n# TODO: Compute the mean and std of the sample means\nmean_of_means = None\nstd_of_means = None\n\n# TODO: Verify: std of sample means should be approximately pop_std / sqrt(n)\nexpected_std = None\n\n# TODO: Perform a normality test on the sample means (Shapiro-Wilk or KS test)\n# Use Kolmogorov-Smirnov test against normal distribution\nks_stat, ks_pvalue = None, None\n\n# TODO: Compare with different sample sizes\nfor sample_n in [5, 10, 30, 100]:\n    means = None\n    # Compute KS statistic for each\n    ks_stat_n, _ = None, None\n    print(f\"n={sample_n}: KS statistic = {ks_stat_n:.4f}\")\n\n# TODO: Create a Q-Q plot comparison (compute quantiles)\ntheoretical_quantiles = None\nsample_quantiles = None\n\nprint(f\"Population mean: {pop_mean:.4f}, std: {pop_std:.4f}\")\nprint(f\"Mean of sample means: {mean_of_means:.4f}\")\nprint(f\"Std of sample means: {std_of_means:.4f}\")\nprint(f\"Expected std (pop/sqrt(n)): {expected_std:.4f}\")\nprint(f\"KS test statistic: {ks_stat:.4f}, p-value: {ks_pvalue:.4f}\")\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:numpy",
+      "must_include:scipy",
+      "must_include:stats.kstest",
+      "must_include:np.random.exponential"
+    ]
+  }
+}

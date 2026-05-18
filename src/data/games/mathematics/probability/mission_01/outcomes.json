@@ -1,0 +1,3 @@
+{
+  "mission_01": "Well done! You have explored sample spaces and events using the classic two-dice experiment. The sample space has 36 equally likely outcomes. P(sum=7) = 6/36 = 1/6, P(doubles) = 6/36 = 1/6, and P(sum>9) = 6/36 = 1/6. Events A and B are mutually exclusive (no outcome can be both sum=7 and doubles), so P(A and B) = 0 and P(A or B) = 1/6 + 1/6 = 1/3. The inclusion-exclusion principle is verified. These fundamental concepts of probability — sample spaces, events, and set operations — form the basis for all probabilistic reasoning in machine learning."
+}

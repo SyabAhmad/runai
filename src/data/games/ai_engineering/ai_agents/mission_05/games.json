@@ -1,16 +1,19 @@
 {
-  "title": "ai agents Mission 5",
+  "title": "Agent with Memory",
+  "id": "mission_05",
+  "type": "ai_code",
+  "xpReward": 100,
+  "difficulty": "medium",
   "initialState": {
-    "content": "def solve_mission_5():\n    # TODO: Implement solution for ai_agents mission 5\n    return \"Mission 5 completed\"\\n    # TODO: Complete the implementation"
+    "content": "# Agent Mission 05: Agent with Memory\n#\n# Agents need memory to remember past interactions.\n# We'll use a simple memory dict that stores facts.\n#\n# Your goal: Complete the agent(task, memory) function:\n#\n# Tasks:\n#   - \"remember: X is Y\" -> store \"X\" = \"Y\" in memory\n#   - \"recall: X\"       -> retrieve value for \"X\" from memory\n#   - \"list\"            -> return all stored facts\n#   - anything else     -> \"I don't understand\"\n#\n# Always return {\"task\": task, \"result\": result}\n#\n# Example:\n#   agent(\"remember: color is blue\", mem)\n#     -> memory[\"color\"] = \"blue\"\n#     -> returns {\"task\": \"remember: color is blue\", \"result\": \"Stored: color = blue\"}\n#\n#   agent(\"recall: color\", mem)\n#     -> looks up memory[\"color\"]\n#     -> returns {\"task\": \"recall: color\", \"result\": \"blue\"}\n\ndef agent(task, memory):\n    # TODO: Parse the task and operate on memory\n    #   \"remember: X is Y\" -> store in memory dict\n    #   \"recall: X\" -> read from memory dict\n    #   \"list\" -> return all entries\n    pass"
   },
   "validation": {
     "type": "ai_code",
     "rules": [
-      "must_include:def",
-      "must_include:return"
+      "must_include:def agent",
+      "must_include:memory",
+      "must_include:return",
+      "must_include:startswith"
     ]
-  },
-  "id": "mission_05",
-  "type": "ai_code",
-  "xpReward": 100
+  }
 }

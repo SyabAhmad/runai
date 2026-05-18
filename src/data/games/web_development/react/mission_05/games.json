@@ -1,0 +1,22 @@
+{
+  "title": "useContext and Global State",
+  "id": "mission_05",
+  "type": "ai_code",
+  "xpReward": 80,
+  "difficulty": "medium",
+  "initialState": {
+    "content": "// TODO: Create and use React Context for global state\n// TODO: Build a ThemeProvider with light/dark mode\n// TODO: Build an AuthProvider with user authentication state\n// TODO: Create a NotificationProvider for app-wide alerts\n\nimport { createContext, useContext, useState, useCallback } from 'react';\n\n// TODO: Theme Context\nconst ThemeContext = createContext(null);\n\nfunction ThemeProvider({ children }) {\n  // TODO: Manage theme state ('light' | 'dark')\n  // TODO: Provide toggleTheme function\n  // TODO: Persist theme preference in localStorage\n}\n\n// TODO: Auth Context\nconst AuthContext = createContext(null);\n\nfunction AuthProvider({ children }) {\n  // TODO: Manage user state (null when logged out)\n  // TODO: Provide login, logout, and updateUser functions\n  // TODO: Simulate API calls with setTimeout\n}\n\n// TODO: Notification Context\nconst NotificationContext = createContext(null);\n\nfunction NotificationProvider({ children }) {\n  // TODO: Manage notifications array\n  // TODO: Provide addNotification and removeNotification\n  // TODO: Auto-remove notifications after 5 seconds\n}\n\n// TODO: Custom hooks for consuming contexts\nfunction useTheme() { /* TODO: useContext(ThemeContext) */ }\nfunction useAuth() { /* TODO: useContext(AuthContext) */ }\nfunction useNotifications() { /* TODO: useContext(NotificationContext) */ }"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:createContext",
+      "must_include:useContext",
+      "must_include:useState",
+      "must_include:useCallback",
+      "must_include:Provider",
+      "must_include:value=",
+      "must_import:react"
+    ]
+  }
+}

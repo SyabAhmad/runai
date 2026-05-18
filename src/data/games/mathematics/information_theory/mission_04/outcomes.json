@@ -1,0 +1,3 @@
+{
+  "mission_04": "Excellent! You have implemented mutual information and its variants. MI is a powerful tool for measuring statistical dependence between variables and is more general than correlation because it captures nonlinear relationships. It is extensively used in feature selection, where features with high mutual information with the target are preferred."
+}

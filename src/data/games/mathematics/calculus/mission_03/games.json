@@ -1,0 +1,18 @@
+{
+  "title": "Partial Derivatives",
+  "id": "mission_03",
+  "type": "ai_code",
+  "xpReward": 70,
+  "difficulty": "easy",
+  "initialState": {
+    "content": "import numpy as np\n\n# TODO: Define f(x, y) = x^2 * y + 3*x*y^2 - 2*y\ndef f(x, y):\n    return None\n\n# TODO: Compute partial derivative with respect to x: df/dx = 2xy + 3y^2\ndef df_dx(x, y):\n    return None\n\n# TODO: Compute partial derivative with respect to y: df/dy = x^2 + 6xy - 2\ndef df_dy(x, y):\n    return None\n\n# TODO: Evaluate at point (2, 3)\nx0, y0 = 2.0, 3.0\nf_val = None\npartial_x = None\npartial_y = None\n\n# TODO: Verify partial derivatives numerically\nh = 1e-7\nnumerical_df_dx = None\nnumerical_df_dy = None\n\n# TODO: Compute the gradient vector at (2, 3)\ngradient = None\n\n# TODO: Compute the directional derivative in direction v = [1, 1] (normalized)\nv = None\nv_normalized = None\ndirectional_deriv = None\n\nprint(f\"f({x0}, {y0}) = {f_val}\")\nprint(f\"df/dx = {partial_x}\")\nprint(f\"df/dy = {partial_y}\")\nprint(f\"Gradient: {gradient}\")\nprint(f\"Directional derivative: {directional_deriv}\")\n"
+  },
+  "validation": {
+    "type": "ai_code",
+    "rules": [
+      "must_include:numpy",
+      "must_include:np.linalg.norm",
+      "must_include:np.dot"
+    ]
+  }
+}

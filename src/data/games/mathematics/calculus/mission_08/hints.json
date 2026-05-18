@@ -1,0 +1,10 @@
+{
+  "mission_08": [
+    "The Taylor series of e^x at a=0 is: sum of x^n / n!.",
+    "Use math.factorial(n) for computing n!.",
+    "Each term is f^(k)(a) / k! * (x - a)^k.",
+    "For e^x, all derivatives at 0 equal 1.",
+    "The Taylor series for sin(x) uses only odd powers: x - x^3/3! + x^5/5! - ...",
+    "Higher degree polynomials give better approximations near the center."
+  ]
+}

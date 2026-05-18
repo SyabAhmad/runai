@@ -1,0 +1,7 @@
+{
+  "mission_09": [
+    "U-Net: `features_unet = unet_encoder(x, t, text)`.",
+    "ControlNet: `features_ctrl = controlnet_encoder(condition, t)`.",
+    "Zero conv: `adjusted = features_unet + zero_conv(features_ctrl)`."
+  ]
+}
